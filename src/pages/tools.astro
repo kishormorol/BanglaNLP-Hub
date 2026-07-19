@@ -1,22 +1,110 @@
 ---
 /**
- * Placeholder route. The Tools view has not been ported from
- * design-reference/Tools.dc.html yet; this exists so nav and footer links
- * resolve instead of 404ing. Replace wholesale when the view is ported.
+ * Tools — ported from design-reference/Tools.dc.html.
+ *
+ * One departure: the prototype rendered a "★ {stars}" count per card. Star
+ * counts were dropped from the data during migration as illustrative and
+ * instantly stale, so the element is omitted rather than shown empty.
  */
 import Base from '../layouts/Base.astro';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import { tools } from '../lib/data.ts';
 ---
 
-<Base title="Tools — BanglaNLP Hub" active="tools">
-  <main style="max-width:1200px;margin:0 auto;padding:64px 20px 96px">
-    <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">Tools</h1>
-    <p style="color:var(--text2);font-size:15.5px;max-width:560px;line-height:1.6;margin:12px 0 0">
-      This page has not been built yet. The catalog data behind it already exists and is
-      validated — only the view is outstanding.
-    </p>
-    <p style="font-size:14px;margin-top:20px">
-      <a href={`${base}/tasks`}>Browse by task →</a>
-    </p>
+<Base title="Tools & Libraries — BanglaNLP Hub" active="tools">
+  <main style="max-width:1200px;margin:0 auto;padding:0 20px 64px">
+    <section style="padding:48px 0 32px">
+      <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">
+        Tools &amp; Libraries <span class="bn" style="font-size:19px;color:var(--red);font-weight:600"
+          >সরঞ্জাম</span
+        >
+      </h1>
+      <p
+        style="color:var(--text2);font-size:15.5px;max-width:620px;line-height:1.6;margin:10px 0 0;text-wrap:pretty"
+      >
+        Tokenizers, normalizers, embeddings, transliteration, and speech wrappers for working with
+        Bangla text.
+      </p>
+    </section>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px">
+      {
+        tools.map((t) => (
+          <div
+            class="toolcard"
+            style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px"
+          >
+            <div style="display:flex;align-items:baseline;gap:10px">
+              <a
+                href={t.link}
+                target="_blank"
+                rel="noopener"
+                style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:15px;text-decoration:none"
+              >
+                {t.name}
+              </a>
+              <span style="font-size:12px;color:var(--text2)">{t.author}</span>
+            </div>
+            <p style="margin:0;font-size:13.5px;color:var(--text2);line-height:1.55;text-wrap:pretty">
+              {t.desc}
+            </p>
+            <div style="position:relative;margin-top:auto">
+              <pre style="margin:0;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:9px 76px 9px 12px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--text);overflow-x:auto;white-space:nowrap"><span style="color:var(--text2);user-select:none">$ </span>{t.install}</pre>
+              <button
+                class="copybtn"
+                type="button"
+                data-install={t.install}
+                aria-label={`Copy install command for ${t.name}`}
+                style="position:absolute;top:5px;right:5px;border:1px solid var(--border);background:var(--surface);color:var(--text2);border-radius:6px;padding:3px 9px;font-size:11px;font-weight:600;cursor:pointer;font-family:'IBM Plex Sans',sans-serif"
+              >
+                Copy
+              </button>
+            </div>
+            <div style="display:flex;gap:10px;align-items:baseline;font-size:11px;color:var(--text2)">
+              <span style="background:var(--surface2);border:1px solid var(--border);padding:2px 8px;border-radius:99px">
+                {t.lang}
+              </span>
+              <span>✓ verified {t.verified}</span>
+            </div>
+          </div>
+        ))
+      }
+    </div>
   </main>
 </Base>
+
+<style>
+  .toolcard:hover {
+    border-color: var(--green);
+  }
+  .copybtn:hover {
+    border-color: var(--green);
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copybtn').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const text = btn.dataset.install ?? '';
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+        } catch {}
+        document.body.removeChild(ta);
+      }
+      btn.textContent = '✓';
+      btn.style.color = 'var(--green)';
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.style.color = 'var(--text2)';
+      }, 1500);
+    });
+  });
+</script>

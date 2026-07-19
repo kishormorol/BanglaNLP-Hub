@@ -1,22 +1,151 @@
 ---
 /**
- * Placeholder route. The Papers view has not been ported from
- * design-reference/Papers.dc.html yet; this exists so nav and footer links
- * resolve instead of 404ing. Replace wholesale when the view is ported.
+ * Papers — ported from design-reference/Papers.dc.html.
+ *
+ * Every paper is server-rendered; the island only shows/hides rows as filters
+ * change, so the full list is present without JS.
  */
 import Base from '../layouts/Base.astro';
+import { papers, tasks, venueTone } from '../lib/data.ts';
+
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const taskName = (id: string) => tasks.find((t) => t.id === id)?.name ?? id;
+
+const list = [...papers].sort((a, b) => b.year - a.year);
+const yearOpts = [...new Set(list.map((p) => p.year))].sort((a, b) => b - a);
+const venueOpts = [...new Set(list.map((p) => p.venue))].sort();
+
+const selectStyle =
+  "padding:9px 12px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:13.5px;font-family:'IBM Plex Sans',sans-serif";
 ---
 
 <Base title="Papers — BanglaNLP Hub" active="papers">
-  <main style="max-width:1200px;margin:0 auto;padding:64px 20px 96px">
-    <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">Papers</h1>
-    <p style="color:var(--text2);font-size:15.5px;max-width:560px;line-height:1.6;margin:12px 0 0">
-      This page has not been built yet. The catalog data behind it already exists and is
-      validated — only the view is outstanding.
-    </p>
-    <p style="font-size:14px;margin-top:20px">
-      <a href={`${base}/tasks`}>Browse by task →</a>
-    </p>
+  <main style="max-width:900px;margin:0 auto;padding:0 20px 64px">
+    <section style="padding:48px 0 24px">
+      <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">
+        Papers <span class="bn" style="font-size:19px;color:var(--red);font-weight:600"
+          >গবেষণাপত্র</span
+        >
+      </h1>
+      <p
+        style="color:var(--text2);font-size:15.5px;max-width:620px;line-height:1.6;margin:10px 0 0;text-wrap:pretty"
+      >
+        {list.length} indexed publications on Bangla NLP, newest first.
+      </p>
+    </section>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px">
+      <input
+        id="f-q"
+        type="search"
+        placeholder="Filter by title or author…"
+        aria-label="Filter papers"
+        style="flex:1;min-width:200px;padding:9px 14px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:14px;font-family:'IBM Plex Sans',sans-serif;outline:none"
+      />
+      <select id="f-year" aria-label="Filter by year" style={selectStyle}>
+        <option value="">Any year</option>
+        {yearOpts.map((y) => <option value={String(y)}>{y}</option>)}
+      </select>
+      <select id="f-venue" aria-label="Filter by venue" style={selectStyle}>
+        <option value="">Any venue</option>
+        {venueOpts.map((v) => <option value={v}>{v}</option>)}
+      </select>
+      <select id="f-task" aria-label="Filter by task" style={selectStyle}>
+        <option value="">All tasks</option>
+        {tasks.map((t) => <option value={t.id}>{t.name}</option>)}
+      </select>
+      <span id="f-count" aria-live="polite" style="font-size:12.5px;color:var(--text2)"
+        >{list.length} shown</span
+      >
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:10px">
+      {
+        list.map((p) => {
+          const tone = venueTone(p.venue);
+          return (
+            <a
+              class="papercard"
+              href={p.link}
+              target="_blank"
+              rel="noopener"
+              data-year={p.year}
+              data-venue={p.venue}
+              data-task={p.task}
+              data-text={`${p.title} ${p.authors}`.toLowerCase()}
+              style="text-decoration:none;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start"
+            >
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--text2);flex-shrink:0;padding-top:2px">
+                {p.year}
+              </span>
+              <span style="flex:1;min-width:0">
+                <span style="display:block;font-weight:600;font-size:14.5px;color:var(--text);line-height:1.45;text-wrap:pretty">
+                  {p.title}
+                </span>
+                <span style="display:block;font-size:12.5px;color:var(--text2);margin-top:4px">
+                  {p.authors} · {taskName(p.task)}
+                  {p.note && <span> · {p.note}</span>}
+                </span>
+              </span>
+              <span
+                style={`font-size:11px;font-weight:600;letter-spacing:0.04em;color:${tone.fg};background:${tone.bg};padding:3px 9px;border-radius:99px;flex-shrink:0`}
+              >
+                {p.venue}
+              </span>
+            </a>
+          );
+        })
+      }
+      <div
+        id="f-empty"
+        hidden
+        style="padding:24px;font-size:14px;color:var(--text2);background:var(--surface);border:1px solid var(--border);border-radius:12px"
+      >
+        Nothing matches those filters. <a href={`${base}/contribute`}>Add a missing paper via PR</a>.
+      </div>
+    </div>
   </main>
 </Base>
+
+<style>
+  .papercard:hover {
+    border-color: var(--green);
+  }
+  #f-q:focus,
+  #f-year:focus,
+  #f-venue:focus,
+  #f-task:focus {
+    border-color: var(--green);
+  }
+</style>
+
+<script>
+  const q = document.getElementById('f-q') as HTMLInputElement;
+  const year = document.getElementById('f-year') as HTMLSelectElement;
+  const venue = document.getElementById('f-venue') as HTMLSelectElement;
+  const task = document.getElementById('f-task') as HTMLSelectElement;
+  const count = document.getElementById('f-count');
+  const empty = document.getElementById('f-empty');
+  const cards = [...document.querySelectorAll<HTMLElement>('.papercard')];
+
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    let shown = 0;
+    for (const c of cards) {
+      const hit =
+        (!term || (c.dataset.text ?? '').includes(term)) &&
+        (!year.value || c.dataset.year === year.value) &&
+        (!venue.value || c.dataset.venue === venue.value) &&
+        (!task.value || c.dataset.task === task.value);
+      c.hidden = !hit;
+      if (hit) shown++;
+    }
+    if (count) count.textContent = `${shown} shown`;
+    if (empty) empty.hidden = shown > 0;
+  }
+
+  [q, year, venue, task].forEach((el) => {
+    el.addEventListener('input', apply);
+    el.addEventListener('change', apply);
+  });
+</script>

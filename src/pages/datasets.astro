@@ -1,22 +1,284 @@
 ---
 /**
- * Placeholder route. The Datasets view has not been ported from
- * design-reference/Datasets.dc.html yet; this exists so nav and footer links
- * resolve instead of 404ing. Replace wholesale when the view is ported.
+ * Datasets — ported from design-reference/Datasets.dc.html.
+ *
+ * One deliberate departure: the prototype's genBibtex() SYNTHESISED an @misc
+ * entry whenever a dataset had no real bibtex field. That contradicts the rule
+ * published in CONTRIBUTING.md ("no invented BibTeX") and TaskDetail's
+ * behaviour, and 25 of 31 datasets currently lack one — so it would have
+ * manufactured citations for most of the table. Rows without BibTeX say so and
+ * link to the contribution guide instead.
  */
 import Base from '../layouts/Base.astro';
+import { datasets, tasks } from '../lib/data.ts';
+
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const taskName = (id: string) => tasks.find((t) => t.id === id)?.name ?? id;
+
+/** Mirrors the prototype's licenseGroup() buckets. */
+const licenseGroup = (l: string) =>
+  /NC|Non-comm/i.test(l) ? 'nc' : /research/i.test(l) ? 'research' : 'open';
+
+const rows = [...datasets].sort((a, b) => b.year - a.year || a.name.localeCompare(b.name));
+const yearOpts = [...new Set(rows.map((d) => d.year))].sort((a, b) => b - a);
+
+const th =
+  'text-align:left;padding:10px 16px;font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--text2);border-bottom:1px solid var(--border)';
+const td = 'padding:12px 16px;border-bottom:1px solid var(--border)';
+const selectStyle =
+  "padding:9px 12px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:13.5px;font-family:'IBM Plex Sans',sans-serif";
 ---
 
 <Base title="Datasets — BanglaNLP Hub" active="datasets">
-  <main style="max-width:1200px;margin:0 auto;padding:64px 20px 96px">
-    <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">Datasets</h1>
-    <p style="color:var(--text2);font-size:15.5px;max-width:560px;line-height:1.6;margin:12px 0 0">
-      This page has not been built yet. The catalog data behind it already exists and is
-      validated — only the view is outstanding.
-    </p>
-    <p style="font-size:14px;margin-top:20px">
-      <a href={`${base}/tasks`}>Browse by task →</a>
-    </p>
+  <main style="max-width:1200px;margin:0 auto;padding:0 20px 64px">
+    <section style="padding:48px 0 24px">
+      <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">
+        Datasets <span class="bn" style="font-size:19px;color:var(--red);font-weight:600"
+          >ডেটাসেট</span
+        >
+      </h1>
+      <p
+        style="color:var(--text2);font-size:15.5px;max-width:620px;line-height:1.6;margin:10px 0 0;text-wrap:pretty"
+      >
+        {rows.length} Bangla datasets across {tasks.length} tasks. Click a row for details and a citation.
+      </p>
+    </section>
+
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px">
+      <input
+        id="f-q"
+        type="search"
+        placeholder="Filter by name or description…"
+        aria-label="Filter datasets"
+        style="flex:1;min-width:200px;padding:9px 14px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:14px;font-family:'IBM Plex Sans',sans-serif;outline:none"
+      />
+      <select id="f-task" aria-label="Filter by task" style={selectStyle}>
+        <option value="">All tasks</option>
+        {tasks.map((t) => <option value={t.id}>{t.name}</option>)}
+      </select>
+      <select id="f-license" aria-label="Filter by license" style={selectStyle}>
+        <option value="">Any license</option>
+        <option value="open">Open / permissive</option>
+        <option value="nc">Non-commercial</option>
+        <option value="research">Research only</option>
+      </select>
+      <select id="f-year" aria-label="Filter by year" style={selectStyle}>
+        <option value="">Any year</option>
+        {yearOpts.map((y) => <option value={String(y)}>{y}</option>)}
+      </select>
+      <span id="f-count" aria-live="polite" style="font-size:12.5px;color:var(--text2)"
+        >{rows.length} shown</span
+      >
+    </div>
+
+    <div
+      style="overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--surface)"
+    >
+      <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:760px">
+        <thead>
+          <tr>
+            <th scope="col" class="stickycol" style={th}>Dataset</th>
+            <th scope="col" style={th}>Task</th>
+            <th scope="col" style={th}>Size</th>
+            <th scope="col" style={th}>License</th>
+            <th scope="col" style={th}>Year</th>
+            <th scope="col" style={th}>Link</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            rows.map((d) => (
+              <>
+                <tr
+                  class="dsrow"
+                  data-id={d.id}
+                  data-task={d.task}
+                  data-year={d.year}
+                  data-license={licenseGroup(d.license)}
+                  data-text={`${d.name} ${d.desc} ${d.source}`.toLowerCase()}
+                  style="cursor:pointer"
+                >
+                  <td class="stickycol" style={td}>
+                    <span data-caret style="color:var(--text2);font-size:11px;margin-right:8px">
+                      ▸
+                    </span>
+                    <span style="font-weight:600;color:var(--text)">{d.name}</span>
+                  </td>
+                  <td style={`${td};white-space:nowrap`}>
+                    <span style="font-size:11.5px;font-weight:500;color:var(--green);background:var(--greenSoft);padding:3px 9px;border-radius:99px">
+                      {taskName(d.task)}
+                    </span>
+                  </td>
+                  <td style={`${td};white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:12.5px`}>
+                    {d.size}
+                  </td>
+                  <td style={`${td};white-space:nowrap`}>
+                    <span style="font-size:11.5px;color:var(--text2);background:var(--surface2);border:1px solid var(--border);padding:2px 8px;border-radius:99px">
+                      {d.license}
+                    </span>
+                  </td>
+                  <td style={`${td};font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--text2)`}>
+                    {d.year}
+                  </td>
+                  <td style={`${td};white-space:nowrap`}>
+                    <a
+                      href={d.link}
+                      target="_blank"
+                      rel="noopener"
+                      data-stop
+                      aria-label={`Open ${d.name}`}
+                      style="font-size:13px;font-weight:500"
+                    >
+                      ↗
+                    </a>
+                    <span style="font-size:10.5px;color:var(--text2);margin-left:6px">
+                      ✓ {d.verified}
+                    </span>
+                  </td>
+                </tr>
+                <tr class="dsdetail" data-for={d.id} hidden>
+                  <td colspan="6" style="padding:0;border-bottom:1px solid var(--border);background:var(--surface2)">
+                    <div style="padding:18px 20px;display:grid;grid-template-columns:1fr;gap:14px;max-width:860px">
+                      <div style="font-size:13.5px;color:var(--text);line-height:1.6;text-wrap:pretty">
+                        {d.desc} <span style="color:var(--text2)">Source: {d.source}.</span>
+                      </div>
+                      {d.bibtex ? (
+                        <div style="position:relative">
+                          <pre style="margin:0;background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:14px 16px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.55;color:var(--text);overflow-x:auto;white-space:pre-wrap">{d.bibtex}</pre>
+                          <button
+                            class="bibbtn"
+                            type="button"
+                            data-bibtex={d.bibtex}
+                            style="position:absolute;top:8px;right:8px;border:1px solid var(--border);background:var(--surface);color:var(--text2);border-radius:7px;padding:4px 10px;font-size:11.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Sans',sans-serif"
+                          >
+                            Copy BibTeX
+                          </button>
+                        </div>
+                      ) : (
+                        <div style="font-size:12.5px;color:var(--text2);background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:12px 16px">
+                          No BibTeX on file for this dataset. Rather than generate one, we leave it
+                          out — <a href={`${base}/contribute`}>add the published entry via PR</a>.
+                        </div>
+                      )}
+                    </div>
+                  </td>
+                </tr>
+              </>
+            ))
+          }
+        </tbody>
+      </table>
+      <div id="f-empty" hidden style="padding:24px;font-size:14px;color:var(--text2)">
+        Nothing matches those filters. <a href={`${base}/contribute`}>Add a missing dataset via PR</a
+        >.
+      </div>
+    </div>
   </main>
 </Base>
+
+<style>
+  .dsrow:hover {
+    background: var(--surface2);
+  }
+  .dsrow[data-open] {
+    background: var(--surface2);
+  }
+  .bibbtn:hover {
+    border-color: var(--green);
+  }
+  #f-q:focus,
+  #f-task:focus,
+  #f-license:focus,
+  #f-year:focus {
+    border-color: var(--green);
+  }
+</style>
+
+<script>
+  const q = document.getElementById('f-q') as HTMLInputElement;
+  const task = document.getElementById('f-task') as HTMLSelectElement;
+  const lic = document.getElementById('f-license') as HTMLSelectElement;
+  const year = document.getElementById('f-year') as HTMLSelectElement;
+  const count = document.getElementById('f-count');
+  const empty = document.getElementById('f-empty');
+  const rows = [...document.querySelectorAll<HTMLElement>('.dsrow')];
+  const detailFor = (id: string) =>
+    document.querySelector<HTMLElement>(`.dsdetail[data-for="${id}"]`);
+
+  function setOpen(id: string, open: boolean) {
+    const row = rows.find((r) => r.dataset.id === id);
+    const det = detailFor(id);
+    if (!row || !det) return;
+    det.hidden = !open || row.hidden;
+    if (open) row.setAttribute('data-open', '');
+    else row.removeAttribute('data-open');
+    const caret = row.querySelector('[data-caret]');
+    if (caret) caret.textContent = open ? '▾' : '▸';
+  }
+
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    let shown = 0;
+    for (const r of rows) {
+      const hit =
+        (!term || (r.dataset.text ?? '').includes(term)) &&
+        (!task.value || r.dataset.task === task.value) &&
+        (!lic.value || r.dataset.license === lic.value) &&
+        (!year.value || r.dataset.year === year.value);
+      r.hidden = !hit;
+      const det = detailFor(r.dataset.id!);
+      // Keep a hidden row's detail hidden too, without losing its open state.
+      if (det) det.hidden = !hit || !r.hasAttribute('data-open');
+      if (hit) shown++;
+    }
+    if (count) count.textContent = `${shown} shown`;
+    if (empty) empty.hidden = shown > 0;
+  }
+
+  rows.forEach((r) => {
+    r.addEventListener('click', (e) => {
+      if ((e.target as HTMLElement).closest('[data-stop]')) return; // let the link work
+      const id = r.dataset.id!;
+      setOpen(id, !r.hasAttribute('data-open'));
+    });
+  });
+
+  [q, task, lic, year].forEach((el) => {
+    el.addEventListener('input', apply);
+    el.addEventListener('change', apply);
+  });
+
+  document.querySelectorAll<HTMLButtonElement>('.bibbtn').forEach((btn) => {
+    btn.addEventListener('click', async (e) => {
+      e.stopPropagation();
+      const text = btn.dataset.bibtex ?? '';
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+        } catch {}
+        document.body.removeChild(ta);
+      }
+      btn.textContent = 'Copied ✓';
+      btn.style.color = 'var(--green)';
+      setTimeout(() => {
+        btn.textContent = 'Copy BibTeX';
+        btn.style.color = 'var(--text2)';
+      }, 1600);
+    });
+  });
+
+  // Deep link: /datasets#sentnob expands that row.
+  const hash = location.hash.slice(1);
+  if (hash && rows.some((r) => r.dataset.id === hash)) {
+    setOpen(hash, true);
+    detailFor(hash)?.scrollIntoView({ block: 'center' });
+  }
+</script>
