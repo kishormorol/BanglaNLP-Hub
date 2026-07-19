@@ -7,11 +7,11 @@
   task: llm
   note: Introduces BanglaBERT + the BLUB benchmark.
 - id: benqa-p
-  title: "BEnQA: A Question Answering and Reasoning Benchmark for Bengali and English"
+  title: "BEnQA: A Question Answering Benchmark for Bengali and English"
   authors: Shafayat et al.
   venue: Findings ACL
   year: 2024
-  link: https://aclanthology.org/2024.findings-acl.848/
+  link: https://aclanthology.org/2024.findings-acl.68/
   task: llm
   note: Parallel science exam questions; large en–bn gap.
 - id: benllm
@@ -23,7 +23,7 @@
   task: llm
   note: Zero-shot LLMs vs fine-tuned baselines.
 - id: sahajbert-p
-  title: Distributed Deep Learning in Open Collaborations (sahajBERT)
+  title: Distributed Deep Learning in Open Collaborations
   authors: Diskin et al.
   venue: NeurIPS
   year: 2021

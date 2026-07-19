@@ -15,9 +15,9 @@
   task: sentiment
   note: "Two datasets: cricket comments and customer reviews."
 - id: emotion-p
-  title: "BEmoC: A Corpus for Emotion Classification in Bangla"
+  title: "BEmoC: A Corpus for Identifying Emotion in Bengali Texts"
   authors: Das et al.
-  venue: Springer
-  year: 2021
-  link: https://link.springer.com/chapter/10.1007/978-981-16-6636-0_17
+  venue: SN Computer Science
+  year: 2022
+  link: https://link.springer.com/article/10.1007/s42979-022-01028-w
   task: sentiment

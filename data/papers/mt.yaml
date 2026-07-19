@@ -1,5 +1,5 @@
 - id: notlowresource
-  title: "Not Low-Resource Anymore: Aligner Ensembling, Batch Filtering, and New Datasets for Bengali–English MT"
+  title: "Not Low-Resource Anymore: Aligner Ensembling, Batch Filtering, and New Datasets for Bengali-English Machine Translation"
   authors: Hasan et al.
   venue: EMNLP
   year: 2020
@@ -19,7 +19,7 @@
   authors: Akil et al.
   venue: AACL
   year: 2022
-  link: https://aclanthology.org/2022.aacl-short.44/
+  link: https://aclanthology.org/2022.aacl-short.33/
   task: mt
 - id: samanantar-p
   title: "Samanantar: The Largest Publicly Available Parallel Corpora Collection for 11 Indic Languages"
@@ -27,11 +27,4 @@
   venue: TACL
   year: 2022
   link: https://aclanthology.org/2022.tacl-1.9/
-  task: mt
-- id: bsti
-  title: "BanglaT5 for Low-Resource Sequence-to-Sequence Tasks: Machine Translation Case Study"
-  authors: Bhattacharjee et al.
-  venue: arXiv
-  year: 2023
-  link: https://arxiv.org/abs/2205.11081
   task: mt
