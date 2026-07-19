@@ -1,0 +1,4 @@
+- dataset: banfakenews
+  label: BanFakeNews
+  metric: Macro-F1
+  rows: []

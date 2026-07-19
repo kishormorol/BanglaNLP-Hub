@@ -1,0 +1,8 @@
+- id: csebuetnlp-banglat5-squad-bn
+  name: csebuetnlp/banglat5_squad_bn
+  task: qa
+  arch: T5 (ft)
+  params: 247M
+  link: https://huggingface.co/csebuetnlp/banglat5
+  verified: 2026-05-16
+  note: BanglaT5 fine-tuned on SQuAD_bn; BanglaRQA baseline.

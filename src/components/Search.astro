@@ -1,0 +1,172 @@
+---
+/**
+ * Catalog search island — shared by the nav header and the Home hero.
+ *
+ * Both variants render the same markup contract (`[data-search]`) and are driven
+ * by one bundled script, so the logic and the fetched index are shared no matter
+ * how many instances a page mounts. Styling differs only via the `variant` prop,
+ * matching SiteNav.dc.html (nav) and Home.dc.html (hero).
+ */
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+interface Props {
+  variant?: 'nav' | 'hero';
+  id: string;
+}
+const { variant = 'nav', id } = Astro.props;
+
+const V = {
+  nav: {
+    wrap: 'position:relative;flex:0 1 260px;min-width:110px',
+    input:
+      "width:100%;padding:7px 12px 7px 30px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font-size:13.5px;font-family:'IBM Plex Sans',sans-serif;outline:none",
+    icon: 'position:absolute;left:10px;top:8px;color:var(--text2);font-size:13px',
+    panel:
+      'position:absolute;top:40px;left:0;right:0;max-width:360px;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(10,30,20,0.12);overflow:hidden;max-height:340px;overflow-y:auto;z-index:20',
+    placeholder: 'Search…',
+  },
+  hero: {
+    wrap: 'position:relative;max-width:600px;margin:32px auto 0',
+    input:
+      "width:100%;padding:15px 20px 15px 46px;border:1.5px solid var(--border);border-radius:12px;background:var(--surface);color:var(--text);font-size:15.5px;font-family:'IBM Plex Sans',sans-serif;outline:none;box-shadow:0 2px 10px rgba(14,60,40,0.05)",
+    icon: 'position:absolute;left:17px;top:15px;color:var(--text2);font-size:18px',
+    panel:
+      'position:absolute;top:58px;left:0;right:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(10,30,20,0.14);overflow:hidden;z-index:20;text-align:left;max-height:360px;overflow-y:auto',
+    placeholder: 'Search papers, datasets, models… e.g. “sentiment” or “BanglaBERT”',
+  },
+}[variant];
+---
+
+<div
+  data-search
+  data-variant={variant}
+  data-index-url={`${base}/search-index.json`}
+  data-contribute-url={`${base}/contribute`}
+  style={V.wrap}
+>
+  <input
+    id={id}
+    type="search"
+    autocomplete="off"
+    placeholder={V.placeholder}
+    aria-label="Search the catalog"
+    role="combobox"
+    aria-expanded="false"
+    aria-controls={`${id}-results`}
+    data-search-input
+    style={V.input}
+  />
+  <span aria-hidden="true" style={V.icon}>⌕</span>
+  <div
+    id={`${id}-results`}
+    role="listbox"
+    aria-label="Search results"
+    data-search-panel
+    hidden
+    style={V.panel}
+  >
+  </div>
+</div>
+
+<style>
+  [data-search] input:focus {
+    border-color: var(--green);
+  }
+  [data-search] [data-search-panel] a:hover {
+    background: var(--surface2);
+  }
+</style>
+
+<script>
+  // One shared index fetch across every mounted instance.
+  let index: { type: string; name: string; meta: string; href: string }[] | null = null;
+  let pending: Promise<void> | null = null;
+
+  const esc = (s: string) =>
+    String(s).replace(
+      /[&<>"']/g,
+      (c) =>
+        ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] as string,
+    );
+
+  function load(url: string) {
+    if (index) return Promise.resolve();
+    if (!pending) {
+      pending = fetch(url)
+        .then((r) => r.json())
+        .then((j) => {
+          index = j;
+        })
+        .catch(() => {
+          pending = null;
+        });
+    }
+    return pending;
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-search]').forEach((root) => {
+    const input = root.querySelector<HTMLInputElement>('[data-search-input]');
+    const panel = root.querySelector<HTMLElement>('[data-search-panel]');
+    if (!input || !panel) return;
+
+    const hero = root.dataset.variant === 'hero';
+    const indexUrl = root.dataset.indexUrl!;
+    const contributeUrl = root.dataset.contributeUrl!;
+
+    // Row metrics differ between the nav and hero variants in the prototype.
+    const pad = hero ? '11px 16px' : '9px 12px';
+    const typeW = hero ? '56px' : '52px';
+    const nameSize = hero ? '14px' : '13px';
+    const metaSize = hero ? '12px' : '11.5px';
+    const gap = hero ? '12px' : '10px';
+
+    function render() {
+      const q = input!.value.trim().toLowerCase();
+      if (q.length < 2 || document.activeElement !== input) {
+        panel!.hidden = true;
+        input!.setAttribute('aria-expanded', 'false');
+        return;
+      }
+      if (!index) {
+        load(indexUrl).then(() => {
+          if (index) render();
+        });
+        return;
+      }
+      const hits = index
+        .filter((r) => r.name.toLowerCase().includes(q) || r.meta.toLowerCase().includes(q))
+        .slice(0, 8);
+
+      panel!.innerHTML = hits.length
+        ? hits
+            .map(
+              (r) =>
+                `<a role="option" href="${esc(r.href)}" style="display:flex;gap:${gap};align-items:baseline;padding:${pad};border-bottom:1px solid var(--border);text-decoration:none">` +
+                `<span style="font-size:10.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--red);flex-shrink:0;width:${typeW}">${esc(r.type)}</span>` +
+                `<span style="font-size:${nameSize};color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(r.name)}</span>` +
+                `<span style="font-size:${metaSize};color:var(--text2);margin-left:auto;flex-shrink:0">${esc(r.meta)}</span>` +
+                `</a>`,
+            )
+            .join('')
+        : hero
+          ? `<div style="padding:14px 16px;font-size:14px;color:var(--text2)">No matches in the catalog yet — <a href="${esc(contributeUrl)}">add it via PR</a>.</div>`
+          : `<div style="padding:12px;font-size:13px;color:var(--text2)">No matches in the catalog.</div>`;
+
+      panel!.hidden = false;
+      input!.setAttribute('aria-expanded', 'true');
+    }
+
+    input.addEventListener('focus', () => {
+      load(indexUrl);
+      render();
+    });
+    input.addEventListener('input', render);
+    input.addEventListener('blur', () => setTimeout(render, 200));
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        input.value = '';
+        render();
+      }
+    });
+  });
+</script>

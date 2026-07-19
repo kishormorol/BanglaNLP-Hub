@@ -1,0 +1,33 @@
+- id: multiconer
+  name: MultiCoNER (bn)
+  task: ner
+  size: 15,300 sentences
+  sizeN: 15300
+  license: CC BY 4.0
+  year: 2022
+  source: SemEval-2022 Task 11
+  link: https://registry.opendata.aws/multiconer/
+  verified: 2026-06-10
+  desc: "Complex NER: creative works, groups, products; Bangla track."
+- id: bner
+  name: B-NER
+  task: ner
+  size: 22,144 sentences
+  sizeN: 22144
+  license: MIT
+  year: 2023
+  source: B-NER (IEEE Access 2023)
+  link: https://github.com/eliteaihub/b-ner
+  verified: 2026-06-21
+  desc: Largest gold-standard Bangla NER corpus, 8 entity types.
+- id: wikiann
+  name: WikiANN (bn)
+  task: ner
+  size: 10,000 sentences
+  sizeN: 10000
+  license: ODC-BY
+  year: 2019
+  source: Cross-lingual name tagging (ACL 2017)
+  link: https://huggingface.co/datasets/wikiann
+  verified: 2026-03-30
+  desc: Silver-standard PER/LOC/ORG from Wikipedia anchors.

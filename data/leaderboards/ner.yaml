@@ -1,0 +1,4 @@
+- dataset: bner
+  label: B-NER
+  metric: Macro-F1
+  rows: []

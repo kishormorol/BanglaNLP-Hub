@@ -1,0 +1,72 @@
+- id: bnlp-toolkit
+  name: bnlp-toolkit
+  author: sagorsarker
+  desc: Tokenization, embeddings (word2vec/fastText/GloVe), NER, POS for Bangla.
+  lang: Python
+  install: pip install bnlp_toolkit
+  link: https://github.com/sagorbrur/bnlp
+  verified: 2026-06-28
+- id: normalizer
+  name: normalizer
+  author: csebuetnlp
+  desc: Unicode + punctuation normalization used by BanglaBERT/BanglaT5 pipelines.
+  lang: Python
+  install: pip install git+https://github.com/csebuetnlp/normalizer
+  link: https://github.com/csebuetnlp/normalizer
+  verified: 2026-06-28
+- id: bnunicodenormalizer
+  name: bnunicodenormalizer
+  author: BengaliAI
+  desc: Deterministic grapheme-level Bangla unicode error correction.
+  lang: Python
+  install: pip install bnunicodenormalizer
+  link: https://github.com/mnansary/bnUnicodeNormalizer
+  verified: 2026-05-30
+- id: sbnltk
+  name: sbnltk
+  author: soumitri
+  desc: "Bangla NLP toolkit: NER, POS, stemmer, sentiment, extractive summarizer."
+  lang: Python
+  install: pip install sbnltk
+  link: https://github.com/Foysal87/sbnltk
+  verified: 2026-04-15
+- id: bkit
+  name: bkit
+  author: BanglaKit
+  desc: Text cleaning, normalization, tokenization, lemmatization for Bangla.
+  lang: Python
+  install: pip install bkit
+  link: https://github.com/banglakit/bkit
+  verified: 2026-05-02
+- id: avro-py
+  name: avro.py
+  author: hitblast
+  desc: Phonetic Banglish→Bangla transliteration (Avro keyboard scheme).
+  lang: Python
+  install: pip install avro-py
+  link: https://github.com/hitblast/avro.py
+  verified: 2026-06-12
+- id: indic-nlp-library
+  name: indic-nlp-library
+  author: anoopkunchukuttan
+  desc: Script processing, normalization, transliteration for Indic languages incl. Bangla.
+  lang: Python
+  install: pip install indic-nlp-library
+  link: https://github.com/anoopkunchukuttan/indic_nlp_library
+  verified: 2026-06-12
+- id: banglaspeech2text
+  name: BanglaSpeech2Text
+  author: shhossain
+  desc: Ready-to-use Bangla ASR wrapper over Whisper checkpoints.
+  lang: Python
+  install: pip install banglaspeech2text
+  link: https://github.com/shhossain/BanglaSpeech2Text
+  verified: 2026-03-27
+- id: bangla
+  name: bangla
+  author: arsho
+  desc: "Utilities: Bangla numerals, dates, and text helpers."
+  lang: Python
+  install: pip install bangla
+  link: https://github.com/arsho/bangla
+  verified: 2026-02-09

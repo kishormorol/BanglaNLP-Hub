@@ -1,0 +1,33 @@
+- id: banfakenews
+  name: BanFakeNews
+  task: textcls
+  size: ~50k articles
+  sizeN: 50000
+  license: CC BY-NC 4.0
+  year: 2020
+  source: BanFakeNews (LREC 2020)
+  link: https://github.com/Rowan1224/FakeNews
+  verified: 2026-06-11
+  desc: Annotated fake vs. authentic Bangla news articles.
+- id: potrika
+  name: Potrika
+  task: textcls
+  size: 665k articles
+  sizeN: 665000
+  license: CC BY 4.0
+  year: 2022
+  source: Potrika (2022)
+  link: https://doi.org/10.17632/v362rp78dc.2
+  verified: 2026-01-30
+  desc: Large single-label news corpus, 8 categories, 6 dailies.
+- id: bard
+  name: BARD
+  task: textcls
+  size: 376,226 articles
+  sizeN: 376226
+  license: Research only
+  year: 2018
+  source: Bangla Article Dataset
+  link: https://github.com/tanvirfahim15/BARD-Bangla-Article-Classifier
+  verified: 2026-02-14
+  desc: News articles across 5 categories.

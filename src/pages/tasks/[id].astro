@@ -1,0 +1,509 @@
+---
+/**
+ * TaskDetail — ported from design-reference/TaskDetail.dc.html.
+ *
+ * The prototype was a single page keyed by `#taskId/tab`. These are static
+ * routes, so the hash carries only the tab: /tasks/sentiment#leaderboard.
+ *
+ * All four panels are server-rendered; the island only toggles visibility,
+ * sorts the dataset table, switches leaderboard pills, and copies BibTeX.
+ */
+import Base from '../../layouts/Base.astro';
+import { tasks, byTask, venueTone } from '../../lib/data.ts';
+
+export function getStaticPaths() {
+  return tasks.map((t) => ({ params: { id: t.id } }));
+}
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const { id } = Astro.params;
+const task = tasks.find((t) => t.id === id)!;
+
+// Default sort matches the prototype: year descending.
+const datasets = [...byTask.datasets(task.id)].sort((a, b) => b.year - a.year);
+const papers = [...byTask.papers(task.id)].sort((a, b) => b.year - a.year);
+const models = byTask.models(task.id);
+const boards = byTask.leaderboards(task.id);
+
+// A board with zero rows carries no information, so it is treated as "not
+// curated" for display. Every board is currently empty by design — see
+// TODO-data.md. This differs from the prototype, which would render an
+// empty table whenever a board existed at all.
+const hasRows = boards.some((b) => b.rows.length > 0);
+const topBoard = hasRows ? boards.find((b) => b.rows.length > 0)! : null;
+const top = topBoard?.rows[0] ?? null;
+
+const tabs = [
+  ['datasets', `Datasets (${datasets.length})`],
+  ['leaderboard', `Leaderboard (${boards.length})`],
+  ['papers', `Papers (${papers.length})`],
+  ['models', `Models (${models.length})`],
+] as const;
+
+const cols = [
+  { key: 'name', label: 'Dataset', sticky: true },
+  { key: 'size', label: 'Size' },
+  { key: 'license', label: 'License' },
+  { key: 'year', label: 'Year' },
+  { key: null, label: 'Source paper' },
+  { key: null, label: 'Link' },
+];
+
+const thBase =
+  'text-align:left;padding:10px 16px;font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;border-bottom:1px solid var(--border);white-space:nowrap;user-select:none';
+const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
+---
+
+<Base title={`${task.name} — BanglaNLP Hub`} description={task.desc} active="tasks">
+  <main style="max-width:1200px;margin:0 auto;padding:0 20px 64px">
+    <section style="padding:40px 0 24px">
+      <div style="font-size:13px;color:var(--text2);margin-bottom:14px">
+        <a href={`${base}/tasks`} style="text-decoration:none">Tasks</a>
+        <span style="margin:0 4px">/</span>{task.name}
+      </div>
+      <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap">
+        <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">
+          {task.name}
+        </h1>
+        <span class="bn" style="font-size:18px;color:var(--red);font-weight:600">{task.bn}</span>
+      </div>
+      <p
+        style="color:var(--text2);font-size:15.5px;max-width:640px;line-height:1.6;margin:10px 0 0;text-wrap:pretty"
+      >
+        {task.desc}
+      </p>
+      <div
+        style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:16px;font-size:13.5px;color:var(--text2)"
+      >
+        <span><strong style="color:var(--text)">{datasets.length}</strong> datasets</span>
+        <span>·</span>
+        <span><strong style="color:var(--text)">{papers.length}</strong> papers</span>
+        {
+          top && topBoard && (
+            <span style="background:var(--greenSoft);color:var(--green);padding:4px 12px;border-radius:99px;font-weight:600;font-size:12.5px">
+              SOTA · {top.model} — {top.score} {topBoard.metric} ({top.year})
+            </span>
+          )
+        }
+      </div>
+    </section>
+
+    <div
+      role="tablist"
+      aria-label="Task resources"
+      style="display:flex;gap:4px;border-bottom:1.5px solid var(--border);overflow-x:auto;scrollbar-width:none"
+    >
+      {
+        tabs.map(([tid, label]) => (
+          <button
+            role="tab"
+            id={`tab-${tid}`}
+            data-tab={tid}
+            aria-controls={`panel-${tid}`}
+            aria-selected={tid === 'datasets' ? 'true' : 'false'}
+            style="border:none;background:none;cursor:pointer;padding:10px 16px;font-size:14px;font-family:'IBM Plex Sans',sans-serif;margin-bottom:-1.5px;white-space:nowrap"
+          >
+            {label}
+          </button>
+        ))
+      }
+    </div>
+
+    {/* ---- Datasets ---- */}
+    <div
+      role="tabpanel"
+      id="panel-datasets"
+      aria-labelledby="tab-datasets"
+      data-panel="datasets"
+      style="overflow-x:auto;margin-top:20px;border:1px solid var(--border);border-radius:12px;background:var(--surface)"
+    >
+      <table
+        id="ds-table"
+        style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:780px"
+      >
+        <thead>
+          <tr>
+            {
+              cols.map((c) => (
+                <th
+                  scope="col"
+                  class={c.sticky ? 'stickycol' : undefined}
+                  data-sort={c.key ?? undefined}
+                  aria-sort={c.key === 'year' ? 'descending' : c.key ? 'none' : undefined}
+                  style={`${thBase};cursor:${c.key ? 'pointer' : 'default'};color:${c.key === 'year' ? 'var(--green)' : 'var(--text2)'}`}
+                >
+                  {c.label}
+                  <span data-ind>{c.key === 'year' ? ' ▾' : ''}</span>
+                </th>
+              ))
+            }
+          </tr>
+        </thead>
+        <tbody>
+          {
+            datasets.map((d) => (
+              <tr
+                class="dsrow"
+                data-name={d.name.toLowerCase()}
+                data-size={d.sizeN}
+                data-license={d.license.toLowerCase()}
+                data-year={d.year}
+              >
+                <td class="stickycol" style={tdBase}>
+                  <div style="font-weight:600;color:var(--text)">{d.name}</div>
+                  <div style="font-size:12px;color:var(--text2);max-width:320px">{d.desc}</div>
+                </td>
+                <td style={`${tdBase};white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:12.5px`}>
+                  {d.size}
+                </td>
+                <td style={`${tdBase};white-space:nowrap`}>
+                  <span style="font-size:11.5px;color:var(--text2);background:var(--surface2);border:1px solid var(--border);padding:2px 8px;border-radius:99px">
+                    {d.license}
+                  </span>
+                </td>
+                <td style={`${tdBase};font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--text2)`}>
+                  {d.year}
+                </td>
+                <td style={`${tdBase};font-size:12.5px;color:var(--text2)`}>{d.source}</td>
+                <td style={`${tdBase};white-space:nowrap`}>
+                  <div style="display:flex;gap:8px;align-items:center">
+                    <a
+                      href={d.link}
+                      target="_blank"
+                      rel="noopener"
+                      aria-label={`Download ${d.name}`}
+                      style="font-size:13px;font-weight:500"
+                    >
+                      Download ↗
+                    </a>
+                    {d.bibtex && (
+                      <button
+                        class="bibbtn"
+                        data-bibtex={d.bibtex}
+                        style="border:1px solid var(--border);background:var(--surface);color:var(--text2);border-radius:6px;padding:2px 8px;font-size:10.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Sans',sans-serif"
+                      >
+                        BibTeX
+                      </button>
+                    )}
+                  </div>
+                  <div style="font-size:10.5px;color:var(--text2);margin-top:3px">
+                    ✓ verified {d.verified}
+                  </div>
+                </td>
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    {/* ---- Leaderboard ---- */}
+    <div
+      role="tabpanel"
+      id="panel-leaderboard"
+      aria-labelledby="tab-leaderboard"
+      data-panel="leaderboard"
+      hidden
+      style="margin-top:20px"
+    >
+      {
+        hasRows ? (
+          <>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+              {boards.map((b, i) => (
+                <button
+                  class="lbpill"
+                  data-board={i}
+                  style={`border:1px solid ${i === 0 ? 'var(--green)' : 'var(--border)'};background:${i === 0 ? 'var(--greenSoft)' : 'transparent'};color:${i === 0 ? 'var(--green)' : 'var(--text2)'};border-radius:99px;padding:5px 14px;font-size:12.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Sans',sans-serif`}
+                >
+                  {b.label}
+                </button>
+              ))}
+            </div>
+            {boards.map((b, i) => (
+              <div class="lbpanel" data-board={i} hidden={i !== 0}>
+                <div style="font-size:13px;color:var(--text2);margin-bottom:12px">
+                  State of the art on{' '}
+                  <span style="font-weight:600;color:var(--text)">{b.label}</span> · metric:{' '}
+                  <span style="font-family:'IBM Plex Mono',monospace">{b.metric}</span>
+                </div>
+                <div style="overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--surface)">
+                  <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px">
+                    <thead>
+                      <tr>
+                        <th scope="col" style={`${thBase};color:var(--text2)`}>
+                          #
+                        </th>
+                        <th scope="col" class="stickycol" style={`${thBase};color:var(--text2)`}>
+                          Model
+                        </th>
+                        <th scope="col" style={`${thBase};color:var(--text2)`}>
+                          {b.metric}
+                        </th>
+                        <th scope="col" style={`${thBase};color:var(--text2)`}>
+                          Paper
+                        </th>
+                        <th scope="col" style={`${thBase};color:var(--text2)`}>
+                          Year
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {b.rows.map((r, ri) => (
+                        <tr style={`background:${ri === 0 ? 'var(--greenSoft)' : 'transparent'}`}>
+                          <td style={`${tdBase};font-family:'IBM Plex Mono',monospace;font-weight:600;color:${ri === 0 ? 'var(--green)' : 'var(--text2)'}`}>
+                            {ri + 1}
+                          </td>
+                          <td class="stickycol" style={`${tdBase};font-weight:600;color:var(--text)`}>
+                            {r.model}
+                            {ri === 0 && (
+                              <span style="font-size:10.5px;font-weight:600;color:var(--green);background:var(--greenSoft);padding:2px 7px;border-radius:99px;margin-left:6px;display:inline-block">
+                                SOTA
+                              </span>
+                            )}
+                          </td>
+                          <td style={`${tdBase};font-family:'IBM Plex Mono',monospace;font-size:13px`}>
+                            {r.score}
+                          </td>
+                          <td style={`${tdBase};font-size:12.5px;color:var(--text2)`}>{r.paper}</td>
+                          <td style={`${tdBase};font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--text2)`}>
+                            {r.year}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            ))}
+            <div style="font-size:11.5px;color:var(--text2);margin-top:10px">
+              Scores are community-reported; see linked papers for official numbers.{' '}
+              <a href={`${base}/contribute`}>Report a correction</a>.
+            </div>
+          </>
+        ) : (
+          <div style="font-size:13.5px;color:var(--text2);padding:20px;background:var(--surface);border:1px solid var(--border);border-radius:12px">
+            No leaderboard curated yet — <a href={`${base}/contribute`}>contribute via PR</a>.
+          </div>
+        )
+      }
+    </div>
+
+    {/* ---- Papers ---- */}
+    <div
+      role="tabpanel"
+      id="panel-papers"
+      aria-labelledby="tab-papers"
+      data-panel="papers"
+      hidden
+      style="margin-top:20px;display:flex;flex-direction:column;gap:10px"
+    >
+      {
+        papers.map((p) => {
+          const tone = venueTone(p.venue);
+          return (
+            <a
+              class="reccard"
+              href={p.link}
+              target="_blank"
+              rel="noopener"
+              style="text-decoration:none;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start"
+            >
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--text2);flex-shrink:0;padding-top:2px">
+                {p.year}
+              </span>
+              <span style="flex:1;min-width:0">
+                <span style="display:block;font-weight:600;font-size:14.5px;color:var(--text);line-height:1.45;text-wrap:pretty">
+                  {p.title}
+                </span>
+                <span style="display:block;font-size:12.5px;color:var(--text2);margin-top:4px">
+                  {p.authors}
+                  {p.note && <span> · {p.note}</span>}
+                </span>
+              </span>
+              <span
+                style={`font-size:11px;font-weight:600;letter-spacing:0.04em;color:${tone.fg};background:${tone.bg};padding:3px 9px;border-radius:99px;flex-shrink:0`}
+              >
+                {p.venue}
+              </span>
+            </a>
+          );
+        })
+      }
+    </div>
+
+    {/* ---- Models ---- */}
+    <div
+      role="tabpanel"
+      id="panel-models"
+      aria-labelledby="tab-models"
+      data-panel="models"
+      hidden
+      style="margin-top:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px"
+    >
+      {
+        models.length ? (
+          models.map((m) => (
+            <a
+              class="reccard"
+              href={m.link}
+              target="_blank"
+              rel="noopener"
+              style="text-decoration:none;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px"
+            >
+              <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:var(--green);word-break:break-all">
+                <span style="font-size:9.5px;font-weight:700;letter-spacing:0.05em;color:var(--gold);background:var(--goldSoft);padding:2px 6px;border-radius:5px;margin-right:7px">
+                  HF
+                </span>
+                {m.name}
+              </div>
+              <div style="font-size:12.5px;color:var(--text2);margin-top:6px">
+                {m.arch} · {m.params}
+              </div>
+              {m.note && (
+                <div style="font-size:12.5px;color:var(--text2);margin-top:4px">{m.note}</div>
+              )}
+              <div style="font-size:10.5px;color:var(--text2);margin-top:8px">
+                ✓ verified {m.verified}
+              </div>
+            </a>
+          ))
+        ) : (
+          <div style="font-size:13.5px;color:var(--text2);padding:16px">
+            No models catalogued for this task yet — <a href={`${base}/contribute`}>add one via PR</a>.
+          </div>
+        )
+      }
+    </div>
+  </main>
+</Base>
+
+<style>
+  [role='tab'] {
+    color: var(--text2);
+    font-weight: 500;
+    border-bottom: 2.5px solid transparent;
+  }
+  [role='tab']:hover {
+    color: var(--green);
+  }
+  [role='tab'][aria-selected='true'] {
+    color: var(--green);
+    font-weight: 600;
+    border-bottom-color: var(--green);
+  }
+  .dsrow:hover {
+    background: var(--surface2);
+  }
+  .reccard:hover {
+    border-color: var(--green);
+  }
+  .bibbtn:hover {
+    border-color: var(--green);
+  }
+</style>
+
+<script>
+  const TABS = ['datasets', 'leaderboard', 'papers', 'models'];
+
+  // ---- deep-linkable tabs: /tasks/<id>#leaderboard ----
+  function showTab(name: string, push: boolean) {
+    const tab = TABS.includes(name) ? name : 'datasets';
+    document.querySelectorAll<HTMLElement>('[data-tab]').forEach((b) => {
+      b.setAttribute('aria-selected', String(b.dataset.tab === tab));
+    });
+    document.querySelectorAll<HTMLElement>('[data-panel]').forEach((p) => {
+      p.hidden = p.dataset.panel !== tab;
+    });
+    if (push) history.replaceState(null, '', tab === 'datasets' ? location.pathname : `#${tab}`);
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-tab]').forEach((b) => {
+    b.addEventListener('click', () => showTab(b.dataset.tab!, true));
+  });
+  window.addEventListener('hashchange', () => showTab(location.hash.slice(1), false));
+  showTab(location.hash.slice(1), false);
+
+  // ---- sortable dataset table ----
+  const table = document.getElementById('ds-table') as HTMLTableElement | null;
+  if (table) {
+    const tbody = table.tBodies[0];
+    let key = 'year';
+    let dir = -1;
+
+    table.querySelectorAll<HTMLElement>('th[data-sort]').forEach((th) => {
+      th.addEventListener('click', () => {
+        const k = th.dataset.sort!;
+        if (k === key) dir = -dir;
+        else {
+          key = k;
+          dir = k === 'size' || k === 'year' ? -1 : 1;
+        }
+
+        table.querySelectorAll<HTMLElement>('th[data-sort]').forEach((h) => {
+          const active = h.dataset.sort === key;
+          h.style.color = active ? 'var(--green)' : 'var(--text2)';
+          h.setAttribute('aria-sort', active ? (dir > 0 ? 'ascending' : 'descending') : 'none');
+          const ind = h.querySelector('[data-ind]');
+          if (ind) ind.textContent = active ? (dir > 0 ? ' ▲' : ' ▾') : '';
+        });
+
+        const rows = [...tbody.querySelectorAll<HTMLElement>('tr')];
+        rows.sort((a, b) => {
+          // `size` sorts on the numeric sizeN, never the display string.
+          const attr = key === 'size' ? 'size' : key;
+          const av = a.dataset[attr] ?? '';
+          const bv = b.dataset[attr] ?? '';
+          const numeric = key === 'size' || key === 'year';
+          const x = numeric ? Number(av) : av;
+          const y = numeric ? Number(bv) : bv;
+          return (x < y ? -1 : x > y ? 1 : 0) * dir;
+        });
+        rows.forEach((r) => tbody.appendChild(r));
+      });
+    });
+  }
+
+  // ---- BibTeX copy ----
+  document.querySelectorAll<HTMLButtonElement>('.bibbtn').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const text = btn.dataset.bibtex ?? '';
+      try {
+        await navigator.clipboard.writeText(text);
+      } catch {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        try {
+          document.execCommand('copy');
+        } catch {}
+        document.body.removeChild(ta);
+      }
+      btn.textContent = 'Copied ✓';
+      btn.style.color = 'var(--green)';
+      setTimeout(() => {
+        btn.textContent = 'BibTeX';
+        btn.style.color = 'var(--text2)';
+      }, 1600);
+    });
+  });
+
+  // ---- leaderboard pill selector ----
+  document.querySelectorAll<HTMLElement>('.lbpill').forEach((pill) => {
+    pill.addEventListener('click', () => {
+      const i = pill.dataset.board;
+      document.querySelectorAll<HTMLElement>('.lbpill').forEach((p) => {
+        const on = p.dataset.board === i;
+        p.style.borderColor = on ? 'var(--green)' : 'var(--border)';
+        p.style.background = on ? 'var(--greenSoft)' : 'transparent';
+        p.style.color = on ? 'var(--green)' : 'var(--text2)';
+      });
+      document.querySelectorAll<HTMLElement>('.lbpanel').forEach((p) => {
+        p.hidden = p.dataset.board !== i;
+      });
+    });
+  });
+</script>

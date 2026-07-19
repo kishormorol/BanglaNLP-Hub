@@ -1,0 +1,4 @@
+- dataset: xlsum
+  label: XL-Sum (bn)
+  metric: ROUGE-2
+  rows: []

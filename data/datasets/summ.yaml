@@ -1,0 +1,29 @@
+- id: xlsum
+  name: XL-Sum (bn)
+  task: summ
+  size: 10,126 articles
+  sizeN: 10126
+  license: CC BY-NC-SA 4.0
+  year: 2021
+  source: XL-Sum (Findings ACL 2021)
+  link: https://huggingface.co/datasets/csebuetnlp/xlsum
+  verified: 2026-06-28
+  desc: Professional article–summary pairs from BBC Bangla.
+  bibtex: |-
+    @inproceedings{hasan-etal-2021-xl,
+      title = {{XL}-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages},
+      author = {Hasan, Tahmid and Bhattacharjee, Abhik and others},
+      booktitle = {Findings of ACL},
+      year = {2021}
+    }
+- id: bansdata
+  name: BANSData
+  task: summ
+  size: 19,096 pairs
+  sizeN: 19096
+  license: Research only
+  year: 2021
+  source: Bangla abstractive news summarization
+  link: https://www.kaggle.com/datasets/prithwirajsust/bengali-news-summarization-dataset
+  verified: 2026-02-20
+  desc: News summarization pairs crawled from Bangla dailies.

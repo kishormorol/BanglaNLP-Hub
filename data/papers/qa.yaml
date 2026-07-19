@@ -1,0 +1,16 @@
+- id: banglarqa-p
+  title: "BanglaRQA: A Benchmark Dataset for Under-resourced Bangla Language Reading Comprehension"
+  authors: Ekram et al.
+  venue: Findings EMNLP
+  year: 2022
+  link: https://aclanthology.org/2022.findings-emnlp.186/
+  task: qa
+  note: Answerable + unanswerable human-written questions.
+- id: tydiqa-p
+  title: "TyDi QA: A Benchmark for Information-Seeking Question Answering in Typologically Diverse Languages"
+  authors: Clark et al.
+  venue: TACL
+  year: 2020
+  link: https://aclanthology.org/2020.tacl-1.30/
+  task: qa
+  note: Includes Bengali.

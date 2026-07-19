@@ -1,0 +1,54 @@
+- id: csebuetnlp-banglabert
+  name: csebuetnlp/banglabert
+  task: llm
+  arch: ELECTRA
+  params: 110M
+  link: https://huggingface.co/csebuetnlp/banglabert
+  verified: 2026-06-28
+  note: SOTA Bangla encoder; BLUB benchmark leader among base models.
+- id: csebuetnlp-banglabert-large
+  name: csebuetnlp/banglabert_large
+  task: llm
+  arch: ELECTRA
+  params: 335M
+  link: https://huggingface.co/csebuetnlp/banglabert_large
+  verified: 2026-06-28
+- id: csebuetnlp-banglishbert
+  name: csebuetnlp/banglishbert
+  task: llm
+  arch: ELECTRA
+  params: 110M
+  link: https://huggingface.co/csebuetnlp/banglishbert
+  verified: 2026-05-11
+  note: Code-mixed Bangla-English encoder.
+- id: sagorsarker-bangla-bert-base
+  name: sagorsarker/bangla-bert-base
+  task: llm
+  arch: BERT
+  params: 110M
+  link: https://huggingface.co/sagorsarker/bangla-bert-base
+  verified: 2026-05-11
+- id: neuropark-sahajbert
+  name: neuropark/sahajBERT
+  task: llm
+  arch: ALBERT
+  params: 18M
+  link: https://huggingface.co/neuropark/sahajBERT
+  verified: 2026-03-19
+  note: Collaboratively trained.
+- id: google-muril-base-cased
+  name: google/muril-base-cased
+  task: llm
+  arch: BERT
+  params: 236M
+  link: https://huggingface.co/google/muril-base-cased
+  verified: 2026-03-19
+  note: 17 Indian languages incl. Bangla.
+- id: hishab-titulm-llama-3-2-3b-v2-0
+  name: hishab/titulm-llama-3.2-3b-v2.0
+  task: llm
+  arch: Llama 3.2
+  params: 3B
+  link: https://huggingface.co/hishab/titulm-llama-3.2-3b-v2.0
+  verified: 2026-06-28
+  note: Continually pretrained Bangla LLM.

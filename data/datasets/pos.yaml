@@ -1,0 +1,22 @@
+- id: udbru
+  name: UD Bengali-BRU Treebank
+  task: pos
+  size: ~7,340 tokens
+  sizeN: 7340
+  license: CC BY-SA 4.0
+  year: 2023
+  source: Universal Dependencies v2.13
+  link: https://universaldependencies.org/treebanks/bn_bru/
+  verified: 2026-05-27
+  desc: Universal Dependencies treebank with UPOS and dependency relations.
+- id: snltr
+  name: SNLTR POS Corpus
+  task: pos
+  size: ~7,390 sentences
+  sizeN: 7390
+  license: Research only
+  year: 2010
+  source: Society for Natural Language Technology Research
+  link: http://nltr.org/snltr-software/
+  verified: 2026-01-12
+  desc: Classic manually tagged corpus, 40-tag tagset.

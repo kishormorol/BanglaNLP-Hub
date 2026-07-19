@@ -1,0 +1,15 @@
+- id: banfakenews-p
+  title: "BanFakeNews: A Dataset for Detecting Fake News in Bangla"
+  authors: Hossain et al.
+  venue: LREC
+  year: 2020
+  link: https://aclanthology.org/2020.lrec-1.349/
+  task: textcls
+- id: bemod
+  title: Classification Benchmarks for Under-resourced Bengali Language based on Multichannel Convolutional-LSTM Network
+  authors: Karim et al.
+  venue: IEEE DSAA
+  year: 2020
+  link: https://arxiv.org/abs/2004.07807
+  task: textcls
+  note: BengFastText embeddings.

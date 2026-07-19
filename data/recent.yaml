@@ -1,0 +1,24 @@
+- type: Dataset
+  name: Global-MMLU (bn)
+  task: LLM Benchmarks
+  date: 2026-07-12
+- type: Paper
+  name: "TituLLMs: A Family of Bangla LLMs"
+  task: LLM Benchmarks
+  date: 2026-07-08
+- type: Model
+  name: hishab/titulm-llama-3.2-3b-v2.0
+  task: LLM Benchmarks
+  date: 2026-07-05
+- type: Tool
+  name: avro.py
+  task: Transliteration
+  date: 2026-06-29
+- type: Dataset
+  name: Common Voice bn (v20 refresh)
+  task: ASR / TTS
+  date: 2026-06-24
+- type: Paper
+  name: "BEnQA: QA and Reasoning Benchmark"
+  task: LLM Benchmarks
+  date: 2026-06-18

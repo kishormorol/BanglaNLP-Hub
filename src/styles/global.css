@@ -1,0 +1,82 @@
+/* Design system — transcribed verbatim from design-reference/TaskDetail.dc.html <helmet>.
+   Do not hand-tune these values; they are the authoritative prototype tokens. */
+
+:root {
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --surface2: #f1efe9;
+  --border: #e3e0d5;
+  --text: #1c241f;
+  --text2: #5f6a64;
+  --green: #0e5a43;
+  --greenSoft: #e4efe9;
+  --red: #b03535;
+  --redSoft: #f6e9e7;
+  --gold: #8a6d1f;
+  --goldSoft: #f4eeda;
+  --blue: #2d5d8a;
+  --blueSoft: #e5edf4;
+  --gray: #5f6a64;
+  --graySoft: #ecebe5;
+}
+
+html.dark {
+  --bg: #0f1412;
+  --surface: #151c18;
+  --surface2: #1d2620;
+  --border: #2a352e;
+  --text: #e7ebe8;
+  --text2: #93a099;
+  --green: #5cbd9a;
+  --greenSoft: #173226;
+  --red: #e08983;
+  --redSoft: #3a2120;
+  --gold: #cfae56;
+  --goldSoft: #332b14;
+  --blue: #7fa8cc;
+  --blueSoft: #1a2a38;
+  --gray: #93a099;
+  --graySoft: #232b26;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--green);
+}
+
+a:hover {
+  color: var(--red);
+}
+
+::selection {
+  background: var(--greenSoft);
+}
+
+/* Sticky first column on narrow viewports (prototype breakpoint: 639px) */
+@media (max-width: 639px) {
+  .stickycol {
+    position: sticky;
+    left: 0;
+    background: var(--surface);
+    box-shadow: 2px 0 0 var(--border);
+    z-index: 1;
+  }
+}
+
+/* All Bangla text carries line-height >= 1.6 per the design spec. */
+.bn {
+  font-family: 'Noto Serif Bengali', serif;
+  line-height: 1.6;
+}

@@ -1,0 +1,8 @@
+- id: xlsum-p
+  title: "XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages"
+  authors: Hasan et al.
+  venue: Findings ACL
+  year: 2021
+  link: https://aclanthology.org/2021.findings-acl.413/
+  task: summ
+  note: BBC Bangla summarization subset.

@@ -1,0 +1,23 @@
+- id: bdshs-p
+  title: "BD-SHS: A Benchmark Dataset for Learning to Detect Online Bangla Hate Speech in Different Social Contexts"
+  authors: Romim et al.
+  venue: LREC
+  year: 2022
+  link: https://aclanthology.org/2022.lrec-1.552/
+  task: hate
+  note: "Hierarchical annotation: target, type."
+- id: deephateexplainer
+  title: "DeepHateExplainer: Explainable Hate Speech Detection in Under-resourced Bengali Language"
+  authors: Karim et al.
+  venue: IEEE DSAA
+  year: 2021
+  link: https://arxiv.org/abs/2012.14353
+  task: hate
+- id: tbolid-p
+  title: Offensive Language Identification in Transliterated and Code-Mixed Bangla
+  authors: Raihan et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.1/
+  task: hate
+  note: First BLP workshop.

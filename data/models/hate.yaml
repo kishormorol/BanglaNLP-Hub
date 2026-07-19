@@ -1,0 +1,8 @@
+- id: csebuetnlp-banglabert-hate-speech-head
+  name: csebuetnlp/banglabert (hate-speech head)
+  task: hate
+  arch: ELECTRA (ft)
+  params: 110M
+  link: https://huggingface.co/csebuetnlp/banglabert
+  verified: 2026-04-18
+  note: Fine-tuned on BD-SHS; SOTA weighted F1.

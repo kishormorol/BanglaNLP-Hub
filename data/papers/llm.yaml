@@ -1,0 +1,40 @@
+- id: banglabert
+  title: "BanglaBERT: Language Model Pretraining and Benchmarks for Low-Resource Language Understanding Evaluation in Bangla"
+  authors: Bhattacharjee et al.
+  venue: Findings NAACL
+  year: 2022
+  link: https://aclanthology.org/2022.findings-naacl.98/
+  task: llm
+  note: Introduces BanglaBERT + the BLUB benchmark.
+- id: benqa-p
+  title: "BEnQA: A Question Answering and Reasoning Benchmark for Bengali and English"
+  authors: Shafayat et al.
+  venue: Findings ACL
+  year: 2024
+  link: https://aclanthology.org/2024.findings-acl.848/
+  task: llm
+  note: Parallel science exam questions; large en–bn gap.
+- id: benllm
+  title: "BenLLM-Eval: A Comprehensive Evaluation into the Potentials and Pitfalls of Large Language Models on Bengali NLP"
+  authors: Kabir et al.
+  venue: LREC-COLING
+  year: 2024
+  link: https://aclanthology.org/2024.lrec-main.201/
+  task: llm
+  note: Zero-shot LLMs vs fine-tuned baselines.
+- id: sahajbert-p
+  title: Distributed Deep Learning in Open Collaborations (sahajBERT)
+  authors: Diskin et al.
+  venue: NeurIPS
+  year: 2021
+  link: https://arxiv.org/abs/2106.10207
+  task: llm
+  note: Collaboratively trained Bangla ALBERT.
+- id: titulm
+  title: "TituLLMs: A Family of Bangla LLMs with Comprehensive Benchmarking"
+  authors: Nahin et al.
+  venue: arXiv
+  year: 2025
+  link: https://arxiv.org/abs/2502.11187
+  task: llm
+  note: Bangla-adapted Llama models.

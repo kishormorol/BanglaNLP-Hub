@@ -1,0 +1,22 @@
+- id: sentnob-p
+  title: "SentNoB: A Dataset for Analysing Sentiment on Noisy Bangla Texts"
+  authors: Islam et al.
+  venue: Findings EMNLP
+  year: 2021
+  link: https://aclanthology.org/2021.findings-emnlp.278/
+  task: sentiment
+  note: Noisy user-generated content, 13 domains.
+- id: absa-p
+  title: "Aspect Based Sentiment Analysis of Bangla Text: A Corpus and Baseline Models"
+  authors: Rahman & Dey
+  venue: IJCNLP
+  year: 2018
+  link: https://www.mdpi.com/2306-5729/3/2/15
+  task: sentiment
+- id: emotion-p
+  title: "BEmoC: A Corpus for Emotion Classification in Bangla"
+  authors: Das et al.
+  venue: Springer
+  year: 2021
+  link: https://link.springer.com/chapter/10.1007/978-981-16-6636-0_17
+  task: sentiment

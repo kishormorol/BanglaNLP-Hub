@@ -1,0 +1,40 @@
+- id: sentnob
+  name: SentNoB
+  task: sentiment
+  size: 15,728 comments
+  sizeN: 15728
+  license: CC BY-NC-SA 4.0
+  year: 2021
+  source: SentNoB (Findings EMNLP 2021)
+  link: https://github.com/KhondokerIslam/SentNoB
+  verified: 2026-06-28
+  desc: Sentiment on noisy user comments from news and social platforms across 13 domains.
+  bibtex: |-
+    @inproceedings{islam-etal-2021-sentnob,
+      title = {SentNoB: A Dataset for Analysing Sentiment on Noisy {B}angla Texts},
+      author = {Islam, Khondoker Ittehadul and Kar, Sudipta and Islam, Md Saiful and Amin, Mohammad Ruhul},
+      booktitle = {Findings of EMNLP},
+      year = {2021}
+    }
+- id: bemoc
+  name: BEmoC
+  task: sentiment
+  size: 7,000 texts
+  sizeN: 7000
+  license: Research only
+  year: 2021
+  source: Emotion classification corpus
+  link: https://github.com/avishek-018/BEmoC
+  verified: 2026-05-14
+  desc: Six-class emotion corpus (anger, disgust, fear, joy, sadness, surprise).
+- id: absa
+  name: ABSA Cricket & Restaurant
+  task: sentiment
+  size: 5,038 comments
+  sizeN: 5038
+  license: Research only
+  year: 2018
+  source: Aspect-based sentiment (cricket, restaurant)
+  link: https://github.com/AtikRahman/Bangla_ABSA_Datasets
+  verified: 2026-04-02
+  desc: Aspect-based sentiment in two domains.
