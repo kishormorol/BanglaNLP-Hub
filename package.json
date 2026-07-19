@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "validate": "tsx scripts/validate.ts",
+    "check-links": "tsx scripts/check-links.ts",
     "discover": "tsx scripts/discover.ts",
     "migrate": "tsx scripts/migrate.ts"
   },

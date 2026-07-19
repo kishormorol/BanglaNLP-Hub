@@ -1,0 +1,71 @@
+name: Nightly link check
+
+on:
+  schedule:
+    # 03:20 UTC daily. Off the hour to avoid GitHub's scheduling pile-up.
+    - cron: '20 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: link-check
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Check every link in /data
+        id: check
+        # Writes report.md either way; non-zero exit just means dead links exist.
+        run: npm run check-links -- --report report.md
+        continue-on-error: true
+
+      - name: Open or update the dead-links issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TITLE: 'Dead links in /data'
+          FAILED: ${{ steps.check.outcome == 'failure' }}
+        run: |
+          set -euo pipefail
+
+          existing=$(gh issue list --state open --search "$TITLE in:title" \
+            --json number,title \
+            --jq "[.[] | select(.title == \"$TITLE\")] | .[0].number // empty")
+
+          if [ "$FAILED" != "true" ]; then
+            # Everything resolves — close a previously-open report, if any.
+            if [ -n "$existing" ]; then
+              gh issue comment "$existing" --body "All links in \`/data\` are reachable again as of $(date -u +%Y-%m-%d). Closing."
+              gh issue close "$existing"
+            fi
+            echo "No dead links."
+            exit 0
+          fi
+
+          {
+            echo "_Automated nightly check. Entries are never removed automatically._"
+            echo
+            cat report.md
+          } > body.md
+
+          if [ -n "$existing" ]; then
+            # Keep ONE issue and rewrite its body, rather than filing a new one nightly.
+            gh issue edit "$existing" --body-file body.md
+            echo "Updated issue #$existing"
+          else
+            gh issue create --title "$TITLE" --body-file body.md --label "data" || \
+              gh issue create --title "$TITLE" --body-file body.md
+          fi
