@@ -13,8 +13,8 @@ Everything the site renders comes from YAML under [`/data`](./data). Nothing is 
 | | Count |
 | --- | --- |
 | Tasks | 10 |
-| Datasets | 29 |
-| Papers | 24 |
+| Datasets | 31 |
+| Papers | 27 |
 | Models | 22 |
 | Tools | 9 |
 
@@ -38,9 +38,9 @@ The catalog is only useful if its contents are true, so the project holds a hard
 - **Links are checked.** Every `link:` URL is verified nightly. Dead links are reported in a single tracking issue; entries are never removed automatically.
 - **Entries get verified by hand.** Papers have been audited against ACL Anthology and arXiv. Several entries inherited from the original design prototype turned out to be fabricated — a duplicate under an invented title, a model that does not exist, a paper with no publication — and were removed.
 
-Known gaps are tracked in [`TODO-data.md`](./TODO-data.md): 24 datasets lack BibTeX and all 10 leaderboards await rows.
+Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 25 datasets lack BibTeX and all 10 leaderboards await rows.
 
-**Dataset fields are not yet verified.** `size`, `license`, and `year` on dataset entries came from the original prototype and have had no field-level checking. Treat them as unconfirmed.
+**Dataset fields are partly verified.** `license`, `size`, and `year` have each had an audit pass (July 2026). Corrections are listed in `TODO-data.md`, along with the entries that are still unconfirmed because no reachable source states a figure. One field is recorded as *known wrong* with no known replacement — that is deliberate. A wrong value we can point at is more useful than a plausible one we invented.
 
 ## Commands
 
@@ -57,21 +57,33 @@ Known gaps are tracked in [`TODO-data.md`](./TODO-data.md): 24 datasets lack Bib
 
 ## Status
 
-Built:
+The site is complete: Home, Tasks and per-task detail, Datasets, Papers, Tools, Contribute, and About, plus the data layer, schemas, validator, CI, GitHub Pages deployment, and a nightly link check.
 
-- Home, Tasks, and per-task detail pages (`/tasks/[id]`) with deep-linkable tabs, sortable dataset tables, and BibTeX copy
-- Data layer, schemas, and validator
-- CI, GitHub Pages deployment, nightly link check
-
-Not built yet:
-
-- Datasets, Papers, Tools, Contribute, and About views — these routes currently serve placeholder pages
-- `CONTRIBUTING.md`, issue and PR templates
-- `scripts/discover.ts`, the arXiv / ACL / Hugging Face ingestion stub
+**What is left is data, not code** — and that is exactly where help is most useful.
 
 ## Contributing
 
-Add or edit a YAML file under `/data` and open a pull request. CI runs `npm run validate` on every PR; it must pass before merge. Do not add a score, citation count, or BibTeX entry you cannot source.
+Contributions are genuinely welcome, and you do not need to know Astro or TypeScript to make one. Every entry on the site is a few lines of YAML under [`/data`](./data).
+
+**The fastest way in:** open a [Submit a resource](https://github.com/kishormorol/BanglaNLP-Hub/issues/new?template=submit-resource.yml) issue with a link. That is enough — someone else can turn it into an entry.
+
+**If you would rather open a PR directly**, [`CONTRIBUTING.md`](./CONTRIBUTING.md) has the field format for each entry type and a worked example. Edit or add one YAML file and open the PR; CI runs `npm run validate` and must pass before merge.
+
+### Where help is most needed
+
+These are concrete, self-contained, and each one is genuinely useful on its own — full detail in [`TODO-data.md`](./TODO-data.md):
+
+- **Leaderboard rows.** All 10 benchmarks ship empty. Each needs scores with a citation to the paper they came from. Even one populated benchmark is a real improvement.
+- **BibTeX.** 25 datasets have no citation entry. Copy the published one from the ACL Anthology or the publisher page — please do not hand-write one.
+- **Unverified dataset sizes.** About a dozen datasets are hosted where no count is published (Kaggle, openslr.org, nltr.org). If you know the paper, you can settle these.
+- **One known-wrong value.** The `bhs` entry claims 30,000 documents and no source supports it. If you have the paper, this is a five-minute fix.
+- **Missing resources.** New papers, datasets, models, and tools — especially anything published recently, and anything from researchers outside the usual venues.
+
+### The one rule
+
+**Never add a value you cannot source.** No invented scores, citation counts, or BibTeX. If a field is unknown, leave it out — the UI already hides the affected element, and an empty state is correct output rather than a gap to fill.
+
+This is not pedantry. A meaningful fraction of the catalog's original prototype data turned out to be fabricated — a model that did not exist, a duplicate under an invented title, a paper with no publication — and all of it looked perfectly plausible. Everything here is checkable, which is the only reason it is worth using.
 
 ## Design reference
 
