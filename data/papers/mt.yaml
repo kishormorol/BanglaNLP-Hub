@@ -1,0 +1,37 @@
+- id: notlowresource
+  title: "Not Low-Resource Anymore: Aligner Ensembling, Batch Filtering, and New Datasets for Bengali–English MT"
+  authors: Hasan et al.
+  venue: EMNLP
+  year: 2020
+  link: https://aclanthology.org/2020.emnlp-main.207/
+  task: mt
+  note: 2.75M-pair corpus; strong NMT baselines.
+- id: banglanlg
+  title: "BanglaNLG and BanglaT5: Benchmarks and Resources for Evaluating Low-Resource Natural Language Generation in Bangla"
+  authors: Bhattacharjee et al.
+  venue: Findings EACL
+  year: 2023
+  link: https://aclanthology.org/2023.findings-eacl.54/
+  task: mt
+  note: Seq2seq pretraining for Bangla generation.
+- id: banglaparaphrase-p
+  title: "BanglaParaphrase: A High-Quality Bangla Paraphrase Dataset"
+  authors: Akil et al.
+  venue: AACL
+  year: 2022
+  link: https://aclanthology.org/2022.aacl-short.44/
+  task: mt
+- id: samanantar-p
+  title: "Samanantar: The Largest Publicly Available Parallel Corpora Collection for 11 Indic Languages"
+  authors: Ramesh et al.
+  venue: TACL
+  year: 2022
+  link: https://aclanthology.org/2022.tacl-1.9/
+  task: mt
+- id: bsti
+  title: "BanglaT5 for Low-Resource Sequence-to-Sequence Tasks: Machine Translation Case Study"
+  authors: Bhattacharjee et al.
+  venue: arXiv
+  year: 2023
+  link: https://arxiv.org/abs/2205.11081
+  task: mt

@@ -1,0 +1,40 @@
+- id: squadbn
+  name: SQuAD_bn
+  task: qa
+  size: ~130k QA pairs
+  sizeN: 130000
+  license: CC BY-NC-SA 4.0
+  year: 2021
+  source: BanglaBERT benchmarks
+  link: https://huggingface.co/datasets/csebuetnlp/squad_bn
+  verified: 2026-06-15
+  desc: Machine-translated + human-curated SQuAD 2.0 for Bangla.
+- id: banglarqa
+  name: BanglaRQA
+  task: qa
+  size: 14,889 QA pairs
+  sizeN: 14889
+  license: CC BY-NC 4.0
+  year: 2022
+  source: BanglaRQA (Findings EMNLP 2022)
+  link: https://github.com/sartajekram419/BanglaRQA
+  verified: 2026-06-15
+  desc: Human-annotated reading comprehension with answerable/unanswerable questions.
+  bibtex: |-
+    @inproceedings{ekram-etal-2022-banglarqa,
+      title = {{B}angla{RQA}: A Benchmark Dataset for Under-resourced {B}angla Language Reading Comprehension},
+      author = {Ekram, Syed Mohammed Sartaj and others},
+      booktitle = {Findings of EMNLP},
+      year = {2022}
+    }
+- id: tydiqa
+  name: TyDi QA (bn)
+  task: qa
+  size: ~10k questions
+  sizeN: 10000
+  license: Apache 2.0
+  year: 2020
+  source: TyDi QA (TACL 2020)
+  link: https://github.com/google-research-datasets/tydiqa
+  verified: 2026-03-12
+  desc: Typologically diverse info-seeking QA; Bengali portion.

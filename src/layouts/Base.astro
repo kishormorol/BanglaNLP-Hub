@@ -1,0 +1,53 @@
+---
+/**
+ * Shared document shell. Owns everything the prototype kept in <helmet>:
+ * font loading, the no-flash theme script, and the design tokens (global.css).
+ */
+import '../styles/global.css';
+import SiteNav from '../components/SiteNav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  active?: string;
+  footerShowData?: boolean;
+}
+const {
+  title,
+  description = 'Papers, datasets, models, tools, and benchmarks for Bengali natural language processing — community-maintained, link-verified, and open on GitHub.',
+  active = '',
+  footerShowData = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <!-- Explicit, base-aware favicons: without these the browser probes
+         /favicon.ico at the domain root, which 404s under a project Pages path. -->
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.svg`} />
+    <link rel="icon" sizes="any" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.ico`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Bengali:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- No-flash theme restore. Must stay inline and before first paint. -->
+    <script is:inline>
+      try {
+        if (localStorage.bnlpTheme === 'dark') document.documentElement.classList.add('dark');
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <SiteNav active={active} />
+    <slot />
+    <Footer showData={footerShowData} />
+  </body>
+</html>

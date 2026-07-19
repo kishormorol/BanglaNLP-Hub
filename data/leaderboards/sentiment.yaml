@@ -1,0 +1,8 @@
+- dataset: sentnob
+  label: SentNoB
+  metric: Micro-F1
+  rows: []
+- dataset: bemoc
+  label: BEmoC
+  metric: Weighted F1
+  rows: []

@@ -1,0 +1,96 @@
+---
+/**
+ * Shared sticky header. Ported from design-reference/SiteNav.dc.html.
+ * Search lives in Search.astro so the Home hero can mount the same island.
+ */
+import Search from './Search.astro';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+interface Props {
+  active?: string;
+}
+const { active = '' } = Astro.props;
+
+const links = [
+  ['tasks', 'Tasks', `${base}/tasks`],
+  ['datasets', 'Datasets', `${base}/datasets`],
+  ['papers', 'Papers', `${base}/papers`],
+  ['tools', 'Tools', `${base}/tools`],
+  ['contribute', 'Contribute', `${base}/contribute`],
+  ['about', 'About', `${base}/about`],
+] as const;
+---
+
+<header
+  style="position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--border);backdrop-filter:blur(8px)"
+>
+  <div
+    style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:20px;height:60px"
+  >
+    <a
+      href={`${base}/`}
+      style="display:flex;align-items:baseline;gap:8px;text-decoration:none;white-space:nowrap"
+    >
+      <span class="bn" style="font-weight:700;font-size:20px;color:var(--green)">বাংলা</span>
+      <span style="font-family:'Spectral',serif;font-weight:600;font-size:19px;color:var(--text)"
+        >NLP Hub</span
+      >
+    </a>
+    <nav
+      style="display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;min-width:0"
+      aria-label="Primary"
+    >
+      {
+        links.map(([id, label, href]) => (
+          <a
+            href={href}
+            class="navlink"
+            aria-current={id === active ? 'page' : undefined}
+            style={`text-decoration:none;padding:6px 8px;border-radius:6px;font-size:13.5px;font-weight:500;white-space:nowrap;color:${
+              id === active ? 'var(--green)' : 'var(--text2)'
+            };background:${id === active ? 'var(--greenSoft)' : 'transparent'}`}
+          >
+            {label}
+          </a>
+        ))
+      }
+    </nav>
+    <Search variant="nav" id="nav-search" />
+    <button
+      id="theme-toggle"
+      type="button"
+      aria-label="Toggle dark mode"
+      title="Toggle dark mode"
+      style="border:1px solid var(--border);background:var(--surface);color:var(--text2);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:15px;line-height:1;flex-shrink:0"
+    ></button>
+  </div>
+</header>
+
+<style>
+  .navlink:hover {
+    color: var(--green) !important;
+    background: var(--surface2) !important;
+  }
+  #theme-toggle:hover {
+    color: var(--green);
+    border-color: var(--green);
+  }
+</style>
+
+<script is:inline>
+  (() => {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    const icon = () => (document.documentElement.classList.contains('dark') ? '☀' : '☾');
+    btn.textContent = icon();
+    btn.addEventListener('click', () => {
+      const dark = !document.documentElement.classList.contains('dark');
+      document.documentElement.classList.toggle('dark', dark);
+      try {
+        localStorage.bnlpTheme = dark ? 'dark' : 'light';
+      } catch (e) {}
+      btn.textContent = icon();
+    });
+  })();
+</script>

@@ -1,0 +1,40 @@
+- id: benqa
+  name: BEnQA
+  task: llm
+  size: 5,161 questions
+  sizeN: 5161
+  license: CC BY-NC-SA 4.0
+  year: 2024
+  source: BEnQA (2024)
+  link: https://github.com/csebuetnlp/BEnQA
+  verified: 2026-06-30
+  desc: Parallel Bangla–English science exam questions for LLM evaluation.
+  bibtex: |-
+    @article{shafayat2024benqa,
+      title = {{BE}n{QA}: A Question Answering and Reasoning Benchmark for {B}engali and {E}nglish},
+      author = {Shafayat, Sheikh and others},
+      journal = {arXiv preprint arXiv:2403.10900},
+      year = {2024}
+    }
+- id: globalmmlu
+  name: Global-MMLU (bn)
+  task: llm
+  size: 14k questions
+  sizeN: 14000
+  license: CC BY 4.0
+  year: 2024
+  source: Global-MMLU (2024)
+  link: https://huggingface.co/datasets/CohereForAI/Global-MMLU
+  verified: 2026-06-30
+  desc: Culturally adapted MMLU; Bengali split.
+- id: megaverse
+  name: MEGAVERSE (bn subset)
+  task: llm
+  size: 22 tasks
+  sizeN: 22
+  license: Mixed
+  year: 2023
+  source: MEGAVERSE (NAACL 2024)
+  link: https://github.com/microsoft/Lingua
+  verified: 2026-04-09
+  desc: Multilingual LLM evaluation suite including Bangla tasks.

@@ -1,0 +1,40 @@
+- id: sentiment
+  name: Sentiment Analysis
+  bn: অনুভূতি বিশ্লেষণ
+  desc: Polarity and emotion classification of Bangla text from social media, reviews, and news comments.
+- id: ner
+  name: Named Entity Recognition
+  bn: নামীয় সত্তা শনাক্তকরণ
+  desc: Detecting person, location, organization and other entities in Bangla text.
+- id: mt
+  name: Machine Translation
+  bn: যন্ত্রানুবাদ
+  desc: Bangla↔English and multilingual translation, parallel corpora and paraphrase generation.
+- id: qa
+  name: Question Answering
+  bn: প্রশ্নোত্তর
+  desc: Extractive and generative QA over Bangla passages and knowledge.
+- id: summ
+  name: Summarization
+  bn: সারাংশকরণ
+  desc: Abstractive and extractive summarization of Bangla news and documents.
+- id: hate
+  name: Hate Speech Detection
+  bn: ঘৃণাত্মক বক্তব্য শনাক্তকরণ
+  desc: Identifying hateful, offensive, and abusive Bangla content online.
+- id: speech
+  name: ASR / TTS
+  bn: কথন শনাক্তকরণ ও সংশ্লেষণ
+  desc: Bangla speech recognition and text-to-speech corpora and models.
+- id: textcls
+  name: Text Classification
+  bn: পাঠ্য শ্রেণিবিন্যাস
+  desc: News categorization, fake news detection, and document classification.
+- id: pos
+  name: POS Tagging
+  bn: পদ চিহ্নিতকরণ
+  desc: Part-of-speech tagging, treebanks, and morphological analysis for Bangla.
+- id: llm
+  name: LLM Benchmarks
+  bn: বৃহৎ ভাষা মডেল মূল্যায়ন
+  desc: Evaluating large language models on Bangla knowledge, reasoning, and generation.

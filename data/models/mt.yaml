@@ -1,0 +1,23 @@
+- id: csebuetnlp-banglat5
+  name: csebuetnlp/banglat5
+  task: mt
+  arch: T5
+  params: 247M
+  link: https://huggingface.co/csebuetnlp/banglat5
+  verified: 2026-06-28
+  note: Seq2seq for MT, summarization, paraphrase.
+- id: facebook-nllb-200-3-3b
+  name: facebook/nllb-200-3.3B
+  task: mt
+  arch: Transformer
+  params: 3.3B
+  link: https://huggingface.co/facebook/nllb-200-3.3B
+  verified: 2026-06-02
+  note: Strong bn↔en zero-shot MT.
+- id: csebuetnlp-banglat5-nmt-bn-en
+  name: csebuetnlp/banglat5_nmt_bn_en
+  task: mt
+  arch: T5
+  params: 247M
+  link: https://huggingface.co/csebuetnlp/banglat5_nmt_bn_en
+  verified: 2026-06-02

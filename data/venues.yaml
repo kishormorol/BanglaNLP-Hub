@@ -1,0 +1,21 @@
+ACL: green
+Findings ACL: green
+EMNLP: red
+Findings EMNLP: red
+BLP @ EMNLP: red
+NAACL: blue
+Findings NAACL: blue
+Findings EACL: blue
+AACL: gold
+LREC: gold
+LREC-COLING: gold
+SemEval: blue
+TACL: green
+Interspeech: red
+SLTU: gold
+NeurIPS: blue
+arXiv: gray
+IEEE Access: gray
+IEEE DSAA: gray
+IJCNLP: gold
+Springer: gray

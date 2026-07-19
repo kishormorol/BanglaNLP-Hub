@@ -1,0 +1,14 @@
+- id: multiconer-p
+  title: "SemEval-2022 Task 11: Multilingual Complex Named Entity Recognition (MultiCoNER)"
+  authors: Malmasi et al.
+  venue: SemEval
+  year: 2022
+  link: https://aclanthology.org/2022.semeval-1.196/
+  task: ner
+- id: bner-p
+  title: "B-NER: A Novel Bangla Named Entity Recognition Dataset with Largest Entities and Its Baseline Evaluation"
+  authors: Haque et al.
+  venue: IEEE Access
+  year: 2023
+  link: https://ieeexplore.ieee.org/document/10103464
+  task: ner

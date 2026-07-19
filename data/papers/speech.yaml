@@ -1,0 +1,15 @@
+- id: oodspeech-p
+  title: "OOD-Speech: A Large Bengali Speech Recognition Dataset for Out-of-Distribution Benchmarking"
+  authors: Rakib et al.
+  venue: Interspeech
+  year: 2023
+  link: https://arxiv.org/abs/2305.09688
+  task: speech
+- id: slr53-p
+  title: Crowd-Sourced Speech Corpora for Javanese, Sundanese, Sinhala, Nepali, and Bangladeshi Bengali
+  authors: Kjartansson et al.
+  venue: SLTU
+  year: 2018
+  link: https://research.google/pubs/pub47347/
+  task: speech
+  note: OpenSLR 53.

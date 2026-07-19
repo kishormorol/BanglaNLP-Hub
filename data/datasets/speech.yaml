@@ -1,0 +1,33 @@
+- id: openslr53
+  name: OpenSLR SLR53 (Large Bengali ASR)
+  task: speech
+  size: 196k utterances / 229 hrs
+  sizeN: 229
+  license: CC BY-SA 4.0
+  year: 2018
+  source: Google crowdsourced speech
+  link: https://openslr.org/53/
+  verified: 2026-06-28
+  desc: Crowdsourced Bangladeshi Bangla read speech.
+- id: commonvoice
+  name: Common Voice (bn)
+  task: speech
+  size: 1,200+ hrs recorded
+  sizeN: 1200
+  license: CC0
+  year: 2024
+  source: Mozilla Common Voice
+  link: https://commonvoice.mozilla.org/bn
+  verified: 2026-07-01
+  desc: Continuously growing crowdsourced speech corpus.
+- id: oodspeech
+  name: OOD-Speech
+  task: speech
+  size: 1,177 hrs
+  sizeN: 1177
+  license: CC BY-NC 4.0
+  year: 2023
+  source: OOD-Speech (2023)
+  link: https://github.com/BengaliAI/ood-speech
+  verified: 2026-05-22
+  desc: Large-scale out-of-distribution Bangla ASR benchmark.

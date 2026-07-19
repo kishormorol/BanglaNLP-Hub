@@ -1,0 +1,8 @@
+- id: csebuetnlp-banglabert-news-classifier
+  name: csebuetnlp/banglabert (news classifier)
+  task: textcls
+  arch: ELECTRA (ft)
+  params: 110M
+  link: https://huggingface.co/csebuetnlp/banglabert
+  verified: 2026-04-18
+  note: Fine-tuned on BanFakeNews.

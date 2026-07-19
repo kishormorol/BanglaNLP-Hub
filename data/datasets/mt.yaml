@@ -1,0 +1,51 @@
+- id: banglanmt
+  name: BanglaNMT Parallel Corpus
+  task: mt
+  size: 2.75M pairs
+  sizeN: 2750000
+  license: Research only
+  year: 2020
+  source: Not Low-Resource Anymore (EMNLP 2020)
+  link: https://github.com/csebuetnlp/banglanmt
+  verified: 2026-06-28
+  desc: High-quality Bangla–English parallel corpus built with aligner ensembling.
+  bibtex: |-
+    @inproceedings{hasan-etal-2020-low,
+      title = {Not Low-Resource Anymore: Aligner Ensembling, Batch Filtering, and New Datasets for {B}engali-{E}nglish Machine Translation},
+      author = {Hasan, Tahmid and Bhattacharjee, Abhik and others},
+      booktitle = {EMNLP},
+      year = {2020}
+    }
+- id: flores
+  name: FLORES-200 (bn)
+  task: mt
+  size: 3,001 sentences
+  sizeN: 3001
+  license: CC BY-SA 4.0
+  year: 2022
+  source: No Language Left Behind (2022)
+  link: https://github.com/facebookresearch/flores
+  verified: 2026-05-19
+  desc: Standard many-to-many evaluation benchmark; Bengali dev/devtest.
+- id: banglaparaphrase
+  name: BanglaParaphrase
+  task: mt
+  size: 466k pairs
+  sizeN: 466000
+  license: CC BY-NC-SA 4.0
+  year: 2022
+  source: BanglaParaphrase (AACL 2022)
+  link: https://huggingface.co/datasets/csebuetnlp/BanglaParaphrase
+  verified: 2026-06-01
+  desc: High-quality synthetic paraphrase pairs.
+- id: samanantar
+  name: Samanantar (bn–en)
+  task: mt
+  size: 8.6M pairs
+  sizeN: 8600000
+  license: CC0
+  year: 2022
+  source: Samanantar (TACL 2022)
+  link: https://ai4bharat.iitm.ac.in/samanantar
+  verified: 2026-04-25
+  desc: Largest publicly available bn–en parallel collection.

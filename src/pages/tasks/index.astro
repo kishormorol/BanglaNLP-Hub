@@ -1,0 +1,91 @@
+---
+/** Tasks — ported from design-reference/Tasks.dc.html */
+import Base from '../../layouts/Base.astro';
+import { tasks, byTask } from '../../lib/data.ts';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const cards = tasks.map((t) => {
+  const boards = byTask.leaderboards(t.id);
+  const board = boards[0];
+  const top = board?.rows[0];
+  return {
+    ...t,
+    href: `${base}/tasks/${t.id}`,
+    dCount: byTask.datasets(t.id).length,
+    pCount: byTask.papers(t.id).length,
+    mCount: byTask.models(t.id).length,
+    // No curated rows anywhere yet — every card shows the honest empty state.
+    lbPrefix: top ? 'SOTA ·' : 'No leaderboard curated yet — contribute via PR',
+    sota: top ? top.model : '',
+    sotaScore: top ? `${top.score} ${board!.metric}` : '',
+    sotaOn: top ? `on ${board!.label}` : '',
+  };
+});
+---
+
+<Base title="Tasks — BanglaNLP Hub" active="tasks">
+  <main style="max-width:1200px;margin:0 auto;padding:0 20px 64px">
+    <section style="padding:48px 0 32px">
+      <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">
+        Tasks <span class="bn" style="font-size:19px;color:var(--red);font-weight:600">কাজসমূহ</span>
+      </h1>
+      <p
+        style="color:var(--text2);font-size:15.5px;max-width:620px;line-height:1.6;margin:10px 0 0;text-wrap:pretty"
+      >
+        Every resource in the catalog is organized under a task. Each task page collects its
+        datasets, leaderboard, papers, and pretrained models.
+      </p>
+    </section>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px">
+      {
+        cards.map((t) => (
+          <a
+            class="taskcard"
+            href={t.href}
+            style="text-decoration:none;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:8px"
+          >
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:10px">
+              <span style="font-family:'Spectral',serif;font-weight:600;font-size:19px;color:var(--text)">
+                {t.name}
+              </span>
+              <span
+                class="bn"
+                style="font-size:12px;color:var(--red);font-weight:600;text-align:right"
+              >
+                {t.bn}
+              </span>
+            </div>
+            <p style="margin:0;font-size:13.5px;color:var(--text2);line-height:1.55;text-wrap:pretty">
+              {t.desc}
+            </p>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;padding-top:10px">
+              <span style="font-size:11.5px;font-weight:500;color:var(--green);background:var(--greenSoft);padding:3px 9px;border-radius:99px">
+                {t.dCount} datasets
+              </span>
+              <span style="font-size:11.5px;font-weight:500;color:var(--red);background:var(--redSoft);padding:3px 9px;border-radius:99px">
+                {t.pCount} papers
+              </span>
+              <span style="font-size:11.5px;font-weight:500;color:var(--blue);background:var(--blueSoft);padding:3px 9px;border-radius:99px">
+                {t.mCount} models
+              </span>
+            </div>
+            <div style="font-size:12px;color:var(--text2);border-top:1px solid var(--border);padding-top:10px;margin-top:2px">
+              {t.lbPrefix}{' '}
+              <span style="font-weight:600;color:var(--text)">{t.sota}</span>{' '}
+              <span style="font-family:'IBM Plex Mono',monospace">{t.sotaScore}</span> {t.sotaOn}
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </main>
+</Base>
+
+<style>
+  .taskcard:hover {
+    border-color: var(--green);
+    box-shadow: 0 6px 18px rgba(14, 60, 40, 0.08);
+  }
+</style>

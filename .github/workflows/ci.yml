@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  pull_request:
+  # Also run on direct pushes to main so a bad merge is caught immediately.
+  push:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Validate and build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Need the base commit so the link check can diff the PR.
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Validate data
+        run: npm run validate
+
+      - name: Build site
+        run: npm run build
+
+      - name: Check links changed in this PR
+        # Only meaningful on PRs, and never blocks the merge: a link can be
+        # temporarily unreachable for reasons unrelated to the change.
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        run: npm run check-links -- --changed origin/${{ github.base_ref }}

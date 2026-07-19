@@ -1,0 +1,8 @@
+- id: sagorsarker-bangla-pos-tagger
+  name: sagorsarker/bangla-pos-tagger
+  task: pos
+  arch: BiLSTM-CRF
+  params: 12M
+  link: https://github.com/sagorbrur/bnlp
+  verified: 2026-05-27
+  note: Ships with bnlp-toolkit; trained on SNLTR corpus.

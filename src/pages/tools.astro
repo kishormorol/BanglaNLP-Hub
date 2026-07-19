@@ -1,0 +1,22 @@
+---
+/**
+ * Placeholder route. The Tools view has not been ported from
+ * design-reference/Tools.dc.html yet; this exists so nav and footer links
+ * resolve instead of 404ing. Replace wholesale when the view is ported.
+ */
+import Base from '../layouts/Base.astro';
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+
+<Base title="Tools — BanglaNLP Hub" active="tools">
+  <main style="max-width:1200px;margin:0 auto;padding:64px 20px 96px">
+    <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">Tools</h1>
+    <p style="color:var(--text2);font-size:15.5px;max-width:560px;line-height:1.6;margin:12px 0 0">
+      This page has not been built yet. The catalog data behind it already exists and is
+      validated — only the view is outstanding.
+    </p>
+    <p style="font-size:14px;margin-top:20px">
+      <a href={`${base}/tasks`}>Browse by task →</a>
+    </p>
+  </main>
+</Base>

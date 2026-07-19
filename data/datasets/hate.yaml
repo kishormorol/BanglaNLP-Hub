@@ -1,0 +1,33 @@
+- id: bdshs
+  name: BD-SHS
+  task: hate
+  size: 50,281 comments
+  sizeN: 50281
+  license: CC BY-NC 4.0
+  year: 2022
+  source: BD-SHS (LREC 2022)
+  link: https://github.com/naurosromim/hate-speech-dataset-for-Bengali-social-media
+  verified: 2026-06-05
+  desc: "Hierarchically annotated hate speech: target, type, severity."
+- id: bhs
+  name: Bengali Hate Speech
+  task: hate
+  size: 30,000 documents
+  sizeN: 30000
+  license: MIT
+  year: 2020
+  source: Classification benchmarks (Karim et al.)
+  link: https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset
+  verified: 2026-04-18
+  desc: Multi-label hate categories across political, religious, personal.
+- id: tbolid
+  name: TB-OLID
+  task: hate
+  size: 5,000 comments
+  sizeN: 5000
+  license: CC BY 4.0
+  year: 2023
+  source: Transliterated offensive language ID
+  link: https://github.com/LanguageTechnologyLab/TB-OLID
+  verified: 2026-03-08
+  desc: Offensive language in transliterated (Banglish) text.

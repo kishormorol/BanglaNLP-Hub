@@ -1,0 +1,16 @@
+- id: sagorsarker-mbert-bengali-ner
+  name: sagorsarker/mbert-bengali-ner
+  task: ner
+  arch: mBERT (ft)
+  params: 177M
+  link: https://huggingface.co/sagorsarker/mbert-bengali-ner
+  verified: 2026-05-16
+  note: Fine-tuned on WikiANN + custom NER data.
+- id: csebuetnlp-banglabert-ner-head
+  name: csebuetnlp/banglabert (NER head)
+  task: ner
+  arch: ELECTRA (ft)
+  params: 110M
+  link: https://huggingface.co/csebuetnlp/banglabert
+  verified: 2026-06-28
+  note: Token-classification fine-tune; B-NER baseline.

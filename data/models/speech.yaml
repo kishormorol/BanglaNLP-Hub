@@ -1,0 +1,23 @@
+- id: arijitx-wav2vec2-xls-r-300m-bengali
+  name: arijitx/wav2vec2-xls-r-300m-bengali
+  task: speech
+  arch: wav2vec 2.0
+  params: 300M
+  link: https://huggingface.co/arijitx/wav2vec2-xls-r-300m-bengali
+  verified: 2026-04-22
+  note: Fine-tuned on OpenSLR 53.
+- id: bangla-speech-processing-banglaasr
+  name: bangla-speech-processing/BanglaASR
+  task: speech
+  arch: Whisper-small
+  params: 244M
+  link: https://huggingface.co/bangla-speech-processing/BanglaASR
+  verified: 2026-04-22
+- id: facebook-mms-tts-ben
+  name: facebook/mms-tts-ben
+  task: speech
+  arch: VITS
+  params: 36M
+  link: https://huggingface.co/facebook/mms-tts-ben
+  verified: 2026-04-22
+  note: Massively Multilingual Speech TTS.
