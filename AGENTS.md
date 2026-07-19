@@ -36,9 +36,12 @@ different papers*, and several truncated or invented titles and venues.
 right. When touching an entry, verify it against the authoritative source — ACL
 Anthology `.bib`, the arXiv API, or the Hugging Face API.
 
-**Dataset fields are still unaudited.** `size`, `sizeN`, `license`, and `year` have
-never been checked. `udbru` is already suspect (claims UD v2.13/2023; the treebank
-landed in v2.9/2021).
+**Dataset fields are partly audited** (2026-07-19) — see TODO-data.md for the full
+per-entry status. `license` and `size`/`year` have each had a pass. The `udbru`
+suspicion was correct and worse than recorded: it claimed ~7,340 tokens when the
+treebank has **320**. `bhs` is still known wrong (30,000 documents, unsupported).
+Roughly a third of `size` values remain unverified because the host is not
+machine-checkable.
 
 ## The design specs are NOT in this repo
 
@@ -99,5 +102,6 @@ with `astro dev stop | status | logs`.
 
 ## Not built yet
 
-Datasets, Papers, Tools, Contribute, and About views (these routes serve placeholder
-pages), `CONTRIBUTING.md` plus issue/PR templates, and `scripts/discover.ts`.
+Nothing outstanding on the view layer — Datasets, Papers, Tools, Contribute, and
+About are all ported, and `scripts/discover.ts` exists. Remaining work is data, not
+code: see TODO-data.md (empty leaderboards, missing BibTeX, unverified sizes).
