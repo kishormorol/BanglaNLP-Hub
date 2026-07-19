@@ -38,3 +38,27 @@
   link: https://arxiv.org/abs/2502.11187
   task: llm
   note: Bangla-adapted Llama models.
+- id: b-reaso-p
+  title: "B-REASO: A Multi-Level Multi-Faceted Bengali Evaluation Suite for Foundation Models"
+  authors: Hosain and Morol
+  venue: Findings EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.findings-emnlp.492/
+  task: llm
+  note: 13,497 MCQs over 50 subjects at four difficulty levels; includes the harder B-REASO HEAVY subset.
+- id: bnmmlu-p
+  title: "BnMMLU: Measuring Massive Multitask Language Understanding in Bengali"
+  authors: Joy and Shatabda
+  venue: arXiv
+  year: 2025
+  link: https://arxiv.org/abs/2505.18951
+  task: llm
+  note: 134,375 question-option pairs across 23 domains.
+- id: bnllmbench-p
+  title: "Evaluating LLMs’ Multilingual Capabilities for Bengali: Benchmark Creation and Performance Analysis"
+  authors: Bhowmik et al.
+  venue: arXiv
+  year: 2025
+  link: https://arxiv.org/abs/2507.23248
+  task: llm
+  note: Eight translated datasets evaluated across ten open-source LLMs.

@@ -2,3 +2,83 @@
   label: BEnQA (bn)
   metric: Accuracy
   rows: []
+- dataset: breaso
+  label: B-REASO
+  metric: Accuracy (answer-only)
+  rows:
+    - model: Claude-3.5-Sonnet
+      score: "68.53"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Gemini-1.5-Pro-002
+      score: "62.03"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: DeepSeek-v3
+      score: "61.74"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Llama-3.1-405B-Instruct
+      score: "55.35"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: GPT-4o
+      score: "54.98"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Amazon-Nova-Pro
+      score: "51.62"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Palmyra-X-004
+      score: "49.85"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: PaLM-2
+      score: "47.01"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Jamba-1.5-Large
+      score: "47.01"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: DBRX-Instruct
+      score: "44.66"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Solar-Pro
+      score: "44.60"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Arctic-Instruct
+      score: "43.00"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Gemma-7B
+      score: "41.92"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Command-R
+      score: "37.62"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Yi-6B
+      score: "36.43"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Qwen1.5-7B
+      score: "35.19"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Phi-2
+      score: "35.18"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: Mistral-7B-v0.1
+      score: "33.53"
+      paper: Hosain & Morol 2025
+      year: 2025
+    - model: OLMo-7B
+      score: "26.27"
+      paper: Hosain & Morol 2025
+      year: 2025
