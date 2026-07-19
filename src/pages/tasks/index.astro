@@ -7,7 +7,9 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const cards = tasks.map((t) => {
   const boards = byTask.leaderboards(t.id);
-  const board = boards[0];
+  // Pick the first board that actually has rows — a task may carry several
+  // benchmarks where only some are curated.
+  const board = boards.find((b) => b.rows.length > 0);
   const top = board?.rows[0];
   return {
     ...t,

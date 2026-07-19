@@ -38,3 +38,36 @@
   link: https://github.com/microsoft/MEGAVERSE
   verified: 2026-07-19
   desc: Multilingual LLM evaluation suite including Bangla tasks.
+- id: breaso
+  name: B-REASO
+  task: llm
+  size: 13,497 questions
+  sizeN: 13497
+  license: MIT
+  year: 2025
+  source: B-REASO (Findings EMNLP 2025)
+  link: https://huggingface.co/datasets/krarit/b-reaso
+  verified: 2026-07-19
+  desc: Bengali multiple-choice evaluation suite over 50 subjects at four difficulty levels, plus the harder B-REASO HEAVY subset.
+  bibtex: |-
+    @inproceedings{hosain-morol-2025-b,
+      title = {{B}-{REASO}: A Multi-Level Multi-Faceted {B}engali Evaluation Suite for Foundation Models},
+      author = {Hosain, Md Tanzib and Morol, Md Kishor},
+      booktitle = {Findings of the Association for Computational Linguistics: EMNLP 2025},
+      year = {2025},
+      pages = {9260--9274},
+      publisher = {Association for Computational Linguistics},
+      url = {https://aclanthology.org/2025.findings-emnlp.492/},
+      doi = {10.18653/v1/2025.findings-emnlp.492}
+    }
+- id: bnmmlu
+  name: BnMMLU
+  task: llm
+  size: 134,375 question-option pairs
+  sizeN: 134375
+  license: CC BY-SA 4.0
+  year: 2025
+  source: BnMMLU (2025)
+  link: https://github.com/samanjoy2/bnmmlu
+  verified: 2026-07-19
+  desc: Bengali massive multitask language understanding benchmark spanning 23 domains.
