@@ -30,13 +30,13 @@
 - id: banglaparaphrase
   name: BanglaParaphrase
   task: mt
-  size: 466k pairs
-  sizeN: 466000
+  size: 466,630 pairs
+  sizeN: 466630
   license: CC BY-NC-SA 4.0
   year: 2022
   source: BanglaParaphrase (AACL 2022)
   link: https://huggingface.co/datasets/csebuetnlp/BanglaParaphrase
-  verified: 2026-06-01
+  verified: 2026-07-19
   desc: High-quality synthetic paraphrase pairs.
 - id: samanantar
   name: Samanantar (bn–en)

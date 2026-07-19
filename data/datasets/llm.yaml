@@ -19,8 +19,8 @@
 - id: globalmmlu
   name: Global-MMLU (bn)
   task: llm
-  size: 14k questions
-  sizeN: 14000
+  size: 14,327 questions
+  sizeN: 14327
   license: Apache 2.0
   year: 2024
   source: Global-MMLU (2024)
@@ -33,7 +33,7 @@
   size: 22 tasks
   sizeN: 22
   license: Mixed
-  year: 2023
+  year: 2024
   source: MEGAVERSE (NAACL 2024)
   link: https://github.com/microsoft/MEGAVERSE
   verified: 2026-07-19

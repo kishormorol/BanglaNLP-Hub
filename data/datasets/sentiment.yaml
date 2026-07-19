@@ -22,10 +22,10 @@
   size: 7,000 texts
   sizeN: 7000
   license: Research only
-  year: 2021
+  year: 2022
   source: Emotion classification corpus
   link: https://github.com/avishek-018/BEmoC
-  verified: 2026-05-14
+  verified: 2026-07-19
   desc: Six-class emotion corpus (anger, disgust, fear, joy, sadness, surprise).
 - id: absa
   name: ABSA Cricket & Restaurant
