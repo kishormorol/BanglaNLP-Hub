@@ -1,22 +1,226 @@
 ---
 /**
- * Placeholder route. The Contribute view has not been ported from
- * design-reference/Contribute.dc.html yet; this exists so nav and footer links
- * resolve instead of 404ing. Replace wholesale when the view is ported.
+ * Contribute — ported from design-reference/Contribute.dc.html.
+ *
+ * Three deliberate departures from the prototype:
+ *  1. It referenced github.com/elite-research-lab/banglanlp-hub, which is not this
+ *     repo. All links point at the real one.
+ *  2. Its "Entry format" sample did not match the actual schema (no id/sizeN/desc,
+ *     and a `paper:` field that does not exist). Replaced with a real dataset entry.
+ *  3. Its submit button was a mock that only set a "submitted" flag. Here it builds
+ *     a pre-filled GitHub issue against the Submit a resource template.
  */
 import Base from '../layouts/Base.astro';
-const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+import { tasks } from '../lib/data.ts';
+
+const REPO = 'https://github.com/kishormorol/BanglaNLP-Hub';
+
+const steps = [
+  {
+    n: '01',
+    title: 'Fork the repo',
+    body: 'kishormorol/BanglaNLP-Hub — every resource is one small YAML record under data/datasets/, data/papers/, data/models/, or data/tools.yaml.',
+  },
+  {
+    n: '02',
+    title: 'Add your YAML entry',
+    body: 'Copy the format below and include a link you have actually opened. npm run validate checks the schema, the URL, and the verified date before CI will go green.',
+  },
+  {
+    n: '03',
+    title: 'Open a pull request',
+    body: 'A maintainer reviews within about a week. On merge the site rebuilds and your entry goes live.',
+  },
+];
+
+const sample = `# data/datasets/sentiment.yaml
+- id: sentnob                      # unique, lowercase
+  name: SentNoB
+  task: sentiment                  # must match the filename
+  size: "15,728 comments"          # human-readable
+  sizeN: 15728                     # numeric, used for sorting
+  license: CC BY-NC-SA 4.0
+  year: 2021
+  source: SentNoB (Findings EMNLP 2021)
+  link: https://github.com/KhondokerIslam/SentNoB
+  verified: 2026-06-28             # the date YOU opened the link
+  desc: Sentiment on noisy user comments from news and social platforms.
+  bibtex: |                        # optional — omit if none exists upstream
+    @inproceedings{islam-etal-2021-sentnob, ... }`;
+
+const cardStyle =
+  'background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px';
+const labelStyle =
+  'display:flex;flex-direction:column;gap:5px;font-size:12.5px;font-weight:600;color:var(--text2)';
+const fieldStyle =
+  "padding:9px 12px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--text);font-size:14px;font-family:'IBM Plex Sans',sans-serif;outline:none";
+const preStyle =
+  "margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.65;color:var(--text);overflow-x:auto";
 ---
 
 <Base title="Contribute — BanglaNLP Hub" active="contribute">
-  <main style="max-width:1200px;margin:0 auto;padding:64px 20px 96px">
-    <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">Contribute</h1>
-    <p style="color:var(--text2);font-size:15.5px;max-width:560px;line-height:1.6;margin:12px 0 0">
-      This page has not been built yet. The catalog data behind it already exists and is
-      validated — only the view is outstanding.
-    </p>
-    <p style="font-size:14px;margin-top:20px">
-      <a href={`${base}/tasks`}>Browse by task →</a>
-    </p>
+  <main style="max-width:900px;margin:0 auto;padding:0 20px 64px">
+    <section style="padding:48px 0 8px">
+      <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">
+        Contribute <span class="bn" style="font-size:19px;color:var(--red);font-weight:600"
+          >অবদান রাখুন</span
+        >
+      </h1>
+      <p
+        style="color:var(--text2);font-size:15.5px;max-width:640px;line-height:1.6;margin:10px 0 0;text-wrap:pretty"
+      >
+        Every entry on this site lives as a YAML file in a public GitHub repository. The site
+        rebuilds automatically when a pull request is merged — no CMS, no accounts, just Git.
+      </p>
+    </section>
+
+    <section
+      style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;padding:28px 0"
+    >
+      {
+        steps.map((s) => (
+          <div style={cardStyle}>
+            <div style="font-family:'Spectral',serif;font-weight:700;font-size:22px;color:var(--red)">
+              {s.n}
+            </div>
+            <div style="font-weight:600;font-size:15px;margin-top:6px">{s.title}</div>
+            <p style="margin:6px 0 0;font-size:13px;color:var(--text2);line-height:1.55;text-wrap:pretty">
+              {s.body}
+            </p>
+          </div>
+        ))
+      }
+    </section>
+
+    <section
+      style="background:var(--redSoft);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px"
+    >
+      <div style="font-weight:600;font-size:15px;color:var(--red)">
+        Never add what you cannot source
+      </div>
+      <p style="margin:6px 0 0;font-size:13.5px;color:var(--text2);line-height:1.6;text-wrap:pretty">
+        No invented scores, sizes, licenses, or BibTeX. Every leaderboard row must cite the paper
+        reporting that exact number on that exact benchmark — which is why all leaderboards are
+        currently empty. A working link does not prove the metadata is right. If you are unsure
+        about a field, leave it out and say so in the pull request; missing is fine, wrong is not.
+        Full rules in <a href={`${REPO}/blob/main/CONTRIBUTING.md`} target="_blank" rel="noopener"
+          >CONTRIBUTING.md</a
+        >.
+      </p>
+    </section>
+
+    <section style="padding-bottom:28px">
+      <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:22px;margin:0 0 12px">
+        Entry format
+      </h2>
+      <pre style={preStyle}>{sample}</pre>
+    </section>
+
+    <section>
+      <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:22px;margin:0 0 6px">
+        Submit a resource
+      </h2>
+      <p
+        style="color:var(--text2);font-size:14px;margin:0 0 16px;max-width:600px;line-height:1.6;text-wrap:pretty"
+      >
+        Not comfortable with Git? Fill this in and we'll turn it into a pull request for you,
+        credited to you.
+      </p>
+      <form
+        id="submit-form"
+        style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:680px"
+      >
+        <label style={labelStyle}>
+          Resource type
+          <select name="type" style={`${fieldStyle};font-weight:400`}>
+            <option>Dataset</option>
+            <option>Paper</option>
+            <option>Model</option>
+            <option>Tool</option>
+            <option>Benchmark result</option>
+          </select>
+        </label>
+        <label style={labelStyle}>
+          Task
+          <select name="task" style={`${fieldStyle};font-weight:400`}>
+            {tasks.map((t) => <option value={t.id}>{t.name}</option>)}
+          </select>
+        </label>
+        <label style={`${labelStyle};grid-column:1/-1`}>
+          Name
+          <input name="name" required placeholder="e.g. SentNoB" style={fieldStyle} />
+        </label>
+        <label style={`${labelStyle};grid-column:1/-1`}>
+          Link (dataset / paper / repo)
+          <input name="link" type="url" required placeholder="https://…" style={fieldStyle} />
+        </label>
+        <label style={`${labelStyle};grid-column:1/-1`}>
+          Why it belongs in the catalog
+          <textarea
+            name="why"
+            rows="3"
+            required
+            placeholder="One or two sentences…"
+            style={`${fieldStyle};resize:vertical`}></textarea>
+        </label>
+        <div style="grid-column:1/-1;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+          <button
+            type="submit"
+            style="border:none;background:var(--green);color:#fff;border-radius:9px;padding:11px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:'IBM Plex Sans',sans-serif"
+            >Submit for review</button
+          >
+          <span style="font-size:12.5px;color:var(--text2)"
+            >Opens a pre-filled GitHub issue — maintainers review weekly.</span
+          >
+        </div>
+      </form>
+      <p style="font-size:12.5px;color:var(--text2);margin:14px 0 0">
+        Prefer to skip the form? Open the <a
+          href={`${REPO}/issues/new?template=submit-resource.yml`}
+          target="_blank"
+          rel="noopener">Submit a resource</a
+        > issue directly.
+      </p>
+    </section>
   </main>
 </Base>
+
+<style>
+  #submit-form input:focus,
+  #submit-form textarea:focus,
+  #submit-form select:focus {
+    border-color: var(--green);
+  }
+  #submit-form button:hover {
+    opacity: 0.9;
+  }
+  @media (max-width: 560px) {
+    #submit-form {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+
+<script is:inline define:vars={{ REPO }}>
+  document.getElementById('submit-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const f = new FormData(form);
+    const sel = form.querySelector('select[name=task]');
+    const taskId = f.get('task');
+    const taskLabel = sel.options[sel.selectedIndex].textContent.trim();
+
+    // Prefills the Submit-a-resource issue form. Query keys are the template's field
+    // ids; the task dropdown's option text is "<id> — <name>", so match that exactly.
+    const params = new URLSearchParams({
+      template: 'submit-resource.yml',
+      title: `[Resource] ${f.get('name')}`,
+      'resource-type': f.get('type'),
+      task: `${taskId} — ${taskLabel}`,
+      name: f.get('name'),
+      link: f.get('link'),
+      why: f.get('why'),
+    });
+    window.open(`${REPO}/issues/new?${params}`, '_blank', 'noopener');
+  });
+</script>
