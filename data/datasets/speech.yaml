@@ -28,6 +28,6 @@
   license: CC BY-NC 4.0
   year: 2023
   source: OOD-Speech (2023)
-  link: https://github.com/BengaliAI/ood-speech
-  verified: 2026-05-22
+  link: https://bengaliai.github.io/asr
+  verified: 2026-07-19
   desc: Large-scale out-of-distribution Bangla ASR benchmark.

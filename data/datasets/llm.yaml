@@ -6,8 +6,8 @@
   license: CC BY-NC-SA 4.0
   year: 2024
   source: BEnQA (2024)
-  link: https://github.com/csebuetnlp/BEnQA
-  verified: 2026-06-30
+  link: https://github.com/sheikhshafayat/BEnQA
+  verified: 2026-07-19
   desc: Parallel Bangla–English science exam questions for LLM evaluation.
   bibtex: |-
     @article{shafayat2024benqa,
@@ -35,6 +35,6 @@
   license: Mixed
   year: 2023
   source: MEGAVERSE (NAACL 2024)
-  link: https://github.com/microsoft/Lingua
-  verified: 2026-04-09
+  link: https://github.com/microsoft/MEGAVERSE
+  verified: 2026-07-19
   desc: Multilingual LLM evaluation suite including Bangla tasks.

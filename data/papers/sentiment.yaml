@@ -7,12 +7,13 @@
   task: sentiment
   note: Noisy user-generated content, 13 domains.
 - id: absa-p
-  title: "Aspect Based Sentiment Analysis of Bangla Text: A Corpus and Baseline Models"
+  title: Datasets for Aspect-Based Sentiment Analysis in Bangla and Its Baseline Evaluation
   authors: Rahman & Dey
-  venue: IJCNLP
+  venue: MDPI Data
   year: 2018
   link: https://www.mdpi.com/2306-5729/3/2/15
   task: sentiment
+  note: "Two datasets: cricket comments and customer reviews."
 - id: emotion-p
   title: "BEmoC: A Corpus for Emotion Classification in Bangla"
   authors: Das et al.

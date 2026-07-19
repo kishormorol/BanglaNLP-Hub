@@ -74,6 +74,14 @@ function changedUrls(ref: string): Set<string> {
   return urls;
 }
 
+/**
+ * 401/403/429 mean "a bot was refused", not "the resource is gone". Publishers
+ * like MDPI and Cloudflare-fronted hosts do this to any non-browser agent.
+ * Reporting them as dead trains maintainers to ignore the nightly issue, so
+ * they are surfaced separately and never fail the run.
+ */
+const BLOCKED_STATUSES = new Set(['401', '403', '429']);
+
 async function probe(url: string): Promise<{ ok: boolean; status: string }> {
   // HEAD first; many hosts (GitHub raw, Kaggle, some publishers) reject it,
   // so fall back to a ranged GET before calling a link dead.
@@ -118,7 +126,9 @@ if (!distinct.length) {
 
 console.log(`Checking ${distinct.length} link(s)${changedRef ? ` changed vs ${changedRef}` : ''}…\n`);
 
-const failures: { url: string; status: string; entries: Link[] }[] = [];
+type Finding = { url: string; status: string; entries: Link[] };
+const failures: Finding[] = [];
+const blocked: Finding[] = [];
 let done = 0;
 
 async function worker(queue: string[]) {
@@ -127,8 +137,13 @@ async function worker(queue: string[]) {
     if (!url) return;
     const { ok, status } = await probe(url);
     done++;
-    if (!ok) {
-      failures.push({ url, status, entries: links.filter((l) => l.url === url) });
+    if (ok) continue;
+    const finding = { url, status, entries: links.filter((l) => l.url === url) };
+    if (BLOCKED_STATUSES.has(status)) {
+      blocked.push(finding);
+      console.log(`  ⚠ ${status.padEnd(14)} ${url} (bot-blocked, not treated as dead)`);
+    } else {
+      failures.push(finding);
       console.log(`  ✗ ${status.padEnd(14)} ${url}`);
     }
   }
@@ -137,9 +152,30 @@ async function worker(queue: string[]) {
 const queue = [...distinct];
 await Promise.all(Array.from({ length: Math.min(CONCURRENCY, queue.length) }, () => worker(queue)));
 
-console.log(`\n${done - failures.length}/${done} reachable.`);
+console.log(
+  `\n${done - failures.length - blocked.length}/${done} reachable` +
+    (blocked.length ? `, ${blocked.length} bot-blocked` : '') +
+    (failures.length ? `, ${failures.length} dead.` : '.'),
+);
 
 if (reportPath) {
+  const blockedSection = blocked.length
+    ? [
+        '',
+        '<details><summary>' +
+          `${blocked.length} link(s) refused an automated request (401/403/429)</summary>`,
+        '',
+        'These are almost certainly reachable in a browser — publishers and CDNs block',
+        'non-browser agents. Listed for awareness only; no action is usually needed.',
+        '',
+        '| Status | Entry | URL |',
+        '| --- | --- | --- |',
+        ...blocked.flatMap((f) => f.entries.map((e) => `| \`${f.status}\` | ${e.name} | ${f.url} |`)),
+        '',
+        '</details>',
+      ]
+    : [];
+
   const lines = failures.length
     ? [
         `${failures.length} dead link(s) found in \`/data\` on ${new Date().toISOString().slice(0, 10)}.`,
@@ -152,9 +188,11 @@ if (reportPath) {
         ...failures.flatMap((f) =>
           f.entries.map((e) => `| \`${f.status}\` | ${e.name} | \`${e.where}\` | ${f.url} |`),
         ),
+        ...blockedSection,
       ]
-    : ['All links in `/data` are reachable. ✅'];
+    : ['All links in `/data` are reachable. ✅', ...blockedSection];
   writeFileSync(reportPath, lines.join('\n'), 'utf8');
 }
 
+// Bot-blocked links never fail the run.
 process.exit(failures.length ? 1 : 0);

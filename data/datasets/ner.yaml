@@ -17,8 +17,8 @@
   license: MIT
   year: 2023
   source: B-NER (IEEE Access 2023)
-  link: https://github.com/eliteaihub/b-ner
-  verified: 2026-06-21
+  link: https://www.kaggle.com/datasets/mdzahidulhaquealvi/b-ner
+  verified: 2026-07-19
   desc: Largest gold-standard Bangla NER corpus, 8 entity types.
 - id: wikiann
   name: WikiANN (bn)
@@ -28,6 +28,6 @@
   license: ODC-BY
   year: 2019
   source: Cross-lingual name tagging (ACL 2017)
-  link: https://huggingface.co/datasets/wikiann
-  verified: 2026-03-30
+  link: https://huggingface.co/datasets/unimelb-nlp/wikiann
+  verified: 2026-07-19
   desc: Silver-standard PER/LOC/ORG from Wikipedia anchors.

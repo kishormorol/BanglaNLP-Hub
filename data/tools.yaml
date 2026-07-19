@@ -32,12 +32,12 @@
   verified: 2026-04-15
 - id: bkit
   name: bkit
-  author: BanglaKit
+  author: giga-tech
   desc: Text cleaning, normalization, tokenization, lemmatization for Bangla.
   lang: Python
   install: pip install bkit
-  link: https://github.com/banglakit/bkit
-  verified: 2026-05-02
+  link: https://pypi.org/project/bkit/
+  verified: 2026-07-19
 - id: avro-py
   name: avro.py
   author: hitblast
