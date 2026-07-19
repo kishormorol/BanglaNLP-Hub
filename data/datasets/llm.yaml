@@ -21,11 +21,11 @@
   task: llm
   size: 14k questions
   sizeN: 14000
-  license: CC BY 4.0
+  license: Apache 2.0
   year: 2024
   source: Global-MMLU (2024)
-  link: https://huggingface.co/datasets/CohereForAI/Global-MMLU
-  verified: 2026-06-30
+  link: https://huggingface.co/datasets/CohereLabs/Global-MMLU
+  verified: 2026-07-19
   desc: Culturally adapted MMLU; Bengali split.
 - id: megaverse
   name: MEGAVERSE (bn subset)
