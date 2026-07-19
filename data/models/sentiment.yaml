@@ -6,10 +6,3 @@
   link: https://huggingface.co/csebuetnlp/banglabert
   verified: 2026-05-16
   note: Sequence-classification fine-tune; SentNoB baseline.
-- id: sagorsarker-bangla-bert-sentiment
-  name: sagorsarker/bangla-bert-sentiment
-  task: sentiment
-  arch: BERT (ft)
-  params: 110M
-  link: https://huggingface.co/sagorsarker/bangla-bert-sentiment
-  verified: 2026-05-16
