@@ -1,22 +1,150 @@
 ---
 /**
- * Placeholder route. The About view has not been ported from
- * design-reference/About.dc.html yet; this exists so nav and footer links
- * resolve instead of 404ing. Replace wholesale when the view is ported.
+ * About — ported from design-reference/About.dc.html.
+ *
+ * Departures from the prototype, all factual corrections:
+ *  - It said links are re-verified "weekly"; the actual workflow runs nightly.
+ *  - Its citation pointed at https://banglanlp-hub.github.io, which is not this site.
+ *  - Its "Leaderboard scores link to their source" claim is restated as the policy it
+ *    actually is, since no scores are currently curated.
  */
 import Base from '../layouts/Base.astro';
+import { stats } from '../lib/data.ts';
+
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const SITE = 'https://kishormorol.github.io/BanglaNLP-Hub/';
+const REPO = 'https://github.com/kishormorol/BanglaNLP-Hub';
+const today = new Date().toISOString().slice(0, 10);
+
+const bibtex = `@misc{banglanlphub2026,
+  title        = {{B}angla{NLP} Hub: A Community-Maintained Catalog of {B}angla {NLP} Resources},
+  author       = {{ELITE Research Lab} and contributors},
+  year         = {2026},
+  howpublished = {\\url{${SITE}}},
+  note         = {Accessed ${today}}
+}`;
+
+const principles = [
+  {
+    title: 'Verified links',
+    body: 'CI re-checks every external link nightly. Failures are collected in a single tracking issue, and the "✓ verified" chip on each resource shows when a human last confirmed it.',
+  },
+  {
+    title: 'Sourced or absent',
+    body: 'Nothing is estimated. Leaderboard rows require a citation to the paper reporting that exact number, so benchmarks with no curated rows show an empty state rather than a plausible guess.',
+  },
+  {
+    title: 'Light by design',
+    body: 'No trackers, no client framework. A handful of small vanilla scripts, built to load fast on mid-range phones and slow connections.',
+  },
+];
+
+const h2Style = "font-family:'Spectral',serif;font-weight:600;font-size:22px;margin:0 0 12px";
 ---
 
 <Base title="About — BanglaNLP Hub" active="about">
-  <main style="max-width:1200px;margin:0 auto;padding:64px 20px 96px">
-    <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">About</h1>
-    <p style="color:var(--text2);font-size:15.5px;max-width:560px;line-height:1.6;margin:12px 0 0">
-      This page has not been built yet. The catalog data behind it already exists and is
-      validated — only the view is outstanding.
-    </p>
-    <p style="font-size:14px;margin-top:20px">
-      <a href={`${base}/tasks`}>Browse by task →</a>
-    </p>
+  <main style="max-width:760px;margin:0 auto;padding:0 20px 64px">
+    <section style="padding:48px 0 12px">
+      <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">
+        About <span class="bn" style="font-size:19px;color:var(--red);font-weight:600">পরিচিতি</span>
+      </h1>
+    </section>
+
+    <section style="font-size:15.5px;line-height:1.75;color:var(--text)">
+      <p style="margin:0 0 16px;text-wrap:pretty">
+        <span class="bn" style="font-weight:600;color:var(--green)">বাংলা</span>
+        <strong>NLP Hub</strong> is a community-maintained catalog of research resources for Bengali
+        — the world's sixth most spoken language, and still chronically under-resourced in NLP. We index
+        papers, datasets, pretrained models, tools, and benchmark results in one place so that researchers
+        spend less time hunting and more time building.
+      </p>
+      <p style="margin:0 0 16px;text-wrap:pretty">
+        The catalog is maintained by <strong>ELITE Research Lab</strong> with contributions from the
+        wider Bangla NLP community. All data lives in a <a href={REPO} target="_blank" rel="noopener"
+          >public GitHub repository</a
+        >; every link is re-verified nightly by CI, and the "✓ verified" chip next to each resource
+        shows when it last resolved.
+      </p>
+      <p style="margin:0 0 16px;text-wrap:pretty">
+        It currently indexes <strong>{stats.papers}</strong> papers, <strong>{stats.datasets}</strong
+        > datasets, <strong>{stats.models}</strong> models, and <strong>{stats.tools}</strong> tools across
+        10 tasks. Entries seeded from the original design prototype are being audited against ACL Anthology
+        and arXiv; several turned out to be inaccurate and were corrected or removed. Dataset size, license,
+        and year fields have not yet been through that audit.
+      </p>
+      <p style="margin:0;text-wrap:pretty">
+        Corrections, additions, and new benchmark results are welcome — see <a
+          href={`${base}/contribute`}>how to contribute</a
+        >.
+      </p>
+    </section>
+
+    <section style="padding-top:36px">
+      <h2 style={h2Style}>Principles</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px">
+        {
+          principles.map((p) => (
+            <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px">
+              <div style="font-weight:600;font-size:14.5px">{p.title}</div>
+              <p style="margin:6px 0 0;font-size:13px;color:var(--text2);line-height:1.55;text-wrap:pretty">
+                {p.body}
+              </p>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    <section style="padding-top:36px">
+      <h2 style={h2Style.replace('0 0 12px', '0 0 6px')}>Cite this catalog</h2>
+      <p style="color:var(--text2);font-size:14px;margin:0 0 12px">
+        If the Hub helped your research, cite it:
+      </p>
+      <div style="position:relative">
+        <pre
+          id="cite-bib"
+          style="margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;font-family:'IBM Plex Mono',monospace;font-size:12px;line-height:1.65;color:var(--text);overflow-x:auto;white-space:pre-wrap">{bibtex}</pre>
+        <button
+          id="cite-copy"
+          type="button"
+          style="position:absolute;top:10px;right:10px;border:1px solid var(--border);background:var(--bg);color:var(--text2);border-radius:7px;padding:5px 12px;font-size:12px;font-weight:600;cursor:pointer;font-family:'IBM Plex Sans',sans-serif"
+          >Copy BibTeX</button
+        >
+      </div>
+    </section>
   </main>
 </Base>
+
+<style>
+  #cite-copy:hover {
+    border-color: var(--green);
+  }
+</style>
+
+<script>
+  const btn = document.getElementById('cite-copy');
+  const pre = document.getElementById('cite-bib');
+  btn?.addEventListener('click', async () => {
+    const text = pre?.textContent ?? '';
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+      } catch {}
+      document.body.removeChild(ta);
+    }
+    btn.textContent = 'Copied ✓';
+    btn.style.color = 'var(--green)';
+    setTimeout(() => {
+      btn.textContent = 'Copy BibTeX';
+      btn.style.color = 'var(--text2)';
+    }, 1600);
+  });
+</script>

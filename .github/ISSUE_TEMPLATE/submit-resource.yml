@@ -1,0 +1,100 @@
+name: Submit a resource
+description: Suggest a paper, dataset, model, tool, or benchmark result for the catalog
+title: '[Resource] '
+labels: [data, submission]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing. A maintainer will turn this into a pull request, credited to you.
+
+        **Please only submit things you can source.** We do not add scores, sizes, or licenses
+        that cannot be checked against the resource itself or its paper. Leaving a field blank
+        is always better than guessing.
+
+  - type: dropdown
+    id: resource-type
+    attributes:
+      label: Resource type
+      options:
+        - Dataset
+        - Paper
+        - Model
+        - Tool
+        - Benchmark result
+    validations:
+      required: true
+
+  - type: dropdown
+    id: task
+    attributes:
+      label: Task
+      description: Which task does this belong under?
+      options:
+        - sentiment — Sentiment Analysis
+        - ner — Named Entity Recognition
+        - mt — Machine Translation
+        - qa — Question Answering
+        - summ — Summarization
+        - hate — Hate Speech Detection
+        - speech — ASR / TTS
+        - textcls — Text Classification
+        - pos — POS Tagging
+        - llm — LLM Benchmarks
+        - (none / new task)
+    validations:
+      required: true
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: e.g. SentNoB
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: Where the resource actually lives — repo, dataset page, or publisher page.
+      placeholder: https://…
+    validations:
+      required: true
+
+  - type: input
+    id: paper
+    attributes:
+      label: Paper link
+      description: ACL Anthology or DOI preferred over arXiv, if the resource has a paper.
+      placeholder: https://aclanthology.org/…
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs in the catalog
+      placeholder: One or two sentences.
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Known details
+      description: |
+        Anything you can source: size, license, year, architecture, parameter count.
+        Leave blank what you do not know — do not estimate.
+      placeholder: |
+        size: 15,728 comments
+        license: CC BY-NC-SA 4.0
+        year: 2021
+
+  - type: checkboxes
+    id: sourcing
+    attributes:
+      label: Sourcing
+      options:
+        - label: I opened the link and confirmed the resource is there.
+          required: true
+        - label: Any figures I gave above come from the resource or its paper, not an estimate.
+          required: true
