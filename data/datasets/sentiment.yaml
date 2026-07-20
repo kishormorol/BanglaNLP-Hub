@@ -38,3 +38,47 @@
   link: https://github.com/AtikRahman/Bangla_ABSA_Datasets
   verified: 2026-04-02
   desc: Aspect-based sentiment in two domains.
+- id: banglabook
+  name: BanglaBook
+  task: sentiment
+  size: 158,065 reviews
+  sizeN: 158065
+  license: CC BY-NC-SA 4.0
+  year: 2023
+  source: BanglaBook (Findings ACL 2023)
+  link: https://github.com/mohsinulkabir14/BanglaBook
+  verified: 2026-07-19
+  desc: Large-scale Bangla book-review sentiment dataset in three classes (positive, negative, neutral).
+- id: motamot
+  name: Motamot
+  task: sentiment
+  size: 7,058 instances
+  sizeN: 7058
+  license: MIT
+  year: 2024
+  source: Motamot (2024)
+  link: https://github.com/mukaffi28/bengali-political-sentiment-analysis
+  verified: 2026-07-19
+  desc: Bengali political sentiment dataset compiled from election-period news, labelled positive/negative.
+- id: sentmix3l
+  name: SentMix-3L
+  task: sentiment
+  size: 1,007 instances
+  sizeN: 1007
+  license: AGPL-3.0
+  year: 2023
+  source: SentMix-3L (SEALP 2023)
+  link: https://github.com/LanguageTechnologyLab/SentMix-3L
+  verified: 2026-07-19
+  desc: Gold-standard Bangla-English-Hindi code-mixed sentiment analysis test set.
+- id: emomix3l
+  name: EmoMix-3L
+  task: sentiment
+  size: 1,071 instances
+  sizeN: 1071
+  license: GPL-3.0
+  year: 2024
+  source: EmoMix-3L (WILDRE 2024)
+  link: https://github.com/GoswamiDhiman/EmoMix-3L
+  verified: 2026-07-19
+  desc: Bangla-English-Hindi code-mixed emotion detection test set.
