@@ -108,12 +108,21 @@ candidate's fields from the ACL Anthology's own BibTeX and files it under a task
 
 - Both are candidate-safe: discover never touches live data; promote only reads the
   anthology and writes `data/papers/<task>.yaml` + the trimmed inbox.
-- Every promoted field except `task` is copied verbatim from the anthology. `task`
-  is a title-keyword heuristic (`classify()` in promote.ts) — a paper it cannot
-  place is left in the inbox, never filed under a guess. `note` is never generated.
+- Every promoted field except `task` is copied verbatim (ACL from the anthology
+  BibTeX; arXiv from the arXiv API via the candidate, venue forced to `arXiv`).
+  `task` is a title-keyword heuristic (`classify()`) — a paper it cannot place is
+  left in the inbox, never filed under a guess. `note` is never generated.
+- arXiv promotion is guarded twice: the title must be about Bangla (the arXiv
+  filter matches abstracts, so many hits are tangential multilingual papers), and
+  it is deduped against the published set by link, normalized title, AND
+  system-name prefix (`systemName()`) so a preprint of an already-published paper
+  is skipped even when its subtitle drifted.
+- **HF hits are not promotable in bulk** — `language:bn` is low-precision
+  (multilingual megacorpora, mis-tagged datasets) and the Model schema needs
+  `arch`/`params` the list API lacks. Curate by hand.
 - promote.ts needs `.cache/anthology.bib` (gitignored, ~85 MB): `mkdir -p .cache &&
   curl -sL https://aclanthology.org/anthology.bib.gz | gunzip > .cache/anthology.bib`.
-- The July 2026 ACL sweep took papers from 27 to 260. arXiv/HF have not been swept.
+- The July 2026 sweeps took papers from 27 to 405 (ACL 260 + arXiv 145).
 
 ## Not built yet
 

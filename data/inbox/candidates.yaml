@@ -1,3 +1,27 @@
+- source: arxiv
+  kind: paper
+  title: "†DAGGER: Distractor-Aware Graph Generation for Executable Reasoning in Math Problems"
+  link: http://arxiv.org/abs/2601.06853
+  year: 2026
+  authors: Nazi et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: Are LLMs Ready to Replace Bangla Annotators?
+  link: http://arxiv.org/abs/2602.16241
+  year: 2026
+  authors: Hasan et al.
+  venue: arXiv
+  suggestedTask: hate
+- source: arxiv
+  kind: paper
+  title: "Bangla Key2Text: Text Generation from Keywords for a Low Resource Language"
+  link: http://arxiv.org/abs/2604.19508
+  year: 2026
+  authors: Talukder et al.
+  venue: arXiv
+  suggestedTask: llm
 - source: acl
   kind: paper
   title: "BanSuite: A Unified Toolkit and Software Platform for Low-Resource NLP in Bangla"
@@ -5,6 +29,38 @@
   year: 2026
   authors: Sayed et al.
   venue: "Proceedings of the 19th Conference of the {E}uropean Chapter of the {A}ssociation for {C}omputational {L}inguistics (Volume 3: System Demonstrations)"
+- source: arxiv
+  kind: paper
+  title: BETA-Labeling for Multilingual Dataset Construction in Low-Resource IR
+  link: http://arxiv.org/abs/2602.14488
+  year: 2026
+  authors: Hasan et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Beyond Clean Text: Evaluating Encoder and Decoder Robustness for Bangla Event Detection in Noisy Text"
+  link: http://arxiv.org/abs/2606.30914
+  year: 2026
+  authors: Sijan et al.
+  venue: arXiv
+  suggestedTask: speech
+- source: arxiv
+  kind: paper
+  title: "BhashaSetu: Cross-Lingual Knowledge Transfer from High-Resource to Extreme Low-Resource Languages"
+  link: http://arxiv.org/abs/2602.05599
+  year: 2026
+  authors: Maji et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: "BiST: A Gold Standard Bangla-English Bilingual Corpus for Sentence Structure and Tense Classification with Inter-Annotator Agreement"
+  link: http://arxiv.org/abs/2604.04708
+  year: 2026
+  authors: Shafi et al.
+  venue: arXiv
+  suggestedTask: llm
 - source: acl
   kind: paper
   title: "BornoDrishti: Leveraging Vision Encoders and Domain-Adaptive Learning for Bangla OCR on Diverse Documents"
@@ -12,6 +68,275 @@
   year: 2026
   authors: Islam et al.
   venue: "Proceedings of the 19th Conference of the {E}uropean Chapter of the {A}ssociation for {C}omputational {L}inguistics (Volume 5: Industry Track)"
+- source: arxiv
+  kind: paper
+  title: "Bridging the Gap in Bangla Healthcare: Machine Learning Based Disease Prediction Using a Symptoms-Disease Dataset"
+  link: http://arxiv.org/abs/2601.12068
+  year: 2026
+  authors: Zannat et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "CBRS: Cognitive Blood Request System with Bilingual Dataset and Dual-Layer Filtering for Multi-Platform Social Streams"
+  link: http://arxiv.org/abs/2604.16665
+  year: 2026
+  authors: Saha et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "Challenges in Translating Technical Lectures: Insights from the NPTEL"
+  link: http://arxiv.org/abs/2602.08698
+  year: 2026
+  authors: Raje et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Creating Multilingual Mental Health Dialogue Datasets: Limits of Persona-Based Localization via Nationality and Language"
+  link: http://arxiv.org/abs/2606.19640
+  year: 2026
+  authors: Xu et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "Cross-Lingual Sentiment Misalignment: Auditing Multilingual Language Models for Inversion Risk, Dialectal Representation, and Affective Stability"
+  link: http://arxiv.org/abs/2602.17469
+  year: 2026
+  authors: Lia et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: Do LLM hallucination detectors suffer from low-resource effect?
+  link: http://arxiv.org/abs/2601.16766
+  year: 2026
+  authors: Datta et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: Do Multilingual VLMs Reason Equally? A Cross-Lingual Visual Reasoning Audit for Indian Languages
+  link: http://arxiv.org/abs/2603.26742
+  year: 2026
+  authors: R et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Echoes of Unrest: A Multimodal NLP Framework for Early Warning of Fake News and Violence-Driven Mob Activity"
+  link: http://arxiv.org/abs/2607.02734
+  year: 2026
+  authors: Bangabashi et al.
+  venue: arXiv
+  suggestedTask: textcls
+- source: arxiv
+  kind: paper
+  title: Enhancing BiGRU with a KAN Block for Legal Document Classification and Summarization
+  link: http://arxiv.org/abs/2606.00116
+  year: 2026
+  authors: Dhrubo et al.
+  venue: arXiv
+  suggestedTask: summ
+- source: arxiv
+  kind: paper
+  title: "Evaluating Health Misinformation in Low-Resource Languages: Integrating Small Language Models with a Culturally-Sensitive Responsible NLP Framework (Bangla as a Case Study)"
+  link: http://arxiv.org/abs/2607.12336
+  year: 2026
+  authors: Farid et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: Evaluating LLMs' Effectiveness on Real-World Consumer Device Repair Questions
+  link: http://arxiv.org/abs/2606.03331
+  year: 2026
+  authors: Rahman et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Explainable AI for Screening Abuse-Related Trauma in Bangladeshi Children: A Training-Free Multimodal Framework Evaluated on Noise-Aware Synthetic Data"
+  link: http://arxiv.org/abs/2607.04010
+  year: 2026
+  authors: Koli et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "FIND: Toward Multimodal Financial Reasoning and Question Answering for Indic Languages"
+  link: http://arxiv.org/abs/2605.13330
+  year: 2026
+  authors: Das et al.
+  venue: arXiv
+  suggestedTask: qa
+- source: arxiv
+  kind: paper
+  title: "From Vajrayana Tara to Bengali Baul: A Computational Study of Lexical Transmission Across Buddhist, Shakta, and Vaishnava Traditions in Bengal"
+  link: http://arxiv.org/abs/2606.26803
+  year: 2026
+  authors: Bose et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: Hubness, Not Anisotropy, Drives Cross-Lingual Retrieval Asymmetry in Multilingual Embedding Models
+  link: http://arxiv.org/abs/2605.26575
+  year: 2026
+  authors: Sakhawat et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "IndicMedDialog: A Parallel Multi-Turn Medical Dialogue Dataset for Accessible Healthcare in Indic Languages"
+  link: http://arxiv.org/abs/2605.13292
+  year: 2026
+  authors: Nigam et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "KID: Knowledge-Injected Dual-Head Learning for Knowledge-Grounded Harmful Meme Detection"
+  link: http://arxiv.org/abs/2601.21796
+  year: 2026
+  authors: Li et al.
+  venue: arXiv
+  suggestedTask: hate
+- source: arxiv
+  kind: paper
+  title: "Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects"
+  link: http://arxiv.org/abs/2603.21165
+  year: 2026
+  authors: Sayeedi et al.
+  venue: arXiv
+  suggestedTask: qa
+- source: arxiv
+  kind: paper
+  title: "MedAidDialog: A Multilingual Multi-Turn Medical Dialogue Dataset for Accessible Healthcare"
+  link: http://arxiv.org/abs/2603.24132
+  year: 2026
+  authors: Nigam et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "Mind the Pause: Disfluency-Aware Objective Tuning for Multilingual Speech Correction with LLMs"
+  link: http://arxiv.org/abs/2605.12242
+  year: 2026
+  authors: Kumar et al.
+  venue: arXiv
+  suggestedTask: speech
+- source: arxiv
+  kind: paper
+  title: "MIPIAD: Multilingual Indirect Prompt Injection Attack Defense with Qwen -- TF-IDF Hybrid and Meta-Ensemble Learning"
+  link: http://arxiv.org/abs/2605.07269
+  year: 2026
+  authors: Muhtadi et al.
+  venue: arXiv
+  suggestedTask: qa
+- source: arxiv
+  kind: paper
+  title: "MixSarc: A Bangla-English Code-Mixed Corpus for Implicit Meaning Identification"
+  link: http://arxiv.org/abs/2602.21608
+  year: 2026
+  authors: Alam et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: "MultiHaluDet: Multilingual Hallucination Detection via LLM Hidden State Probing"
+  link: http://arxiv.org/abs/2605.24919
+  year: 2026
+  authors: Alvi et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: Multilingual Multi-Label Emotion Classification at Scale with Synthetic Data
+  link: http://arxiv.org/abs/2604.12633
+  year: 2026
+  authors: Borisov et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: Olfactory-Inspired Sparse Combinatorial Coding for Low-Resource Named Entity Recognition
+  link: http://arxiv.org/abs/2606.21895
+  year: 2026
+  authors: Deshpande et al.
+  venue: arXiv
+  suggestedTask: ner
+- source: arxiv
+  kind: paper
+  title: "Oral to Web: Digitizing 'Zero Resource'Languages of Bangladesh"
+  link: http://arxiv.org/abs/2603.05272
+  year: 2026
+  authors: Rashid et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Polite on the Surface, Broken in Practice: A Curated Dataset for Fixing Generation and Register Failures in Low-Resource Bangla Text Generation"
+  link: http://arxiv.org/abs/2605.22487
+  year: 2026
+  authors: Shuvo et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: Reliability Gated Multi-Teacher Distillation for Low Resource Abstractive Summarization
+  link: http://arxiv.org/abs/2604.03192
+  year: 2026
+  authors: Sumit et al.
+  venue: arXiv
+  suggestedTask: summ
+- source: arxiv
+  kind: paper
+  title: "Same Claim, Different Judgment: Benchmarking Scenario-Induced Bias in Multilingual Financial Misinformation Detection"
+  link: http://arxiv.org/abs/2601.05403
+  year: 2026
+  authors: Liu et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: Semantic Grading of Written Answers in Low-Resource Language Bangla Using a Fine-Tuned Lightweight Language Model
+  link: http://arxiv.org/abs/2606.11931
+  year: 2026
+  authors: Farzana et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "SyntaxMind at BLP-2025 Task 1: Leveraging Attention Fusion of CNN and GRU for Hate Speech Detection"
+  link: http://arxiv.org/abs/2601.06306
+  year: 2026
+  authors: Riad et al.
+  venue: arXiv
+  suggestedTask: hate
+- source: arxiv
+  kind: paper
+  title: "Synthesizing the Virtual Advocate: A Multi-Persona Speech Generation Framework for Diverse Linguistic Jurisdictions in Indic Languages"
+  link: http://arxiv.org/abs/2602.11172
+  year: 2026
+  authors: Deroy et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: "Towards Fair and Efficient De-identification: Quantifying the Efficiency and Generalizability of De-identification Approaches"
+  link: http://arxiv.org/abs/2602.15869
+  year: 2026
+  authors: Zambare et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: Towards Visually-Guided Movie Subtitle Translation for Indic Languages
+  link: http://arxiv.org/abs/2605.11993
+  year: 2026
+  authors: Chintada et al.
+  venue: arXiv
+  suggestedTask: sentiment
 - source: acl
   kind: paper
   title: "transformer\\_1376 at SemEval-2026 Task 9: A Multi-Stage Pipeline with Calibrated Ensembles and Lexical Post-Processing for Online Polarization Detection in Bengali"
@@ -19,6 +344,130 @@
   year: 2026
   authors: Saha et al.
   venue: Proceedings of the 20th {I}nternational {W}orkshop on {S}emantic {E}valuation (2026)
+- source: arxiv
+  kind: paper
+  title: "When English Rewrites Local Knowledge: Global Narrative Dominance in Large Language Models"
+  link: http://arxiv.org/abs/2605.30481
+  year: 2026
+  authors: Hasan et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "When Meaning Isn't Literal: Exploring Idiomatic Meaning Across Languages and Modalities"
+  link: http://arxiv.org/abs/2604.10787
+  year: 2026
+  authors: Das et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "When Meaning Travels: A Granular Lens on Hybrid-MoE's Role in Idiomatic Understanding for Language Models"
+  link: http://arxiv.org/abs/2606.01671
+  year: 2026
+  authors: Das et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: Who Brought Easter Eggs to Eid? Auditing Cultural Translation of Math Word Problems Across Diverse Languages and Regions
+  link: http://arxiv.org/abs/2606.11009
+  year: 2026
+  authors: Suchdev et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "XCR-Bench: Benchmarking Cross-Cultural Reasoning in LLMs via Culture-Specific Items and Hall's Triad"
+  link: http://arxiv.org/abs/2601.14063
+  year: 2026
+  authors: Kabir et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: '"When Data is Scarce, Prompt Smarter"... Approaches to Grammatical Error Correction in Low-Resource Settings'
+  link: http://arxiv.org/abs/2511.20120
+  year: 2025
+  authors: De et al.
+  venue: arXiv
+  suggestedTask: pos
+- source: arxiv
+  kind: paper
+  title: A Culturally-diverse Multilingual Multimodal Video Benchmark &amp; Model
+  link: http://arxiv.org/abs/2506.07032
+  year: 2025
+  authors: Shafique et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "A Picture is Worth a Thousand (Correct) Captions: A Vision-Guided Judge-Corrector System for Multimodal Machine Translation"
+  link: http://arxiv.org/abs/2511.07010
+  year: 2025
+  authors: Betala et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: A Structured Dataset of Disease-Symptom Associations to Improve Diagnostic Accuracy
+  link: http://arxiv.org/abs/2506.13610
+  year: 2025
+  authors: Shafi et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "A2TTS: TTS for Low Resource Indian Languages"
+  link: http://arxiv.org/abs/2507.15272
+  year: 2025
+  authors: Bhadoriya et al.
+  venue: arXiv
+  suggestedTask: speech
+- source: arxiv
+  kind: paper
+  title: "Accelerating Bangla NLP Tasks with Automatic Mixed Precision: Resource-Efficient Training Preserving Model Efficacy"
+  link: http://arxiv.org/abs/2512.00829
+  year: 2025
+  authors: Opi et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: Are ASR foundation models generalized enough to capture features of regional dialects for low-resource languages?
+  link: http://arxiv.org/abs/2510.23252
+  year: 2025
+  authors: Dipto et al.
+  venue: arXiv
+  suggestedTask: speech
+- source: arxiv
+  kind: paper
+  title: Automated Python Translation
+  link: http://arxiv.org/abs/2504.11290
+  year: 2025
+  authors: Otten et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Automated Quality Control for Language Documentation: Detecting Phonotactic Inconsistencies in a Kokborok Wordlist"
+  link: http://arxiv.org/abs/2510.21584
+  year: 2025
+  authors: Dam et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "Bangla BERT for Hyperpartisan News Detection: A Semi-Supervised and Explainable AI Approach"
+  link: http://arxiv.org/abs/2507.21242
+  year: 2025
+  authors: Hasan et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "Bangla MedER: Multi-BERT Ensemble Approach for the Recognition of Bangla Medical Entity"
+  link: http://arxiv.org/abs/2512.17769
+  year: 2025
+  authors: Aurpa et al.
+  venue: arXiv
 - source: acl
   kind: paper
   title: "BanglaByT5: Byte-Level Modelling for Bangla"
@@ -26,6 +475,14 @@
   year: 2025
   authors: Bhattacharyya et al.
   venue: "Findings of the Association for Computational Linguistics: EMNLP 2025"
+- source: arxiv
+  kind: paper
+  title: "BharatBBQ: A Multilingual Bias Benchmark for Question Answering in the Indian Context"
+  link: http://arxiv.org/abs/2508.07090
+  year: 2025
+  authors: Tomar et al.
+  venue: arXiv
+  suggestedTask: mt
 - source: acl
   kind: paper
   title: "BiCap: Bangla Image Captioning Using Attention-based Encoder-Decoder Architecture"
@@ -33,6 +490,69 @@
   year: 2025
   authors: Bulbul et al.
   venue: Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)
+- source: arxiv
+  kind: paper
+  title: "BNLI: A Linguistically-Refined Bengali Dataset for Natural Language Inference"
+  link: http://arxiv.org/abs/2511.08813
+  year: 2025
+  authors: Haque et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "BnTTS: Few-Shot Speaker Adaptation in Low-Resource Setting"
+  link: http://arxiv.org/abs/2502.05729
+  year: 2025
+  authors: Basher et al.
+  venue: arXiv
+  suggestedTask: speech
+- source: arxiv
+  kind: paper
+  title: "BTPD: A Multilingual Hand-curated Dataset of Bengali Transnational Political Discourse Across Online Communities"
+  link: http://arxiv.org/abs/2506.06813
+  year: 2025
+  authors: Das et al.
+  venue: arXiv
+  suggestedTask: textcls
+- source: arxiv
+  kind: paper
+  title: "Chitranuvad: Adapting Multi-Lingual LLMs for Multimodal Translation"
+  link: http://arxiv.org/abs/2502.20420
+  year: 2025
+  authors: Khan et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Complexity counts: global and local perspectives on Indo-Aryan numeral systems"
+  link: http://arxiv.org/abs/2505.21510
+  year: 2025
+  authors: Cathcart et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "Confabulations from ACL Publications (CAP): A Dataset for Scientific Hallucination Detection"
+  link: http://arxiv.org/abs/2510.22395
+  year: 2025
+  authors: Gamba et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "CRaFT: An Explanation-Based Framework for Evaluating Cultural Reasoning in Multilingual Language Models"
+  link: http://arxiv.org/abs/2510.14014
+  year: 2025
+  authors: Hossain et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "CrosGrpsABS: Cross-Attention over Syntactic and Semantic Graphs for Aspect-Based Sentiment Analysis in a Low-Resource Language"
+  link: http://arxiv.org/abs/2505.19018
+  year: 2025
+  authors: Hossain et al.
+  venue: arXiv
+  suggestedTask: sentiment
 - source: acl
   kind: paper
   title: "Culturally Aware Content Moderation for Facebook Reels: A Cross-Modal Attention-Based Fusion Model for Bengali Code-Mixed Data"
@@ -40,6 +560,30 @@
   year: 2025
   authors: Labib et al.
   venue: Proceedings of the 5th Conference on Language, Data and Knowledge
+- source: arxiv
+  kind: paper
+  title: Does Language Model Understand Language?
+  link: http://arxiv.org/abs/2509.12459
+  year: 2025
+  authors: Acharjee et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Empowering Bengali Education with AI: Solving Bengali Math Word Problems through Transformer Models"
+  link: http://arxiv.org/abs/2501.02599
+  year: 2025
+  authors: Era et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: End-to-End Speech Translation for Low-Resource Languages Using Weakly Labeled Data
+  link: http://arxiv.org/abs/2506.16251
+  year: 2025
+  authors: Pothula et al.
+  venue: arXiv
+  suggestedTask: mt
 - source: acl
   kind: paper
   title: "Enhancing Textual Understanding: Automated Claim Span Identification in English, Hindi, Bengali, and CodeMix"
@@ -47,6 +591,38 @@
   year: 2025
   authors: Roy et al.
   venue: Proceedings of the 15th International Conference on Recent Advances in Natural Language Processing - Natural Language Processing in the Generative AI Era
+- source: arxiv
+  kind: paper
+  title: "Evaluating Text Style Transfer Evaluation: Are There Any Reliable Metrics?"
+  link: http://arxiv.org/abs/2502.04718
+  year: 2025
+  authors: Mukherjee et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: Exploring Cross-Lingual Knowledge Transfer via Transliteration-Based MLM Fine-Tuning for Critically Low-resource Chakma Language
+  link: http://arxiv.org/abs/2510.09032
+  year: 2025
+  authors: Khisa et al.
+  venue: arXiv
+  suggestedTask: pos
+- source: arxiv
+  kind: paper
+  title: "Faithful Summarization of Consumer Health Queries: A Cross-Lingual Framework with LLMs"
+  link: http://arxiv.org/abs/2511.10768
+  year: 2025
+  authors: Abrar et al.
+  venue: arXiv
+  suggestedTask: ner
+- source: arxiv
+  kind: paper
+  title: "FastPOS: Language-Agnostic Scalable POS Tagging Framework Low-Resource Use Case"
+  link: http://arxiv.org/abs/2512.00745
+  year: 2025
+  authors: Kafi et al.
+  venue: arXiv
+  suggestedTask: pos
 - source: acl
   kind: paper
   title: Form-aware Poetic Generation for Bangla
@@ -54,6 +630,14 @@
   year: 2025
   authors: Amina et al.
   venue: Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)
+- source: arxiv
+  kind: paper
+  title: "From Scarcity to Capability: Empowering Fake News Detection in Low-Resource Languages with LLMs"
+  link: http://arxiv.org/abs/2501.09604
+  year: 2025
+  authors: Shibu et al.
+  venue: arXiv
+  suggestedTask: textcls
 - source: acl
   kind: paper
   title: "GraDeT-HTR: A Resource-Efficient Bengali Handwritten Text Recognition System utilizing Grapheme-based Tokenizer and Decoder-only Transformer"
@@ -61,6 +645,91 @@
   year: 2025
   authors: Hasan et al.
   venue: "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing: System Demonstrations"
+- source: arxiv
+  kind: paper
+  title: "How do datasets, developers, and models affect biases in a low-resourced language?: The Case of the Bengali Language"
+  link: http://arxiv.org/abs/2506.06816
+  year: 2025
+  authors: Das et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: How Effectively Can BERT Models Interpret Context and Detect Bengali Communal Violent Text?
+  link: http://arxiv.org/abs/2506.19831
+  year: 2025
+  authors: Khondoker et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "How News Feels: Understanding Affective Bias in Multilingual Headlines for Human-Centered Media Design"
+  link: http://arxiv.org/abs/2510.17252
+  year: 2025
+  authors: Ameen et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: Hybrid Machine Learning Model for Detecting Bangla Smishing Text Using BERT and Character-Level CNN
+  link: http://arxiv.org/abs/2502.01518
+  year: 2025
+  authors: Tanbhir et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "IndicGEC: Powerful Models, or a Measurement Mirage?"
+  link: http://arxiv.org/abs/2511.15260
+  year: 2025
+  authors: Vajjala et al.
+  venue: arXiv
+  suggestedTask: summ
+- source: arxiv
+  kind: paper
+  title: "IndicMMLU-Pro: Benchmarking Indic Large Language Models on Multi-Task Language Understanding"
+  link: http://arxiv.org/abs/2501.15747
+  year: 2025
+  authors: KJ et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "Integrating Linguistics and AI: Morphological Analysis and Corpus development of Endangered Toto Language of West Bengal"
+  link: http://arxiv.org/abs/2510.22629
+  year: 2025
+  authors: Guha et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: Is Lying Only Sinful in Islam? Exploring Religious Bias in Multilingual Large Language Models Across Major Religions
+  link: http://arxiv.org/abs/2512.03943
+  year: 2025
+  authors: Hossain et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "L3Cube-IndicHeadline-ID: A Dataset for Headline Identification and Semantic Evaluation in Low-Resource Indian Languages"
+  link: http://arxiv.org/abs/2509.02503
+  year: 2025
+  authors: Tanksale et al.
+  venue: arXiv
+  suggestedTask: qa
+- source: arxiv
+  kind: paper
+  title: "Learning More with Less: Self-Supervised Approaches for Low-Resource Speech Emotion Recognition"
+  link: http://arxiv.org/abs/2506.02059
+  year: 2025
+  authors: Gong et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: "LegalRAG: A Hybrid RAG System for Multilingual Legal Information Retrieval"
+  link: http://arxiv.org/abs/2504.16121
+  year: 2025
+  authors: Kabir et al.
+  venue: arXiv
 - source: acl
   kind: paper
   title: "Leveraging Machine-Generated Data for Joint Intent Detection and Slot Filling in Bangla: A Resource-Efficient Approach"
@@ -68,6 +737,29 @@
   year: 2025
   authors: undefined et al.
   venue: Proceedings of the First Workshop on Challenges in Processing South Asian Languages (CHiPSAL 2025)
+- source: arxiv
+  kind: paper
+  title: Leveraging the Potential of Prompt Engineering for Hate Speech Detection in Low-Resource Languages
+  link: http://arxiv.org/abs/2506.23930
+  year: 2025
+  authors: Prome et al.
+  venue: arXiv
+  suggestedTask: hate
+- source: arxiv
+  kind: paper
+  title: "Lexical and Statistical Analysis of Bangla Newspaper and Literature: A Corpus-Driven Study on Diversity, Readability, and NLP Adaptation"
+  link: http://arxiv.org/abs/2601.06041
+  year: 2025
+  authors: Bhattacharyya et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "LLMs for Low-Resource Dialect Translation Using Context-Aware Prompting: A Case Study on Sylheti"
+  link: http://arxiv.org/abs/2511.21761
+  year: 2025
+  authors: Prama et al.
+  venue: arXiv
+  suggestedTask: mt
 - source: acl
   kind: paper
   title: "LP-FT-LoRA: A Three-Stage PEFT Framework for Efficient Domain Adaptation in Bangla NLP Tasks"
@@ -75,6 +767,62 @@
   year: 2025
   authors: Tomal et al.
   venue: Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)
+- source: arxiv
+  kind: paper
+  title: "MathMist: A Parallel Multilingual Benchmark Dataset for Mathematical Problem Solving and Reasoning"
+  link: http://arxiv.org/abs/2510.14305
+  year: 2025
+  authors: Sobhani et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "MKA: Leveraging Cross-Lingual Consensus for Model Abstention"
+  link: http://arxiv.org/abs/2503.23687
+  year: 2025
+  authors: Duwal et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "NormEval: A Unified Multi-Metric Framework for Evaluating Semantic Fidelity in Text Normalization"
+  link: http://arxiv.org/abs/2511.20409
+  year: 2025
+  authors: Kafi et al.
+  venue: arXiv
+  suggestedTask: pos
+- source: arxiv
+  kind: paper
+  title: Ranking of Bangla Word Graph using Graph-based Ranking Algorithms
+  link: http://arxiv.org/abs/2509.01011
+  year: 2025
+  authors: Rafiuddin et al.
+  venue: arXiv
+  suggestedTask: summ
+- source: arxiv
+  kind: paper
+  title: Reconstructing Syllable Sequences in Abugida Scripts with Incomplete Inputs
+  link: http://arxiv.org/abs/2505.11008
+  year: 2025
+  authors: Thu et al.
+  venue: arXiv
+  suggestedTask: pos
+- source: arxiv
+  kind: paper
+  title: "Regional Tiny Stories: Using Small Models to Compare Language Learning and Tokenizer Performance"
+  link: http://arxiv.org/abs/2504.07989
+  year: 2025
+  authors: Patil et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Restoring Rhythm: Punctuation Restoration Using Transformer Models for Bangla, A Low-Resource Language"
+  link: http://arxiv.org/abs/2507.18448
+  year: 2025
+  authors: Mamun et al.
+  venue: arXiv
+  suggestedTask: speech
 - source: acl
   kind: paper
   title: "SOMAJGYAAN: A Dataset for Evaluating LLMs on Bangla Culture, Social Knowledge, and Low-Resource Language Adaptation"
@@ -82,6 +830,38 @@
   year: 2025
   authors: Shifa et al.
   venue: Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics
+- source: arxiv
+  kind: paper
+  title: "SpeechT: Findings of the First Mentorship in Speech Translation"
+  link: http://arxiv.org/abs/2502.12050
+  year: 2025
+  authors: Moslem et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "SwasthLLM: a Unified Cross-Lingual, Multi-Task, and Meta-Learning Zero-Shot Framework for Medical Diagnosis Using Contrastive Representations"
+  link: http://arxiv.org/abs/2509.20567
+  year: 2025
+  authors: Sar et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "The Riddle of Reflection: Evaluating Reasoning and Self-Awareness in Multilingual LLMs using Indian Riddles"
+  link: http://arxiv.org/abs/2511.00960
+  year: 2025
+  authors: M et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "Tokenization Matters: Improving Zero-Shot NER for Indic Languages"
+  link: http://arxiv.org/abs/2504.16977
+  year: 2025
+  authors: Pattnayak et al.
+  venue: arXiv
+  suggestedTask: ner
 - source: acl
   kind: paper
   title: Too Late to Train, Too Early To Use? A Study on Necessity and Viability of Low-Resource Bengali LLMs
@@ -89,6 +869,106 @@
   year: 2025
   authors: Mahfuz et al.
   venue: Proceedings of the 31st International Conference on Computational Linguistics
+- source: arxiv
+  kind: paper
+  title: Transformer-Driven Triple Fusion Framework for Enhanced Multimodal Author Intent Classification in Low-Resource Bangla
+  link: http://arxiv.org/abs/2511.23287
+  year: 2025
+  authors: Islam et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: Uncertainty-aware Semi-supervised Ensemble Teacher Framework for Multilingual Depression Detection
+  link: http://arxiv.org/abs/2512.24772
+  year: 2025
+  authors: Rehman et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "Understanding Public Perception of Crime in Bangladesh: A Transformer-Based Approach with Explainability"
+  link: http://arxiv.org/abs/2507.21234
+  year: 2025
+  authors: Hassan et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: Utilizing Multilingual Encoders to Improve Large Language Models for Low-Resource Languages
+  link: http://arxiv.org/abs/2508.09091
+  year: 2025
+  authors: Puranegedara et al.
+  venue: arXiv
+  suggestedTask: textcls
+- source: arxiv
+  kind: paper
+  title: A Novel Multi-Stage Prompting Approach for Language Agnostic MCQ Generation using GPT
+  link: http://arxiv.org/abs/2401.07098
+  year: 2024
+  authors: Maity et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: A Study on Scaling Up Multilingual News Framing Analysis
+  link: http://arxiv.org/abs/2404.01481
+  year: 2024
+  authors: Akter et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: A Survey on Importance of Homophones Spelling Correction Model for Khmer Authors
+  link: http://arxiv.org/abs/2411.10477
+  year: 2024
+  authors: Born et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: A Three-Pronged Approach to Cross-Lingual Adaptation with Multilingual LLMs
+  link: http://arxiv.org/abs/2406.17377
+  year: 2024
+  authors: Singh et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "AI Adoption to Combat Financial Crime: Study on Natural Language Processing in Adverse Media Screening of Financial Services in English and Bangla multilingual interpretation"
+  link: http://arxiv.org/abs/2412.12171
+  year: 2024
+  authors: Roy et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "Align before Attend: Aligning Visual and Textual Features for Multimodal Hateful Content Detection"
+  link: http://arxiv.org/abs/2402.09738
+  year: 2024
+  authors: Hossain et al.
+  venue: arXiv
+  suggestedTask: hate
+- source: arxiv
+  kind: paper
+  title: Analysis and Detection of Multilingual Hate Speech Using Transformer Based Deep Learning
+  link: http://arxiv.org/abs/2401.11021
+  year: 2024
+  authors: Das et al.
+  venue: arXiv
+  suggestedTask: hate
+- source: arxiv
+  kind: paper
+  title: Are Large Language Models Actually Good at Text Style Transfer?
+  link: http://arxiv.org/abs/2406.05885
+  year: 2024
+  authors: Mukherjee et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: Bangla Grammatical Error Detection Leveraging Transformer-based Token Classification
+  link: http://arxiv.org/abs/2411.08344
+  year: 2024
+  authors: Islam et al.
+  venue: arXiv
 - source: acl
   kind: paper
   title: "BanglaAutoKG: Automatic Bangla Knowledge Graph Construction with Semantic Neural Graph Filtering"
@@ -96,6 +976,30 @@
   year: 2024
   authors: Wasi et al.
   venue: Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)
+- source: arxiv
+  kind: paper
+  title: "BanglaEmbed: Efficient Sentence Embedding Models for a Low-Resource Language Using Cross-Lingual Distillation Techniques"
+  link: http://arxiv.org/abs/2411.15270
+  year: 2024
+  authors: Kabir et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "BanglishRev: A Large-Scale Bangla-English and Code-mixed Dataset of Product Reviews in E-Commerce"
+  link: http://arxiv.org/abs/2412.13161
+  year: 2024
+  authors: Shamael et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: "BDA: Bangla Text Data Augmentation Framework"
+  link: http://arxiv.org/abs/2412.08753
+  year: 2024
+  authors: Tariquzzaman et al.
+  venue: arXiv
+  suggestedTask: textcls
 - source: acl
   kind: paper
   title: "BengaliLCP: A Dataset for Lexical Complexity Prediction in the Bengali Texts"
@@ -103,6 +1007,280 @@
   year: 2024
   authors: Ayman et al.
   venue: Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024)
+- source: arxiv
+  kind: paper
+  title: "Better to Ask in English: Evaluation of Large Language Models on English, Low-resource and Cross-Lingual Settings"
+  link: http://arxiv.org/abs/2410.13153
+  year: 2024
+  authors: Dey et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "BhashaVerse : Translation Ecosystem for Indian Subcontinent Languages"
+  link: http://arxiv.org/abs/2412.04351
+  year: 2024
+  authors: Mujadia et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Brotherhood at WMT 2024: Leveraging LLM-Generated Contextual Conversations for Cross-Lingual Image Captioning"
+  link: http://arxiv.org/abs/2409.15052
+  year: 2024
+  authors: Betala et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "ChakmaNMT: Machine Translation for a Low-Resource and Endangered Language via Transliteration"
+  link: http://arxiv.org/abs/2410.10219
+  year: 2024
+  authors: Chakma et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Code-Mixer Ya Nahi: Novel Approaches to Measuring Multilingual LLMs' Code-Mixing Capabilities"
+  link: http://arxiv.org/abs/2410.11079
+  year: 2024
+  authors: Gupta et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "CoSTA: Code-Switched Speech Translation using Aligned Speech-Text Interleaving"
+  link: http://arxiv.org/abs/2406.10993
+  year: 2024
+  authors: Shankar et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: Cross-lingual Editing in Multilingual Language Models
+  link: http://arxiv.org/abs/2401.10521
+  year: 2024
+  authors: Beniwal et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "Deciphering Hate: Identifying Hateful Memes and Their Targets"
+  link: http://arxiv.org/abs/2403.10829
+  year: 2024
+  authors: Hossain et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: "Detecting Racist Text in Bengali: An Ensemble Deep Learning Framework"
+  link: http://arxiv.org/abs/2401.16748
+  year: 2024
+  authors: Saruar et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "Dhoroni: Exploring Bengali Climate Change and Environmental Views with a Multi-Perspective News Dataset and Natural Language Processing"
+  link: http://arxiv.org/abs/2410.17225
+  year: 2024
+  authors: Wasi et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: Do Large Language Models Speak All Languages Equally? A Comparative Study in Low-Resource Settings
+  link: http://arxiv.org/abs/2408.02237
+  year: 2024
+  authors: Hasan et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: Enhancing Bangla Language Next Word Prediction and Sentence Completion through Extended RNN with Bi-LSTM Model On N-gram Language
+  link: http://arxiv.org/abs/2405.01873
+  year: 2024
+  authors: Islam et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "Enhancing Depressive Post Detection in Bangla: A Comparative Study of TF-IDF, BERT and FastText Embeddings"
+  link: http://arxiv.org/abs/2407.09187
+  year: 2024
+  authors: Sazan et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: Evaluating and Mitigating Linguistic Discrimination in Large Language Models
+  link: http://arxiv.org/abs/2404.18534
+  year: 2024
+  authors: Dong et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: Exploring the Capabilities of Prompted Large Language Models in Educational and Assessment Applications
+  link: http://arxiv.org/abs/2405.11579
+  year: 2024
+  authors: Maity et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "GeniL: A Multilingual Dataset on Generalizing Language"
+  link: http://arxiv.org/abs/2404.05866
+  year: 2024
+  authors: Davani et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "HateGPT: Unleashing GPT-3.5 Turbo to Combat Hate Speech on X"
+  link: http://arxiv.org/abs/2411.09214
+  year: 2024
+  authors: Deroy et al.
+  venue: arXiv
+  suggestedTask: hate
+- source: arxiv
+  kind: paper
+  title: How effective is Multi-source pivoting for Translation of Low Resource Indian Languages?
+  link: http://arxiv.org/abs/2406.13332
+  year: 2024
+  authors: Gaikwad et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "L3Cube-IndicNews: News-based Short Text and Long Document Classification Datasets in Indic Languages"
+  link: http://arxiv.org/abs/2401.02254
+  year: 2024
+  authors: Mirashi et al.
+  venue: arXiv
+  suggestedTask: textcls
+- source: arxiv
+  kind: paper
+  title: Machine Translation Advancements of Low-Resource Indian Languages by Transfer Learning
+  link: http://arxiv.org/abs/2409.15879
+  year: 2024
+  authors: Wei et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Mapping Violence: Developing an Extensive Framework to Build a Bangla Sectarian Expression Dataset from Social Media Interactions"
+  link: http://arxiv.org/abs/2404.11752
+  year: 2024
+  authors: Tasnim et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: Misgendering and Assuming Gender in Machine Translation when Working with Low-Resource Languages
+  link: http://arxiv.org/abs/2401.13165
+  year: 2024
+  authors: Ghosh et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "MMCFND: Multimodal Multilingual Caption-aware Fake News Detection for Low-resource Indic Languages"
+  link: http://arxiv.org/abs/2410.10407
+  year: 2024
+  authors: Bansal et al.
+  venue: arXiv
+  suggestedTask: textcls
+- source: arxiv
+  kind: paper
+  title: Multilingual Controlled Generation And Gold-Standard-Agnostic Evaluation of Code-Mixed Sentences
+  link: http://arxiv.org/abs/2410.10580
+  year: 2024
+  authors: Gupta et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Multilingual Text Style Transfer: Datasets &amp; Models for Indian Languages"
+  link: http://arxiv.org/abs/2405.20805
+  year: 2024
+  authors: Mukherjee et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: "Optical Text Recognition in Nepali and Bengali: A Transformer-based Approach"
+  link: http://arxiv.org/abs/2404.02375
+  year: 2024
+  authors: Hasan et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "PALO: A Polyglot Large Multimodal Model for 5B People"
+  link: http://arxiv.org/abs/2402.14818
+  year: 2024
+  authors: Maaz et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Paramanu: Compact and Competitive Monolingual Language Models for Low-Resource Morphologically Rich Indian Languages"
+  link: http://arxiv.org/abs/2401.18034
+  year: 2024
+  authors: Niyogi et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "PARIKSHA: A Large-Scale Investigation of Human-LLM Evaluator Agreement on Multilingual and Multi-Cultural Data"
+  link: http://arxiv.org/abs/2406.15053
+  year: 2024
+  authors: Watts et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: Predicting positive transfer for improved low-resource speech recognition using acoustic pseudo-tokens
+  link: http://arxiv.org/abs/2402.02302
+  year: 2024
+  authors: San et al.
+  venue: arXiv
+  suggestedTask: speech
+- source: arxiv
+  kind: paper
+  title: "Question-Answering System for Bangla: Fine-tuning BERT-Bangla for a Closed Domain"
+  link: http://arxiv.org/abs/2410.03923
+  year: 2024
+  authors: Roy et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "Rasa: Building Expressive Speech Synthesis Systems for Indian Languages in Low-resource Settings"
+  link: http://arxiv.org/abs/2407.14056
+  year: 2024
+  authors: Varadhan et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: "RetrieveGPT: Merging Prompts and Mathematical Models for Enhanced Code-Mixed Information Retrieval"
+  link: http://arxiv.org/abs/2411.04752
+  year: 2024
+  authors: Deroy et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: Table Question Answering for Low-resourced Indic Languages
+  link: http://arxiv.org/abs/2410.03576
+  year: 2024
+  authors: Pal et al.
+  venue: arXiv
+  suggestedTask: qa
+- source: arxiv
+  kind: paper
+  title: Textless NLP -- Zero Resource Challenge with Low Resource Compute
+  link: http://arxiv.org/abs/2409.19015
+  year: 2024
+  authors: Ramadass et al.
+  venue: arXiv
+  suggestedTask: speech
 - source: acl
   kind: paper
   title: The Bangla/Bengali Seed Dataset Submission to the WMT24 Open Language Data Initiative Shared Task
@@ -110,6 +1288,30 @@
   year: 2024
   authors: Ahmed et al.
   venue: Proceedings of the Ninth Conference on Machine Translation
+- source: arxiv
+  kind: paper
+  title: "Towards Santali Linguistic Inclusion: Building the First Santali-to-English Translation Model using mT5 Transformer and Data Augmentation"
+  link: http://arxiv.org/abs/2411.19726
+  year: 2024
+  authors: Billah et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: '"A Little is Enough": Few-Shot Quality Estimation based Corpus Filtering improves Machine Translation'
+  link: http://arxiv.org/abs/2306.03507
+  year: 2023
+  authors: Batheja et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: A Trustable LSTM-Autoencoder Network for Cyberbullying Detection on Social Media Using Synthetic Data
+  link: http://arxiv.org/abs/2308.09722
+  year: 2023
+  authors: Akter et al.
+  venue: arXiv
+  suggestedTask: mt
 - source: acl
   kind: paper
   title: Advancing Bangla Punctuation Restoration by a Monolingual Transformer-Based Method and a Large-Scale Corpus
@@ -117,6 +1319,29 @@
   year: 2023
   authors: Bijoy et al.
   venue: Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)
+- source: arxiv
+  kind: paper
+  title: Adversarial Training For Low-Resource Disfluency Correction
+  link: http://arxiv.org/abs/2306.06384
+  year: 2023
+  authors: Bhat et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "Antarlekhaka: A Comprehensive Tool for Multi-task Natural Language Annotation"
+  link: http://arxiv.org/abs/2310.07826
+  year: 2023
+  authors: Terdalkar et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: Arabic Sentiment Analysis with Noisy Deep Explainable Model
+  link: http://arxiv.org/abs/2309.13731
+  year: 2023
+  authors: Atabuzzaman et al.
+  venue: arXiv
+  suggestedTask: sentiment
 - source: acl
   kind: paper
   title: "BaTEClaCor: A Novel Dataset for Bangla Text Error Classification and Correction"
@@ -124,6 +1349,14 @@
   year: 2023
   authors: Oshin et al.
   venue: Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)
+- source: arxiv
+  kind: paper
+  title: "BenCoref: A Multi-Domain Dataset of Nominal Phrases and Pronominal Reference Annotations"
+  link: http://arxiv.org/abs/2304.03682
+  year: 2023
+  authors: Rohan et al.
+  venue: arXiv
+  suggestedTask: pos
 - source: acl
   kind: paper
   title: "BSpell: A CNN-Blended BERT Based Bangla Spell Checker"
@@ -131,6 +1364,14 @@
   year: 2023
   authors: Rahman et al.
   venue: Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)
+- source: arxiv
+  kind: paper
+  title: "Cyberbullying Detection for Low-resource Languages and Dialects: Review of the State of the Art"
+  link: http://arxiv.org/abs/2308.15745
+  year: 2023
+  authors: Mahmud et al.
+  venue: arXiv
+  suggestedTask: hate
 - source: acl
   kind: paper
   title: "Dy-poThon: A Bangla Sentence-Learning System for Children with Dyslexia"
@@ -138,6 +1379,13 @@
   year: 2023
   authors: Podder et al.
   venue: Proceedings of the 20th International Conference on Natural Language Processing (ICON)
+- source: arxiv
+  kind: paper
+  title: Formal concept analysis for evaluating intrinsic dimension of a natural language
+  link: http://arxiv.org/abs/2311.10862
+  year: 2023
+  authors: Kuznetsov et al.
+  venue: arXiv
 - source: acl
   kind: paper
   title: "Gold Standard Bangla OCR Dataset: An In-Depth Look at Data Preprocessing and Annotation Processes"
@@ -145,6 +1393,61 @@
   year: 2023
   authors: Ali et al.
   venue: "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing: Industry Track"
+- source: arxiv
+  kind: paper
+  title: Harnessing Pre-Trained Sentence Transformers for Offensive Language Detection in Indian Languages
+  link: http://arxiv.org/abs/2310.02249
+  year: 2023
+  authors: Joshi et al.
+  venue: arXiv
+  suggestedTask: hate
+- source: arxiv
+  kind: paper
+  title: "Hate Speech and Offensive Content Detection in Indo-Aryan Languages: A Battle of LSTM and Transformers"
+  link: http://arxiv.org/abs/2312.05671
+  year: 2023
+  authors: Narayan et al.
+  venue: arXiv
+  suggestedTask: hate
+- source: arxiv
+  kind: paper
+  title: How Transferable are Attribute Controllers on Pretrained Multilingual Translation Models?
+  link: http://arxiv.org/abs/2309.08565
+  year: 2023
+  authors: Liu et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: Hybrid Quantum-Classical Machine Learning for Sentiment Analysis
+  link: http://arxiv.org/abs/2310.10672
+  year: 2023
+  authors: Masum et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: "Impact of Visual Context on Noisy Multimodal NMT: An Empirical Study for English to Indian Languages"
+  link: http://arxiv.org/abs/2308.16075
+  year: 2023
+  authors: Gain et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: In What Languages are Generative Language Models the Most Formal? Analyzing Formality Distribution across Languages
+  link: http://arxiv.org/abs/2302.12299
+  year: 2023
+  authors: Ersoy et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "IndicIRSuite: Multilingual Dataset and Neural Information Models for Indian Languages"
+  link: http://arxiv.org/abs/2312.09508
+  year: 2023
+  authors: Haq et al.
+  venue: arXiv
+  suggestedTask: mt
 - source: acl
   kind: paper
   title: "Intent Detection and Slot Filling for Home Assistants: Dataset and Analysis for Bangla and Sylheti"
@@ -152,6 +1455,37 @@
   year: 2023
   authors: Sakib et al.
   venue: Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)
+- source: arxiv
+  kind: paper
+  title: Intent Identification and Entity Extraction for Healthcare Queries in Indic Languages
+  link: http://arxiv.org/abs/2302.09685
+  year: 2023
+  authors: Mullick et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: Investigating Lexical Sharing in Multilingual Machine Translation for Indian Languages
+  link: http://arxiv.org/abs/2305.03207
+  year: 2023
+  authors: Sannigrahi et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "L3Cube-IndicSBERT: A simple approach for learning cross-lingual sentence representations using multilingual BERT"
+  link: http://arxiv.org/abs/2304.11434
+  year: 2023
+  authors: Deode et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "LLM-RM at SemEval-2023 Task 2: Multilingual Complex NER using XLM-RoBERTa"
+  link: http://arxiv.org/abs/2305.03300
+  year: 2023
+  authors: Mehta et al.
+  venue: arXiv
+  suggestedTask: ner
 - source: acl
   kind: paper
   title: "Low-Resource Text Style Transfer for Bangla: Data \\& Models"
@@ -159,6 +1493,46 @@
   year: 2023
   authors: Mukherjee et al.
   venue: Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)
+- source: arxiv
+  kind: paper
+  title: "Mavericks at BLP-2023 Task 1: Ensemble-based Approach Using Language Models for Violence Inciting Text Detection"
+  link: http://arxiv.org/abs/2311.18778
+  year: 2023
+  authors: Page et al.
+  venue: arXiv
+  suggestedTask: hate
+- source: arxiv
+  kind: paper
+  title: "Mixed-Distil-BERT: Code-mixed Language Modeling for Bangla, English, and Hindi"
+  link: http://arxiv.org/abs/2309.10272
+  year: 2023
+  authors: Raihan et al.
+  venue: arXiv
+  suggestedTask: textcls
+- source: arxiv
+  kind: paper
+  title: Model Adaptation for ASR in low-resource Indian Languages
+  link: http://arxiv.org/abs/2307.07948
+  year: 2023
+  authors: Singh et al.
+  venue: arXiv
+  suggestedTask: speech
+- source: arxiv
+  kind: paper
+  title: Mood Classification of Bangla Songs Based on Lyrics
+  link: http://arxiv.org/abs/2307.10314
+  year: 2023
+  authors: Mahajebin et al.
+  venue: arXiv
+  suggestedTask: sentiment
+- source: arxiv
+  kind: paper
+  title: "Mukhyansh: A Headline Generation Dataset for Indic Languages"
+  link: http://arxiv.org/abs/2311.17743
+  year: 2023
+  authors: Madasu et al.
+  venue: arXiv
+  suggestedTask: summ
 - source: acl
   kind: paper
   title: On Evaluation of Bangla Word Analogies
@@ -173,6 +1547,22 @@
   year: 2023
   authors: Guo et al.
   venue: Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)
+- source: arxiv
+  kind: paper
+  title: "SemEval-2023 Task 2: Fine-grained Multilingual Named Entity Recognition (MultiCoNER 2)"
+  link: http://arxiv.org/abs/2305.06586
+  year: 2023
+  authors: Fetahu et al.
+  venue: arXiv
+  suggestedTask: ner
+- source: arxiv
+  kind: paper
+  title: "SPRING-INX: A Multilingual Indian Language Speech Corpus by SPRING Lab, IIT Madras"
+  link: http://arxiv.org/abs/2310.14654
+  year: 2023
+  authors: R et al.
+  venue: arXiv
+  suggestedTask: mt
 - source: acl
   kind: paper
   title: "SynthNID: Synthetic Data to Improve End-to-end Bangla Document Key Information Extraction"
@@ -180,6 +1570,22 @@
   year: 2023
   authors: Monsur et al.
   venue: Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)
+- source: arxiv
+  kind: paper
+  title: Transsion TSUP's speech recognition system for ASRU 2023 MADASR Challenge
+  link: http://arxiv.org/abs/2307.11778
+  year: 2023
+  authors: Li et al.
+  venue: arXiv
+  suggestedTask: speech
+- source: arxiv
+  kind: paper
+  title: Understanding Social Structures from Contemporary Literary Fiction using Character Interaction Graph -- Half Century Chronology of Influential Bengali Writers
+  link: http://arxiv.org/abs/2310.16968
+  year: 2023
+  authors: Tripto et al.
+  venue: arXiv
+  suggestedTask: sentiment
 - source: acl
   kind: paper
   title: "VACASPATI: A Diverse Corpus of Bangla Literature"
@@ -194,6 +1600,21 @@
   year: 2023
   authors: Hasan et al.
   venue: Proceedings of the Workshop on Multimodal, Multilingual Natural Language Generation and Multilingual WebNLG Challenge (MM-NLG 2023)
+- source: arxiv
+  kind: paper
+  title: Vulgar Remarks Detection in Chittagonian Dialect of Bangla
+  link: http://arxiv.org/abs/2308.15448
+  year: 2023
+  authors: Mahmud et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: A Comprehensive Understanding of Code-mixed Language Semantics using Hierarchical Transformer
+  link: http://arxiv.org/abs/2204.12753
+  year: 2022
+  authors: Sengupta et al.
+  venue: arXiv
+  suggestedTask: pos
 - source: acl
   kind: paper
   title: "BAN-Cap: A Multi-Purpose English-Bangla Image Descriptions Dataset"
@@ -208,6 +1629,52 @@
   year: 2022
   authors: Rahman et al.
   venue: "Proceedings of the 2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 12th International Joint Conference on Natural Language Processing (Volume 1: Long Papers)"
+- source: arxiv
+  kind: paper
+  title: "DPCSpell: A Transformer-based Detector-Purificator-Corrector Framework for Spelling Error Correction of Bangla and Resource Scarce Indic Languages"
+  link: http://arxiv.org/abs/2211.03730
+  year: 2022
+  authors: Bijoy et al.
+  venue: arXiv
+  suggestedTask: textcls
+- source: arxiv
+  kind: paper
+  title: "EPIK: Eliminating multi-model Pipelines with Knowledge-distillation"
+  link: http://arxiv.org/abs/2211.14920
+  year: 2022
+  authors: Laddagiri et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: Incongruity Detection between Bangla News Headline and Body Content through Graph Neural Network
+  link: http://arxiv.org/abs/2211.07709
+  year: 2022
+  authors: Palash et al.
+  venue: arXiv
+- source: arxiv
+  kind: paper
+  title: "L3Cube-HindBERT and DevBERT: Pre-Trained BERT Transformer models for Devanagari based Hindi and Marathi Languages"
+  link: http://arxiv.org/abs/2211.11418
+  year: 2022
+  authors: Joshi et al.
+  venue: arXiv
+  suggestedTask: ner
+- source: arxiv
+  kind: paper
+  title: Language Models are Multilingual Chain-of-Thought Reasoners
+  link: http://arxiv.org/abs/2210.03057
+  year: 2022
+  authors: Shi et al.
+  venue: arXiv
+  suggestedTask: mt
+- source: arxiv
+  kind: paper
+  title: "MATra: A Multilingual Attentive Transliteration System for Indian Scripts"
+  link: http://arxiv.org/abs/2208.10801
+  year: 2022
+  authors: Raj et al.
+  venue: arXiv
+  suggestedTask: mt
 - source: acl
   kind: paper
   title: Revisiting Anwesha:Enhancing Personalised and Natural Search in Bangla
@@ -222,6 +1689,14 @@
   year: 2022
   authors: Monsur et al.
   venue: Proceedings of the Thirteenth Language Resources and Evaluation Conference
+- source: arxiv
+  kind: paper
+  title: Silo NLP's Participation at WAT2022
+  link: http://arxiv.org/abs/2208.01296
+  year: 2022
+  authors: Parida et al.
+  venue: arXiv
+  suggestedTask: mt
 - source: acl
   kind: paper
   title: Towards Bengali WordNet Enrichment using Knowledge Graph Completion Techniques
@@ -377,3 +1852,2036 @@
   year: 1994
   authors: Nomura et al.
   venue: "{COLING} 1994 Volume 1: The 15th {I}nternational {C}onference on {C}omputational {L}inguistics"
+- source: huggingface
+  kind: dataset
+  title: aakkaasshh/vaigai-dataset
+  link: https://huggingface.co/datasets/aakkaasshh/vaigai-dataset
+  note: 394 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: abdoelsayed/reranking-datasets
+  link: https://huggingface.co/datasets/abdoelsayed/reranking-datasets
+  note: 511 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: abdoelsayed/reranking-datasets-light
+  link: https://huggingface.co/datasets/abdoelsayed/reranking-datasets-light
+  note: 521 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: adithya7/xlel_wd
+  link: https://huggingface.co/datasets/adithya7/xlel_wd
+  note: 267 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: adithya7/xlel_wd_dictionary
+  link: https://huggingface.co/datasets/adithya7/xlel_wd_dictionary
+  note: 371 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: agentlans/allenai-WildChat
+  link: https://huggingface.co/datasets/agentlans/allenai-WildChat
+  note: 202 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: agentlans/lightblue-tagengo-gpt4
+  link: https://huggingface.co/datasets/agentlans/lightblue-tagengo-gpt4
+  suggestedTask: llm
+  note: 379 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: agentlans/LinguaNova
+  link: https://huggingface.co/datasets/agentlans/LinguaNova
+  note: 360 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: agentlans/multilingual-sentences
+  link: https://huggingface.co/datasets/agentlans/multilingual-sentences
+  note: 307 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: agentlans/multilingual-text
+  link: https://huggingface.co/datasets/agentlans/multilingual-text
+  note: 480 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ahelk/ccaligned_multilingual
+  link: https://huggingface.co/datasets/ahelk/ccaligned_multilingual
+  note: 192 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ahmed-farhanur-rashid/bn-foundational-pretrain-corpus
+  link: https://huggingface.co/datasets/ahmed-farhanur-rashid/bn-foundational-pretrain-corpus
+  note: 439 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ahmedheakl/docatlas_instruct
+  link: https://huggingface.co/datasets/ahmedheakl/docatlas_instruct
+  note: 4423 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai-enthusiasm-community/CC3M-35L
+  link: https://huggingface.co/datasets/ai-enthusiasm-community/CC3M-35L
+  note: 844 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai-enthusiasm-community/COCO-35L
+  link: https://huggingface.co/datasets/ai-enthusiasm-community/COCO-35L
+  note: 750 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IN22-Conv
+  link: https://huggingface.co/datasets/ai4bharat/IN22-Conv
+  note: 222 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IN22-Gen
+  link: https://huggingface.co/datasets/ai4bharat/IN22-Gen
+  note: 426 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/indic_glue
+  link: https://huggingface.co/datasets/ai4bharat/indic_glue
+  note: 4687 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/indic-align
+  link: https://huggingface.co/datasets/ai4bharat/indic-align
+  note: 761 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IndicContextEval
+  link: https://huggingface.co/datasets/ai4bharat/IndicContextEval
+  note: 4506 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IndicCOPA
+  link: https://huggingface.co/datasets/ai4bharat/IndicCOPA
+  note: 309 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IndicHeadlineGeneration
+  link: https://huggingface.co/datasets/ai4bharat/IndicHeadlineGeneration
+  note: 3547 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IndicParaphrase
+  link: https://huggingface.co/datasets/ai4bharat/IndicParaphrase
+  suggestedTask: mt
+  note: 3394 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IndicQA
+  link: https://huggingface.co/datasets/ai4bharat/IndicQA
+  note: 1094 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IndicQuestionGeneration
+  link: https://huggingface.co/datasets/ai4bharat/IndicQuestionGeneration
+  note: 3757 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IndicSentenceSummarization
+  link: https://huggingface.co/datasets/ai4bharat/IndicSentenceSummarization
+  suggestedTask: summ
+  note: 1726 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IndicSentiment
+  link: https://huggingface.co/datasets/ai4bharat/IndicSentiment
+  suggestedTask: sentiment
+  note: 489 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/indicvoices_r
+  link: https://huggingface.co/datasets/ai4bharat/indicvoices_r
+  suggestedTask: speech
+  note: 9273 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IndicVoices-ST
+  link: https://huggingface.co/datasets/ai4bharat/IndicVoices-ST
+  suggestedTask: speech
+  note: 460 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/IndicWikiBio
+  link: https://huggingface.co/datasets/ai4bharat/IndicWikiBio
+  note: 1064 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/MILU
+  link: https://huggingface.co/datasets/ai4bharat/MILU
+  note: 517 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/naamapadam
+  link: https://huggingface.co/datasets/ai4bharat/naamapadam
+  note: 824 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/NPTEL
+  link: https://huggingface.co/datasets/ai4bharat/NPTEL
+  note: 432 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/Pralekha
+  link: https://huggingface.co/datasets/ai4bharat/Pralekha
+  note: 191 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/Rasa
+  link: https://huggingface.co/datasets/ai4bharat/Rasa
+  note: 6409 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/samanantar
+  link: https://huggingface.co/datasets/ai4bharat/samanantar
+  note: 1950 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ai4bharat/sangraha
+  link: https://huggingface.co/datasets/ai4bharat/sangraha
+  note: 8029 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: aiana94/polynews
+  link: https://huggingface.co/datasets/aiana94/polynews
+  note: 247 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: aiana94/polynews-parallel
+  link: https://huggingface.co/datasets/aiana94/polynews-parallel
+  note: 973 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: AiHazz/wikipedia
+  link: https://huggingface.co/datasets/AiHazz/wikipedia
+  note: 541 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Aisha/BAAD16
+  link: https://huggingface.co/datasets/Aisha/BAAD16
+  note: 210 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: akahana/wikipedia-full
+  link: https://huggingface.co/datasets/akahana/wikipedia-full
+  note: 506 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: akariasai/xor_tydi_qa
+  link: https://huggingface.co/datasets/akariasai/xor_tydi_qa
+  note: 241 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: alexandrainst/m_arc
+  link: https://huggingface.co/datasets/alexandrainst/m_arc
+  note: 3890 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: alexandrainst/m_hellaswag
+  link: https://huggingface.co/datasets/alexandrainst/m_hellaswag
+  note: 4425 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: alexandrainst/m_mmlu
+  link: https://huggingface.co/datasets/alexandrainst/m_mmlu
+  note: 4322 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: alexandrainst/m_truthfulqa
+  link: https://huggingface.co/datasets/alexandrainst/m_truthfulqa
+  note: 482 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: alexandrainst/multi-wiki-qa
+  link: https://huggingface.co/datasets/alexandrainst/multi-wiki-qa
+  suggestedTask: qa
+  note: 456 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: allenai/c4
+  link: https://huggingface.co/datasets/allenai/c4
+  note: 1540762 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: aloginfile/wikipedia
+  link: https://huggingface.co/datasets/aloginfile/wikipedia
+  note: 229 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Aman0026/ArogyaAI-Medical-Instruction-Dataset
+  link: https://huggingface.co/datasets/Aman0026/ArogyaAI-Medical-Instruction-Dataset
+  suggestedTask: llm
+  note: 716 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: amithm3/shrutilipi
+  link: https://huggingface.co/datasets/amithm3/shrutilipi
+  note: 1475 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: amu-cai/CAMEO
+  link: https://huggingface.co/datasets/amu-cai/CAMEO
+  note: 631 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: anisafifi/wikipedia
+  link: https://huggingface.co/datasets/anisafifi/wikipedia
+  note: 300 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: aplycaebous/BdSLIG
+  link: https://huggingface.co/datasets/aplycaebous/BdSLIG
+  note: 199 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ARTPARK-IISc/Vaani
+  link: https://huggingface.co/datasets/ARTPARK-IISc/Vaani
+  note: 74121 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ARTPARK-IISc/Vaani-transcription-part
+  link: https://huggingface.co/datasets/ARTPARK-IISc/Vaani-transcription-part
+  note: 3203 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Asib27/dart_math_bangla
+  link: https://huggingface.co/datasets/Asib27/dart_math_bangla
+  note: 282 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ayymen/Pontoon-Translations
+  link: https://huggingface.co/datasets/ayymen/Pontoon-Translations
+  suggestedTask: mt
+  note: 3651 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ayymen/Weblate-Translations
+  link: https://huggingface.co/datasets/ayymen/Weblate-Translations
+  suggestedTask: mt
+  note: 1424 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: badrivishalk/MUSTARD
+  link: https://huggingface.co/datasets/badrivishalk/MUSTARD
+  note: 198 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: BanglishRev/bangla-english-and-code-mixed-ecommerce-review-dataset
+  link: https://huggingface.co/datasets/BanglishRev/bangla-english-and-code-mixed-ecommerce-review-dataset
+  note: 264 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: bcv-commons/strongs
+  link: https://huggingface.co/datasets/bcv-commons/strongs
+  note: 871 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: bertin-project/mc4-sampling
+  link: https://huggingface.co/datasets/bertin-project/mc4-sampling
+  note: 207 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: bigscience/xP3
+  link: https://huggingface.co/datasets/bigscience/xP3
+  note: 61422 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: bigscience/xP3all
+  link: https://huggingface.co/datasets/bigscience/xP3all
+  note: 15338 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: bigscience/xP3megds
+  link: https://huggingface.co/datasets/bigscience/xP3megds
+  note: 815 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: bigscience/xP3mt
+  link: https://huggingface.co/datasets/bigscience/xP3mt
+  note: 10759 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: bltlab/lr-sum
+  link: https://huggingface.co/datasets/bltlab/lr-sum
+  note: 2244 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: bltlab/ParaNames
+  link: https://huggingface.co/datasets/bltlab/ParaNames
+  note: 339 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: borderlines/bordirlines
+  link: https://huggingface.co/datasets/borderlines/bordirlines
+  note: 191 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: castorini/mr-tydi
+  link: https://huggingface.co/datasets/castorini/mr-tydi
+  note: 1295 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: castorini/mr-tydi-corpus
+  link: https://huggingface.co/datasets/castorini/mr-tydi-corpus
+  note: 246 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: catherinearnett/morphscore
+  link: https://huggingface.co/datasets/catherinearnett/morphscore
+  note: 405 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Centi234/WorldSpeech
+  link: https://huggingface.co/datasets/Centi234/WorldSpeech
+  suggestedTask: speech
+  note: 224 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: centrepourlasecuriteia/jailbreak-dataset
+  link: https://huggingface.co/datasets/centrepourlasecuriteia/jailbreak-dataset
+  note: 212 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: cfilt/IITB-IndicMonoDoc
+  link: https://huggingface.co/datasets/cfilt/IITB-IndicMonoDoc
+  note: 4786 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: CharuAgarwal/indic-align
+  link: https://huggingface.co/datasets/CharuAgarwal/indic-align
+  note: 856 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: cis-lmu/GlotCC-V1
+  link: https://huggingface.co/datasets/cis-lmu/GlotCC-V1
+  note: 22259 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: cis-lmu/m_lama
+  link: https://huggingface.co/datasets/cis-lmu/m_lama
+  note: 232 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: codefuse-ai/F2LLM-v2
+  link: https://huggingface.co/datasets/codefuse-ai/F2LLM-v2
+  note: 2293 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: CodeMixBench/CodeMixBench
+  link: https://huggingface.co/datasets/CodeMixBench/CodeMixBench
+  note: 316 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Cognitive-Lab/NayanaOCR_Corpus_2025
+  link: https://huggingface.co/datasets/Cognitive-Lab/NayanaOCR_Corpus_2025
+  note: 3220 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: CohereLabs/Global-MMLU-Lite
+  link: https://huggingface.co/datasets/CohereLabs/Global-MMLU-Lite
+  note: 9328 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: CohereLabs/include-base-44
+  link: https://huggingface.co/datasets/CohereLabs/include-base-44
+  note: 6447 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: CohereLabs/include-lite-44
+  link: https://huggingface.co/datasets/CohereLabs/include-lite-44
+  note: 577 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: CohereLabs/kaleidoscope
+  link: https://huggingface.co/datasets/CohereLabs/kaleidoscope
+  note: 3175 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: CohereLabs/xP3x
+  link: https://huggingface.co/datasets/CohereLabs/xP3x
+  note: 134939 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: community-datasets/tapaco
+  link: https://huggingface.co/datasets/community-datasets/tapaco
+  note: 642 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: community-datasets/udhr
+  link: https://huggingface.co/datasets/community-datasets/udhr
+  note: 579 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: csebuetnlp/xnli_bn
+  link: https://huggingface.co/datasets/csebuetnlp/xnli_bn
+  note: 430 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: cyanic-selkie/wikianc
+  link: https://huggingface.co/datasets/cyanic-selkie/wikianc
+  note: 1504 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: DAMO-NLP-SG/MultiJail
+  link: https://huggingface.co/datasets/DAMO-NLP-SG/MultiJail
+  note: 541 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: danish-foundation-models/multi-ifeval
+  link: https://huggingface.co/datasets/danish-foundation-models/multi-ifeval
+  note: 1915 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: davidstap/NTREX
+  link: https://huggingface.co/datasets/davidstap/NTREX
+  note: 472 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Davlan/sib200
+  link: https://huggingface.co/datasets/Davlan/sib200
+  note: 4808 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Davlan/sib200_14classes
+  link: https://huggingface.co/datasets/Davlan/sib200_14classes
+  note: 235 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: dbarbedillo/SMS_Spam_Multilingual_Collection_Dataset
+  link: https://huggingface.co/datasets/dbarbedillo/SMS_Spam_Multilingual_Collection_Dataset
+  note: 298 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: devngho/culturax-mini-nonshuffled
+  link: https://huggingface.co/datasets/devngho/culturax-mini-nonshuffled
+  note: 247 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: DigitalLearningGmbH/tatoeba_mt_parquet
+  link: https://huggingface.co/datasets/DigitalLearningGmbH/tatoeba_mt_parquet
+  note: 455 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: disco-eth/WorldSpeech
+  link: https://huggingface.co/datasets/disco-eth/WorldSpeech
+  suggestedTask: speech
+  note: 40673 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Divyanshu/indicxnli
+  link: https://huggingface.co/datasets/Divyanshu/indicxnli
+  note: 837 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: djstrong/oscar-small
+  link: https://huggingface.co/datasets/djstrong/oscar-small
+  note: 766 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Dragnoz/wikipedia
+  link: https://huggingface.co/datasets/Dragnoz/wikipedia
+  note: 602 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ds123DDD/opus-100
+  link: https://huggingface.co/datasets/ds123DDD/opus-100
+  note: 535 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: dsfox/humans-top
+  link: https://huggingface.co/datasets/dsfox/humans-top
+  note: 410 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Eamin-sust/BanglaEng-SynCorpus
+  link: https://huggingface.co/datasets/Eamin-sust/BanglaEng-SynCorpus
+  note: 482 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Eftekhar/BHM-Bengali-Hateful-Memes
+  link: https://huggingface.co/datasets/Eftekhar/BHM-Bengali-Hateful-Memes
+  suggestedTask: hate
+  note: 231 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: espnet/floras
+  link: https://huggingface.co/datasets/espnet/floras
+  note: 5778 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Exploration-Lab/IL-TUR
+  link: https://huggingface.co/datasets/Exploration-Lab/IL-TUR
+  note: 434 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: eyasir2047/NCTB-QA
+  link: https://huggingface.co/datasets/eyasir2047/NCTB-QA
+  suggestedTask: qa
+  note: 204 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: facebook/2M-Belebele
+  link: https://huggingface.co/datasets/facebook/2M-Belebele
+  note: 566 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: facebook/belebele
+  link: https://huggingface.co/datasets/facebook/belebele
+  note: 17350 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: facebook/bouquet
+  link: https://huggingface.co/datasets/facebook/bouquet
+  note: 3404 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: facebook/flores
+  link: https://huggingface.co/datasets/facebook/flores
+  note: 10956 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: facebook/multiloko
+  link: https://huggingface.co/datasets/facebook/multiloko
+  note: 664 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: faisaltareque/XL-HeadTags
+  link: https://huggingface.co/datasets/faisaltareque/XL-HeadTags
+  note: 317 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Far121/bangla-fake-news
+  link: https://huggingface.co/datasets/Far121/bangla-fake-news
+  note: 1595 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: fdemelo/vox-communis-parallel-g2p
+  link: https://huggingface.co/datasets/fdemelo/vox-communis-parallel-g2p
+  note: 207 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: fdnai/foundation_v0.1
+  link: https://huggingface.co/datasets/fdnai/foundation_v0.1
+  note: 219 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: floschne/xgqa
+  link: https://huggingface.co/datasets/floschne/xgqa
+  note: 333 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: floschne/xm3600
+  link: https://huggingface.co/datasets/floschne/xm3600
+  note: 417 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: FoundryAILabs/k12-indian-curriculum-4.9m
+  link: https://huggingface.co/datasets/FoundryAILabs/k12-indian-curriculum-4.9m
+  note: 219 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: FrancophonIA/W2C
+  link: https://huggingface.co/datasets/FrancophonIA/W2C
+  note: 191 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: FredZhang7/toxi-text-3M
+  link: https://huggingface.co/datasets/FredZhang7/toxi-text-3M
+  note: 1350 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: fsicoli/common_voice_15_0
+  link: https://huggingface.co/datasets/fsicoli/common_voice_15_0
+  suggestedTask: speech
+  note: 15280 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: fsicoli/common_voice_16_0
+  link: https://huggingface.co/datasets/fsicoli/common_voice_16_0
+  suggestedTask: speech
+  note: 8500 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: fsicoli/common_voice_17_0
+  link: https://huggingface.co/datasets/fsicoli/common_voice_17_0
+  suggestedTask: speech
+  note: 11447 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: fsicoli/common_voice_18_0
+  link: https://huggingface.co/datasets/fsicoli/common_voice_18_0
+  suggestedTask: speech
+  note: 2747 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: fsicoli/common_voice_19_0
+  link: https://huggingface.co/datasets/fsicoli/common_voice_19_0
+  suggestedTask: speech
+  note: 6329 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: fsicoli/common_voice_21_0
+  link: https://huggingface.co/datasets/fsicoli/common_voice_21_0
+  suggestedTask: speech
+  note: 4450 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: fsicoli/common_voice_22_0
+  link: https://huggingface.co/datasets/fsicoli/common_voice_22_0
+  suggestedTask: speech
+  note: 32445 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: GEM/xlsum
+  link: https://huggingface.co/datasets/GEM/xlsum
+  note: 1584 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: gentaiscool/bitext_sib200_miners
+  link: https://huggingface.co/datasets/gentaiscool/bitext_sib200_miners
+  note: 669 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: gililior/mmlu-prox-eval-predictions
+  link: https://huggingface.co/datasets/gililior/mmlu-prox-eval-predictions
+  note: 3946 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ginigen-ai/smol-worldcup
+  link: https://huggingface.co/datasets/ginigen-ai/smol-worldcup
+  note: 356 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: google-research-datasets/tydiqa
+  link: https://huggingface.co/datasets/google-research-datasets/tydiqa
+  note: 3860 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: google/IndicGenBench_crosssum_in
+  link: https://huggingface.co/datasets/google/IndicGenBench_crosssum_in
+  note: 290 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: google/IndicGenBench_flores_in
+  link: https://huggingface.co/datasets/google/IndicGenBench_flores_in
+  note: 324 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: google/IndicGenBench_xorqa_in
+  link: https://huggingface.co/datasets/google/IndicGenBench_xorqa_in
+  note: 318 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: google/IndicGenBench_xquad_in
+  link: https://huggingface.co/datasets/google/IndicGenBench_xquad_in
+  note: 631 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: google/smol
+  link: https://huggingface.co/datasets/google/smol
+  note: 1797 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: google/svq
+  link: https://huggingface.co/datasets/google/svq
+  note: 3491 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: google/wmt24pp
+  link: https://huggingface.co/datasets/google/wmt24pp
+  note: 5829 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: google/xtreme
+  link: https://huggingface.co/datasets/google/xtreme
+  note: 5023 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: graelo/wikipedia
+  link: https://huggingface.co/datasets/graelo/wikipedia
+  note: 2556 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: gsarti/flores_101
+  link: https://huggingface.co/datasets/gsarti/flores_101
+  note: 2013 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: hakari-bench/NanoMIRACL
+  link: https://huggingface.co/datasets/hakari-bench/NanoMIRACL
+  note: 361 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: hasankursun/multilingual-safety-classification-dataset
+  link: https://huggingface.co/datasets/hasankursun/multilingual-safety-classification-dataset
+  note: 1836 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: heavenwyt/churro-dataset
+  link: https://huggingface.co/datasets/heavenwyt/churro-dataset
+  note: 200 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Helsinki-NLP/kde4
+  link: https://huggingface.co/datasets/Helsinki-NLP/kde4
+  note: 829 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Helsinki-NLP/open_subtitles
+  link: https://huggingface.co/datasets/Helsinki-NLP/open_subtitles
+  note: 1175 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Helsinki-NLP/OpenSubtitles2024
+  link: https://huggingface.co/datasets/Helsinki-NLP/OpenSubtitles2024
+  note: 263 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Helsinki-NLP/opus_gnome
+  link: https://huggingface.co/datasets/Helsinki-NLP/opus_gnome
+  note: 451 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Helsinki-NLP/opus_ubuntu
+  link: https://huggingface.co/datasets/Helsinki-NLP/opus_ubuntu
+  note: 356 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Helsinki-NLP/opus-100
+  link: https://huggingface.co/datasets/Helsinki-NLP/opus-100
+  note: 32519 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Helsinki-NLP/tanzil
+  link: https://huggingface.co/datasets/Helsinki-NLP/tanzil
+  note: 244 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Helsinki-NLP/tatoeba
+  link: https://huggingface.co/datasets/Helsinki-NLP/tatoeba
+  note: 1856 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Helsinki-NLP/tatoeba_mt
+  link: https://huggingface.co/datasets/Helsinki-NLP/tatoeba_mt
+  note: 4602 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Himanshu9636/Weblate-Translations
+  link: https://huggingface.co/datasets/Himanshu9636/Weblate-Translations
+  suggestedTask: mt
+  note: 321 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: hishab/bangla-mmlu
+  link: https://huggingface.co/datasets/hishab/bangla-mmlu
+  note: 412 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: hishab/titulm-bangla-corpus
+  link: https://huggingface.co/datasets/hishab/titulm-bangla-corpus
+  note: 1847 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: hishab/titulm-bangla-mmlu
+  link: https://huggingface.co/datasets/hishab/titulm-bangla-mmlu
+  note: 534 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: hltcoe/megawika
+  link: https://huggingface.co/datasets/hltcoe/megawika
+  note: 19317 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: HPLT/DocHPLT
+  link: https://huggingface.co/datasets/HPLT/DocHPLT
+  note: 16459 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: HPLT/HPLT2.0_cleaned
+  link: https://huggingface.co/datasets/HPLT/HPLT2.0_cleaned
+  note: 105101 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: HPLT/OpenLID-v3
+  link: https://huggingface.co/datasets/HPLT/OpenLID-v3
+  note: 782 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: hrshihab/BanFakeNews-2.0
+  link: https://huggingface.co/datasets/hrshihab/BanFakeNews-2.0
+  note: 1138 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: HuggingFaceFW/finepdfs-edu
+  link: https://huggingface.co/datasets/HuggingFaceFW/finepdfs-edu
+  note: 7000 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: iNLP-Lab/multilingual-lima
+  link: https://huggingface.co/datasets/iNLP-Lab/multilingual-lima
+  note: 273 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: iNLP-Lab/multilingual-safety
+  link: https://huggingface.co/datasets/iNLP-Lab/multilingual-safety
+  note: 319 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: innadark/GlotCC-V1
+  link: https://huggingface.co/datasets/innadark/GlotCC-V1
+  note: 741 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: intelsense/indicvoices-bengali
+  link: https://huggingface.co/datasets/intelsense/indicvoices-bengali
+  suggestedTask: speech
+  note: 233 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: interfaze-ai/ocr-mlt-50m
+  link: https://huggingface.co/datasets/interfaze-ai/ocr-mlt-50m
+  note: 196 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: irlab-daiict/SqCLIRIL
+  link: https://huggingface.co/datasets/irlab-daiict/SqCLIRIL
+  note: 256 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: IWSLT/ted_talks_iwslt
+  link: https://huggingface.co/datasets/IWSLT/ted_talks_iwslt
+  note: 1042 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: izhx/xtreme-r-udpos
+  link: https://huggingface.co/datasets/izhx/xtreme-r-udpos
+  note: 242 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Jahid05/banfakenews-noisy-robustness
+  link: https://huggingface.co/datasets/Jahid05/banfakenews-noisy-robustness
+  note: 928 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: jbross-ibm-research/mgsm
+  link: https://huggingface.co/datasets/jbross-ibm-research/mgsm
+  note: 799 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: jerin/pib
+  link: https://huggingface.co/datasets/jerin/pib
+  note: 191 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: jessteru/wikipedia
+  link: https://huggingface.co/datasets/jessteru/wikipedia
+  note: 622 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: jhu-clsp/megawika-2
+  link: https://huggingface.co/datasets/jhu-clsp/megawika-2
+  note: 482 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: jobs-git/HPLT2.0_cleaned
+  link: https://huggingface.co/datasets/jobs-git/HPLT2.0_cleaned
+  note: 222745 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: jon-tow/okapi_arc_challenge
+  link: https://huggingface.co/datasets/jon-tow/okapi_arc_challenge
+  note: 1224 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: jon-tow/okapi_hellaswag
+  link: https://huggingface.co/datasets/jon-tow/okapi_hellaswag
+  note: 204 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: jon-tow/okapi_mmlu
+  link: https://huggingface.co/datasets/jon-tow/okapi_mmlu
+  note: 1181 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: jon-tow/okapi_truthfulqa
+  link: https://huggingface.co/datasets/jon-tow/okapi_truthfulqa
+  note: 362 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: JRQi/DeepResearch-Bench-Multilingual
+  link: https://huggingface.co/datasets/JRQi/DeepResearch-Bench-Multilingual
+  note: 1063 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: jsl5710/BLUFF
+  link: https://huggingface.co/datasets/jsl5710/BLUFF
+  note: 765 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: juletxara/mgsm
+  link: https://huggingface.co/datasets/juletxara/mgsm
+  note: 22712 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: jumelet/multiblimp
+  link: https://huggingface.co/datasets/jumelet/multiblimp
+  note: 9155 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: kavinh07/ocr_dataset_shamadhan_synth_30k_p2
+  link: https://huggingface.co/datasets/kavinh07/ocr_dataset_shamadhan_synth_30k_p2
+  note: 365 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: kavinh07/ocr_dataset_shamadhan_synth_30k_p3
+  link: https://huggingface.co/datasets/kavinh07/ocr_dataset_shamadhan_synth_30k_p3
+  note: 347 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: kavinh07/ocr_dataset_shamadhan_synth_30k_p4
+  link: https://huggingface.co/datasets/kavinh07/ocr_dataset_shamadhan_synth_30k_p4
+  note: 434 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: kavinh07/ocr_dataset_shamadhan_synth_30k_p5
+  link: https://huggingface.co/datasets/kavinh07/ocr_dataset_shamadhan_synth_30k_p5
+  note: 372 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: kawchar85/Bangla-Math
+  link: https://huggingface.co/datasets/kawchar85/Bangla-Math
+  note: 225 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: kawshikbuet17/bengali-telecom-customer-care-speech-v2
+  link: https://huggingface.co/datasets/kawshikbuet17/bengali-telecom-customer-care-speech-v2
+  suggestedTask: speech
+  note: 5874 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: kcsb28/Pralekha
+  link: https://huggingface.co/datasets/kcsb28/Pralekha
+  note: 302 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: khalidalt/tydiqa-goldp
+  link: https://huggingface.co/datasets/khalidalt/tydiqa-goldp
+  note: 794 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: khondoker/SentNoB
+  link: https://huggingface.co/datasets/khondoker/SentNoB
+  note: 786 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: KiteFishAI/kf-embed-pretrain-corpus-700M
+  link: https://huggingface.co/datasets/KiteFishAI/kf-embed-pretrain-corpus-700M
+  note: 227 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: KlingTeam/UnityShotsBench
+  link: https://huggingface.co/datasets/KlingTeam/UnityShotsBench
+  note: 3843 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: knightcy/wikipedia
+  link: https://huggingface.co/datasets/knightcy/wikipedia
+  note: 681 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: krist67/wikipedia
+  link: https://huggingface.co/datasets/krist67/wikipedia
+  note: 632 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: krutrim-ai-labs/VoiceAgentBench
+  link: https://huggingface.co/datasets/krutrim-ai-labs/VoiceAgentBench
+  suggestedTask: speech
+  note: 852 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: KumarSahil299885/SMS_Spam_Multilingual_Collection_Dataset
+  link: https://huggingface.co/datasets/KumarSahil299885/SMS_Spam_Multilingual_Collection_Dataset
+  note: 704 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: l3cube-pune/IndicGuard
+  link: https://huggingface.co/datasets/l3cube-pune/IndicGuard
+  note: 253 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: laihuiyuan/mCoT-MATH
+  link: https://huggingface.co/datasets/laihuiyuan/mCoT-MATH
+  note: 417 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: laion/Wikipedia-Abstract
+  link: https://huggingface.co/datasets/laion/Wikipedia-Abstract
+  note: 1067 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: LanguageShades/BiasShades
+  link: https://huggingface.co/datasets/LanguageShades/BiasShades
+  note: 322 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: LAYEK-143/BANGLA-BOOK
+  link: https://huggingface.co/datasets/LAYEK-143/BANGLA-BOOK
+  note: 826 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: legacy-datasets/mc4
+  link: https://huggingface.co/datasets/legacy-datasets/mc4
+  note: 1497 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: legacy-datasets/wikipedia
+  link: https://huggingface.co/datasets/legacy-datasets/wikipedia
+  note: 134982 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Lego-MT/Parallel_Dataset
+  link: https://huggingface.co/datasets/Lego-MT/Parallel_Dataset
+  suggestedTask: mt
+  note: 416 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: LHF/escorpius-mr
+  link: https://huggingface.co/datasets/LHF/escorpius-mr
+  note: 340 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: liboaccn/nmt-parallel-corpus
+  link: https://huggingface.co/datasets/liboaccn/nmt-parallel-corpus
+  note: 222 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: lightblue/reranker_continuous_filt_max7_train
+  link: https://huggingface.co/datasets/lightblue/reranker_continuous_filt_max7_train
+  note: 393 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: lightblue/text_ratings
+  link: https://huggingface.co/datasets/lightblue/text_ratings
+  note: 342 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: lightonai/mgsm-rev2
+  link: https://huggingface.co/datasets/lightonai/mgsm-rev2
+  note: 492 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: liva-ai/yapdo-convo
+  link: https://huggingface.co/datasets/liva-ai/yapdo-convo
+  note: 312 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: LLaMAX/BenchMAX_Function_Completion
+  link: https://huggingface.co/datasets/LLaMAX/BenchMAX_Function_Completion
+  note: 227 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: LLaMAX/BenchMAX_Multiple_Functions
+  link: https://huggingface.co/datasets/LLaMAX/BenchMAX_Multiple_Functions
+  note: 277 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: LLaMAX/BenchMAX_Problem_Solving
+  link: https://huggingface.co/datasets/LLaMAX/BenchMAX_Problem_Solving
+  note: 482 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: LLaMAX/BenchMAX_Rule-based
+  link: https://huggingface.co/datasets/LLaMAX/BenchMAX_Rule-based
+  note: 1467 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: LLaMAX/BenchMAX_Science
+  link: https://huggingface.co/datasets/LLaMAX/BenchMAX_Science
+  note: 628 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Lulu19971017/wmt24pp
+  link: https://huggingface.co/datasets/Lulu19971017/wmt24pp
+  note: 369 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: mabsoutwassim/smol
+  link: https://huggingface.co/datasets/mabsoutwassim/smol
+  note: 1408 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: macavaney/miracl-noauth
+  link: https://huggingface.co/datasets/macavaney/miracl-noauth
+  note: 1584 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: maddi99/islamicrag-7m
+  link: https://huggingface.co/datasets/maddi99/islamicrag-7m
+  note: 223 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Maisha230/bangla-english-and-code-mixed-ecommerce-review-dataset
+  link: https://huggingface.co/datasets/Maisha230/bangla-english-and-code-mixed-ecommerce-review-dataset
+  note: 2222 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: malaysia-ai/Multilingual-TTS
+  link: https://huggingface.co/datasets/malaysia-ai/Multilingual-TTS
+  suggestedTask: speech
+  note: 14573 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Malikeh1375/code-switching-tokenizer-robustness
+  link: https://huggingface.co/datasets/Malikeh1375/code-switching-tokenizer-robustness
+  note: 377 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: manan-u/updesh_updated
+  link: https://huggingface.co/datasets/manan-u/updesh_updated
+  note: 457 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: MartinThoma/wili_2018
+  link: https://huggingface.co/datasets/MartinThoma/wili_2018
+  note: 4522 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Mathoctopus/GSM8KInstruct_Parallel
+  link: https://huggingface.co/datasets/Mathoctopus/GSM8KInstruct_Parallel
+  note: 537 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Mathoctopus/MSVAMP
+  link: https://huggingface.co/datasets/Mathoctopus/MSVAMP
+  note: 948 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Mausul/bafco
+  link: https://huggingface.co/datasets/Mausul/bafco
+  note: 701 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: MAximeSobrier/Web-multilingual
+  link: https://huggingface.co/datasets/MAximeSobrier/Web-multilingual
+  note: 253 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: MAximeSobrier/WiLI-2018-corrected
+  link: https://huggingface.co/datasets/MAximeSobrier/WiLI-2018-corrected
+  note: 1125 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: MBZUAI/Bactrian-X
+  link: https://huggingface.co/datasets/MBZUAI/Bactrian-X
+  note: 1595 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: McGill-NLP/speech-translation-and-summarization
+  link: https://huggingface.co/datasets/McGill-NLP/speech-translation-and-summarization
+  suggestedTask: mt
+  note: 6461 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: md-nishat-008/mHumanEval-Benchmark
+  link: https://huggingface.co/datasets/md-nishat-008/mHumanEval-Benchmark
+  suggestedTask: llm
+  note: 3872 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: microsoft/ms_terms
+  link: https://huggingface.co/datasets/microsoft/ms_terms
+  note: 190 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: microsoft/Updesh_beta
+  link: https://huggingface.co/datasets/microsoft/Updesh_beta
+  note: 9030 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: mikaberidze/belebele-ftp
+  link: https://huggingface.co/datasets/mikaberidze/belebele-ftp
+  note: 329 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Mike33/PolyChartQA
+  link: https://huggingface.co/datasets/Mike33/PolyChartQA
+  note: 803 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: mimir-lcm/fineweb-2-sentence-split
+  link: https://huggingface.co/datasets/mimir-lcm/fineweb-2-sentence-split
+  note: 4654 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: miracl/miracl
+  link: https://huggingface.co/datasets/miracl/miracl
+  note: 2688 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: miracl/miracl-corpus
+  link: https://huggingface.co/datasets/miracl/miracl-corpus
+  note: 3306 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: miracl/nomiracl
+  link: https://huggingface.co/datasets/miracl/nomiracl
+  note: 225 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: MoritzLaurer/multilingual-NLI-26lang-2mil7
+  link: https://huggingface.co/datasets/MoritzLaurer/multilingual-NLI-26lang-2mil7
+  note: 787 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: mrdavidalv/wikipedia
+  link: https://huggingface.co/datasets/mrdavidalv/wikipedia
+  note: 591 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: mrlbenchmarks/global-piqa-nonparallel
+  link: https://huggingface.co/datasets/mrlbenchmarks/global-piqa-nonparallel
+  suggestedTask: llm
+  note: 5805 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: mrlbenchmarks/global-piqa-parallel
+  link: https://huggingface.co/datasets/mrlbenchmarks/global-piqa-parallel
+  suggestedTask: llm
+  note: 2127 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: mteb/belebele
+  link: https://huggingface.co/datasets/mteb/belebele
+  note: 1398 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Muennighoff/xP3x-sample
+  link: https://huggingface.co/datasets/Muennighoff/xP3x-sample
+  note: 965 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: MultiCoNER/multiconer_v2
+  link: https://huggingface.co/datasets/MultiCoNER/multiconer_v2
+  note: 986 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: murthyrudra/milu-cleaned
+  link: https://huggingface.co/datasets/murthyrudra/milu-cleaned
+  note: 305 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: musfiqdehan/Preprocessed-MS-IL-POST-Data
+  link: https://huggingface.co/datasets/musfiqdehan/Preprocessed-MS-IL-POST-Data
+  note: 215 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: musfiqurtuhin/bengali-fake-news
+  link: https://huggingface.co/datasets/musfiqurtuhin/bengali-fake-news
+  note: 1013 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: mutiyama/alt
+  link: https://huggingface.co/datasets/mutiyama/alt
+  note: 398 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: naimul011/BanglaToxicCommentsDB
+  link: https://huggingface.co/datasets/naimul011/BanglaToxicCommentsDB
+  suggestedTask: hate
+  note: 556 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: nazimali/quran
+  link: https://huggingface.co/datasets/nazimali/quran
+  note: 255 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Necent/llm-jailbreak-prompt-injection-dataset
+  link: https://huggingface.co/datasets/Necent/llm-jailbreak-prompt-injection-dataset
+  suggestedTask: llm
+  note: 596 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: neh7777/Pretraining-V1
+  link: https://huggingface.co/datasets/neh7777/Pretraining-V1
+  note: 2973 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: neulab/CulturalGround
+  link: https://huggingface.co/datasets/neulab/CulturalGround
+  note: 367 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: neulab/PangeaBench-xm100
+  link: https://huggingface.co/datasets/neulab/PangeaBench-xm100
+  note: 284 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: neulab/PangeaInstruct
+  link: https://huggingface.co/datasets/neulab/PangeaInstruct
+  note: 222 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: neurlang/ipa-lexicon-4v0-7M
+  link: https://huggingface.co/datasets/neurlang/ipa-lexicon-4v0-7M
+  note: 545 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: NoeFlandre/osm-polygon-to-wikipedia-articles
+  link: https://huggingface.co/datasets/NoeFlandre/osm-polygon-to-wikipedia-articles
+  note: 8732 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: nthakur/swim-ir-cross-lingual
+  link: https://huggingface.co/datasets/nthakur/swim-ir-cross-lingual
+  note: 238 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: nthakur/swim-ir-monolingual
+  link: https://huggingface.co/datasets/nthakur/swim-ir-monolingual
+  note: 223 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: nthngdy/oscar-mini
+  link: https://huggingface.co/datasets/nthngdy/oscar-mini
+  note: 773 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: nthngdy/oscar-small
+  link: https://huggingface.co/datasets/nthngdy/oscar-small
+  note: 1132 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: nvidia/miracl-vision
+  link: https://huggingface.co/datasets/nvidia/miracl-vision
+  note: 662 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: olm/wikipedia
+  link: https://huggingface.co/datasets/olm/wikipedia
+  note: 256 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: omarkamali/wikipedia-monthly
+  link: https://huggingface.co/datasets/omarkamali/wikipedia-monthly
+  note: 10422 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: onath/dlp-sample
+  link: https://huggingface.co/datasets/onath/dlp-sample
+  note: 1683 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: open-index/open-wikipedia-markdown
+  link: https://huggingface.co/datasets/open-index/open-wikipedia-markdown
+  note: 410 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: openai/MMMLU
+  link: https://huggingface.co/datasets/openai/MMMLU
+  note: 8390 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: OpenAssistant/oasst1
+  link: https://huggingface.co/datasets/OpenAssistant/oasst1
+  note: 18176 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: OpenAssistant/oasst2
+  link: https://huggingface.co/datasets/OpenAssistant/oasst2
+  note: 19668 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: openfoodfacts/product-database
+  link: https://huggingface.co/datasets/openfoodfacts/product-database
+  note: 9281 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: openlanguagedata/flores_plus
+  link: https://huggingface.co/datasets/openlanguagedata/flores_plus
+  note: 11351 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: openslr/openslr
+  link: https://huggingface.co/datasets/openslr/openslr
+  note: 409 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: oscar-corpus/oscar
+  link: https://huggingface.co/datasets/oscar-corpus/oscar
+  note: 554 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: oscar-corpus/OSCAR-2201
+  link: https://huggingface.co/datasets/oscar-corpus/OSCAR-2201
+  note: 1807 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: overthelex/indian-court-decisions
+  link: https://huggingface.co/datasets/overthelex/indian-court-decisions
+  note: 534 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: pacscilab/VoxCommunis
+  link: https://huggingface.co/datasets/pacscilab/VoxCommunis
+  note: 4435 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: pinzhenchen/wmt26-mist-sample
+  link: https://huggingface.co/datasets/pinzhenchen/wmt26-mist-sample
+  note: 234 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Polygl0t/gigakriya-v1
+  link: https://huggingface.co/datasets/Polygl0t/gigakriya-v1
+  note: 240 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Polygl0t/tokenizers
+  link: https://huggingface.co/datasets/Polygl0t/tokenizers
+  note: 232 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: prachuryyaIITG/SampurNER
+  link: https://huggingface.co/datasets/prachuryyaIITG/SampurNER
+  note: 610 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Prarabdha/indian-legal-supervised-fine-tuning-data
+  link: https://huggingface.co/datasets/Prarabdha/indian-legal-supervised-fine-tuning-data
+  note: 390 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: projetogabi/healthbench-multilingual
+  link: https://huggingface.co/datasets/projetogabi/healthbench-multilingual
+  note: 210 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: qanastek/MASSIVE
+  link: https://huggingface.co/datasets/qanastek/MASSIVE
+  note: 684 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: QCRI/MemeLens
+  link: https://huggingface.co/datasets/QCRI/MemeLens
+  note: 3204 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: quranlab/islamic-corpus-graph
+  link: https://huggingface.co/datasets/quranlab/islamic-corpus-graph
+  note: 249 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: quranlab/quran
+  link: https://huggingface.co/datasets/quranlab/quran
+  note: 1283 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: rahular/varta
+  link: https://huggingface.co/datasets/rahular/varta
+  note: 330 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: RaiyanKhaan/KrishokChat-145k
+  link: https://huggingface.co/datasets/RaiyanKhaan/KrishokChat-145k
+  note: 956 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: rakshitdabral/Signature-Verification-Dataset
+  link: https://huggingface.co/datasets/rakshitdabral/Signature-Verification-Dataset
+  note: 1374 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: rayliuca/WikidataLabels
+  link: https://huggingface.co/datasets/rayliuca/WikidataLabels
+  note: 3094 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: refine-ai/subscene
+  link: https://huggingface.co/datasets/refine-ai/subscene
+  note: 2960 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: remiai3/synthetic-captchas-library
+  link: https://huggingface.co/datasets/remiai3/synthetic-captchas-library
+  note: 236 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: remiai3/tiny-captcha-library
+  link: https://huggingface.co/datasets/remiai3/tiny-captcha-library
+  note: 346 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Remian9080/Bangla-Bayanno
+  link: https://huggingface.co/datasets/Remian9080/Bangla-Bayanno
+  note: 360 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Reubencf/Adaption-low-resource-doc-qa
+  link: https://huggingface.co/datasets/Reubencf/Adaption-low-resource-doc-qa
+  suggestedTask: qa
+  note: 227 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Reubencf/adaption-multilingual-doc-qa
+  link: https://huggingface.co/datasets/Reubencf/adaption-multilingual-doc-qa
+  suggestedTask: qa
+  note: 756 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: rezacsedu/bn_hate_speech
+  link: https://huggingface.co/datasets/rezacsedu/bn_hate_speech
+  suggestedTask: hate
+  note: 242 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: RicardoRei/wmt-da-human-evaluation
+  link: https://huggingface.co/datasets/RicardoRei/wmt-da-human-evaluation
+  note: 811 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: RidheshBhati/Complete_Data_Source_100K_HOURS
+  link: https://huggingface.co/datasets/RidheshBhati/Complete_Data_Source_100K_HOURS
+  note: 54590 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: RidheshBhati/STT_MODEL
+  link: https://huggingface.co/datasets/RidheshBhati/STT_MODEL
+  note: 874 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: rifathridoy/bengali-ocr-synthetic
+  link: https://huggingface.co/datasets/rifathridoy/bengali-ocr-synthetic
+  note: 263 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Rikunarita-ORG/Wikinium
+  link: https://huggingface.co/datasets/Rikunarita-ORG/Wikinium
+  note: 72563 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: risaleinur/risale-nur-multilingual
+  link: https://huggingface.co/datasets/risaleinur/risale-nur-multilingual
+  note: 196 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: rubricreward/mR3-Dataset-100K-EasyToHard
+  link: https://huggingface.co/datasets/rubricreward/mR3-Dataset-100K-EasyToHard
+  note: 478 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Sadatsami/wikipedia
+  link: https://huggingface.co/datasets/Sadatsami/wikipedia
+  note: 475 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: safety-irt/safety-data
+  link: https://huggingface.co/datasets/safety-irt/safety-data
+  note: 241 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: saillab/taco-datasets
+  link: https://huggingface.co/datasets/saillab/taco-datasets
+  note: 534 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: SandLogicTechnologies/Indic_Chat_Dataset
+  link: https://huggingface.co/datasets/SandLogicTechnologies/Indic_Chat_Dataset
+  note: 198 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Sanjidh090/Lipi-Ghor-bn-882-SSTT
+  link: https://huggingface.co/datasets/Sanjidh090/Lipi-Ghor-bn-882-SSTT
+  note: 9262 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: sartajekram/BanglaRQA
+  link: https://huggingface.co/datasets/sartajekram/BanglaRQA
+  note: 691 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: sarulab-speech/commonvoice22_sidon
+  link: https://huggingface.co/datasets/sarulab-speech/commonvoice22_sidon
+  suggestedTask: speech
+  note: 9971 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: sarulab-speech/yodas2_sidon
+  link: https://huggingface.co/datasets/sarulab-speech/yodas2_sidon
+  suggestedTask: speech
+  note: 59470 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: sarvamai/mmlu-indic
+  link: https://huggingface.co/datasets/sarvamai/mmlu-indic
+  note: 478 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: sejongwang/ipapack_plus_clean
+  link: https://huggingface.co/datasets/sejongwang/ipapack_plus_clean
+  note: 525 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: sentence-transformers/miracl
+  link: https://huggingface.co/datasets/sentence-transformers/miracl
+  note: 2385 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: sentence-transformers/mr-tydi
+  link: https://huggingface.co/datasets/sentence-transformers/mr-tydi
+  note: 511 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: sentence-transformers/parallel-sentences-ccmatrix
+  link: https://huggingface.co/datasets/sentence-transformers/parallel-sentences-ccmatrix
+  note: 4891 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: sentence-transformers/parallel-sentences-opus-100
+  link: https://huggingface.co/datasets/sentence-transformers/parallel-sentences-opus-100
+  note: 1461 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: senti-lex/senti_lex
+  link: https://huggingface.co/datasets/senti-lex/senti_lex
+  note: 207 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ServiceNow-AI/M2Lingual
+  link: https://huggingface.co/datasets/ServiceNow-AI/M2Lingual
+  note: 213 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: severo/flores_101
+  link: https://huggingface.co/datasets/severo/flores_101
+  note: 1188 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: shaikat2007/open-large-bengali-asr-data
+  link: https://huggingface.co/datasets/shaikat2007/open-large-bengali-asr-data
+  suggestedTask: speech
+  note: 373 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ShihabReza/nctb-qa
+  link: https://huggingface.co/datasets/ShihabReza/nctb-qa
+  suggestedTask: qa
+  note: 251 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: shofikul-1234/titulm-bangla-corpus
+  link: https://huggingface.co/datasets/shofikul-1234/titulm-bangla-corpus
+  note: 821 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: sil-ai/bloom-vist
+  link: https://huggingface.co/datasets/sil-ai/bloom-vist
+  note: 578 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: siripragadashashank/mkb
+  link: https://huggingface.co/datasets/siripragadashashank/mkb
+  note: 214 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: skesiraju/Shrutilipi
+  link: https://huggingface.co/datasets/skesiraju/Shrutilipi
+  note: 1678 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: SKNahin/open-large-bengali-asr-data
+  link: https://huggingface.co/datasets/SKNahin/open-large-bengali-asr-data
+  suggestedTask: speech
+  note: 530 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: slaab/NCERT-Parallel-Dataset-Indic
+  link: https://huggingface.co/datasets/slaab/NCERT-Parallel-Dataset-Indic
+  note: 2068 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: smam/bengali-diarization-synthetic-v4
+  link: https://huggingface.co/datasets/smam/bengali-diarization-synthetic-v4
+  note: 3362 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: smam/bengali-tts-folderized-parquet-stage1
+  link: https://huggingface.co/datasets/smam/bengali-tts-folderized-parquet-stage1
+  suggestedTask: speech
+  note: 363 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: snorbyte/indic-text-audio-sample
+  link: https://huggingface.co/datasets/snorbyte/indic-text-audio-sample
+  suggestedTask: speech
+  note: 328 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: soketlabs/bhasha-sft
+  link: https://huggingface.co/datasets/soketlabs/bhasha-sft
+  note: 487 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: soketlabs/bhasha-wiki
+  link: https://huggingface.co/datasets/soketlabs/bhasha-wiki
+  note: 2132 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: soketlabs/bhasha-wiki-indic
+  link: https://huggingface.co/datasets/soketlabs/bhasha-wiki-indic
+  note: 334 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: SPRINGLab/IndicTTS_Bengali
+  link: https://huggingface.co/datasets/SPRINGLab/IndicTTS_Bengali
+  suggestedTask: speech
+  note: 273 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: sssOrganization/wikipedia
+  link: https://huggingface.co/datasets/sssOrganization/wikipedia
+  note: 516 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: stanford-oval/ccnews
+  link: https://huggingface.co/datasets/stanford-oval/ccnews
+  note: 5166 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: stanford-oval/churro-dataset
+  link: https://huggingface.co/datasets/stanford-oval/churro-dataset
+  note: 655 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: statmt/cc100
+  link: https://huggingface.co/datasets/statmt/cc100
+  note: 3068 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: styletts2-community/multilingual-pl-bert
+  link: https://huggingface.co/datasets/styletts2-community/multilingual-pl-bert
+  suggestedTask: speech
+  note: 1758 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: SUST-CSE-Speech/SUBAK.KO
+  link: https://huggingface.co/datasets/SUST-CSE-Speech/SUBAK.KO
+  suggestedTask: speech
+  note: 750 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: synquid/wmt24pp
+  link: https://huggingface.co/datasets/synquid/wmt24pp
+  note: 241 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: tahmedge/MM-JudgeBench
+  link: https://huggingface.co/datasets/tahmedge/MM-JudgeBench
+  note: 1857 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Tamazight-NLP/Weblate-Translations
+  link: https://huggingface.co/datasets/Tamazight-NLP/Weblate-Translations
+  suggestedTask: mt
+  note: 1751 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: tanziro/bangla-crime-investigation-patterns-v2
+  link: https://huggingface.co/datasets/tanziro/bangla-crime-investigation-patterns-v2
+  note: 542 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: TiWu-Lab/f2llmv2-backup
+  link: https://huggingface.co/datasets/TiWu-Lab/f2llmv2-backup
+  note: 430 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: tner/wikiann
+  link: https://huggingface.co/datasets/tner/wikiann
+  note: 1432 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: tomaarsen/MultiCoNER
+  link: https://huggingface.co/datasets/tomaarsen/MultiCoNER
+  note: 326 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: unimorph/universal_morphologies
+  link: https://huggingface.co/datasets/unimorph/universal_morphologies
+  suggestedTask: pos
+  note: 421 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: universal-dependencies/universal_dependencies
+  link: https://huggingface.co/datasets/universal-dependencies/universal_dependencies
+  suggestedTask: pos
+  note: 8623 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: uonlp/CulturaX
+  link: https://huggingface.co/datasets/uonlp/CulturaX
+  note: 19725 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: utahnlp/x-fact
+  link: https://huggingface.co/datasets/utahnlp/x-fact
+  note: 304 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: VarunGumma/IGB_Flores_enxx
+  link: https://huggingface.co/datasets/VarunGumma/IGB_Flores_enxx
+  note: 416 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: VarunGumma/IGB_Flores_xxen
+  link: https://huggingface.co/datasets/VarunGumma/IGB_Flores_xxen
+  note: 417 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: VarunGumma/IGB_XorQA
+  link: https://huggingface.co/datasets/VarunGumma/IGB_XorQA
+  note: 1186 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: VarunGumma/IGB_XQuAD
+  link: https://huggingface.co/datasets/VarunGumma/IGB_XQuAD
+  note: 244 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: vdivyasharma/IndicSynth
+  link: https://huggingface.co/datasets/vdivyasharma/IndicSynth
+  note: 5763 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: VedaLabs/wit_base
+  link: https://huggingface.co/datasets/VedaLabs/wit_base
+  note: 846 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: Viet-Mistral/CulturaY
+  link: https://huggingface.co/datasets/Viet-Mistral/CulturaY
+  note: 2399 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: visheratin/laion-coco-nllb
+  link: https://huggingface.co/datasets/visheratin/laion-coco-nllb
+  note: 750 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: wannaphong/wikipedia-monthly
+  link: https://huggingface.co/datasets/wannaphong/wikipedia-monthly
+  note: 75845 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: wecover/OPUS
+  link: https://huggingface.co/datasets/wecover/OPUS
+  note: 1032 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: wecover/OPUS_GlobalVoices
+  link: https://huggingface.co/datasets/wecover/OPUS_GlobalVoices
+  suggestedTask: speech
+  note: 2570 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: WhissleAI/Meta_STT_MADASR2.0_train_lg
+  link: https://huggingface.co/datasets/WhissleAI/Meta_STT_MADASR2.0_train_lg
+  suggestedTask: speech
+  note: 634 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: whoisjones/fiNERweb
+  link: https://huggingface.co/datasets/whoisjones/fiNERweb
+  note: 349 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: wikimedia/wikidata-title-desc
+  link: https://huggingface.co/datasets/wikimedia/wikidata-title-desc
+  note: 545 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: wikimedia/wikipedia
+  link: https://huggingface.co/datasets/wikimedia/wikipedia
+  note: 229480 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: wikimedia/wikisource
+  link: https://huggingface.co/datasets/wikimedia/wikisource
+  note: 3873 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: wikimedia/wit_base
+  link: https://huggingface.co/datasets/wikimedia/wit_base
+  note: 5677 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: WueNLP/belebele-fleurs
+  link: https://huggingface.co/datasets/WueNLP/belebele-fleurs
+  note: 2508 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: WueNLP/mvl-sib
+  link: https://huggingface.co/datasets/WueNLP/mvl-sib
+  note: 900 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: WueNLP/sib-fleurs
+  link: https://huggingface.co/datasets/WueNLP/sib-fleurs
+  note: 1909 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: WueNLP/Synthdog-Multilingual-100
+  link: https://huggingface.co/datasets/WueNLP/Synthdog-Multilingual-100
+  note: 217 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: xu-song/cc100-samples
+  link: https://huggingface.co/datasets/xu-song/cc100-samples
+  note: 241 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: yhavinga/ccmatrix
+  link: https://huggingface.co/datasets/yhavinga/ccmatrix
+  note: 459 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ymoslem/Tatoeba-Translations
+  link: https://huggingface.co/datasets/ymoslem/Tatoeba-Translations
+  suggestedTask: mt
+  note: 298 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: ymoslem/wmt-da-human-evaluation-long-context
+  link: https://huggingface.co/datasets/ymoslem/wmt-da-human-evaluation-long-context
+  note: 526 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: YuRiVeRTi/V1Q
+  link: https://huggingface.co/datasets/YuRiVeRTi/V1Q
+  note: 194 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: zabir-nabil/bangla_newspaper_dataset
+  link: https://huggingface.co/datasets/zabir-nabil/bangla_newspaper_dataset
+  note: 464 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: zaibihassan/Quranic-Translation-Audio-Data
+  link: https://huggingface.co/datasets/zaibihassan/Quranic-Translation-Audio-Data
+  suggestedTask: mt
+  note: 1877 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: zouharvi/pwesuite-eval
+  link: https://huggingface.co/datasets/zouharvi/pwesuite-eval
+  note: 275 downloads at discovery time
+- source: huggingface
+  kind: dataset
+  title: zxc0135/UnityShotsBench
+  link: https://huggingface.co/datasets/zxc0135/UnityShotsBench
+  note: 2325 downloads at discovery time

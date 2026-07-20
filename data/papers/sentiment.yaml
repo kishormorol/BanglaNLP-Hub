@@ -1,3 +1,10 @@
+- id: arxiv-2604-13057
+  title: A Multi-Model Approach to English-Bangla Sentiment Classification of Government Mobile Banking App Reviews
+  authors: Molla et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2604.13057
+  task: sentiment
 - id: hasan-etal-2026-enhancing
   title: Enhancing Mental Health Counseling Support in Bangladesh using Culturally-grounded Knowledge
   authors: Hasan et al.
@@ -5,12 +12,26 @@
   year: 2026
   link: https://aclanthology.org/2026.clpsych-1.13/
   task: sentiment
+- id: arxiv-2602-12921
+  title: "When Words Don't Mean What They Say: Figurative Understanding in Bengali Idioms"
+  authors: Sakhawat et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2602.12921
+  task: sentiment
 - id: kawser-etal-2025-hybrid
   title: A Hybrid Transformer--Sequential Model for Depression Detection in Bangla--English Code-Mixed Text
   authors: Kawser et al.
   venue: BLP @ EMNLP
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.8/
+  task: sentiment
+- id: arxiv-2511-18618
+  title: A Unified BERT-CNN-BiLSTM Framework for Simultaneous Headline Classification and Sentiment Analysis of Bangla News
+  authors: Raquib et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.18618
   task: sentiment
 - id: kabir-etal-2025-advancing
   title: Advancing Subjectivity Detection in Bengali News Articles Using Transformer Models with POS-Aware Features
@@ -25,6 +46,34 @@
   venue: RANLP
   year: 2025
   link: https://aclanthology.org/2025.ranlp-1.114/
+  task: sentiment
+- id: arxiv-2506-10154
+  title: Analyzing Emotions in Bangla Social Media Comments Using Machine Learning and LIME
+  authors: Paul et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2506.10154
+  task: sentiment
+- id: arxiv-2506-21686
+  title: "ANUBHUTI: A Comprehensive Corpus For Sentiment Analysis In Bangla Regional Languages"
+  authors: Kundu et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2506.21686
+  task: sentiment
+- id: arxiv-2511-21381
+  title: "BanglaASTE: A Novel Framework for Aspect-Sentiment-Opinion Extraction in Bangla E-commerce Reviews Using Ensemble Deep Learning"
+  authors: Islam et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.21381
+  task: sentiment
+- id: arxiv-2511-23264
+  title: "BanglaSentNet: An Explainable Hybrid Deep Learning Framework for Multi-Aspect Sentiment Analysis with Cross-Domain Transfer Learning"
+  authors: Islam et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.23264
   task: sentiment
 - id: jawad-etal-2025-benchmarking
   title: Benchmarking Large Language Models on Bangla Dialect Translation and Dialectal Sentiment Analysis
@@ -61,12 +110,40 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.10/
   task: sentiment
+- id: arxiv-2511-07077
+  title: "EmoBang: Detecting Emotion From Bengali Texts"
+  authors: Maruf et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.07077
+  task: sentiment
 - id: pal-etal-2025-hybrid
   title: Hybrid Classical-Quantum Framework for Sentiment Classification and Claim Check-Worthiness Identification in Bengali
   authors: Pal et al.
   venue: QuantumNLP
   year: 2025
   link: https://aclanthology.org/2025.quantumnlp-1.3/
+  task: sentiment
+- id: arxiv-2510-01276
+  title: LLM Based Sentiment Classification From Bangladesh E-Commerce Reviews
+  authors: Tabassum et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2510.01276
+  task: sentiment
+- id: arxiv-2507-11084
+  title: "Social Media Sentiments Analysis on the July Revolution in Bangladesh: A Hybrid Transformer Based Machine Learning Approach"
+  authors: Hossen et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2507.11084
+  task: sentiment
+- id: arxiv-2512-15547
+  title: "When a Nation Speaks: Machine Learning and NLP in People's Sentiment Analysis During Bangladesh's 2024 Mass Uprising"
+  authors: Alim et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2512.15547
   task: sentiment
 - id: elahi-etal-2024-comparative
   title: A Comparative Analysis of Noise Reduction Methods in Sentiment Analysis on Noisy Bangla Texts
@@ -75,12 +152,54 @@
   year: 2024
   link: https://aclanthology.org/2024.wnut-1.5/
   task: sentiment
+- id: arxiv-2411-06548
+  title: "CineXDrama: Relevance Detection and Sentiment Analysis of Bangla YouTube Comments on Movie-Drama using Transformers: Insights from Interpretability Tool"
+  authors: Rifa et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2411.06548
+  task: sentiment
+- id: arxiv-2412-05861
+  title: Depression detection from Social Media Bangla Text Using Recurrent Neural Networks
+  authors: Ahmed et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2412.05861
+  task: sentiment
 - id: raihan-etal-2024-emomix
   title: "EmoMix-3L: A Code-Mixed Dataset for Bangla-English-Hindi for Emotion Detection"
   authors: Raihan et al.
   venue: Workshop on Indian Language Data
   year: 2024
   link: https://aclanthology.org/2024.wildre-1.2/
+  task: sentiment
+- id: arxiv-2401-07847
+  title: "Milestones in Bengali Sentiment Analysis leveraging Transformer-models: Fundamentals, Challenges and Future Directions"
+  authors: Sengupta et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2401.07847
+  task: sentiment
+- id: arxiv-2407-19528
+  title: "Motamot: A Dataset for Revealing the Supremacy of Large Language Models over Transformer Models in Bengali Political Sentiment Analysis"
+  authors: Faria et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2407.19528
+  task: sentiment
+- id: arxiv-2405-06667
+  title: Sentiment Polarity Analysis of Bangla Food Reviews Using Machine and Deep Learning Algorithms
+  authors: Amin et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2405.06667
+  task: sentiment
+- id: arxiv-2401-10535
+  title: 'The "Colonial Impulse" of Natural Language Processing: An Audit of Bengali Sentiment Analysis Tools and Their Identity-based Biases'
+  authors: Das et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2401.10535
   task: sentiment
 - id: hasan-etal-2024-zero
   title: "Zero- and Few-Shot Prompting with LLMs: A Comparative Study with Fine-tuned Models for Bangla Sentiment Analysis"
@@ -124,6 +243,20 @@
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.39/
   task: sentiment
+- id: arxiv-2401-09446
+  title: Explainable Multimodal Sentiment Analysis on Bengali Memes
+  authors: Elahi et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2401.09446
+  task: sentiment
+- id: arxiv-2303-12772
+  title: Interpretable Bangla Sarcasm Detection using BERT and Explainable AI
+  authors: Anan et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2303.12772
+  task: sentiment
 - id: liu-etal-2023-knowdee
   title: "Knowdee at BLP-2023 Task 2: Improving Bangla Sentiment Analysis Using Ensembled Models with Pseudo-Labeling"
   authors: Liu et al.
@@ -145,6 +278,20 @@
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.36/
   task: sentiment
+- id: arxiv-2309-15670
+  title: "MONOVAB : An Annotated Corpus for Bangla Multi-label Emotion Detection"
+  authors: Banshal et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2309.15670
+  task: sentiment
+- id: arxiv-2311-15032
+  title: "nlpBDpatriots at BLP-2023 Task 2: A Transfer Learning Approach to Bangla Sentiment Analysis"
+  authors: Goswami et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2311.15032
+  task: sentiment
 - id: goswami-etal-2023-nlpbdpatriots
   title: "nlpBDpatriots at BLP-2023 Task 2: A Transfer Learning Approach towards Bangla Sentiment Analysis"
   authors: Goswami et al.
@@ -165,6 +312,13 @@
   venue: BLP @ EMNLP
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.41/
+  task: sentiment
+- id: arxiv-2306-06147
+  title: "SentiGOLD: A Large Bangla Gold Standard Multi-Domain Sentiment Analysis Dataset and its Evaluation"
+  authors: Islam et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2306.06147
   task: sentiment
 - id: raihan-etal-2023-sentmix
   title: "SentMix-3L: A Novel Code-Mixed Test Dataset in Bangla-English-Hindi for Sentiment Analysis"
@@ -194,6 +348,13 @@
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.38/
   task: sentiment
+- id: arxiv-2209-13461
+  title: "BanglaSarc: A Dataset for Sarcasm Detection"
+  authors: Apon et al.
+  venue: arXiv
+  year: 2022
+  link: http://arxiv.org/abs/2209.13461
+  task: sentiment
 - id: emotion-p
   title: "BEmoC: A Corpus for Identifying Emotion in Bengali Texts"
   authors: Das et al.
@@ -207,6 +368,13 @@
   venue: IJCNLP
   year: 2022
   link: https://aclanthology.org/2022.aacl-short.17/
+  task: sentiment
+- id: arxiv-2210-06405
+  title: Transformer-based Text Classification on Unified Bangla Multi-class Emotion Corpus
+  authors: Sourav et al.
+  venue: arXiv
+  year: 2022
+  link: http://arxiv.org/abs/2210.06405
   task: sentiment
 - id: bhowmick-jana-2021-sentiment
   title: Sentiment Analysis For Bengali Using Transformer Based Models

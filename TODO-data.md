@@ -3,13 +3,26 @@
 Known gaps, deliberately left empty rather than filled with invented values.
 Contributions welcome — see CONTRIBUTING.md.
 
-## Papers: ACL Anthology bulk import (2026-07-19)
+## Papers: bulk import (2026-07-19)
 
-The papers catalog was expanded from 27 to 260 by sweeping the entire ACL
-Anthology for Bangla/Bengali work (`npm run discover -- --source acl`) and
-promoting the matches (`npm run promote`). Title, authors, venue, year, and link
-on every imported entry come verbatim from the anthology's own BibTeX — nothing
-in those fields is guessed.
+The papers catalog was expanded from 27 to 405 in two passes with
+`npm run discover` + `npm run promote`:
+
+- **ACL Anthology → 260.** The entire anthology swept for Bangla/Bengali work.
+  Title, authors, venue, year, and link come verbatim from the anthology's own
+  BibTeX — nothing in those fields is guessed.
+- **arXiv → 405.** 145 arXiv-only preprints added, deduped against the published
+  set by link, normalized title, *and* system-name prefix (so e.g. the arXiv
+  "BEnQA: … and Reasoning Benchmark" is recognised as the already-catalogued ACL
+  "BEnQA: … Benchmark"). Their title/authors/year come from the arXiv API; venue
+  is honestly `arXiv`. **143 arXiv hits were dropped** because their title is not
+  about Bangla — the arXiv filter matches the abstract, so those are multilingual
+  papers that merely mention Bengali.
+
+`task` is heuristic in both passes (see below). Preprints carry a real risk the
+published set does not: a title that drifts between preprint and camera-ready can
+evade dedup. The three-way dedup catches the common cases, but a few arXiv
+near-duplicates of published papers may remain — worth a look when reviewing.
 
 **`task` is the exception and is heuristic.** The anthology does not record a
 task, so `scripts/promote.ts` derives one from the title by keyword. This is the
@@ -20,18 +33,22 @@ task is a welcome, low-risk contribution. `note` was intentionally left blank on
 imported papers rather than auto-generated — a one-line summary is exactly the
 kind of plausible invention the catalog forbids.
 
-**Two things were left out on purpose:**
+**What is left out on purpose (638 candidates still in `data/inbox/`):**
 
-- **54 candidates remain in `data/inbox/candidates.yaml`.** These describe tasks
-  outside the current 10-task taxonomy — OCR / handwriting recognition, image
-  captioning, WordNet construction, readability, dialogue, word embeddings,
-  lexical complexity, spell checking. Filing them under an ill-fitting task would
-  be worse than holding them. Adding a task is the prerequisite for promoting
-  them. (One, "Training a BN-based user model…", is a false positive — BN there
-  means Bayesian Network, not Bangla.)
-- **arXiv and Hugging Face sweeps have not been run.** Only the ACL source was
-  ingested. `npm run discover` (all sources) will surface preprints and models;
-  those need more hand-checking because they lack an authoritative venue record.
+- **~99 papers (ACL + arXiv) describe tasks outside the 10-task taxonomy** —
+  OCR / handwriting recognition, image captioning, WordNet construction,
+  readability, dialogue, word embeddings, lexical complexity, spell checking.
+  Filing them under an ill-fitting task would be worse than holding them; adding
+  a task is the prerequisite for promoting them. (One, "Training a BN-based user
+  model…", is a false positive — BN there means Bayesian Network, not Bangla.)
+- **143 arXiv hits whose title is not about Bangla** — tangential multilingual
+  papers matched on an abstract keyword. Correctly not catalogued as Bangla work.
+- **396 Hugging Face hits are NOT imported.** The `language:bn` filter is
+  low-precision: most are giant multilingual corpora (WildChat, tagengo,
+  multilingual-sentences) or Tamil/other datasets carrying a `bn` tag, not Bangla
+  resources. The Model schema also needs `arch`/`params` the list API does not
+  provide. HF import therefore requires hand-curation, not a bulk pass — do not
+  promote these wholesale.
 
 ## Leaderboards with no curated rows
 

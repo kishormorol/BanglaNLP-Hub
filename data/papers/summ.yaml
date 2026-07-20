@@ -19,12 +19,47 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.13/
   task: summ
+- id: arxiv-2501-15051
+  title: Abstractive Text Summarization for Bangla Language Using NLP and Machine Learning Approaches
+  authors: Miazee et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2501.15051
+  task: summ
+- id: arxiv-2501-01069
+  title: "BeliN: A Novel Corpus for Bengali Religious News Headline Generation using Contextual Feature Fusion"
+  authors: Osama et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2501.01069
+  task: summ
 - id: tanjila-etal-2025-bengali
   title: "Bengali ChartSumm: A Benchmark Dataset and study on feasibility of Large Language Models on Bengali Chart to Text Summarization"
   authors: Tanjila et al.
   venue: First Workshop on Challenges in Processing South Asian Languages
   year: 2025
   link: https://aclanthology.org/2025.chipsal-1.4/
+  task: summ
+- id: arxiv-2511-19317
+  title: "MultiBanAbs: A Comprehensive Multi-Domain Bangla Abstractive Text Summarization Dataset"
+  authors: Ferdous et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.19317
+  task: summ
+- id: arxiv-2505-05070
+  title: Performance Evaluation of Large Language Models in Bangla Consumer Health Query Summarization
+  authors: Abrar et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2505.05070
+  task: summ
+- id: arxiv-2411-17181
+  title: A Novel Word Pair-based Gaussian Sentence Similarity Algorithm For Bengali Extractive Text Summarization
+  authors: Morshed et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2411.17181
   task: summ
 - id: khan-etal-2023-banglachq
   title: "BanglaCHQ-Summ: An Abstractive Summarization Dataset for Medical Queries in Bangla Conversational Speech"
@@ -33,12 +68,26 @@
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.10/
   task: summ
+- id: arxiv-2307-07392
+  title: "Rank Your Summaries: Enhancing Bengali Text Summarization via Ranking-based Approach"
+  authors: Shahariar et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2307.07392
+  task: summ
 - id: akash-etal-2023-shironaam
   title: "Shironaam: Bengali News Headline Generation using Auxiliary Information"
   authors: Akash et al.
   venue: EACL
   year: 2023
   link: https://aclanthology.org/2023.eacl-main.4/
+  task: summ
+- id: arxiv-2307-06979
+  title: "Tackling Fake News in Bengali: Unraveling the Impact of Summarization vs. Augmentation on Pre-trained Language Models"
+  authors: Chowdhury et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2307.06979
   task: summ
 - id: roychowdhury-etal-2022-unsupervised
   title: Unsupervised Bengali Text Summarization Using Sentence Embedding and Spectral Clustering

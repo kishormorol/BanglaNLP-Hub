@@ -14,7 +14,7 @@ Everything the site renders comes from YAML under [`/data`](./data). Nothing is 
 | --- | --- |
 | Tasks | 10 |
 | Datasets | 31 |
-| Papers | 260 |
+| Papers | 405 |
 | Models | 22 |
 | Tools | 9 |
 
@@ -73,7 +73,7 @@ Contributions are genuinely welcome, and you do not need to know Astro or TypeSc
 
 These are concrete, self-contained, and each one is genuinely useful on its own — full detail in [`TODO-data.md`](./TODO-data.md):
 
-- **Reviewing paper tasks.** The 260 papers were bulk-imported from the ACL Anthology; their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
+- **Reviewing paper tasks.** Most of the 405 papers were bulk-imported (ACL Anthology + arXiv); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
 - **Leaderboard rows.** All 10 benchmarks ship empty. Each needs scores with a citation to the paper they came from. Even one populated benchmark is a real improvement.
 - **BibTeX.** 25 datasets have no citation entry. Copy the published one from the ACL Anthology or the publisher page — please do not hand-write one.
 - **Unverified dataset sizes.** About a dozen datasets are hosted where no count is published (Kaggle, openslr.org, nltr.org). If you know the paper, you can settle these.

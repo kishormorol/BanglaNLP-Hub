@@ -1,9 +1,51 @@
+- id: arxiv-2605-01292
+  title: "Addressing Data Scarcity in Bangla Fake News Detection: An LLM-Based Dataset Augmentation Approach"
+  authors: Sani et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2605.01292
+  task: textcls
+- id: arxiv-2601-12132
+  title: "Bengali Text Classification: An Evaluation of Large Language Model Approaches"
+  authors: Hoque et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2601.12132
+  task: textcls
+- id: arxiv-2605-17481
+  title: Hybrid Feature Combinations with CNN for Bangla Fake News Classification
+  authors: Hussain et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2605.17481
+  task: textcls
+- id: arxiv-2503-04781
+  title: Bangla Fake News Detection Based On Multichannel Combined CNN-LSTM
+  authors: George et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2503.04781
+  task: textcls
+- id: arxiv-2511-08085
+  title: "BARD10: A New Benchmark Reveals Significance of Bangla Stop-Words in Authorship Attribution"
+  authors: Moosa et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.08085
+  task: textcls
 - id: chowdhury-ferdous-2025-boigenre
   title: "BOIGENRE: A Large-Scale Bangla Dataset for Genre Classification from Book Summaries"
   authors: Chowdhury et al.
   venue: BLP @ EMNLP
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.20/
+  task: textcls
+- id: arxiv-2501-18766
+  title: "Breaking the Fake News Barrier: Deep Learning Approaches in Bangla Language"
+  authors: Mondal et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2501.18766
   task: textcls
 - id: rahman-ali-2025-clustering
   title: Clustering LLM-based Word Embeddings to Determine Topics from Bangla Articles
@@ -19,6 +61,13 @@
   year: 2025
   link: https://aclanthology.org/2025.findings-ijcnlp.135/
   task: textcls
+- id: arxiv-2508-00605
+  title: "GHTM: A Graph-based Hybrid Topic Modeling Approach with a Benchmark Dataset for the Low-Resource Bengali Language"
+  authors: Haque et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2508.00605
+  task: textcls
 - id: shanto-etal-2025-mdc3
   title: "MDC$^3$: A Novel Multimodal Dataset for Commercial Content Classification in Bengali"
   authors: Shanto et al.
@@ -32,6 +81,27 @@
   venue: BLP @ EMNLP
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.7/
+  task: textcls
+- id: arxiv-2403-05519
+  title: Authorship Attribution in Bangla Literature (AABL) via Transfer Learning using ULMFiT
+  authors: Khatun et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2403.05519
+  task: textcls
+- id: arxiv-2404-01345
+  title: Enhancing Bangla Fake News Detection Using Bidirectional Gated Recurrent Units and Deep Learning Techniques
+  authors: Roy et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2404.01345
+  task: textcls
+- id: arxiv-2310-11465
+  title: "BaitBuster-Bangla: A Comprehensive Dataset for Clickbait Detection in Bangla with Multi-Feature and Multi-Modal Analysis"
+  authors: Imran et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2310.11465
   task: textcls
 - id: mahtab-etal-2023-banglabait
   title: "BanglaBait: Semi-Supervised Adversarial Approach for Clickbait Detection on Bangla Clickbait Dataset"
@@ -61,6 +131,13 @@
   year: 2023
   link: https://aclanthology.org/2023.wassa-1.6/
   task: textcls
+- id: arxiv-2308-13545
+  title: Feature Extraction Using Deep Generative Models for Bangla Text Classification on a New Comprehensive Dataset
+  authors: Rafi-Ur-Rashid et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2308.13545
+  task: textcls
 - id: dehan-etal-2023-investigating
   title: Investigating the Effectiveness of Graph-based Algorithm for Bangla Text Classification
   authors: Dehan et al.
@@ -74,6 +151,13 @@
   venue: MIA
   year: 2022
   link: https://aclanthology.org/2022.mia-1.2/
+  task: textcls
+- id: arxiv-2210-09389
+  title: "Potrika: Raw and Balanced Newspaper Datasets in the Bangla Language with Eight Topics and Five Attributes"
+  authors: Ahmad et al.
+  venue: arXiv
+  year: 2022
+  link: http://arxiv.org/abs/2210.09389
   task: textcls
 - id: banfakenews-p
   title: "BanFakeNews: A Dataset for Detecting Fake News in Bangla"
