@@ -71,3 +71,14 @@
   link: https://github.com/samanjoy2/bnmmlu
   verified: 2026-07-19
   desc: Bengali massive multitask language understanding benchmark spanning 23 domains.
+- id: banglamath
+  name: BanglaMATH
+  task: llm
+  size: ~1,700 problems
+  sizeN: 1700
+  license: Research only
+  year: 2025
+  source: BanglaMATH (MathNLP 2025)
+  link: https://github.com/TabiaTanzin/BanglaMATH-A-Bangla-benchmark-dataset-for-testing-LLM-mathematical-reasoning-at-grades-6-7-and-8
+  verified: 2026-07-19
+  desc: Bangla grade 6-8 math word problems for testing LLM mathematical reasoning.

@@ -49,3 +49,14 @@
   link: https://indicnlp.ai4bharat.org/samanantar/
   verified: 2026-07-19
   desc: Largest publicly available bn–en parallel collection.
+- id: banglatlit
+  name: BanglaTLit
+  task: mt
+  size: 42,705 pairs
+  sizeN: 42705
+  license: MIT
+  year: 2024
+  source: BanglaTLit (Findings EMNLP 2024)
+  link: https://github.com/farhanishmam/BanglaTLit
+  verified: 2026-07-19
+  desc: Benchmark for back-transliteration of romanized Bangla to Bangla script.
