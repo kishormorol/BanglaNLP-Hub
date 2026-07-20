@@ -31,3 +31,25 @@
   link: https://github.com/LanguageTechnologyLab/TB-OLID
   verified: 2026-03-08
   desc: Offensive language in transliterated (Banglish) text.
+- id: offmix3l
+  name: OffMix-3L
+  task: hate
+  size: 1,001 instances
+  sizeN: 1001
+  license: AGPL-3.0
+  year: 2023
+  source: OffMix-3L (SocialNLP 2023)
+  link: https://github.com/LanguageTechnologyLab/OffMix-3L
+  verified: 2026-07-19
+  desc: Bangla-English-Hindi code-mixed offensive language identification test set.
+- id: banth
+  name: BanTH
+  task: hate
+  size: 37,300 samples
+  sizeN: 37300
+  license: MIT
+  year: 2025
+  source: BanTH (Findings NAACL 2025)
+  link: https://github.com/farhanishmam/BanTH
+  verified: 2026-07-19
+  desc: Multi-label transliterated (romanized) Bangla hate speech dataset from YouTube across 7 target classes.
