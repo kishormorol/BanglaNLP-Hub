@@ -5,6 +5,34 @@
   year: 2026
   link: https://aclanthology.org/2026.findings-acl.1862/
   task: qa
+- id: arxiv-2603-05462
+  title: "NCTB-QA: A Large-Scale Bangla Educational Question Answering Dataset and Benchmarking Performance"
+  authors: Eyasir et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2603.05462
+  task: qa
+- id: arxiv-2602-01451
+  title: "Understanding QA generation: Extracting Parametric and Contextual Knowledge with CQA for Low Resource Bangla Language"
+  authors: Azmary et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2602.01451
+  task: qa
+- id: arxiv-2508-19887
+  title: "Bangla-Bayanno: A 52K-Pair Bengali Visual Question Answering Dataset with LLM-Assisted Translation Refinement"
+  authors: Hasan et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2508.19887
+  task: qa
+- id: arxiv-2511-04560
+  title: "BanglaMedQA and BanglaMMedBench: Evaluating Retrieval-Augmented Generation Strategies for Bangla Biomedical Question Answering"
+  authors: Sultana et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.04560
+  task: qa
 - id: saha-etal-2025-benchmarking
   title: "Benchmarking Bangla Causality: A Dataset of Implicit and Explicit Causal Sentences and Cause-Effect Relations"
   authors: Saha et al.
@@ -25,6 +53,34 @@
   venue: BLP @ EMNLP
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.16/
+  task: qa
+- id: arxiv-2412-11823
+  title: "Advancements and Challenges in Bangla Question Answering Models: A Comprehensive Review"
+  authors: Tashik et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2412.11823
+  task: qa
+- id: arxiv-2410-10229
+  title: "BanglaQuAD: A Bengali Open-domain Question Answering Dataset"
+  authors: Rony et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2410.10229
+  task: qa
+- id: arxiv-2410-14991
+  title: "ChitroJera: A Regionally Relevant Visual Question Answering Dataset for Bangla"
+  authors: Barua et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2410.14991
+  task: qa
+- id: arxiv-2412-18440
+  title: Unlocking the Potential of Multiple BERT Models for Bangla Question Answering in NCTB Textbooks
+  authors: Khondoker et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2412.18440
   task: qa
 - id: shahriar-etal-2023-question
   title: "Question Answer Generation in Bengali: Mitigating the scarcity of QA datasets in a low-resource language"

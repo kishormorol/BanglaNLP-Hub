@@ -246,6 +246,24 @@ const tasks: string[] = (parse(readFileSync(resolve(root, 'data/tasks.yaml'), 'u
 const existing = new Map<string, any[]>();
 const knownIds = new Set<string>();
 const knownLinks = new Set<string>();
+const knownTitles = new Set<string>();
+const knownNames = new Set<string>();
+const normTitle = (s: string) => String(s ?? '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+
+/**
+ * A distinctive system name from a "BEnQA: …" style title: the single token
+ * before the first colon, when it has no spaces and is ≥3 chars. Used to catch
+ * the same named paper across an arXiv preprint and its published version even
+ * when the subtitle differs ("BEnQA: A QA Benchmark" vs "BEnQA: A QA and
+ * Reasoning Benchmark"). Generic multi-word prefixes ("Bangla Sentiment
+ * Analysis: …") are deliberately excluded — they are not unique.
+ */
+const systemName = (title: string): string | undefined => {
+  const head = String(title ?? '').split(':')[0].trim();
+  if (!head || /\s/.test(head) || head.length < 3) return undefined;
+  return head.toLowerCase();
+};
+
 for (const task of tasks) {
   const f = resolve(paperDir, `${task}.yaml`);
   const list = existsSync(f) ? ((parse(readFileSync(f, 'utf8')) as any[]) ?? []) : [];
@@ -253,8 +271,15 @@ for (const task of tasks) {
   for (const p of list) {
     knownIds.add(p.id);
     knownLinks.add(String(p.link).replace(/\/+$/, ''));
+    knownTitles.add(normTitle(p.title));
+    const n = systemName(p.title);
+    if (n) knownNames.add(n);
   }
 }
+
+/** arXiv is filtered by abstract keyword, so many hits merely mention Bengali as
+ * one of many languages. Only promote preprints whose TITLE is about Bangla. */
+const BANGLA_TITLE = /\b(bangla|bengali|banglish|bengla)/i;
 
 // ---------------------------------------------------------------------- promote
 const added: Record<string, number> = {};
@@ -263,9 +288,61 @@ const reasons: Record<string, number> = {};
 const note = (r: string) => (reasons[r] = (reasons[r] ?? 0) + 1);
 
 for (const c of candidates) {
+  // --- arXiv preprints: fields already come authoritatively from the arXiv API
+  // (title/authors/year), venue is honestly "arXiv". Title-dedup against the
+  // catalog so a preprint whose published version we already hold is skipped. ---
+  if (c.kind === 'paper' && c.source === 'arxiv') {
+    const title = debrace(String(c.title ?? '')).replace(/\s+/g, ' ').trim();
+    if (!title || !BANGLA_TITLE.test(title)) {
+      leftover.push(c);
+      note('arxiv: title not about Bangla — likely tangential multilingual');
+      continue;
+    }
+    const link = String(c.link ?? '').replace(/\/+$/, '');
+    const name = systemName(title);
+    if (knownLinks.has(link) || knownTitles.has(normTitle(title)) || (name && knownNames.has(name))) {
+      note('arxiv: already catalogued (link, title, or system name)');
+      continue;
+    }
+    const task = classify(title);
+    if (!task) {
+      leftover.push(c);
+      note('title does not indicate a task — needs manual triage');
+      continue;
+    }
+    if (!c.authors || !c.year) {
+      leftover.push(c);
+      note('arxiv candidate missing author or year');
+      continue;
+    }
+    // arXiv ids contain a dot (2308.13545); the id schema allows only [a-z0-9-_].
+    const arxivId = link.match(/(\d{4}\.\d{4,5})/)?.[1]?.replace('.', '-');
+    let id = arxivId ? `arxiv-${arxivId}` : `arxiv-${normTitle(title).replace(/ /g, '-').slice(0, 40)}`;
+    if (knownIds.has(id)) {
+      leftover.push(c);
+      note('id collision');
+      continue;
+    }
+    knownIds.add(id);
+    knownLinks.add(link);
+    knownTitles.add(normTitle(title));
+    if (name) knownNames.add(name);
+    existing.get(task)!.push({
+      id,
+      title,
+      authors: c.authors,
+      venue: 'arXiv',
+      year: c.year,
+      link,
+      task,
+    });
+    added[task] = (added[task] ?? 0) + 1;
+    continue;
+  }
+
   if (c.kind !== 'paper' || c.source !== 'acl') {
     leftover.push(c);
-    note('not an ACL paper');
+    note('not an ACL or arXiv paper');
     continue;
   }
   const rec = byUrl.get(String(c.link).replace(/\/+$/, ''));
@@ -274,7 +351,7 @@ for (const c of candidates) {
     note('no anthology record for its link');
     continue;
   }
-  if (knownLinks.has(rec.link.replace(/\/+$/, ''))) {
+  if (knownLinks.has(rec.link.replace(/\/+$/, '')) || knownTitles.has(normTitle(rec.title))) {
     note('already catalogued');
     continue;
   }
@@ -303,6 +380,9 @@ for (const c of candidates) {
   }
   knownIds.add(id);
   knownLinks.add(rec.link.replace(/\/+$/, ''));
+  knownTitles.add(normTitle(rec.title));
+  const aclName = systemName(rec.title);
+  if (aclName) knownNames.add(aclName);
 
   existing.get(task)!.push({
     id,

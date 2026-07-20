@@ -5,6 +5,13 @@
   year: 2025
   link: https://aclanthology.org/2025.findings-acl.431/
   task: pos
+- id: arxiv-2508-15711
+  title: Stemming -- The Evolution and Current State with a Focus on Bangla
+  authors: Paul et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2508.15711
+  task: pos
 - id: afrin-etal-2023-banlemma
   title: "BanLemma: A Word Formation Dependent Rule and Dictionary Based Bangla Lemmatizer"
   authors: Afrin et al.

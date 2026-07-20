@@ -5,6 +5,55 @@
   year: 2026
   link: https://aclanthology.org/2026.loreslm-1.12/
   task: speech
+- id: arxiv-2601-17679
+  title: "BanglaRobustNet: A Hybrid Denoising-Attention Architecture for Robust Bangla Speech Recognition"
+  authors: Ridoy et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2601.17679
+  task: speech
+- id: arxiv-2602-23070
+  title: "Make It Hard to Hear, Easy to Learn: Long-Form Bengali ASR and Speaker Diarization via Extreme Augmentation and Perfect Alignment"
+  authors: Hasan et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2602.23070
+  task: speech
+- id: arxiv-2602-21741
+  title: "Robust Long-Form Bangla Speech Processing: Automatic Speech Recognition and Speaker Diarization"
+  authors: Chowdhury et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2602.21741
+  task: speech
+- id: arxiv-2603-19256
+  title: "ShobdoSetu: A Data-Centric Framework for Bengali Long-Form Speech Recognition and Speaker Diarization"
+  authors: Sakib et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2603.19256
+  task: speech
+- id: arxiv-2607-09598
+  title: "Tokenizer Transplantation: Mitigating Autoregressive Collapse in Edge-Efficient Bengali ASR"
+  authors: Hasan et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2607.09598
+  task: speech
+- id: arxiv-2507-01931
+  title: "Adaptability of ASR Models on Low-Resource Language: A Comparative Study of Whisper and Wav2Vec-BERT on Bangla"
+  authors: Ridoy et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2507.01931
+  task: speech
+- id: arxiv-2510-24724
+  title: "AmarDoctor: An AI-Driven, Multilingual, Voice-Interactive Digital Health Application for Primary Care Triage and Patient Management to Bridge the Digital Health Divide for Bengali Speakers"
+  authors: Nahar et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2510.24724
+  task: speech
 - id: hasan-roy-dipta-2025-banglatalk
   title: "BanglaTalk: Towards Real-Time Speech Assistance for Bengali Regional Dialects"
   authors: Hasan et al.
@@ -19,12 +68,82 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.1/
   task: speech
+- id: arxiv-2511-13159
+  title: "Distinguishing Repetition Disfluency from Morphological Reduplication in Bangla ASR Transcripts: A Novel Corpus and Benchmarking Analysis"
+  authors: Arpa et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.13159
+  task: speech
+- id: arxiv-2510-18355
+  title: "KrishokBondhu: A Retrieval-Augmented Voice-Based Agricultural Advisory Call Center for Bengali Farmers"
+  authors: Ameen et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2510.18355
+  task: speech
+- id: arxiv-2601-09710
+  title: Multi-Level Embedding Conformer Framework for Bengali Automatic Speech Recognition
+  authors: Sakib et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2601.09710
+  task: speech
+- id: arxiv-2510-24096
+  title: "RegSpeech12: A Regional Corpus of Bengali Spontaneous Speech Across Dialects"
+  authors: Hassan et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2510.24096
+  task: speech
+- id: arxiv-2406-12931
+  title: Automatic Speech Recognition for Biomedical Data in Bengali Language
+  authors: Kabir et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2406.12931
+  task: speech
+- id: arxiv-2411-10879
+  title: "BanglaDialecto: An End-to-End AI-Powered Regional Speech Standardization"
+  authors: Samin et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2411.10879
+  task: speech
+- id: arxiv-2403-20084
+  title: IPA Transcription of Bengali Texts
+  authors: Fatema et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2403.20084
+  task: speech
 - id: das-etal-2024-low
   title: "Low-Resource Counterspeech Generation for Indic Languages: The Case of Bengali and Hindi"
   authors: Das et al.
   venue: Findings EACL
   year: 2024
   link: https://aclanthology.org/2024.findings-eacl.111/
+  task: speech
+- id: arxiv-2403-17407
+  title: Transcribing Bengali Text with Regional Dialects to IPA using District Guided Tokens
+  authors: Islam et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2403.17407
+  task: speech
+- id: arxiv-2306-02680
+  title: "BeAts: Bengali Speech Acts Recognition using Multimodal Attention Fusion"
+  authors: Deb et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2306.02680
+  task: speech
+- id: arxiv-2311-03792
+  title: Character-Level Bangla Text-to-IPA Transcription Using Transformer Architecture with Sequence Alignment
+  authors: Hasan et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2311.03792
   task: speech
 - id: oodspeech-p
   title: "OOD-Speech: A Large Bengali Speech Recognition Dataset for Out-of-Distribution Benchmarking"
@@ -39,6 +158,34 @@
   venue: BLP @ EMNLP
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.16/
+  task: speech
+- id: arxiv-2209-08119
+  title: An Automatic Speech Recognition System for Bengali Language based on Wav2Vec2 and Transfer Learning
+  authors: Showrav et al.
+  venue: arXiv
+  year: 2022
+  link: http://arxiv.org/abs/2209.08119
+  task: speech
+- id: arxiv-2209-12650
+  title: "Bangla-Wave: Improving Bangla Automatic Speech Recognition Utilizing N-gram Language Models"
+  authors: Rakib et al.
+  venue: arXiv
+  year: 2022
+  link: http://arxiv.org/abs/2209.12650
+  task: speech
+- id: arxiv-2206-14053
+  title: Bengali Common Voice Speech Dataset for Automatic Speech Recognition
+  authors: Alam et al.
+  venue: arXiv
+  year: 2022
+  link: http://arxiv.org/abs/2206.14053
+  task: speech
+- id: arxiv-2210-12921
+  title: "Investigating self-supervised, weakly supervised and fully supervised training approaches for multi-domain automatic speech recognition: a study on Bangladeshi Bangla"
+  authors: Samin et al.
+  venue: arXiv
+  year: 2022
+  link: http://arxiv.org/abs/2210.12921
   task: speech
 - id: saha-das-mandal-2020-acoustic
   title: Acoustic Analysis of Native (L1) Bengali Speakers' Phonological Realization of English Lexical Stress Contrast

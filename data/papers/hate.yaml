@@ -1,9 +1,37 @@
+- id: arxiv-2602-22449
+  title: A Fusion of context-aware based BanglaBERT and Two-Layer Stacked LSTM Framework for Multi-Label Cyberbullying Detection
+  authors: Raquib et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2602.22449
+  task: hate
 - id: raquib-etal-2026-banhadex
   title: "BanHADEX: Towards Explainable HAte Speech Detection in Bangla Using Human Annotated EXplanation"
   authors: Raquib et al.
   venue: ACL
   year: 2026
   link: https://aclanthology.org/2026.acl-long.2022/
+  task: hate
+- id: arxiv-2601-20129
+  title: "BengaliSent140: A Large-Scale Bengali Binary Sentiment Dataset for Hate and Non-Hate Speech Classification"
+  authors: Islam et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2601.20129
+  task: hate
+- id: arxiv-2607-11597
+  title: "Beyond Benchmarks: Exposing the Hidden Crisis in Bangla Hate Speech Detection"
+  authors: Tisha et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2607.11597
+  task: hate
+- id: arxiv-2602-22391
+  title: "Detecting Hate and Inflammatory Content in Bengali Memes: A New Multimodal Dataset and Co-Attention Framework"
+  authors: Ullah et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2602.22391
   task: hate
 - id: hasan-etal-2026-llm
   title: "LLM-Based Multi-Task Bangla Hate Speech Detection: Type, Severity, and Target"
@@ -12,12 +40,26 @@
   year: 2026
   link: https://aclanthology.org/2026.acl-long.1565/
   task: hate
+- id: arxiv-2602-19212
+  title: Retrieval Augmented Enhanced Dual Co-Attention Framework for Target Aware Multimodal Bengali Hateful Meme Detection
+  authors: Tanvir et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2602.19212
+  task: hate
 - id: laskar-paul-2025-bahash
   title: "Bahash-AI at BLP-2025 Task 1: Bangla Hate Speech Detection using Data Augmentation and Pre-trained Model"
   authors: Laskar et al.
   venue: BLP @ EMNLP
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.33/
+  task: hate
+- id: arxiv-2512-02845
+  title: Bangla Hate Speech Classification with Fine-tuned Transformer Models
+  authors: Jafari et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2512.02845
   task: hate
 - id: raquib-etal-2025-banhate
   title: "BanHate: An Up-to-Date and Fine-Grained Bangla Hate Speech Dataset"
@@ -53,6 +95,20 @@
   venue: BLP @ EMNLP
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.36/
+  task: hate
+- id: arxiv-2507-16183
+  title: "BIDWESH: A Bangla Regional Based Hate Speech Detection Dataset"
+  authors: Fayaz et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2507.16183
+  task: hate
+- id: arxiv-2504-08408
+  title: "BOISHOMMO: Holistic Approach for Bangla Hate Speech"
+  authors: Kafi et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2504.08408
   task: hate
 - id: hasan-2025-catalyst
   title: "Catalyst at BLP-2025 Task 1: Transformer Ensembles and Multi-task Learning Approaches for Bangla Hate Speech Detection"
@@ -131,6 +187,13 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.32/
   task: hate
+- id: arxiv-2510-16985
+  title: "Parameter-Efficient Fine-Tuning for Low-Resource Languages: A Comparative Study of LLMs for Bengali Hate Speech Detection"
+  authors: Islam et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2510.16985
+  task: hate
 - id: tahmid-etal-2025-pentaml
   title: "PentaML at BLP-2025 Task 1: Linear Probing of Pre-trained Transformer-based Models for Bangla Hate Speech Detection"
   authors: Tahmid et al.
@@ -173,6 +236,20 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.49/
   task: hate
+- id: arxiv-2409-17130
+  title: "Assessing the Level of Toxicity Against Distinct Groups in Bangla Social Media Comments: A Comprehensive Investigation"
+  authors: Moin et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2409.17130
+  task: hate
+- id: arxiv-2401-06787
+  title: Deep Learning Based Cyberbullying Detection in Bangla Language
+  authors: Nath et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2401.06787
+  task: hate
 - id: fahim-2023-aambela
   title: "Aambela at BLP-2023 Task 1: Focus on UNK tokens: Analyzing Violence Inciting Bangla Text with Adding Dataset Specific New Word Tokens"
   authors: Fahim
@@ -194,6 +271,20 @@
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.17/
   task: hate
+- id: arxiv-2310-10781
+  title: "BanglaNLP at BLP-2023 Task 1: Benchmarking different Transformer Models for Violence Inciting Text Detection in Bengali"
+  authors: Saha et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2310.10781
+  task: hate
+- id: arxiv-2312-10528
+  title: "Cross-Linguistic Offensive Language Detection: BERT-Based Analysis of Bengali, Assamese, &amp; Bodo Conversational Hateful Content from Social Media"
+  authors: Mim et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2312.10528
+  task: hate
 - id: das-etal-2023-emptymind
   title: "EmptyMind at BLP-2023 Task 1: A Transformer-based Hierarchical-BERT Model for Bangla Violence-Inciting Text Detection"
   authors: Das et al.
@@ -201,12 +292,26 @@
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.19/
   task: hate
+- id: arxiv-2304-04087
+  title: Interpretable Multi Labeled Bengali Toxic Comments Classification using Deep Learning
+  authors: Belal et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2304.04087
+  task: hate
 - id: veeramani-etal-2023-lowresourcenlu
   title: "LowResourceNLU at BLP-2023 Task 1 \\& 2: Enhancing Sentiment Classification and Violence Incitement Detection in Bangla Through Aggregated Language Models"
   authors: Veeramani et al.
   venue: BLP @ EMNLP
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.29/
+  task: hate
+- id: arxiv-2311-15029
+  title: "nlpBDpatriots at BLP-2023 Task 1: A Two-Step Classification for Violence Inciting Text Detection in Bangla"
+  authors: Raihan et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2311.15029
   task: hate
 - id: raihan-etal-2023-nlpbdpatriots
   title: "nlpBDpatriots at BLP-2023 Task 1: Two-Step Classification for Violence Inciting Text Detection in Bangla - Leveraging Back-Translation and Multilinguality"
@@ -250,6 +355,13 @@
   venue: BLP @ EMNLP
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.32/
+  task: hate
+- id: arxiv-2312-05467
+  title: "Textual Toxicity in Social Media: Understanding the Bangla Toxic Language Expressed in Facebook Comment"
+  authors: Rashid et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2312.05467
   task: hate
 - id: tariquzzaman-etal-2023-linguists
   title: "the\\_linguists at BLP-2023 Task 1: A Novel Informal Bangla Fasttext Embedding for Violence Inciting Text Detection"

@@ -5,12 +5,40 @@
   year: 2026
   link: https://aclanthology.org/2026.acl-srw.34/
   task: mt
+- id: arxiv-2601-02065
+  title: "Cost-Efficient Cross-Lingual Retrieval-Augmented Generation for Low-Resource Languages: A Case Study in Bengali Agricultural Advisory"
+  authors: Hossain et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2601.02065
+  task: mt
 - id: sami-etal-2025-comparative
   title: A Comparative Analysis of Retrieval-Augmented Generation Techniques for Bengali Standard-to-Dialect Machine Translation Using LLMs
   authors: Sami et al.
   venue: BLP @ EMNLP
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.22/
+  task: mt
+- id: arxiv-2512-13487
+  title: Advancing Bangla Machine Translation Through Informal Datasets
+  authors: Roy et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2512.13487
+  task: mt
+- id: arxiv-2511-21533
+  title: "Bangla Sign Language Translation: Dataset Creation Challenges, Benchmarking and Prospects"
+  authors: Rubaiyeat et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.21533
+  task: mt
+- id: arxiv-2511-01512
+  title: "BanglaNirTox: A Large-scale Parallel Corpus for Explainable AI in Bengali Text Detoxification"
+  authors: Mohsin et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.01512
   task: mt
 - id: bhuiyan-etal-2025-bhasabodh
   title: "BhasaBodh: Bridging Bangla Dialects and Romanized Forms through Machine Translation"
@@ -19,6 +47,27 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.9/
   task: mt
+- id: arxiv-2504-02293
+  title: "Breaking the Silence: A Dataset and Benchmark for Bangla Text-to-Gloss Translation"
+  authors: Abdullah et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2504.02293
+  task: mt
+- id: arxiv-2501-05749
+  title: "Bridging Dialects: Translating Standard Bangla to Regional Variants Using Neural Models"
+  authors: Khandaker et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2501.05749
+  task: mt
+- id: arxiv-2508-10687
+  title: "Continuous Bangla Sign Language Translation: Mitigating the Expense of Gloss Annotation with the Assistance of Graph"
+  authors: Arib et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2508.10687
+  task: mt
 - id: shahrier-etal-2025-cuet
   title: "CUET\\_Expelliarmus at BLP2025 Task 2: Leveraging Instruction Translation and Refinement for Bangla-to-Python Code Generation with Open-Source LLMs"
   authors: Shahrier et al.
@@ -26,12 +75,40 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.62/
   task: mt
+- id: arxiv-2512-21709
+  title: "Detecting AI-Generated Paraphrases in Bengali: A Comparative Study of Zero-Shot and Fine-Tuned Transformers"
+  authors: Islam et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2512.21709
+  task: mt
+- id: arxiv-2511-08601
+  title: "Evaluating DisCoCirc in Translation Tasks &amp; its Limitations: A Comparative Study Between Bengali &amp; English"
+  authors: Moon et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.08601
+  task: mt
 - id: mahjabin-etal-2025-human
   title: "Human--LLM Benchmarks for Bangla Dialect Translation: Sylheti and Chittagonian on the BanglaCHQ-Summ Corpus"
   authors: Mahjabin et al.
   venue: BLP @ EMNLP
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.18/
+  task: mt
+- id: arxiv-2505-18709
+  title: "Improving Bangla Linguistics: Advanced LSTM, Bi-LSTM, and Seq2Seq Models for Translating Sylheti to Modern Bangla"
+  authors: Das et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2505.18709
+  task: mt
+- id: arxiv-2511-08507
+  title: Introducing A Bangla Sentence - Gloss Pair Dataset for Bangla Sign Language Translation and Research
+  authors: Saha et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.08507
   task: mt
 - id: das-etal-2025-iwslt
   title: "IWSLT 2025 Indic Track System Description Paper: Speech-to-Text Translation from Low-Resource Indian Languages (Bengali and Tamil) to English"
@@ -46,6 +123,20 @@
   venue: BLP @ EMNLP
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.27/
+  task: mt
+- id: arxiv-2510-18898
+  title: "Transformer-Based Low-Resource Language Translation: A Study on Standard Bengali to Sylheti"
+  authors: Oni et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2510.18898
+  task: mt
+- id: arxiv-2402-14179
+  title: "Bangla AI: A Framework for Machine Translation Utilizing Large Language Models for Ethnic Media"
+  authors: Goni et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2402.14179
   task: mt
 - id: fahim-etal-2024-banglatlit
   title: "BanglaTLit: A Benchmark Dataset for Back-Transliteration of Romanized Bangla"
@@ -68,6 +159,13 @@
   year: 2024
   link: https://aclanthology.org/2024.wmt-1.76/
   task: mt
+- id: arxiv-2412-16497
+  title: Real-time Bangla Sign Language Translator
+  authors: Pranto et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2412.16497
+  task: mt
 - id: banglanlg
   title: "BanglaNLG and BanglaT5: Benchmarks and Resources for Evaluating Low-Resource Natural Language Generation in Bangla"
   authors: Bhattacharjee et al.
@@ -76,6 +174,13 @@
   link: https://aclanthology.org/2023.findings-eacl.54/
   task: mt
   note: Seq2seq pretraining for Bangla generation.
+- id: arxiv-2311-11142
+  title: "Vashantor: A Large-scale Multilingual Benchmark Dataset for Automated Translation of Bangla Regional Dialects to Bangla Language"
+  authors: Faria et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2311.11142
+  task: mt
 - id: banglaparaphrase-p
   title: "BanglaParaphrase: A High-Quality Bangla Paraphrase Dataset"
   authors: Akil et al.

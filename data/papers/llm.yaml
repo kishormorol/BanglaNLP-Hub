@@ -1,9 +1,30 @@
+- id: arxiv-2607-05614
+  title: "BaFCo: A Document Understanding Benchmark for Complex Bangla Form Comprehension"
+  authors: Azad et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2607.05614
+  task: llm
 - id: zehady-etal-2026-banglallama
   title: "BanglaLlama: LLaMA for Bangla Language"
   authors: Zehady et al.
   venue: LoResLM
   year: 2026
   link: https://aclanthology.org/2026.loreslm-1.7/
+  task: llm
+- id: arxiv-2601-04534
+  title: "BanglaLorica: Design and Evaluation of a Robust Watermarking Algorithm for Large Language Models in Bangla Text Generation"
+  authors: Tariqul et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2601.04534
+  task: llm
+- id: arxiv-2607-03981
+  title: "BanglaMemeEvidence: A Multimodal Benchmark Dataset for Explanatory Evidence Detection in Bengali Memes"
+  authors: Faria et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2607.03981
   task: llm
 - id: sijan-etal-2026-banglasocialbench
   title: "BanglaSocialBench: A Benchmark for Evaluating Sociopragmatic and Cultural Alignment of LLMs in Bangladeshi Social Interaction"
@@ -19,12 +40,40 @@
   year: 2026
   link: https://aclanthology.org/2026.ltedi-1.1/
   task: llm
+- id: arxiv-2603-21359
+  title: "Benchmarking Bengali Dialectal Bias: A Multi-Stage Framework Integrating RAG-Based Translation and Human-Augmented RLAIF"
+  authors: Sami et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2603.21359
+  task: llm
+- id: arxiv-2605-31483
+  title: "BenHalluEval: A Multi-Task Hallucination Evaluation Framework for Large Language Models on Bengali"
+  authors: Adib et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2605.31483
+  task: llm
+- id: arxiv-2606-10061
+  title: "BenSyc: Benchmarking Conversational Sycophancy and Human Alignment in LLMs for Bengali Contexts"
+  authors: Noshin et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2606.10061
+  task: llm
 - id: sayeedi-etal-2026-llms
   title: Can LLMs Solve My Grandma's Riddle? Evaluating Multilingual Large Language Models on Reasoning Traditional Bangla Tricky Riddles
   authors: Sayeedi et al.
   venue: "*SEM"
   year: 2026
   link: https://aclanthology.org/2026.starsem-conference.22/
+  task: llm
+- id: arxiv-2601-17764
+  title: Cross-Lingual Probing and Community-Grounded Analysis of Gender Bias in Low-Resource Bengali
+  authors: Reaj et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2601.17764
   task: llm
 - id: mallik-dhar-2026-cuet
   title: "CUET-823 at SemEval-2026 Task 9: LoRA-Based Instruction Fine-Tuning of LLMs vs. Transformer Models for Bengali Polarization Detection"
@@ -40,12 +89,40 @@
   year: 2026
   link: https://aclanthology.org/2026.findings-acl.1995/
   task: llm
+- id: arxiv-2607-13248
+  title: "GSM-Plus-BN: A Perturbation-Based Benchmark for Bangla Mathematical Reasoning in Large Language Models"
+  authors: Paul et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2607.13248
+  task: llm
+- id: arxiv-2605-18111
+  title: How Good LLMs Are at Answering Bangla Medical Visual Questions? Dataset and Benchmarking
+  authors: Ahmed et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2605.18111
+  task: llm
 - id: wasi-etal-2026-mina
   title: "Mina: A Multilingual LLM-Powered Legal Assistant Agent for Empowering Access to Justice in Bangladesh"
   authors: Wasi et al.
   venue: Findings ACL
   year: 2026
   link: https://aclanthology.org/2026.findings-acl.1295/
+  task: llm
+- id: arxiv-2605-06940
+  title: "MultiSoc-4D: A Benchmark for Diagnosing Instruction-Induced Label Collapse in Closed-Set LLM Annotation of Bengali Social Media"
+  authors: Pramanik et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2605.06940
+  task: llm
+- id: arxiv-2606-16383
+  title: "Surpassing Scale by Efficiency: A Compact 135M Parameter Foundational LLM Natively Adapted for the Bangla Language"
+  authors: Nandi et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2606.16383
   task: llm
 - id: arnob-etal-2025-assessing
   title: Assessing Gender Bias of Pretrained Bangla Language Models in STEM and SHAPE Fields
@@ -69,6 +146,13 @@
   link: https://aclanthology.org/2025.findings-emnlp.492/
   task: llm
   note: 13,497 MCQs over 50 subjects at four difficulty levels; includes the harder B-REASO HEAVY subset.
+- id: arxiv-2512-19122
+  title: "BanglaForge: LLM Collaboration with Self-Refinement for Bangla Code Generation"
+  authors: Dihan et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2512.19122
+  task: llm
 - id: prama-etal-2025-banglamath
   title: "BanglaMATH : A Bangla benchmark dataset for testing LLM mathematical reasoning at grades 6, 7, and 8"
   authors: Prama et al.
@@ -82,6 +166,13 @@
   venue: Findings ACL
   year: 2025
   link: https://aclanthology.org/2025.findings-acl.179/
+  task: llm
+- id: arxiv-2511-03180
+  title: "BengaliMoralBench: A Benchmark for Auditing Moral Reasoning in Large Language Models within Bengali Language and Culture"
+  authors: Ridoy et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.03180
   task: llm
 - id: ahmed-etal-2025-bennumeval
   title: "BenNumEval: A Benchmark to Assess LLMs' Numerical Reasoning Capabilities in Bengali"
@@ -126,12 +217,26 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.53/
   task: llm
+- id: arxiv-2511-11309
+  title: "destroR: A Benchmark and Adversarial-Training Defense for Bangla Transfer Models under Meaning-Preserving Attacks"
+  authors: Ahmed et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.11309
+  task: llm
 - id: ipa-etal-2025-empowering
   title: "Empowering Low-Resource Languages: TraSe Architecture for Enhanced Retrieval-Augmented Generation in Bangla"
   authors: Ipa et al.
   venue: Workshop on Language Models for Underserved Communities
   year: 2025
   link: https://aclanthology.org/2025.lm4uc-1.2/
+  task: llm
+- id: arxiv-2501-04425
+  title: "End-to-End Bangla AI for Solving Math Olympiad Problem Benchmark: Leveraging Large Language Model Using Integrated Approach"
+  authors: Tabib et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2501.04425
   task: llm
 - id: prama-islam-2025-evaluating
   title: Evaluating Credibility and Political Bias in LLMs for News Outlets in Bangladesh
@@ -148,6 +253,13 @@
   link: https://arxiv.org/abs/2507.23248
   task: llm
   note: Eight translated datasets evaluated across ten open-source LLMs.
+- id: arxiv-2511-05324
+  title: "Evaluating Subword Tokenization Techniques for Bengali: A Benchmark Study with BengaliBPE"
+  authors: Patwary et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.05324
+  task: llm
 - id: chowdhury-etal-2025-facts
   title: "From Facts to Folklore: Evaluating Large Language Models on Bengali Cultural Knowledge"
   authors: Chowdhury et al.
@@ -169,12 +281,40 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.58/
   task: llm
+- id: arxiv-2505-21354
+  title: Leveraging Large Language Models for Bengali Math Word Problem Solving with Chain of Thought Reasoning
+  authors: Paul et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2505.21354
+  task: llm
+- id: arxiv-2504-05642
+  title: Leveraging Prompt-Tuning for Bengali Grammatical Error Explanation Using Large Language Models
+  authors: Maity et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2504.05642
+  task: llm
+- id: arxiv-2511-22769
+  title: "Modeling Romanized Hindi and Bengali: Dataset Creation and Multilingual LLM Integration"
+  authors: Gharami et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.22769
+  task: llm
 - id: hasan-etal-2025-musafir
   title: "Musafir at BLP\\_2025 Task 2: Generating Python Code from Bangla Prompts using a Multi Model Cascade and Unit Test Validation"
   authors: Hasan et al.
   venue: BLP @ EMNLP
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.57/
+  task: llm
+- id: arxiv-2511-16787
+  title: "NALA_MAINZ at BLP-2025 Task 2: A Multi-agent Approach for Bangla Instruction to Python Code Generation"
+  authors: Saadi et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2511.16787
   task: llm
 - id: saadi-etal-2025-nala
   title: "NALA\\_MAINZ at BLP-2025 Task 2: A Multi-agent Approach for Bengali Instruction to Python Code Generation"
@@ -239,12 +379,26 @@
   year: 2025
   link: https://aclanthology.org/2025.loreslm-1.16/
   task: llm
+- id: arxiv-2512-05580
+  title: Structured Reasoning with Tree-of-Thoughts for Bengali Math Word Problems
+  authors: Mahmood et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2512.05580
+  task: llm
 - id: dihan-etal-2025-teamb2b
   title: "TeamB2B at BLP-2025 Task 2: BanglaForge: LLM Collaboration with Self-Refinement for Bangla Code Generation"
   authors: Dihan et al.
   venue: BLP @ EMNLP
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.66/
+  task: llm
+- id: arxiv-2509-09101
+  title: "TigerCoder: A Novel Suite of LLMs for Code Generation in Bangla"
+  authors: Raihan et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2509.09101
   task: llm
 - id: raihan-zampieri-2025-tigerllm
   title: TigerLLM - A Family of Bangla Large Language Models
@@ -312,6 +466,34 @@
   link: https://aclanthology.org/2024.findings-acl.68/
   task: llm
   note: Parallel science exam questions; large en–bn gap.
+- id: arxiv-2412-02058
+  title: "BN-AuthProf: Benchmarking Machine Learning for Bangla Author Profiling on Social Media Texts"
+  authors: Tasnim et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2412.02058
+  task: llm
+- id: arxiv-2407-18376
+  title: Exploring Bengali Religious Dialect Biases in Large Language Models with Evaluation Perspectives
+  authors: Wasi et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2407.18376
+  task: llm
+- id: arxiv-2401-07310
+  title: "Harnessing Large Language Models Over Transformer Models for Detecting Bengali Depressive Social Media Text: A Comprehensive Study"
+  authors: Chowdhury et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2401.07310
+  task: llm
+- id: arxiv-2406-00039
+  title: How Ready Are Generative Pre-trained Large Language Models for Explaining Bengali Grammatical Errors?
+  authors: Maity et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2406.00039
+  task: llm
 - id: shahriar-barbosa-2024-improving
   title: Improving Bengali and Hindi Large Language Models
   authors: Shahriar et al.
@@ -319,12 +501,75 @@
   year: 2024
   link: https://aclanthology.org/2024.lrec-main.764/
   task: llm
+- id: arxiv-2411-10636
+  title: Mitigating Extrinsic Gender Bias for Bangla Classification Tasks
+  authors: Joy et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2411.10636
+  task: llm
+- id: arxiv-2409-09504
+  title: "Uddessho: An Extensive Benchmark Dataset for Multimodal Author Intent Classification in Low-Resource Bangla Language"
+  authors: Faria et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2409.09504
+  task: llm
+- id: arxiv-2405-02937
+  title: "Unraveling the Dominance of Large Language Models Over Transformer Models for Bangla Natural Language Inference: A Comprehensive Study"
+  authors: Faria et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2405.02937
+  task: llm
 - id: thapa-etal-2023-assessing
   title: Assessing Political Inclination of Bangla Language Models
   authors: Thapa et al.
   venue: BLP @ EMNLP
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.8/
+  task: llm
+- id: arxiv-2303-10612
+  title: Bangla Grammatical Error Detection Using T5 Transformer Model
+  authors: Shahgir et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2303.10612
+  task: llm
+- id: arxiv-2304-02739
+  title: Bengali Fake Review Detection using Semi-supervised Generative Adversarial Networks
+  authors: Shawon et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2304.02739
+  task: llm
+- id: arxiv-2308-01987
+  title: "Bengali Fake Reviews: A Benchmark Dataset and Detection System"
+  authors: Shahariar et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2308.01987
+  task: llm
+- id: arxiv-2312-10679
+  title: Bengali Intent Classification with Generative Adversarial BERT
+  authors: Hasan et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2312.10679
+  task: llm
+- id: arxiv-2309-13173
+  title: "BenLLMEval: A Comprehensive Evaluation into the Potentials and Pitfalls of Large Language Models on Bengali NLP"
+  authors: Kabir et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2309.13173
+  task: llm
+- id: arxiv-2305-10510
+  title: "ChatGPT Perpetuates Gender Bias in Machine Translation and Ignores Non-Gendered Pronouns: Findings across Bengali and Five other Low-Resource Languages"
+  authors: Ghosh et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2305.10510
   task: llm
 - id: li-etal-2023-crosslingual
   title: Crosslingual Retrieval Augmented In-context Learning for Bangla
@@ -348,6 +593,13 @@
   link: https://aclanthology.org/2022.findings-naacl.98/
   task: llm
   note: Introduces BanglaBERT + the BLUB benchmark.
+- id: arxiv-2206-08977
+  title: "BN-HTRd: A Benchmark Dataset for Document Level Offline Bangla Handwritten Text Recognition (HTR) and Line Segmentation"
+  authors: Rahman et al.
+  venue: arXiv
+  year: 2022
+  link: http://arxiv.org/abs/2206.08977
+  task: llm
 - id: sahajbert-p
   title: Distributed Deep Learning in Open Collaborations
   authors: Diskin et al.
