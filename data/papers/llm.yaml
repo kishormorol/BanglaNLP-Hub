@@ -1,43 +1,66 @@
-- id: banglabert
-  title: "BanglaBERT: Language Model Pretraining and Benchmarks for Low-Resource Language Understanding Evaluation in Bangla"
-  authors: Bhattacharjee et al.
-  venue: Findings NAACL
-  year: 2022
-  link: https://aclanthology.org/2022.findings-naacl.98/
+- id: zehady-etal-2026-banglallama
+  title: "BanglaLlama: LLaMA for Bangla Language"
+  authors: Zehady et al.
+  venue: LoResLM
+  year: 2026
+  link: https://aclanthology.org/2026.loreslm-1.7/
   task: llm
-  note: Introduces BanglaBERT + the BLUB benchmark.
-- id: benqa-p
-  title: "BEnQA: A Question Answering Benchmark for Bengali and English"
-  authors: Shafayat et al.
+- id: sijan-etal-2026-banglasocialbench
+  title: "BanglaSocialBench: A Benchmark for Evaluating Sociopragmatic and Cultural Alignment of LLMs in Bangladeshi Social Interaction"
+  authors: Sijan et al.
+  venue: ACL
+  year: 2026
+  link: https://aclanthology.org/2026.acl-srw.22/
+  task: llm
+- id: ferdusi-etal-2026-behind
+  title: "Behind the Laughter: Uncovering Gender Bias in Code-Mixed Bangla Memes"
+  authors: Ferdusi et al.
+  venue: Sixth Workshop on Language Technology for Equality, Diversity, Inclusion
+  year: 2026
+  link: https://aclanthology.org/2026.ltedi-1.1/
+  task: llm
+- id: sayeedi-etal-2026-llms
+  title: Can LLMs Solve My Grandma's Riddle? Evaluating Multilingual Large Language Models on Reasoning Traditional Bangla Tricky Riddles
+  authors: Sayeedi et al.
+  venue: "*SEM"
+  year: 2026
+  link: https://aclanthology.org/2026.starsem-conference.22/
+  task: llm
+- id: mallik-dhar-2026-cuet
+  title: "CUET-823 at SemEval-2026 Task 9: LoRA-Based Instruction Fine-Tuning of LLMs vs. Transformer Models for Bengali Polarization Detection"
+  authors: Mallik et al.
+  venue: SemEval
+  year: 2026
+  link: https://aclanthology.org/2026.semeval-1.154/
+  task: llm
+- id: roy-dipta-etal-2026-ganitllm
+  title: "GanitLLM: Difficulty-Aware Bengali Mathematical Reasoning through Curriculum-GRPO"
+  authors: Roy Dipta et al.
   venue: Findings ACL
-  year: 2024
-  link: https://aclanthology.org/2024.findings-acl.68/
+  year: 2026
+  link: https://aclanthology.org/2026.findings-acl.1995/
   task: llm
-  note: Parallel science exam questions; large en–bn gap.
-- id: benllm
-  title: "BenLLM-Eval: A Comprehensive Evaluation into the Potentials and Pitfalls of Large Language Models on Bengali NLP"
-  authors: Kabir et al.
-  venue: LREC-COLING
-  year: 2024
-  link: https://aclanthology.org/2024.lrec-main.201/
+- id: wasi-etal-2026-mina
+  title: "Mina: A Multilingual LLM-Powered Legal Assistant Agent for Empowering Access to Justice in Bangladesh"
+  authors: Wasi et al.
+  venue: Findings ACL
+  year: 2026
+  link: https://aclanthology.org/2026.findings-acl.1295/
   task: llm
-  note: Zero-shot LLMs vs fine-tuned baselines.
-- id: sahajbert-p
-  title: Distributed Deep Learning in Open Collaborations
-  authors: Diskin et al.
-  venue: NeurIPS
-  year: 2021
-  link: https://arxiv.org/abs/2106.10207
-  task: llm
-  note: Collaboratively trained Bangla ALBERT.
-- id: titulm
-  title: "TituLLMs: A Family of Bangla LLMs with Comprehensive Benchmarking"
-  authors: Nahin et al.
-  venue: arXiv
+- id: arnob-etal-2025-assessing
+  title: Assessing Gender Bias of Pretrained Bangla Language Models in STEM and SHAPE Fields
+  authors: Arnob et al.
+  venue: GeBNLP
   year: 2025
-  link: https://arxiv.org/abs/2502.11187
+  link: https://aclanthology.org/2025.gebnlp-1.24/
   task: llm
-  note: Bangla-adapted Llama models.
+- id: das-etal-2025-auditing
+  title: "Auditing Political Bias in Text Generation by GPT-4 using Sociocultural and Demographic Personas: Case of Bengali Ethnolinguistic Communities"
+  authors: Das et al.
+  venue: Workshop on Benchmarks, Harmonization, Annotation, and Standardization for Human-Centric AI in Indian Languages
+  year: 2025
+  link: https://aclanthology.org/2025.bhasha-1.3/
+  task: llm
 - id: b-reaso-p
   title: "B-REASO: A Multi-Level Multi-Faceted Bengali Evaluation Suite for Foundation Models"
   authors: Hosain and Morol
@@ -46,6 +69,34 @@
   link: https://aclanthology.org/2025.findings-emnlp.492/
   task: llm
   note: 13,497 MCQs over 50 subjects at four difficulty levels; includes the harder B-REASO HEAVY subset.
+- id: prama-etal-2025-banglamath
+  title: "BanglaMATH : A Bangla benchmark dataset for testing LLM mathematical reasoning at grades 6, 7, and 8"
+  authors: Prama et al.
+  venue: Workshop on Mathematical Natural Language Processing
+  year: 2025
+  link: https://aclanthology.org/2025.mathnlp-main.10/
+  task: llm
+- id: kamruzzaman-etal-2025-banstereoset
+  title: "BanStereoSet: A Dataset to Measure Stereotypical Social Biases in LLMs for Bangla"
+  authors: Kamruzzaman et al.
+  venue: Findings ACL
+  year: 2025
+  link: https://aclanthology.org/2025.findings-acl.179/
+  task: llm
+- id: ahmed-etal-2025-bennumeval
+  title: "BenNumEval: A Benchmark to Assess LLMs' Numerical Reasoning Capabilities in Bengali"
+  authors: Ahmed et al.
+  venue: Findings ACL
+  year: 2025
+  link: https://aclanthology.org/2025.findings-acl.915/
+  task: llm
+- id: kabir-etal-2025-bluck
+  title: "BLUCK: A Benchmark Dataset for Bengali Linguistic Understanding and Cultural Knowledge"
+  authors: Kabir et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.14/
+  task: llm
 - id: bnmmlu-p
   title: "BnMMLU: Measuring Massive Multitask Language Understanding in Bengali"
   authors: Joy and Shatabda
@@ -54,6 +105,41 @@
   link: https://arxiv.org/abs/2505.18951
   task: llm
   note: 134,375 question-option pairs across 23 domains.
+- id: juboraj-etal-2025-bracu
+  title: "BRACU\\_CL at BLP-2025 Task 2: CodeMist: A Transformer-Based Framework for Bangla Instruction-to-Code Generation"
+  authors: Juboraj et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.67/
+  task: llm
+- id: agarwala-etal-2025-code
+  title: "Code\\_Gen at BLP-2025 Task 2: BanglaCode: A Cross-lingual Benchmark for Code Generation with Translation and Assertion Strategies"
+  authors: Agarwala et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.68/
+  task: llm
+- id: roy-2025-codeanubad
+  title: "CodeAnubad at BLP-2025 Task 2: Efficient Bangla-to-Python Code Generation via Iterative LoRA Fine-Tuning of Gemma-2"
+  authors: Roy
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.53/
+  task: llm
+- id: ipa-etal-2025-empowering
+  title: "Empowering Low-Resource Languages: TraSe Architecture for Enhanced Retrieval-Augmented Generation in Bangla"
+  authors: Ipa et al.
+  venue: Workshop on Language Models for Underserved Communities
+  year: 2025
+  link: https://aclanthology.org/2025.lm4uc-1.2/
+  task: llm
+- id: prama-islam-2025-evaluating
+  title: Evaluating Credibility and Political Bias in LLMs for News Outlets in Bangladesh
+  authors: Prama et al.
+  venue: ACL
+  year: 2025
+  link: https://aclanthology.org/2025.acl-srw.42/
+  task: llm
 - id: bnllmbench-p
   title: "Evaluating LLMs’ Multilingual Capabilities for Bengali: Benchmark Creation and Performance Analysis"
   authors: Bhowmik et al.
@@ -62,3 +148,211 @@
   link: https://arxiv.org/abs/2507.23248
   task: llm
   note: Eight translated datasets evaluated across ten open-source LLMs.
+- id: chowdhury-etal-2025-facts
+  title: "From Facts to Folklore: Evaluating Large Language Models on Bengali Cultural Knowledge"
+  authors: Chowdhury et al.
+  venue: IJCNLP
+  year: 2025
+  link: https://aclanthology.org/2025.ijcnlp-short.16/
+  task: llm
+- id: hosain-morol-2025-intrinsic
+  title: Intrinsic Linguistic Bias in Formal vs. Informal Bengali Pragmatics with Progressive Context Inflation
+  authors: Hosain et al.
+  venue: IJCNLP
+  year: 2025
+  link: https://aclanthology.org/2025.findings-ijcnlp.21/
+  task: llm
+- id: pal-das-2025-ju
+  title: "JU\\_NLP at BLP-2025 Task 2: Leveraging Zero-Shot Prompting for Bangla Natural Language to Python Code Generation"
+  authors: Pal et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.58/
+  task: llm
+- id: hasan-etal-2025-musafir
+  title: "Musafir at BLP\\_2025 Task 2: Generating Python Code from Bangla Prompts using a Multi Model Cascade and Unit Test Validation"
+  authors: Hasan et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.57/
+  task: llm
+- id: saadi-etal-2025-nala
+  title: "NALA\\_MAINZ at BLP-2025 Task 2: A Multi-agent Approach for Bengali Instruction to Python Code Generation"
+  authors: Saadi et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.61/
+  task: llm
+- id: fahmid-etal-2025-nsu
+  title: "NSU\\_PiedPiper at BLP-2025 Task 2: A Chain-of-Thought with Iterative Debugging Approach for Code Generation with Bangla Instruction"
+  authors: Fahmid et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.60/
+  task: llm
+- id: raihan-etal-2025-overview
+  title: "Overview of BLP-2025 Task 2: Code Generation in Bangla"
+  authors: Raihan et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.31/
+  task: llm
+- id: islam-etal-2025-pybangla
+  title: "PyBangla at BLP-2025 Task 2: Enhancing Bangla-to-Python Code Generation with Iterative Self-Correction and Multilingual Agents"
+  authors: Islam et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.55/
+  task: llm
+- id: dewan-rifat-2025-pybhasha
+  title: "PyBhasha at BLP-2025 Task 2: Effectiveness of Semantic-Aware Translation and Ensembling in Bangla Code Generation"
+  authors: Dewan et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.64/
+  task: llm
+- id: lia-etal-2025-read
+  title: "Read Between the Lines: A Benchmark for Uncovering Political Bias in Bangla News Articles"
+  authors: Lia et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.5/
+  task: llm
+- id: asib-etal-2025-retriv
+  title: "Retriv at BLP-2025 Task 2: Test-Driven Feedback-Guided Framework for Bangla-to-Python Code Generation"
+  authors: Asib et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.59/
+  task: llm
+- id: islam-sarti-2025-reveal
+  title: "Reveal-Bangla: A Dataset for Cross-Lingual Multi-Step Reasoning Evaluation"
+  authors: Islam et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.3/
+  task: llm
+- id: sadhu-etal-2025-social
+  title: "Social Bias in Large Language Models For Bangla: An Empirical Study on Gender and Religious Bias"
+  authors: Sadhu et al.
+  venue: LoResLM
+  year: 2025
+  link: https://aclanthology.org/2025.loreslm-1.16/
+  task: llm
+- id: dihan-etal-2025-teamb2b
+  title: "TeamB2B at BLP-2025 Task 2: BanglaForge: LLM Collaboration with Self-Refinement for Bangla Code Generation"
+  authors: Dihan et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.66/
+  task: llm
+- id: raihan-zampieri-2025-tigerllm
+  title: TigerLLM - A Family of Bangla Large Language Models
+  authors: Raihan et al.
+  venue: ACL
+  year: 2025
+  link: https://aclanthology.org/2025.acl-short.69/
+  task: llm
+- id: titulm
+  title: "TituLLMs: A Family of Bangla LLMs with Comprehensive Benchmarking"
+  authors: Nahin et al.
+  venue: arXiv
+  year: 2025
+  link: https://arxiv.org/abs/2502.11187
+  task: llm
+  note: Bangla-adapted Llama models.
+- id: farazi-reza-2025-troopers
+  title: "Troopers at BLP-2025 Task 2: Reward-Selective Fine-Tuning based Code Generation Approach for Bangla Prompts"
+  authors: Farazi et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.54/
+  task: llm
+- id: mukherjee-etal-2025-women
+  title: "Women, Infamous, and Exotic Beings: A Comparative Study of Honorific Usages in Wikipedia and LLMs for Bengali and Hindi"
+  authors: Mukherjee et al.
+  venue: EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.emnlp-main.966/
+  task: llm
+- id: aupi-etal-2025-wonbias
+  title: "WoNBias: A Dataset for Classifying Bias \\& Prejudice Against Women in Bengali Text"
+  authors: Aupi et al.
+  venue: GeBNLP
+  year: 2025
+  link: https://aclanthology.org/2025.gebnlp-1.10/
+  task: llm
+- id: sadhu-etal-2024-empirical
+  title: An Empirical Study of Gendered Stereotypes in Emotional Attributes for Bangla in Multilingual Large Language Models
+  authors: Sadhu et al.
+  venue: GeBNLP
+  year: 2024
+  link: https://aclanthology.org/2024.gebnlp-1.25/
+  task: llm
+- id: sadhu-etal-2024-empirical-study
+  title: An Empirical Study on the Characteristics of Bias upon Context Length Variation for Bangla
+  authors: Sadhu et al.
+  venue: Findings ACL
+  year: 2024
+  link: https://aclanthology.org/2024.findings-acl.88/
+  task: llm
+- id: benllm
+  title: "BenLLM-Eval: A Comprehensive Evaluation into the Potentials and Pitfalls of Large Language Models on Bengali NLP"
+  authors: Kabir et al.
+  venue: LREC-COLING
+  year: 2024
+  link: https://aclanthology.org/2024.lrec-main.201/
+  task: llm
+  note: Zero-shot LLMs vs fine-tuned baselines.
+- id: benqa-p
+  title: "BEnQA: A Question Answering Benchmark for Bengali and English"
+  authors: Shafayat et al.
+  venue: Findings ACL
+  year: 2024
+  link: https://aclanthology.org/2024.findings-acl.68/
+  task: llm
+  note: Parallel science exam questions; large en–bn gap.
+- id: shahriar-barbosa-2024-improving
+  title: Improving Bengali and Hindi Large Language Models
+  authors: Shahriar et al.
+  venue: LREC-COLING
+  year: 2024
+  link: https://aclanthology.org/2024.lrec-main.764/
+  task: llm
+- id: thapa-etal-2023-assessing
+  title: Assessing Political Inclination of Bangla Language Models
+  authors: Thapa et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.8/
+  task: llm
+- id: li-etal-2023-crosslingual
+  title: Crosslingual Retrieval Augmented In-context Learning for Bangla
+  authors: Li et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.15/
+  task: llm
+- id: das-etal-2023-toward
+  title: "Toward Cultural Bias Evaluation Datasets: The Case of Bengali Gender, Religious, and National Identity"
+  authors: Das et al.
+  venue: First Workshop on Cross-Cultural Considerations in NLP
+  year: 2023
+  link: https://aclanthology.org/2023.c3nlp-1.8/
+  task: llm
+- id: banglabert
+  title: "BanglaBERT: Language Model Pretraining and Benchmarks for Low-Resource Language Understanding Evaluation in Bangla"
+  authors: Bhattacharjee et al.
+  venue: Findings NAACL
+  year: 2022
+  link: https://aclanthology.org/2022.findings-naacl.98/
+  task: llm
+  note: Introduces BanglaBERT + the BLUB benchmark.
+- id: sahajbert-p
+  title: Distributed Deep Learning in Open Collaborations
+  authors: Diskin et al.
+  venue: NeurIPS
+  year: 2021
+  link: https://arxiv.org/abs/2106.10207
+  task: llm
+  note: Collaboratively trained Bangla ALBERT.

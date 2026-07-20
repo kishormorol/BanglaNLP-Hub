@@ -1,9 +1,72 @@
+- id: hasan-etal-2026-banglaipa
+  title: "BanglaIPA: Towards Robust Text-to-IPA Transcription with Contextual Rewriting in Bengali"
+  authors: Hasan et al.
+  venue: LoResLM
+  year: 2026
+  link: https://aclanthology.org/2026.loreslm-1.12/
+  task: speech
+- id: hasan-roy-dipta-2025-banglatalk
+  title: "BanglaTalk: Towards Real-Time Speech Assistance for Bengali Regional Dialects"
+  authors: Hasan et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.4/
+  task: speech
+- id: samin-2025-byte
+  title: Byte Pair Encoding Is All You Need For Automatic Bengali Speech Recognition
+  authors: Samin
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.1/
+  task: speech
+- id: das-etal-2024-low
+  title: "Low-Resource Counterspeech Generation for Indic Languages: The Case of Bengali and Hindi"
+  authors: Das et al.
+  venue: Findings EACL
+  year: 2024
+  link: https://aclanthology.org/2024.findings-eacl.111/
+  task: speech
 - id: oodspeech-p
   title: "OOD-Speech: A Large Bengali Speech Recognition Dataset for Out-of-Distribution Benchmarking"
   authors: Rakib et al.
   venue: Interspeech
   year: 2023
   link: https://arxiv.org/abs/2305.09688
+  task: speech
+- id: nandi-etal-2023-pseudo
+  title: Pseudo-Labeling for Domain-Agnostic Bangla Automatic Speech Recognition
+  authors: Nandi et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.16/
+  task: speech
+- id: saha-das-mandal-2020-acoustic
+  title: Acoustic Analysis of Native (L1) Bengali Speakers' Phonological Realization of English Lexical Stress Contrast
+  authors: Saha et al.
+  venue: ICON
+  year: 2020
+  link: https://aclanthology.org/2020.icon-main.46/
+  task: speech
+- id: sadeq-etal-2020-improving
+  title: Improving End-to-End Bangla Speech Recognition with Semi-supervised Training
+  authors: Sadeq et al.
+  venue: Findings EMNLP
+  year: 2020
+  link: https://aclanthology.org/2020.findings-emnlp.169/
+  task: speech
+- id: ahmed-etal-2020-preparation
+  title: Preparation of Bangla Speech Corpus from Publicly Available Audio \& Text
+  authors: Ahmed et al.
+  venue: LREC
+  year: 2020
+  link: https://aclanthology.org/2020.lrec-1.811/
+  task: speech
+- id: shubha-etal-2019-customizing
+  title: Customizing Grapheme-to-Phoneme System for Non-Trivial Transcription Problems in Bangla Language
+  authors: Shubha et al.
+  venue: NAACL
+  year: 2019
+  link: https://aclanthology.org/N19-1322/
   task: speech
 - id: slr53-p
   title: Crowd-Sourced Speech Corpora for Javanese, Sundanese, Sinhala, Nepali, and Bangladeshi Bengali
@@ -13,3 +76,45 @@
   link: https://research.google/pubs/pub47347/
   task: speech
   note: OpenSLR 53.
+- id: gutkin-etal-2016-tts
+  title: "TTS for Low Resource Languages: A Bangla Synthesizer"
+  authors: Gutkin et al.
+  venue: LREC
+  year: 2016
+  link: https://aclanthology.org/L16-1317/
+  task: speech
+- id: ghosh-2015-acoustic
+  title: Acoustic Correlates of Voicing and Gemination in Bangla
+  authors: Ghosh
+  venue: ICON
+  year: 2015
+  link: https://aclanthology.org/W15-5957/
+  task: speech
+- id: mukherjee-das-mandal-2012-bengali
+  title: A Bengali Speech Synthesizer on Android OS
+  authors: Mukherjee et al.
+  venue: Workshop on Speech and Multimodal Interaction in Assistive Environments
+  year: 2012
+  link: https://aclanthology.org/W12-3507/
+  task: speech
+- id: ekbal-etal-2009-voted
+  title: Voted Approach for Part of Speech Tagging in Bengali
+  authors: Ekbal et al.
+  venue: PACLIC
+  year: 2009
+  link: https://aclanthology.org/Y09-1014/
+  task: speech
+- id: nath-etal-2008-unsupervised
+  title: Unsupervised Parts-of-Speech Induction for Bengali
+  authors: Nath et al.
+  venue: LREC
+  year: 2008
+  link: https://aclanthology.org/L08-1242/
+  task: speech
+- id: dandapat-etal-2007-automatic
+  title: "Automatic Part-of-Speech Tagging for Bengali: An Approach for Morphologically Rich Languages in a Poor Resource Scenario"
+  authors: Dandapat et al.
+  venue: ACL
+  year: 2007
+  link: https://aclanthology.org/P07-2056/
+  task: speech

@@ -1,1 +1,217 @@
-[]
+- id: bhattacharyya-bhattacharya-2025-leveraging
+  title: "Leveraging LLMs for Bangla Grammar Error Correction: Error Categorization, Synthetic Data, and Model Evaluation"
+  authors: Bhattacharyya et al.
+  venue: Findings ACL
+  year: 2025
+  link: https://aclanthology.org/2025.findings-acl.431/
+  task: pos
+- id: afrin-etal-2023-banlemma
+  title: "BanLemma: A Word Formation Dependent Rule and Dictionary Based Bangla Lemmatizer"
+  authors: Afrin et al.
+  venue: Findings EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.findings-emnlp.240/
+  task: pos
+- id: fahim-etal-2023-contextual
+  title: "Contextual Bangla Neural Stemmer: Finding Contextualized Root Word Representations for Bangla Words"
+  authors: Fahim et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.11/
+  task: pos
+- id: majumdar-etal-2022-bengali
+  title: Bengali and Magahi PUD Treebank and Parser
+  authors: Majumdar et al.
+  venue: LREC
+  year: 2022
+  link: https://aclanthology.org/2022.wildre-1.11/
+  task: pos
+- id: das-etal-2020-rule
+  title: A Rule Based Lightweight Bengali Stemmer
+  authors: Das et al.
+  venue: ICON
+  year: 2020
+  link: https://aclanthology.org/2020.icon-main.55/
+  task: pos
+- id: ghosh-etal-2019-dependency
+  title: Dependency Parser for Bengali-English Code-Mixed Data enhanced with a Synthetic Treebank
+  authors: Ghosh et al.
+  venue: International Workshop on Treebanks and Linguistic Theories
+  year: 2019
+  link: https://aclanthology.org/W19-7810/
+  task: pos
+- id: raha-etal-2019-development
+  title: Development of POS tagger for English-Bengali Code-Mixed data
+  authors: Raha et al.
+  venue: ICON
+  year: 2019
+  link: https://aclanthology.org/2019.icon-1.17/
+  task: pos
+- id: das-stede-2018-developing
+  title: Developing the Bangla RST Discourse Treebank
+  authors: Das et al.
+  venue: LREC
+  year: 2018
+  link: https://aclanthology.org/L18-1288/
+  task: pos
+- id: chakrabarty-etal-2016-neural
+  title: A Neural Lemmatizer for Bengali
+  authors: Chakrabarty et al.
+  venue: LREC
+  year: 2016
+  link: https://aclanthology.org/L16-1406/
+  task: pos
+- id: das-etal-2016-cross
+  title: Cross-lingual transfer parser from Hindi to Bengali using delexicalization and chunking
+  authors: Das et al.
+  venue: ICON
+  year: 2016
+  link: https://aclanthology.org/W16-6313/
+  task: pos
+- id: das-etal-2016-development
+  title: Development of a Bengali parser by cross-lingual transfer from Hindi
+  authors: Das et al.
+  venue: WSSANLP
+  year: 2016
+  link: https://aclanthology.org/W16-3704/
+  task: pos
+- id: karmakar-etal-2016-graph
+  title: Graph theoretic interpretation of Bangla traditional grammar
+  authors: Karmakar et al.
+  venue: ICON
+  year: 2016
+  link: https://aclanthology.org/W16-6317/
+  task: pos
+- id: karmakar-ghosh-2016-syntax
+  title: "Syntax and Pragmatics of Conversation: A Case of Bangla"
+  authors: Karmakar et al.
+  venue: ICON
+  year: 2016
+  link: https://aclanthology.org/W16-6309/
+  task: pos
+- id: dasgupta-etal-2015-compositionality
+  title: Compositionality in Bangla Compound Verbs and their Processing in the Mental Lexicon
+  authors: Dasgupta et al.
+  venue: ICON
+  year: 2015
+  link: https://aclanthology.org/W15-5909/
+  task: pos
+- id: dhar-sarkar-2014-accurate
+  title: Accurate Identification of the Karta (Subject) Relation in Bangla
+  authors: Dhar et al.
+  venue: ICON
+  year: 2014
+  link: https://aclanthology.org/W14-5139/
+  task: pos
+- id: barik-sarkar-2014-handling
+  title: Handling Plurality in Bengali Noun Phrases
+  authors: Barik et al.
+  venue: ICON
+  year: 2014
+  link: https://aclanthology.org/W14-5142/
+  task: pos
+- id: ghosh-2014-making
+  title: Making Verb Frames for Bangla Vector Verbs
+  authors: Ghosh
+  venue: ICON
+  year: 2014
+  link: https://aclanthology.org/W14-5143/
+  task: pos
+- id: senapati-garain-2013-guitar
+  title: GuiTAR-based Pronominal Anaphora Resolution in Bengali
+  authors: Senapati et al.
+  venue: ACL
+  year: 2013
+  link: https://aclanthology.org/P13-2023/
+  task: pos
+- id: sarkar-bandyopadhyay-2013-application
+  title: On Application of Conditional Random Field in Stemming of Bengali Natural Language Text
+  authors: Sarkar et al.
+  venue: WSSANLP
+  year: 2013
+  link: https://aclanthology.org/W13-4705/
+  task: pos
+- id: dhar-etal-2012-hybrid
+  title: A Hybrid Dependency Parser for Bangla
+  authors: Dhar et al.
+  venue: ALR
+  year: 2012
+  link: https://aclanthology.org/W12-5207/
+  task: pos
+- id: mukhopadhayay-etal-2012-automatic
+  title: Automatic Extraction of Compound Verbs from Bangla Corpora
+  authors: Mukhopadhayay et al.
+  venue: WSSANLP
+  year: 2012
+  link: https://aclanthology.org/W12-5013/
+  task: pos
+- id: das-etal-2012-evaluation
+  title: Evaluation of Two Bengali Dependency Parsers
+  authors: Das et al.
+  venue: WMT
+  year: 2012
+  link: https://aclanthology.org/W12-5613/
+  task: pos
+- id: dasgupta-etal-2012-modelling
+  title: "Modelling the Organization and Processing of Bangla Polymorphemic Words in the Mental Lexicon: A Computational Approach"
+  authors: Dasgupta et al.
+  venue: COLING
+  year: 2012
+  link: https://aclanthology.org/C12-2024/
+  task: pos
+- id: das-etal-2010-automatic
+  title: Automatic Extraction of Complex Predicates in Bengali
+  authors: Das et al.
+  venue: 2010 Workshop on Multiword Expressions
+  year: 2010
+  link: https://aclanthology.org/W10-3706/
+  task: pos
+- id: ghosh-etal-2010-clause
+  title: Clause Identification and Classification in Bengali
+  authors: Ghosh et al.
+  venue: WSSANLP
+  year: 2010
+  link: https://aclanthology.org/W10-3603/
+  task: pos
+- id: chakraborty-bandyopadhyay-2010-identification
+  title: "Identification of Reduplication in Bengali Corpus and their Semantic Analysis: A Rule Based Approach"
+  authors: Chakraborty et al.
+  venue: 2010 Workshop on Multiword Expressions
+  year: 2010
+  link: https://aclanthology.org/W10-3710/
+  task: pos
+- id: dandapat-etal-2009-complex
+  title: Complex Linguistic Annotation -- No Easy Way Out! A Case from Bangla and Hindi POS Labeling Tasks
+  authors: Dandapat et al.
+  venue: LAW
+  year: 2009
+  link: https://aclanthology.org/W09-3002/
+  task: pos
+- id: faridee-tyers-2009-development
+  title: Development of a morphological analyser for Bengali
+  authors: Faridee et al.
+  venue: First International Workshop on Free/Open-Source Rule-Based Machine Translation
+  year: 2009
+  link: https://aclanthology.org/2009.freeopmt-1.8/
+  task: pos
+- id: sarkar-bandyopadhyay-2008-design
+  title: Design of a Rule-based Stemmer for Natural Language Text in Bengali
+  authors: Sarkar et al.
+  venue: IJCNLP
+  year: 2008
+  link: https://aclanthology.org/I08-3012/
+  task: pos
+- id: choudhury-etal-2007-evolution
+  title: "Evolution, Optimization, and Language Change: The Case of Bengali Verb Inflections"
+  authors: Choudhury et al.
+  venue: ACL
+  year: 2007
+  link: https://aclanthology.org/W07-1309/
+  task: pos
+- id: sengupta-chaudhuri-1997-delayed
+  title: A Delayed Syntactic-Encoding-based LFG parsing strategy for an Indian Language -- Bangla
+  authors: Sengupta et al.
+  venue: Computational Linguistics
+  year: 1997
+  link: https://aclanthology.org/J97-2005/
+  task: pos

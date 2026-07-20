@@ -21,3 +21,56 @@ IJCNLP: gold
 Springer: gray
 MDPI Data: gray
 SN Computer Science: gray
+
+# --- ACL Anthology bulk import (2026-07-19): conferences colour-matched to their
+# tier; workshops and regional venues render gray, the honest default. ---
+"*SEM": blue
+2010 Workshop on Multiword Expressions: gray
+ALR: gray
+ALTA: gray
+CLIA: gray
+COLING: gold
+Computational Linguistics: green
+ConTeNTS: gray
+EACL: blue
+EAMT: gray
+Eighth Workshop on Asian Language Resouces: gray
+Fifth Workshop on Computational Approaches to Linguistic Code-Switching: gray
+First International Workshop on Free/Open-Source Rule-Based Machine Translation: gray
+First Workshop in South East Asian Language Processing: gray
+First Workshop on Challenges in Processing South Asian Languages: gray
+First Workshop on Cross-Cultural Considerations in NLP: gray
+First Workshop on Multimodal Machine Translation for Low Resource Languages: gray
+GeBNLP: gray
+ICON: gold
+IWSLT: gray
+International Workshop on Natural Language Processing for Social Media: gray
+International Workshop on Treebanks and Linguistic Theories: gray
+LAW: gray
+LDK: gray
+LoResLM: gray
+MIA: gray
+MT Summit: gray
+Ninth Workshop on NLP for Similar Languages: gray
+PACLIC: gray
+QuantumNLP: gray
+RANLP: gray
+ROCLING: gray
+Second International Workshop on Resources and Techniques for User Information in Abusive Language Analysis: gray
+Second Workshop on Computational Approaches to Code Switching: gray
+"Second Workshop on Trolling, Aggression and Cyberbullying": gray
+"Sixth Workshop on Language Technology for Equality, Diversity, Inclusion": gray
+W-NUT: gray
+WAT: gray
+WMT: gray
+WSSANLP: gray
+"Workshop on Benchmarks, Harmonization, Annotation, and Standardization for Human-Centric AI in Indian Languages": gray
+Workshop on Biomedical Language Processing: gray
+Workshop on Computational Approaches to Subjectivity: gray
+Workshop on Indian Language Data: gray
+Workshop on Language Models for Underserved Communities: gray
+Workshop on Mathematical Natural Language Processing: gray
+Workshop on Multimodal Models for Low-Resource Contexts and Social Impact: gray
+Workshop on Speech and Multimodal Interaction in Assistive Environments: gray
+Workshop on example-based machine translation: gray
+CLP: gray

@@ -1,3 +1,220 @@
+- id: hasan-etal-2026-enhancing
+  title: Enhancing Mental Health Counseling Support in Bangladesh using Culturally-grounded Knowledge
+  authors: Hasan et al.
+  venue: CLP
+  year: 2026
+  link: https://aclanthology.org/2026.clpsych-1.13/
+  task: sentiment
+- id: kawser-etal-2025-hybrid
+  title: A Hybrid Transformer--Sequential Model for Depression Detection in Bangla--English Code-Mixed Text
+  authors: Kawser et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.8/
+  task: sentiment
+- id: kabir-etal-2025-advancing
+  title: Advancing Subjectivity Detection in Bengali News Articles Using Transformer Models with POS-Aware Features
+  authors: Kabir et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.11/
+  task: sentiment
+- id: rakshit-flanigan-2025-alankaar
+  title: "Alankaar: A Dataset for Figurativeness Understanding in Bangla"
+  authors: Rakshit et al.
+  venue: RANLP
+  year: 2025
+  link: https://aclanthology.org/2025.ranlp-1.114/
+  task: sentiment
+- id: jawad-etal-2025-benchmarking
+  title: Benchmarking Large Language Models on Bangla Dialect Translation and Dialectal Sentiment Analysis
+  authors: Jawad et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.26/
+  task: sentiment
+- id: al-sefat-2025-bengalifig
+  title: "BengaliFig: A Low-Resource Challenge for Figurative and Culturally Grounded Reasoning in Bengali"
+  authors: Al Sefat
+  venue: Workshop on Multimodal Models for Low-Resource Contexts and Social Impact
+  year: 2025
+  link: https://aclanthology.org/2025.mmloso-1.6/
+  task: sentiment
+- id: alam-etal-2025-bnsentmix
+  title: "BnSentMix: A Diverse Bengali-English Code-Mixed Dataset for Sentiment Analysis"
+  authors: Alam et al.
+  venue: LoResLM
+  year: 2025
+  link: https://aclanthology.org/2025.loreslm-1.4/
+  task: sentiment
+- id: das-ghosh-2025-llms
+  title: "Can LLMs be Literary Companions?: Analysing LLMs on Bengali Figures of Speech Identification"
+  authors: Das et al.
+  venue: EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.emnlp-main.941/
+  task: sentiment
+- id: pal-das-2025-checksent
+  title: "CheckSent-BN: A Bengali Multi-Task Dataset for Claim Checkworthiness and Sentiment Classification from News Headlines"
+  authors: Pal et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.10/
+  task: sentiment
+- id: pal-etal-2025-hybrid
+  title: Hybrid Classical-Quantum Framework for Sentiment Classification and Claim Check-Worthiness Identification in Bengali
+  authors: Pal et al.
+  venue: QuantumNLP
+  year: 2025
+  link: https://aclanthology.org/2025.quantumnlp-1.3/
+  task: sentiment
+- id: elahi-etal-2024-comparative
+  title: A Comparative Analysis of Noise Reduction Methods in Sentiment Analysis on Noisy Bangla Texts
+  authors: Elahi et al.
+  venue: W-NUT
+  year: 2024
+  link: https://aclanthology.org/2024.wnut-1.5/
+  task: sentiment
+- id: raihan-etal-2024-emomix
+  title: "EmoMix-3L: A Code-Mixed Dataset for Bangla-English-Hindi for Emotion Detection"
+  authors: Raihan et al.
+  venue: Workshop on Indian Language Data
+  year: 2024
+  link: https://aclanthology.org/2024.wildre-1.2/
+  task: sentiment
+- id: hasan-etal-2024-zero
+  title: "Zero- and Few-Shot Prompting with LLMs: A Comparative Study with Fine-tuned Models for Bangla Sentiment Analysis"
+  authors: Hasan et al.
+  venue: LREC-COLING
+  year: 2024
+  link: https://aclanthology.org/2024.lrec-main.1549/
+  task: sentiment
+- id: fahim-2023-aambela-blp
+  title: "Aambela at BLP-2023 Task 2: Enhancing BanglaBERT Performance for Bangla Sentiment Analysis Task with In Task Pretraining and Adversarial Weight Perturbation"
+  authors: Fahim
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.42/
+  task: sentiment
+- id: kabir-etal-2023-banglabook
+  title: "BanglaBook: A Large-scale Bangla Dataset for Sentiment Analysis from Book Reviews"
+  authors: Kabir et al.
+  venue: Findings ACL
+  year: 2023
+  link: https://aclanthology.org/2023.findings-acl.80/
+  task: sentiment
+- id: saha-nanda-2023-banglanlp-blp
+  title: "BanglaNLP at BLP-2023 Task 2: Benchmarking different Transformer Models for Sentiment Analysis of Bangla Social Media Posts"
+  authors: Saha et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.34/
+  task: sentiment
+- id: kabir-etal-2023-bemolexbert
+  title: "BEmoLexBERT: A Hybrid Model for Multilabel Textual Emotion Classification in Bangla by Combining Transformers with Lexicon Features"
+  authors: Kabir et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.7/
+  task: sentiment
+- id: fatema-etal-2023-emptymind
+  title: "EmptyMind at BLP-2023 Task 2: Sentiment Analysis of Bangla Social Media Posts using Transformer-Based Models"
+  authors: Fatema et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.39/
+  task: sentiment
+- id: liu-etal-2023-knowdee
+  title: "Knowdee at BLP-2023 Task 2: Improving Bangla Sentiment Analysis Using Ensembled Models with Pseudo-Labeling"
+  authors: Liu et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.35/
+  task: sentiment
+- id: chakma-hasan-2023-lowresource
+  title: "LowResource at BLP-2023 Task 2: Leveraging BanglaBert for Low Resource Sentiment Analysis of Bangla Language"
+  authors: Chakma et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.47/
+  task: sentiment
+- id: rahman-uzuner-2023-m1437
+  title: "M1437 at BLP-2023 Task 2: Harnessing Bangla Text for Sentiment Analysis: A Transformer-based Approach"
+  authors: Rahman et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.36/
+  task: sentiment
+- id: goswami-etal-2023-nlpbdpatriots
+  title: "nlpBDpatriots at BLP-2023 Task 2: A Transfer Learning Approach towards Bangla Sentiment Analysis"
+  authors: Goswami et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.37/
+  task: sentiment
+- id: seth-etal-2023-rsm
+  title: "RSM-NLP at BLP-2023 Task 2: Bangla Sentiment Analysis using Weighted and Majority Voted Fine-Tuned Transformers"
+  authors: Seth et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.40/
+  task: sentiment
+- id: dey-etal-2023-semantics-squad
+  title: "Semantics Squad at BLP-2023 Task 2: Sentiment Analysis of Bangla Text with Fine Tuned Transformer Based Models"
+  authors: Dey et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.41/
+  task: sentiment
+- id: raihan-etal-2023-sentmix
+  title: "SentMix-3L: A Novel Code-Mixed Test Dataset in Bangla-English-Hindi for Sentiment Analysis"
+  authors: Raihan et al.
+  venue: First Workshop in South East Asian Language Processing
+  year: 2023
+  link: https://aclanthology.org/2023.sealp-1.6/
+  task: sentiment
+- id: atabuzzaman-etal-2023-transformer
+  title: Transformer-based Bengali Textual Emotion Recognition
+  authors: Atabuzzaman et al.
+  venue: ICON
+  year: 2023
+  link: https://aclanthology.org/2023.icon-1.55/
+  task: sentiment
+- id: mukherjee-etal-2023-ufal-uld
+  title: UFAL-ULD at BLP-2023 Task 2 Sentiment Classification in Bangla Text
+  authors: Mukherjee et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.45/
+  task: sentiment
+- id: khushbu-etal-2023-ushoshi2023
+  title: "Ushoshi2023 at BLP-2023 Task 2: A Comparison of Traditional to Advanced Linguistic Models to Analyze Sentiment in Bangla Texts"
+  authors: Khushbu et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.38/
+  task: sentiment
+- id: emotion-p
+  title: "BEmoC: A Corpus for Identifying Emotion in Bengali Texts"
+  authors: Das et al.
+  venue: SN Computer Science
+  year: 2022
+  link: https://link.springer.com/article/10.1007/s42979-022-01028-w
+  task: sentiment
+- id: islam-etal-2022-emonoba
+  title: "EmoNoBa: A Dataset for Analyzing Fine-Grained Emotions on Noisy Bangla Texts"
+  authors: Islam et al.
+  venue: IJCNLP
+  year: 2022
+  link: https://aclanthology.org/2022.aacl-short.17/
+  task: sentiment
+- id: bhowmick-jana-2021-sentiment
+  title: Sentiment Analysis For Bengali Using Transformer Based Models
+  authors: Bhowmick et al.
+  venue: ICON
+  year: 2021
+  link: https://aclanthology.org/2021.icon-main.58/
+  task: sentiment
 - id: sentnob-p
   title: "SentNoB: A Dataset for Analysing Sentiment on Noisy Bangla Texts"
   authors: Islam et al.
@@ -6,6 +223,13 @@
   link: https://aclanthology.org/2021.findings-emnlp.278/
   task: sentiment
   note: Noisy user-generated content, 13 domains.
+- id: sazzed-2020-cross
+  title: Cross-lingual sentiment classification in low-resource Bengali language
+  authors: Sazzed
+  venue: W-NUT
+  year: 2020
+  link: https://aclanthology.org/2020.wnut-1.8/
+  task: sentiment
 - id: absa-p
   title: Datasets for Aspect-Based Sentiment Analysis in Bangla and Its Baseline Evaluation
   authors: Rahman & Dey
@@ -14,10 +238,31 @@
   link: https://www.mdpi.com/2306-5729/3/2/15
   task: sentiment
   note: "Two datasets: cricket comments and customer reviews."
-- id: emotion-p
-  title: "BEmoC: A Corpus for Identifying Emotion in Bengali Texts"
+- id: das-bandyopadhyay-2010-discerning
+  title: Discerning Emotions of Bloggers based on Topics -- a Supervised Coreference Approach in Bengali
   authors: Das et al.
-  venue: SN Computer Science
-  year: 2022
-  link: https://link.springer.com/article/10.1007/s42979-022-01028-w
+  venue: ROCLING
+  year: 2010
+  link: https://aclanthology.org/O10-2008/
+  task: sentiment
+- id: das-bandyopadhyay-2010-finding
+  title: Finding Emotion Holder from Bengali Blog Texts---An Unsupervised Syntactic Approach
+  authors: Das et al.
+  venue: PACLIC
+  year: 2010
+  link: https://aclanthology.org/Y10-1071/
+  task: sentiment
+- id: das-bandyopadhyay-2010-labeling
+  title: Labeling Emotion in Bengali Blog Corpus -- A Fine Grained Tagging at Sentence Level
+  authors: Das et al.
+  venue: Eighth Workshop on Asian Language Resouces
+  year: 2010
+  link: https://aclanthology.org/W10-3207/
+  task: sentiment
+- id: das-bandyopadhyay-2009-word
+  title: Word to Sentence Level Emotion Tagging for Bengali Blogs
+  authors: Das et al.
+  venue: ACL
+  year: 2009
+  link: https://aclanthology.org/P09-2038/
   task: sentiment

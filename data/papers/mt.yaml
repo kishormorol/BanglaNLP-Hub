@@ -1,11 +1,73 @@
-- id: notlowresource
-  title: "Not Low-Resource Anymore: Aligner Ensembling, Batch Filtering, and New Datasets for Bengali-English Machine Translation"
+- id: hasan-etal-2026-banglastem
+  title: "BanglaSTEM: A Parallel Corpus and Term-Weighted Evaluation for Technical Bangla-English Translation"
   authors: Hasan et al.
-  venue: EMNLP
-  year: 2020
-  link: https://aclanthology.org/2020.emnlp-main.207/
+  venue: ACL
+  year: 2026
+  link: https://aclanthology.org/2026.acl-srw.34/
   task: mt
-  note: 2.75M-pair corpus; strong NMT baselines.
+- id: sami-etal-2025-comparative
+  title: A Comparative Analysis of Retrieval-Augmented Generation Techniques for Bengali Standard-to-Dialect Machine Translation Using LLMs
+  authors: Sami et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.22/
+  task: mt
+- id: bhuiyan-etal-2025-bhasabodh
+  title: "BhasaBodh: Bridging Bangla Dialects and Romanized Forms through Machine Translation"
+  authors: Bhuiyan et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.9/
+  task: mt
+- id: shahrier-etal-2025-cuet
+  title: "CUET\\_Expelliarmus at BLP2025 Task 2: Leveraging Instruction Translation and Refinement for Bangla-to-Python Code Generation with Open-Source LLMs"
+  authors: Shahrier et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.62/
+  task: mt
+- id: mahjabin-etal-2025-human
+  title: "Human--LLM Benchmarks for Bangla Dialect Translation: Sylheti and Chittagonian on the BanglaCHQ-Summ Corpus"
+  authors: Mahjabin et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.18/
+  task: mt
+- id: das-etal-2025-iwslt
+  title: "IWSLT 2025 Indic Track System Description Paper: Speech-to-Text Translation from Low-Resource Indian Languages (Bengali and Tamil) to English"
+  authors: Das et al.
+  venue: IWSLT
+  year: 2025
+  link: https://aclanthology.org/2025.iwslt-1.23/
+  task: mt
+- id: haider-etal-2025-robustness
+  title: Robustness of LLMs to Transliteration Perturbations in Bangla
+  authors: Haider et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.27/
+  task: mt
+- id: fahim-etal-2024-banglatlit
+  title: "BanglaTLit: A Benchmark Dataset for Back-Transliteration of Romanized Bangla"
+  authors: Fahim et al.
+  venue: Findings EMNLP
+  year: 2024
+  link: https://aclanthology.org/2024.findings-emnlp.859/
+  task: mt
+- id: saha-etal-2024-bnpc
+  title: "BnPC: A Gold Standard Corpus for Paraphrase Detection in Bangla, and its Evaluation"
+  authors: Saha et al.
+  venue: LREC-COLING
+  year: 2024
+  link: https://aclanthology.org/2024.bucc-1.8/
+  task: mt
+- id: hatami-etal-2024-english
+  title: "English-to-Low-Resource Translation: A Multimodal Approach for Hindi, Malayalam, Bengali, and Hausa"
+  authors: Hatami et al.
+  venue: WMT
+  year: 2024
+  link: https://aclanthology.org/2024.wmt-1.76/
+  task: mt
 - id: banglanlg
   title: "BanglaNLG and BanglaT5: Benchmarks and Resources for Evaluating Low-Resource Natural Language Generation in Bangla"
   authors: Bhattacharjee et al.
@@ -21,10 +83,116 @@
   year: 2022
   link: https://aclanthology.org/2022.aacl-short.33/
   task: mt
+- id: laskar-etal-2022-english
+  title: English to Bengali Multimodal Neural Machine Translation using Transliteration-based Phrase Pairs Augmentation
+  authors: Laskar et al.
+  venue: WAT
+  year: 2022
+  link: https://aclanthology.org/2022.wat-1.14/
+  task: mt
+- id: nath-etal-2022-phonetic
+  title: Phonetic, Semantic, and Articulatory Features in Assamese-Bengali Cognate Detection
+  authors: Nath et al.
+  venue: Ninth Workshop on NLP for Similar Languages
+  year: 2022
+  link: https://aclanthology.org/2022.vardial-1.5/
+  task: mt
 - id: samanantar-p
   title: "Samanantar: The Largest Publicly Available Parallel Corpora Collection for 11 Indic Languages"
   authors: Ramesh et al.
   venue: TACL
   year: 2022
   link: https://aclanthology.org/2022.tacl-1.9/
+  task: mt
+- id: parida-etal-2021-multimodal
+  title: Multimodal Neural Machine Translation System for English to Bengali
+  authors: Parida et al.
+  venue: First Workshop on Multimodal Machine Translation for Low Resource Languages
+  year: 2021
+  link: https://aclanthology.org/2021.mmtlrl-1.6/
+  task: mt
+- id: pal-etal-2021-university
+  title: The University of Edinburgh's Bengali-Hindi Submissions to the WMT21 News Translation Task
+  authors: Pal et al.
+  venue: WMT
+  year: 2021
+  link: https://aclanthology.org/2021.wmt-1.16/
+  task: mt
+- id: notlowresource
+  title: "Not Low-Resource Anymore: Aligner Ensembling, Batch Filtering, and New Datasets for Bengali-English Machine Translation"
+  authors: Hasan et al.
+  venue: EMNLP
+  year: 2020
+  link: https://aclanthology.org/2020.emnlp-main.207/
+  task: mt
+  note: 2.75M-pair corpus; strong NMT baselines.
+- id: mahata-etal-2018-smt
+  title: "SMT vs NMT: A Comparison over Hindi and Bengali Simple Sentences"
+  authors: Mahata et al.
+  venue: ICON
+  year: 2018
+  link: https://aclanthology.org/2018.icon-1.25/
+  task: mt
+- id: singh-2012-bidirectional
+  title: Bidirectional Bengali Script and Meetei Mayek Transliteration of Web Based Manipuri News Corpus
+  authors: Singh
+  venue: WSSANLP
+  year: 2012
+  link: https://aclanthology.org/W12-5016/
+  task: mt
+- id: garain-etal-2012-leveraging
+  title: Leveraging Statistical Transliteration for Dictionary-Based English-Bengali CLIR of OCR`d Text
+  authors: Garain et al.
+  venue: COLING
+  year: 2012
+  link: https://aclanthology.org/C12-2034/
+  task: mt
+- id: chatterji-etal-2012-repairing
+  title: Repairing Bengali Verb Chunks for Improved Bengali to Hindi Machine Translation
+  authors: Chatterji et al.
+  venue: ALR
+  year: 2012
+  link: https://aclanthology.org/W12-5208/
+  task: mt
+- id: chatterji-etal-2012-translations
+  title: Translations of Ambiguous Hindi Pronouns to Possible Bengali Pronouns
+  authors: Chatterji et al.
+  venue: ALR
+  year: 2012
+  link: https://aclanthology.org/W12-5214/
+  task: mt
+- id: islam-etal-2010-english
+  title: English to Bangla Phrase-Based Machine Translation
+  authors: Islam et al.
+  venue: EAMT
+  year: 2010
+  link: https://aclanthology.org/2010.eamt-1.21/
+  task: mt
+- id: mandal-etal-2008-bengali
+  title: Bengali and Hindi to English CLIR Evaluation
+  authors: Mandal et al.
+  venue: CLIA
+  year: 2008
+  link: https://aclanthology.org/I08-6010/
+  task: mt
+- id: naskar-bandyopadhyay-2006-handling
+  title: Handling of Prepositions in English to Bengali Machine Translation
+  authors: Naskar et al.
+  venue: ACL
+  year: 2006
+  link: https://aclanthology.org/W06-2113/
+  task: mt
+- id: naskar-bandyopadhyay-2005-phrasal
+  title: A Phrasal EBMT System for Translating English to Bengali
+  authors: Naskar et al.
+  venue: MT Summit
+  year: 2005
+  link: https://aclanthology.org/2005.mtsummit-posters.8/
+  task: mt
+- id: saha-bandyopadhyay-2005-semantics
+  title: A Semantics-based English-Bengali EBMT System for Translating News Headlines
+  authors: Saha et al.
+  venue: Workshop on example-based machine translation
+  year: 2005
+  link: https://aclanthology.org/2005.mtsummit-ebmt.16/
   task: mt

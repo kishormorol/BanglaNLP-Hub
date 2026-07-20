@@ -1,9 +1,9 @@
-- id: multiconer-p
-  title: "SemEval-2022 Task 11: Multilingual Complex Named Entity Recognition (MultiCoNER)"
-  authors: Malmasi et al.
-  venue: SemEval
-  year: 2022
-  link: https://aclanthology.org/2022.semeval-1.196/
+- id: mahtab-etal-2025-bannerd
+  title: "BanNERD: A Benchmark Dataset and Context-Driven Approach for Bangla Named Entity Recognition"
+  authors: Mahtab et al.
+  venue: Findings NAACL
+  year: 2025
+  link: https://aclanthology.org/2025.findings-naacl.380/
   task: ner
 - id: bner-p
   title: "B-NER: A Novel Bangla Named Entity Recognition Dataset with Largest Entities and Its Baseline Evaluation"
@@ -11,4 +11,88 @@
   venue: IEEE Access
   year: 2023
   link: https://ieeexplore.ieee.org/document/10103464
+  task: ner
+- id: mukherjee-etal-2023-mllab4cs
+  title: "MLlab4CS at SemEval-2023 Task 2: Named Entity Recognition in Low-resource Language Bangla Using Multilingual Language Models"
+  authors: Mukherjee et al.
+  venue: SemEval
+  year: 2023
+  link: https://aclanthology.org/2023.semeval-1.192/
+  task: ner
+- id: khan-etal-2023-nervous
+  title: "NERvous About My Health: Constructing a Bengali Medical Named Entity Recognition Dataset"
+  authors: Khan et al.
+  venue: Findings EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.findings-emnlp.383/
+  task: ner
+- id: sazzed-2022-banglabiomed
+  title: "BanglaBioMed: A Biomedical Named-Entity Annotated Corpus for Bangla (Bengali)"
+  authors: Sazzed
+  venue: Workshop on Biomedical Language Processing
+  year: 2022
+  link: https://aclanthology.org/2022.bionlp-1.31/
+  task: ner
+- id: multiconer-p
+  title: "SemEval-2022 Task 11: Multilingual Complex Named Entity Recognition (MultiCoNER)"
+  authors: Malmasi et al.
+  venue: SemEval
+  year: 2022
+  link: https://aclanthology.org/2022.semeval-1.196/
+  task: ner
+- id: singh-etal-2022-silpa
+  title: "silpa\\_nlp at SemEval-2022 Tasks 11: Transformer based NER models for Hindi and Bangla languages"
+  authors: Singh et al.
+  venue: SemEval
+  year: 2022
+  link: https://aclanthology.org/2022.semeval-1.211/
+  task: ner
+- id: tasnim-etal-2022-team
+  title: "TEAM-Atreides at SemEval-2022 Task 11: On leveraging data augmentation and ensemble to recognize complex Named Entities in Bangla"
+  authors: Tasnim et al.
+  venue: SemEval
+  year: 2022
+  link: https://aclanthology.org/2022.semeval-1.209/
+  task: ner
+- id: ekbal-saha-2010-maximum
+  title: Maximum Entropy Classifier Ensembling using Genetic Algorithm for NER in Bengali
+  authors: Ekbal et al.
+  venue: LREC
+  year: 2010
+  link: https://aclanthology.org/L10-1496/
+  task: ner
+- id: chaudhuri-bhattacharya-2008-experiment
+  title: An Experiment on Automatic Detection of Named Entities in Bangla
+  authors: Chaudhuri et al.
+  venue: IJCNLP
+  year: 2008
+  link: https://aclanthology.org/I08-5011/
+  task: ner
+- id: ekbal-bandyopadhyay-2008-bengali
+  title: Bengali Named Entity Recognition Using Support Vector Machine
+  authors: Ekbal et al.
+  venue: IJCNLP
+  year: 2008
+  link: https://aclanthology.org/I08-5008/
+  task: ner
+- id: ekbal-bandyopadhyay-2008-development
+  title: Development of Bengali Named Entity Tagged Corpus and its Use in NER Systems
+  authors: Ekbal et al.
+  venue: ALR
+  year: 2008
+  link: https://aclanthology.org/I08-7001/
+  task: ner
+- id: ekbal-bandyopadhyay-2008-multi
+  title: Multi-Engine Approach for Named Entity Recognition in Bengali
+  authors: Ekbal et al.
+  venue: PACLIC
+  year: 2008
+  link: https://aclanthology.org/Y08-1016/
+  task: ner
+- id: ekbal-etal-2008-named
+  title: "Named Entity Recognition in Bengali: A Conditional Random Field Approach"
+  authors: Ekbal et al.
+  venue: IJCNLP
+  year: 2008
+  link: https://aclanthology.org/I08-2077/
   task: ner
