@@ -27,3 +27,14 @@
   link: https://www.kaggle.com/datasets/prithwirajsust/bengali-news-summarization-dataset
   verified: 2026-02-20
   desc: News summarization pairs crawled from Bangla dailies.
+- id: banglachqsumm
+  name: BanglaCHQ-Summ
+  task: summ
+  size: 2,350 pairs
+  sizeN: 2350
+  license: CC BY-NC-SA 4.0
+  year: 2023
+  source: BanglaCHQ-Summ (BLP 2023)
+  link: https://github.com/alvi-khan/BanglaCHQ-Summ
+  verified: 2026-07-19
+  desc: Abstractive summarization dataset for Bangla consumer health questions.

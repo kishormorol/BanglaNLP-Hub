@@ -82,3 +82,14 @@
   link: https://github.com/GoswamiDhiman/EmoMix-3L
   verified: 2026-07-19
   desc: Bangla-English-Hindi code-mixed emotion detection test set.
+- id: bnsentmix
+  name: BnSentMix
+  task: sentiment
+  size: 20,000 samples
+  sizeN: 20000
+  license: MIT
+  year: 2024
+  source: BnSentMix (LoResLM 2025)
+  link: https://huggingface.co/datasets/aplycaebous/BnSentMix
+  verified: 2026-07-19
+  desc: Bengali-English code-mixed sentiment dataset with 4 labels from social media and e-commerce.
