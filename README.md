@@ -13,7 +13,7 @@ Everything the site renders comes from YAML under [`/data`](./data). Nothing is 
 | | Count |
 | --- | --- |
 | Tasks | 10 |
-| Datasets | 31 |
+| Datasets | 43 |
 | Papers | 405 |
 | Models | 22 |
 | Tools | 9 |
@@ -38,9 +38,9 @@ The catalog is only useful if its contents are true, so the project holds a hard
 - **Links are checked.** Every `link:` URL is verified nightly. Dead links are reported in a single tracking issue; entries are never removed automatically.
 - **Entries get verified by hand.** Papers have been audited against ACL Anthology and arXiv. Several entries inherited from the original design prototype turned out to be fabricated — a duplicate under an invented title, a model that does not exist, a paper with no publication — and were removed.
 
-Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 25 datasets lack BibTeX and all 10 leaderboards await rows.
+Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 37 datasets lack BibTeX and all 10 leaderboards await rows.
 
-**Dataset fields are partly verified.** `license`, `size`, and `year` have each had an audit pass (July 2026). Corrections are listed in `TODO-data.md`, along with the entries that are still unconfirmed because no reachable source states a figure. One field is recorded as *known wrong* with no known replacement — that is deliberate. A wrong value we can point at is more useful than a plausible one we invented.
+**Dataset fields are verified at the source.** `license`, `size`, and `year` have each had an audit pass (July 2026), and the datasets added by mining resource papers had their `license` and `size` read from the dataset's own repository or card — never the paper's license icon, which describes the paper, not the data. Corrections and the entries still unconfirmed (because no reachable source states a figure) are listed in `TODO-data.md`, along with ~55 candidate datasets held back for unverifiable licenses or being out of the text-NLP scope. One field is recorded as *known wrong* with no known replacement — deliberately. A wrong value we can point at is more useful than a plausible one we invented.
 
 ## Commands
 
@@ -75,7 +75,7 @@ These are concrete, self-contained, and each one is genuinely useful on its own 
 
 - **Reviewing paper tasks.** Most of the 405 papers were bulk-imported (ACL Anthology + arXiv); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
 - **Leaderboard rows.** All 10 benchmarks ship empty. Each needs scores with a citation to the paper they came from. Even one populated benchmark is a real improvement.
-- **BibTeX.** 25 datasets have no citation entry. Copy the published one from the ACL Anthology or the publisher page — please do not hand-write one.
+- **BibTeX.** 37 datasets have no citation entry. Copy the published one from the ACL Anthology or the publisher page — please do not hand-write one.
 - **Unverified dataset sizes.** About a dozen datasets are hosted where no count is published (Kaggle, openslr.org, nltr.org). If you know the paper, you can settle these.
 - **One known-wrong value.** The `bhs` entry claims 30,000 documents and no source supports it. If you have the paper, this is a five-minute fix.
 - **Missing resources.** New papers, datasets, models, and tools — especially anything published recently, and anything from researchers outside the usual venues.
