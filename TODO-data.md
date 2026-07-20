@@ -3,6 +3,30 @@
 Known gaps, deliberately left empty rather than filled with invented values.
 Contributions welcome — see CONTRIBUTING.md.
 
+## Datasets: mining from resource papers (2026-07-19)
+
+The imported resource/benchmark papers were mined for the datasets they
+introduce. Datasets went 31 → 43 (12 added), each with `license` and `size`
+read from the dataset's **own repository or card** — never the paper's license
+icon (that trap produced several false positives, e.g. Vashantor's page shows
+CC BY 4.0, not the CC0 a search claimed; BanglaBook is CC BY-NC-SA 4.0 though
+its paper page says "not stated").
+
+**The rest of the ~55 candidates are held**, for two recurring reasons — this is
+the same wall that already leaves a third of the older datasets unverified:
+
+- **Unverifiable license.** Hosted on Kaggle / Mendeley / a bare arXiv with no
+  repo LICENSE and no license statement in the paper. Adding one needs a real
+  license, which none of these supply. Examples: BanglaQuAD, SentiGOLD,
+  BanglaSarc, MONOVAB, BOIGENRE, BeliN, BnPC, BanglaBioMed, RegSpeech12.
+- **Multimodal / out of the text-NLP scope.** Image+text or audio datasets, held
+  the same way OCR and captioning papers were: BaitBuster-Bangla (YouTube
+  metadata + thumbnails), Bangla-Bayanno (visual QA), BanglaAbuseMeme, CMBan,
+  ChitroJera.
+
+Promoting any held dataset means finding a real license at its source (or adding
+a task, for the multimodal ones). Do not fill `license` with a guess to unblock.
+
 ## Papers: bulk import (2026-07-19)
 
 The papers catalog was expanded from 27 to 405 in two passes with
