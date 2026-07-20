@@ -2,7 +2,15 @@
 
 A community-maintained catalog of Bangla (Bengali) NLP resources — papers, datasets, models, tools, and benchmarks.
 
+[![Live site](https://img.shields.io/badge/live-kishormorol.github.io%2FBanglaNLP--Hub-2563eb)](https://kishormorol.github.io/BanglaNLP-Hub/)
+[![CI](https://github.com/kishormorol/BanglaNLP-Hub/actions/workflows/ci.yml/badge.svg)](https://github.com/kishormorol/BanglaNLP-Hub/actions/workflows/ci.yml)
+[![Deploy](https://github.com/kishormorol/BanglaNLP-Hub/actions/workflows/deploy.yml/badge.svg)](https://github.com/kishormorol/BanglaNLP-Hub/actions/workflows/deploy.yml)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-22c55e)](./CONTRIBUTING.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-black)](#license)
+
 **Live:** https://kishormorol.github.io/BanglaNLP-Hub/
+
+> Keywords: Bangla NLP · Bengali NLP · Bangla datasets · Bengali datasets · Bangla language models · Bengali benchmarks · low-resource / Indic NLP resources.
 
 Static site built with Astro and TypeScript. No client-side framework: the only JavaScript shipped is a handful of small vanilla islands (catalog search, theme toggle, task tabs, table sorting, BibTeX copy).
 
