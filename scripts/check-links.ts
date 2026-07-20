@@ -26,6 +26,12 @@ const changedRef = argOf('--changed');
 const reportPath = argOf('--report');
 const CONCURRENCY = 8;
 const TIMEOUT_MS = 20_000;
+// Slow-but-alive hosts (e.g. nltr.org, ~6–28s) throw transient connection
+// errors under load. Retry those before calling a link dead; HTTP statuses
+// are deterministic and never retried.
+const RETRIES = 2;
+const RETRY_DELAY_MS = 3_000;
+const TRANSIENT = new Set(['timeout', 'network error']);
 
 type Link = { url: string; where: string; name: string };
 
@@ -112,6 +118,18 @@ async function probe(url: string): Promise<{ ok: boolean; status: string }> {
   return { ok: false, status: 'unknown' };
 }
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** Probe with retries, but only for transient (non-HTTP) failures. */
+async function probeWithRetry(url: string): Promise<{ ok: boolean; status: string }> {
+  let result = await probe(url);
+  for (let attempt = 0; attempt < RETRIES && !result.ok && TRANSIENT.has(result.status); attempt++) {
+    await sleep(RETRY_DELAY_MS);
+    result = await probe(url);
+  }
+  return result;
+}
+
 const all = collect();
 const filter = changedRef ? changedUrls(changedRef) : null;
 const links = filter ? all.filter((l) => filter.has(l.url)) : all;
@@ -135,7 +153,7 @@ async function worker(queue: string[]) {
   for (;;) {
     const url = queue.shift();
     if (!url) return;
-    const { ok, status } = await probe(url);
+    const { ok, status } = await probeWithRetry(url);
     done++;
     if (ok) continue;
     const finding = { url, status, entries: links.filter((l) => l.url === url) };
