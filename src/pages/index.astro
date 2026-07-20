@@ -2,9 +2,12 @@
 /** Home — ported from design-reference/Home.dc.html */
 import Base from '../layouts/Base.astro';
 import Search from '../components/Search.astro';
-import { tasks, byTask, stats, recentlyAdded, typeTone } from '../lib/data.ts';
+import { tasks, byTask, stats, recentlyAdded, typeTone, models, datasets, tools } from '../lib/data.ts';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+/** Every catalog entry with a link, for deriving contributor counts. */
+const allEntries = [...models, ...datasets, ...tools];
 
 // Counts are derived from /data at build time — never written down.
 const statCards = [
@@ -21,6 +24,60 @@ const taskCards = tasks.map((t) => ({
 }));
 
 const recent = recentlyAdded(6);
+
+/**
+ * Groups, labs, and maintainers whose openly released work the catalog is built
+ * on. This is NOT an editorial "who is best" ranking — every entry credits a
+ * real, verifiable contribution that appears in the catalog, and each link is
+ * the parent of URLs already in the link-checked data. `entries` is derived from
+ * /data at build time (like every other count on this page), never written down.
+ * To add someone, credit a concrete contribution — do not invent a claim.
+ */
+const contributors = [
+  {
+    name: 'BUET CSE NLP',
+    handle: 'csebuetnlp',
+    match: 'csebuetnlp',
+    blurb: 'The research group behind much of the modern Bangla NLP stack.',
+    notable: 'BanglaBERT · BanglaT5 · XL-Sum · BanglaNMT',
+    link: 'https://huggingface.co/csebuetnlp',
+  },
+  {
+    name: 'Bengali.AI',
+    handle: 'bengaliai',
+    match: 'bengaliai',
+    blurb: 'Community non-profit running open speech and handwriting datasets and competitions.',
+    notable: 'OOD-Speech and community ASR / OCR corpora',
+    link: 'https://bengaliai.github.io',
+  },
+  {
+    name: 'Hishab',
+    handle: 'hishab',
+    match: 'hishab',
+    blurb: 'Builds and openly releases Bangla large language models.',
+    notable: 'TituLM Bangla LLM family',
+    link: 'https://huggingface.co/hishab',
+  },
+  {
+    name: 'Language Technology Lab',
+    handle: 'LanguageTechnologyLab',
+    match: 'LanguageTechnologyLab',
+    blurb: 'Releases code-mixed and offensive-language datasets for Bangla.',
+    notable: 'TB-OLID · SentMix-3L · OffMix-3L',
+    link: 'https://github.com/LanguageTechnologyLab',
+  },
+  {
+    name: 'Sagor Sarker',
+    handle: 'sagorsarker',
+    match: 'sagorsarker',
+    blurb: 'Maintainer of the BNLP toolkit and early open Bangla models.',
+    notable: 'bnlp-toolkit · bangla-bert-base',
+    link: 'https://huggingface.co/sagorsarker',
+  },
+].map((c) => ({
+  ...c,
+  entries: allEntries.filter((e) => String(e.link ?? '').includes(c.match)).length,
+}));
 ---
 
 <Base title="BanglaNLP Hub — the definitive index of Bangla NLP research" footerShowData>
@@ -136,6 +193,58 @@ const recent = recentlyAdded(6);
             ))
           }
         </div>
+      </div>
+
+      <div>
+        <div style="margin-bottom:16px">
+          <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:24px;margin:0">
+            Powered by the community <span
+              class="bn"
+              style="font-size:15px;color:var(--text2);font-weight:500">· সম্প্রদায়</span
+            >
+          </h2>
+          <p
+            style="color:var(--text2);font-size:14px;line-height:1.6;margin:8px 0 0;max-width:640px;text-wrap:pretty"
+          >
+            Bangla is low-resource, and this catalog exists because a handful of groups, labs, and
+            maintainers release their work openly. These are some whose datasets, models, and tools
+            the Hub is built on — credited by real contribution, not ranking.
+          </p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px">
+          {
+            contributors.map((c) => (
+              <a
+                class="card"
+                href={c.link}
+                target="_blank"
+                rel="noopener"
+                style="text-decoration:none;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:6px"
+              >
+                <div style="display:flex;align-items:baseline;gap:8px">
+                  <span style="font-weight:600;font-size:15.5px;color:var(--text)">{c.name}</span>
+                  {c.entries > 0 && (
+                    <span style="font-size:11px;color:var(--text2);font-family:'IBM Plex Mono',monospace">
+                      {c.entries} in catalog
+                    </span>
+                  )}
+                  <span style="margin-left:auto;font-size:12px;color:var(--text2)">↗</span>
+                </div>
+                <p style="margin:0;font-size:12.5px;color:var(--text2);line-height:1.55;text-wrap:pretty">
+                  {c.blurb}
+                </p>
+                <div style="font-size:12px;color:var(--green);margin-top:auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">
+                  {c.notable}
+                </div>
+              </a>
+            ))
+          }
+        </div>
+        <p style="color:var(--text2);font-size:12.5px;line-height:1.6;margin:12px 0 0">
+          Missing someone whose open work belongs here?{' '}
+          <a href={`${base}/contribute`}>Add them via PR</a> — with a concrete contribution, not a
+          claim.
+        </p>
       </div>
     </section>
   </main>
