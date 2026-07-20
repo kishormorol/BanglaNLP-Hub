@@ -1,3 +1,38 @@
+- id: ahmed-etal-2026-evaluating
+  title: Evaluating Large Vision Language Models on Bangla Medical Visual Question Answering
+  authors: Ahmed et al.
+  venue: Findings ACL
+  year: 2026
+  link: https://aclanthology.org/2026.findings-acl.1862/
+  task: qa
+- id: saha-etal-2025-benchmarking
+  title: "Benchmarking Bangla Causality: A Dataset of Implicit and Explicit Causal Sentences and Cause-Effect Relations"
+  authors: Saha et al.
+  venue: IJCNLP
+  year: 2025
+  link: https://aclanthology.org/2025.findings-ijcnlp.46/
+  task: qa
+- id: ahmad-etal-2025-bncontextqa
+  title: "bnContextQA: Benchmarking Long-Context Question Answering and Challenges in Bangla"
+  authors: Ahmad et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.29/
+  task: qa
+- id: shahriar-etal-2025-p6jiggasha
+  title: "P6Jiggasha: Benchmarking Large Language Models on Bangla Physics Question Answering with Cross-lingual Evaluation"
+  authors: Shahriar et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.16/
+  task: qa
+- id: shahriar-etal-2023-question
+  title: "Question Answer Generation in Bengali: Mitigating the scarcity of QA datasets in a low-resource language"
+  authors: Shahriar et al.
+  venue: IJCNLP
+  year: 2023
+  link: https://aclanthology.org/2023.ijcnlp-main.29/
+  task: qa
 - id: banglarqa-p
   title: "BanglaRQA: A Benchmark Dataset for Under-resourced Bangla Language Reading Comprehension-based Question Answering with Diverse Question-Answer Types"
   authors: Ekram et al.
@@ -14,3 +49,17 @@
   link: https://aclanthology.org/2020.tacl-1.30/
   task: qa
   note: Includes Bengali.
+- id: banerjee-bandyopadhyay-2013-empirical
+  title: An Empirical Study of Combing Multiple Models in Bengali Question Classification
+  authors: Banerjee et al.
+  venue: IJCNLP
+  year: 2013
+  link: https://aclanthology.org/I13-1113/
+  task: qa
+- id: banerjee-bandyopadhyay-2012-bengali
+  title: "Bengali Question Classification: Towards Developing QA System"
+  authors: Banerjee et al.
+  venue: WSSANLP
+  year: 2012
+  link: https://aclanthology.org/W12-5003/
+  task: qa

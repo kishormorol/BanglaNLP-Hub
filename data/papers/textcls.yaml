@@ -1,3 +1,80 @@
+- id: chowdhury-ferdous-2025-boigenre
+  title: "BOIGENRE: A Large-Scale Bangla Dataset for Genre Classification from Book Summaries"
+  authors: Chowdhury et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.20/
+  task: textcls
+- id: rahman-ali-2025-clustering
+  title: Clustering LLM-based Word Embeddings to Determine Topics from Bangla Articles
+  authors: Rahman et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.25/
+  task: textcls
+- id: alam-etal-2025-cmban
+  title: "CMBan: Cartoon-Driven Meme Contextual Classification Dataset for Bangla"
+  authors: Alam et al.
+  venue: IJCNLP
+  year: 2025
+  link: https://aclanthology.org/2025.findings-ijcnlp.135/
+  task: textcls
+- id: shanto-etal-2025-mdc3
+  title: "MDC$^3$: A Novel Multimodal Dataset for Commercial Content Classification in Bengali"
+  authors: Shanto et al.
+  venue: NAACL
+  year: 2025
+  link: https://aclanthology.org/2025.naacl-srw.31/
+  task: textcls
+- id: sarkar-etal-2025-zero
+  title: "Zero-Shot Multi-Label Classification of Bangla Documents: Large Decoders Vs. Classic Encoders"
+  authors: Sarkar et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.7/
+  task: textcls
+- id: mahtab-etal-2023-banglabait
+  title: "BanglaBait: Semi-Supervised Adversarial Approach for Clickbait Detection on Bangla Clickbait Dataset"
+  authors: Mahtab et al.
+  venue: RANLP
+  year: 2023
+  link: https://aclanthology.org/2023.ranlp-1.81/
+  task: textcls
+- id: joy-etal-2023-banglaclickbert
+  title: "BanglaClickBERT: Bangla Clickbait Detection from News Headlines using Domain Adaptive BanglaBERT and MLP Techniques"
+  authors: Joy et al.
+  venue: ALTA
+  year: 2023
+  link: https://aclanthology.org/2023.alta-1.1/
+  task: textcls
+- id: kamruzzaman-etal-2023-banmani
+  title: "BanMANI: A Dataset to Identify Manipulated Social Media News in Bangla"
+  authors: Kamruzzaman et al.
+  venue: ConTeNTS
+  year: 2023
+  link: https://aclanthology.org/2023.contents-1.7/
+  task: textcls
+- id: sazzed-2023-discourse
+  title: Discourse Mode Categorization of Bengali Social Media Health Text
+  authors: Sazzed
+  venue: Workshop on Computational Approaches to Subjectivity
+  year: 2023
+  link: https://aclanthology.org/2023.wassa-1.6/
+  task: textcls
+- id: dehan-etal-2023-investigating
+  title: Investigating the Effectiveness of Graph-based Algorithm for Bangla Text Classification
+  authors: Dehan et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.12/
+  task: textcls
+- id: sazzed-2022-annotated
+  title: An Annotated Dataset and Automatic Approaches for Discourse Mode Identification in Low-resource Bengali Language
+  authors: Sazzed
+  venue: MIA
+  year: 2022
+  link: https://aclanthology.org/2022.mia-1.2/
+  task: textcls
 - id: banfakenews-p
   title: "BanFakeNews: A Dataset for Detecting Fake News in Bangla"
   authors: Hossain et al.
@@ -13,3 +90,31 @@
   link: https://arxiv.org/abs/2004.07807
   task: textcls
   note: BengFastText embeddings.
+- id: das-chatterji-2019-identification
+  title: Identification of Synthetic Sentence in Bengali News using Hybrid Approach
+  authors: Das et al.
+  venue: ICON
+  year: 2019
+  link: https://aclanthology.org/2019.icon-1.23/
+  task: textcls
+- id: phani-etal-2015-authorship
+  title: Authorship Attribution in Bengali Language
+  authors: Phani et al.
+  venue: ICON
+  year: 2015
+  link: https://aclanthology.org/W15-5915/
+  task: textcls
+- id: chakraborty-2012-authorship
+  title: "Authorship Identification in Bengali Literature: a Comparative Analysis"
+  authors: Chakraborty
+  venue: COLING
+  year: 2012
+  link: https://aclanthology.org/C12-3006/
+  task: textcls
+- id: banerjee-etal-2009-bengali
+  title: Bengali Verb Subcategorization Frame Acquisition - A Baseline Model
+  authors: Banerjee et al.
+  venue: ALR
+  year: 2009
+  link: https://aclanthology.org/W09-3411/
+  task: textcls

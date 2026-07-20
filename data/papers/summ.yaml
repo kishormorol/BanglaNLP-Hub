@@ -1,3 +1,59 @@
+- id: deya-etal-2026-abstractive
+  title: Abstractive Summarization of Bengali Academic Videos Based on Audio Subtitles
+  authors: Deya et al.
+  venue: Findings EACL
+  year: 2026
+  link: https://aclanthology.org/2026.findings-eacl.348/
+  task: summ
+- id: rafid-etal-2026-banglasummeval
+  title: "BanglaSummEval: Reference-Free Factual Consistency Evaluation for Bangla Summarization"
+  authors: Rafid et al.
+  venue: LoResLM
+  year: 2026
+  link: https://aclanthology.org/2026.loreslm-1.51/
+  task: summ
+- id: haider-alam-2025-comprehensive
+  title: A Comprehensive Text Optimization Approach to Bangla Summarization
+  authors: Haider et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.13/
+  task: summ
+- id: tanjila-etal-2025-bengali
+  title: "Bengali ChartSumm: A Benchmark Dataset and study on feasibility of Large Language Models on Bengali Chart to Text Summarization"
+  authors: Tanjila et al.
+  venue: First Workshop on Challenges in Processing South Asian Languages
+  year: 2025
+  link: https://aclanthology.org/2025.chipsal-1.4/
+  task: summ
+- id: khan-etal-2023-banglachq
+  title: "BanglaCHQ-Summ: An Abstractive Summarization Dataset for Medical Queries in Bangla Conversational Speech"
+  authors: Khan et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.10/
+  task: summ
+- id: akash-etal-2023-shironaam
+  title: "Shironaam: Bengali News Headline Generation using Auxiliary Information"
+  authors: Akash et al.
+  venue: EACL
+  year: 2023
+  link: https://aclanthology.org/2023.eacl-main.4/
+  task: summ
+- id: roychowdhury-etal-2022-unsupervised
+  title: Unsupervised Bengali Text Summarization Using Sentence Embedding and Spectral Clustering
+  authors: Roychowdhury et al.
+  venue: ICON
+  year: 2022
+  link: https://aclanthology.org/2022.icon-main.40/
+  task: summ
+- id: chowdhury-etal-2021-unsupervised
+  title: Unsupervised Abstractive Summarization of Bengali Text Documents
+  authors: Chowdhury et al.
+  venue: EACL
+  year: 2021
+  link: https://aclanthology.org/2021.eacl-main.224/
+  task: summ
 - id: xlsum-p
   title: "XL-Sum: Large-Scale Multilingual Abstractive Summarization for 44 Languages"
   authors: Hasan et al.
@@ -6,3 +62,10 @@
   link: https://aclanthology.org/2021.findings-acl.413/
   task: summ
   note: BBC Bangla summarization subset.
+- id: das-bandyopadhyay-2010-topic
+  title: Topic-Based Bengali Opinion Summarization
+  authors: Das et al.
+  venue: COLING
+  year: 2010
+  link: https://aclanthology.org/C10-2027/
+  task: summ

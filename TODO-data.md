@@ -3,6 +3,36 @@
 Known gaps, deliberately left empty rather than filled with invented values.
 Contributions welcome — see CONTRIBUTING.md.
 
+## Papers: ACL Anthology bulk import (2026-07-19)
+
+The papers catalog was expanded from 27 to 260 by sweeping the entire ACL
+Anthology for Bangla/Bengali work (`npm run discover -- --source acl`) and
+promoting the matches (`npm run promote`). Title, authors, venue, year, and link
+on every imported entry come verbatim from the anthology's own BibTeX — nothing
+in those fields is guessed.
+
+**`task` is the exception and is heuristic.** The anthology does not record a
+task, so `scripts/promote.ts` derives one from the title by keyword. This is the
+highest-value review area: most assignments are right, but title-only
+classification has a known error tail (a paper that merely *uses* code-mixed
+text, say, versus one *about* code-switching). Re-filing a paper under a better
+task is a welcome, low-risk contribution. `note` was intentionally left blank on
+imported papers rather than auto-generated — a one-line summary is exactly the
+kind of plausible invention the catalog forbids.
+
+**Two things were left out on purpose:**
+
+- **54 candidates remain in `data/inbox/candidates.yaml`.** These describe tasks
+  outside the current 10-task taxonomy — OCR / handwriting recognition, image
+  captioning, WordNet construction, readability, dialogue, word embeddings,
+  lexical complexity, spell checking. Filing them under an ill-fitting task would
+  be worse than holding them. Adding a task is the prerequisite for promoting
+  them. (One, "Training a BN-based user model…", is a false positive — BN there
+  means Bayesian Network, not Bangla.)
+- **arXiv and Hugging Face sweeps have not been run.** Only the ACL source was
+  ingested. `npm run discover` (all sources) will surface preprints and models;
+  those need more hand-checking because they lack an authoritative venue record.
+
 ## Leaderboards with no curated rows
 
 Each has a real dataset and metric but zero score rows, and renders an empty state

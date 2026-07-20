@@ -100,8 +100,23 @@ Docs: https://docs.astro.build — routing, components, and styling guides are t
 relevant ones. Dev server supports background mode: `astro dev --background`, managed
 with `astro dev stop | status | logs`.
 
+## Ingestion: discover + promote
+
+`scripts/discover.ts` sweeps ACL / arXiv / HF for Bangla work and writes unverified
+*candidates* to `data/inbox/`. `scripts/promote.ts` is its counterpart: it fills a
+candidate's fields from the ACL Anthology's own BibTeX and files it under a task.
+
+- Both are candidate-safe: discover never touches live data; promote only reads the
+  anthology and writes `data/papers/<task>.yaml` + the trimmed inbox.
+- Every promoted field except `task` is copied verbatim from the anthology. `task`
+  is a title-keyword heuristic (`classify()` in promote.ts) — a paper it cannot
+  place is left in the inbox, never filed under a guess. `note` is never generated.
+- promote.ts needs `.cache/anthology.bib` (gitignored, ~85 MB): `mkdir -p .cache &&
+  curl -sL https://aclanthology.org/anthology.bib.gz | gunzip > .cache/anthology.bib`.
+- The July 2026 ACL sweep took papers from 27 to 260. arXiv/HF have not been swept.
+
 ## Not built yet
 
-Nothing outstanding on the view layer — Datasets, Papers, Tools, Contribute, and
-About are all ported, and `scripts/discover.ts` exists. Remaining work is data, not
-code: see TODO-data.md (empty leaderboards, missing BibTeX, unverified sizes).
+Nothing outstanding on the view layer — all views are ported. Remaining work is
+data, not code: see TODO-data.md (heuristic paper tasks to review, 54 out-of-taxonomy
+candidates in the inbox, empty leaderboards, missing BibTeX, unverified sizes).
