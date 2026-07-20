@@ -111,6 +111,11 @@ const selectStyle =
   .papercard:hover {
     border-color: var(--green);
   }
+  /* The card carries an inline display:flex, which outranks the UA [hidden]
+     rule — so filtering (which sets .hidden) needs !important to actually hide. */
+  .papercard[hidden] {
+    display: none !important;
+  }
   #f-q:focus,
   #f-year:focus,
   #f-venue:focus,
