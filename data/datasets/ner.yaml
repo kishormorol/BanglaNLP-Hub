@@ -31,3 +31,14 @@
   link: https://huggingface.co/datasets/unimelb-nlp/wikiann
   verified: 2026-07-19
   desc: Silver-standard PER/LOC/ORG from Wikipedia anchors.
+- id: ancholikner
+  name: ANCHOLIK-NER
+  task: ner
+  size: 17,405 sentences
+  sizeN: 17405
+  license: CC BY 4.0
+  year: 2025
+  source: ANCHOLIK-NER (2025)
+  link: https://data.mendeley.com/datasets/gbkszkt8z3/4
+  verified: 2026-07-19
+  desc: Bangla regional NER across five dialects with 10 entity types, BIO-tagged.

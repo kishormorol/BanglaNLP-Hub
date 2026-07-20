@@ -60,3 +60,14 @@
   link: https://github.com/farhanishmam/BanglaTLit
   verified: 2026-07-19
   desc: Benchmark for back-transliteration of romanized Bangla to Bangla script.
+- id: vashantor
+  name: Vashantor
+  task: mt
+  size: 32,500 sentences
+  sizeN: 32500
+  license: CC BY 4.0
+  year: 2023
+  source: Vashantor (2023)
+  link: https://data.mendeley.com/datasets/bj5jgk878b/2
+  verified: 2026-07-19
+  desc: Translation benchmark from five Bangla regional dialects to standard Bangla.
