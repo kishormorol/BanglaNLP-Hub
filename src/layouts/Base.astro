@@ -59,8 +59,11 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
       href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Bengali:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <!-- No-flash theme restore. Must stay inline and before first paint. -->
+    <!-- No-flash theme restore + a `js` flag so JS-only enhancements (e.g. the
+         home page's scroll-reveal) never hide content when scripting is off.
+         Must stay inline and before first paint. -->
     <script is:inline>
+      document.documentElement.classList.add('js');
       try {
         if (localStorage.bnlpTheme === 'dark') document.documentElement.classList.add('dark');
       } catch (e) {}
