@@ -272,3 +272,10 @@
   year: 2021
   link: https://doi.org/10.35444/ijana.2021.12611
   task: speech
+- id: gupta-etal-2018-spoken-bengali-numeral-recognition
+  title: "Recognition of spoken bengali numerals using MLP, SVM, RF based models with PCA based feature summarization"
+  authors: Gupta et al.
+  venue: The International Arab Journal of Information Technology
+  year: 2018
+  link: http://dblp.uni-trier.de/db/journals/iajit/iajit15.html#GuptaS18
+  task: speech

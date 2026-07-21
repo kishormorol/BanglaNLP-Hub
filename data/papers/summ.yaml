@@ -118,3 +118,59 @@
   year: 2010
   link: https://aclanthology.org/C10-2027/
   task: summ
+- id: mobin-etal-2025-bengali-summarization-transformers-review
+  title: "A Review of the State-of-the-Art Techniques and Analysis of Transformers for Bengali Text Summarization"
+  authors: Mobin et al.
+  venue: Big Data and Cognitive Computing
+  year: 2025
+  link: https://doi.org/10.3390/bdcc9050117
+  task: summ
+- id: chowdhury-etal-2024-bengali-spoken-document-summary
+  title: "Analyzing the Effects of Transcription Errors on Summary Generation of Bengali Spoken Documents"
+  authors: Chowdhury et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2024
+  link: https://doi.org/10.1145/3678005
+  task: summ
+- id: jahan-etal-2022-bengali-text-summarizer-ml
+  title: "Construction of an Automatic Bengali Text Summarizer Using Machine Learning Approaches"
+  authors: Jahan et al.
+  venue: Journal of Data Analysis and Information Processing
+  year: 2022
+  link: https://doi.org/10.4236/jdaip.2022.101003
+  task: summ
+- id: haque-etal-2020-bangla-summarization-trends
+  title: "Approaches and Trends of Automatic Bangla Text Summarization"
+  authors: Haque et al.
+  venue: International Journal of Technology Diffusion
+  year: 2020
+  link: https://doi.org/10.4018/ijtd.20201001.oa
+  task: summ
+- id: sikder-etal-2019-bengali-summarization-grammatical
+  title: "Automatic Text Summarization For Bengali Language Including Grammatical Analysis"
+  authors: Sikder et al.
+  venue: International journal of scientific and technology research
+  year: 2019
+  link: https://www.ijstr.org/final-print/june2019/Automatic-Text-Summarization-For-Bengali-Language-Including-Grammatical-Analysis.pdf
+  task: summ
+- id: ghosh-etal-2018-bangla-news-extractive-summarization
+  title: "A Rule Based Extractive Text Summarization Technique for Bangla News Documents"
+  authors: Ghosh et al.
+  venue: International Journal of Modern Education and Computer Science
+  year: 2018
+  link: https://doi.org/10.5815/ijmecs.2018.12.06
+  task: summ
+- id: haque-2017-bangla-summarization-pronoun-replacement
+  title: "An Innovative Approach of Bangla Text Summarization by Introducing Pronoun Replacement and Improved Sentence Ranking"
+  authors: Haque
+  venue: Journal of Information Processing Systems
+  year: 2017
+  link: https://doi.org/10.3745/jips.04.0038
+  task: summ
+- id: sarkar-2014-english-bengali-keyphrase-summarization
+  title: "A Keyphrase-Based Approach to Text Summarization for English and Bengali Documents"
+  authors: Sarkar
+  venue: International Journal of Technology Diffusion
+  year: 2014
+  link: https://doi.org/10.4018/ijtd.2014040103
+  task: summ

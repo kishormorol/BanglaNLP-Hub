@@ -1419,14 +1419,6 @@
   suggestedTask: textcls
 - source: openalex
   kind: paper
-  title: A Review of the State-of-the-Art Techniques and Analysis of Transformers for Bengali Text Summarization
-  link: https://doi.org/10.3390/bdcc9050117
-  year: 2025
-  authors: Mobin et al.
-  venue: Big Data and Cognitive Computing
-  suggestedTask: summ
-- source: openalex
-  kind: paper
   title: A Review on Bangla Text-to-Speech With Human-Like Expressions
   link: https://doi.org/10.1109/access.2025.3648947
   year: 2025
@@ -3584,13 +3576,6 @@
   authors: Rahman et al.
   venue: IEEE Access
   suggestedTask: sentiment
-- source: openalex
-  kind: paper
-  title: Analyzing the Effects of Transcription Errors on Summary Generation of Bengali Spoken Documents
-  link: https://doi.org/10.1145/3678005
-  year: 2024
-  authors: Chowdhury et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
 - source: openalex
   kind: paper
   title: "Annihilating caste, denouncing untouchability: A critical review of select Bengali Dalit stories"
@@ -7210,14 +7195,6 @@
   venue: Dhaka University Journal of Linguistics
 - source: openalex
   kind: paper
-  title: Construction of an Automatic Bengali Text Summarizer Using Machine Learning Approaches
-  link: https://doi.org/10.4236/jdaip.2022.101003
-  year: 2022
-  authors: Jahan et al.
-  venue: Journal of Data Analysis and Information Processing
-  suggestedTask: summ
-- source: openalex
-  kind: paper
   title: Daily Behavior of Bangla Tigers (Panthera tigris tigris) in Ex-situ Conservation Site, Serulingmas Zoo, Banjarnegara
   link: https://doi.org/10.59689/bio.v3i1.133
   year: 2022
@@ -9574,14 +9551,6 @@
   venue: Dhaka University Journal of Biological Sciences
 - source: openalex
   kind: paper
-  title: Approaches and Trends of Automatic Bangla Text Summarization
-  link: https://doi.org/10.4018/ijtd.20201001.oa
-  year: 2020
-  authors: Haque et al.
-  venue: International Journal of Technology Diffusion
-  suggestedTask: summ
-- source: openalex
-  kind: paper
   title: Association of Angiotensin II Type I Receptor (AGTR1) Gene Polymorphism and Type 2 Diabetes &amp; Nephropathy among the Eastern Indian Bengali Patients
   link: https://doi.org/10.23880/doij-16000224
   year: 2020
@@ -10648,14 +10617,6 @@
   venue: IET Image Processing
 - source: openalex
   kind: paper
-  title: Automatic Text Summarization For Bengali Language Including Grammatical Analysis
-  link: https://www.ijstr.org/final-print/june2019/Automatic-Text-Summarization-For-Bengali-Language-Including-Grammatical-Analysis.pdf
-  year: 2019
-  authors: Sikder et al.
-  venue: International journal of scientific and technology research
-  suggestedTask: summ
-- source: openalex
-  kind: paper
   title: Bangla DeConverter for Extraction of BanglaText from Universal Networking Language
   link: https://doi.org/10.3390/info10100324
   year: 2019
@@ -11495,14 +11456,6 @@
   venue: Journal of King Saud University - Computer and Information Sciences
 - source: openalex
   kind: paper
-  title: A Rule Based Extractive Text Summarization Technique for Bangla News Documents
-  link: https://doi.org/10.5815/ijmecs.2018.12.06
-  year: 2018
-  authors: Ghosh et al.
-  venue: International Journal of Modern Education and Computer Science
-  suggestedTask: summ
-- source: openalex
-  kind: paper
   title: A Study of Augmentativization in English and Bangla
   link: https://doi.org/10.22236/jer_vol3issue1pp68-77
   year: 2018
@@ -12025,14 +11978,6 @@
   venue: International Journal of Computer Applications
 - source: openalex
   kind: paper
-  title: Recognition of spoken bengali numerals using MLP, SVM, RF based models with PCA based feature summarization.
-  link: http://dblp.uni-trier.de/db/journals/iajit/iajit15.html#GuptaS18
-  year: 2018
-  authors: Gupta et al.
-  venue: The International Arab Journal of Information Technology
-  suggestedTask: summ
-- source: openalex
-  kind: paper
   title: "Recruiting the 'Tirupathi' in Serampore: the policy of Telugu migrants to construct an ethnic and cultural identity for themselves in the face of Bengali domination"
   link: https://doi.org/10.71106/rjiv3599
   year: 2018
@@ -12419,14 +12364,6 @@
   year: 2017
   authors: Biswas et al.
   venue: Journal of Civil and Construction Engineering
-- source: openalex
-  kind: paper
-  title: An Innovative Approach of Bangla Text Summarization by Introducing Pronoun Replacement and Improved Sentence Ranking
-  link: https://doi.org/10.3745/jips.04.0038
-  year: 2017
-  authors: Haque et al.
-  venue: Journal of Information Processing Systems
-  suggestedTask: summ
 - source: openalex
   kind: paper
   title: "Analytical study of text retrieval engines: Application of mgpp and zebra in managing bengali SCRIPT"
@@ -14275,14 +14212,6 @@
   authors: Chatterji et al.
   venue: Language Resources and Evaluation
   suggestedTask: pos
-- source: openalex
-  kind: paper
-  title: A Keyphrase-Based Approach to Text Summarization for English and Bengali Documents
-  link: https://doi.org/10.4018/ijtd.2014040103
-  year: 2014
-  authors: Sarkar et al.
-  venue: International Journal of Technology Diffusion
-  suggestedTask: summ
 - source: openalex
   kind: paper
   title: "America in the Psyche of Bangla Authors: Opening of the Space by Tagore"
