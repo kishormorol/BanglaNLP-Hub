@@ -2,12 +2,12 @@
  * Discovery / ingestion stub.
  *
  *   npm run discover                 sweep all sources
- *   npm run discover -- --source acl only one of: acl | arxiv | hf
+ *   npm run discover -- --source acl one of: acl | arxiv | hf | openalex
  *   npm run discover -- --limit 50   cap per-source candidates
  *
- * Sweeps ACL Anthology, arXiv, and the Hugging Face Hub for Bangla/Bengali NLP
- * resources, diffs them against what is already catalogued, and writes anything
- * new to data/inbox/candidates.yaml for human review.
+ * Sweeps ACL Anthology, arXiv, the Hugging Face Hub, and OpenAlex (journal
+ * articles) for Bangla/Bengali NLP resources, diffs them against what is already
+ * catalogued, and writes anything new to data/inbox/candidates.yaml for review.
  *
  * IT MUST NEVER WRITE INTO THE LIVE DATA FILES. Everything it emits is a
  * *candidate*: unverified, with a guessed task, and often with no license or size
@@ -40,7 +40,7 @@ const UA = 'BanglaNLP-Hub-discover/1.0 (+https://github.com/kishormorol/BanglaNL
 const TERMS = /\b(bangla|bengali|banglish|bn-|bangladesh)/i;
 
 type Candidate = {
-  source: 'acl' | 'arxiv' | 'huggingface';
+  source: 'acl' | 'arxiv' | 'huggingface' | 'openalex';
   kind: 'paper' | 'dataset' | 'model';
   title: string;
   link: string;
@@ -95,7 +95,10 @@ function guessTask(text: string): string | undefined {
     [/speech|asr|tts|phonem|audio|voice/, 'speech'],
     [/fake news|news classif|document classif|text classif|topic/, 'textcls'],
     [/part.of.speech|\bpos tag|treebank|dependenc|morpholog/, 'pos'],
-    [/\bllm\b|large language model|benchmark|instruction|gpt|reasoning/, 'llm'],
+    // Keep this tight: a bare "benchmark" matches any dataset paper and
+    // "instruction" matches education/pedagogy papers ("instructional design"),
+    // both of which flooded the llm bucket with non-LLM work.
+    [/\bllm\b|large language model|\bgpt\b|instruction.?tun|in.context|chain.of.thought|reasoning benchmark/, 'llm'],
   ];
   return rules.find(([re]) => re.test(t))?.[1];
 }
@@ -209,11 +212,74 @@ async function fromHuggingFace(): Promise<Candidate[]> {
   return out;
 }
 
+// -------------------------------------------------------------------- OpenAlex
+// Journal articles whose *title* mentions bangla/bengali. No NLP filter, so the
+// net is wide (linguistics, medicine, agriculture will show up) — every hit is a
+// candidate for a human to keep or drop, same as the other sources.
+async function fromOpenAlex(): Promise<Candidate[]> {
+  const filter = [
+    'title.search:bengali|bangla',
+    'type:article',
+    'primary_location.source.type:journal',
+  ].join(',');
+  const select = 'id,doi,display_name,publication_year,authorships,primary_location';
+  const perPage = Math.min(200, LIMIT);
+  const out: Candidate[] = [];
+  let cursor = '*';
+  console.log('OpenAlex: paging journal articles (title ~ bangla/bengali)…');
+  while (out.length < LIMIT && cursor) {
+    const url =
+      `https://api.openalex.org/works?filter=${encodeURIComponent(filter)}` +
+      `&select=${select}&per-page=${perPage}&cursor=${encodeURIComponent(cursor)}` +
+      `&mailto=mdkishor.morol@stonybrook.edu`;
+    const res = await fetch(url, { headers: { 'User-Agent': UA } });
+    if (!res.ok) {
+      console.error(`  OpenAlex fetch failed: ${res.status}`);
+      break;
+    }
+    const body = (await res.json()) as {
+      results: {
+        id: string;
+        doi?: string | null;
+        display_name?: string | null;
+        publication_year?: number | null;
+        authorships?: { author?: { display_name?: string } }[];
+        primary_location?: {
+          landing_page_url?: string | null;
+          source?: { display_name?: string | null } | null;
+        } | null;
+      }[];
+      meta?: { next_cursor?: string | null };
+    };
+    if (!body.results?.length) break;
+    for (const w of body.results) {
+      const title = w.display_name?.trim();
+      const link = w.doi ?? w.primary_location?.landing_page_url ?? w.id;
+      if (!title || !link) continue;
+      const first = w.authorships?.[0]?.author?.display_name;
+      out.push({
+        source: 'openalex',
+        kind: 'paper',
+        title,
+        link,
+        year: w.publication_year ?? undefined,
+        authors: first ? `${first.split(' ').pop()} et al.` : undefined,
+        venue: w.primary_location?.source?.display_name ?? undefined,
+        suggestedTask: guessTask(title),
+      });
+    }
+    cursor = body.meta?.next_cursor ?? '';
+    await new Promise((r) => setTimeout(r, 300));
+  }
+  return out;
+}
+
 // ----------------------------------------------------------------------- main
 const sources: Record<string, () => Promise<Candidate[]>> = {
   acl: fromAcl,
   arxiv: fromArxiv,
   hf: fromHuggingFace,
+  openalex: fromOpenAlex,
 };
 
 const found: Candidate[] = [];
@@ -250,5 +316,5 @@ writeFileSync(OUT, `${header}\n${stringify(found, { lineWidth: 0 })}`, 'utf8');
 
 const by = (k: string) => found.filter((c) => c.source === k).length;
 console.log(`\n${found.length} candidates → data/inbox/candidates.yaml`);
-console.log(`  acl ${by('acl')} · arxiv ${by('arxiv')} · huggingface ${by('huggingface')}`);
+console.log(`  acl ${by('acl')} · arxiv ${by('arxiv')} · huggingface ${by('huggingface')} · openalex ${by('openalex')}`);
 console.log(`  ${found.filter((c) => !c.suggestedTask).length} with no task guess (need manual triage)`);
