@@ -52,7 +52,7 @@ The catalog is only useful if its contents are true, so the project holds a hard
 - **No invented values.** Scores, citation counts, and BibTeX entries are never synthesised. A missing field is omitted and the UI hides the affected element.
 - **Leaderboards ship empty.** Every benchmark carries a real dataset and metric but zero score rows, because no scores have been curated from their source papers yet. Each renders a "No leaderboard curated yet" empty state rather than a plausible-looking number.
 - **Links are checked.** Every `link:` URL is verified nightly. Dead links are reported in a single tracking issue; entries are never removed automatically.
-- **Entries get verified by hand.** Papers have been audited against ACL Anthology and arXiv. Several entries inherited from the original design prototype turned out to be fabricated — a duplicate under an invented title, a model that does not exist, a paper with no publication — and were removed.
+- **Entries get verified by hand.** Papers have been audited against the ACL Anthology, arXiv, and OpenAlex (title, authors, and abstract), and their task assignments are being spot-checked and corrected. Several entries inherited from the original design prototype turned out to be fabricated — a duplicate under an invented title, a model that does not exist, a paper with no publication — and were removed.
 
 Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 37 datasets lack BibTeX and all 10 leaderboards await rows.
 
@@ -89,7 +89,7 @@ Contributions are genuinely welcome, and you do not need to know Astro or TypeSc
 
 These are concrete, self-contained, and each one is genuinely useful on its own — full detail in [`TODO-data.md`](./TODO-data.md):
 
-- **Reviewing paper tasks.** Most of the 684 papers were bulk-imported (ACL Anthology + arXiv); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
+- **Reviewing paper tasks.** Most of the 684 papers were bulk-imported (ACL Anthology, arXiv, and hand-verified OpenAlex journal articles); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
 - **Leaderboard rows.** All 10 benchmarks ship empty. Each needs scores with a citation to the paper they came from. Even one populated benchmark is a real improvement.
 - **BibTeX.** 37 datasets have no citation entry. Copy the published one from the ACL Anthology or the publisher page — please do not hand-write one.
 - **Unverified dataset sizes.** About a dozen datasets are hosted where no count is published (Kaggle, openslr.org, nltr.org). If you know the paper, you can settle these.
