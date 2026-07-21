@@ -119,14 +119,6 @@
   suggestedTask: sentiment
 - source: openalex
   kind: paper
-  title: A Novel Approach for AI Question Answer System/Agent in Bengali using LLM
-  link: https://doi.org/10.32381/iapqrt.2026.50.01.4
-  year: 2026
-  authors: Koner et al.
-  venue: IAPQR TRANSACTIONS
-  suggestedTask: qa
-- source: openalex
-  kind: paper
   title: A Novel Dual-Order Hybrid BiLSTM–BiGRU Ensemble Model for English-Bengali Code-Mixed Sentiment Analysis
   link: https://doi.org/10.48084/etasr.17370
   year: 2026
@@ -7598,14 +7590,6 @@
   venue: Multimedia Tools and Applications
 - source: openalex
   kind: paper
-  title: Reading comprehension based question answering system in Bangla language with transformer-based learning
-  link: https://doi.org/10.1016/j.heliyon.2022.e11052
-  year: 2022
-  authors: Aurpa et al.
-  venue: Heliyon
-  suggestedTask: qa
-- source: openalex
-  kind: paper
   title: "Reading the Flaneuse: the Contemporary Bengali Women Poets (Walkers) Writing the 'City'"
   link: https://doi.org/10.56975/jetir.v9i1.583452
   year: 2022
@@ -8170,14 +8154,6 @@
   venue: Ensemble
 - source: openalex
   kind: paper
-  title: An improvement of Bengali factoid question answering system using unsupervised statistical methods
-  link: https://doi.org/10.1007/s12046-021-01765-3
-  year: 2021
-  authors: Das et al.
-  venue: Sadhana
-  suggestedTask: qa
-- source: openalex
-  kind: paper
   title: An in-depth exploration of Bangla blog post classification
   link: https://doi.org/10.11591/eei.v10i2.2873
   year: 2021
@@ -8510,14 +8486,6 @@
   year: 2021
   authors: Ganguli et al.
   venue: IETE Journal of Research
-- source: openalex
-  kind: paper
-  title: Deep learning based Bengali question answering system using semantic textual similarity
-  link: https://doi.org/10.1007/s11042-021-11228-w
-  year: 2021
-  authors: Das et al.
-  venue: Multimedia Tools and Applications
-  suggestedTask: qa
 - source: openalex
   kind: paper
   title: Deep learning based large vocabulary continuous speech recognition of an under-resourced language Bangladeshi Bangla
@@ -9490,14 +9458,6 @@
   venue: Feminismo/s
 - source: openalex
   kind: paper
-  title: A novel approach for automatic Bengali question answering system using semantic similarity analysis
-  link: https://doi.org/10.1007/s10772-020-09760-5
-  year: 2020
-  authors: Das et al.
-  venue: International Journal of Speech Technology
-  suggestedTask: qa
-- source: openalex
-  kind: paper
   title: A Review on Medicinal and General Importance of Ficus Bengalis Tree
   link: https://doi.org/10.46610/jabp.2020.v02i02.004
   year: 2020
@@ -9836,14 +9796,6 @@
   venue: South Asian Research Journal of Arts Language and Literature
 - source: openalex
   kind: paper
-  title: Deep learning based question answering system in Bengali
-  link: https://doi.org/10.1080/24751839.2020.1833136
-  year: 2020
-  authors: Mayeesha et al.
-  venue: Journal of Information and Telecommunication
-  suggestedTask: qa
-- source: openalex
-  kind: paper
   title: Deep Learning Based Sentiment Analysis in a Code-Mixed English-Hindi and English-Bengali Social Media Corpus
   link: https://doi.org/10.1142/s0218213020500141
   year: 2020
@@ -9932,14 +9884,6 @@
   year: 2020
   authors: Bengal. et al.
   venue: Rupkatha Journal on Interdisciplinary Studies in Humanities
-- source: openalex
-  kind: paper
-  title: End-To-End Neural Network for Paraphrased Question Answering Architecture with Single Supporting Line in Bangla Language
-  link: https://doi.org/10.18178/ijfcc.2020.9.3.565
-  year: 2020
-  authors: Uddin et al.
-  venue: International Journal of Future Computer and Communication
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: English to Bangla Machine Translation Using Recurrent Neural Network
@@ -10801,14 +10745,6 @@
   year: 2019
   authors: Haldar et al.
   venue: Biological Rhythm Research
-- source: openalex
-  kind: paper
-  title: Classifier combination approach for question classification for Bengali question answering system
-  link: https://doi.org/10.1007/s12046-019-1224-8
-  year: 2019
-  authors: Banerjee et al.
-  venue: Sadhana
-  suggestedTask: qa
 - source: openalex
   kind: paper
   title: "Colonial Politics of Finding Equivalence: Interpreting ‘Translation’ and anubad through Nineteenth Century English to Sanskrit/Bengali Dictionaries"

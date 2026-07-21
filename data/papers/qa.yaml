@@ -119,3 +119,59 @@
   year: 2012
   link: https://aclanthology.org/W12-5003/
   task: qa
+- id: koner-etal-2026-bengali-qa-llm-agent
+  title: "A Novel Approach for AI Question Answer System/Agent in Bengali using LLM"
+  authors: Koner et al.
+  venue: IAPQR TRANSACTIONS
+  year: 2026
+  link: https://doi.org/10.32381/iapqrt.2026.50.01.4
+  task: qa
+- id: aurpa-etal-2022-bangla-reading-comprehension-qa
+  title: "Reading comprehension based question answering system in Bangla language with transformer-based learning"
+  authors: Aurpa et al.
+  venue: Heliyon
+  year: 2022
+  link: https://doi.org/10.1016/j.heliyon.2022.e11052
+  task: qa
+- id: das-etal-2021-bengali-factoid-qa
+  title: "An improvement of Bengali factoid question answering system using unsupervised statistical methods"
+  authors: Das et al.
+  venue: Sadhana
+  year: 2021
+  link: https://doi.org/10.1007/s12046-021-01765-3
+  task: qa
+- id: das-etal-2021-bengali-qa-semantic-textual-similarity
+  title: "Deep learning based Bengali question answering system using semantic textual similarity"
+  authors: Das et al.
+  venue: Multimedia Tools and Applications
+  year: 2021
+  link: https://doi.org/10.1007/s11042-021-11228-w
+  task: qa
+- id: das-etal-2020-bengali-qa-semantic-similarity
+  title: "A novel approach for automatic Bengali question answering system using semantic similarity analysis"
+  authors: Das et al.
+  venue: International Journal of Speech Technology
+  year: 2020
+  link: https://doi.org/10.1007/s10772-020-09760-5
+  task: qa
+- id: mayeesha-etal-2020-bengali-qa-deep-learning
+  title: "Deep learning based question answering system in Bengali"
+  authors: Mayeesha et al.
+  venue: Journal of Information and Telecommunication
+  year: 2020
+  link: https://doi.org/10.1080/24751839.2020.1833136
+  task: qa
+- id: uddin-etal-2020-bangla-paraphrased-qa
+  title: "End-To-End Neural Network for Paraphrased Question Answering Architecture with Single Supporting Line in Bangla Language"
+  authors: Uddin et al.
+  venue: International Journal of Future Computer and Communication
+  year: 2020
+  link: https://doi.org/10.18178/ijfcc.2020.9.3.565
+  task: qa
+- id: banerjee-etal-2019-bengali-question-classification
+  title: "Classifier combination approach for question classification for Bengali question answering system"
+  authors: Banerjee et al.
+  venue: Sadhana
+  year: 2019
+  link: https://doi.org/10.1007/s12046-019-1224-8
+  task: qa
