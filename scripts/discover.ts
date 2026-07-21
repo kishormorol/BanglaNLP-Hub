@@ -95,7 +95,10 @@ function guessTask(text: string): string | undefined {
     [/speech|asr|tts|phonem|audio|voice/, 'speech'],
     [/fake news|news classif|document classif|text classif|topic/, 'textcls'],
     [/part.of.speech|\bpos tag|treebank|dependenc|morpholog/, 'pos'],
-    [/\bllm\b|large language model|benchmark|instruction|gpt|reasoning/, 'llm'],
+    // Keep this tight: a bare "benchmark" matches any dataset paper and
+    // "instruction" matches education/pedagogy papers ("instructional design"),
+    // both of which flooded the llm bucket with non-LLM work.
+    [/\bllm\b|large language model|\bgpt\b|instruction.?tun|in.context|chain.of.thought|reasoning benchmark/, 'llm'],
   ];
   return rules.find(([re]) => re.test(t))?.[1];
 }
