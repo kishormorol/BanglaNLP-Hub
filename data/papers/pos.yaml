@@ -243,13 +243,6 @@
   year: 2025
   link: https://doi.org/10.1016/j.sasc.2025.200244
   task: pos
-- id: mugdha-etal-2024-bangla-stemmer-categorization
-  title: "Accurate Prediction of Bangla Text Article Categorization by Utilizing Novel Bangla Stemmer"
-  authors: Mugdha et al.
-  venue: International Journal of Automation and Smart Technology
-  year: 2024
-  link: https://doi.org/10.5875/xbzrk013
-  task: pos
 - id: barman-etal-2024-bengali-reduplication-fst
   title: "Bengali reduplication generation with finite-state transducers (FSTs)"
   authors: Barman et al.

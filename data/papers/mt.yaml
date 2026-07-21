@@ -476,3 +476,10 @@
   year: 2005
   link: https://doi.org/10.1142/s0219427905001328
   task: mt
+- id: hossain-etal-2025-bangla-english-word-recognition
+  title: "Recognition of Bangla and English Words in Bengali Texts Using a Modified BERT-base-NER Model"
+  authors: Hossain et al.
+  venue: Iraqi Journal for Computer Science and Mathematics
+  year: 2025
+  link: https://doi.org/10.52866/2788-7421.1334
+  task: mt

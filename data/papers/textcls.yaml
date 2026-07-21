@@ -503,3 +503,10 @@
   year: 2025
   link: https://doi.org/10.1007/s41870-025-02484-2
   task: textcls
+- id: mugdha-etal-2024-bangla-stemmer-categorization
+  title: "Accurate Prediction of Bangla Text Article Categorization by Utilizing Novel Bangla Stemmer"
+  authors: Mugdha et al.
+  venue: International Journal of Automation and Smart Technology
+  year: 2024
+  link: https://doi.org/10.5875/xbzrk013
+  task: textcls
