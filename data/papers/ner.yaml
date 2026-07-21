@@ -138,3 +138,108 @@
   year: 2026
   link: https://doi.org/10.1371/journal.pone.0342558
   task: ner
+- id: hossain-etal-2025-bangla-english-word-recognition
+  title: "Recognition of Bangla and English Words in Bengali Texts Using a Modified BERT-base-NER Model"
+  authors: Hossain et al.
+  venue: Iraqi Journal for Computer Science and Mathematics
+  year: 2025
+  link: https://doi.org/10.52866/2788-7421.1334
+  task: ner
+- id: aurpa-etal-2024-bangla-mathematical-entity-recognition
+  title: "An ensemble novel architecture for Bangla Mathematical Entity Recognition (MER) using transformer based learning"
+  authors: Aurpa et al.
+  venue: Heliyon
+  year: 2024
+  link: https://doi.org/10.1016/j.heliyon.2024.e25467
+  task: ner
+- id: bose-etal-2024-bengali-hindi-ner-muril
+  title: "Named Entity Recognition in Bengali and Hindi Using MuRIL and Conditional Random Fields"
+  authors: Bose et al.
+  venue: SN Computer Science
+  year: 2024
+  link: https://doi.org/10.1007/s42979-024-03211-7
+  task: ner
+- id: lima-etal-2023-bengali-ner-data-model-centric
+  title: "A novel Data and Model Centric artificial intelligence based approach in developing high-performance Named Entity Recognition for Bengali Language"
+  authors: Lima et al.
+  venue: PLoS ONE
+  year: 2023
+  link: https://doi.org/10.1371/journal.pone.0287818
+  task: ner
+- id: ashrafi-etal-2020-banner
+  title: "Banner: A Cost-Sensitive Contextualized Model for Bangla Named Entity Recognition"
+  authors: Ashrafi et al.
+  venue: IEEE Access
+  year: 2020
+  link: https://doi.org/10.1109/access.2020.2982427
+  task: ner
+- id: karim-etal-2019-bangla-ner-deep-learning
+  title: "A step towards information extraction: Named entity recognition in Bangla using deep learning"
+  authors: Karim et al.
+  venue: Journal of Intelligent & Fuzzy Systems
+  year: 2019
+  link: https://doi.org/10.3233/jifs-179349
+  task: ner
+- id: ibtehaz-etal-2018-bengali-ner-string-matching
+  title: "A Partial String Matching Approach for Named Entity Recognition in Unstructured Bengali Data"
+  authors: Ibtehaz et al.
+  venue: International Journal of Modern Education and Computer Science
+  year: 2018
+  link: https://doi.org/10.5815/ijmecs.2018.01.04
+  task: ner
+- id: parvez-2017-bengali-newspaper-ner
+  title: "Named Entity Recognition from Bengali Newspaper Data"
+  authors: Parvez
+  venue: International Journal on Natural Language Computing
+  year: 2017
+  link: https://doi.org/10.5121/ijnlc.2017.6304
+  task: ner
+- id: ekbal-etal-2014-bengali-ner-system-combination
+  title: "Named entity recognition in Bengali using system combination"
+  authors: Ekbal et al.
+  venue: Lingvisticae Investigationes
+  year: 2014
+  link: https://doi.org/10.1075/li.37.1.01ekb
+  task: ner
+- id: saha-etal-2011-hindi-bengali-ner-feature-reduction
+  title: "A comparative study on feature reduction approaches in Hindi and Bengali named entity recognition"
+  authors: Saha et al.
+  venue: Knowledge-Based Systems
+  year: 2011
+  link: https://doi.org/10.1016/j.knosys.2011.09.015
+  task: ner
+- id: ekbal-etal-2011-bengali-hindi-ner-svm
+  title: "Named entity recognition in Bengali and Hindi using support vector machine"
+  authors: Ekbal et al.
+  venue: Lingvisticae Investigationes
+  year: 2011
+  link: https://doi.org/10.1075/li.34.1.02ekb
+  task: ner
+- id: ekbal-etal-2010-bengali-ner
+  title: "Named Entity Recognition in Bengali"
+  authors: Ekbal et al.
+  venue: Northern European Journal of Language Technology
+  year: 2010
+  link: https://doi.org/10.3384/nejlt.2000-1533.091226
+  task: ner
+- id: ekbal-etal-2009-bengali-hindi-ner-crf
+  title: "A Conditional Random Field Approach for Named Entity Recognition in Bengali and Hindi"
+  authors: Ekbal et al.
+  venue: Linguistic Issues in Language Technology
+  year: 2009
+  link: https://doi.org/10.33011/lilt.v2i.1203
+  task: ner
+- id: ekbal-etal-2008-web-bengali-news-corpus-ner
+  title: "A web-based Bengali news corpus for named entity recognition"
+  authors: Ekbal et al.
+  venue: Computers and the Humanities
+  year: 2008
+  link: https://doi.org/10.1007/s10579-008-9064-x
+  task: ner
+- id: ekbal-etal-2007-bengali-ner-transliteration
+  title: "Named Entity Recognition and transliteration in Bengali"
+  authors: Ekbal et al.
+  venue: Lingvisticae Investigationes
+  year: 2007
+  link: https://doi.org/10.1075/li.30.1.07ekb
+  task: ner

@@ -2887,14 +2887,6 @@
   venue: Social Science Review
 - source: openalex
   kind: paper
-  title: Recognition of Bangla and English Words in Bengali Texts Using a Modified BERT-base-NER Model
-  link: https://doi.org/10.52866/2788-7421.1334
-  year: 2025
-  authors: Hossain et al.
-  venue: Iraqi Journal for Computer Science and Mathematics
-  suggestedTask: ner
-- source: openalex
-  kind: paper
   title: "Redefining Identity: Tradition, Modernity and Dress Reforms among the Bengali Women"
   link: https://doi.org/10.62656/sijss.v23i5.2109
   year: 2025
@@ -3564,13 +3556,6 @@
   year: 2024
   authors: Busra et al.
   venue: Journal of Legal Subjects
-- source: openalex
-  kind: paper
-  title: An ensemble novel architecture for Bangla Mathematical Entity Recognition (MER) using transformer based learning
-  link: https://doi.org/10.1016/j.heliyon.2024.e25467
-  year: 2024
-  authors: Aurpa et al.
-  venue: Heliyon
 - source: openalex
   kind: paper
   title: An In-Vitro Study of the Root Canal Configuration of Mandibular First Premolars in a Bengali Subpopulation Using Cone-Beam Computed Tomography
@@ -4583,14 +4568,6 @@
   venue: IEEE Access
 - source: openalex
   kind: paper
-  title: Named Entity Recognition in Bengali and Hindi Using MuRIL and Conditional Random Fields
-  link: https://doi.org/10.1007/s42979-024-03211-7
-  year: 2024
-  authors: Bose et al.
-  venue: SN Computer Science
-  suggestedTask: ner
-- source: openalex
-  kind: paper
   title: "Narrating the ‘Hippie’: Bengali Perceptions of the Trail"
   link: https://doi.org/10.5070/rj44063810
   year: 2024
@@ -5406,14 +5383,6 @@
   year: 2023
   authors: Mahmud et al.
   venue: International Journal of Computer Applications
-- source: openalex
-  kind: paper
-  title: A novel Data and Model Centric artificial intelligence based approach in developing high-performance Named Entity Recognition for Bengali Language
-  link: https://doi.org/10.1371/journal.pone.0287818
-  year: 2023
-  authors: Lima et al.
-  venue: PLoS ONE
-  suggestedTask: ner
 - source: openalex
   kind: paper
   title: A robust hybrid machine learning model for Bengali cyber bullying detection in social media
@@ -9741,14 +9710,6 @@
   venue: Applied Intelligence
 - source: openalex
   kind: paper
-  title: "Banner: A Cost-Sensitive Contextualized Model for Bangla Named Entity Recognition"
-  link: https://doi.org/10.1109/access.2020.2982427
-  year: 2020
-  authors: Ashrafi et al.
-  venue: IEEE Access
-  suggestedTask: ner
-- source: openalex
-  kind: paper
   title: "BDNet: Bengali Handwritten Numeral Digit Recognition based on Densely connected Convolutional Neural Networks"
   link: https://doi.org/10.1016/j.jksuci.2020.03.002
   year: 2020
@@ -10656,14 +10617,6 @@
   year: 2019
   authors: Power et al.
   venue: Health and Quality of Life Outcomes
-- source: openalex
-  kind: paper
-  title: "A step towards information extraction: Named entity recognition in Bangla using deep learning"
-  link: https://doi.org/10.3233/jifs-179349
-  year: 2019
-  authors: Karim et al.
-  venue: Journal of Intelligent & Fuzzy Systems
-  suggestedTask: ner
 - source: openalex
   kind: paper
   title: A Study for Estimation of Age According to Risser's Sign in Regional Indian (Bengali) Population
@@ -11604,14 +11557,6 @@
   year: 2018
   authors: Khairullah et al.
   venue: Journal of King Saud University - Computer and Information Sciences
-- source: openalex
-  kind: paper
-  title: A Partial String Matching Approach for Named Entity Recognition in Unstructured Bengali Data
-  link: https://doi.org/10.5815/ijmecs.2018.01.04
-  year: 2018
-  authors: Ibtehaz et al.
-  venue: International Journal of Modern Education and Computer Science
-  suggestedTask: ner
 - source: openalex
   kind: paper
   title: A Rule Based Extractive Text Summarization Technique for Bangla News Documents
@@ -12788,14 +12733,6 @@
   year: 2017
   authors: Khan et al.
   venue: Dhaka University Journal of Linguistics
-- source: openalex
-  kind: paper
-  title: Named Entity Recognition from Bengali Newspaper Data
-  link: https://doi.org/10.5121/ijnlc.2017.6304
-  year: 2017
-  authors: Parvez et al.
-  venue: International Journal on Natural Language Computing
-  suggestedTask: ner
 - source: openalex
   kind: paper
   title: Nature of errors in percentage syllable articulation as an effect of reverberation time on Bangla
@@ -14658,14 +14595,6 @@
   venue: Academic Journal of Interdisciplinary Studies
 - source: openalex
   kind: paper
-  title: Named entity recognition in Bengali using system combination
-  link: https://doi.org/10.1075/li.37.1.01ekb
-  year: 2014
-  authors: Ekbal et al.
-  venue: Lingvisticae Investigationes
-  suggestedTask: ner
-- source: openalex
-  kind: paper
   title: "Ontology Localization: Bangla Language"
   link: https://doi.org/10.70438/dujl/478/0002
   year: 2014
@@ -15787,14 +15716,6 @@
   venue: Expert Systems with Applications
 - source: openalex
   kind: paper
-  title: A comparative study on feature reduction approaches in Hindi and Bengali named entity recognition
-  link: https://doi.org/10.1016/j.knosys.2011.09.015
-  year: 2011
-  authors: Saha et al.
-  venue: Knowledge-Based Systems
-  suggestedTask: ner
-- source: openalex
-  kind: paper
   title: A Complete Workflow for Development of Bangla OCR
   link: https://doi.org/10.5120/2543-3483
   year: 2011
@@ -16021,14 +15942,6 @@
   authors: Hassan et al.
   venue: International Journal of Speech Technology
   suggestedTask: speech
-- source: openalex
-  kind: paper
-  title: Named entity recognition in Bengali and Hindi using support vector machine
-  link: https://doi.org/10.1075/li.34.1.02ekb
-  year: 2011
-  authors: Ekbal et al.
-  venue: Lingvisticae Investigationes
-  suggestedTask: ner
 - source: openalex
   kind: paper
   title: On Segmentation and Extraction of Features from Continuous Bangla Speech including Windowing
@@ -16307,14 +16220,6 @@
   venue: Pattern Recognition
 - source: openalex
   kind: paper
-  title: Named Entity Recognition in Bengali
-  link: https://doi.org/10.3384/nejlt.2000-1533.091226
-  year: 2010
-  authors: Ekbal et al.
-  venue: Northern European Journal of Language Technology
-  suggestedTask: ner
-- source: openalex
-  kind: paper
   title: Northern Hemisphere climate control of the Bengali rivers discharge during the past 4 Ma
   link: https://doi.org/10.1016/j.quascirev.2010.05.003
   year: 2010
@@ -16426,14 +16331,6 @@
   year: 2009
   authors: Gupta et al.
   venue: Indian Journal of Gender Studies
-- source: openalex
-  kind: paper
-  title: A Conditional Random Field Approach for Named Entity Recognition in Bengali and Hindi
-  link: https://doi.org/10.33011/lilt.v2i.1203
-  year: 2009
-  authors: Ekbal et al.
-  venue: Linguistic Issues in Language Technology
-  suggestedTask: ner
 - source: openalex
   kind: paper
   title: A hierarchical approach to recognition of handwritten Bangla characters
@@ -16670,14 +16567,6 @@
   suggestedTask: llm
 - source: openalex
   kind: paper
-  title: A web-based Bengali news corpus for named entity recognition
-  link: https://doi.org/10.1007/s10579-008-9064-x
-  year: 2008
-  authors: Ekbal et al.
-  venue: Computers and the Humanities
-  suggestedTask: ner
-- source: openalex
-  kind: paper
   title: Arsenic Exposure through Drinking Water and its Effect on Pregnancy Outcome in Bengali Women
   link: https://doi.org/10.2478/10004-1254-59-2008-1871
   year: 2008
@@ -16879,14 +16768,6 @@
   year: 2007
   authors: Bertocci et al.
   venue: Visual Anthropology
-- source: openalex
-  kind: paper
-  title: Named Entity Recognition and transliteration in Bengali
-  link: https://doi.org/10.1075/li.30.1.07ekb
-  year: 2007
-  authors: Ekbal et al.
-  venue: Lingvisticae Investigationes
-  suggestedTask: ner
 - source: openalex
   kind: paper
   title: "Notice of Violation of IEEE Publication Principles: Modified Syntactic Method to Recognize Bengali Handwritten Characters"
