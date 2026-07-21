@@ -369,3 +369,10 @@
   year: 2008
   link: https://www.cicling.org/2008/RCS-vol-33/06-Ekbal.pdf
   task: pos
+- id: asaduzzaman-etal-2016-handling-inflections-translation-part-speech
+  title: "Handling Inflections for Translation and Part of Speech (POS) Tagging of Bengali Words"
+  authors: Asaduzzaman et al.
+  venue: Journal of Computer Technology & Applications
+  year: 2016
+  link: https://stmjournals.com/index.php?journal=JoCTA&page=article&op=view&path%5B%5D=7112
+  task: pos
