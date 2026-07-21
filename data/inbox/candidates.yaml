@@ -73,36 +73,12 @@
   venue: Engineering Reports
 - source: openalex
   kind: paper
-  title: A Deep Learning–Based Framework for Dataset Creation and Sentiment Classification of English–Bengali Code-Mixed Texts
-  link: https://doi.org/10.48084/etasr.15475
-  year: 2026
-  authors: Barua et al.
-  venue: Engineering Technology & Applied Science Research
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: A deep neural network-based automatic mispronunciation detection in Bengali accented English speech
   link: https://doi.org/10.1007/s10791-026-09959-1
   year: 2026
   authors: Bharati et al.
   venue: Discover Computing
   suggestedTask: speech
-- source: openalex
-  kind: paper
-  title: A multi-class classification approach for feminist sentiment analysis in Bangla social media using TF-IDF and ensemble learning
-  link: https://doi.org/10.11591/ijeecs.v42.i2.pp584-595
-  year: 2026
-  authors: Sajid et al.
-  venue: Indonesian Journal of Electrical Engineering and Computer Science
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
-  title: A Novel Dual-Order Hybrid BiLSTM–BiGRU Ensemble Model for English-Bengali Code-Mixed Sentiment Analysis
-  link: https://doi.org/10.48084/etasr.17370
-  year: 2026
-  authors: Barua et al.
-  venue: Engineering Technology & Applied Science Research
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: A Population Specific Regression Model for Estimating Visceral Fat from BMI in Bengali Older Women
@@ -219,14 +195,6 @@
   suggestedTask: hate
 - source: openalex
   kind: paper
-  title: "BAN-ASTE: A unified neural framework for Bengali aspect sentiment triplet extraction"
-  link: https://doi.org/10.1016/j.nlp.2026.100216
-  year: 2026
-  authors: Islam et al.
-  venue: Natural Language Processing Journal
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Bangla cholochitre Rabindra Sangeeter Prayogik Bisleshon
   link: https://doi.org/10.3329/jnujarts.v15i1.87697
   year: 2026
@@ -246,14 +214,6 @@
   year: 2026
   authors: SAHIDUL et al.
   venue: Bangladesh historical studies.
-- source: openalex
-  kind: paper
-  title: "Bangla Suicidal Ideation Detection: Performance and Efficiency Benchmark of Simple and Complex Classifiers on Social Media Data"
-  link: https://doi.org/10.65136/jati.v10i1.11
-  year: 2026
-  authors: Hussen et al.
-  venue: The Journal of Applied Technology and Innovation
-  suggestedTask: llm
 - source: openalex
   kind: paper
   title: "Bangla Town Toronto: the Changing Dynamics of a Diaspora Community"
@@ -292,27 +252,11 @@
   venue: BRAC University Journal
 - source: openalex
   kind: paper
-  title: Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer‑Based Models with Explainability
-  link: https://doi.org/10.55708/js0506004
-  year: 2026
-  authors: Alam et al.
-  venue: Journal of Engineering Research and Sciences
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Bengali Sign Language Recognition Through Hand Pose Estimation Using Multi-branch Spatial-Temporal Attention Model
   link: https://doi.org/10.1007/s42979-026-04990-x
   year: 2026
   authors: Miah et al.
   venue: SN Computer Science
-- source: openalex
-  kind: paper
-  title: "Beyond Polarity in Bengali Texts: Can Multi-Task Modeling Capture Sarcasm Intensity and Classification?"
-  link: https://doi.org/10.1109/ojcs.2026.3697802
-  year: 2026
-  authors: Ibnath et al.
-  venue: IEEE Open Journal of the Computer Society
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: Canadian Media and the Bengali Diaspora in Canada during the 1971 Bangladesh Liberation War
@@ -914,14 +858,6 @@
   venue: The Journal of AsiaTEFL
 - source: openalex
   kind: paper
-  title: "SSABE-TSCM: drift-aware and interpretable financial sentiment analysis for low-resource Bangla via adaptive semi-supervised and temporal contrastive modeling"
-  link: https://doi.org/10.3389/frai.2026.1724407
-  year: 2026
-  authors: Khandokar et al.
-  venue: Frontiers in Artificial Intelligence
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Static Word‐Level Bangla Sign Language Recognition for Children With Hearing Impairments Using VGG19
   link: https://doi.org/10.1155/acis/9295391
   year: 2026
@@ -1162,13 +1098,6 @@
   suggestedTask: speech
 - source: openalex
   kind: paper
-  title: What’s on Your Mind? - Mental Health Disorder Risk Detection From Bangla Social Media Text Using Weighted Ensemble of Transformers
-  link: https://doi.org/10.1007/s41347-026-00614-6
-  year: 2026
-  authors: Tasnim et al.
-  venue: Journal of Technology in Behavioral Science
-- source: openalex
-  kind: paper
   title: "মহমদ শহ করশ-এর Poèmes Mystiques Bengalis: পরসথত, পরবশ, পরচয় | Mahmud Shah Qureshi’s Poèmes Mystiques Bengalis: Context, Milieu, and Identity"
   link: https://doi.org/10.64242/bijbs.v21i25.145
   year: 2026
@@ -1297,14 +1226,6 @@
   venue: Discover Artificial Intelligence
 - source: openalex
   kind: paper
-  title: A machine and DL approach for classifying customer sentiments from online shopping reviews in Bangla text
-  link: https://doi.org/10.11591/eei.v14i4.9122
-  year: 2025
-  authors: Rejuan et al.
-  venue: Bulletin of Electrical Engineering and Informatics
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: A Machine Learning Approach for Identifying Gender Based on Bengali Vocal Cues
   link: https://doi.org/10.46431/mejast.2025.8104
   year: 2025
@@ -1412,14 +1333,6 @@
   year: 2025
   authors: Islam et al.
   venue: Journal of Computer Sciences Institute
-- source: openalex
-  kind: paper
-  title: "Advancing Bengali Sentiment Analysis: A Benchmark Study with ELMo and XLNet Architecture"
-  link: https://doi.org/10.5120/ijca2025925755
-  year: 2025
-  authors: Bhattacharjee et al.
-  venue: International Journal of Computer Applications
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "Amar Jiban: A Challenging Life-Story of a Courageous Bengali Woman of the 19th Century"
@@ -1627,14 +1540,6 @@
   suggestedTask: sentiment
 - source: openalex
   kind: paper
-  title: "BCLSA: Advancing Bangla sentiment analysis with concept-level reasoning and efficiency"
-  link: https://doi.org/10.1016/j.mlwa.2025.100793
-  year: 2025
-  authors: Ullah et al.
-  venue: Machine Learning with Applications
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "BdSLW60: A word-level bangla sign language dataset"
   link: https://doi.org/10.1007/s11042-025-20792-4
   year: 2025
@@ -1647,14 +1552,6 @@
   year: 2025
   authors: Talukder et al.
   venue: SCHOLARS Journal of Arts & Humanities
-- source: openalex
-  kind: paper
-  title: "BEN-ED-PR: Emotion detection from Bengali text with polysemy resolution"
-  link: https://doi.org/10.1007/s41870-025-02653-3
-  year: 2025
-  authors: Seal et al.
-  venue: International Journal of Information Technology
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "Bengal and the Bengals: The Bengali Homeland in Advertisements of West Bengal During Bangladesh Liberation War 1971"
@@ -1713,14 +1610,6 @@
   venue: First Language
 - source: openalex
   kind: paper
-  title: "Beyond Likes and Loves: Uncovering Complex Sentiments in Bengali Food Reviews on Facebook"
-  link: https://doi.org/10.5120/ijca2025925106
-  year: 2025
-  authors: Ahamed et al.
-  venue: International Journal of Computer Applications
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Bhoot Bangla
   link: https://doi.org/10.37113/ij.v22i1.613
   year: 2025
@@ -1754,14 +1643,6 @@
   year: 2025
   authors: Mondal et al.
   venue: Discover Artificial Intelligence
-- source: openalex
-  kind: paper
-  title: "BN-GRAPH: Data Augmentation Based Bangla Text Sentiment Analysis in Deep Graph Neural Network"
-  link: https://doi.org/10.1007/s42979-025-03763-2
-  year: 2025
-  authors: Bhowmik et al.
-  venue: SN Computer Science
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "BongHope: An annotated corpus for Bengali hope speech detection"
@@ -1925,14 +1806,6 @@
   year: 2025
   authors: Amreen et al.
   venue: BRAC University Journal
-- source: openalex
-  kind: paper
-  title: Deep learning-based Bangla text normalization with emotion classification for expressive text-to-speech synthesizer
-  link: https://doi.org/10.1016/j.asoc.2025.112899
-  year: 2025
-  authors: Islam et al.
-  venue: Applied Soft Computing
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "Delineation of women in Bengali Household: A brief foray into Sailabala Ghosh Jaya’s Janma Aparadhi"
@@ -2433,14 +2306,6 @@
   venue: International Journal of Documentary Heritage
 - source: openalex
   kind: paper
-  title: Multi-label emotion and sentiment detection from Bengali text using hybrid deep learning model
-  link: https://doi.org/10.1016/j.ijcce.2025.10.005
-  year: 2025
-  authors: Rumy et al.
-  venue: International Journal of Cognitive Computing in Engineering
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "MultiBanFakeDetect: Integrating advanced fusion techniques for multimodal detection of Bangla fake news in under-resourced contexts"
   link: https://doi.org/10.1016/j.jjimei.2025.100347
   year: 2025
@@ -2917,14 +2782,6 @@
   venue: Asian Ethnicity
 - source: openalex
   kind: paper
-  title: "THE FUTURE OF BANGLA SENTIMENT ANALYSIS: ADVANCEMENTS, CHALLENGES, AND OPPORTUNITIES FOR PRACTICAL AND RESEARCH INNOVATION"
-  link: https://doi.org/10.35631/jistm.1039002
-  year: 2025
-  authors: Hasan et al.
-  venue: Journal of Information System and Technology Management
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "The Heart as the Seat of the Divine: Conceptual Metaphor Schemas of Qalb in the Bengali Fakīrī Song Tradition"
   link: https://doi.org/10.52783/anuval.1598
   year: 2025
@@ -3051,14 +2908,6 @@
   year: 2025
   authors: Biswas et al.
   venue: Journal of Scientific and Technological Research
-- source: openalex
-  kind: paper
-  title: Transformer-Based Sentiment Analysis for classification of non-depressive and suicidal thought from Bangla Text
-  link: https://doi.org/10.20525/ijrbs.v14i5.4274
-  year: 2025
-  authors: Islam et al.
-  venue: International Journal of Research in Business and Social Science (2147-4478)
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: Translation, Validation, and Diagnostic Performance of the Michigan Neuropathy Screening Instrument (MNSI) in Bangla
@@ -3338,13 +3187,6 @@
   venue: Journal of Festive Studies
 - source: openalex
   kind: paper
-  title: An Approach to Detect Suicidal Bengali Posts from Social Media Using Machine Learning Algorithms
-  link: https://doi.org/10.14445/22315381/ijett-v72i5p105
-  year: 2024
-  authors: Paul et al.
-  venue: International Journal of Engineering Trends and Technology
-- source: openalex
-  kind: paper
   title: An Approach to Identify the Complete Reduplicated Multiword Expressions in Digital Bengali Text
   link: https://doi.org/10.1007/s40031-024-01104-0
   year: 2024
@@ -3385,14 +3227,6 @@
   year: 2024
   authors: Pathan et al.
   venue: Bangladesh Journal of Medical Education
-- source: openalex
-  kind: paper
-  title: "Analyzing Sentiments in eLearning: A Comparative Study of Bangla and Romanized Bangla Text Using Transformers"
-  link: https://doi.org/10.1109/access.2024.3419024
-  year: 2024
-  authors: Rahman et al.
-  venue: IEEE Access
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "Annihilating caste, denouncing untouchability: A critical review of select Bengali Dalit stories"
@@ -3479,13 +3313,6 @@
   authors: Samin et al.
   venue: IEEE Access
   suggestedTask: speech
-- source: openalex
-  kind: paper
-  title: "Ben-Sarc: A self-annotated corpus for sarcasm detection from Bengali social media comments and its baseline evaluation"
-  link: https://doi.org/10.1017/nlp.2024.11
-  year: 2024
-  authors: Lora et al.
-  venue: Natural language processing.
 - source: openalex
   kind: paper
   title: "Bengal Women’s Social Status and Identity : In the Light of Bengali Literature in Pre- Colonial India"
@@ -3740,21 +3567,6 @@
   suggestedTask: llm
 - source: openalex
   kind: paper
-  title: Depression Intensity Identification using Transformer Ensemble Technique for the Resource-constrained Bengali Language
-  link: https://doi.org/10.38032/jea.2024.02.001
-  year: 2024
-  authors: Hoque et al.
-  venue: Journal of Engineering Advancements
-- source: openalex
-  kind: paper
-  title: Depressive and Suicidal Text-Based Sentiment Analysis in Bangla Using Deep Learning Models
-  link: https://doi.org/10.14311/bit.2024.02.13
-  year: 2024
-  authors: Hoque et al.
-  venue: Business & IT
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Development and performance evaluation of a Bengali-adapted mHealth app for early detection of impaired visual acuity
   link: https://doi.org/10.1016/j.heliyon.2024.e40853
   year: 2024
@@ -3867,14 +3679,6 @@
   venue: International Journal of Bioinformatics and Intelligent Computing
 - source: openalex
   kind: paper
-  title: "Emotion Classification in Bangla Text Data Using Gaussian Naive Bayes Classifier: A Computational Linguistic Study"
-  link: https://doi.org/10.56532/mjsat.v4i4.273
-  year: 2024
-  authors: Shafi et al.
-  venue: Malaysian Journal of Science and Advanced Technology
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Emotion Recognition with Intensity Level from Bangla Speech using Feature Transformation and Cascaded Deep Learning Model
   link: https://doi.org/10.14569/ijacsa.2024.0150460
   year: 2024
@@ -3969,14 +3773,6 @@
   year: 2024
   authors: Roy et al.
   venue: Asian Qualitative Inquiry Association
-- source: openalex
-  kind: paper
-  title: Exploring transformer models in the sentiment analysis task for the under-resource Bengali language
-  link: https://doi.org/10.1016/j.nlp.2024.100091
-  year: 2024
-  authors: Hoque et al.
-  venue: Natural Language Processing Journal
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: Exploring WordNet® graphs for text summarization and sentiment analysis in Bengali speech
@@ -4328,14 +4124,6 @@
   venue: IEEE Access
 - source: openalex
   kind: paper
-  title: "Optimizing BERT for Bengali Emotion Classification: Evaluating Knowledge Distillation, Pruning, and Quantization"
-  link: https://doi.org/10.32604/cmes.2024.058329
-  year: 2024
-  authors: Rahman et al.
-  venue: Computer Modeling in Engineering & Sciences
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Patterns of Gender Assignment to English Nominal Loans in Bangla
   link: https://doi.org/10.63307/baj.5.1.008
   year: 2024
@@ -4362,14 +4150,6 @@
   year: 2024
   authors: Brook et al.
   venue: Italica
-- source: openalex
-  kind: paper
-  title: Predicting Customer Sentiment from Bengali Food Reviews of Social Media Using Deep Learning
-  link: https://doi.org/10.59321/bauetj.v4i2.13
-  year: 2024
-  authors: Tanjum et al.
-  venue: BAUET Journal
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: Prevalence of Escherichia coli and Salmonella in Drinking Water around Sher-e-Bangla Agricultural University Campus
@@ -4575,14 +4355,6 @@
   year: 2024
   authors: Bhattacharya et al.
   venue: South Asian Popular Culture
-- source: openalex
-  kind: paper
-  title: Sentiment analysis of Bangla language using a new comprehensive dataset BangDSA and the novel feature metric skipBangla-BERT
-  link: https://doi.org/10.1016/j.nlp.2024.100069
-  year: 2024
-  authors: Islam et al.
-  venue: Natural Language Processing Journal
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: SKOROKHODOVA, Tatiana G. (2022) Understanding the Other and dialogue in the philosophy of Bengali Revival, St. Petersburg Oriental Studies, St. Petersburg
@@ -4806,14 +4578,6 @@
   suggestedTask: mt
 - source: openalex
   kind: paper
-  title: "tRF-BERT: A transformative approach to aspect-based sentiment analysis in the bengali language"
-  link: https://doi.org/10.1371/journal.pone.0308050
-  year: 2024
-  authors: Ahmed et al.
-  venue: PLoS ONE
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "Understanding networked family language policy: a study among Bengali immigrants in Australia"
   link: https://doi.org/10.1080/14664208.2024.2349405
   year: 2024
@@ -4883,14 +4647,6 @@
   year: 2024
   authors: Raquib et al.
   venue: Machine Learning with Applications
-- source: openalex
-  kind: paper
-  title: Verse-Based Emotion Analysis of Bengali Music from LyricsUsing Machine Learning and Neural Network Classifiers
-  link: https://doi.org/10.12785/ijcds/150128
-  year: 2024
-  authors: Mia et al.
-  venue: International Journal of Computing and Digital Systems
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "Victorians, Bengalis, and Alexander the Great: The Defense of Effeminacy"
@@ -5108,13 +4864,6 @@
   venue: International Journal of Multidisciplinary Research and Growth Evaluation
 - source: openalex
   kind: paper
-  title: A transformer-based generative adversarial learning to detect sarcasm from Bengali text with correct classification of confusing text
-  link: https://doi.org/10.1016/j.heliyon.2023.e22531
-  year: 2023
-  authors: Lora et al.
-  venue: Heliyon
-- source: openalex
-  kind: paper
   title: A Visual Attention-Based Model for Bengali Image Captioning
   link: https://doi.org/10.1007/s42979-023-01671-x
   year: 2023
@@ -5156,14 +4905,6 @@
   year: 2023
   authors: Kryst et al.
   venue: Human Biology and Public Health
-- source: openalex
-  kind: paper
-  title: "Advancement in Bangla Sentiment Analysis: A Comparative Study of Transformer-Based and Transfer Learning Models for E-commerce Sentiment Classification"
-  link: https://doi.org/10.20473/jisebi.9.2.181-194
-  year: 2023
-  authors: Ahmed et al.
-  venue: Journal of Information Systems Engineering and Business Intelligence
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "Against Imitation: Anti-Colonial Caricatures in Basantak , or the Bengali Punch"
@@ -5351,14 +5092,6 @@
   suggestedTask: mt
 - source: openalex
   kind: paper
-  title: "Binary vs. Multiclass Sentiment Classification for Bangla E-commerce Product Reviews: A Comparative Analysis of Machine Learning Models"
-  link: https://doi.org/10.5815/ijieeb.2023.06.04
-  year: 2023
-  authors: Shanto et al.
-  venue: International Journal of Information Engineering and Electronic Business
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "Blame Shifting: A Unique Phase in Bengali Children’s Meaning Acquisition Process"
   link: https://doi.org/10.3329/jasbh.v68i1.67139
   year: 2023
@@ -5529,14 +5262,6 @@
   venue: Dhaka University Journal of Biological Sciences
 - source: openalex
   kind: paper
-  title: "Data-Augmentation for Bangla-English Code-Mixed Sentiment Analysis: Enhancing Cross Linguistic Contextual Understanding"
-  link: https://doi.org/10.1109/access.2023.3277787
-  year: 2023
-  authors: Tareq et al.
-  venue: IEEE Access
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "Death Denial in Bengali Cinema: A Terror Management Analysis of Srijit Mukherji’s Baishe Srabon and Hemlock Society"
   link: https://doi.org/10.3329/ssr.v38i2.64468
   year: 2023
@@ -5570,13 +5295,6 @@
   year: 2023
   authors: Roychowdhury et al.
   venue: Indian Journal of Language and Linguistics
-- source: openalex
-  kind: paper
-  title: Detecting Level of Depression from Social Media Posts for the Low-resource Bengali Language
-  link: https://doi.org/10.38032/jea.2023.02.003
-  year: 2023
-  authors: Hoque et al.
-  venue: Journal of Engineering Advancements
 - source: openalex
   kind: paper
   title: Diarrhea and Your Child—Bengali
@@ -5756,14 +5474,6 @@
   venue: The Indian Economic & Social History Review
 - source: openalex
   kind: paper
-  title: "Mining User Opinions: A Balanced Bangla Sentiment Analysis Dataset for E-Commerce"
-  link: https://doi.org/10.56532/mjsat.v3i4.200
-  year: 2023
-  authors: Shanto et al.
-  venue: Malaysian Journal of Science and Advanced Technology
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Mixed language processing increases cross-language phonetic transfer in Bengali–English bilinguals
   link: https://doi.org/10.1017/s1366728923000159
   year: 2023
@@ -5785,14 +5495,6 @@
   venue: International Journal of Advanced Computer Science and Applications
 - source: openalex
   kind: paper
-  title: Multi-class sentiment classification on Bengali social media comments using machine learning
-  link: https://doi.org/10.1016/j.ijcce.2023.01.001
-  year: 2023
-  authors: Haque et al.
-  venue: International Journal of Cognitive Computing in Engineering
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Multisensory computer-based system for teaching sentence reading in Hindi and Bangla to children with dyslexia
   link: https://doi.org/10.3233/tad-230005
   year: 2023
@@ -5812,14 +5514,6 @@
   year: 2023
   authors: Shome et al.
   venue: South Asian Diaspora
-- source: openalex
-  kind: paper
-  title: Natural Language Processing and Sentiment Analysis on Bangla Social Media Comments on Russia–Ukraine War Using Transformers
-  link: https://doi.org/10.1142/s2196888823500021
-  year: 2023
-  authors: Hasan et al.
-  venue: Vietnam Journal of Computer Science
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: Neoclassicism in Bangla Word Formation Processes
@@ -6351,14 +6045,6 @@
   venue: Khulna University Studies
 - source: openalex
   kind: paper
-  title: A Comprehensive Roadmap on Bangla Text-based Sentiment Analysis
-  link: https://doi.org/10.1145/3572783
-  year: 2022
-  authors: Shammi et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: A dataset for evaluating Bengali word sense disambiguation techniques
   link: https://doi.org/10.1007/s12652-022-04471-y
   year: 2022
@@ -6373,14 +6059,6 @@
   venue: ACM Transactions on Asian and Low-Resource Language Information Processing
 - source: openalex
   kind: paper
-  title: A Dynamic Strategy for Classifying Sentiment From Bengali Text by Utilizing Word2vector Model
-  link: https://doi.org/10.4018/jitr.299919
-  year: 2022
-  authors: Rahman et al.
-  venue: Journal of Information Technology Research
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "A History of Symbolic Violence: A Spatial Temporal Exploration of the Cultural Capital Legacy of Bengali Pedagogy"
   link: https://doi.org/10.1177/00380229211063151
   year: 2022
@@ -6393,14 +6071,6 @@
   year: 2022
   authors: Das et al.
   venue: Expert Systems with Applications
-- source: openalex
-  kind: paper
-  title: A hybrid convolutional long short-term memory (CNN-LSTM) based natural language processing (NLP) model for sentiment analysis of customer product reviews in Bangla
-  link: https://doi.org/10.1080/09720529.2022.2133250
-  year: 2022
-  authors: Purba et al.
-  venue: Journal of Discrete Mathematical Sciences and Cryptography
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: A Linguistic Study of Age-Dependent Code-Mixing in Bangla
@@ -6536,14 +6206,6 @@
   year: 2022
   authors: Momy et al.
   venue: Dhaka University Journal of Linguistics
-- source: openalex
-  kind: paper
-  title: Aspect-based Sentiment Analysis for Bengali Text using Bidirectional Encoder Representations from Transformers (BERT)
-  link: https://doi.org/10.14569/ijacsa.2022.01312112
-  year: 2022
-  authors: Samia et al.
-  venue: International Journal of Advanced Computer Science and Applications
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: Assessment of Co-Sensitization between Pollen and Food Allergen Sources among Bengali Population, West Bengal, India
@@ -6846,13 +6508,6 @@
   venue: Journal of Tropical Biodiversity.
 - source: openalex
   kind: paper
-  title: "Detection of Depression Severity Using Bengali Social Media Posts on Mental Health: Study Using Natural Language Processing Techniques"
-  link: https://doi.org/10.2196/36118
-  year: 2022
-  authors: Kabir et al.
-  venue: JMIR Formative Research
-- source: openalex
-  kind: paper
   title: Development of time compressed sentence test in Bengali (TCST-B)
   link: https://doi.org/10.18203/issn.2454-5929.ijohns20220470
   year: 2022
@@ -6985,14 +6640,6 @@
   year: 2022
   authors: Suzuki et al.
   venue: Alzheimer s & Dementia
-- source: openalex
-  kind: paper
-  title: Hindi/Bengali sentiment analysis using transfer learningand joint dual input learning with self-attention
-  link: https://doi.org/10.54646/bijcs.2022.05
-  year: 2022
-  authors: Khan et al.
-  venue: BOHR International Journal of Computer Science
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "Hindus in India, Bengalis in Bengal: the role of religious and regional identities in West Bengal politics"
@@ -7285,22 +6932,6 @@
   year: 2022
   authors: Debnath et al.
   venue: Bulletin of Engineering Geology and the Environment
-- source: openalex
-  kind: paper
-  title: Sentiment analysis on Bangla conversation using machine learning approach
-  link: https://doi.org/10.11591/ijece.v12i5.pp5562-5572
-  year: 2022
-  authors: Hassan et al.
-  venue: International Journal of Power Electronics and Drive Systems/International Journal of Electrical and Computer Engineering
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
-  title: Sentiment analysis on Bangla text using extended lexicon dictionary and deep learning algorithms
-  link: https://doi.org/10.1016/j.array.2021.100123
-  year: 2022
-  authors: Bhowmik et al.
-  venue: Array
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: Sex determination using computed tomography of the last thoracic vertebrae in Indian (Bengali) population
@@ -7635,14 +7266,6 @@
   venue: International Journal of Science and Research (IJSR)
 - source: openalex
   kind: paper
-  title: A Comprehensive Guideline for Bengali Sentiment Annotation
-  link: https://doi.org/10.1145/3474363
-  year: 2021
-  authors: Mukta et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: A convolution neural network with encoder-decoder applied to the study of Bengali letters classification
   link: https://doi.org/10.3934/bdia.2021004
   year: 2021
@@ -7850,14 +7473,6 @@
   suggestedTask: sentiment
 - source: openalex
   kind: paper
-  title: Bangla Text Sentiment Analysis Using Supervised Machine Learning with Extended Lexicon Dictionary
-  link: https://doi.org/10.2991/nlpr.d.210316.001
-  year: 2021
-  authors: Bhowmik et al.
-  venue: Natural Language Processing Research
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "Bangla version of the composite scale of morningness: factor invariance and validity with sleep habits, mood and mental health"
   link: https://doi.org/10.1080/09291016.2021.1949516
   year: 2021
@@ -7893,14 +7508,6 @@
   year: 2021
   authors: Sayeed et al.
   venue: Applied Sciences
-- source: openalex
-  kind: paper
-  title: "BengSentiLex and BengSwearLex: creating lexicons for sentiment analysis and profanity detection in low-resource Bengali language"
-  link: https://doi.org/10.7717/peerj-cs.681
-  year: 2021
-  authors: Sazzed et al.
-  venue: PeerJ Computer Science
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "Bilingual phonological development across generations: Segmental accuracy and error patterns in second- and third-generation British Bengali children"
@@ -8663,14 +8270,6 @@
   venue: Journal of Human Genetics and Genomics
 - source: openalex
   kind: paper
-  title: Sentiment Analysis on Bengali Facebook Comments To Predict Fan's Emotions Towards a Celebrity
-  link: https://doi.org/10.38032/jea.2021.03.001
-  year: 2021
-  authors: Khan et al.
-  venue: Journal of Engineering Advancements
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "Sexual dimorphism in digital dermatoglyphics: A qualitative analysis of bengali hindu population, West Bengal, India"
   link: https://doi.org/10.18231/j.ijfmts.2021.016
   year: 2021
@@ -8690,14 +8289,6 @@
   year: 2021
   authors: Ahamed et al.
   venue: Bulletin of Electrical Engineering and Informatics
-- source: openalex
-  kind: paper
-  title: Supervised Machine Learning Algorithms for Sentiment Analysis of Bangla Newspaper
-  link: https://doi.org/10.11113/ijic.v11n2.321
-  year: 2021
-  authors: Maisha et al.
-  venue: International Journal of Innovative Computing
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "SUST Bangla Emotional Speech Corpus (SUBESCO): An audio-only emotional speech corpus for Bangla"
@@ -9112,14 +8703,6 @@
   venue: Asian Journal of Medical and Biological Research
 - source: openalex
   kind: paper
-  title: Attention-based convolutional neural network for Bangla sentiment analysis
-  link: https://doi.org/10.1007/s00146-020-01011-0
-  year: 2020
-  authors: Sharmin et al.
-  venue: AI & Society
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "Author–Screenwriter– Director (1930s–1950s): Articulating Authorship Through Self-Adaptations and Film Novelisations in Bengali"
   link: https://doi.org/10.1177/0974927620983952
   year: 2020
@@ -9298,14 +8881,6 @@
   venue: South Asian Research Journal of Arts Language and Literature
 - source: openalex
   kind: paper
-  title: Deep Learning Based Sentiment Analysis in a Code-Mixed English-Hindi and English-Bengali Social Media Corpus
-  link: https://doi.org/10.1142/s0218213020500141
-  year: 2020
-  authors: Jamatia et al.
-  venue: International Journal of Artificial Intelligence Tools
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Deep Learning-based Bengali Handwritten Grapheme Classification for Kaggle Bengali.AI Challenge
   link: https://doi.org/10.5573/ieie.2020.57.9.67
   year: 2020
@@ -9457,14 +9032,6 @@
   year: 2020
   authors: Mukhoti et al.
   venue: Applied Artificial Intelligence
-- source: openalex
-  kind: paper
-  title: Heterogeneous classifier ensemble for sentiment analysis of Bengali and Hindi tweets
-  link: https://doi.org/10.1007/s12046-020-01424-z
-  year: 2020
-  authors: Sarkar et al.
-  venue: Sadhana
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: Hybrid deep neural network for Bangla automated image descriptor
@@ -9755,14 +9322,6 @@
   year: 2020
   authors: Bangla. et al.
   venue: International Journal of Languages Literature and Linguistics
-- source: openalex
-  kind: paper
-  title: SENTIMENT ANALYSIS ON BANGLA YOUTUBE COMMENTS USING MACHINE LEARNING TECHNIQUES
-  link: https://www.jetir.org/papers/JETIR2011265.pdf
-  year: 2020
-  authors: Durga et al.
-  venue: Journal of Emerging Technologies and Innovative Research
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: Smokeless tobacco use and related oral mucosal changes in Bengali Women
@@ -10253,13 +9812,6 @@
   year: 2019
   authors: Sharif et al.
   venue: Neural Network World
-- source: openalex
-  kind: paper
-  title: Depression Detection from Bangla Facebook Status using Machine Learning Approach
-  link: https://doi.org/10.5120/ijca2019919314
-  year: 2019
-  authors: Billah et al.
-  venue: International Journal of Computer Applications
 - source: openalex
   kind: paper
   title: "Difficulties of Producing Postposition in Broca’s Aphasia: A Test in Bangla Language"
@@ -11497,14 +11049,6 @@
   venue: Journal of Forensic Sciences
 - source: openalex
   kind: paper
-  title: Sentiment Polarity Detection in Bengali Tweets Using Deep Convolutional Neural Networks
-  link: https://doi.org/10.1515/jisys-2017-0418
-  year: 2018
-  authors: Sarkar et al.
-  venue: Journal of Intelligent Systems
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Slant Estimation and Correction for Online Handwritten Bengali Words
   link: https://doi.org/10.26438/ijcse/v6i5.535539
   year: 2018
@@ -12622,14 +12166,6 @@
   year: 2016
   authors: Panja et al.
   venue: Genetic Testing and Molecular Biomarkers
-- source: openalex
-  kind: paper
-  title: Detecting Sentiment from Bangla Text using Machine Learning Technique and Feature Analysis
-  link: https://doi.org/10.5120/ijca2016912230
-  year: 2016
-  authors: Mahmudun et al.
-  venue: International Journal of Computer Applications
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: Development of A Small Vocabulary Database for Bengali Speech Recognition
@@ -14954,14 +14490,6 @@
   year: 2012
   authors: Bannerji et al.
   venue: International journal of research in social sciences
-- source: openalex
-  kind: paper
-  title: Tracking Emotions of Bloggers - A Case Study for Bengali
-  link: https://doi.org/10.17562/pb-45-6
-  year: 2012
-  authors: Das et al.
-  venue: Polibits
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "Transactions in taste: the collaborative lives of everyday Bengali food – By Manpreet K. Janeja"
