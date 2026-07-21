@@ -202,3 +202,24 @@
   year: 2009
   link: https://aclanthology.org/W09-3411/
   task: textcls
+- id: naeen-etal-2025-bengali-news-title-classification
+  title: "Explainable detection: a transformer-based language modeling approach for Bengali news title classification with comparative explainability analysis using ML and DL"
+  authors: Naeen et al.
+  venue: Frontiers in Artificial Intelligence
+  year: 2025
+  link: https://doi.org/10.3389/frai.2025.1537432
+  task: textcls
+- id: das-etal-2025-crisis-microblog-classification
+  title: "Humanitarian classification of crisis-related microblogs in Bengali: A comparison of multilingual pre-trained language models"
+  authors: Das et al.
+  venue: International Journal of Disaster Risk Reduction
+  year: 2025
+  link: https://doi.org/10.1016/j.ijdrr.2025.105673
+  task: textcls
+- id: sazan-etal-2024-bangla-depressive-post-detection
+  title: "Enhancing Depressive Post Detection in Bangla: A Comparative Study of TF-IDF, BERT and FastText Embeddings"
+  authors: Sazan et al.
+  venue: Annals of Emerging Technologies in Computing
+  year: 2024
+  link: https://doi.org/10.33166/aetic.2024.03.003
+  task: textcls

@@ -608,3 +608,80 @@
   link: https://arxiv.org/abs/2106.10207
   task: llm
   note: Collaboratively trained Bangla ALBERT.
+- id: akther-etal-2025-llm-manipulated-bangla-news
+  title: "Generation, Analysis, and Detection of LLM Manipulated Bangla News"
+  authors: Akther et al.
+  venue: IEEE Access
+  year: 2025
+  link: https://doi.org/10.1109/access.2025.3647800
+  task: llm
+- id: nihal-etal-2026-bengali-literary-style-transfer
+  title: "Literary Style Transfer in Bengali Literature Using Hybrid BERT-GAN Architecture: A Comprehensive Study on Tagore and Nazrul"
+  authors: Nihal et al.
+  venue: SN Computer Science
+  year: 2026
+  link: https://doi.org/10.1007/s42979-026-04943-4
+  task: llm
+- id: hoque-etal-2023-next-word-prediction-gru
+  title: "Next Words Prediction and Sentence Completion in Bangla Language Using GRU-Based RNN on N-Gram Language Model"
+  authors: Hoque et al.
+  venue: Journal of Data Analysis and Information Processing
+  year: 2023
+  link: https://doi.org/10.4236/jdaip.2023.114020
+  task: llm
+- id: banik-etal-2022-bangla-text-generation-seq2seq
+  title: "Bangla text generation system by incorporating attention in sequence-to-sequence model"
+  authors: Banik et al.
+  venue: World Journal of Advanced Research and Reviews
+  year: 2022
+  link: https://doi.org/10.30574/wjarr.2022.14.1.0292
+  task: llm
+- id: kowsher-etal-2022-bangla-bert
+  title: "Bangla-BERT: Transformer-Based Efficient Model for Transfer Learning and Language Understanding"
+  authors: Kowsher et al.
+  venue: IEEE Access
+  year: 2022
+  link: https://doi.org/10.1109/access.2022.3197662
+  task: llm
+- id: kibria-etal-2021-context-driven-text-generation
+  title: "Context-driven Bengali Text Generation using Conditional Language Model"
+  authors: Kibria et al.
+  venue: "Statistics Optimization & Information Computing"
+  year: 2021
+  link: https://doi.org/10.19139/soic-2310-5070-1061
+  task: llm
+- id: eyamin-etal-2019-stochastic-lm-autocomplete
+  title: "An investigative design of optimum stochastic language model for bangla autocomplete"
+  authors: Eyamin et al.
+  venue: Indonesian Journal of Electrical Engineering and Computer Science
+  year: 2019
+  link: https://doi.org/10.11591/ijeecs.v13.i2.pp671-676
+  task: llm
+- id: habib-etal-2018-optimum-lm-word-prediction
+  title: "An Exploratory Approach to Find a Novel Metric Based Optimum Language Model for Automatic Bangla Word Prediction"
+  authors: Habib et al.
+  venue: International Journal of Intelligent Systems and Applications
+  year: 2018
+  link: https://doi.org/10.5815/ijisa.2018.02.05
+  task: llm
+- id: haque-etal-2015-word-prediction-stochastic-lm
+  title: "Automated Word Prediction in Bangla Language Using Stochastic Language Models"
+  authors: Haque et al.
+  venue: "International Journal in Foundations of Computer Science & Technology"
+  year: 2015
+  link: https://doi.org/10.5121/ijfcst.2015.5607
+  task: llm
+- id: mandal-etal-2024-bengali-medical-word-embedding
+  title: "Medical nearest-word embedding technique implemented using an unsupervised machine learning approach for Bengali language"
+  authors: Mandal et al.
+  venue: International Journal on Smart Sensing and Intelligent Systems
+  year: 2024
+  link: https://doi.org/10.2478/ijssis-2024-0018
+  task: llm
+- id: kowsher-etal-2021-bnvec-word-embedding
+  title: "BnVec: Towards the Development of Word Embedding for Bangla Language Processing"
+  authors: Kowsher et al.
+  venue: "International Journal of Engineering & Technology"
+  year: 2021
+  link: https://doi.org/10.14419/ijet.v10i2.31538
+  task: llm

@@ -222,3 +222,10 @@
   year: 1997
   link: https://aclanthology.org/J97-2005/
   task: pos
+- id: rahman-etal-2020-bangla-grammar-checking
+  title: "An exploratory research on grammar checking of Bangla sentences using statistical language models"
+  authors: Rahman et al.
+  venue: International Journal of Electrical and Computer Engineering (IJECE)
+  year: 2020
+  link: https://doi.org/10.11591/ijece.v10i3.pp3244-3252
+  task: pos
