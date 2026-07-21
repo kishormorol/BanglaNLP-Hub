@@ -434,3 +434,10 @@
   year: 2009
   link: https://aclanthology.org/P09-2038/
   task: sentiment
+- id: rahman-etal-2020-bangla-opinion-identification
+  title: "Identifying and Categorizing Opinions Expressed in Bangla Sentences using Deep Learning Technique"
+  authors: Rahman et al.
+  venue: International Journal of Computer Applications
+  year: 2020
+  link: https://doi.org/10.5120/ijca2020920119
+  task: sentiment

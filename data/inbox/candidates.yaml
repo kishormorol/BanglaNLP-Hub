@@ -89,14 +89,6 @@
   suggestedTask: speech
 - source: openalex
   kind: paper
-  title: A hybrid approach for Bangla regional text classification using region-specific lexical oversampling and BERT ensemble learning
-  link: https://doi.org/10.1016/j.array.2026.100817
-  year: 2026
-  authors: Sultana et al.
-  venue: Array
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: A multi-class classification approach for feminist sentiment analysis in Bangla social media using TF-IDF and ensemble learning
   link: https://doi.org/10.11591/ijeecs.v42.i2.pp584-595
   year: 2026
@@ -197,14 +189,6 @@
   venue: Journal of Brahmanbaria Medical College
 - source: openalex
   kind: paper
-  title: "anvay: A Web-based Tool for Interpretive Topic Modelling in Bengali"
-  link: https://doi.org/10.21105/joss.08641
-  year: 2026
-  authors: Gupta et al.
-  venue: The Journal of Open Source Software
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: Asegmentation based optical character recognition system for Bangla printed text
   link: https://doi.org/10.12928/telkomnika.v24i3.26961
   year: 2026
@@ -248,14 +232,6 @@
   year: 2026
   authors: Dolon et al.
   venue: Jagannath University Journal of Arts
-- source: openalex
-  kind: paper
-  title: Bangla Fake News Detection using DistilBERT
-  link: https://doi.org/10.22214/ijraset.2026.78248
-  year: 2026
-  authors: Joy et al.
-  venue: International Journal for Research in Applied Science and Engineering Technology
-  suggestedTask: textcls
 - source: openalex
   kind: paper
   title: "Bangla MedER: Multi-BERT ensemble approach for the recognition of Bangla medical entity"
@@ -504,14 +480,6 @@
   suggestedTask: speech
 - source: openalex
   kind: paper
-  title: Detecting Fake News in Bangla Using Linguistic and Psychological Features
-  link: https://doi.org/10.1145/3798302
-  year: 2026
-  authors: Tanjim et al.
-  venue: ACM Transactions on Social Computing
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: Detection of Antibiotic Residues in Edible Poultry Tissues by Thin-Layer Chromatography (TLC) in Sher-e-Bangla Nagar, Dhaka
   link: https://doi.org/10.3329/ralf.v13i1.89722
   year: 2026
@@ -597,14 +565,6 @@
   year: 2026
   authors: Sultana et al.
   venue: Journal of Monolingual and Bilingual Speech
-- source: openalex
-  kind: paper
-  title: "Explainable AI-Driven Bangla News Classification: Comparative Study of ML and DL Approaches"
-  link: https://doi.org/10.65136/jati.v10i1.325
-  year: 2026
-  authors: Hussen et al.
-  venue: The Journal of Applied Technology and Innovation
-  suggestedTask: textcls
 - source: openalex
   kind: paper
   title: "Exploring gender differences in sexual satisfaction among Bangladeshi adults: A study using the Bangla version of the NSSS-S"
@@ -1309,13 +1269,6 @@
   venue: Pen & Prosperity
 - source: openalex
   kind: paper
-  title: A Comparative Study on different Machine Learning Approaches for Categorizing Bangla Documents
-  link: https://doi.org/10.5120/ijca2025924391
-  year: 2025
-  authors: Jakaria et al.
-  venue: International Journal of Computer Applications
-- source: openalex
-  kind: paper
   title: A computer graphics-based model to generate dynamic 3D animations for corresponding Bangla sign language gestures using HamNoSys to SiGML conversion
   link: https://doi.org/10.1007/s10462-025-11370-z
   year: 2025
@@ -1350,14 +1303,6 @@
   year: 2025
   authors: Maung et al.
   venue: Discover Artificial Intelligence
-- source: openalex
-  kind: paper
-  title: A Hybrid Tri-Encoder model for fake news detection in Bengali with LIME-based explainability
-  link: https://doi.org/10.1177/18724981251384403
-  year: 2025
-  authors: Yadav et al.
-  venue: Intelligent Decision Technologies
-  suggestedTask: textcls
 - source: openalex
   kind: paper
   title: A machine and DL approach for classifying customer sentiments from online shopping reviews in Bangla text
@@ -1403,14 +1348,6 @@
   year: 2025
   authors: Joarder et al.
   venue: IEEE Access
-- source: openalex
-  kind: paper
-  title: A sophisticated feature vectorization-based stacked machine learning approach for fake news detection in Bangla and English
-  link: https://doi.org/10.1007/s13278-025-01552-6
-  year: 2025
-  authors: Hossen et al.
-  venue: Social Network Analysis and Mining
-  suggestedTask: textcls
 - source: openalex
   kind: paper
   title: A Study of Positive Mental Health on Bengali Speaking Students of Higher Education in India and Bangladesh
@@ -1578,13 +1515,6 @@
   venue: Results in Engineering
 - source: openalex
   kind: paper
-  title: "Automatic detection of manipulated Bangla news: A new knowledge-driven approach"
-  link: https://doi.org/10.1016/j.nlp.2025.100155
-  year: 2025
-  authors: Akther et al.
-  venue: Natural Language Processing Journal
-- source: openalex
-  kind: paper
   title: Bangla Braille to voice conversion for visually impaired individuals using deep neural network
   link: https://doi.org/10.1007/s11042-025-20995-9
   year: 2025
@@ -1612,13 +1542,6 @@
   year: 2025
   authors: Inzamam et al.
   venue: Dhaka University Journal of Linguistics
-- source: openalex
-  kind: paper
-  title: Bangla News Document Categorization using Deep Learning Approaches and Fine-tuned BERT
-  link: https://doi.org/10.5120/ijca2025924469
-  year: 2025
-  authors: Azim et al.
-  venue: International Journal of Computer Applications
 - source: openalex
   kind: paper
   title: Bangla Sahitye Tarashankar Bandyopadhyayer Nirbachito Upanyase Nari Choritrer Porjalochona
@@ -1711,14 +1634,6 @@
   venue: Digital Applied Linguistics
 - source: openalex
   kind: paper
-  title: "BanglaNewsClassifier: A machine learning approach for news classification in Bangla Newspapers using hybrid stacking classifiers"
-  link: https://doi.org/10.1371/journal.pone.0321291
-  year: 2025
-  authors: Hossain et al.
-  venue: PLoS ONE
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: "BanSpEmo: a Bangla audio dataset for speech emotion recognition and its baseline evaluation"
   link: https://doi.org/10.11591/ijeecs.v37.i3.pp2044-2057
   year: 2025
@@ -1733,14 +1648,6 @@
   authors: Ullah et al.
   venue: Machine Learning with Applications
   suggestedTask: sentiment
-- source: openalex
-  kind: paper
-  title: "BdRegionText: resource creation and evaluation for Bangla regional text classification with machine learning"
-  link: https://doi.org/10.11591/ijeecs.v40.i1.pp411-425
-  year: 2025
-  authors: Sultana et al.
-  venue: Indonesian Journal of Electrical Engineering and Computer Science
-  suggestedTask: textcls
 - source: openalex
   kind: paper
   title: "BdSLW60: A word-level bangla sign language dataset"
@@ -1929,14 +1836,6 @@
   venue: Systems and Soft Computing
 - source: openalex
   kind: paper
-  title: "Comparative analysis of Bangla news classification: a study of fake news detection and multiclass classification using BERT and FastText"
-  link: https://doi.org/10.1080/1206212x.2025.2495288
-  year: 2025
-  authors: Barua et al.
-  venue: International Journal of Computers and Applications
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: Comparative evaluation of Willems and Cameriere methods of dental age estimation among 6–14 year old Bengali children
   link: https://doi.org/10.1016/j.jobcr.2025.02.006
   year: 2025
@@ -1977,14 +1876,6 @@
   year: 2025
   authors: Roy et al.
   venue: International Journal of Humanities & social Science studies (IJHSSS)
-- source: openalex
-  kind: paper
-  title: "Context-Aware Data Cleaning: Optimizing Bengali Text for Contextual Text Classification"
-  link: https://doi.org/10.1007/s42979-025-03891-9
-  year: 2025
-  authors: Faisal et al.
-  venue: SN Computer Science
-  suggestedTask: textcls
 - source: openalex
   kind: paper
   title: "Contextualizing the Socio-Economic Dimensions of Panta Bhat: Tracing Its Culinary Heritage in Bengali Literary Landscapes"
@@ -2151,14 +2042,6 @@
   suggestedTask: sentiment
 - source: openalex
   kind: paper
-  title: "Enhancing Fake News Analysis in Bangla: A Hybrid Model with LDA, and LIME for Interpretable Classification"
-  link: https://doi.org/10.11113/ijic.v15n2.543
-  year: 2025
-  authors: Jahin et al.
-  venue: International Journal of Innovative Computing
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: Estimation of Age of Appearance and Fusion of Secondary Ossification Centers Around Wrist Joint Among Bengali Population by Radiological Study
   link: https://doi.org/10.1177/09710973251356800
   year: 2025
@@ -2276,14 +2159,6 @@
   year: 2025
   authors: Hossen et al.
   venue: Informatica
-- source: openalex
-  kind: paper
-  title: Generation, Analysis, and Detection of LLM Manipulated Bangla News
-  link: https://doi.org/10.1109/access.2025.3647800
-  year: 2025
-  authors: Akther et al.
-  venue: IEEE Access
-  suggestedTask: llm
 - source: openalex
   kind: paper
   title: Genetic Variants and Alteration in Transcription Factor 7-Like 2 (TCF7L2) mRNA Level in Ischemic Stroke Patients Among Bengali and Gujarati Population from India
@@ -3886,14 +3761,6 @@
   venue: Creative Saplings
 - source: openalex
   kind: paper
-  title: "Deep Learning for Bengali Fake News Detection: Innovative Approaches for Accurate Classification"
-  link: https://doi.org/10.51584/ijrias.2024.908034
-  year: 2024
-  authors: Bandan et al.
-  venue: International Journal of Research and Innovation in Applied Science
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: Demonstration of Efficacy of Exploiting ChatGPT Data to the Transformers-Based Models by Performing Bangla Intent Analysis
   link: https://doi.org/10.30880/ijie.2024.16.07.002
   year: 2024
@@ -4051,13 +3918,6 @@
   authors: Aktar et al.
   venue: Environment and Social Psychology
   suggestedTask: sentiment
-- source: openalex
-  kind: paper
-  title: Empirical Text Analysis for Identifying the Genres of Bengali Literary Work
-  link: https://doi.org/10.12720/jait.15.5.602-613
-  year: 2024
-  authors: Afroze et al.
-  venue: Journal of Advances in Information Technology
 - source: openalex
   kind: paper
   title: "Engendering Care in the Politics of the East Bengali Refugee Identity: A Reading of Bengal Partition Narratives Through the Lens of Ecological and Culinary Citizenship"
@@ -4370,26 +4230,11 @@
   venue: Rupkatha Journal on Interdisciplinary Studies in Humanities
 - source: openalex
   kind: paper
-  title: "Likelihood corpus distribution: an efficient topic modelling scheme for Bengali document class identification"
-  link: https://doi.org/10.1007/s12046-024-02470-7
-  year: 2024
-  authors: Dawn et al.
-  venue: Sadhana
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: "London Otherwise: A book review of From Sylhet to Spitalfields: Bengali Squatters in 1970s East London by Shabna Begum. 2023."
   link: https://doi.org/10.54825/oiqz8677
   year: 2024
   authors: Burgum et al.
   venue: Radical Housing Journal
-- source: openalex
-  kind: paper
-  title: Machine learning and deep learning-based approach to categorize Bengali comments on social networks using fused dataset
-  link: https://doi.org/10.1371/journal.pone.0308862
-  year: 2024
-  authors: Uddin et al.
-  venue: PLoS ONE
 - source: openalex
   kind: paper
   title: "Mainstreaming Slow Pace Learners Through Mobile Assisted Language Learning: A Case of Bengali Primary Level Students with Dyslexia"
@@ -4726,14 +4571,6 @@
   venue: RESEARCH REVIEW International Journal of Multidisciplinary
 - source: openalex
   kind: paper
-  title: "RoBERTa-GCN: A Novel Approach for Combating Fake News in Bangla Using Advanced Language Processing and Graph Convolutional Networks"
-  link: https://doi.org/10.1109/access.2024.3457860
-  year: 2024
-  authors: Ahammad et al.
-  venue: IEEE Access
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: "Rocking in Kasba: “band” music, contemporary Bengali cinema, and Anjan Dutta’s lost Kolkatas"
   link: https://doi.org/10.1080/19472498.2024.2414699
   year: 2024
@@ -4790,14 +4627,6 @@
   authors: Mamun et al.
   venue: Engineering Applications of Artificial Intelligence
   suggestedTask: speech
-- source: openalex
-  kind: paper
-  title: Social Media Bangla Fake News Detection Using Deep and Machine Learning Algorithms
-  link: https://doi.org/10.14445/22315381/ijett-v72i5p135
-  year: 2024
-  authors: Das et al.
-  venue: International Journal of Engineering Trends and Technology
-  suggestedTask: textcls
 - source: openalex
   kind: paper
   title: "Social Support Postpartum: Bengali Women from India on Their Coping Experiences following Childbirth"
@@ -5515,13 +5344,6 @@
   venue: Global Food History
 - source: openalex
   kind: paper
-  title: "Bengali News Headline Categorization: A Comprehensive Analysis of Machine Learning and Deep Learning Approach"
-  link: https://doi.org/10.63307/baj.4.1.s3
-  year: 2023
-  authors: Ahmed et al.
-  venue: BAIUST ACADEMIC JOURNAL
-- source: openalex
-  kind: paper
   title: Bengali Query Processing System for Disease Detection using LSTM and GRU
   link: https://doi.org/10.12785/ijcds/140149
   year: 2023
@@ -5893,13 +5715,6 @@
   year: 2023
   authors: Asraful et al.
   venue: Annals of Emerging Technologies in Computing
-- source: openalex
-  kind: paper
-  title: "Hybrid approach for text categorization: A case study with Bangla news article"
-  link: https://doi.org/10.1177/01655515211027770
-  year: 2023
-  authors: Dhar et al.
-  venue: Journal of Information Science
 - source: openalex
   kind: paper
   title: "Hypereventing History: Ecological and Political Disaster in Bengali Dalit Narratives on Partition"
@@ -6587,14 +6402,6 @@
   venue: ACM Transactions on Asian and Low-Resource Language Information Processing
 - source: openalex
   kind: paper
-  title: A dictionary based model for bengali document classification
-  link: https://doi.org/10.1007/s10489-022-03955-w
-  year: 2022
-  authors: Dawn et al.
-  venue: Applied Intelligence
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: A Dynamic Strategy for Classifying Sentiment From Bengali Text by Utilizing Word2vector Model
   link: https://doi.org/10.4018/jitr.299919
   year: 2022
@@ -6988,14 +6795,6 @@
   authors: Hasib et al.
   venue: IEEE Access
   suggestedTask: speech
-- source: openalex
-  kind: paper
-  title: "Breaking the Curse of Class Imbalance: Bangla Text Classification"
-  link: https://doi.org/10.1145/3511601
-  year: 2022
-  authors: Rafi-Ur-Rashid et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
-  suggestedTask: textcls
 - source: openalex
   kind: paper
   title: Buddhist Culture of Contemporary West Bengal (Reflections on the Bengali-speaking Buddhists)
@@ -8058,13 +7857,6 @@
   venue: Indonesian Journal of Electrical Engineering and Computer Science
 - source: openalex
   kind: paper
-  title: Bangla News Headline Categorization
-  link: https://doi.org/10.5815/ijeme.2021.06.05
-  year: 2021
-  authors: Hossain et al.
-  venue: International Journal of Education and Management Engineering
-- source: openalex
-  kind: paper
   title: Bangla numerical sign language recognition using convolutional neural networks (CNNs)
   link: https://doi.org/10.11591/ijeecs.v23.i1.pp405-413
   year: 2021
@@ -8130,20 +7922,6 @@
   year: 2021
   authors: Paunksnis et al.
   venue: South Asia Journal of South Asian Studies
-- source: openalex
-  kind: paper
-  title: Bengali News Headline Categorization UsingOptimized Machine Learning Pipeline
-  link: https://doi.org/10.5815/ijieeb.2021.01.02
-  year: 2021
-  authors: Dhar et al.
-  venue: International Journal of Information Engineering and Electronic Business
-- source: openalex
-  kind: paper
-  title: Bengali text document categorization based on very deep convolution neural network
-  link: https://doi.org/10.1016/j.eswa.2021.115394
-  year: 2021
-  authors: Hossain et al.
-  venue: Expert Systems with Applications
 - source: openalex
   kind: paper
   title: "BengaliNet: A Low-Cost Novel Convolutional Neural Network for Bengali Handwritten Characters Recognition"
@@ -8700,14 +8478,6 @@
   suggestedTask: speech
 - source: openalex
   kind: paper
-  title: Multi-category Bangla News Classification using Machine Learning Classifiers and Multi-layer Dense Neural Network
-  link: https://doi.org/10.14569/ijacsa.2021.0120588
-  year: 2021
-  authors: Yeasmin et al.
-  venue: International Journal of Advanced Computer Science and Applications
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: "My Days at the <i>Swadhin Bangla Betar Kendro</i>: The Radio Broadcasting Centre During Bangladesh Liberation War in 1971"
   link: https://doi.org/10.1080/09700161.2021.1999700
   year: 2021
@@ -9255,13 +9025,6 @@
   venue: International Journal of Computer Applications
 - source: openalex
   kind: paper
-  title: A Multi Layer Perceptron Along with Memory Efficient Feature Extraction Approach for Bengali Document Categorization
-  link: https://doi.org/10.3844/jcssp.2020.378.390
-  year: 2020
-  authors: Mahmud et al.
-  venue: Journal of Computer Science
-- source: openalex
-  kind: paper
   title: "A nineteenth-century bengali housewife and her Robinson Crusoe days: Travel and intimacy in Kailashbashini Debi’s The diary of a certain housewife"
   link: https://doi.org/10.14198/2020.36.03
   year: 2020
@@ -9536,13 +9299,6 @@
   venue: International Journal of Biology Pharmacy and Allied Sciences
 - source: openalex
   kind: paper
-  title: CESS-A System to Categorize Bangla Web Text Documents
-  link: https://doi.org/10.1145/3398070
-  year: 2020
-  authors: Dhar et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
-- source: openalex
-  kind: paper
   title: Characteristics of suicidal attempts in Bangla online news portals
   link: https://doi.org/10.1016/j.npbr.2020.03.004
   year: 2020
@@ -9614,13 +9370,6 @@
   venue: Journal of the Institute of Electronics and Information Engineers
 - source: openalex
   kind: paper
-  title: Detecting Bengali Spam SMS Using Recurrent Neural Network
-  link: https://doi.org/10.12720/jcm.15.4.325-331
-  year: 2020
-  authors: Uddin et al.
-  venue: Journal of Communications
-- source: openalex
-  kind: paper
   title: Development of a Bangla version of the Bath Ankylosing Spondylitis Disease Activity Index (BASDAI) and the Bath Ankylosing Spondylitis Functional Index (BASFI)
   link: https://doi.org/10.1111/1756-185x.14008
   year: 2020
@@ -9646,13 +9395,6 @@
   year: 2020
   authors: Karim et al.
   venue: PLoS ONE
-- source: openalex
-  kind: paper
-  title: Different Machine Learning based Approaches of Baseline and Deep Learning Models for Bengali News Categorization
-  link: https://doi.org/10.5120/ijca2020920107
-  year: 2020
-  authors: Rabib et al.
-  venue: International Journal of Computer Applications
 - source: openalex
   kind: paper
   title: Disability Considerations for COVID-19 Bangla Poster by BPA
@@ -9794,13 +9536,6 @@
   year: 2020
   authors: Saha et al.
   venue: International Journal of Recent Technology and Engineering (IJRTE)
-- source: openalex
-  kind: paper
-  title: Identifying and Categorizing Opinions Expressed in Bangla Sentences using Deep Learning Technique
-  link: https://doi.org/10.5120/ijca2020920119
-  year: 2020
-  authors: Rahman et al.
-  venue: International Journal of Computer Applications
 - source: openalex
   kind: paper
   title: Improved low-cost recognition system for handwritten Bengali numerals
@@ -10456,13 +10191,6 @@
   year: 2019
   authors: Ali et al.
   venue: Information
-- source: openalex
-  kind: paper
-  title: Bangla Document Categorization using Term Graph
-  link: https://doi.org/10.5120/ijca2019919329
-  year: 2019
-  authors: Hassan et al.
-  venue: International Journal of Computer Applications
 - source: openalex
   kind: paper
   title: "Bangla in English Classes in Bangladesh: A Study of Learners’ Attitudes"
@@ -11367,13 +11095,6 @@
   venue: International Journal of Engineering & Technology
 - source: openalex
   kind: paper
-  title: Authorship Attribution for Bengali Language Using the Fusion of N-Gram and Naive Bayes Algorithms
-  link: https://doi.org/10.5815/ijitcs.2018.10.02
-  year: 2018
-  authors: Anisuzzaman et al.
-  venue: International Journal of Information Technology and Computer Science
-- source: openalex
-  kind: paper
   title: Bangla Digital Number Plate Recognition using Template Matching for Higher Accuracy and Less Time Complexity
   link: https://doi.org/10.5120/ijca2018918140
   year: 2018
@@ -11449,13 +11170,6 @@
   year: 2018
   authors: Elhosary et al.
   venue: Ain Shams Journal of Forensic Medicine and Clinical Toxicology
-- source: openalex
-  kind: paper
-  title: Comparison of Algorithms in Authorship Identification using Bengali Poems
-  link: https://doi.org/10.14419/ijet.v7i4.19.21989
-  year: 2018
-  authors: Pandian et al.
-  venue: International Journal of Engineering & Technology
 - source: openalex
   kind: paper
   title: Comparison of perceived sleep quality among urban and rural adult population by Bengali Pittsburgh Sleep Quality Index
@@ -11967,14 +11681,6 @@
   venue: Writers in Conversation
 - source: openalex
   kind: paper
-  title: "Topic Modelling in Bangla Language: An LDA Approach to Optimize Topics and News Classification"
-  link: https://doi.org/10.5539/cis.v11n4p77
-  year: 2018
-  authors: Mouhoub et al.
-  venue: Computer and Information Science
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: "Towards the cultural banner of Bangla Dalit Literary Movement: an interview with Nakul Mallik"
   link: https://doi.org/10.22356/wic.v5i2.36
   year: 2018
@@ -12142,13 +11848,6 @@
   year: 2017
   authors: Sakib et al.
   venue: International Journal of Computer Applications
-- source: openalex
-  kind: paper
-  title: A Supervised Learning Approach for Authorship Attribution of Bengali Literary Texts
-  link: https://doi.org/10.1145/3099473
-  year: 2017
-  authors: Phani et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
 - source: openalex
   kind: paper
   title: Absence of KCNQ4 mutation in Bengali families with ADNSHL originated from West Bengal, India
@@ -14407,13 +14106,6 @@
   year: 2014
   authors: Sasidharan et al.
   venue: Medical Entomology and Zoology
-- source: openalex
-  kind: paper
-  title: Supervised Learning Methods for Bangla Web Document Categorization
-  link: https://doi.org/10.5121/ijaia.2014.5508
-  year: 2014
-  authors: Mandal et al.
-  venue: International Journal of Artificial Intelligence & Applications
 - source: openalex
   kind: paper
   title: "Swami Vivekananda's Rhetoric of Spiritual Masculinity: Transforming Effeminate Bengalis into Virile Men"
