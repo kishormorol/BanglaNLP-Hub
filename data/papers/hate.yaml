@@ -434,3 +434,157 @@
   year: 2020
   link: https://aclanthology.org/2020.trac-1.12/
   task: hate
+- id: afif-etal-2026-bangla-cyberbully-fusion-nn
+  title: "A Deep Learning Based Three-Stage Fusion Neural Network with Composite Adaptive Momentum Optimizer for Bangla Cyberbully Identification"
+  authors: Afif et al.
+  venue: International Journal of Computational Intelligence Systems
+  year: 2026
+  link: https://doi.org/10.1007/s44196-026-01441-6
+  task: hate
+- id: rashid-etal-2026-bengali-aggressive-text-transformer-ensemble
+  title: "A modified attention-based transformer ensemble for automated Bengali aggressive text identification"
+  authors: Rashid et al.
+  venue: Discover Applied Sciences
+  year: 2026
+  link: https://doi.org/10.1007/s42452-025-08064-0
+  task: hate
+- id: hoque-etal-2026-bengali-cyberbullying-transformer-stacking
+  title: "Advancing cyberbullying detection in low-resource languages: a transformer-stacking framework for Bengali"
+  authors: Hoque et al.
+  venue: Frontiers in Artificial Intelligence
+  year: 2026
+  link: https://doi.org/10.3389/frai.2025.1679962
+  task: hate
+- id: azhar-etal-2026-hatebertbn-bangla-hate-speech
+  title: "HateBertBN: a hybrid transformer based model for Bangla hate speech detection across various social contexts"
+  authors: Azhar et al.
+  venue: Discover Computing
+  year: 2026
+  link: https://doi.org/10.1007/s10791-025-09804-x
+  task: hate
+- id: habiba-etal-2025-bangla-cyberbullying-bilstm-attention
+  title: "Enhancing Cyberbullying Detection in Bangla Language: A Hybrid BiLSTM-Attention Approach"
+  authors: Habiba et al.
+  venue: International Journal of Computer Applications
+  year: 2025
+  link: https://doi.org/10.5120/ijca2025925105
+  task: hate
+- id: papel-etal-2024-bangla-hate-speech-embedding-hybrid-ml
+  title: "Bangla hate speech detection by embedding and hybrid machine learning algorithms"
+  authors: Papel et al.
+  venue: World Journal of Advanced Research and Reviews
+  year: 2024
+  link: https://doi.org/10.30574/wjarr.2024.24.2.3399
+  task: hate
+- id: nandi-etal-2024-bengali-marathi-hindi-hate-speech
+  title: "Combining multiple pre-trained models for hate speech detection in Bengali, Marathi, and Hindi"
+  authors: Nandi et al.
+  venue: Multimedia Tools and Applications
+  year: 2024
+  link: https://doi.org/10.1007/s11042-023-17934-x
+  task: hate
+- id: mahmud-etal-2024-bangla-chittagonian-cyberbullying
+  title: "Exhaustive Study into Machine Learning and Deep Learning Methods for Multilingual Cyberbullying Detection in Bangla and Chittagonian Texts"
+  authors: Mahmud et al.
+  venue: Electronics
+  year: 2024
+  link: https://doi.org/10.3390/electronics13091677
+  task: hate
+- id: maruf-etal-2024-bengali-hate-speech-survey
+  title: "Hate speech detection in the Bengali language: a comprehensive survey"
+  authors: Maruf et al.
+  venue: Journal Of Big Data
+  year: 2024
+  link: https://doi.org/10.1186/s40537-024-00956-z
+  task: hate
+- id: faria-etal-2024-bengali-hate-speech-llm-vs-transformer
+  title: "Investigating the Predominance of Large Language Models in Low-Resource Bangla Language over Transformer Models for Hate Speech Detection: A Comparative Analysis"
+  authors: Faria et al.
+  venue: Mathematics
+  year: 2024
+  link: https://doi.org/10.3390/math12233687
+  task: hate
+- id: ahmed-etal-2023-bangla-cyberbullying-hybrid-ensemble
+  title: "Cyberbullying Detection Based on Hybrid Ensemble Method using Deep Learning Technique in Bangla Dataset"
+  authors: Ahmed et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2023
+  link: https://doi.org/10.14569/ijacsa.2023.0140958
+  task: hate
+- id: jahan-etal-2023-misogynistic-bangla-text
+  title: "Deep Learning Based Misogynistic Bangla Text Identification from Social Media"
+  authors: Jahan et al.
+  venue: Computing and Informatics
+  year: 2023
+  link: https://doi.org/10.31577/cai_2023_4_993
+  task: hate
+- id: hoque-etal-2023-bengali-cyberbullying-ml
+  title: "Detecting cyberbullying text using the approaches with machine learning models for the low-resource Bengali language"
+  authors: Hoque et al.
+  venue: IAES International Journal of Artificial Intelligence
+  year: 2023
+  link: https://doi.org/10.11591/ijai.v13.i1.pp358-367
+  task: hate
+- id: keya-etal-2023-gbert-bengali-hate-speech
+  title: "G-BERT: An Efficient Method for Identifying Hate Speech in Bengali Texts on Social Media"
+  authors: Keya et al.
+  venue: IEEE Access
+  year: 2023
+  link: https://doi.org/10.1109/access.2023.3299021
+  task: hate
+- id: ghosal-etal-2023-bengali-emoji-hate-speech-fuzzy-svm
+  title: "Inculcating Context for Emoji Powered Bengali Hate Speech Detection using Extended Fuzzy SVM and Text Embedding Models"
+  authors: Ghosal et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2023
+  link: https://doi.org/10.1145/3589001
+  task: hate
+- id: ahmed-etal-2023-bangla-cyberbullying-political-violence
+  title: "Social Media Cyberbullying Detection on Political Violence from Bangla Texts Using Machine Learning Algorithm"
+  authors: Ahmed et al.
+  venue: Journal of Intelligent Learning Systems and Applications
+  year: 2023
+  link: https://doi.org/10.4236/jilsa.2023.154008
+  task: hate
+- id: aurpa-etal-2021-abusive-bangla-facebook-transformers
+  title: "Abusive Bangla comments detection on Facebook using transformer-based deep learning models"
+  authors: Aurpa et al.
+  venue: Social Network Analysis and Mining
+  year: 2021
+  link: https://doi.org/10.1007/s13278-021-00852-x
+  task: hate
+- id: kumar-etal-2021-hindi-bangla-english-aggressive-offensive
+  title: "Aggressive and Offensive Language Identification in Hindi, Bangla, and English: A Comparative Study"
+  authors: Kumar et al.
+  venue: SN Computer Science
+  year: 2021
+  link: https://doi.org/10.1007/s42979-020-00414-6
+  task: hate
+- id: islam-etal-2021-bangla-abusive-text-evolutionary
+  title: "An evolutionary approach to comparative analysis of detecting Bangla abusive text"
+  authors: Islam et al.
+  venue: Bulletin of Electrical Engineering and Informatics
+  year: 2021
+  link: https://doi.org/10.11591/eei.v10i4.3107
+  task: hate
+- id: das-etal-2021-bangla-hate-speech-attention-rnn
+  title: "Bangla hate speech detection on social media using attention-based recurrent neural network"
+  authors: Das et al.
+  venue: Journal of Intelligent Systems
+  year: 2021
+  link: https://doi.org/10.1515/jisys-2020-0060
+  task: hate
+- id: mridha-etal-2021-lboost-bengali-offensive-text
+  title: "L-Boost: Identifying Offensive Texts From Social Media Post in Bengali"
+  authors: Mridha et al.
+  venue: IEEE Access
+  year: 2021
+  link: https://doi.org/10.1109/access.2021.3134154
+  task: hate
+- id: ahmed-etal-2021-bangla-romanized-cyberbullying
+  title: "Natural language processing and machine learning based cyberbullying detection for Bangla and Romanized Bangla texts"
+  authors: Ahmed et al.
+  venue: TELKOMNIKA (Telecommunication Computing Electronics and Control)
+  year: 2021
+  link: https://doi.org/10.12928/telkomnika.v20i1.18630
+  task: hate

@@ -73,13 +73,6 @@
   venue: Engineering Reports
 - source: openalex
   kind: paper
-  title: A Deep Learning Based Three-Stage Fusion Neural Network with Composite Adaptive Momentum Optimizer for Bangla Cyberbully Identification
-  link: https://doi.org/10.1007/s44196-026-01441-6
-  year: 2026
-  authors: Afif et al.
-  venue: International Journal of Computational Intelligence Systems
-- source: openalex
-  kind: paper
   title: A Deep Learning–Based Framework for Dataset Creation and Sentiment Classification of English–Bengali Code-Mixed Texts
   link: https://doi.org/10.48084/etasr.15475
   year: 2026
@@ -102,13 +95,6 @@
   authors: Sultana et al.
   venue: Array
   suggestedTask: textcls
-- source: openalex
-  kind: paper
-  title: A modified attention-based transformer ensemble for automated Bengali aggressive text identification
-  link: https://doi.org/10.1007/s42452-025-08064-0
-  year: 2026
-  authors: Rashid et al.
-  venue: Discover Applied Sciences
 - source: openalex
   kind: paper
   title: A multi-class classification approach for feminist sentiment analysis in Bangla social media using TF-IDF and ensemble learning
@@ -202,13 +188,6 @@
   year: 2026
   authors: Dey et al.
   venue: SN Computer Science
-- source: openalex
-  kind: paper
-  title: "Advancing cyberbullying detection in low-resource languages: a transformer- stacking framework for Bengali"
-  link: https://doi.org/10.3389/frai.2025.1679962
-  year: 2026
-  authors: Hoque et al.
-  venue: Frontiers in Artificial Intelligence
 - source: openalex
   kind: paper
   title: "Analysis of Nasofrontal and Nasal Tip Angles between Bengali and Manipuri Adult Males of Bangladesh: A Photo-Anthropometric Study"
@@ -674,14 +653,6 @@
   link: https://doi.org/10.58257/ijprems51787
   year: 2026
   venue: International Journal of Progressive Research in Engineering Management and Science
-- source: openalex
-  kind: paper
-  title: "HateBertBN: a hybrid transformer based model for Bangla hate speech detection across various social contexts"
-  link: https://doi.org/10.1007/s10791-025-09804-x
-  year: 2026
-  authors: Azhar et al.
-  venue: Discover Computing
-  suggestedTask: hate
 - source: openalex
   kind: paper
   title: "Hero Alom and the politics of cringe: Bengali-networked publics in the age of platform visibility"
@@ -2180,13 +2151,6 @@
   suggestedTask: sentiment
 - source: openalex
   kind: paper
-  title: "Enhancing Cyberbullying Detection in Bangla Language: A Hybrid BiLSTM-Attention Approach"
-  link: https://doi.org/10.5120/ijca2025925105
-  year: 2025
-  authors: Habiba et al.
-  venue: International Journal of Computer Applications
-- source: openalex
-  kind: paper
   title: "Enhancing Fake News Analysis in Bangla: A Hybrid Model with LDA, and LIME for Interpretable Classification"
   link: https://doi.org/10.11113/ijic.v15n2.543
   year: 2025
@@ -3627,14 +3591,6 @@
   venue: Bulletin of Electrical Engineering and Informatics
 - source: openalex
   kind: paper
-  title: Bangla hate speech detection by embedding and hybrid machine learning algorithms
-  link: https://doi.org/10.30574/wjarr.2024.24.2.3399
-  year: 2024
-  authors: Papel et al.
-  venue: World Journal of Advanced Research and Reviews
-  suggestedTask: hate
-- source: openalex
-  kind: paper
   title: "Bangla Kabitay Achintya Kumar Sengupter Kobibhabnar Swatantrata: Bishoy O Angike"
   link: https://doi.org/10.69655/atmadeep.vol.1.issue.01w.002
   year: 2024
@@ -3833,14 +3789,6 @@
   year: 2024
   authors: Murshid et al.
   venue: Cureus
-- source: openalex
-  kind: paper
-  title: Combining multiple pre-trained models for hate speech detection in Bengali, Marathi, and Hindi
-  link: https://doi.org/10.1007/s11042-023-17934-x
-  year: 2024
-  authors: Nandi et al.
-  venue: Multimedia Tools and Applications
-  suggestedTask: hate
 - source: openalex
   kind: paper
   title: "Comparative evaluation of the Clearing technique and Cone-Beam Computed Tomography (CBCT) in assessing the root canal morphology of Mandibular First Premolars in the Bengali Population: An in-vitro study"
@@ -4163,13 +4111,6 @@
   venue: Journal of Pharmacy And Bioallied Sciences
 - source: openalex
   kind: paper
-  title: Exhaustive Study into Machine Learning and Deep Learning Methods for Multilingual Cyberbullying Detection in Bangla and Chittagonian Texts
-  link: https://doi.org/10.3390/electronics13091677
-  year: 2024
-  authors: Mahmud et al.
-  venue: Electronics
-- source: openalex
-  kind: paper
   title: Explainable federated learning for privacy-preserving bangla sign language detection
   link: https://doi.org/10.1016/j.engappai.2024.108657
   year: 2024
@@ -4271,14 +4212,6 @@
   venue: Communications Biology
 - source: openalex
   kind: paper
-  title: "Hate speech detection in the Bengali language: a comprehensive survey"
-  link: https://doi.org/10.1186/s40537-024-00956-z
-  year: 2024
-  authors: Maruf et al.
-  venue: Journal Of Big Data
-  suggestedTask: hate
-- source: openalex
-  kind: paper
   title: "Hemoglobin N Seattle in a Bengali Child: Diagnostic Challenges and Insights into Genetic Diversity – A Case"
   link: https://doi.org/10.25163/angiotherapy.81210107
   year: 2024
@@ -4341,14 +4274,6 @@
   year: 2024
   authors: Khan et al.
   venue: South Asia Journal of South Asian Studies
-- source: openalex
-  kind: paper
-  title: "Investigating the Predominance of Large Language Models in Low-Resource Bangla Language over Transformer Models for Hate Speech Detection: A Comparative Analysis"
-  link: https://doi.org/10.3390/math12233687
-  year: 2024
-  authors: Faria et al.
-  venue: Mathematics
-  suggestedTask: hate
 - source: openalex
   kind: paper
   title: Investigating the Validity and Reliability of Bengali Version of Communication Outcome After Stroke Scale
@@ -5811,13 +5736,6 @@
   venue: Dhaka University Journal of Biological Sciences
 - source: openalex
   kind: paper
-  title: Cyberbullying Detection Based on Hybrid Ensemble Method using Deep Learning Technique in Bangla Dataset
-  link: https://doi.org/10.14569/ijacsa.2023.0140958
-  year: 2023
-  authors: Ahmed et al.
-  venue: International Journal of Advanced Computer Science and Applications
-- source: openalex
-  kind: paper
   title: "Data-Augmentation for Bangla-English Code-Mixed Sentiment Analysis: Enhancing Cross Linguistic Contextual Understanding"
   link: https://doi.org/10.1109/access.2023.3277787
   year: 2023
@@ -5847,13 +5765,6 @@
   venue: Science and Culture
 - source: openalex
   kind: paper
-  title: Deep Learning Based Misogynistic Bangla Text Identification from Social Media
-  link: https://doi.org/10.31577/cai_2023_4_993
-  year: 2023
-  authors: Jahan et al.
-  venue: Computing and Informatics
-- source: openalex
-  kind: paper
   title: Deep Learning-based Bangla Sign Language Detection with an Edge Device
   link: https://doi.org/10.1016/j.iswa.2023.200224
   year: 2023
@@ -5866,13 +5777,6 @@
   year: 2023
   authors: Roychowdhury et al.
   venue: Indian Journal of Language and Linguistics
-- source: openalex
-  kind: paper
-  title: Detecting cyberbullying text using the approaches with machine learning models for the low-resource Bengali language
-  link: https://doi.org/10.11591/ijai.v13.i1.pp358-367
-  year: 2023
-  authors: Hoque et al.
-  venue: IAES International Journal of Artificial Intelligence
 - source: openalex
   kind: paper
   title: Detecting Level of Depression from Social Media Posts for the Low-resource Bengali Language
@@ -5963,14 +5867,6 @@
   venue: Pediatric Patient Education
 - source: openalex
   kind: paper
-  title: "G-BERT: An Efficient Method for Identifying Hate Speech in Bengali Texts on Social Media"
-  link: https://doi.org/10.1109/access.2023.3299021
-  year: 2023
-  authors: Keya et al.
-  venue: IEEE Access
-  suggestedTask: hate
-- source: openalex
-  kind: paper
   title: "Gambhira: A Study of Localized Culture of Malda in Bengali Folklore"
   link: https://doi.org/10.55454/rcsas.3.03.2023.001
   year: 2023
@@ -6038,14 +5934,6 @@
   year: 2023
   authors: Hoque et al.
   venue: Journal of Accounting Research Business and Finance Management
-- source: openalex
-  kind: paper
-  title: Inculcating Context for Emoji Powered Bengali Hate Speech Detection using Extended Fuzzy SVM and Text Embedding Models
-  link: https://doi.org/10.1145/3589001
-  year: 2023
-  authors: Ghosal et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
-  suggestedTask: hate
 - source: openalex
   kind: paper
   title: "India in Bengali Travel Writing on Russia in the Twentieth Century: Travelling The World, Writing about Home"
@@ -6342,13 +6230,6 @@
   year: 2023
   authors: Banerjee et al.
   venue: Anthropological Review
-- source: openalex
-  kind: paper
-  title: Social Media Cyberbullying Detection on Political Violence from Bangla Texts Using Machine Learning Algorithm
-  link: https://doi.org/10.4236/jilsa.2023.154008
-  year: 2023
-  authors: Ahmed et al.
-  venue: Journal of Intelligent Learning Systems and Applications
 - source: openalex
   kind: paper
   title: Starting Solid Foods—Bengali
@@ -8085,14 +7966,6 @@
   suggestedTask: sentiment
 - source: openalex
   kind: paper
-  title: Abusive Bangla comments detection on Facebook using transformer-based deep learning models
-  link: https://doi.org/10.1007/s13278-021-00852-x
-  year: 2021
-  authors: Aurpa et al.
-  venue: Social Network Analysis and Mining
-  suggestedTask: hate
-- source: openalex
-  kind: paper
   title: Adaptation and Validation of the Bangla Version of Children's Yale- Brown Obsessive Compulsive Scale
   link: https://doi.org/10.36347/sasjm.2021.v07i12.012
   year: 2021
@@ -8106,22 +7979,6 @@
   authors: Haque et al.
   venue: Journal of Clinical and Laboratory Research
   suggestedTask: sentiment
-- source: openalex
-  kind: paper
-  title: "Aggressive and Offensive Language Identification in Hindi, Bangla, and English: A Comparative Study"
-  link: https://doi.org/10.1007/s42979-020-00414-6
-  year: 2021
-  authors: Kumar et al.
-  venue: SN Computer Science
-  suggestedTask: hate
-- source: openalex
-  kind: paper
-  title: An evolutionary approach to comparative analysis of detecting Bangla abusive text
-  link: https://doi.org/10.11591/eei.v10i4.3107
-  year: 2021
-  authors: Islam et al.
-  venue: Bulletin of Electrical Engineering and Informatics
-  suggestedTask: hate
 - source: openalex
   kind: paper
   title: An Experiential Study of ‘Conditional Agency’ of Bengali Widows with Reference to the Autobiographies of Saradasundari Devi and Rassundari Devi
@@ -8192,14 +8049,6 @@
   year: 2021
   authors: Das et al.
   venue: Journal of Computer and Communications
-- source: openalex
-  kind: paper
-  title: Bangla hate speech detection on social media using attention-based recurrent neural network
-  link: https://doi.org/10.1515/jisys-2020-0060
-  year: 2021
-  authors: Das et al.
-  venue: Journal of Intelligent Systems
-  suggestedTask: hate
 - source: openalex
   kind: paper
   title: Bangla language textual image description by hybrid neural network model
@@ -8787,14 +8636,6 @@
   venue: The International Journal of Humanities & Social Studies
 - source: openalex
   kind: paper
-  title: "L-Boost: Identifying Offensive Texts From Social Media Post in Bengali"
-  link: https://doi.org/10.1109/access.2021.3134154
-  year: 2021
-  authors: Mridha et al.
-  venue: IEEE Access
-  suggestedTask: hate
-- source: openalex
-  kind: paper
   title: Lexical borrowings from the English language into Bangla short stories
   link: https://doi.org/10.52462/jlls.9
   year: 2021
@@ -8872,13 +8713,6 @@
   year: 2021
   authors: Ahmad et al.
   venue: Strategic Analysis
-- source: openalex
-  kind: paper
-  title: Natural language processing and machine learning based cyberbullying detection for Bangla and Romanized Bangla texts
-  link: https://doi.org/10.12928/telkomnika.v20i1.18630
-  year: 2021
-  authors: Ahmed et al.
-  venue: TELKOMNIKA (Telecommunication Computing Electronics and Control)
 - source: openalex
   kind: paper
   title: Nostalgia and the Construction of ‘Home:’ Inter-Generational Memory and Remembrance of the East Bengali Migrants
