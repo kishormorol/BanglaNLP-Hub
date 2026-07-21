@@ -349,13 +349,6 @@
   year: 2024
   link: https://doi.org/10.1007/s12046-024-02470-7
   task: textcls
-- id: uddin-etal-2024-bengali-comments-categorization
-  title: "Machine learning and deep learning-based approach to categorize Bengali comments on social networks using fused dataset"
-  authors: Uddin et al.
-  venue: PLoS ONE
-  year: 2024
-  link: https://doi.org/10.1371/journal.pone.0308862
-  task: textcls
 - id: ahammad-etal-2024-bangla-fake-news-roberta-gcn
   title: "RoBERTa-GCN: A Novel Approach for Combating Fake News in Bangla Using Advanced Language Processing and Graph Convolutional Networks"
   authors: Ahammad et al.

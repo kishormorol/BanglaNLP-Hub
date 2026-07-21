@@ -546,13 +546,6 @@
   year: 2025
   link: https://doi.org/10.1007/s42979-025-03763-2
   task: sentiment
-- id: islam-etal-2025-deep-learning-bangla-text-normalization
-  title: "Deep learning-based Bangla text normalization with emotion classification for expressive text-to-speech synthesizer"
-  authors: Islam et al.
-  venue: Applied Soft Computing
-  year: 2025
-  link: https://doi.org/10.1016/j.asoc.2025.112899
-  task: sentiment
 - id: rumy-etal-2025-multi-label-emotion-sentiment-detection
   title: "Multi-label emotion and sentiment detection from Bengali text using hybrid deep learning model"
   authors: Rumy et al.

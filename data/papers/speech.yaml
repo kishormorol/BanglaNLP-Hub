@@ -699,3 +699,10 @@
   year: 2014
   link: https://doi.org/10.5120/18893-0177
   task: speech
+- id: islam-etal-2025-deep-learning-bangla-text-normalization
+  title: "Deep learning-based Bangla text normalization with emotion classification for expressive text-to-speech synthesizer"
+  authors: Islam et al.
+  venue: Applied Soft Computing
+  year: 2025
+  link: https://doi.org/10.1016/j.asoc.2025.112899
+  task: speech
