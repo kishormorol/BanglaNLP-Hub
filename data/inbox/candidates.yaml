@@ -765,14 +765,6 @@
   venue: Russian Journal of Linguistics
 - source: openalex
   kind: paper
-  title: "Morphological challenges in Bengali NLP: evaluating stemming techniques for improved text classification and efficiency"
-  link: https://doi.org/10.1007/s10772-026-10272-x
-  year: 2026
-  authors: Islam et al.
-  venue: International Journal of Speech Technology
-  suggestedTask: textcls
-- source: openalex
-  kind: paper
   title: "Mythology in Translation: Kazi Nazrul Islam’s Bangla Poem “Dhūmkētu” in English Language"
   link: https://doi.org/10.64102/rujal.0738
   year: 2026
@@ -1618,13 +1610,6 @@
   authors: Faria et al.
   venue: International Journal of Disaster Risk Reduction
   suggestedTask: llm
-- source: openalex
-  kind: paper
-  title: "BanglaLem: A Transformer-based Bangla Lemmatizer with an Enhanced Dataset"
-  link: https://doi.org/10.1016/j.sasc.2025.200244
-  year: 2025
-  authors: Islam et al.
-  venue: Systems and Soft Computing
 - source: openalex
   kind: paper
   title: "Banglalish on social media: A corpus-based study of Bangla–English code-mixing across four platforms in Bangladesh"
@@ -3311,13 +3296,6 @@
   venue: International Journal For Multidisciplinary Research
 - source: openalex
   kind: paper
-  title: Accurate Prediction of Bangla Text Article Categorization by Utilizing Novel Bangla Stemmer
-  link: https://doi.org/10.5875/xbzrk013
-  year: 2024
-  authors: Mugdha et al.
-  venue: International Journal of Automation and Smart Technology
-- source: openalex
-  kind: paper
   title: Adaptation and validation of Overall Anxiety Severity and Impairment Scale (OASIS) in Bangla
   link: https://doi.org/10.3329/bjpsy.v37i2.72768
   year: 2024
@@ -3543,13 +3521,6 @@
   year: 2024
   authors: Haque et al.
   venue: ShodhKosh Journal of Visual and Performing Arts
-- source: openalex
-  kind: paper
-  title: Bengali reduplication generation with finite-state transducers (FSTs)
-  link: https://doi.org/10.1007/s10772-024-10124-6
-  year: 2024
-  authors: Barman et al.
-  venue: International Journal of Speech Technology
 - source: openalex
   kind: paper
   title: Bengali sign language translator with location tracking system
@@ -6611,13 +6582,6 @@
   venue: Global Digital & Print Media Review
 - source: openalex
   kind: paper
-  title: "BaNeL: an encoder-decoder based Bangla neural lemmatizer"
-  link: https://doi.org/10.1007/s42452-022-04985-2
-  year: 2022
-  authors: Islam et al.
-  venue: SN Applied Sciences
-- source: openalex
-  kind: paper
   title: "BaNeP: An End-to-End Neural Network Based Model for Bangla Parts-of-Speech Tagging"
   link: https://doi.org/10.1109/access.2022.3208269
   year: 2022
@@ -8136,13 +8100,6 @@
   suggestedTask: speech
 - source: openalex
   kind: paper
-  title: "Development of Bangla Spell and Grammar Checkers: Resource Creation and Evaluation"
-  link: https://doi.org/10.1109/access.2021.3119627
-  year: 2021
-  authors: Hossain et al.
-  venue: IEEE Access
-- source: openalex
-  kind: paper
   title: Development of Bengali Version of a Questionnaire Assessing Impact of Hyperuricemia on Quality of Life
   link: https://doi.org/10.4103/jss.jss_114_20
   year: 2021
@@ -8735,13 +8692,6 @@
   venue: Bulletin of Electrical Engineering and Informatics
 - source: openalex
   kind: paper
-  title: Stochastic Approach of Parsing Bengali Sentences
-  link: https://doi.org/10.3329/gubjse.v7i0.54021
-  year: 2021
-  authors: Khatun et al.
-  venue: GUB Journal of Science and Engineering
-- source: openalex
-  kind: paper
   title: Supervised Machine Learning Algorithms for Sentiment Analysis of Bangla Newspaper
   link: https://doi.org/10.11113/ijic.v11n2.321
   year: 2021
@@ -9108,13 +9058,6 @@
   year: 2020
   authors: Islam et al.
   venue: Multimedia Tools and Applications
-- source: openalex
-  kind: paper
-  title: An exploratory research on grammar checking of Bangla sentences using statistical language models
-  link: https://doi.org/10.11591/ijece.v10i3.pp3244-3252
-  year: 2020
-  authors: Rahman et al.
-  venue: International Journal of Electrical and Computer Engineering (IJECE)
 - source: openalex
   kind: paper
   title: An image database of handwritten Bangla words with automatic benchmarking facilities for character segmentation algorithms
@@ -11913,14 +11856,6 @@
   venue: Journal of South Asian Languages and Linguistics
 - source: openalex
   kind: paper
-  title: Annotated Bangla News Corpus and Lexicon Development with POS Tagging and Stemming
-  link: https://engineeringresearch.org/index.php/GJRE/article/download/1597/1528
-  year: 2017
-  authors: Chaudhury et al.
-  venue: Global Journal of Researches in Engineering
-  suggestedTask: pos
-- source: openalex
-  kind: paper
   title: Associations of Obesity Indices with Cardiorespiratory Fitness in Bengali School Going Boys in India
   link: https://doi.org/10.21276/ijlssr.2017.3.1.18
   year: 2017
@@ -12559,13 +12494,6 @@
   suggestedTask: speech
 - source: openalex
   kind: paper
-  title: Anaphora Resolution in Bangla Language
-  link: https://doi.org/10.5120/ijca2016912204
-  year: 2016
-  authors: Tazakka et al.
-  venue: International Journal of Computer Applications
-- source: openalex
-  kind: paper
   title: Bangla and Oriya Script Lines Identification from Handwritten Document Images in Tri-script Scenario
   link: https://doi.org/10.4018/ijssmet.2016010103
   year: 2016
@@ -12615,13 +12543,6 @@
   authors: Rudra et al.
   venue: Molecular Autism
   suggestedTask: mt
-- source: openalex
-  kind: paper
-  title: BenLem (A Bengali Lemmatizer) and Its Role in WSD
-  link: https://doi.org/10.1145/2835494
-  year: 2016
-  authors: Chakrabarty et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
 - source: openalex
   kind: paper
   title: "Blocking Effects of Higher Numerals in Bangla: A Phase-Based Analysis"
@@ -13737,14 +13658,6 @@
   year: 2014
   authors: Mukherjee et al.
   venue: International Journal of Social Sciences
-- source: openalex
-  kind: paper
-  title: A dependency annotation scheme for Bangla treebank
-  link: https://doi.org/10.1007/s10579-014-9266-3
-  year: 2014
-  authors: Chatterji et al.
-  venue: Language Resources and Evaluation
-  suggestedTask: pos
 - source: openalex
   kind: paper
   title: "America in the Psyche of Bangla Authors: Opening of the Space by Tagore"
@@ -15379,13 +15292,6 @@
   venue: Emerald Emerging Markets Case Studies
 - source: openalex
   kind: paper
-  title: Recognizing Bangla Grammar Using Predictive Parser
-  link: https://doi.org/10.5121/ijcsit.2011.3605
-  year: 2011
-  authors: Hasan et al.
-  venue: International Journal of Computer Science and Information Technology
-- source: openalex
-  kind: paper
   title: "Reducing the barriers to accessing psychological therapies for Bengali, Urdu, Tamil and Somali communities in the UK: some implications for training, policy and practice"
   link: https://doi.org/10.1080/03069885.2011.621519
   year: 2011
@@ -16074,14 +15980,6 @@
   venue: Journal of Dr Serajul Haque Centre for Islamic Research
 - source: openalex
   kind: paper
-  title: Web-Based Bengali News Corpus for Lexicon Development and POS Tagging
-  link: https://doi.org/10.17562/pb-37-3
-  year: 2008
-  authors: Ekbal et al.
-  venue: Polibits
-  suggestedTask: pos
-- source: openalex
-  kind: paper
   title: ‘What else do we Bengalis do?’ Sorcery, overseas migration, and the new inequalities in Sylhet, Bangladesh
   link: https://doi.org/10.1111/j.1467-9655.2007.00431.x
   year: 2007
@@ -16116,13 +16014,6 @@
   year: 2007
   authors: Mandal et al.
   venue: CLEF (Working Notes)
-- source: openalex
-  kind: paper
-  title: Bottom-up context-sensitive algorithms for Bengali parser in natural language processing
-  link: https://doi.org/10.3233/kes-2007-11201
-  year: 2007
-  authors: Sarker et al.
-  venue: International Journal of Knowledge-based and Intelligent Engineering Systems
 - source: openalex
   kind: paper
   title: "Caught in the ACT: The Timing of Aspiration and Voicing in East Bengali"
@@ -16218,14 +16109,6 @@
   venue: GeoJournal
 - source: openalex
   kind: paper
-  title: Unsupervised morphological parsing of Bengali
-  link: https://doi.org/10.1007/s10579-007-9031-y
-  year: 2007
-  authors: Dasgupta et al.
-  venue: Computers and the Humanities
-  suggestedTask: pos
-- source: openalex
-  kind: paper
   title: Validation of the Bangla version of the Edinburgh Postnatal Depression Scale for a Bangladeshi sample
   link: https://doi.org/10.1080/02646830701644896
   year: 2007
@@ -16301,13 +16184,6 @@
   year: 2006
   authors: Rao et al.
   venue: Disability & Society
-- source: openalex
-  kind: paper
-  title: Parsing Bengali text
-  link: https://doi.org/10.1145/1132512.1127026
-  year: 2006
-  authors: Saha et al.
-  venue: Ubiquity
 - source: openalex
   kind: paper
   title: "Readability modelling and comparison of one and two parametric fit: A case study in Bangla*"
@@ -17057,13 +16933,6 @@
   year: 1998
   authors: Roy et al.
   venue: Signs
-- source: openalex
-  kind: paper
-  title: A "Generalized" Lexical Functional Grammar-Based Processing of an Indian Language — Bangla
-  link: https://doi.org/10.1142/s0218001498000403
-  year: 1998
-  authors: Sengupta et al.
-  venue: International Journal of Pattern Recognition and Artificial Intelligence
 - source: openalex
   kind: paper
   title: A complete printed Bangla OCR system

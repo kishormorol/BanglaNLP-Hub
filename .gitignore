@@ -23,3 +23,8 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 .cache/
+
+# scratch/triage helper files (top-level, underscore-prefixed)
+/_*.mjs
+/_*.json
+/_*_add.yaml

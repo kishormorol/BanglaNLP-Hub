@@ -229,3 +229,122 @@
   year: 2020
   link: https://doi.org/10.11591/ijece.v10i3.pp3244-3252
   task: pos
+- id: islam-etal-2026-bengali-stemming-morphological-challenges
+  title: "Morphological challenges in Bengali NLP: evaluating stemming techniques for improved text classification and efficiency"
+  authors: Islam et al.
+  venue: International Journal of Speech Technology
+  year: 2026
+  link: https://doi.org/10.1007/s10772-026-10272-x
+  task: pos
+- id: islam-etal-2025-banglalem-lemmatizer
+  title: "BanglaLem: A Transformer-based Bangla Lemmatizer with an Enhanced Dataset"
+  authors: Islam et al.
+  venue: Systems and Soft Computing
+  year: 2025
+  link: https://doi.org/10.1016/j.sasc.2025.200244
+  task: pos
+- id: mugdha-etal-2024-bangla-stemmer-categorization
+  title: "Accurate Prediction of Bangla Text Article Categorization by Utilizing Novel Bangla Stemmer"
+  authors: Mugdha et al.
+  venue: International Journal of Automation and Smart Technology
+  year: 2024
+  link: https://doi.org/10.5875/xbzrk013
+  task: pos
+- id: barman-etal-2024-bengali-reduplication-fst
+  title: "Bengali reduplication generation with finite-state transducers (FSTs)"
+  authors: Barman et al.
+  venue: International Journal of Speech Technology
+  year: 2024
+  link: https://doi.org/10.1007/s10772-024-10124-6
+  task: pos
+- id: islam-etal-2022-banel-bangla-neural-lemmatizer
+  title: "BaNeL: an encoder-decoder based Bangla neural lemmatizer"
+  authors: Islam et al.
+  venue: SN Applied Sciences
+  year: 2022
+  link: https://doi.org/10.1007/s42452-022-04985-2
+  task: pos
+- id: hossain-etal-2021-bangla-spell-grammar-checker
+  title: "Development of Bangla Spell and Grammar Checkers: Resource Creation and Evaluation"
+  authors: Hossain et al.
+  venue: IEEE Access
+  year: 2021
+  link: https://doi.org/10.1109/access.2021.3119627
+  task: pos
+- id: khatun-etal-2021-bengali-stochastic-parsing
+  title: "Stochastic Approach of Parsing Bengali Sentences"
+  authors: Khatun et al.
+  venue: GUB Journal of Science and Engineering
+  year: 2021
+  link: https://doi.org/10.3329/gubjse.v7i0.54021
+  task: pos
+- id: chaudhury-etal-2017-bangla-pos-tagging-corpus
+  title: "Annotated Bangla News Corpus and Lexicon Development with POS Tagging and Stemming"
+  authors: Chaudhury et al.
+  venue: Global Journal of Researches in Engineering
+  year: 2017
+  link: https://engineeringresearch.org/index.php/GJRE/article/download/1597/1528
+  task: pos
+- id: tazakka-etal-2016-bangla-anaphora-resolution
+  title: "Anaphora Resolution in Bangla Language"
+  authors: Tazakka et al.
+  venue: International Journal of Computer Applications
+  year: 2016
+  link: https://doi.org/10.5120/ijca2016912204
+  task: pos
+- id: chakrabarty-etal-2016-benlem-lemmatizer
+  title: "BenLem (A Bengali Lemmatizer) and Its Role in WSD"
+  authors: Chakrabarty et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2016
+  link: https://doi.org/10.1145/2835494
+  task: pos
+- id: chatterji-etal-2014-bangla-treebank-dependency-annotation
+  title: "A dependency annotation scheme for Bangla treebank"
+  authors: Chatterji et al.
+  venue: Language Resources and Evaluation
+  year: 2014
+  link: https://doi.org/10.1007/s10579-014-9266-3
+  task: pos
+- id: hasan-etal-2011-bangla-grammar-predictive-parser
+  title: "Recognizing Bangla Grammar Using Predictive Parser"
+  authors: Hasan et al.
+  venue: International Journal of Computer Science and Information Technology
+  year: 2011
+  link: https://doi.org/10.5121/ijcsit.2011.3605
+  task: pos
+- id: ekbal-etal-2008-bengali-news-corpus-pos-tagging
+  title: "Web-Based Bengali News Corpus for Lexicon Development and POS Tagging"
+  authors: Ekbal et al.
+  venue: Polibits
+  year: 2008
+  link: https://doi.org/10.17562/pb-37-3
+  task: pos
+- id: sarker-etal-2007-bengali-parser-bottom-up
+  title: "Bottom-up context-sensitive algorithms for Bengali parser in natural language processing"
+  authors: Sarker et al.
+  venue: International Journal of Knowledge-based and Intelligent Engineering Systems
+  year: 2007
+  link: https://doi.org/10.3233/kes-2007-11201
+  task: pos
+- id: dasgupta-etal-2007-bengali-unsupervised-morphological-parsing
+  title: "Unsupervised morphological parsing of Bengali"
+  authors: Dasgupta et al.
+  venue: Computers and the Humanities
+  year: 2007
+  link: https://doi.org/10.1007/s10579-007-9031-y
+  task: pos
+- id: saha-2006-parsing-bengali-text
+  title: "Parsing Bengali text"
+  authors: Saha
+  venue: Ubiquity
+  year: 2006
+  link: https://doi.org/10.1145/1132512.1127026
+  task: pos
+- id: sengupta-etal-1998-bangla-lfg-processing
+  title: "A \"Generalized\" Lexical Functional Grammar-Based Processing of an Indian Language — Bangla"
+  authors: Sengupta et al.
+  venue: International Journal of Pattern Recognition and Artificial Intelligence
+  year: 1998
+  link: https://doi.org/10.1142/s0218001498000403
+  task: pos
