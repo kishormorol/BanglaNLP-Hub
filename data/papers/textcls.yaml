@@ -496,3 +496,10 @@
   year: 2014
   link: https://doi.org/10.5121/ijaia.2014.5508
   task: textcls
+- id: nath-etal-2025-bonghope-annotated-corpus-bengali-hope
+  title: "BongHope: An annotated corpus for Bengali hope speech detection"
+  authors: Nath et al.
+  venue: International Journal of Information Technology
+  year: 2025
+  link: https://doi.org/10.1007/s41870-025-02484-2
+  task: textcls

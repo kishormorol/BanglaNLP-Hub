@@ -348,3 +348,31 @@
   year: 1998
   link: https://doi.org/10.1142/s0218001498000403
   task: pos
+- id: ovi-etal-2022-banep-end-end-neural-network
+  title: "BaNeP: An End-to-End Neural Network Based Model for Bangla Parts-of-Speech Tagging"
+  authors: Ovi et al.
+  venue: IEEE Access
+  year: 2022
+  link: https://doi.org/10.1109/access.2022.3208269
+  task: pos
+- id: pan-etal-2021-performance-evaluation-part-speech-tagging
+  title: "Performance Evaluation of Part-of-Speech Tagging for Bengali Text"
+  authors: Pan et al.
+  venue: Journal of The Institution of Engineers (India) Series B
+  year: 2021
+  link: https://doi.org/10.1007/s40031-021-00630-5
+  task: pos
+- id: jaynalabedin-etal-2014-parts-speech-tagging-bengali-mwes
+  title: "Parts of Speech Tagging in Bengali for MWEs Detection"
+  authors: JaynalAbedin et al.
+  venue: International Journal of Computer Applications
+  year: 2014
+  link: https://doi.org/10.5120/17485-8182
+  task: pos
+- id: ekbal-etal-2008-maximum-entropy-bengali-part-speech
+  title: "Maximum Entropy Based Bengali Part of Speech Tagging"
+  authors: Ekbal et al.
+  venue: Research in computing science
+  year: 2008
+  link: https://www.cicling.org/2008/RCS-vol-33/06-Ekbal.pdf
+  task: pos

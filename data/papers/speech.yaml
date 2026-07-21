@@ -279,3 +279,416 @@
   year: 2018
   link: http://dblp.uni-trier.de/db/journals/iajit/iajit15.html#GuptaS18
   task: speech
+- id: bharati-etal-2026-deep-neural-network-automatic-mispronunciation
+  title: "A deep neural network-based automatic mispronunciation detection in Bengali accented English speech"
+  authors: Bharati et al.
+  venue: Discover Computing
+  year: 2026
+  link: https://doi.org/10.1007/s10791-026-09959-1
+  task: speech
+- id: hasan-etal-2026-bangla-tts-performance-evaluation-benchmark
+  title: "Bangla TTS Performance Evaluation: A Benchmark Study on Synthesized Speech Quality and Intelligibility"
+  authors: Hasan et al.
+  venue: Dhaka University Journal of Science
+  year: 2026
+  link: https://doi.org/10.3329/dujs.v74i1.84122
+  task: speech
+- id: ahmad-etal-2026-descriptor-bangla-audio-spoofing-four
+  title: "Descriptor: Bangla Audio Spoofing With Four Conditions and Real Speech (BAS4R)"
+  authors: Ahmad et al.
+  venue: IEEE data descriptions.
+  year: 2026
+  link: https://doi.org/10.1109/ieeedata.2026.3703743
+  task: speech
+- id: raju-etal-2026-kingfisher-hybrid-llm-augmented-bangla
+  title: "Kingfisher: A hybrid LLM-augmented Bangla text normalization for enhanced text-to-speech"
+  authors: Raju et al.
+  venue: Natural Language Processing Journal
+  year: 2026
+  link: https://doi.org/10.1016/j.nlp.2026.100201
+  task: speech
+- id: intesum-etal-2026-stft-gradtts-robust-diffusion-speech
+  title: "STFT-GradTTS: a robust, diffusion-based speech synthesis system with iSTFT decoder for Bangla"
+  authors: Intesum et al.
+  venue: International Journal of Speech Technology
+  year: 2026
+  link: https://doi.org/10.1007/s10772-025-10241-w
+  task: speech
+- id: islam-etal-2025-review-bangla-text-speech-human
+  title: "A Review on Bangla Text-to-Speech With Human-Like Expressions"
+  authors: Islam et al.
+  venue: IEEE Access
+  year: 2025
+  link: https://doi.org/10.1109/access.2025.3648947
+  task: speech
+- id: kumar-etal-2025-advancing-bangla-text-speech-synthesis
+  title: "Advancing Bangla text-to-speech synthesis using a VITS-based model with a custom dataset and comprehensive evaluation"
+  authors: Kumar et al.
+  venue: Discover Computing
+  year: 2025
+  link: https://doi.org/10.1007/s10791-025-09701-3
+  task: speech
+- id: paul-etal-2025-end-end-continuous-speech-recognition
+  title: "An End-to-End Continuous Speech Recognition System in Bengali for General and Elderly Domain"
+  authors: Paul et al.
+  venue: SN Computer Science
+  year: 2025
+  link: https://doi.org/10.1007/s42979-025-04058-2
+  task: speech
+- id: bijoy-etal-2025-bangla-braille-voice-conversion-visually
+  title: "Bangla Braille to voice conversion for visually impaired individuals using deep neural network"
+  authors: Bijoy et al.
+  venue: Multimedia Tools and Applications
+  year: 2025
+  link: https://doi.org/10.1007/s11042-025-20995-9
+  task: speech
+- id: chowdhury-etal-2025-bangla-speech-processing-analytical-feature
+  title: "Bangla Speech Processing: An Analytical Study of Feature Extraction and Recognition Methods"
+  authors: Chowdhury et al.
+  venue: Mathematical Modelling and Engineering Problems
+  year: 2025
+  link: https://doi.org/10.18280/mmep.120718
+  task: speech
+- id: chowdhury-etal-2025-bangla-speech-processing-time-delay
+  title: "Bangla Speech Processing: Time Delay Neural Networks Enhanced by Advanced Algorithms"
+  authors: Chowdhury et al.
+  venue: Mathematical Modelling and Engineering Problems
+  year: 2025
+  link: https://doi.org/10.18280/mmep.120908
+  task: speech
+- id: chowdhury-etal-2025-bangla-speech-recognition-power-spectral
+  title: "Bangla Speech Recognition: Power Spectral Analysis, LPC &amp; MFCC as Feature Extraction Techniques in Deep Learning"
+  authors: Chowdhury et al.
+  venue: International Journal of Engineering Trends and Technology
+  year: 2025
+  link: https://doi.org/10.14445/22315381/ijett-v73i5p121
+  task: speech
+- id: islam-2024-bangla-align-forced-aligning-toolkit
+  title: "Bangla-Align: A forced-aligning toolkit for annotating Bangla speech"
+  authors: Islam
+  venue: TESOL Bangladesh journal
+  year: 2024
+  link: https://doi.org/10.69907/tbj.v1i1.68
+  task: speech
+- id: samin-etal-2024-banspeech-multi-domain-bangla-speech
+  title: "BanSpeech: A Multi-Domain Bangla Speech Recognition Benchmark Toward Robust Performance in Challenging Conditions"
+  authors: Samin et al.
+  venue: IEEE Access
+  year: 2024
+  link: https://doi.org/10.1109/access.2024.3371478
+  task: speech
+- id: arpita-etal-2024-exploring-bengali-speech-gender-classification
+  title: "Exploring Bengali speech for gender classification: machine learning and deep learning approaches"
+  authors: Arpita et al.
+  venue: Bulletin of Electrical Engineering and Informatics
+  year: 2024
+  link: https://doi.org/10.11591/eei.v14i1.8146
+  task: speech
+- id: paul-etal-2023-hybrid-feature-extracted-deep-cnn
+  title: "A hybrid feature-extracted deep CNN with reduced parameters substitutes an End-to-End CNN for the recognition of spoken Bengali digits"
+  authors: Paul et al.
+  venue: Multimedia Tools and Applications
+  year: 2023
+  link: https://doi.org/10.1007/s11042-023-15598-1
+  task: speech
+- id: islam-etal-2023-bangla-text-normalization-text-speech
+  title: "Bangla text normalization for text-to-speech synthesizer using machine learning algorithms"
+  authors: Islam et al.
+  venue: Journal of King Saud University - Computer and Information Sciences
+  year: 2023
+  link: https://doi.org/10.1016/j.jksuci.2023.101807
+  task: speech
+- id: dua-etal-2023-cepstral-acoustic-ternary-pattern-hybrid
+  title: "Cepstral and acoustic ternary pattern based hybrid feature extraction approach for end-to-end bangla speech recognition"
+  authors: Dua et al.
+  venue: Journal of Ambient Intelligence and Humanized Computing
+  year: 2023
+  link: https://doi.org/10.1007/s12652-023-04706-6
+  task: speech
+- id: paul-etal-2022-pre-processing-technique-amplitude-interpolation
+  title: "A novel pre-processing technique of amplitude interpolation for enhancing the classification accuracy of Bengali phonemes"
+  authors: Paul et al.
+  venue: Multimedia Tools and Applications
+  year: 2022
+  link: https://doi.org/10.1007/s11042-022-13594-5
+  task: speech
+- id: hasan-etal-2022-effect-vocal-tract-dynamics-neural
+  title: "Effect of vocal tract dynamics on neural network‐based speech recognition: A Bengali language‐based study"
+  authors: Hasan et al.
+  venue: Expert Systems
+  year: 2022
+  link: https://doi.org/10.1111/exsy.13045
+  task: speech
+- id: hossain-etal-2022-multi-label-extreme-learning-machine
+  title: "Multi-Label Extreme Learning Machine (MLELMs) for Bangla Regional Speech Recognition"
+  authors: Hossain et al.
+  venue: Applied Sciences
+  year: 2022
+  link: https://doi.org/10.3390/app12115463
+  task: speech
+- id: mridha-etal-2021-challenges-opportunities-speech-recognition-bengali
+  title: "A study on the challenges and opportunities of speech recognition for Bengali language"
+  authors: Mridha et al.
+  venue: Artificial Intelligence Review
+  year: 2021
+  link: https://doi.org/10.1007/s10462-021-10083-3
+  task: speech
+- id: kibria-etal-2021-bangladeshi-bangla-speech-corpus-automatic
+  title: "Bangladeshi Bangla speech corpus for automatic speech recognition research"
+  authors: Kibria et al.
+  venue: Speech Communication
+  year: 2021
+  link: https://doi.org/10.1016/j.specom.2021.12.004
+  task: speech
+- id: samin-etal-2021-deep-learning-large-vocabulary-continuous
+  title: "Deep learning based large vocabulary continuous speech recognition of an under-resourced language Bangladeshi Bangla"
+  authors: Samin et al.
+  venue: Nippon Onkyo Gakkaishi/Acoustical science and technology/Nihon Onkyo Gakkaishi
+  year: 2021
+  link: https://doi.org/10.1250/ast.42.252
+  task: speech
+- id: sarkar-etal-2021-detection-word-boundary-bengali-colloquial
+  title: "Detection of word boundary in Bengali colloquial speech based on pitch profile and Convolutional Neural Network"
+  authors: Sarkar et al.
+  venue: Turkish Online Journal of Qualitative Inquiry
+  year: 2021
+  link: https://www.tojqi.net/index.php/journal/article/view/1368
+  task: speech
+- id: hasan-etal-2021-how-many-mel-frequency-cepstral
+  title: "How many Mel‐frequency cepstral coefficients to be utilized in speech recognition? A study with the Bengali language"
+  authors: Hasan et al.
+  venue: The Journal of Engineering
+  year: 2021
+  link: https://doi.org/10.1049/tje2.12082
+  task: speech
+- id: sultana-etal-2021-recent-advancement-speech-recognition-bangla
+  title: "Recent Advancement in Speech Recognition for Bangla: A Survey"
+  authors: Sultana et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2021
+  link: https://doi.org/10.14569/ijacsa.2021.0120365
+  task: speech
+- id: ahmad-etal-2021-sust-tts-corpus-phonetically-balanced
+  title: "SUST TTS Corpus: A phonetically-balanced corpus for Bangla text-to-speech synthesis"
+  authors: Ahmad et al.
+  venue: Nippon Onkyo Gakkaishi/Acoustical science and technology/Nihon Onkyo Gakkaishi
+  year: 2021
+  link: https://doi.org/10.1250/ast.42.326
+  task: speech
+- id: aura-etal-2020-error-pattern-hmm-bangla-asr
+  title: "Analysis of the Error Pattern of HMM based Bangla ASR"
+  authors: Aura et al.
+  venue: International Journal of Image Graphics and Signal Processing
+  year: 2020
+  link: https://doi.org/10.5815/ijigsp.2020.01.01
+  task: speech
+- id: mahmud-2020-performance-different-acoustic-features-lstm
+  title: "Performance Analysis of Different Acoustic Features based on LSTM for Bangla Speech Recognition"
+  authors: Mahmud
+  venue: The International journal of Multimedia & Its Applications
+  year: 2020
+  link: https://doi.org/10.5121/ijma.2020.12402
+  task: speech
+- id: mahmud-etal-2020-qualitative-plp-lstm-bangla-speech
+  title: "Qualitative Analysis of PLP in LSTM for Bangla Speech Recognition"
+  authors: Mahmud et al.
+  venue: The International journal of Multimedia & Its Applications
+  year: 2020
+  link: https://doi.org/10.5121/ijma.2020.12501
+  task: speech
+- id: ahmad-etal-2019-encoder-decoder-grapheme-phoneme-converter
+  title: "An encoder-decoder based grapheme-to-phoneme converter for Bangla speech synthesis"
+  authors: Ahmad et al.
+  venue: Nippon Onkyo Gakkaishi/Acoustical science and technology/Nihon Onkyo Gakkaishi
+  year: 2019
+  link: https://doi.org/10.1250/ast.40.374
+  task: speech
+- id: bhowmik-etal-2019-prosodic-word-boundary-detection-bengali
+  title: "Prosodic word boundary detection from Bengali continuous speech"
+  authors: Bhowmik et al.
+  venue: Language Resources and Evaluation
+  year: 2019
+  link: https://doi.org/10.1007/s10579-019-09478-0
+  task: speech
+- id: ahmed-etal-2019-text-speech-synthesis-bangla-language
+  title: "Text to Speech Synthesis for Bangla Language"
+  authors: Ahmed et al.
+  venue: International Journal of Information Engineering and Electronic Business
+  year: 2019
+  link: https://doi.org/10.5815/ijieeb.2019.02.01
+  task: speech
+- id: khan-etal-2018-construction-large-scale-isolated-word
+  title: "Construction of Large Scale Isolated Word Speech Corpus in Bangla"
+  authors: Khan et al.
+  venue: Global Journal of Computer Science and Technology
+  year: 2018
+  link: https://computerresearch.org/index.php/computer/article/download/1690/1674
+  task: speech
+- id: khan-etal-2018-creation-connected-word-speech-corpus
+  title: "Creation of Connected Word Speech Corpus for Bangla Speech Recognition Systems"
+  authors: Khan et al.
+  venue: Asian Journal of Research in Computer Science
+  year: 2018
+  link: https://doi.org/10.9734/ajrcos/2018/v1i224725
+  task: speech
+- id: bhowmik-etal-2018-manner-articulation-bengali-phoneme-classification
+  title: "Manner of articulation based Bengali phoneme classification"
+  authors: Bhowmik et al.
+  venue: International Journal of Speech Technology
+  year: 2018
+  link: https://doi.org/10.1007/s10772-018-9498-5
+  task: speech
+- id: abujar-etal-2017-state-art-research-bangla-text
+  title: "State of the Art Research for Bangla Text to Speech on Android Platform"
+  authors: Abujar et al.
+  venue: International Journal of Computer Applications
+  year: 2017
+  link: https://doi.org/10.5120/ijca2017914650
+  task: speech
+- id: huque-etal-2016-small-vocabulary-bangla-speech-database
+  title: "Analysis of a Small Vocabulary Bangla Speech Database for Recognition"
+  authors: Huque et al.
+  venue: International Journal of Computer Applications
+  year: 2016
+  link: https://doi.org/10.5120/ijca2016907827
+  task: speech
+- id: ahammad-etal-2016-connected-bangla-speech-recognition-artificial
+  title: "Connected Bangla Speech Recognition using Artificial Neural Network"
+  authors: Ahammad et al.
+  venue: International Journal of Computer Applications
+  year: 2016
+  link: https://doi.org/10.5120/ijca2016911568
+  task: speech
+- id: huque-etal-2016-development-small-vocabulary-database-bengali
+  title: "Development of A Small Vocabulary Database for Bengali Speech Recognition"
+  authors: Huque et al.
+  venue: International Journal of Signal Processing Image Processing and Pattern Recognition
+  year: 2016
+  link: https://doi.org/10.14257/ijsip.2016.9.8.10
+  task: speech
+- id: ahmed-etal-2015-acoustic-modeling-bangla-words-deep
+  title: "Acoustic Modeling of Bangla Words using Deep Belief Network"
+  authors: Ahmed et al.
+  venue: International Journal of Image Graphics and Signal Processing
+  year: 2015
+  link: http://www.mecs-press.org/ijigsp/ijigsp-v7-n10/IJIGSP-V7-N10-3.pdf
+  task: speech
+- id: rahman-etal-2015-comparison-result-improved-back-propagation
+  title: "Comparison Study and Result Analysis of Improved Back-Propagation Algorithms in Bangla Speech Recognition"
+  authors: Rahman et al.
+  venue: International Journal of Applied Research on Information Technology and Computing
+  year: 2015
+  link: https://doi.org/10.5958/0975-8089.2015.00014.7
+  task: speech
+- id: islam-etal-2015-speech-tools-as-back-ends
+  title: "Speech Analysis Tools As Back-Ends for Bangla Phoneme Recognition Using MFCC, Neural Network, Hamming and Euclidean Distance"
+  authors: Islam et al.
+  venue: International Journal of Advance Research and Innovation
+  year: 2015
+  link: https://doi.org/10.51976/ijari.311503
+  task: speech
+- id: mukherjee-etal-2014-f0-contour-generation-synthesis-bengali
+  title: "F0 contour generation and synthesis using Bengali Hmm-based speech synthesis system"
+  authors: Mukherjee et al.
+  venue: International Journal of Speech Technology
+  year: 2014
+  link: https://doi.org/10.1007/s10772-014-9247-3
+  task: speech
+- id: sayem-2014-speech-alphabets-bangla-language-automatic
+  title: "Speech Analysis for Alphabets in Bangla Language: Automatic Speech Recognition"
+  authors: SAYEM
+  venue: International Journal of Engineering Research
+  year: 2014
+  link: https://doi.org/10.17950/ijer/v3s2/211
+  task: speech
+- id: firoze-etal-2013-bangla-user-adaptive-word-speech
+  title: "Bangla User Adaptive Word Speech Recognition"
+  authors: Firoze et al.
+  venue: International Journal of Fuzzy System Applications
+  year: 2013
+  link: https://doi.org/10.4018/ijfsa.2013070101
+  task: speech
+- id: hossain-etal-2013-implementation-back-propagation-neural-network
+  title: "Implementation of back-propagation neural Network for isolated bangla speech recognition"
+  authors: Hossain et al.
+  venue: International Journal of Information Sciences and Techniques
+  year: 2013
+  link: https://doi.org/10.5121/ijist.2013.3401
+  task: speech
+- id: das-etal-2012-aging-speech-recognition-speaker-adaptation
+  title: "Aging speech recognition with speaker adaptation techniques: Study on medium vocabulary continuous Bengali speech"
+  authors: Das et al.
+  venue: Pattern Recognition Letters
+  year: 2012
+  link: https://doi.org/10.1016/j.patrec.2012.10.029
+  task: speech
+- id: mijanur-etal-2012-continuous-bangla-speech-segmentation-short
+  title: "Continuous Bangla Speech Segmentation using Short-term Speech Features Extraction Approaches"
+  authors: Mijanur et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2012
+  link: https://doi.org/10.14569/ijacsa.2012.031121
+  task: speech
+- id: mizanur-etal-2012-gender-effect-canonicalization-bangla-asr
+  title: "Gender Effect Canonicalization for Bangla ASR"
+  authors: Mizanur et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2012
+  link: https://doi.org/10.14569/ijacsa.2012.031115
+  task: speech
+- id: ahamed-etal-2012-local-feature-gender-independent-bangla
+  title: "Local Feature based Gender Independent Bangla ASR"
+  authors: Ahamed et al.
+  venue: INTERNATIONAL JOURNAL OF ADVANCED RESEARCH IN ARTIFICIAL INTELLIGENCE
+  year: 2012
+  link: https://doi.org/10.14569/ijarai.2012.010807
+  task: speech
+- id: narendra-etal-2011-development-syllable-text-speech-synthesis
+  title: "Development of syllable-based text to speech synthesis system in Bengali"
+  authors: Narendra et al.
+  venue: International Journal of Speech Technology
+  year: 2011
+  link: https://doi.org/10.1007/s10772-011-9094-4
+  task: speech
+- id: hassan-etal-2011-mln-bangla-asr-context-sensitive
+  title: "MLN-based Bangla ASR using context sensitive triphone HMM"
+  authors: Hassan et al.
+  venue: International Journal of Speech Technology
+  year: 2011
+  link: https://doi.org/10.1007/s10772-011-9095-3
+  task: speech
+- id: rahman-etal-2011-segmentation-extraction-features-continuous-bangla
+  title: "On Segmentation and Extraction of Features from Continuous Bangla Speech including Windowing"
+  authors: Rahman et al.
+  venue: International Journal of Applied Research on Information Technology and Computing
+  year: 2011
+  link: https://doi.org/10.5958/j.0975-8070.2.2.009
+  task: speech
+- id: saha-etal-2011-peak-clustering-continuous-bengali-speech
+  title: "Peak based clustering of continuous Bengali speech for medium vocabulary speech recognition system"
+  authors: Saha et al.
+  venue: International Journal of Applied Research on Information Technology and Computing
+  year: 2011
+  link: https://doi.org/10.5958/j.0975-8070.2.3.018
+  task: speech
+- id: rashid-etal-2010-text-normalization-diphone-preparation-bangla
+  title: "Text Normalization and Diphone Preparation for Bangla Speech Synthesis"
+  authors: Rashid et al.
+  venue: Journal of Multimedia
+  year: 2010
+  link: https://doi.org/10.4304/jmm.5.6.551-559
+  task: speech
+- id: mandal-etal-2007-epoch-synchronous-non-overlap-add
+  title: "Epoch synchronous non-overlap-add (ESNOLA) method-based concatenative speech synthesis system for Bangla."
+  authors: Mandal et al.
+  venue: SSW
+  year: 2007
+  link: http://www.isca-speech.org/archive_open/archive_papers/ssw6/ssw6_351.pdf
+  task: speech
+- id: mandal-etal-2006-word-boundary-detection-suprasegmental-features
+  title: "Word boundary detection based on suprasegmental features: A case study on Bangla speech"
+  authors: Mandal et al.
+  venue: International Journal of Speech Technology
+  year: 2006
+  link: https://doi.org/10.1007/s10772-006-9001-6
+  task: speech
