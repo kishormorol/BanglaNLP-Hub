@@ -301,3 +301,178 @@
   year: 2005
   link: https://aclanthology.org/2005.mtsummit-ebmt.16/
   task: mt
+- id: seal-etal-2026-computation-machine-translation-errors-through
+  title: "Computation of Machine Translation Errors Through Implicit Consideration of Word Sense Disambiguation in Bengali Text"
+  authors: Seal et al.
+  venue: Cureus Journal of Computer Science.
+  year: 2026
+  link: https://doi.org/10.7759/s44389-025-00026-2
+  task: mt
+- id: moirangthem-etal-2026-optimizing-low-resource-machine-transliteration
+  title: "Optimizing Low-Resource Machine Transliteration: A Case of Script Transition from Manipuri in Bengali Script to Meetei-Mayek"
+  authors: Moirangthem et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2026
+  link: https://doi.org/10.1145/3806198
+  task: mt
+- id: mondal-etal-2024-enhancement-english-bengali-machine-translation
+  title: "Enhancement of English-Bengali Machine Translation Leveraging Back-Translation"
+  authors: Mondal et al.
+  venue: Applied Sciences
+  year: 2024
+  link: https://doi.org/10.3390/app14156848
+  task: mt
+- id: kashyap-etal-2024-multilingual-nmt-english-low-resource
+  title: "Multilingual NMT system for English to Low Resource Indic Languages - Assamese and Bengali"
+  authors: Kashyap et al.
+  venue: IJARCCE
+  year: 2024
+  link: https://doi.org/10.17148/ijarcce.2024.13398
+  task: mt
+- id: ansary-2024-neural-machine-translation-between-english
+  title: "Neural Machine Translation Between English And Bangla: A Philosophical Survey Observing Architectures And Performances"
+  authors: Ansary
+  venue: IOSR Journal of Computer Engineering
+  year: 2024
+  link: https://doi.org/10.9790/0661-2605011725
+  task: mt
+- id: shiam-etal-2023-neural-attention-encoder-decoder-english
+  title: "A Neural Attention-Based Encoder-Decoder Approach for English to Bangla Translation"
+  authors: Shiam et al.
+  venue: Computer Science Journal of Moldova
+  year: 2023
+  link: https://doi.org/10.56415/csjm.v31.04
+  task: mt
+- id: roy-2023-neural-machine-translation-bengali-language
+  title: "Neural Machine Translation from Bengali Language to English language and vice-versa"
+  authors: Roy
+  venue: International Journal on Recent and Innovation Trends in Computing and Communication
+  year: 2023
+  link: https://doi.org/10.17762/ijritcc.v11i9.9635
+  task: mt
+- id: rizvee-etal-2022-robust-three-stage-hybrid-framework
+  title: "A Robust Three-Stage Hybrid Framework for English to Bangla Transliteration"
+  authors: Rizvee et al.
+  venue: International Journal on Natural Language Computing
+  year: 2022
+  link: https://doi.org/10.5121/ijnlc.2022.11104
+  task: mt
+- id: shibli-etal-2022-automatic-back-transliteration-romanized-bengali
+  title: "Automatic back transliteration of Romanized Bengali (Banglish) to Bengali"
+  authors: Shibli et al.
+  venue: Iran Journal of Computer Science
+  year: 2022
+  link: https://doi.org/10.1007/s42044-022-00122-9
+  task: mt
+- id: mahata-etal-2022-simplification-english-bengali-sentences-improving
+  title: "Simplification of English and Bengali Sentences for Improving Quality of Machine Translation"
+  authors: Mahata et al.
+  venue: Neural Processing Letters
+  year: 2022
+  link: https://doi.org/10.1007/s11063-022-10755-3
+  task: mt
+- id: dhar-etal-2021-bangla-english-machine-translation-attention
+  title: "Bangla↔English Machine Translation Using Attention-based Multi-Headed Transformer Model"
+  authors: Dhar et al.
+  venue: Journal of Computer Science
+  year: 2021
+  link: https://doi.org/10.3844/jcssp.2021.1000.1010
+  task: mt
+- id: sen-etal-2020-systematic-english-bangla-sentence-translator
+  title: "A Systematic Approach to English to Bangla Sentence Translator"
+  authors: Sen et al.
+  venue: Global Journal of Computer Science and Technology
+  year: 2020
+  link: https://doi.org/10.34257/gjcstgvol20is3pg31
+  task: mt
+- id: sen-2020-grammar-formalism-development-english-bangla
+  title: "ANALYSIS OF GRAMMAR FORMALISM IN THE DEVELOPMENT OF ENGLISH TO BANGLA TRANSLATION SYSTEM"
+  authors: Sen
+  venue: INTERNATIONAL JOURNAL OF COMPUTER APPLICATION
+  year: 2020
+  link: https://doi.org/10.26808//rs.ca.i10v2.02
+  task: mt
+- id: ohidujjaman-etal-2020-automatic-machine-translation-bangla-english
+  title: "Automatic Machine Translation For Bangla And English Resolving Ambiguities"
+  authors: Ohidujjaman et al.
+  venue: International Journal of Innovative Technology and Exploring Engineering
+  year: 2020
+  link: https://doi.org/10.35940/ijitee.c8103.019320
+  task: mt
+- id: siddique-etal-2020-english-bangla-machine-translation-recurrent
+  title: "English to Bangla Machine Translation Using Recurrent Neural Network"
+  authors: Siddique et al.
+  venue: International Journal of Future Computer and Communication
+  year: 2020
+  link: https://doi.org/10.18178/ijfcc.2020.9.2.564
+  task: mt
+- id: paul-etal-2020-english-bengali-neural-machine-translation
+  title: "ENGLISH TO BENGALI NEURAL MACHINE TRANSLATION SYSTEM FOR THE AVIATION DOMAIN"
+  authors: Paul et al.
+  venue: INFOCOMP Journal of Computer Science
+  year: 2020
+  link: https://infocomp.dcc.ufla.br/index.php/infocomp/article/download/1007/545
+  task: mt
+- id: akter-etal-2020-suvashantor-english-bangla-machine-translation
+  title: "SuVashantor: English to Bangla Machine Translation Systems"
+  authors: Akter et al.
+  venue: Journal of Computer Science
+  year: 2020
+  link: https://doi.org/10.3844/jcssp.2020.1128.1138
+  task: mt
+- id: mumin-etal-2019-neural-machine-translation-low-resource
+  title: "Neural Machine Translation for Low-resource English-Bangla"
+  authors: Mumin et al.
+  venue: Journal of Computer Science
+  year: 2019
+  link: https://doi.org/10.3844/jcssp.2019.1627.1637
+  task: mt
+- id: mumin-etal-2019-shu-torjoma-english-bangla-statistical
+  title: "shu-torjoma: An English↔Bangla Statistical Machine Translation System"
+  authors: Mumin et al.
+  venue: Journal of Computer Science
+  year: 2019
+  link: https://doi.org/10.3844/jcssp.2019.1022.1039
+  task: mt
+- id: asaduzzaman-etal-2016-handling-inflections-translation-part-speech
+  title: "Handling Inflections for Translation and Part of Speech (POS) Tagging of Bengali Words"
+  authors: Asaduzzaman et al.
+  venue: Journal of Computer Technology & Applications
+  year: 2016
+  link: https://stmjournals.com/index.php?journal=JoCTA&page=article&op=view&path%5B%5D=7112
+  task: mt
+- id: islam-etal-2015-automatically-identify-naming-word-bengali
+  title: "A New Approach: Automatically Identify Naming Word from Bengali Sentence for Machine Translation"
+  authors: Islam et al.
+  venue: International Journal of Advanced Science and Technology
+  year: 2015
+  link: https://doi.org/10.14257/ijast.2015.74.06
+  task: mt
+- id: dasgupta-etal-2015-resource-creation-development-english-bangla
+  title: "Resource creation and development of an English-Bangla back transliteration system"
+  authors: Dasgupta et al.
+  venue: International Journal of Knowledge-based and Intelligent Engineering Systems
+  year: 2015
+  link: https://doi.org/10.3233/kes-150307
+  task: mt
+- id: ali-etal-2014-unl-machine-translation-scheme-bangla
+  title: "UNL-Based Machine Translation Scheme for Bangla Locative Case Constructs"
+  authors: Ali et al.
+  venue: International Journal of Information and Education Technology
+  year: 2014
+  link: https://doi.org/10.7763/ijiet.2014.v4.449
+  task: mt
+- id: khan-etal-2013-how-translate-unknown-words-english
+  title: "How to Translate Unknown Words for English to Bangla Machine Translation Using Transliteration"
+  authors: Khan et al.
+  venue: Journal of Computers
+  year: 2013
+  link: https://doi.org/10.4304/jcp.8.5.1167-1174
+  task: mt
+- id: saha-2005-english-bangla-translator-banganubad
+  title: "English to Bangla Translator: The BANGANUBAD"
+  authors: Saha
+  venue: International Journal of Computer Processing Of Languages
+  year: 2005
+  link: https://doi.org/10.1142/s0219427905001328
+  task: mt

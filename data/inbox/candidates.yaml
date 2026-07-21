@@ -335,14 +335,6 @@
   venue: Frontiers in Artificial Intelligence
 - source: openalex
   kind: paper
-  title: Computation of Machine Translation Errors Through Implicit Consideration of Word Sense Disambiguation in Bengali Text
-  link: https://doi.org/10.7759/s44389-025-00026-2
-  year: 2026
-  authors: Seal et al.
-  venue: Cureus Journal of Computer Science.
-  suggestedTask: mt
-- source: openalex
-  kind: paper
   title: "Context-Aware Homograph Disambiguation in Bangla: A Multi-Model Machine Learning Approach"
   link: https://doi.org/10.63512/sustjst.2024.1005
   year: 2026
@@ -711,13 +703,6 @@
   year: 2026
   authors: Nurjannah et al.
   venue: BERDAYA Jurnal Pengabdian Kepada Masyarakat
-- source: openalex
-  kind: paper
-  title: "Optimizing Low-Resource Machine Transliteration: A Case of Script Transition from Manipuri in Bengali Script to Meetei-Mayek"
-  link: https://doi.org/10.1145/3806198
-  year: 2026
-  authors: Moirangthem et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
 - source: openalex
   kind: paper
   title: "Oral health interventions for UK-based Bengali children and their families: a scoping review protocol"
@@ -3597,14 +3582,6 @@
   suggestedTask: speech
 - source: openalex
   kind: paper
-  title: Enhancement of English-Bengali Machine Translation Leveraging Back-Translation
-  link: https://doi.org/10.3390/app14156848
-  year: 2024
-  authors: Mondal et al.
-  venue: Applied Sciences
-  suggestedTask: mt
-- source: openalex
-  kind: paper
   title: "Enhancing Depressive Post Detection in Bangla: A Comparative Study of TF-IDF, BERT and FastText Embeddings"
   link: https://doi.org/10.33166/aetic.2024.03.003
   year: 2024
@@ -3940,13 +3917,6 @@
   venue: Journal of Architecture Planning and Construction Management
 - source: openalex
   kind: paper
-  title: Multilingual NMT system for English to Low Resource Indic Languages - Assamese and Bengali
-  link: https://doi.org/10.17148/ijarcce.2024.13398
-  year: 2024
-  authors: Kashyap et al.
-  venue: IJARCCE
-- source: openalex
-  kind: paper
   title: MultiModal Ensemble Approach Leveraging Spatial, Skeletal, and Edge Features for Enhanced Bangla Sign Language Recognition
   link: https://doi.org/10.1109/access.2024.3410837
   year: 2024
@@ -3966,14 +3936,6 @@
   year: 2024
   authors: Banerjee et al.
   venue: International Journal of Research -GRANTHAALAYAH
-- source: openalex
-  kind: paper
-  title: "Neural Machine Translation Between English And Bangla: A Philosophical Survey Observing Architectures And Performances"
-  link: https://doi.org/10.9790/0661-2605011725
-  year: 2024
-  authors: Ansary et al.
-  venue: IOSR Journal of Computer Engineering
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: "Nostalgia and Narrative: Anik Dutta's Booter Bhabishyat and Bengali Historicity"
@@ -4693,14 +4655,6 @@
   venue: International Journal on Document Analysis and Recognition (IJDAR)
 - source: openalex
   kind: paper
-  title: A Neural Attention-Based Encoder-Decoder Approach for English to Bangla Translation
-  link: https://doi.org/10.56415/csjm.v31.04
-  year: 2023
-  authors: Shiam et al.
-  venue: Computer Science Journal of Moldova
-  suggestedTask: mt
-- source: openalex
-  kind: paper
   title: A New Technique to Classification of Bengali News Grounded on ML and DL Models
   link: https://doi.org/10.5120/ijca2023922897
   year: 2023
@@ -5372,14 +5326,6 @@
   venue: Rupkatha Journal on Interdisciplinary Studies in Humanities
 - source: openalex
   kind: paper
-  title: Neural Machine Translation from Bengali Language to English language and vice-versa
-  link: https://doi.org/10.17762/ijritcc.v11i9.9635
-  year: 2023
-  authors: Roy et al.
-  venue: International Journal on Recent and Innovation Trends in Computing and Communication
-  suggestedTask: mt
-- source: openalex
-  kind: paper
   title: Newspaper text recognition in Bengali script using support vector machine
   link: https://doi.org/10.1007/s11042-023-16862-0
   year: 2023
@@ -5943,13 +5889,6 @@
   venue: The Journal of Hindu Studies
 - source: openalex
   kind: paper
-  title: A Robust Three-Stage Hybrid Framework for English to Bangla Transliteration
-  link: https://doi.org/10.5121/ijnlc.2022.11104
-  year: 2022
-  authors: Rizvee et al.
-  venue: International Journal on Natural Language Computing
-- source: openalex
-  kind: paper
   title: "A sustainable competing dynamic - Real-time Bangla license plate detection and recognition system using YOLOv5 and SSD: A deep learning application"
   link: https://doi.org/10.1080/09720529.2022.2133248
   year: 2022
@@ -6069,13 +6008,6 @@
   year: 2022
   authors: Dhar et al.
   venue: Future Internet
-- source: openalex
-  kind: paper
-  title: Automatic back transliteration of Romanized Bengali (Banglish) to Bengali
-  link: https://doi.org/10.1007/s42044-022-00122-9
-  year: 2022
-  authors: Shibli et al.
-  venue: Iran Journal of Computer Science
 - source: openalex
   kind: paper
   title: "Awarding of Citizenship to Afghan and Bengali Refugees: a Comparative Analysis of Pakistan's Print and Social Media Frames"
@@ -6588,14 +6520,6 @@
   venue: Dhaka University Journal of Linguistics
 - source: openalex
   kind: paper
-  title: Opinion mining from machine translated Bangla reviews with stacked contractive auto-encoders
-  link: https://doi.org/10.1007/s12652-022-03760-w
-  year: 2022
-  authors: Bodini et al.
-  venue: Journal of Ambient Intelligence and Humanized Computing
-  suggestedTask: mt
-- source: openalex
-  kind: paper
   title: Overactive bladder symptom score – translation and linguistic validation in Bengali
   link: https://doi.org/10.4103/jfmpc.jfmpc_490_21
   year: 2022
@@ -6756,14 +6680,6 @@
   year: 2022
   authors: Chowdhuri et al.
   venue: Journal of Indian Academy of Forensic Medicine
-- source: openalex
-  kind: paper
-  title: Simplification of English and Bengali Sentences for Improving Quality of Machine Translation
-  link: https://doi.org/10.1007/s11063-022-10755-3
-  year: 2022
-  authors: Mahata et al.
-  venue: Neural Processing Letters
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: Singing Birds, English Romanticism, and Two Bengali Bards in Their Late Romantic Phase
@@ -7287,14 +7203,6 @@
   year: 2021
   authors: Hasan et al.
   venue: Biological Rhythm Research
-- source: openalex
-  kind: paper
-  title: Bangla↔English Machine Translation Using Attention-based Multi-Headed Transformer Model
-  link: https://doi.org/10.3844/jcssp.2021.1000.1010
-  year: 2021
-  authors: Dhar et al.
-  venue: Journal of Computer Science
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: Bengali Dalit Literature and the Politics of Recognition
@@ -8347,14 +8255,6 @@
   venue: Advances in Science Technology and Engineering Systems Journal
 - source: openalex
   kind: paper
-  title: A Systematic Approach to English to Bangla Sentence Translator
-  link: https://doi.org/10.34257/gjcstgvol20is3pg31
-  year: 2020
-  authors: Sen et al.
-  venue: Global Journal of Computer Science and Technology
-  suggestedTask: mt
-- source: openalex
-  kind: paper
   title: "Acoustic Analysis of the Speakers’ Variability for Regional Accent-Affected Pronunciation in Bangladeshi Bangla: A Study on Sylheti Accent"
   link: https://doi.org/10.1109/access.2020.2974799
   year: 2020
@@ -8412,14 +8312,6 @@
   suggestedTask: llm
 - source: openalex
   kind: paper
-  title: ANALYSIS OF GRAMMAR FORMALISM IN THE DEVELOPMENT OF ENGLISH TO BANGLA TRANSLATION SYSTEM
-  link: https://doi.org/10.26808//rs.ca.i10v2.02
-  year: 2020
-  authors: Sen et al.
-  venue: INTERNATIONAL JOURNAL OF COMPUTER APPLICATION
-  suggestedTask: mt
-- source: openalex
-  kind: paper
   title: "Analyzing the Effect of Foreign Language on Decision Making : A Study From Bangla Language Perspective"
   link: https://doi.org/10.3329/dujbs.v29i2.48762
   year: 2020
@@ -8460,14 +8352,6 @@
   year: 2020
   authors: Angona et al.
   venue: TELKOMNIKA (Telecommunication Computing Electronics and Control)
-  suggestedTask: mt
-- source: openalex
-  kind: paper
-  title: Automatic Machine Translation For Bangla And English Resolving Ambiguities
-  link: https://doi.org/10.35940/ijitee.c8103.019320
-  year: 2020
-  authors: Ohidujjaman et al.
-  venue: International Journal of Innovative Technology and Exploring Engineering
   suggestedTask: mt
 - source: openalex
   kind: paper
@@ -8692,22 +8576,6 @@
   year: 2020
   authors: Bengal. et al.
   venue: Rupkatha Journal on Interdisciplinary Studies in Humanities
-- source: openalex
-  kind: paper
-  title: English to Bangla Machine Translation Using Recurrent Neural Network
-  link: https://doi.org/10.18178/ijfcc.2020.9.2.564
-  year: 2020
-  authors: Siddique et al.
-  venue: International Journal of Future Computer and Communication
-  suggestedTask: mt
-- source: openalex
-  kind: paper
-  title: ENGLISH TO BENGALI NEURAL MACHINE TRANSLATION SYSTEM FOR THE AVIATION DOMAIN
-  link: https://infocomp.dcc.ufla.br/index.php/infocomp/article/download/1007/545
-  year: 2020
-  authors: Paul et al.
-  venue: INFOCOMP Journal of Computer Science
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: Enhancing the Performance of Semantic Search in Bengali using Neural Net and other Classification Techniques
@@ -9074,14 +8942,6 @@
   venue: Cahiers du cinema
 - source: openalex
   kind: paper
-  title: "SuVashantor: English to Bangla Machine Translation Systems"
-  link: https://doi.org/10.3844/jcssp.2020.1128.1138
-  year: 2020
-  authors: Akter et al.
-  venue: Journal of Computer Science
-  suggestedTask: mt
-- source: openalex
-  kind: paper
   title: The Confluence of Bhojpuri and Bengali Folk Culture
   link: https://doi.org/10.31305/rrijm.2020.v05.i08.016
   year: 2020
@@ -9273,14 +9133,6 @@
   year: 2019
   authors: Herat-Gunaratne et al.
   venue: The Gerontologist
-- source: openalex
-  kind: paper
-  title: "<i>shu-torjoma</i>: An English↔Bangla Statistical Machine Translation System"
-  link: https://doi.org/10.3844/jcssp.2019.1022.1039
-  year: 2019
-  authors: Mumin et al.
-  venue: Journal of Computer Science
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: A comparative study on handwritten Bangla character recognition
@@ -9787,14 +9639,6 @@
   year: 2019
   authors: Sultana et al.
   venue: International journal of innovation and applied studies
-- source: openalex
-  kind: paper
-  title: Neural Machine Translation for Low-resource English-Bangla
-  link: https://doi.org/10.3844/jcssp.2019.1627.1637
-  year: 2019
-  authors: Mumin et al.
-  venue: Journal of Computer Science
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: "Oboyob: A sequential-semantic Bengali image captioning engine"
@@ -11910,14 +11754,6 @@
   venue: International Journal of Research in Sociology and Anthropology
 - source: openalex
   kind: paper
-  title: Handling Inflections for Translation and Part of Speech (POS) Tagging of Bengali Words
-  link: https://stmjournals.com/index.php?journal=JoCTA&page=article&op=view&path%5B%5D=7112
-  year: 2016
-  authors: Asaduzzaman et al.
-  venue: Journal of Computer Technology & Applications
-  suggestedTask: mt
-- source: openalex
-  kind: paper
   title: "Hb Midnapore [β53(D4)Ala→Val; <i>HBB</i>: c.161C&gt;T]: A Novel Hemoglobin Variant with a Structural Abnormality Associated with IVS-I-5 (G&gt;C) (<i>HBB</i>: c.92+5G&gt;C) Found in a Bengali Indian Family"
   link: https://doi.org/10.1080/03630269.2016.1243555
   year: 2016
@@ -12255,14 +12091,6 @@
   year: 2015
   authors: Bhowmik et al.
   venue: International Journal of Applied Pattern Recognition
-- source: openalex
-  kind: paper
-  title: "A New Approach: Automatically Identify Naming Word from Bengali Sentence for Machine Translation"
-  link: https://doi.org/10.14257/ijast.2015.74.06
-  year: 2015
-  authors: Islam et al.
-  venue: International Journal of Advanced Science and Technology
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: AN EVALUATION OF THE IDENTICAL AGENDA IN THE BANGLA AND ENGLISH WRITINGS OF NIRAD C. CHAUDHURI
@@ -12614,13 +12442,6 @@
   year: 2015
   authors: Mukhopadhyay et al.
   venue: Journal of Quantitative Linguistics
-- source: openalex
-  kind: paper
-  title: Resource creation and development of an English-Bangla back transliteration system
-  link: https://doi.org/10.3233/kes-150307
-  year: 2015
-  authors: Dasgupta et al.
-  venue: International Journal of Knowledge-based and Intelligent Engineering Systems
 - source: openalex
   kind: paper
   title: "Sex Determination from Clavicular Length and Mid-Shaft Diameter Using Digital X-ray in Indian Bengali Population: A Preliminary Study"
@@ -13187,14 +13008,6 @@
   venue: Image Processing & Communications
 - source: openalex
   kind: paper
-  title: Text to Speech System for Bengali Language using Characters based Transliterations
-  link: https://doi.org/10.5120/18893-0177
-  year: 2014
-  authors: ManjurAlam et al.
-  venue: International Journal of Computer Applications
-  suggestedTask: speech
-- source: openalex
-  kind: paper
   title: "The “Monisha and the Stone Forest” Children's Book Project: Paleontological Educational Outreach in Bengali Language in India and Bangladesh"
   link: https://doi.org/10.1017/s2475262200011473
   year: 2014
@@ -13250,14 +13063,6 @@
   year: 2014
   authors: Ara et al.
   venue: Dhaka University Journal of Linguistics
-- source: openalex
-  kind: paper
-  title: UNL-Based Machine Translation Scheme for Bangla Locative Case Constructs
-  link: https://doi.org/10.7763/ijiet.2014.v4.449
-  year: 2014
-  authors: Ali et al.
-  venue: International Journal of Information and Education Technology
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: Usage of ICT For Science Education In Some Renowned Bangla Medium School of Dhaka City
@@ -13511,14 +13316,6 @@
   year: 2013
   authors: Raha et al.
   venue: Journal of Biomedical Science
-- source: openalex
-  kind: paper
-  title: How to Translate Unknown Words for English to Bangla Machine Translation Using Transliteration
-  link: https://doi.org/10.4304/jcp.8.5.1167-1174
-  year: 2013
-  authors: Khan et al.
-  venue: Journal of Computers
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: Introducing the IPA Symbols for English Consonant Phonemes to Bengali Learners of English and the Ensuing Challenges
@@ -15287,14 +15084,6 @@
   year: 2005
   authors: Glynn et al.
   venue: Journal of Historical Geography
-- source: openalex
-  kind: paper
-  title: "English to Bangla Translator: The BANGANUBAD"
-  link: https://doi.org/10.1142/s0219427905001328
-  year: 2005
-  authors: Saha et al.
-  venue: International Journal of Computer Processing Of Languages
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: Erupted maxillary conical mesiodens in deciduous dentition in a Bengali girl - A case report

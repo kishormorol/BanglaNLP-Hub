@@ -692,3 +692,10 @@
   year: 2006
   link: https://doi.org/10.1007/s10772-006-9001-6
   task: speech
+- id: manjuralam-etal-2014-text-speech-bengali-language-characters
+  title: "Text to Speech System for Bengali Language using Characters based Transliterations"
+  authors: ManjurAlam et al.
+  venue: International Journal of Computer Applications
+  year: 2014
+  link: https://doi.org/10.5120/18893-0177
+  task: speech
