@@ -220,16 +220,16 @@ const contributors = [
   }
   .aurora .blob {
     position: absolute;
-    width: 560px;
-    height: 560px;
+    width: 520px;
+    height: 520px;
     border-radius: 50%;
-    filter: blur(90px);
-    opacity: 0.4;
+    filter: blur(100px);
+    opacity: 0.22;
     mix-blend-mode: multiply;
   }
   :global(html.dark) .aurora .blob {
     mix-blend-mode: screen;
-    opacity: 0.32;
+    opacity: 0.18;
   }
   .b1 {
     background: radial-gradient(circle, var(--green), transparent 62%);
@@ -255,9 +255,9 @@ const contributors = [
     inset: 0;
     background-image: radial-gradient(var(--border) 1px, transparent 1px);
     background-size: 26px 26px;
-    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 72%);
-    mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 30%, transparent 72%);
-    opacity: 0.55;
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 25%, transparent 68%);
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, #000 25%, transparent 68%);
+    opacity: 0.35;
   }
   @keyframes drift1 {
     50% {
