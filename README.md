@@ -8,6 +8,12 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-22c55e)](./CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-black)](#license)
 
+[![Tasks](https://img.shields.io/badge/tasks-10-64748b)](./data/tasks.yaml)
+[![Datasets](https://img.shields.io/badge/datasets-43-7c3aed)](./data/datasets)
+[![Papers](https://img.shields.io/badge/papers-684-2563eb)](./data/papers)
+[![Models](https://img.shields.io/badge/models-22-0891b2)](./data/models)
+[![Tools](https://img.shields.io/badge/tools-9-db2777)](./data/tools.yaml)
+
 **Live:** https://kishormorol.github.io/BanglaNLP-Hub/
 
 > Keywords: Bangla NLP · Bengali NLP · Bangla datasets · Bengali datasets · Bangla language models · Bengali benchmarks · low-resource / Indic NLP resources.
@@ -17,6 +23,8 @@ Static site built with Astro and TypeScript. No client-side framework: the only 
 ## Catalog
 
 Everything the site renders comes from YAML under [`/data`](./data). Nothing is hardcoded in the pages.
+
+The catalog currently holds **684 papers**, **43 datasets**, **22 models**, and **9 tools** across **10 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles (see [`TODO-data.md`](./TODO-data.md)).
 
 | | Count |
 | --- | --- |
