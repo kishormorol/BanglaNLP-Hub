@@ -131,3 +131,10 @@
   year: 2008
   link: https://aclanthology.org/I08-2077/
   task: ner
+- id: aurpa-etal-2026-bangla-meder
+  title: "Bangla MedER: Multi-BERT ensemble approach for the recognition of Bangla medical entity"
+  authors: Aurpa et al.
+  venue: PLoS ONE
+  year: 2026
+  link: https://doi.org/10.1371/journal.pone.0342558
+  task: ner

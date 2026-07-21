@@ -265,3 +265,10 @@
   year: 2007
   link: https://aclanthology.org/P07-2056/
   task: speech
+- id: mubassira-etal-2021-bangla-articulation-identification
+  title: "Implementation Of Recurrent Neural Network With Language Model For Automatic Articulation Identification System In Bangla"
+  authors: Mubassira et al.
+  venue: International Journal of Advanced Networking and Applications
+  year: 2021
+  link: https://doi.org/10.35444/ijana.2021.12611
+  task: speech
