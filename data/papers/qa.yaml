@@ -175,3 +175,10 @@
   year: 2019
   link: https://doi.org/10.1007/s12046-019-1224-8
   task: qa
+- id: chowdhury-etal-2026-bengali-physics-mcq
+  title: "Automated Bengali Physics MCQ Solver: A Large Language Model Approach with Chain-of-Thought Reasoning"
+  authors: Chowdhury et al.
+  venue: IEEE QPAIN
+  year: 2026
+  link: https://ieeexplore.ieee.org/document/11545654
+  task: qa
