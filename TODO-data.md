@@ -3,6 +3,50 @@
 Known gaps, deliberately left empty rather than filled with invented values.
 Contributions welcome — see CONTRIBUTING.md.
 
+## Speech taxonomy split: SER + Speaker tasks (2026-07-23)
+
+The single `speech` ("ASR / TTS") task was silently acting as a catch-all for all
+audio work. Two tasks were split out so the resources are findable:
+
+- **`ser` — Speech Emotion Recognition.** Emotion *from the acoustic signal*, which
+  is not the same task as text emotion under `sentiment`.
+- **`speaker` — Speaker ID / Diarization.**
+
+**Root cause fixed.** Both classifiers (`classify()` in `scripts/promote.ts` and
+`guessTask()` in `scripts/discover.ts`) tested the `emotion → sentiment` rule
+*before* `speech`, so every "**Speech** Emotion Recognition" title was misrouted to
+`sentiment` (you can still see the fossil `suggestedTask: sentiment` on the held
+candidates). Tight `ser`/`speaker` guards were added ahead of the keyword rules;
+bare "emotion" still routes text papers to `sentiment`, and "speaker adaptation" (an
+ASR technique) still routes to `speech`.
+
+**Promoted from the inbox:**
+
+- `ser`: 11 papers (incl. the SUBESCO and BanSpEmo dataset papers) + 2 datasets —
+  **SUBESCO** (CC BY 4.0, Zenodo `10.5281/zenodo.4526477`; 7,000 utt / 7.7 hrs / 20
+  actors / 7 emotions) and **BANSpEmo** (CC BY 4.0, Mendeley `rdwn4bs5ky`; 792 utt /
+  22 speakers / 6 emotions). Both licenses/sizes read from the dataset's own card.
+- `speaker`: 4 papers — the 3 long-form ASR+diarization arXiv papers moved out of
+  `speech` (`arxiv-2602-23070`, `arxiv-2602-21741`, `arxiv-2603-19256`), plus the
+  VQ/GMM text-independent speaker-ID paper. *The 3 moved papers are joint
+  ASR+diarization; diarization is the novel axis. Reviewers may rebalance.*
+
+**Still held (not promoted), with reasons:**
+
+- **Multimodal.** "Smart reception … speech, speaker, and face recognition"
+  (*Engineering Applications of AI*, 2024) — audio + vision, held the same way other
+  multimodal work is.
+- **Music, not speech.** "Attention-based CNN-BiGRU for Bengali Music Emotion
+  Classification", "Verse-Based Emotion Analysis of Bengali Music" — song/lyrics
+  emotion, outside the speech taxonomy.
+- **Clinical / pathological speech — no in-scope task yet.** A "Dysarthric Bengali
+  speech" dataset and "Connected Speech … Alzheimer's Disease" / dementia
+  connected-speech papers. Promoting them is the prerequisite-adds-a-task case, like
+  OCR and captioning below.
+
+New SER datasets need BibTeX (see the missing-BibTeX table). Sizes and licenses are
+verified at source, so they are not listed under the unverified tables.
+
 ## Datasets: mining from resource papers (2026-07-19)
 
 The imported resource/benchmark papers were mined for the datasets they
@@ -117,6 +161,8 @@ Anthology or publisher page — do not hand-write one.
 | `qa` | TyDi QA (bn) | `tydiqa` |
 | `sentiment` | BEmoC | `bemoc` |
 | `sentiment` | ABSA Cricket & Restaurant | `absa` |
+| `ser` | SUBESCO | `subesco` |
+| `ser` | BANSpEmo | `banspemo` |
 | `speech` | OpenSLR SLR53 (Large Bengali ASR) | `openslr53` |
 | `speech` | Common Voice (bn) | `commonvoice` |
 | `speech` | OOD-Speech | `oodspeech` |

@@ -26,6 +26,14 @@
   name: ASR / TTS
   bn: কথন শনাক্তকরণ ও সংশ্লেষণ
   desc: Bangla speech recognition and text-to-speech corpora and models.
+- id: ser
+  name: Speech Emotion Recognition
+  bn: কণ্ঠস্বরে আবেগ শনাক্তকরণ
+  desc: Recognizing emotion (anger, happiness, sadness, and more) from the acoustic speech signal — distinct from text-based emotion classification under Sentiment Analysis.
+- id: speaker
+  name: Speaker ID / Diarization
+  bn: বক্তা শনাক্তকরণ ও বিভাজন
+  desc: Identifying and distinguishing speakers in Bangla audio — speaker identification, verification, and diarization (who spoke when).
 - id: textcls
   name: Text Classification
   bn: পাঠ্য শ্রেণিবিন্যাস

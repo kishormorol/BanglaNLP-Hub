@@ -12,27 +12,6 @@
   year: 2026
   link: http://arxiv.org/abs/2601.17679
   task: speech
-- id: arxiv-2602-23070
-  title: "Make It Hard to Hear, Easy to Learn: Long-Form Bengali ASR and Speaker Diarization via Extreme Augmentation and Perfect Alignment"
-  authors: Hasan et al.
-  venue: arXiv
-  year: 2026
-  link: http://arxiv.org/abs/2602.23070
-  task: speech
-- id: arxiv-2602-21741
-  title: "Robust Long-Form Bangla Speech Processing: Automatic Speech Recognition and Speaker Diarization"
-  authors: Chowdhury et al.
-  venue: arXiv
-  year: 2026
-  link: http://arxiv.org/abs/2602.21741
-  task: speech
-- id: arxiv-2603-19256
-  title: "ShobdoSetu: A Data-Centric Framework for Bengali Long-Form Speech Recognition and Speaker Diarization"
-  authors: Sakib et al.
-  venue: arXiv
-  year: 2026
-  link: http://arxiv.org/abs/2603.19256
-  task: speech
 - id: arxiv-2607-09598
   title: "Tokenizer Transplantation: Mitigating Autoregressive Collapse in Edge-Efficient Bengali ASR"
   authors: Hasan et al.

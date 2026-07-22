@@ -85,6 +85,10 @@ const isNew = (c: Candidate) =>
 /** Cheap keyword → task guess. Always a suggestion for a human to confirm. */
 function guessTask(text: string): string | undefined {
   const t = text.toLowerCase();
+  // Emotion from the acoustic signal is SER, and speaker ID/diarization is its
+  // own task — both must win over the 'emotion'/'speech' keyword rules below.
+  if (/speech emotion|emotional speech|emotion.*\b(from|in)\b.*(speech|audio|voice)|acoustic.*emotion/.test(t)) return 'ser';
+  if (/speaker (identif|recogni|verif|diariz)|diariz/.test(t)) return 'speaker';
   const rules: [RegExp, string][] = [
     [/sentiment|emotion|polarity/, 'sentiment'],
     [/named entity|\bner\b/, 'ner'],

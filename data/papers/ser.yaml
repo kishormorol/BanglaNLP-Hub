@@ -1,0 +1,77 @@
+- id: abrar-etal-2026-emotion-recognition-bangla-dialect-speech
+  title: "Emotion recognition from Bangla dialect speech using privacy-aware deep learning models: a comparative analysis"
+  authors: Abrar et al.
+  venue: International Journal of Speech Technology
+  year: 2026
+  link: https://doi.org/10.1007/s10772-026-10261-0
+  task: ser
+- id: hossain-etal-2026-emotionally-aware-bangla-speech-systems
+  title: "Emotionally Aware Bangla Speech Systems: Real-Time SER with Adaptive Learning and LLM Integration"
+  authors: Hossain et al.
+  venue: SN Computer Science
+  year: 2026
+  link: https://doi.org/10.1007/s42979-026-04744-9
+  task: ser
+- id: shakil-etal-2025-bangla-speech-emotion-recognition-ensemble
+  title: Bangla Speech Emotion Recognition Using Deep Learning-Based Ensemble Learning and Feature Fusion
+  authors: Shakil et al.
+  venue: Journal of Imaging
+  year: 2025
+  link: https://doi.org/10.3390/jimaging11080273
+  task: ser
+- id: sultana-etal-2025-banspemo-bangla-audio-dataset-speech-emotion
+  title: "BanSpEmo: a Bangla audio dataset for speech emotion recognition and its baseline evaluation"
+  authors: Sultana et al.
+  venue: Indonesian Journal of Electrical Engineering and Computer Science
+  year: 2025
+  link: https://doi.org/10.11591/ijeecs.v37.i3.pp2044-2057
+  task: ser
+- id: billah-etal-2024-emotion-recognition-intensity-level-bangla-speech
+  title: Emotion Recognition with Intensity Level from Bangla Speech using Feature Transformation and Cascaded Deep Learning Model
+  authors: Billah et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2024
+  link: https://doi.org/10.14569/ijacsa.2024.0150460
+  task: ser
+- id: islam-etal-2023-machine-learning-emotion-classification-bengali-speech
+  title: A Machine Learning Approach for Emotion Classification in Bengali Speech
+  authors: Islam et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2023
+  link: https://doi.org/10.14569/ijacsa.2023.0141093
+  task: ser
+- id: sultana-etal-2023-acoustic-feature-analysis-bangla-speech-emotion
+  title: Acoustic feature analysis and optimization for Bangla speech emotion recognition
+  authors: Sultana et al.
+  venue: Nippon Onkyo Gakkaishi/Acoustical science and technology/Nihon Onkyo Gakkaishi
+  year: 2023
+  link: https://doi.org/10.1250/ast.44.157
+  task: ser
+- id: ayon-etal-2022-bangla-speech-emotion-detection-ensemble
+  title: Bangla Speech Emotion Detection using Machine Learning Ensemble Methods
+  authors: Ayon et al.
+  venue: Advances in Science Technology and Engineering Systems Journal
+  year: 2022
+  link: https://doi.org/10.25046/aj070608
+  task: ser
+- id: sultana-etal-2021-bangla-speech-emotion-recognition-cross-lingual
+  title: Bangla Speech Emotion Recognition and Cross-Lingual Study Using Deep CNN and BLSTM Networks
+  authors: Sultana et al.
+  venue: IEEE Access
+  year: 2021
+  link: https://doi.org/10.1109/access.2021.3136251
+  task: ser
+- id: sultana-etal-2021-sust-bangla-emotional-speech-corpus-subesco
+  title: "SUST Bangla Emotional Speech Corpus (SUBESCO): An audio-only emotional speech corpus for Bangla"
+  authors: Sultana et al.
+  venue: PLoS ONE
+  year: 2021
+  link: https://doi.org/10.1371/journal.pone.0250173
+  task: ser
+- id: dhar-etal-2021-system-predict-emotion-bengali-speech
+  title: A System to Predict Emotion from Bengali Speech
+  authors: Dhar et al.
+  venue: International Journal of Mathematical Sciences and Computing
+  year: 2021
+  link: https://doi.org/10.5815/ijmsc.2021.01.04
+  task: ser
