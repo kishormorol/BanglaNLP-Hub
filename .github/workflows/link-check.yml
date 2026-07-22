@@ -55,17 +55,26 @@ jobs:
             exit 0
           fi
 
+          run_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+
           {
             echo "_Automated nightly check. Entries are never removed automatically._"
             echo
-            cat report.md
+            # GitHub caps issue bodies at 65536 chars. Keep well under it and
+            # point at the run for the complete list rather than failing to post.
+            head -c 60000 report.md
+            if [ "$(wc -c < report.md)" -gt 60000 ]; then
+              printf '\n\n_…report truncated. See the [full workflow run](%s) for every dead link._\n' "$run_url"
+            fi
           } > body.md
+
+          # Ensure the label exists so --label never aborts issue creation.
+          gh label create data --color 0e8a16 --description "Data quality issues" 2>/dev/null || true
 
           if [ -n "$existing" ]; then
             # Keep ONE issue and rewrite its body, rather than filing a new one nightly.
             gh issue edit "$existing" --body-file body.md
             echo "Updated issue #$existing"
           else
-            gh issue create --title "$TITLE" --body-file body.md --label "data" || \
-              gh issue create --title "$TITLE" --body-file body.md
+            gh issue create --title "$TITLE" --body-file body.md --label "data"
           fi
