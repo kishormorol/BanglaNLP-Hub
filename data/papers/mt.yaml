@@ -392,12 +392,12 @@
   year: 2020
   link: https://doi.org/10.26808//rs.ca.i10v2.02
   task: mt
-- id: ohidujjaman-etal-2020-automatic-machine-translation-bangla-english
-  title: "Automatic Machine Translation For Bangla And English Resolving Ambiguities"
+- id: ohidujjaman-etal-2021-automatic-machine-translation-bangla-english
+  title: "Automatic Machine Translation for Bangla and English Resolving Ambiguities"
   authors: Ohidujjaman et al.
-  venue: International Journal of Innovative Technology and Exploring Engineering
-  year: 2020
-  link: https://doi.org/10.35940/ijitee.c8103.019320
+  venue: IEEE ICREST
+  year: 2021
+  link: https://ieeexplore.ieee.org/document/9331085
   task: mt
 - id: siddique-etal-2020-english-bangla-machine-translation-recurrent
   title: "English to Bangla Machine Translation Using Recurrent Neural Network"
