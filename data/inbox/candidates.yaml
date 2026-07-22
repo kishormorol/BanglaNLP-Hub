@@ -1717,13 +1717,6 @@
   venue: BRAC University Journal
 - source: openalex
   kind: paper
-  title: "Desire and Divide in La Nuit Bengali and Na Hanyate: A Deconstructive Analysis"
-  link: https://doi.org/10.64296/vijir.v1i1.11
-  year: 2025
-  authors: Jenat et al.
-  venue: Varendra International Journal for Interdisciplinary Research
-- source: openalex
-  kind: paper
   title: Development and Validation of a Memory Assessment Protocol for Bangla-Speaking Children Aged 3-7 Years
   link: https://doi.org/10.66191/pjv2.202502
   year: 2025
@@ -1793,13 +1786,6 @@
   year: 2025
   authors: Mishra et al.
   venue: International Journal For Multidisciplinary Research
-- source: openalex
-  kind: paper
-  title: "Evolving Rituals and Remembered Recipes: A Constructionist Study of Bengali Wedding Menus Across Time"
-  link: https://doi.org/10.21863/avahan/2025.13.1.001
-  year: 2025
-  authors: Dey et al.
-  venue: AVAHAN A Journal on Hospitality and Tourism
 - source: openalex
   kind: paper
   title: "Explainable detection: a transformer-based language modeling approach for Bengali news title classification with comparative explainability analysis using ML and DL"
@@ -2698,13 +2684,6 @@
   venue: The International Journal of Nautical Archaeology
 - source: openalex
   kind: paper
-  title: "The Paradox of International Mother Language Day: A Critical Examination of Bengali Language Devaluation in its Homeland"
-  link: https://doi.org/10.55627/ijss.005.01.1550
-  year: 2025
-  authors: Akter et al.
-  venue: International Journal of Social Studies
-- source: openalex
-  kind: paper
   title: The pattern of knowledge, attitude, and practice of epilepsy in Bengali-speaking literate epilepsy patients in Kolkata
   link: https://doi.org/10.71152/ajms.v16i8.4625
   year: 2025
@@ -2739,13 +2718,6 @@
   authors: Kausar et al.
   venue: QiST Journal of Quran and Tafseer Studies
   suggestedTask: mt
-- source: openalex
-  kind: paper
-  title: The Sexual Life of the Bede Community in Bengali Novels (1949-2014)
-  link: https://doi.org/10.64487/fjaru.v39a17
-  year: 2025
-  authors: Alamgir et al.
-  venue: The Faculty Journal of Arts Rajshahi University
 - source: openalex
   kind: paper
   title: "THE WORD CARAVAN : GLOBAL IMPACTS ON THE BENGALI DIASPORA"
@@ -3352,13 +3324,6 @@
   venue: Nigerian Journal of Basic and Clinical Sciences.
 - source: openalex
   kind: paper
-  title: Comparison Of Psychiatric Comorbidities Among Male And Female Genders In Bengali Population With Obsessive Compulsive Disorder
-  link: https://doi.org/10.36478/makrjms.2024.1.287.290
-  year: 2024
-  authors: Barman et al.
-  venue: Research Journal of Medical Sciences
-- source: openalex
-  kind: paper
   title: "Contemptuous Attitudes towards Bengali Ethnicity, Language and Culture during Ayub Era: Reactions in the Daily Newspapers of Dhaka."
   link: https://doi.org/10.59815/isp.vol4111
   year: 2024
@@ -3816,13 +3781,6 @@
   year: 2024
   authors: Barua et al.
   venue: Indian Journal of Language and Linguistics
-- source: openalex
-  kind: paper
-  title: "Language-Based Nationalism: A Historical Analysis of Bengali Language Movement 1952"
-  link: https://doi.org/10.52131/pjhss.2024.v12i2.2349
-  year: 2024
-  authors: Hassan et al.
-  venue: Pakistan Journal of Humanities and Social Sciences
 - source: openalex
   kind: paper
   title: "Language, Script and Enemies of the State: Bengali Language and Nation-Building in Pakistan, 1947–53"
@@ -7254,12 +7212,6 @@
   venue: ACM Transactions on Asian and Low-Resource Language Information Processing
 - source: openalex
   kind: paper
-  title: Character Segmentation for Handwritten Bangla Words using Image Processing
-  link: https://doi.org/10.15864/ajec.1302
-  year: 2021
-  venue: American Journal of Electronics & Communication
-- source: openalex
-  kind: paper
   title: "Coda cluster simplification of English loans in Chittagonian Bangla: An optimality theoretic account"
   link: https://doi.org/10.22271/allresearch.2021.v7.i10b.9028
   year: 2021
@@ -7293,13 +7245,6 @@
   year: 2021
   authors: Dutta et al.
   venue: Journal of Chittagong Medical College Teachers Association
-- source: openalex
-  kind: paper
-  title: Compound verbs in Japanese and Bengali with a focus on the Compound Maker verb
-  link: https://doi.org/10.55156/jjsem.dec2125
-  year: 2021
-  authors: Singha et al.
-  venue: Journal of Japanese Studies Exploring Multidisciplinarity
 - source: openalex
   kind: paper
   title: "Conflict among Indigenous Communities and Settler Bengali Community of Chittagong Hill Tracts: Is There a Way to Peace?"
@@ -7414,13 +7359,6 @@
   venue: Rocznik Orientalistyczny/Yearbook of Oriental Studies
 - source: openalex
   kind: paper
-  title: "Drug Abuse: Prognostic Role of Sibling Position in Bengali Culture in India: AStudy in Kolkata, India"
-  link: https://doi.org/10.36648/2471-9781.7.3.277
-  year: 2021
-  authors: Ghosh et al.
-  venue: Journal of Hospital & Medical Management
-- source: openalex
-  kind: paper
   title: Early Verb Morphological Development of a Bangla-speaking Child
   link: https://doi.org/10.1080/15475441.2021.1875832
   year: 2021
@@ -7513,13 +7451,6 @@
   year: 2021
   authors: Basu et al.
   venue: Towards Excellence
-- source: openalex
-  kind: paper
-  title: FREQUENCY CHARACTERISTICS OF BENGALI AND TAMIL VOWELS IN VARYING SPEAKING RATE
-  link: https://doi.org/10.36713/epra8112
-  year: 2021
-  authors: Samayan et al.
-  venue: EPRA International Journal of Multidisciplinary Research (IJMR)
 - source: openalex
   kind: paper
   title: "Gender differences in marital violence: A cross-ethnic study among Bengali, Garo, and Santal communities in rural Bangladesh"
@@ -7734,13 +7665,6 @@
   venue: Strategic Analysis
 - source: openalex
   kind: paper
-  title: Nostalgia and the Construction of ‘Home:’ Inter-Generational Memory and Remembrance of the East Bengali Migrants
-  link: https://doi.org/10.36931/jma.2021.4.1.77-94
-  year: 2021
-  authors: Ghosh et al.
-  venue: Journal of Migration Affairs
-- source: openalex
-  kind: paper
   title: "Not Islamic enough?: Bangla, Blasphemy and the law in Pakistan"
   link: https://doi.org/10.1080/10383441.2021.1996884
   year: 2021
@@ -7897,25 +7821,11 @@
   venue: South Asian Popular Culture
 - source: openalex
   kind: paper
-  title: "Reflection of Early 20th Century's Japanese Society and Culture: Perspective of Bengali Women"
-  link: https://doi.org/10.55156/jjsem.dec2126
-  year: 2021
-  authors: Malek et al.
-  venue: Journal of Japanese Studies Exploring Multidisciplinarity
-- source: openalex
-  kind: paper
   title: Report of Three Bengali Cases with Hemoglobin E Variant in Najran
   link: https://doi.org/10.4103/joah.joah_132_20
   year: 2021
   authors: Khalil et al.
   venue: Journal of Applied Hematology
-- source: openalex
-  kind: paper
-  title: Representation of Japanese Women of the Early Twentieth Century in Bangla Travelogues on Japan
-  link: http://14.139.58.200/ojs/index.php/summerhill/article/download/1360/1361
-  year: 2021
-  authors: Banerjee et al.
-  venue: Summerhill
 - source: openalex
   kind: paper
   title: Restricted and Unrestricted Syntactic Distribution of ar in Bangla
@@ -8029,13 +7939,6 @@
   authors: Karim et al.
   venue: Journal of Language Identity & Education
   suggestedTask: llm
-- source: openalex
-  kind: paper
-  title: "The other “Bangla-Town”: Marginality in the center of Rome"
-  link: https://doi.org/10.33182/ml.v18i1.1053
-  year: 2021
-  authors: Piazzoni et al.
-  venue: MIGRATION LETTERS
 - source: openalex
   kind: paper
   title: The psychometric properties of Social Anxiety Scale for Adolescents (SAS-A) short form-Bangla
@@ -8417,14 +8320,6 @@
   year: 2020
   authors: Haque et al.
   venue: Arabian Journal for Science and Engineering
-- source: openalex
-  kind: paper
-  title: Bengali translations, reliability assessment and validations of four happiness scales in a representative population from Kolkata, India
-  link: https://doi.org/10.25215/0804.157
-  year: 2020
-  authors: Pyne et al.
-  venue: International Journal of Indian Psychology
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: Bengali travel writings on Soviet Russia in the Cold War era
@@ -9205,13 +9100,6 @@
   venue: ANQ A Quarterly Journal of Short Articles Notes and Reviews
 - source: openalex
   kind: paper
-  title: An ELF-based Syllabus for Teaching English Pronunciation to Native Bengali Speakers (NBS)
-  link: https://doi.org/10.36832/beltaj.2019.0301.04
-  year: 2019
-  authors: Rahman et al.
-  venue: BELTA Journal
-- source: openalex
-  kind: paper
   title: An Enhanced MSER Pruning Algorithm for Detection and Localization of Bangla Texts from Scene Images
   link: https://doi.org/10.34028/iajit/17/3/11
   year: 2019
@@ -9308,13 +9196,6 @@
   year: 2019
   authors: Saleque et al.
   venue: International Journal of Innovative Technology and Exploring Engineering
-- source: openalex
-  kind: paper
-  title: "Bengali Muslims in Assam and ‘Miyah’ Poetry: Walking on the Shifting Terrains of ‘Na-Asamiya’ and ‘Infiltrator’"
-  link: https://doi.org/10.36931/jma.2019.1.2.69-84
-  year: 2019
-  authors: Yasmeen et al.
-  venue: Journal of Migration Affairs
 - source: openalex
   kind: paper
   title: Bilingual (English to Bengali) Technical E- Dictionary for Aviation OOV Words
@@ -9585,13 +9466,6 @@
   venue: Journal of Multilingual and Multicultural Development
 - source: openalex
   kind: paper
-  title: Linguistic Validation of Medical Epidemiological and Social Aspects of Aging Questionnaire in Bengali Language
-  link: https://doi.org/10.32996/ijllt.2019.2.5.25
-  year: 2019
-  authors: Nipa et al.
-  venue: International Journal of Linguistics Literature & Translation
-- source: openalex
-  kind: paper
   title: M. K. Gandhi, N. K. Bose, and Bengali Village Society
   link: https://doi.org/10.1177/2277436x19877308
   year: 2019
@@ -9816,20 +9690,6 @@
   venue: Film International
 - source: openalex
   kind: paper
-  title: The Conceptual Metaphor LOVE IS A JOURNEY in Bengali Language
-  link: https://doi.org/10.32996/ijllt.2019.2.5.36
-  year: 2019
-  authors: Khan et al.
-  venue: International Journal of Linguistics Literature & Translation
-- source: openalex
-  kind: paper
-  title: The Essence of Womanhood and the Beauty of Bengali Women as Depicted in Tagore’s Fiction
-  link: https://doi.org/10.32996/ijllt.2019.2.5.8
-  year: 2019
-  authors: Farooqui et al.
-  venue: International Journal of Linguistics Literature & Translation
-- source: openalex
-  kind: paper
   title: The Inescapable Association between Nature and Bengali Nationalism in Jibanananda Das’s Ruposhi Bangla
   link: https://doi.org/10.20431/2347-3134.0702002
   year: 2019
@@ -9991,13 +9851,6 @@
   venue: BHĀBANAGARA International Journal of Bengal Studies
 - source: openalex
   kind: paper
-  title: "“Do-re-mi-fa-so-la, it’s not precise”: tracking the ‘demurral’ in the Bengali Lebensmusik of the 90s"
-  link: https://doi.org/10.21659/rupkatha.v10n3.16
-  year: 2018
-  authors: Ropar et al.
-  venue: Rupkatha Journal on Interdisciplinary Studies in Humanities
-- source: openalex
-  kind: paper
   title: "&lt;b&gt;Image schematic analysis of Bangla postpositions"
   link: https://doi.org/10.4025/actascilangcult.v40i2.42308
   year: 2018
@@ -10038,14 +9891,6 @@
   year: 2018
   authors: Islam et al.
   venue: International Journal of Advanced Computer Science and Applications
-- source: openalex
-  kind: paper
-  title: "A Discourse on Bangla Translation of Arabic Texts: Need-Based Studies in Bilingual Issues"
-  link: https://doi.org/10.32996/ijllt.2018.1.4.11
-  year: 2018
-  authors: Akan et al.
-  venue: International Journal of Linguistics Literature & Translation
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: A novel segmentation technique for online handwritten Bangla words
@@ -10179,13 +10024,6 @@
   year: 2018
   authors: Manjapra et al.
   venue: South Asia Journal of South Asian Studies
-- source: openalex
-  kind: paper
-  title: Bengali Longhand Character Recognition using Fourier Transform and Euclidean Distance Metric
-  link: https://doi.org/10.24018/ejers.2018.3.7.831
-  year: 2018
-  authors: Mukti et al.
-  venue: European Journal of Engineering and Technology Research
 - source: openalex
   kind: paper
   title: "Bengali Women’s Writings in the Colonial Period: Critique of Nation, Narration, and Patriarchy"
@@ -10395,33 +10233,11 @@
   venue: South Asia Journal of South Asian Studies
 - source: openalex
   kind: paper
-  title: Indian Sub-Continental Nationalist and Japan`s Role for the Emergence of Bengali Nationalism
-  link: https://doi.org/10.24247/ijhrjun20181
-  year: 2018
-  authors: al. et al.
-  venue: International journal of history and research
-- source: openalex
-  kind: paper
   title: Ishwar Chandra Vidyasagar’s Contribution in the Development of Bengali Language and Literature and Its Relevance in Present Context
   link: https://doi.org/10.51983/arss-2018.7.2.1439
   year: 2018
   authors: Ghosh et al.
   venue: Asian Review of Social Sciences
-- source: openalex
-  kind: paper
-  title: "Library Discovery System in Bengali Script: An Experiment with VuFind"
-  link: https://doi.org/10.37591/joals.v5i2.815
-  year: 2018
-  authors: Barman et al.
-  venue: Journal of Advancements in Library Sciences
-- source: openalex
-  kind: paper
-  title: "Losing the Politics in Translation: : Reading Radical Bengali and Hindi Plays in American Classrooms"
-  link: http://sanglap-journal.in/index.php/sanglap/article/view/168
-  year: 2018
-  authors: Banerji et al.
-  venue: Sanglap Journal of Literary and Cultural Inquiry
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: "Measures of Knee Osteoarthritis: Condition Specific Outcome Measure Scales and their Availability in Bengali Language"
@@ -10502,13 +10318,6 @@
   authors: Islam et al.
   venue: The Journal of the Acoustical Society of America
   suggestedTask: speech
-- source: openalex
-  kind: paper
-  title: Prevalence of Undernutrition and Overweight or Obesity Among the Bengali Muslim Population of West Bengal, India
-  link: https://doi.org/10.17140/antpoj-3-115
-  year: 2018
-  authors: Tigga et al.
-  venue: Anthropology - Open Journal
 - source: openalex
   kind: paper
   title: "Print for the People: Tagore, China, and the Bengali Vernacular"
@@ -10621,13 +10430,6 @@
   year: 2018
   authors: Goswami et al.
   venue: Mass Communicator International Journal of Communication Studies
-- source: openalex
-  kind: paper
-  title: "Subjective construal of happiness among urban educated Bengali youth: A preliminary study using grounded theory approach"
-  link: https://doi.org/10.15614/ijpp.v9i01.11747
-  year: 2018
-  authors: Pramanik et al.
-  venue: Indian Journal of Positive Psychology
 - source: openalex
   kind: paper
   title: Syllable deletion process of Bengali Down Syndrome children
@@ -10841,13 +10643,6 @@
   venue: Social Identities
 - source: openalex
   kind: paper
-  title: A Case Study of Durgāpūjā Festival of the Bengali Hindus
-  link: https://doi.org/10.17140/antpoj-2-108
-  year: 2017
-  authors: Bandyopadhyay et al.
-  venue: Anthropology - Open Journal
-- source: openalex
-  kind: paper
   title: A Hybrid Model for Recognizing Handwritten Bangla Characters using Support Vector Machine
   link: https://doi.org/10.5120/ijca2017915312
   year: 2017
@@ -10980,13 +10775,6 @@
   year: 2017
   authors: Bhattacharya et al.
   venue: ACM Transactions on Asian and Low-Resource Language Information Processing
-- source: openalex
-  kind: paper
-  title: Comparison of Nutritional Status and Socio-demographic Condition among the Children of Bengali, Santhal & Oraon Community in North-Western Part of Bangladesh
-  link: https://doi.org/10.12691/ajphr-5-5-1
-  year: 2017
-  authors: Sabrin et al.
-  venue: American journal of public health research
 - source: openalex
   kind: paper
   title: Creating Shared Value at Dutch-Bangla Bank Limited in Bangladesh
@@ -11212,13 +11000,6 @@
   year: 2017
   authors: Sukarman et al.
   venue: Jurnal Online Mahasiswa Fakultas Ilmu Sosial dan Ilmu Politik Universitas Riau
-- source: openalex
-  kind: paper
-  title: "Problems and Prospects of Electronic Banking in Bangladesh: A Case Study on Dutch-Bangla Bank Limited"
-  link: https://doi.org/10.11648/j.ajomis.20170202.13
-  year: 2017
-  authors: Rahman et al.
-  venue: American Journal of Operations Management and Information Systems
 - source: openalex
   kind: paper
   title: Reading Attitudes of Bachelor of Business Administration (BBA) Students with Bengali Medium Background at the Bangladeshi Private Universities in Dhaka City
@@ -11575,13 +11356,6 @@
   venue: Linguistic Analysis
 - source: openalex
   kind: paper
-  title: "Bengali Cultural Identity and ‘Multi-cultural America’ in Jhumpa Lahiri’s The Namesake (2003): A Cultural Anthropologist Approach"
-  link: https://doi.org/10.0001/(aj).v2i3.523.g590
-  year: 2016
-  authors: Siber et al.
-  venue: Anglisticum Journal
-- source: openalex
-  kind: paper
   title: Bengali Translation and Adaptation of Metacognition Awareness Inventory
   link: https://www.questia.com/library/journal/1G1-462787927/bengali-translation-and-adaptation-of-metacognition
   year: 2016
@@ -11846,13 +11620,6 @@
   venue: Music and Letters
 - source: openalex
   kind: paper
-  title: "Narrative Representations of Protests: Bengali Middle Class Response to Globalization"
-  link: http://socialspectrum.in/index.php/sp/article/download/39/34
-  year: 2016
-  authors: Roychowdhury et al.
-  venue: Social science spectrum
-- source: openalex
-  kind: paper
   title: Negation in Chittagonian Bangla
   link: https://doi.org/10.70438/dujl/781316/0008
   year: 2016
@@ -12107,13 +11874,6 @@
   venue: Mediscope
 - source: openalex
   kind: paper
-  title: "Association of Age at Menarche with BMI: A Population Based Comparative Study on Bengali Women"
-  link: https://doi.org/10.21088/ip.2347.1506.3115.2
-  year: 2015
-  authors: Debnath et al.
-  venue: International Physiology
-- source: openalex
-  kind: paper
   title: "Associations of Community‐Level Sanitation and Child Stunting in Bengali and Tribal Populations in Bangladesh: A Cross‐Sectional Study"
   link: https://doi.org/10.1096/fasebj.29.1_supplement.579.13
   year: 2015
@@ -12170,25 +11930,11 @@
   venue: Journal of Social Sciences and Humanities
 - source: openalex
   kind: paper
-  title: Beyond autonomy exploring euthanasia and abortion in contemporary urban educated Bengalis
-  link: https://doi.org/10.15614/ijpp/2015/v6i1/88473
-  year: 2015
-  authors: Pramanik et al.
-  venue: Indian Journal of Positive Psychology
-- source: openalex
-  kind: paper
   title: "Bilingual First Language Acquisition (BFLA): Evidence for Bangla-English Learning Bilingual Child’s Phonological Development"
   link: https://doi.org/10.70527/ewjh.v5i.35
   year: 2015
   authors: Parveen et al.
   venue: East West journal of humanities.
-- source: openalex
-  kind: paper
-  title: Body physique in Bengali adolescent boys from west Tripura district, Tripura, India
-  link: https://doi.org/10.21746/ijbio.2015.03.003
-  year: 2015
-  authors: Sarkar et al.
-  venue: International Journal of Bioassays
 - source: openalex
   kind: paper
   title: "Changing perceptions of status and role: findings from a study on bengali women in Shillong"
@@ -12317,39 +12063,11 @@
   venue: The Indian Journal of Pediatrics
 - source: openalex
   kind: paper
-  title: "Henrik Ibsen and Indian Bengali Literature: A Stage Production Perspective"
-  link: https://doi.org/10.0001/(aj).v4i1.213
-  year: 2015
-  authors: Hossain et al.
-  venue: Anglisticum Journal
-- source: openalex
-  kind: paper
   title: Identification of predisposing factors and medical conditions associated with the type 2 diabetes mellitus in Bengali males
   link: https://doi.org/10.3329/nimcj.v6i2.23175
   year: 2015
   authors: Begum et al.
   venue: Northern International Medical College Journal
-- source: openalex
-  kind: paper
-  title: Impact of Indian Traditional Recreational Activity on Novel Anthropometric Markers of Diabetes in Bengali Females
-  link: https://doi.org/10.21088/ip.2347.1506.3115.1
-  year: 2015
-  authors: Banerjee et al.
-  venue: International Physiology
-- source: openalex
-  kind: paper
-  title: "Impact of Receiving Training in Football on Obesity and Physical Fitness Status: A Study in Bengali Male Adolescents"
-  link: https://doi.org/10.21088/ip.2347.1506.3115.6
-  year: 2015
-  authors: Bhattacharjee et al.
-  venue: International Physiology
-- source: openalex
-  kind: paper
-  title: "In Search Of Proper Diet For Kids: Concerns Regarding Children’s Food As Reflected In Bengali Periodicals Of The Early Twentieth Century"
-  link: https://doi.org/10.18535/ijsshi/v3i1.02
-  year: 2015
-  authors: Choudhury et al.
-  venue: The International Journal of Social Sciences and Humanities Invention
 - source: openalex
   kind: paper
   title: Introducing Image Steganography in Bangla Language Communication
@@ -12734,20 +12452,6 @@
   venue: Rheumatology International
 - source: openalex
   kind: paper
-  title: Displaying All Bangla Compound Letters &amp; Alphabets By 32- Segment
-  link: https://doi.org/10.9790/0661-162112327
-  year: 2014
-  authors: Nahar et al.
-  venue: IOSR Journal of Computer Engineering
-- source: openalex
-  kind: paper
-  title: Effects of Daily Life Physical Activity on Obesity Indices, Cardiorespiratory Fitness and Association of the Latter Two with Academic Performance in Bengali Adolescents of India
-  link: https://doi.org/10.12691/ajssm-2-1-9
-  year: 2014
-  authors: Mukherjee et al.
-  venue: American journal of sports science and medicine
-- source: openalex
-  kind: paper
   title: "Efficacy of Outside – Classroom English Language Learning: A Study of Intermediate Bengali Medium Students Studying English at Tertiary Level in Bangladesh"
   link: https://doi.org/10.5296/ijele.v2i2.5699
   year: 2014
@@ -12795,20 +12499,6 @@
   year: 2014
   authors: Das et al.
   venue: Pattern Recognition
-- source: openalex
-  kind: paper
-  title: Handwritten Bangla Character Recognition Using Artificial Neural Network
-  link: https://doi.org/10.9790/0661-16333338
-  year: 2014
-  authors: Uddin et al.
-  venue: IOSR Journal of Computer Engineering
-- source: openalex
-  kind: paper
-  title: Handwritten Bangla Character Recognition Using Normalized Cross Correlation
-  link: https://doi.org/10.9790/0661-16335560
-  year: 2014
-  authors: Uddin et al.
-  venue: IOSR Journal of Computer Engineering
 - source: openalex
   kind: paper
   title: Historical Dictionary of the Bengalis
@@ -12902,13 +12592,6 @@
   venue: Dhaka University Journal of Linguistics
 - source: openalex
   kind: paper
-  title: "Phonologial Development in Bangla: A Normative Study."
-  link: https://doi.org/10.12970/2311-1917.2014.02.03.2
-  year: 2014
-  authors: Chowdhury et al.
-  venue: International Journal of Speech & Language Pathology and Audiology
-- source: openalex
-  kind: paper
   title: "Poetic Machine: Computational Creativity for Automatic Poetry Generation in Bengali."
   link: http://computationalcreativity.net/iccc2014/wp-content/uploads/2014/06/11.3_Das.pdf
   year: 2014
@@ -12959,13 +12642,6 @@
   venue: Modern Asian Studies
 - source: openalex
   kind: paper
-  title: Silence of the Bengali Dalits of Barak Valley
-  link: http://www.epw.in/system/files/pdf/2014_49/41/Silence_of_the_Bengali_Dalits_of_Barak_Valley.pdf
-  year: 2014
-  authors: Sutradhar et al.
-  venue: Economic & Political Weekly
-- source: openalex
-  kind: paper
   title: Simple and Accurate Representation of Bangla Numerals by 10-Segment Display Compared to 8- Segment Display
   link: https://doi.org/10.13189/ujeee.2014.020601
   year: 2014
@@ -12999,13 +12675,6 @@
   year: 2014
   authors: Hoque et al.
   venue: Himalayan Journal of Sociology and Anthropology
-- source: openalex
-  kind: paper
-  title: Text Segmentation from Bangla Land Map Images
-  link: https://doi.org/10.1515/ipc-2015-0003
-  year: 2014
-  authors: Biswas et al.
-  venue: Image Processing & Communications
 - source: openalex
   kind: paper
   title: "The “Monisha and the Stone Forest” Children's Book Project: Paleontological Educational Outreach in Bengali Language in India and Bangladesh"
@@ -13318,14 +12987,6 @@
   venue: Journal of Biomedical Science
 - source: openalex
   kind: paper
-  title: Introducing the IPA Symbols for English Consonant Phonemes to Bengali Learners of English and the Ensuing Challenges
-  link: https://doi.org/10.3968/j.hess.1927024020130503.2849
-  year: 2013
-  authors: Golam et al.
-  venue: Higher education of social science
-  suggestedTask: speech
-- source: openalex
-  kind: paper
   title: "Language, literature, education and community: The Bengali Muslim woman in the early twentieth century"
   link: https://doi.org/10.1016/j.wsif.2013.10.013
   year: 2013
@@ -13425,13 +13086,6 @@
   venue: Annals of Nutrition and Metabolism
 - source: openalex
   kind: paper
-  title: Study on LDH and Esterase Activity of Different Tissues in a Fiddler Crab U Ca Triangularis Bengali of Pulicat Lake Tamilnadu
-  link: https://doi.org/10.13005/bbra/1152
-  year: 2013
-  authors: Banumathy et al.
-  venue: Biosciences Biotechnology Research Asia
-- source: openalex
-  kind: paper
   title: The Idea of Freedom in Bengali Nationalist Discourse
   link: https://doi.org/10.1177/0257643013496685
   year: 2013
@@ -13465,13 +13119,6 @@
   year: 2013
   authors: Chaudhuri et al.
   venue: Media Watch
-- source: openalex
-  kind: paper
-  title: "Visualising Men's Caregiving Practices: Instances in Three Contemporary Bengali Films"
-  link: https://doi.org/10.3149/csm.0501.46
-  year: 2013
-  authors: Chowdhury et al.
-  venue: Culture Society and Masculinities
 - source: openalex
   kind: paper
   title: VIVEK BALD. Bengali Harlem and the Lost Histories of South Asian America.
@@ -13571,14 +13218,6 @@
   year: 2012
   authors: Bhattacharya et al.
   venue: Universal Access in the Information Society
-- source: openalex
-  kind: paper
-  title: Bengali Translation of the Quran and the Impact of Print Culture on Muslim Society in the Nineteenth Century
-  link: https://repository.mruni.eu/bitstream/007/10806/1/171-337-1-SM.pdf
-  year: 2012
-  authors: Dey et al.
-  venue: Societal Studies
-  suggestedTask: mt
 - source: openalex
   kind: paper
   title: Chinese and Bengali Proper Noun Recognition Based on String Frequency Statistics Model
@@ -13857,13 +13496,6 @@
   venue: Food Culture & Society
 - source: openalex
   kind: paper
-  title: Two-Handed Sign Language Recognition for Bangla Character Using Normalized Cross Correlation
-  link: http://computerresearch.org/index.php/computer/article/view/446
-  year: 2012
-  authors: Deb et al.
-  venue: Global Journal of Computer Science and Technology
-- source: openalex
-  kind: paper
   title: Variants of the Indian Gender Role Identity Scale (IGRIS) for different age groups in Bengali population
   link: https://research.caluniv.ac.in/publication/variants-of-the-indian-gender-role-identity-scale-igris
   year: 2012
@@ -13957,13 +13589,6 @@
   venue: International Journal of Computer Applications
 - source: openalex
   kind: paper
-  title: Association of Acid Fast Bacilli Positive Cases with ABO Blood Groups and Frequency of Distribution of ABO Blood Groups among North Bengalis In India
-  link: https://doi.org/10.5530/ijmedph.4.2011.13
-  year: 2011
-  authors: Kumar et al.
-  venue: International Journal of Medicine and Public Health
-- source: openalex
-  kind: paper
   title: Bengali Masculinity and the National-Masculine
   link: https://doi.org/10.1177/026272801103100305
   year: 2011
@@ -14052,13 +13677,6 @@
   year: 2011
   authors: Parvez et al.
   venue: Journal of the Pakistan Historical Society
-- source: openalex
-  kind: paper
-  title: Inference of Fine-grained Attributes of Bengali Corpus for Stylometry Detection
-  link: https://doi.org/10.17562/pb-44-12
-  year: 2011
-  authors: Chakraborty et al.
-  venue: Polibits
 - source: openalex
   kind: paper
   title: "Influence of L2 proficiency on kinematic duration of single words: Real and novel word production by Bengali-English speakers"
@@ -14306,13 +13924,6 @@
   year: 2010
   authors: Mukhopadhyay et al.
   venue: Journal of Indian Academy of Forensic Medicine
-- source: openalex
-  kind: paper
-  title: Current Bengali Book Reviews:A Study of Comprehensiveness, Currency and Publishers' Participation
-  link: https://doi.org/10.17821/srels/2010/v47i1/44946
-  year: 2010
-  authors: Paul et al.
-  venue: SRELS Journal of Information Management
 - source: openalex
   kind: paper
   title: "Determination of Sex from Adult Sternum by Discriminant Function Analysis on Autopsy Sample of Indian Bengali Population: A New Approach"
@@ -14679,13 +14290,6 @@
   year: 2008
   authors: Mukharji et al.
   venue: Soccer and Society
-- source: openalex
-  kind: paper
-  title: "'No one looks at me': Bengali speaking Muslim women, cultural diversity and Australian lives"
-  link: https://epress.lib.uts.edu.au/conferences/index.php/4Rs/2008/paper/view/246
-  year: 2008
-  authors: Ghosh et al.
-  venue: 4Rs 2008
 - source: openalex
   kind: paper
   title: A Hundred Years Of Bengali Press
@@ -16762,13 +16366,6 @@
   venue: Artha Vijnana Journal of The Gokhale Institute of Politics and Economics
 - source: openalex
   kind: paper
-  title: Congenital malformations in the Bengali new-born babies
-  link: https://experts.umn.edu/en/publications/congenital-malformations-in-the-bengali-new-born-babies
-  year: 1979
-  authors: Ghosh et al.
-  venue: Collegium Antropologicum
-- source: openalex
-  kind: paper
   title: Digital dermatoglyphics of 107 Bengalis
   link: https://doi.org/10.1002/ajpa.1330500215
   year: 1979
@@ -16781,13 +16378,6 @@
   year: 1979
   authors: Fruzzetti et al.
   venue: American Anthropologist
-- source: openalex
-  kind: paper
-  title: "J.N. Saxena, Self-Determination: From Biafra to Bangla Desh, University of Delhi, N.M. Tripathi, Bombay 1978 II + 151 pp., Rs.25.–."
-  link: https://doi.org/10.1017/s0165070x00017964
-  year: 1979
-  authors: Kuyper et al.
-  venue: Netherlands International Law Review
 - source: openalex
   kind: paper
   title: Kinship in Bengali Culture. RONALD B. INDEN and RALPH W. NICHOLAS
@@ -16830,13 +16420,6 @@
   year: 1978
   authors: O’Connell et al.
   venue: Pacific Affairs
-- source: openalex
-  kind: paper
-  title: "Bengali Literature. By Dusan Zbavitel. Wiesbaden: Otto Harrassowitz (A History of Indian Literature, Vol. IX, Fasc. 3, pp. 119–307), 1976. 189 pp. Index, n.p.l."
-  link: https://doi.org/10.1017/s0021911800094031
-  year: 1978
-  authors: Salomon et al.
-  venue: The Journal of Asian Studies
 - source: openalex
   kind: paper
   title: Factors Influencing ELT Policies in Schools in England with particular reference to children from Pakistan, India and Bangla Desh
@@ -16930,13 +16513,6 @@
   year: 1977
   authors: Gupta et al.
   venue: Medical Entomology and Zoology
-- source: openalex
-  kind: paper
-  title: "An Anthology of Bengali Writing. By Buddhadeva Bose. Bombay: The Macmillan Company of India Ltd., 1971. xii, 168 pp. Glossary. Rs. 22.50"
-  link: https://doi.org/10.1017/s0021911800081092
-  year: 1976
-  authors: Dimock et al.
-  venue: The Journal of Asian Studies
 - source: openalex
   kind: paper
   title: "Bangla Desh Economy: Problems and Prospects. London, Vikas Publications, 1972, VI P. 199 p."

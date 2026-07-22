@@ -33,6 +33,20 @@ const RETRIES = 2;
 const RETRY_DELAY_MS = 3_000;
 const TRANSIENT = new Set(['timeout', 'network error']);
 
+// We identify honestly by default. But before accusing a link of being dead we
+// re-probe with a mainstream browser agent, because publishers and CDNs
+// routinely drop the connection, 404, 405, or 5xx a non-browser agent for a
+// page that opens fine in a browser. See classify().
+const HONEST_UA =
+  'BanglaNLP-Hub-link-check/1.0 (+https://github.com/kishormorol/BanglaNLP-Hub)';
+const BROWSER_UA =
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
+
+// Only these prove a resource is gone. Every other failure — network error,
+// timeout, 401/403/405/429, 5xx, teapots — is treated as "the host refused an
+// automated request", reported for awareness but never failing the run.
+const DEAD_STATUSES = new Set(['404', '410']);
+
 type Link = { url: string; where: string; name: string };
 
 function yamlFiles(dir: string): string[] {
@@ -80,15 +94,7 @@ function changedUrls(ref: string): Set<string> {
   return urls;
 }
 
-/**
- * 401/403/429 mean "a bot was refused", not "the resource is gone". Publishers
- * like MDPI and Cloudflare-fronted hosts do this to any non-browser agent.
- * Reporting them as dead trains maintainers to ignore the nightly issue, so
- * they are surfaced separately and never fail the run.
- */
-const BLOCKED_STATUSES = new Set(['401', '403', '429']);
-
-async function probe(url: string): Promise<{ ok: boolean; status: string }> {
+async function probe(url: string, ua: string): Promise<{ ok: boolean; status: string }> {
   // HEAD first; many hosts (GitHub raw, Kaggle, some publishers) reject it,
   // so fall back to a ranged GET before calling a link dead.
   for (const method of ['HEAD', 'GET'] as const) {
@@ -100,8 +106,7 @@ async function probe(url: string): Promise<{ ok: boolean; status: string }> {
         redirect: 'follow',
         signal: ctrl.signal,
         headers: {
-          // Some sites 403 an unknown agent; identify honestly.
-          'User-Agent': 'BanglaNLP-Hub-link-check/1.0 (+https://github.com/kishormorol/BanglaNLP-Hub)',
+          'User-Agent': ua,
           ...(method === 'GET' ? { Range: 'bytes=0-2048' } : {}),
         },
       });
@@ -120,14 +125,34 @@ async function probe(url: string): Promise<{ ok: boolean; status: string }> {
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-/** Probe with retries, but only for transient (non-HTTP) failures. */
-async function probeWithRetry(url: string): Promise<{ ok: boolean; status: string }> {
-  let result = await probe(url);
+/** Probe with `ua`, retrying only transient (non-HTTP) failures. */
+async function probeWithRetry(url: string, ua: string): Promise<{ ok: boolean; status: string }> {
+  let result = await probe(url, ua);
   for (let attempt = 0; attempt < RETRIES && !result.ok && TRANSIENT.has(result.status); attempt++) {
     await sleep(RETRY_DELAY_MS);
-    result = await probe(url);
+    result = await probe(url, ua);
   }
   return result;
+}
+
+type Verdict = 'reachable' | 'dead' | 'blocked';
+
+/**
+ * The honest agent probes first. If it succeeds, we are done. If it fails we
+ * re-probe with a browser agent and only call the link DEAD when the browser
+ * agent also gets a 404/410 — proof the resource is gone, not just that a bot
+ * was refused. Every other failure is 'blocked': surfaced for awareness but
+ * never failing the run, so the nightly issue stays trustworthy instead of
+ * drowning maintainers in links that open fine in a browser.
+ */
+async function classify(url: string): Promise<{ verdict: Verdict; status: string }> {
+  const honest = await probeWithRetry(url, HONEST_UA);
+  if (honest.ok) return { verdict: 'reachable', status: honest.status };
+
+  const browser = await probeWithRetry(url, BROWSER_UA);
+  if (browser.ok) return { verdict: 'blocked', status: `${honest.status} (bot-only)` };
+  if (DEAD_STATUSES.has(browser.status)) return { verdict: 'dead', status: browser.status };
+  return { verdict: 'blocked', status: browser.status };
 }
 
 const all = collect();
@@ -153,16 +178,16 @@ async function worker(queue: string[]) {
   for (;;) {
     const url = queue.shift();
     if (!url) return;
-    const { ok, status } = await probeWithRetry(url);
+    const { verdict, status } = await classify(url);
     done++;
-    if (ok) continue;
+    if (verdict === 'reachable') continue;
     const finding = { url, status, entries: links.filter((l) => l.url === url) };
-    if (BLOCKED_STATUSES.has(status)) {
-      blocked.push(finding);
-      console.log(`  ⚠ ${status.padEnd(14)} ${url} (bot-blocked, not treated as dead)`);
-    } else {
+    if (verdict === 'dead') {
       failures.push(finding);
-      console.log(`  ✗ ${status.padEnd(14)} ${url}`);
+      console.log(`  ✗ ${status.padEnd(18)} ${url}`);
+    } else {
+      blocked.push(finding);
+      console.log(`  ⚠ ${status.padEnd(18)} ${url} (refused an automated request, not treated as dead)`);
     }
   }
 }
@@ -172,7 +197,7 @@ await Promise.all(Array.from({ length: Math.min(CONCURRENCY, queue.length) }, ()
 
 console.log(
   `\n${done - failures.length - blocked.length}/${done} reachable` +
-    (blocked.length ? `, ${blocked.length} bot-blocked` : '') +
+    (blocked.length ? `, ${blocked.length} refused an automated request` : '') +
     (failures.length ? `, ${failures.length} dead.` : '.'),
 );
 
@@ -181,10 +206,11 @@ if (reportPath) {
     ? [
         '',
         '<details><summary>' +
-          `${blocked.length} link(s) refused an automated request (401/403/429)</summary>`,
+          `${blocked.length} link(s) refused an automated request</summary>`,
         '',
-        'These are almost certainly reachable in a browser — publishers and CDNs block',
-        'non-browser agents. Listed for awareness only; no action is usually needed.',
+        'A browser agent reached these, or they failed with a non-404/410 status —',
+        'publishers and CDNs routinely block non-browser agents. Listed for awareness',
+        'only; no action is usually needed.',
         '',
         '| Status | Entry | URL |',
         '| --- | --- | --- |',

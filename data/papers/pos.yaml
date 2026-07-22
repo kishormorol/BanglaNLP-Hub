@@ -311,7 +311,7 @@
   authors: Ekbal et al.
   venue: Polibits
   year: 2008
-  link: https://doi.org/10.17562/pb-37-3
+  link: https://www.scielo.org.mx/scielo.php?pid=S1870-90442008000100004&script=sci_abstract
   task: pos
 - id: sarker-etal-2007-bengali-parser-bottom-up
   title: "Bottom-up context-sensitive algorithms for Bengali parser in natural language processing"

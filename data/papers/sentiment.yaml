@@ -852,7 +852,7 @@
   authors: Das et al.
   venue: Polibits
   year: 2012
-  link: https://doi.org/10.17562/pb-45-6
+  link: https://www.scielo.org.mx/pdf/poli/n45/n45a7.pdf
   task: sentiment
 - id: bodini-2022-opinion-mining-machine-translated-bangla
   title: "Opinion mining from machine translated Bangla reviews with stacked contractive auto-encoders"
