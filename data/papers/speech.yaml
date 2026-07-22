@@ -683,7 +683,7 @@
   authors: Mandal et al.
   venue: SSW
   year: 2007
-  link: http://www.isca-speech.org/archive_open/archive_papers/ssw6/ssw6_351.pdf
+  link: https://www.isca-archive.org/ssw_2007/dasmandal07_ssw.html
   task: speech
 - id: mandal-etal-2006-word-boundary-detection-suprasegmental-features
   title: "Word boundary detection based on suprasegmental features: A case study on Bangla speech"

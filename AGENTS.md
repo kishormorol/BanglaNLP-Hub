@@ -84,8 +84,11 @@ npm run check-links  probe every link: URL in /data
 deployment. It fails on malformed fields, bad URLs, `verified` dates older than 12
 months, duplicate ids, and leaderboards referencing an unknown dataset id.
 
-`check-links` treats 401/403/429 as bot-blocked rather than dead — publishers like
-MDPI refuse non-browser agents.
+`check-links` identifies with an honest agent first, but before calling a link dead
+it re-probes with a browser agent and only reports it as dead when the browser agent
+also gets 404/410. Any other failure — network error, timeout, 401/403/405/429, 5xx —
+is reported as "refused an automated request", never as dead: publishers like MDPI and
+many DOI hosts drop or error non-browser agents for pages that open fine in a browser.
 
 ## Verifying changes
 
