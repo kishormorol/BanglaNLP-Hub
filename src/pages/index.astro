@@ -104,6 +104,14 @@ const contributors = [
     notable: 'Automated Bengali Physics MCQ Solver (IEEE QPAIN 2026)',
     link: 'https://ieeexplore.ieee.org/author/37088761086',
   },
+  {
+    name: 'Sanjid Hasan',
+    handle: 'Sanjidh090',
+    match: 'Sanjidh090',
+    blurb: 'Released the Lipi-Ghor long-form, multi-speaker Bengali speech corpus (ASR + diarization).',
+    notable: 'Lipi-Ghor (bn-882-SSTT)',
+    link: 'https://huggingface.co/Sanjidh090',
+  },
 ].map((c) => ({
   ...c,
   entries: allEntries.filter((e) => String(e.link ?? '').includes(c.match)).length,

@@ -31,3 +31,14 @@
   link: https://bengaliai.github.io/asr
   verified: 2026-07-19
   desc: Large-scale out-of-distribution Bangla ASR benchmark.
+- id: lipighor
+  name: Lipi-Ghor (bn-882-SSTT)
+  task: speech
+  size: 882 hrs
+  sizeN: 882
+  license: CC BY 4.0
+  year: 2026
+  source: Lipi-Ghor-882 (DL Sprint 4.0, Team Villagers)
+  link: https://huggingface.co/datasets/Sanjidh090/Lipi-Ghor-bn-882-SSTT
+  verified: 2026-07-22
+  desc: Long-form multi-speaker Bangla ASR and speaker-diarization corpus with aligned transcriptions and timestamps. Gated access.
