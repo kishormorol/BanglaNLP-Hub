@@ -26,6 +26,7 @@ const links = [
   style="position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--border);backdrop-filter:blur(8px)"
 >
   <div
+    class="navbar"
     style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:20px;height:60px"
   >
     <a
@@ -38,6 +39,7 @@ const links = [
       >
     </a>
     <nav
+      class="navrow"
       style="display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;min-width:0"
       aria-label="Primary"
     >
@@ -75,6 +77,27 @@ const links = [
   #theme-toggle:hover {
     color: var(--green);
     border-color: var(--green);
+  }
+
+  /* Mobile: the single 60px row can't fit the logo, search, toggle AND six
+     links, so the links get clipped into a horizontal scroll. Instead let the
+     header wrap and drop the nav onto its own full-width second row where all
+     six links wrap into view. (!important overrides the inline base styles.) */
+  @media (max-width: 640px) {
+    .navbar {
+      flex-wrap: wrap !important;
+      height: auto !important;
+      padding: 10px 16px !important;
+      row-gap: 10px !important;
+      column-gap: 12px !important;
+    }
+    .navrow {
+      order: 3;
+      flex-basis: 100% !important;
+      overflow-x: visible !important;
+      flex-wrap: wrap !important;
+      gap: 4px 2px !important;
+    }
   }
 </style>
 
