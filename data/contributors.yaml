@@ -1,0 +1,20 @@
+# People who submitted resources now in the catalog. `authors` is each paper's
+# full author list, taken verbatim from the authoritative source (arXiv / Crossref).
+- github: SambasBoyyyy
+  name: Samiul Basir
+  entries:
+    - title: "Bangla-WhisperDiar: Fine-Tuning Whisper and PyAnnote for Bangla Long-Form Speech Recognition and Speaker Diarization"
+      task: speech
+      authors: "Mohammed Aman Bhuiyan, Md Sazzad Hossain Adib, Samiul Basir Bhuiyan, Amit Chakraborty, Aritra Islam Saswato, Ahmed Faizul Haque Dhrubo, Mohammad Ashrafuzzaman Khan"
+      issue: 47
+- github: SM-Shaan
+  name: Sha Newaz Mahmud
+  entries:
+    - title: "Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer-Based Models with Explainability"
+      task: sentiment
+      authors: "Mujtahid Alam, Shuhena Salam Aonty, Sha Newaz Mahmud, Nahid Riaz Swachha, Ahmed Talal Wazih"
+      issue: 48
+    - title: "Bengali Human Sentiment Detection and Classification using Attention based Bidirectional LSTM"
+      task: sentiment
+      authors: "Sha Newaz Mahmud, Nahid Riaz Swachha, Ahmed Talal Wazih, Shuvodwip Saha, Shougata Paul, Shuhena Salam Aonty"
+      issue: 49

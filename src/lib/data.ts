@@ -16,6 +16,7 @@ import {
   ToolSchema,
   LeaderboardSchema,
   VenuesSchema,
+  ContributorSchema,
   type Task,
   type Dataset,
   type Paper,
@@ -23,6 +24,7 @@ import {
   type Tool,
   type Leaderboard,
   type VenueToneName,
+  type Contributor,
 } from './schemas.ts';
 
 const dataDir = resolve(process.cwd(), 'data');
@@ -53,6 +55,9 @@ export const datasets: Dataset[] = loadTaskDir('datasets', DatasetSchema);
 export const papers: Paper[] = loadTaskDir('papers', PaperSchema);
 export const models: Model[] = loadTaskDir('models', ModelSchema);
 export const tools: Tool[] = loadList('tools.yaml', ToolSchema);
+export const contributors: Contributor[] = existsSync(resolve(dataDir, 'contributors.yaml'))
+  ? loadList('contributors.yaml', ContributorSchema)
+  : [];
 export const venues: Record<string, VenueToneName> = VenuesSchema.parse(
   readYaml(resolve(dataDir, 'venues.yaml')),
 );

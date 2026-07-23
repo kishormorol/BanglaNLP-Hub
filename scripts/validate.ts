@@ -26,6 +26,7 @@ import {
   LeaderboardSchema,
   VenuesSchema,
   RecentSchema,
+  ContributorSchema,
   VERIFY_MAX_AGE_MONTHS,
 } from '../src/lib/schemas.ts';
 
@@ -173,6 +174,28 @@ for (const path of listDir('leaderboards')) {
 // ---- recent ----------------------------------------------------------------
 const recentPath = resolve(dataDir, 'recent.yaml');
 if (existsSync(recentPath)) loadList(recentPath, RecentSchema);
+
+// ---- contributors ----------------------------------------------------------
+// A credit is only allowed for a paper that is actually in the catalog: title
+// and task must both match an existing entry. No crediting a resource we do not
+// carry.
+const contributorsPath = resolve(dataDir, 'contributors.yaml');
+if (existsSync(contributorsPath)) {
+  const paperByTitle = new Map(papers.items.map((p) => [p.title, p]));
+  for (const c of loadList(contributorsPath, ContributorSchema)) {
+    for (const e of c.entries) {
+      const p = paperByTitle.get(e.title);
+      if (!p) {
+        fail('data/contributors.yaml', `[${c.github}] no catalog paper titled "${e.title}"`);
+      } else if (p.task !== e.task) {
+        fail(
+          'data/contributors.yaml',
+          `[${c.github}] "${e.title}" is task '${p.task}', not '${e.task}'`,
+        );
+      }
+    }
+  }
+}
 
 // ---- report ----------------------------------------------------------------
 if (errors.length) {
