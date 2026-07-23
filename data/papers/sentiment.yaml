@@ -861,3 +861,17 @@
   year: 2022
   link: https://doi.org/10.1007/s12652-022-03760-w
   task: sentiment
+- id: alam-etal-2026-bengali-emotion-classification-social-media-explainability
+  title: "Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer-Based Models with Explainability"
+  authors: Alam et al.
+  venue: Journal of Engineering Research and Sciences
+  year: 2026
+  link: https://doi.org/10.55708/js0506004
+  task: sentiment
+- id: mahmud-etal-2025-bengali-human-sentiment-attention-bidirectional-lstm
+  title: "Bengali Human Sentiment Detection and Classification using Attention based Bidirectional LSTM"
+  authors: Mahmud et al.
+  venue: IEEE NCIM
+  year: 2025
+  link: https://doi.org/10.1109/NCIM65934.2025.11160248
+  task: sentiment
