@@ -9,8 +9,8 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 [![License: MIT](https://img.shields.io/badge/license-MIT-black)](#license)
 
 [![Tasks](https://img.shields.io/badge/tasks-12-64748b)](./data/tasks.yaml)
-[![Datasets](https://img.shields.io/badge/datasets-45-7c3aed)](./data/datasets)
-[![Papers](https://img.shields.io/badge/papers-696-2563eb)](./data/papers)
+[![Datasets](https://img.shields.io/badge/datasets-46-7c3aed)](./data/datasets)
+[![Papers](https://img.shields.io/badge/papers-695-2563eb)](./data/papers)
 [![Models](https://img.shields.io/badge/models-22-0891b2)](./data/models)
 [![Tools](https://img.shields.io/badge/tools-9-db2777)](./data/tools.yaml)
 
@@ -18,19 +18,19 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 
 > Keywords: Bangla NLP · Bengali NLP · Bangla datasets · Bengali datasets · Bangla language models · Bengali benchmarks · low-resource / Indic NLP resources.
 
-Static site built with Astro and TypeScript. No client-side framework: the only JavaScript shipped is a handful of small vanilla islands (catalog search, theme toggle, task tabs, table sorting, BibTeX copy).
+Static site built with Astro and TypeScript. No client-side framework: the only JavaScript shipped is a handful of small vanilla islands (catalog search, theme toggle, mobile nav menu, task tabs, table sorting, BibTeX copy).
 
 ## Catalog
 
 Everything the site renders comes from YAML under [`/data`](./data). Nothing is hardcoded in the pages.
 
-The catalog currently holds **696 papers**, **45 datasets**, **22 models**, and **9 tools** across **12 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles (see [`TODO-data.md`](./TODO-data.md)).
+The catalog currently holds **695 papers**, **46 datasets**, **22 models**, and **9 tools** across **12 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles (see [`TODO-data.md`](./TODO-data.md)).
 
 | | Count |
 | --- | --- |
 | Tasks | 12 |
-| Datasets | 45 |
-| Papers | 696 |
+| Datasets | 46 |
+| Papers | 695 |
 | Models | 22 |
 | Tools | 9 |
 
@@ -50,11 +50,11 @@ data/
 The catalog is only useful if its contents are true, so the project holds a hard line:
 
 - **No invented values.** Scores, citation counts, and BibTeX entries are never synthesised. A missing field is omitted and the UI hides the affected element.
-- **Leaderboards ship empty.** Every benchmark carries a real dataset and metric but zero score rows, because no scores have been curated from their source papers yet. Each renders a "No leaderboard curated yet" empty state rather than a plausible-looking number.
+- **Leaderboards stay empty until sourced.** Each benchmark carries a real dataset and metric, and a score row appears only with a citation to the paper it came from. Just one benchmark (B-REASO, from Hosain & Morol 2025) is populated so far; the rest render a "No leaderboard curated yet" empty state rather than a plausible-looking number.
 - **Links are checked.** Every `link:` URL is verified nightly. Dead links are reported in a single tracking issue; entries are never removed automatically.
 - **Entries get verified by hand.** Papers have been audited against the ACL Anthology, arXiv, and OpenAlex (title, authors, and abstract), and their task assignments are being spot-checked and corrected. Several entries inherited from the original design prototype turned out to be fabricated — a duplicate under an invented title, a model that does not exist, a paper with no publication — and were removed.
 
-Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 39 datasets lack BibTeX and all 10 leaderboards await rows.
+Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 40 datasets lack BibTeX and ten of the eleven leaderboards await rows.
 
 **Dataset fields are verified at the source.** `license`, `size`, and `year` have each had an audit pass (July 2026), and the datasets added by mining resource papers had their `license` and `size` read from the dataset's own repository or card — never the paper's license icon, which describes the paper, not the data. Corrections and the entries still unconfirmed (because no reachable source states a figure) are listed in `TODO-data.md`, along with ~55 candidate datasets held back for unverifiable licenses or being out of the text-NLP scope. One field is recorded as *known wrong* with no known replacement — deliberately. A wrong value we can point at is more useful than a plausible one we invented.
 
@@ -89,9 +89,9 @@ Contributions are genuinely welcome, and you do not need to know Astro or TypeSc
 
 These are concrete, self-contained, and each one is genuinely useful on its own — full detail in [`TODO-data.md`](./TODO-data.md):
 
-- **Reviewing paper tasks.** Most of the 696 papers were bulk-imported (ACL Anthology, arXiv, and hand-verified OpenAlex journal articles); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
-- **Leaderboard rows.** All 10 benchmarks ship empty. Each needs scores with a citation to the paper they came from. Even one populated benchmark is a real improvement.
-- **BibTeX.** 39 datasets have no citation entry. Copy the published one from the ACL Anthology or the publisher page — please do not hand-write one.
+- **Reviewing paper tasks.** Most of the 695 papers were bulk-imported (ACL Anthology, arXiv, and hand-verified OpenAlex journal articles); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
+- **Leaderboard rows.** Ten of the eleven benchmarks ship empty. Each needs scores with a citation to the paper they came from. Even one more populated benchmark is a real improvement.
+- **BibTeX.** 40 datasets have no citation entry. Copy the published one from the ACL Anthology or the publisher page — please do not hand-write one.
 - **Unverified dataset sizes.** About a dozen datasets are hosted where no count is published (Kaggle, openslr.org, nltr.org). If you know the paper, you can settle these.
 - **One known-wrong value.** The `bhs` entry claims 30,000 documents and no source supports it. If you have the paper, this is a five-minute fix.
 - **Missing resources.** New papers, datasets, models, and tools — especially anything published recently, and anything from researchers outside the usual venues.
