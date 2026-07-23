@@ -1,0 +1,22 @@
+- id: subesco
+  name: SUBESCO (SUST Bangla Emotional Speech Corpus)
+  task: ser
+  size: 7,000 utterances / 7.7 hrs
+  sizeN: 7000
+  license: CC BY 4.0
+  year: 2021
+  source: Sultana et al. (SUST) / Zenodo
+  link: https://doi.org/10.5281/zenodo.4526477
+  verified: 2026-07-22
+  desc: Audio-only Bangla emotional speech; 20 actors (gender-balanced), 7 emotions.
+- id: banspemo
+  name: BANSpEmo
+  task: ser
+  size: 792 utterances
+  sizeN: 792
+  license: CC BY 4.0
+  year: 2023
+  source: Sultana et al. / Mendeley Data
+  link: https://data.mendeley.com/datasets/rdwn4bs5ky/2
+  verified: 2026-07-22
+  desc: Bangla emotional speech; 22 speakers (11M/11F), 6 emotions.

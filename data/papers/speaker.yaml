@@ -1,0 +1,28 @@
+- id: arxiv-2602-23070
+  title: "Make It Hard to Hear, Easy to Learn: Long-Form Bengali ASR and Speaker Diarization via Extreme Augmentation and Perfect Alignment"
+  authors: Hasan et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2602.23070
+  task: speaker
+- id: arxiv-2602-21741
+  title: "Robust Long-Form Bangla Speech Processing: Automatic Speech Recognition and Speaker Diarization"
+  authors: Chowdhury et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2602.21741
+  task: speaker
+- id: arxiv-2603-19256
+  title: "ShobdoSetu: A Data-Centric Framework for Bengali Long-Form Speech Recognition and Speaker Diarization"
+  authors: Sakib et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2603.19256
+  task: speaker
+- id: mahadi-etal-2019-vq-gmm-text-independent-speaker-identification-bengali
+  title: Comparison of VQ and GMM for Text Independent Speaker Identification System for The Bengali Language
+  authors: Mahadi et al.
+  venue: International Journal of Computer Applications
+  year: 2019
+  link: https://doi.org/10.5120/ijca2019919354
+  task: speaker

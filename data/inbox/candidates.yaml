@@ -434,22 +434,6 @@
   venue: Contemporary Voice of Dalit
 - source: openalex
   kind: paper
-  title: "Emotion recognition from Bangla dialect speech using privacy-aware deep learning models: a comparative analysis"
-  link: https://doi.org/10.1007/s10772-026-10261-0
-  year: 2026
-  authors: Abrar et al.
-  venue: International Journal of Speech Technology
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
-  title: "Emotionally Aware Bangla Speech Systems: Real-Time SER with Adaptive Learning and LLM Integration"
-  link: https://doi.org/10.1007/s42979-026-04744-9
-  year: 2026
-  authors: Hossain et al.
-  venue: SN Computer Science
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "English words in Bangla speeches and conversations: An analysis of their influence on Banglain Bangladesh"
   link: https://doi.org/10.3329/iiucs.v21i1.85081
   year: 2026
@@ -1391,14 +1375,6 @@
   suggestedTask: mt
 - source: openalex
   kind: paper
-  title: Bangla Speech Emotion Recognition Using Deep Learning-Based Ensemble Learning and Feature Fusion
-  link: https://doi.org/10.3390/jimaging11080273
-  year: 2025
-  authors: Shakil et al.
-  venue: Journal of Imaging
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "Bangla Version of the Transitional Impact Scale: Assessing Psychometric Properties Among Bangladeshi University Students"
   link: https://doi.org/10.1177/01632787251386039
   year: 2025
@@ -1419,14 +1395,6 @@
   year: 2025
   authors: Sweet et al.
   venue: Digital Applied Linguistics
-- source: openalex
-  kind: paper
-  title: "BanSpEmo: a Bangla audio dataset for speech emotion recognition and its baseline evaluation"
-  link: https://doi.org/10.11591/ijeecs.v37.i3.pp2044-2057
-  year: 2025
-  authors: Sultana et al.
-  venue: Indonesian Journal of Electrical Engineering and Computer Science
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "BdSLW60: A word-level bangla sign language dataset"
@@ -3509,14 +3477,6 @@
   venue: International Journal of Bioinformatics and Intelligent Computing
 - source: openalex
   kind: paper
-  title: Emotion Recognition with Intensity Level from Bangla Speech using Feature Transformation and Cascaded Deep Learning Model
-  link: https://doi.org/10.14569/ijacsa.2024.0150460
-  year: 2024
-  authors: Billah et al.
-  venue: International Journal of Advanced Computer Science and Applications
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: "Emotional expressivity in the Bangladeshis: Psychometric properties of the Bangla Berkeley expressivity questionnaire"
   link: https://doi.org/10.59429/esp.v9i10.3105
   year: 2024
@@ -4598,14 +4558,6 @@
   venue: Labor History
 - source: openalex
   kind: paper
-  title: A Machine Learning Approach for Emotion Classification in Bengali Speech
-  link: https://doi.org/10.14569/ijacsa.2023.0141093
-  year: 2023
-  authors: Islam et al.
-  venue: International Journal of Advanced Computer Science and Applications
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: A multifaceted evaluation of representation of graphemes for practically effective Bangla OCR
   link: https://doi.org/10.1007/s10032-023-00446-7
   year: 2023
@@ -4660,14 +4612,6 @@
   year: 2023
   authors: Mredula et al.
   venue: International Journal of Communication Systems
-- source: openalex
-  kind: paper
-  title: Acoustic feature analysis and optimization for Bangla speech emotion recognition
-  link: https://doi.org/10.1250/ast.44.157
-  year: 2023
-  authors: Sultana et al.
-  venue: Nippon Onkyo Gakkaishi/Acoustical science and technology/Nihon Onkyo Gakkaishi
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: Adaptation of Morningness-Eveningness Questionnaire (MEQ) in Bengali Language
@@ -6030,14 +5974,6 @@
   venue: Sensors
 - source: openalex
   kind: paper
-  title: Bangla Speech Emotion Detection using Machine Learning Ensemble Methods
-  link: https://doi.org/10.25046/aj070608
-  year: 2022
-  authors: Ayon et al.
-  venue: Advances in Science Technology and Engineering Systems Journal
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Bangla text generation system by incorporating attention in sequence-to-sequence model
   link: https://doi.org/10.30574/wjarr.2022.14.1.0292
   year: 2022
@@ -7027,14 +6963,6 @@
   venue: Global Journal of Medical Research
 - source: openalex
   kind: paper
-  title: A System to Predict Emotion from Bengali Speech
-  link: https://doi.org/10.5815/ijmsc.2021.01.04
-  year: 2021
-  authors: Dhar et al.
-  venue: International Journal of Mathematical Sciences and Computing
-  suggestedTask: sentiment
-- source: openalex
-  kind: paper
   title: Adaptation and Validation of the Bangla Version of Children's Yale- Brown Obsessive Compulsive Scale
   link: https://doi.org/10.36347/sasjm.2021.v07i12.012
   year: 2021
@@ -7146,14 +7074,6 @@
   year: 2021
   authors: Nihal et al.
   venue: Pattern Recognition Letters
-- source: openalex
-  kind: paper
-  title: Bangla Speech Emotion Recognition and Cross-Lingual Study Using Deep CNN and BLSTM Networks
-  link: https://doi.org/10.1109/access.2021.3136251
-  year: 2021
-  authors: Sultana et al.
-  venue: IEEE Access
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "Bangla version of the composite scale of morningness: factor invariance and validity with sleep habits, mood and mental health"
@@ -7868,14 +7788,6 @@
   year: 2021
   authors: Ahamed et al.
   venue: Bulletin of Electrical Engineering and Informatics
-- source: openalex
-  kind: paper
-  title: "SUST Bangla Emotional Speech Corpus (SUBESCO): An audio-only emotional speech corpus for Bangla"
-  link: https://doi.org/10.1371/journal.pone.0250173
-  year: 2021
-  authors: Sultana et al.
-  venue: PLoS ONE
-  suggestedTask: sentiment
 - source: openalex
   kind: paper
   title: "Syntax of Standard English and Bangla: A Bilingual Study of Simple Declarative Sentences"
@@ -9231,13 +9143,6 @@
   year: 2019
   venue: Translation Today
   suggestedTask: mt
-- source: openalex
-  kind: paper
-  title: Comparison of VQ and GMM for Text Independent Speaker Identification System for The Bengali Language
-  link: https://doi.org/10.5120/ijca2019919354
-  year: 2019
-  authors: Mahadi et al.
-  venue: International Journal of Computer Applications
 - source: openalex
   kind: paper
   title: Convolutional neural networks performance comparison for handwritten Bengali numerals recognition

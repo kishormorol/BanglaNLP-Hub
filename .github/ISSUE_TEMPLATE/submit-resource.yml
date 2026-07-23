@@ -38,6 +38,8 @@ body:
         - summ — Summarization
         - hate — Hate Speech Detection
         - speech — ASR / TTS
+        - ser — Speech Emotion Recognition
+        - speaker — Speaker ID / Diarization
         - textcls — Text Classification
         - pos — POS Tagging
         - llm — LLM Benchmarks

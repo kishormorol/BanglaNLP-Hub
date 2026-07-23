@@ -177,6 +177,15 @@ function classify(title: string): string | undefined {
   if (/figures? of speech/.test(t)) return 'sentiment';
   if (/genre classification|content classification/.test(t)) return 'textcls';
 
+  // Emotion *from the acoustic signal* is SER, not text sentiment — but the
+  // 'emotion' keyword hits the sentiment rule first, so guard it here. Kept
+  // tight: bare "emotion" still routes text papers to sentiment, and expressive
+  // "emotion classification for text-to-speech" stays under speech.
+  if (/speech emotion|emotional speech|emotion.*\b(from|in)\b.*(speech|audio|voice)|acoustic.*emotion/.test(t)) return 'ser';
+  //   Speaker identification / verification / diarization is its own task.
+  //   "speaker adaptation" (an ASR technique) deliberately does not match.
+  if (/speaker (identif|recogni|verif|diariz)|diariz/.test(t)) return 'speaker';
+
   // Shared tasks, by their published subject.
   if (/blp-2023\s*task\s*1/.test(t)) return 'hate';       // Violence Inciting Text Detection
   if (/blp-2023\s*task\s*2/.test(t)) return 'sentiment';  // Sentiment Analysis
