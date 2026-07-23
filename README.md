@@ -85,6 +85,8 @@ Contributions are genuinely welcome, and you do not need to know Astro or TypeSc
 
 **If you would rather open a PR directly**, [`CONTRIBUTING.md`](./CONTRIBUTING.md) has the field format for each entry type and a worked example. Edit or add one YAML file and open the PR; CI runs `npm run validate` and must pass before merge.
 
+Everyone who has contributed a resource is credited in [`CONTRIBUTORS.md`](./CONTRIBUTORS.md).
+
 ### Where help is most needed
 
 These are concrete, self-contained, and each one is genuinely useful on its own — full detail in [`TODO-data.md`](./TODO-data.md):
