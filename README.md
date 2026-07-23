@@ -10,7 +10,7 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 
 [![Tasks](https://img.shields.io/badge/tasks-12-64748b)](./data/tasks.yaml)
 [![Datasets](https://img.shields.io/badge/datasets-46-7c3aed)](./data/datasets)
-[![Papers](https://img.shields.io/badge/papers-695-2563eb)](./data/papers)
+[![Papers](https://img.shields.io/badge/papers-698-2563eb)](./data/papers)
 [![Models](https://img.shields.io/badge/models-22-0891b2)](./data/models)
 [![Tools](https://img.shields.io/badge/tools-9-db2777)](./data/tools.yaml)
 
@@ -24,13 +24,13 @@ Static site built with Astro and TypeScript. No client-side framework: the only 
 
 Everything the site renders comes from YAML under [`/data`](./data). Nothing is hardcoded in the pages.
 
-The catalog currently holds **695 papers**, **46 datasets**, **22 models**, and **9 tools** across **12 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles (see [`TODO-data.md`](./TODO-data.md)).
+The catalog currently holds **698 papers**, **46 datasets**, **22 models**, and **9 tools** across **12 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles (see [`TODO-data.md`](./TODO-data.md)).
 
 | | Count |
 | --- | --- |
 | Tasks | 12 |
 | Datasets | 46 |
-| Papers | 695 |
+| Papers | 698 |
 | Models | 22 |
 | Tools | 9 |
 
@@ -91,7 +91,7 @@ Everyone who has contributed a resource is credited in [`CONTRIBUTORS.md`](./CON
 
 These are concrete, self-contained, and each one is genuinely useful on its own — full detail in [`TODO-data.md`](./TODO-data.md):
 
-- **Reviewing paper tasks.** Most of the 695 papers were bulk-imported (ACL Anthology, arXiv, and hand-verified OpenAlex journal articles); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
+- **Reviewing paper tasks.** Most of the 698 papers were bulk-imported (ACL Anthology, arXiv, and hand-verified OpenAlex journal articles); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
 - **Leaderboard rows.** Ten of the eleven benchmarks ship empty. Each needs scores with a citation to the paper they came from. Even one more populated benchmark is a real improvement.
 - **BibTeX.** 40 datasets have no citation entry. Copy the published one from the ACL Anthology or the publisher page — please do not hand-write one.
 - **Unverified dataset sizes.** About a dozen datasets are hosted where no count is published (Kaggle, openslr.org, nltr.org). If you know the paper, you can settle these.
