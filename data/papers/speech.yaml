@@ -678,3 +678,10 @@
   year: 2025
   link: https://doi.org/10.1016/j.asoc.2025.112899
   task: speech
+- id: arxiv-2605-08214
+  title: "Bangla-WhisperDiar: Fine-Tuning Whisper and PyAnnote for Bangla Long-Form Speech Recognition and Speaker Diarization"
+  authors: Bhuiyan et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2605.08214
+  task: speech
