@@ -314,7 +314,11 @@ const contributors = [
   /* --- hero --- */
   .hero {
     position: relative;
-    z-index: 1;
+    /* Above .stats and .body (both z-index:1): the hero holds the search
+       dropdown, which overlays downward on focus. At equal z-index the
+       later-in-DOM stats/body would paint over it (the panel's own z-index
+       is trapped inside this stacking context), so the hero must outrank them. */
+    z-index: 3;
     padding: 76px 0 40px;
     text-align: center;
   }
