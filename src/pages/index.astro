@@ -116,6 +116,31 @@ const contributors = [
   ...c,
   entries: allEntries.filter((e) => String(e.link ?? '').includes(c.match)).length,
 }));
+
+/**
+ * People who contribute to the site and tooling itself — separate from the
+ * catalog-credited panel above, which only credits released resources that
+ * appear in /data. This list is code/maintenance contribution, sourced from the
+ * repo's own git history (`git shortlog`), not invented. Add a person here only
+ * once their work is merged to main.
+ */
+const codeContributors = [
+  {
+    name: 'Md Kishor Morol',
+    handle: 'kishormorol',
+    blurb: 'Creator and maintainer — built the Astro catalog, the ingestion pipeline, and every view.',
+    notable: 'Maintainer',
+    link: 'https://github.com/kishormorol',
+  },
+  {
+    name: 'Meftahul Jannati Anonna',
+    handle: 'Meftahul-Anu13',
+    blurb:
+      'Added the Speech Emotion Recognition and Speaker tasks, and fixed the Home hero search dropdown layering.',
+    notable: 'PRs #45 · #46',
+    link: 'https://github.com/Meftahul-Anu13',
+  },
+];
 ---
 
 <Base title="BanglaNLP Hub — the definitive index of Bangla NLP research" footerShowData>
@@ -232,6 +257,33 @@ const contributors = [
           <a href={`${base}/contribute`}>Add them via PR</a> — with a concrete contribution, not a
           claim.
         </p>
+      </div>
+
+      <div class="reveal">
+        <div class="sechead col">
+          <h2>
+            Built by <span class="bn sub">· নির্মাতা</span>
+          </h2>
+          <p class="secblurb">
+            The people who build and maintain the Hub itself — the catalog code, ingestion tooling,
+            and views. Credited from the repo's git history, by merged contribution.
+          </p>
+        </div>
+        <div class="contribgrid">
+          {
+            codeContributors.map((c) => (
+              <a class="contribcard" href={c.link} target="_blank" rel="noopener">
+                <div class="contribhead">
+                  <span class="contribname">{c.name}</span>
+                  <span class="contribcount mono">@{c.handle}</span>
+                  <span class="contribarrow">↗</span>
+                </div>
+                <p class="contribblurb">{c.blurb}</p>
+                <div class="contribnotable">{c.notable}</div>
+              </a>
+            ))
+          }
+        </div>
       </div>
     </section>
   </main>
