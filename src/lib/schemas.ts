@@ -97,6 +97,21 @@ export const LeaderboardSchema = z.object({
 export const VenueTone = z.enum(['green', 'red', 'blue', 'gold', 'gray']);
 export const VenuesSchema = z.record(z.string().min(1), VenueTone);
 
+/** One resource a contributor submitted. `authors` is the paper's full author
+ *  list, verbatim from the authoritative source (ACL/arXiv/Crossref). */
+export const ContributionSchema = z.object({
+  title: z.string().min(1),
+  task: id,
+  authors: z.string().min(1),
+  issue: z.number().int().positive(),
+});
+
+export const ContributorSchema = z.object({
+  github: z.string().min(1),
+  name: z.string().min(1),
+  entries: z.array(ContributionSchema).min(1),
+});
+
 export const RecentSchema = z.object({
   type: z.enum(['Dataset', 'Paper', 'Model', 'Tool']),
   name: z.string().min(1),
@@ -111,4 +126,6 @@ export type Model = z.infer<typeof ModelSchema>;
 export type Tool = z.infer<typeof ToolSchema>;
 export type Leaderboard = z.infer<typeof LeaderboardSchema>;
 export type Recent = z.infer<typeof RecentSchema>;
+export type Contributor = z.infer<typeof ContributorSchema>;
+export type Contribution = z.infer<typeof ContributionSchema>;
 export type VenueToneName = z.infer<typeof VenueTone>;
