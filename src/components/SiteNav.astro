@@ -39,6 +39,7 @@ const links = [
       >
     </a>
     <nav
+      id="primary-nav"
       class="navrow"
       style="display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;min-width:0"
       aria-label="Primary"
@@ -66,6 +67,14 @@ const links = [
       title="Toggle dark mode"
       style="border:1px solid var(--border);background:var(--surface);color:var(--text2);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:15px;line-height:1;flex-shrink:0"
     ></button>
+    <button
+      id="nav-menu-toggle"
+      class="navtoggle"
+      type="button"
+      aria-label="Open menu"
+      aria-controls="primary-nav"
+      aria-expanded="false"
+    >☰</button>
   </div>
 </header>
 
@@ -79,24 +88,72 @@ const links = [
     border-color: var(--green);
   }
 
+  /* The hamburger button is desktop-hidden; the nav shows inline as usual. */
+  .navtoggle {
+    display: none;
+  }
+
   /* Mobile: the single 60px row can't fit the logo, search, toggle AND six
-     links, so the links get clipped into a horizontal scroll. Instead let the
-     header wrap and drop the nav onto its own full-width second row where all
-     six links wrap into view. (!important overrides the inline base styles.) */
+     links, so they were clipped into a horizontal scroll. Collapse the links
+     into a hamburger dropdown instead. */
   @media (max-width: 640px) {
     .navbar {
-      flex-wrap: wrap !important;
-      height: auto !important;
-      padding: 10px 16px !important;
-      row-gap: 10px !important;
-      column-gap: 12px !important;
+      position: relative;
+      gap: 10px !important;
+      padding: 0 16px !important;
     }
-    .navrow {
-      order: 3;
-      flex-basis: 100% !important;
-      overflow-x: visible !important;
+    .navtoggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text2);
+      border-radius: 8px;
+      font-size: 16px;
+      line-height: 1;
+      cursor: pointer;
+    }
+    .navtoggle:hover {
+      color: var(--green);
+      border-color: var(--green);
+    }
+    /* shrink the nav search so logo + search + toggle + menu button all fit */
+    :global([data-search][data-variant='nav']) {
+      flex: 1 1 90px !important;
+      min-width: 78px !important;
+    }
+    /* With JS the nav collapses into a toggleable dropdown panel. */
+    :global(html.js) .navrow {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 2px !important;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 10px 26px rgba(10, 30, 20, 0.12);
+      padding: 8px 16px 12px !important;
+      overflow: visible !important;
+      display: none;
+    }
+    :global(html.js) .navrow.open {
+      display: flex;
+    }
+    /* No-JS fallback: the button can't open, so keep links visible as a
+       wrapping row rather than stranding them behind it. */
+    :global(html:not(.js)) .navrow {
       flex-wrap: wrap !important;
-      gap: 4px 2px !important;
+      overflow-x: visible !important;
+    }
+    .navrow .navlink {
+      padding: 11px 10px !important;
+      font-size: 15px !important;
     }
   }
 </style>
@@ -114,6 +171,34 @@ const links = [
         localStorage.bnlpTheme = dark ? 'dark' : 'light';
       } catch (e) {}
       btn.textContent = icon();
+    });
+  })();
+
+  // Mobile nav dropdown toggle.
+  (() => {
+    const btn = document.getElementById('nav-menu-toggle');
+    const nav = document.getElementById('primary-nav');
+    if (!btn || !nav) return;
+    const setOpen = (open) => {
+      nav.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      btn.textContent = open ? '✕' : '☰';
+    };
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      setOpen(!nav.classList.contains('open'));
+    });
+    // Close after following a link, or on outside click / Escape.
+    nav.addEventListener('click', (e) => {
+      if (e.target.closest('a')) setOpen(false);
+    });
+    document.addEventListener('click', (e) => {
+      if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn)
+        setOpen(false);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setOpen(false);
     });
   })();
 </script>
