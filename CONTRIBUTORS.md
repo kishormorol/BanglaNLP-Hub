@@ -11,7 +11,7 @@ which is validated in CI and rendered on the site's
 ## Resource contributions
 
 People who submitted resources now in the catalog. Each paper's **full author
-list** is shown as published.
+list** is shown as published; model and tool submissions link to the resource.
 
 ### [@SambasBoyyyy](https://github.com/SambasBoyyyy) (Samiul Basir)
 
@@ -24,3 +24,9 @@ list** is shown as published.
   - Authors: Mujtahid Alam, Shuhena Salam Aonty, Sha Newaz Mahmud, Nahid Riaz Swachha, Ahmed Talal Wazih
 - _Bengali Human Sentiment Detection and Classification using Attention based Bidirectional LSTM_ — sentiment ([#49](https://github.com/kishormorol/BanglaNLP-Hub/issues/49))
   - Authors: Sha Newaz Mahmud, Nahid Riaz Swachha, Ahmed Talal Wazih, Shuvodwip Saha, Shougata Paul, Shuhena Salam Aonty
+
+### [@Sanjidh090](https://github.com/Sanjidh090) (Sanjid Hasan)
+
+- `Sanjidh090/moonshine-base-bn` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
+- `bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
+- `hishab/titu_stt_bn_conformer_large` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))

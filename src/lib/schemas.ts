@@ -97,14 +97,27 @@ export const LeaderboardSchema = z.object({
 export const VenueTone = z.enum(['green', 'red', 'blue', 'gold', 'gray']);
 export const VenuesSchema = z.record(z.string().min(1), VenueTone);
 
-/** One resource a contributor submitted. `authors` is the paper's full author
- *  list, verbatim from the authoritative source (ACL/arXiv/Crossref). */
-export const ContributionSchema = z.object({
-  title: z.string().min(1),
-  task: id,
-  authors: z.string().min(1),
-  issue: z.number().int().positive(),
-});
+/** One resource a contributor submitted. For papers, `title` is the paper title
+ *  and `authors` its full author list, verbatim from the authoritative source
+ *  (ACL/arXiv/Crossref). For models/tools, `title` is the catalog entry's `name`
+ *  and there is no author list. `title`+`task` are cross-checked against the
+ *  matching catalog file in validate.ts. The submission is referenced by either
+ *  an `issue` or a `pr`. */
+export const ContributionSchema = z
+  .object({
+    title: z.string().min(1),
+    kind: z.enum(['paper', 'model', 'tool']).default('paper'),
+    task: id,
+    authors: z.string().min(1).optional(),
+    issue: z.number().int().positive().optional(),
+    pr: z.number().int().positive().optional(),
+  })
+  .refine((c) => c.issue != null || c.pr != null, {
+    message: 'needs an `issue` or `pr` reference',
+  })
+  .refine((c) => c.kind !== 'paper' || c.authors != null, {
+    message: 'paper contributions need an `authors` list',
+  });
 
 export const ContributorSchema = z.object({
   github: z.string().min(1),

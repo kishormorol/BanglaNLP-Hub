@@ -1,5 +1,7 @@
-# People who submitted resources now in the catalog. `authors` is each paper's
-# full author list, taken verbatim from the authoritative source (arXiv / Crossref).
+# People who submitted resources now in the catalog. For papers, `authors` is the
+# full author list, verbatim from the authoritative source (arXiv / Crossref). For
+# models/tools set `kind` and reference the submission with `pr` (or `issue`);
+# `title` must match the catalog entry's name. See ContributionSchema.
 - github: SambasBoyyyy
   name: Samiul Basir
   entries:
@@ -18,3 +20,18 @@
       task: sentiment
       authors: "Sha Newaz Mahmud, Nahid Riaz Swachha, Ahmed Talal Wazih, Shuvodwip Saha, Shougata Paul, Shuhena Salam Aonty"
       issue: 49
+- github: Sanjidh090
+  name: Sanjid Hasan
+  entries:
+    - title: "Sanjidh090/moonshine-base-bn"
+      kind: model
+      task: speech
+      pr: 54
+    - title: "bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium"
+      kind: model
+      task: speech
+      pr: 54
+    - title: "hishab/titu_stt_bn_conformer_large"
+      kind: model
+      task: speech
+      pr: 54
