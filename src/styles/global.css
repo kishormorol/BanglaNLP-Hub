@@ -52,6 +52,13 @@ body {
   box-sizing: border-box;
 }
 
+/* The tab panels set `display:flex`/`display:grid` inline, which outranks the UA
+   `[hidden]{display:none}` rule — so the hidden attribute alone can't hide them.
+   Make `hidden` authoritative over inline display for every element. */
+[hidden] {
+  display: none !important;
+}
+
 a {
   color: var(--green);
 }
