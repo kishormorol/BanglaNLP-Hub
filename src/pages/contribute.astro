@@ -11,12 +11,15 @@
  *     a pre-filled GitHub issue against the Submit a resource template.
  */
 import Base from '../layouts/Base.astro';
-import { tasks, contributors, papers } from '../lib/data.ts';
+import { tasks, contributors, papers, models } from '../lib/data.ts';
 
 const REPO = 'https://github.com/kishormorol/BanglaNLP-Hub';
 
 // Link each credited paper to its actual catalog link, by title.
 const paperLink = new Map(papers.map((p) => [p.title, p.link]));
+// Model contributions are keyed by the model's `name`; keep the whole record so
+// the card can link to it and caption its arch/params.
+const modelByName = new Map(models.map((m) => [m.name, m]));
 
 const steps = [
   {
@@ -209,21 +212,31 @@ const preStyle =
                   <span style="color:var(--text2);font-weight:400"> · @{c.github}</span>
                 </div>
                 <ul style="margin:12px 0 0;padding:0;list-style:none;display:grid;gap:12px">
-                  {c.entries.map((e) => (
-                    <li>
-                      <a
-                        href={paperLink.get(e.title) ?? `${REPO}/issues/${e.issue}`}
-                        target="_blank"
-                        rel="noopener"
-                        style="font-size:13.5px;font-weight:600;line-height:1.45"
-                      >
-                        {e.title}
-                      </a>
-                      <div style="font-size:12.5px;color:var(--text2);margin-top:4px;line-height:1.5;text-wrap:pretty">
-                        {e.authors}
-                      </div>
-                    </li>
-                  ))}
+                  {c.entries.map((e) => {
+                    const model = e.kind === 'model' ? modelByName.get(e.title) : undefined;
+                    const href =
+                      paperLink.get(e.title) ??
+                      model?.link ??
+                      `${REPO}/${e.pr ? `pull/${e.pr}` : `issues/${e.issue}`}`;
+                    const caption = e.authors ?? (model ? `${model.arch} · ${model.params}` : '');
+                    return (
+                      <li>
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noopener"
+                          style="font-size:13.5px;font-weight:600;line-height:1.45"
+                        >
+                          {e.title}
+                        </a>
+                        {caption && (
+                          <div style="font-size:12.5px;color:var(--text2);margin-top:4px;line-height:1.5;text-wrap:pretty">
+                            {caption}
+                          </div>
+                        )}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}
