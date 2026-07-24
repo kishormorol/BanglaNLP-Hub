@@ -31,3 +31,14 @@
   link: https://github.com/tanvirfahim15/BARD-Bangla-Article-Classifier
   verified: 2026-02-14
   desc: News articles across 5 categories.
+- id: bttc
+  name: BTTC
+  task: textcls
+  size: 10,283 messages
+  sizeN: 10283
+  license: CC BY 4.0
+  year: 2026
+  source: Mendeley Data (2026)
+  link: https://doi.org/10.17632/5wrm959d6f.1
+  verified: 2026-07-24
+  desc: Tri-class Bangla SMS/Telegram corpus for spam, ham, and promotional message classification.
