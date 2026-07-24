@@ -13,6 +13,30 @@
   params: 244M
   link: https://huggingface.co/bangla-speech-processing/BanglaASR
   verified: 2026-04-22
+- id: sanjidh090-moonshine-base-bn
+  name: Sanjidh090/moonshine-base-bn
+  task: speech
+  arch: Moonshine
+  params: 61.5M
+  link: https://huggingface.co/Sanjidh090/moonshine-base-bn
+  verified: 2026-07-23
+  note: Bengali ASR model adapted from Moonshine-Base using tokenizer transplantation.
+- id: bengaliai-tugstugi-regional-asr-whisper-medium
+  name: bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium
+  task: speech
+  arch: Whisper-medium
+  params: 0.8B
+  link: https://huggingface.co/bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium
+  verified: 2026-07-23
+  note: Trained on regional Bengali speech covering 10 dialects.
+- id: hishab-titu-stt-bn-conformer-large
+  name: hishab/titu_stt_bn_conformer_large
+  task: speech
+  arch: Conformer-CTC
+  params: ~120M
+  link: https://huggingface.co/hishab/titu_stt_bn_conformer_large
+  verified: 2026-07-23
+  note: Fine-tuned on approximately 4.4K hours of non-telephony open data.
 - id: facebook-mms-tts-ben
   name: facebook/mms-tts-ben
   task: speech
