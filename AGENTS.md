@@ -12,8 +12,9 @@ cannot source.**
 
 - No invented scores, citation counts, star counts, or BibTeX. If a field is
   unknown, omit it — the UI already hides the affected element.
-- All 10 leaderboards intentionally have `rows: []`. Do not populate them with
-  plausible numbers. Rows require a citation to the paper the score came from.
+- Of the 11 leaderboards, 10 intentionally have `rows: []`; only B-REASO
+  (`llm.yaml`) is populated, from a cited source. Do not populate the empty ones
+  with plausible numbers. Rows require a citation to the paper the score came from.
 - Do not "fix" a broken entry by guessing a replacement URL. Verify it first.
 
 ### This data has a fabrication history
