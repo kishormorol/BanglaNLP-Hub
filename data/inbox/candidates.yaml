@@ -9234,13 +9234,6 @@
   year: 2019
   authors: Hembram et al.
   venue: Indian Journal of Forensic Medicine & Toxicology
-- source: openalex
-  kind: paper
-  title: "Evaluation of psychometric properties of the Uterine Fibroids Symptoms and Health-related Quality of Life (UFSQOL) questionnaire: The translated Bengali version"
-  link: https://doi.org/10.4103/tjog.tjog_37_19
-  year: 2019
-  authors: Luthra et al.
-  venue: Tropical Journal of Obstetrics and Gynaecology
   suggestedTask: mt
 - source: openalex
   kind: paper
@@ -9446,13 +9439,6 @@
   year: 2019
   authors: Williams et al.
   venue: The Journal of Hindu Studies
-- source: openalex
-  kind: paper
-  title: Prevalence of risk to develop obstructive sleep apnea in Bengali children using pediatric sleep questionnaire
-  link: https://doi.org/10.4103/ijmd.ijmd_7_19
-  year: 2019
-  authors: Sarma et al.
-  venue: Indian Journal of Multidisciplinary Dentistry
 - source: openalex
   kind: paper
   title: Psychometric Properties of Bangla Young Mania Rating Scale
@@ -13852,13 +13838,6 @@
   venue: Poznań Studies in Contemporary Linguistics
 - source: openalex
   kind: paper
-  title: Is Menopause a Health Risk for Bengali Women?~!2009-09-13~!2009-11-08~!2010-09-02~!
-  link: https://doi.org/10.2174/1874912701003030161
-  year: 2010
-  authors: Ray et al.
-  venue: The Open Anthropology Journal
-- source: openalex
-  kind: paper
   title: Lhormone de croissance - virus Ebola - Nés sans VIH - sigmoïdoscopie flexible - Médecine génétique - fibrates - bengali zébré - Quen pensez-vous?
   link: https://doi.org/10.4414/fms.2010.07312
   year: 2010
@@ -14069,13 +14048,6 @@
   venue: Asian Man (The) - An International Journal
 - source: openalex
   kind: paper
-  title: Innovation and Partnership in West Bengali Schools
-  link: https://doi.org/10.2175/193864709793952693
-  year: 2009
-  authors: Mukherjee et al.
-  venue: Proceedings of the Water Environment Federation
-- source: openalex
-  kind: paper
   title: Isotopic investigation into the role of surface waters in promoting arsenic release in Bengali groundwaters
   link: https://doi.org/10.1016/j.gca.2009.05.010
   year: 2009
@@ -14246,13 +14218,6 @@
   year: 2008
   authors: Binoy et al.
   venue: Daffodil International University journal of business and entrepreneurship.
-- source: openalex
-  kind: paper
-  title: Dysarthric Bengali speech
-  link: https://doi.org/10.4103/0022-3859.43510
-  year: 2008
-  authors: Chakraborty et al.
-  venue: Journal of Postgraduate Medicine
   suggestedTask: speech
 - source: openalex
   kind: paper
