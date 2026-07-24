@@ -176,18 +176,29 @@ const recentPath = resolve(dataDir, 'recent.yaml');
 if (existsSync(recentPath)) loadList(recentPath, RecentSchema);
 
 // ---- contributors ----------------------------------------------------------
-// A credit is only allowed for a resource actually in the catalog. For a paper
-// or model, `title` and `task` must both match an existing entry; for a tool
-// (which has no task), the name must match. No crediting a resource we do not
-// carry.
+// A credit is only allowed for a resource actually in the catalog. For a paper,
+// dataset, or model, `title` and `task` must both match an existing entry; for a
+// tool (which has no task), the name must match. No crediting a resource we do
+// not carry.
 const contributorsPath = resolve(dataDir, 'contributors.yaml');
 if (existsSync(contributorsPath)) {
   const paperByTitle = new Map(papers.items.map((p) => [p.title, p]));
+  const datasetByName = new Map(datasets.items.map((d) => [d.name, d]));
   const modelByName = new Map(models.items.map((m) => [m.name, m]));
   const toolByName = new Map(tools.map((t) => [t.name, t]));
   for (const c of loadList(contributorsPath, ContributorSchema)) {
     for (const e of c.entries) {
-      if (e.kind === 'model') {
+      if (e.kind === 'dataset') {
+        const d = datasetByName.get(e.title);
+        if (!d) {
+          fail('data/contributors.yaml', `[${c.github}] no catalog dataset named "${e.title}"`);
+        } else if (d.task !== e.task) {
+          fail(
+            'data/contributors.yaml',
+            `[${c.github}] "${e.title}" is task '${d.task}', not '${e.task}'`,
+          );
+        }
+      } else if (e.kind === 'model') {
         const m = modelByName.get(e.title);
         if (!m) {
           fail('data/contributors.yaml', `[${c.github}] no catalog model named "${e.title}"`);
