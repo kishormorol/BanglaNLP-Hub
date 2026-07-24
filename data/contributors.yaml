@@ -1,7 +1,14 @@
 # People who submitted resources now in the catalog. For papers, `authors` is the
 # full author list, verbatim from the authoritative source (arXiv / Crossref). For
-# models/tools set `kind` and reference the submission with `pr` (or `issue`);
-# `title` must match the catalog entry's name. See ContributionSchema.
+# datasets/models/tools set `kind` and reference the submission with `pr` (or
+# `issue`); `title` must match the catalog entry's name. See ContributionSchema.
+- github: LTNEW52
+  name: Labib Tahmid
+  entries:
+    - title: BTTC
+      kind: dataset
+      task: textcls
+      issue: 60
 - github: SambasBoyyyy
   name: Samiul Basir
   entries:

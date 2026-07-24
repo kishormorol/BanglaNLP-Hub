@@ -99,14 +99,15 @@ export const VenuesSchema = z.record(z.string().min(1), VenueTone);
 
 /** One resource a contributor submitted. For papers, `title` is the paper title
  *  and `authors` its full author list, verbatim from the authoritative source
- *  (ACL/arXiv/Crossref). For models/tools, `title` is the catalog entry's `name`
- *  and there is no author list. `title`+`task` are cross-checked against the
- *  matching catalog file in validate.ts. The submission is referenced by either
- *  an `issue` or a `pr`. */
+ *  (ACL/arXiv/Crossref). For datasets/models/tools, `title` is the catalog
+ *  entry's `name` and there is no author list. `title`+`task` are cross-checked
+ *  against the matching catalog file in validate.ts (tools have no task, so only
+ *  the name is checked). The submission is referenced by either an `issue` or a
+ *  `pr`. */
 export const ContributionSchema = z
   .object({
     title: z.string().min(1),
-    kind: z.enum(['paper', 'model', 'tool']).default('paper'),
+    kind: z.enum(['paper', 'dataset', 'model', 'tool']).default('paper'),
     task: id,
     authors: z.string().min(1).optional(),
     issue: z.number().int().positive().optional(),

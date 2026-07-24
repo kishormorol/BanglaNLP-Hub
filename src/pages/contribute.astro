@@ -11,15 +11,16 @@
  *     a pre-filled GitHub issue against the Submit a resource template.
  */
 import Base from '../layouts/Base.astro';
-import { tasks, contributors, papers, models } from '../lib/data.ts';
+import { tasks, contributors, papers, models, datasets } from '../lib/data.ts';
 
 const REPO = 'https://github.com/kishormorol/BanglaNLP-Hub';
 
 // Link each credited paper to its actual catalog link, by title.
 const paperLink = new Map(papers.map((p) => [p.title, p.link]));
-// Model contributions are keyed by the model's `name`; keep the whole record so
-// the card can link to it and caption its arch/params.
+// Model and dataset contributions are keyed by the entry's `name`; keep the whole
+// record so the card can link to it and caption its details.
 const modelByName = new Map(models.map((m) => [m.name, m]));
+const datasetByName = new Map(datasets.map((d) => [d.name, d]));
 
 const steps = [
   {
@@ -214,11 +215,19 @@ const preStyle =
                 <ul style="margin:12px 0 0;padding:0;list-style:none;display:grid;gap:12px">
                   {c.entries.map((e) => {
                     const model = e.kind === 'model' ? modelByName.get(e.title) : undefined;
+                    const dataset = e.kind === 'dataset' ? datasetByName.get(e.title) : undefined;
                     const href =
                       paperLink.get(e.title) ??
                       model?.link ??
+                      dataset?.link ??
                       `${REPO}/${e.pr ? `pull/${e.pr}` : `issues/${e.issue}`}`;
-                    const caption = e.authors ?? (model ? `${model.arch} · ${model.params}` : '');
+                    const caption =
+                      e.authors ??
+                      (model
+                        ? `${model.arch} · ${model.params}`
+                        : dataset
+                          ? `${dataset.size} · ${dataset.license}`
+                          : '');
                     return (
                       <li>
                         <a
