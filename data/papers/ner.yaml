@@ -1,3 +1,10 @@
+- id: sheikh-etal-2026-bangla-meder
+  title: "Bangla-MedER: An annotated Bangla dataset for multi-type medical entity recognition from medical text"
+  authors: Sheikh et al.
+  venue: Data in Brief
+  year: 2026
+  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC13054271/
+  task: ner
 - id: arxiv-2605-25463
   title: A Lightweight Hybrid Transformer-CRF Architecture for Multi-Type Bangla Medical Entity Recognition
   authors: Saha et al.

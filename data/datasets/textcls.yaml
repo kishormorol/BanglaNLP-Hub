@@ -42,3 +42,14 @@
   link: https://doi.org/10.17632/5wrm959d6f.1
   verified: 2026-07-24
   desc: Tri-class Bangla SMS/Telegram corpus for spam, ham, and promotional message classification.
+- id: banfakenews2
+  name: BanFakeNews-2.0
+  task: textcls
+  size: 60,000 articles
+  sizeN: 60000
+  license: Apache 2.0
+  year: 2025
+  source: BanFakeNews-2.0 (IndoNLP 2025)
+  link: https://www.kaggle.com/datasets/hrithikmajumdar/bangla-fake-news
+  verified: 2026-07-26
+  desc: Fake-news corpus with 47,000 authentic and 13,000 manually annotated fake articles across 13 categories.

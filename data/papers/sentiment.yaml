@@ -1,3 +1,17 @@
+- id: siam-wafa-2026-babsa
+  title: "BABSA: A large scale bangla aspect based sentiment analysis dataset"
+  authors: Siam and Wafa
+  venue: Data in Brief
+  year: 2026
+  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC12962122/
+  task: sentiment
+- id: biswas-etal-2025-banglasarc3
+  title: "BanglaSarc3: A benchmark dataset for Bangla sarcasm detection from social media to advance Bangla NLP"
+  authors: Biswas et al.
+  venue: Data in Brief
+  year: 2025
+  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC12396290/
+  task: sentiment
 - id: arxiv-2604-13057
   title: A Multi-Model Approach to English-Bangla Sentiment Classification of Government Mobile Banking App Reviews
   authors: Molla et al.

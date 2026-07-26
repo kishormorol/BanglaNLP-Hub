@@ -53,3 +53,25 @@
   link: https://github.com/farhanishmam/BanTH
   verified: 2026-07-19
   desc: Multi-label transliterated (romanized) Bangla hate speech dataset from YouTube across 7 target classes.
+- id: alert
+  name: ALERT
+  task: hate
+  size: 4,027 texts
+  sizeN: 4027
+  license: CC BY 4.0
+  year: 2025
+  source: ALERT (Data in Brief 2025)
+  link: https://data.mendeley.com/datasets/f4xz5d4fzd/1
+  verified: 2026-07-26
+  desc: Bangla religious-aggression texts with English translations, labelled hate speech, vandalism, atrocity, or no aggression.
+- id: banglatoco
+  name: Bangla-ToCo
+  task: hate
+  size: 1,004 comments
+  sizeN: 1004
+  license: CC BY 4.0
+  year: 2025
+  source: Bangla-ToCo (Data in Brief 2025)
+  link: https://data.mendeley.com/datasets/gphbs7vsbz/3
+  verified: 2026-07-26
+  desc: Context-aware toxic-comment corpus retaining news metadata and neighbouring comments, with balanced toxic/non-toxic labels.

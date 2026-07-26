@@ -1,3 +1,10 @@
+- id: shibu-etal-2025-scarcity
+  title: "From Scarcity to Capability: Empowering Fake News Detection in Low-Resource Languages with LLMs"
+  authors: Shibu et al.
+  venue: IndoNLP
+  year: 2025
+  link: https://aclanthology.org/2025.indonlp-1.12/
+  task: textcls
 - id: arxiv-2605-01292
   title: "Addressing Data Scarcity in Bangla Fake News Detection: An LLM-Based Dataset Augmentation Approach"
   authors: Sani et al.
