@@ -42,3 +42,54 @@
       kind: model
       task: speech
       pr: 54
+- github: WhiteHades
+  name: Mohammed Efaz
+  entries:
+    - title: BanglaSER
+      kind: dataset
+      task: ser
+      pr: 65
+    - title: KBES (KUET Bangla Emotional Speech)
+      kind: dataset
+      task: ser
+      pr: 65
+    - title: ALERT
+      kind: dataset
+      task: hate
+      pr: 66
+    - title: Bangla-ToCo
+      kind: dataset
+      task: hate
+      pr: 66
+    - title: Bangla-MedER
+      kind: dataset
+      task: ner
+      pr: 66
+    - title: BABSA
+      kind: dataset
+      task: sentiment
+      pr: 66
+    - title: BanglaSarc3
+      kind: dataset
+      task: sentiment
+      pr: 66
+    - title: BanFakeNews-2.0
+      kind: dataset
+      task: textcls
+      pr: 66
+    - title: BanglaRegionalTextCorpus
+      kind: dataset
+      task: mt
+      pr: 67
+    - title: Kothon
+      kind: dataset
+      task: mt
+      pr: 67
+    - title: SOMADHAN
+      kind: dataset
+      task: llm
+      pr: 68
+    - title: "hishab/titulm-llama-3.2-1b-v2.0"
+      kind: model
+      task: llm
+      pr: 68
