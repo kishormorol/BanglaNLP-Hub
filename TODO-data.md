@@ -154,6 +154,8 @@ Anthology or publisher page — do not hand-write one.
 | `mt` | FLORES-200 (bn) | `flores` |
 | `mt` | BanglaParaphrase | `banglaparaphrase` |
 | `mt` | Samanantar (bn–en) | `samanantar` |
+| `mt` | BanglaRegionalTextCorpus | `banglaregionaltextcorpus` |
+| `mt` | Kothon | `kothon` |
 | `ner` | MultiCoNER (bn) | `multiconer` |
 | `ner` | B-NER | `bner` |
 | `ner` | WikiANN (bn) | `wikiann` |
