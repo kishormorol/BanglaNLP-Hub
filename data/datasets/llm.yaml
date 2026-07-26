@@ -82,3 +82,14 @@
   link: https://github.com/TabiaTanzin/BanglaMATH-A-Bangla-benchmark-dataset-for-testing-LLM-mathematical-reasoning-at-grades-6-7-and-8
   verified: 2026-07-19
   desc: Bangla grade 6-8 math word problems for testing LLM mathematical reasoning.
+- id: somadhan
+  name: SOMADHAN
+  task: llm
+  size: 8,792 problems
+  sizeN: 8792
+  license: CC BY 4.0
+  year: 2025
+  source: SOMADHAN (2025)
+  link: https://data.mendeley.com/datasets/34bs5cxk9j/2
+  verified: 2026-07-26
+  desc: Bengali math word problems with step-by-step solutions adapted from the GSM8K train and test sets.

@@ -52,3 +52,11 @@
   link: https://huggingface.co/hishab/titulm-llama-3.2-3b-v2.0
   verified: 2026-06-28
   note: Continually pretrained Bangla LLM.
+- id: hishab-titulm-llama-3-2-1b-v2-0
+  name: hishab/titulm-llama-3.2-1b-v2.0
+  task: llm
+  arch: Llama 3.2
+  params: 1B
+  link: https://huggingface.co/hishab/titulm-llama-3.2-1b-v2.0
+  verified: 2026-07-26
+  note: Continually pretrained on 37B Bangla tokens with an extended tokenizer.

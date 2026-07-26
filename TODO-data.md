@@ -151,6 +151,7 @@ Anthology or publisher page — do not hand-write one.
 | `llm` | Global-MMLU (bn) | `globalmmlu` |
 | `llm` | MEGAVERSE (bn subset) | `megaverse` |
 | `llm` | BnMMLU | `bnmmlu` |
+| `llm` | SOMADHAN | `somadhan` |
 | `mt` | FLORES-200 (bn) | `flores` |
 | `mt` | BanglaParaphrase | `banglaparaphrase` |
 | `mt` | Samanantar (bn–en) | `samanantar` |
