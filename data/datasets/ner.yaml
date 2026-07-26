@@ -42,3 +42,14 @@
   link: https://data.mendeley.com/datasets/gbkszkt8z3/4
   verified: 2026-07-19
   desc: Bangla regional NER across five dialects with 10 entity types, BIO-tagged.
+- id: banglameder
+  name: Bangla-MedER
+  task: ner
+  size: 2,980 texts
+  sizeN: 2980
+  license: CC BY 4.0
+  year: 2025
+  source: Bangla-MedER (Data in Brief 2026)
+  link: https://data.mendeley.com/datasets/jt4gywvwtj/2
+  verified: 2026-07-26
+  desc: Manually annotated medical text covering six entity types, with a separate English translation.

@@ -146,6 +146,8 @@ Anthology or publisher page — do not hand-write one.
 | `hate` | BD-SHS | `bdshs` |
 | `hate` | Bengali Hate Speech | `bhs` |
 | `hate` | TB-OLID | `tbolid` |
+| `hate` | ALERT | `alert` |
+| `hate` | Bangla-ToCo | `banglatoco` |
 | `llm` | Global-MMLU (bn) | `globalmmlu` |
 | `llm` | MEGAVERSE (bn subset) | `megaverse` |
 | `llm` | BnMMLU | `bnmmlu` |
@@ -155,12 +157,15 @@ Anthology or publisher page — do not hand-write one.
 | `ner` | MultiCoNER (bn) | `multiconer` |
 | `ner` | B-NER | `bner` |
 | `ner` | WikiANN (bn) | `wikiann` |
+| `ner` | Bangla-MedER | `banglameder` |
 | `pos` | UD Bengali-BRU Treebank | `udbru` |
 | `pos` | SNLTR POS Corpus | `snltr` |
 | `qa` | SQuAD_bn | `squadbn` |
 | `qa` | TyDi QA (bn) | `tydiqa` |
 | `sentiment` | BEmoC | `bemoc` |
 | `sentiment` | ABSA Cricket & Restaurant | `absa` |
+| `sentiment` | BABSA | `babsa` |
+| `sentiment` | BanglaSarc3 | `banglasarc3` |
 | `ser` | SUBESCO | `subesco` |
 | `ser` | BANSpEmo | `banspemo` |
 | `ser` | BanglaSER | `banglaser` |
@@ -172,6 +177,7 @@ Anthology or publisher page — do not hand-write one.
 | `textcls` | BanFakeNews | `banfakenews` |
 | `textcls` | Potrika | `potrika` |
 | `textcls` | BARD | `bard` |
+| `textcls` | BanFakeNews-2.0 | `banfakenews2` |
 
 ## Dataset licenses needing verification
 

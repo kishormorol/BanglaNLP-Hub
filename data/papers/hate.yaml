@@ -1,3 +1,17 @@
+- id: rashid-etal-2025-alert
+  title: "ALERT: A benchmark Bengali dataset for identifying and categorizing religiously aggressive texts"
+  authors: Rashid et al.
+  venue: Data in Brief
+  year: 2025
+  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC12516529/
+  task: hate
+- id: rupa-etal-2025-bangla-toco
+  title: "Bangla-ToCo: A context-aware dataset for Bengali toxic comment detection"
+  authors: Rupa et al.
+  venue: Data in Brief
+  year: 2025
+  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC12703972/
+  task: hate
 - id: arxiv-2602-22449
   title: A Fusion of context-aware based BanglaBERT and Two-Layer Stacked LSTM Framework for Multi-Label Cyberbullying Detection
   authors: Raquib et al.

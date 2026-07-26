@@ -93,3 +93,25 @@
   link: https://huggingface.co/datasets/aplycaebous/BnSentMix
   verified: 2026-07-19
   desc: Bengali-English code-mixed sentiment dataset with 4 labels from social media and e-commerce.
+- id: babsa
+  name: BABSA
+  task: sentiment
+  size: 15,860 instances
+  sizeN: 15860
+  license: CC BY-NC-SA 4.0
+  year: 2025
+  source: BABSA (Data in Brief 2026)
+  link: https://data.mendeley.com/datasets/j7yb2sv263/1
+  verified: 2026-07-26
+  desc: Aspect-based sentiment corpus across 21 domains with manually annotated aspect terms and positive, neutral, or negative labels.
+- id: banglasarc3
+  name: BanglaSarc3
+  task: sentiment
+  size: 12,089 comments
+  sizeN: 12089
+  license: CC BY 4.0
+  year: 2025
+  source: BanglaSarc3 (Data in Brief 2025)
+  link: https://data.mendeley.com/datasets/7tn76wdhsr/1
+  verified: 2026-07-26
+  desc: Balanced ternary Facebook-comment corpus labelled sarcastic, non-sarcastic, or neutral.
