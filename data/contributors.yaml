@@ -2,6 +2,13 @@
 # full author list, verbatim from the authoritative source (arXiv / Crossref). For
 # datasets/models/tools set `kind` and reference the submission with `pr` (or
 # `issue`); `title` must match the catalog entry's name. See ContributionSchema.
+- github: AdibAFC
+  name: Adiba Fairooz Chowdhury
+  entries:
+    - title: "Automated Bengali Physics MCQ Solver: A Large Language Model Approach with Chain-of-Thought Reasoning"
+      task: qa
+      authors: "Md. Sagor Chowdhury, Adiba Fairooz Chowdhury, Ayesha Banu, Riad Hossain"
+      issue: 39
 - github: LTNEW52
   name: Labib Tahmid
   entries:
@@ -30,6 +37,10 @@
 - github: Sanjidh090
   name: Sanjid Hasan
   entries:
+    - title: Lipi-Ghor (bn-882-SSTT)
+      kind: dataset
+      task: speech
+      issue: 40
     - title: "Sanjidh090/moonshine-base-bn"
       kind: model
       task: speech
