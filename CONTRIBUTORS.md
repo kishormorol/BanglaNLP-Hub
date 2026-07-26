@@ -13,6 +13,11 @@ which is validated in CI and rendered on the site's
 People who submitted resources now in the catalog. Each paper's **full author
 list** is shown as published; model and tool submissions link to the resource.
 
+### [@AdibAFC](https://github.com/AdibAFC) (Adiba Fairooz Chowdhury)
+
+- _Automated Bengali Physics MCQ Solver: A Large Language Model Approach with Chain-of-Thought Reasoning_ — qa ([#39](https://github.com/kishormorol/BanglaNLP-Hub/issues/39))
+  - Authors: Md. Sagor Chowdhury, Adiba Fairooz Chowdhury, Ayesha Banu, Riad Hossain
+
 ### [@LTNEW52](https://github.com/LTNEW52) (Labib Tahmid)
 
 - `BTTC` — dataset, textcls ([#60](https://github.com/kishormorol/BanglaNLP-Hub/issues/60))
@@ -31,6 +36,7 @@ list** is shown as published; model and tool submissions link to the resource.
 
 ### [@Sanjidh090](https://github.com/Sanjidh090) (Sanjid Hasan)
 
+- `Lipi-Ghor (bn-882-SSTT)` — dataset, speech ([#40](https://github.com/kishormorol/BanglaNLP-Hub/issues/40))
 - `Sanjidh090/moonshine-base-bn` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
 - `bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
 - `hishab/titu_stt_bn_conformer_large` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
