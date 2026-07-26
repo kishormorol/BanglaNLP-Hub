@@ -33,6 +33,13 @@
   year: 2024
   link: https://doi.org/10.14569/ijacsa.2024.0150460
   task: ser
+- id: billah-etal-2023-kbes
+  title: "KBES: A dataset for realistic Bangla speech emotion recognition with intensity level"
+  authors: Billah et al.
+  venue: Data in Brief
+  year: 2023
+  link: https://doi.org/10.1016/j.dib.2023.109741
+  task: ser
 - id: islam-etal-2023-machine-learning-emotion-classification-bengali-speech
   title: A Machine Learning Approach for Emotion Classification in Bengali Speech
   authors: Islam et al.
@@ -53,6 +60,13 @@
   venue: Advances in Science Technology and Engineering Systems Journal
   year: 2022
   link: https://doi.org/10.25046/aj070608
+  task: ser
+- id: das-etal-2022-banglaser
+  title: "BanglaSER: A speech emotion recognition dataset for the Bangla language"
+  authors: Das et al.
+  venue: Data in Brief
+  year: 2022
+  link: https://doi.org/10.1016/j.dib.2022.108091
   task: ser
 - id: sultana-etal-2021-bangla-speech-emotion-recognition-cross-lingual
   title: Bangla Speech Emotion Recognition and Cross-Lingual Study Using Deep CNN and BLSTM Networks
