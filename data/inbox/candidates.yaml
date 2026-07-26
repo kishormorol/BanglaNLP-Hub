@@ -7251,13 +7251,6 @@
   venue: Children s Literature in Education
 - source: openalex
   kind: paper
-  title: Depressed People Detection from Bangla Social Media Status using LSTM and CNN Approach
-  link: https://doi.org/10.38032/jea.2021.01.006
-  year: 2021
-  authors: Mumu et al.
-  venue: Journal of Engineering Advancements
-- source: openalex
-  kind: paper
   title: Designing Unicode-compliant Indic-script based Institutional Digital Repository with special reference to Bengali
   link: https://journals.sfu.ca/ijkcdt/index.php/ijkcdt/article/view/166
   year: 2021
