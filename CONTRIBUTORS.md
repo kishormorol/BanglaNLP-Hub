@@ -13,6 +13,10 @@ which is validated in CI and rendered on the site's
 People who submitted resources now in the catalog. Each paper's **full author
 list** is shown as published; model and tool submissions link to the resource.
 
+### [@LTNEW52](https://github.com/LTNEW52) (Labib Tahmid)
+
+- `BTTC` — dataset, textcls ([#60](https://github.com/kishormorol/BanglaNLP-Hub/issues/60))
+
 ### [@SambasBoyyyy](https://github.com/SambasBoyyyy) (Samiul Basir)
 
 - _Bangla-WhisperDiar: Fine-Tuning Whisper and PyAnnote for Bangla Long-Form Speech Recognition and Speaker Diarization_ — speech ([#47](https://github.com/kishormorol/BanglaNLP-Hub/issues/47))
@@ -30,3 +34,18 @@ list** is shown as published; model and tool submissions link to the resource.
 - `Sanjidh090/moonshine-base-bn` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
 - `bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
 - `hishab/titu_stt_bn_conformer_large` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
+
+### [@WhiteHades](https://github.com/WhiteHades) (Mohammed Efaz)
+
+- `BanglaSER` — dataset, ser ([#65](https://github.com/kishormorol/BanglaNLP-Hub/pull/65))
+- `KBES (KUET Bangla Emotional Speech)` — dataset, ser ([#65](https://github.com/kishormorol/BanglaNLP-Hub/pull/65))
+- `ALERT` — dataset, hate ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
+- `Bangla-ToCo` — dataset, hate ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
+- `Bangla-MedER` — dataset, ner ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
+- `BABSA` — dataset, sentiment ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
+- `BanglaSarc3` — dataset, sentiment ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
+- `BanFakeNews-2.0` — dataset, textcls ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
+- `BanglaRegionalTextCorpus` — dataset, mt ([#67](https://github.com/kishormorol/BanglaNLP-Hub/pull/67))
+- `Kothon` — dataset, mt ([#67](https://github.com/kishormorol/BanglaNLP-Hub/pull/67))
+- `SOMADHAN` — dataset, llm ([#68](https://github.com/kishormorol/BanglaNLP-Hub/pull/68))
+- `hishab/titulm-llama-3.2-1b-v2.0` — model, llm ([#68](https://github.com/kishormorol/BanglaNLP-Hub/pull/68))
