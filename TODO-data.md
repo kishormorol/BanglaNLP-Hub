@@ -163,6 +163,8 @@ Anthology or publisher page — do not hand-write one.
 | `sentiment` | ABSA Cricket & Restaurant | `absa` |
 | `ser` | SUBESCO | `subesco` |
 | `ser` | BANSpEmo | `banspemo` |
+| `ser` | BanglaSER | `banglaser` |
+| `ser` | KBES (KUET Bangla Emotional Speech) | `kbes` |
 | `speech` | OpenSLR SLR53 (Large Bengali ASR) | `openslr53` |
 | `speech` | Common Voice (bn) | `commonvoice` |
 | `speech` | OOD-Speech | `oodspeech` |

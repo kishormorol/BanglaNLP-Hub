@@ -20,3 +20,25 @@
   link: https://data.mendeley.com/datasets/rdwn4bs5ky/2
   verified: 2026-07-22
   desc: Bangla emotional speech; 22 speakers (11M/11F), 6 emotions.
+- id: banglaser
+  name: BanglaSER
+  task: ser
+  size: 1,467 recordings
+  sizeN: 1467
+  license: CC BY 4.0
+  year: 2022
+  source: BanglaSER (Data in Brief 2022)
+  link: https://data.mendeley.com/datasets/t9h6p943xy/5
+  verified: 2026-07-26
+  desc: Realistic Bangla emotional speech from 34 speakers, balanced by gender, across 5 emotions.
+- id: kbes
+  name: KBES (KUET Bangla Emotional Speech)
+  task: ser
+  size: 900 recordings
+  sizeN: 900
+  license: CC BY 4.0
+  year: 2023
+  source: KBES (Data in Brief 2023)
+  link: https://data.mendeley.com/datasets/vsn37ps3rx/4
+  verified: 2026-07-26
+  desc: Realistic Bangla emotional speech from 35 actors, with low/high intensity labels for 4 of 5 emotions.
