@@ -38,7 +38,7 @@
   authors: Billah et al.
   venue: Data in Brief
   year: 2023
-  link: https://doi.org/10.1016/j.dib.2023.109741
+  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC10641593/
   task: ser
 - id: islam-etal-2023-machine-learning-emotion-classification-bengali-speech
   title: A Machine Learning Approach for Emotion Classification in Bengali Speech
@@ -66,7 +66,7 @@
   authors: Das et al.
   venue: Data in Brief
   year: 2022
-  link: https://doi.org/10.1016/j.dib.2022.108091
+  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC8980634/
   task: ser
 - id: sultana-etal-2021-bangla-speech-emotion-recognition-cross-lingual
   title: Bangla Speech Emotion Recognition and Cross-Lingual Study Using Deep CNN and BLSTM Networks
