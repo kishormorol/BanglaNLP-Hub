@@ -602,13 +602,6 @@
   year: 2024
   link: https://doi.org/10.1017/nlp.2024.11
   task: sentiment
-- id: hoque-etal-2024-depression-intensity-identification-transformer-ense
-  title: "Depression Intensity Identification using Transformer Ensemble Technique for the Resource-constrained Bengali Language"
-  authors: Hoque et al.
-  venue: Journal of Engineering Advancements
-  year: 2024
-  link: https://doi.org/10.38032/jea.2024.02.001
-  task: sentiment
 - id: hoque-etal-2024-depressive-suicidal-text-sentiment-bangla
   title: "Depressive and Suicidal Text-Based Sentiment Analysis in Bangla Using Deep Learning Models"
   authors: Hoque et al.
@@ -692,13 +685,6 @@
   venue: IEEE Access
   year: 2023
   link: https://doi.org/10.1109/access.2023.3277787
-  task: sentiment
-- id: hoque-etal-2023-detecting-level-depression-social-media
-  title: "Detecting Level of Depression from Social Media Posts for the Low-resource Bengali Language"
-  authors: Hoque et al.
-  venue: Journal of Engineering Advancements
-  year: 2023
-  link: https://doi.org/10.38032/jea.2023.02.003
   task: sentiment
 - id: shanto-etal-2023-mining-user-opinions-balanced-bangla
   title: "Mining User Opinions: A Balanced Bangla Sentiment Analysis Dataset for E-Commerce"
@@ -797,13 +783,6 @@
   venue: PeerJ Computer Science
   year: 2021
   link: https://doi.org/10.7717/peerj-cs.681
-  task: sentiment
-- id: khan-etal-2021-sentiment-bengali-facebook-comments-predict
-  title: "Sentiment Analysis on Bengali Facebook Comments To Predict Fan's Emotions Towards a Celebrity"
-  authors: Khan et al.
-  venue: Journal of Engineering Advancements
-  year: 2021
-  link: https://doi.org/10.38032/jea.2021.03.001
   task: sentiment
 - id: maisha-etal-2021-supervised-machine-learning-algorithms-sentiment
   title: "Supervised Machine Learning Algorithms for Sentiment Analysis of Bangla Newspaper"
