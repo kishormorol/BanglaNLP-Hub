@@ -1,3 +1,10 @@
+- id: faisal-etal-2026-kothon
+  title: "Kothon: A large-scale dataset for machine translation of the Chittagonian and Sylheti dialects into standard Bangla"
+  authors: Faisal et al.
+  venue: Data in Brief
+  year: 2026
+  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC13141989/
+  task: mt
 - id: ahmed-etal-2026-banglaregionaltextcorpus
   title: "BanglaRegionalTextCorpus: A curated dataset for four regional bangla dialects with standard Bangla and English translation"
   authors: Ahmed et al.
