@@ -79,7 +79,7 @@ const V = {
 
 <script>
   // One shared index fetch across every mounted instance.
-  let index: { type: string; name: string; meta: string; href: string }[] | null = null;
+  let index: { type: string; name: string; meta: string; href: string; keywords?: string }[] | null = null;
   let pending: Promise<void> | null = null;
 
   const esc = (s: string) =>
@@ -133,8 +133,12 @@ const V = {
         });
         return;
       }
+      const terms = q.split(/\s+/);
       const hits = index
-        .filter((r) => r.name.toLowerCase().includes(q) || r.meta.toLowerCase().includes(q))
+        .filter((r) => {
+          const text = `${r.name} ${r.meta} ${r.keywords ?? ''}`.toLowerCase();
+          return terms.every((term) => text.includes(term));
+        })
         .slice(0, 8);
 
       panel!.innerHTML = hits.length
