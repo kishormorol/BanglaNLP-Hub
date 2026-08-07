@@ -5,7 +5,8 @@
 # and metadata are absent. Nothing in this file is rendered by the site.
 #
 # To promote one: open its link, confirm the metadata against the source, fill in
-# the required fields, and move it into data/<kind>/<task>.yaml by hand.
+# the required fields, then use data/papers/<task>.yaml for papers,
+# data/datasets/<task>.yaml for datasets, or data/models.yaml for models.
 # See CONTRIBUTING.md. Do not bulk-import this file.
 
 - source: openalex

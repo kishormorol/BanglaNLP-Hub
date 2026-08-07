@@ -173,7 +173,7 @@ export function recentlyAdded(limit = 6): RecentEntry[] {
     .slice(0, limit);
 }
 
-export type SearchEntry = { type: string; name: string; meta: string; href: string };
+export type SearchEntry = { type: string; name: string; meta: string; href: string; keywords?: string };
 
 /**
  * Search index, built here and emitted as a static JSON blob by
@@ -200,6 +200,7 @@ export function searchIndex(): SearchEntry[] {
       name: m.name,
       meta: `${m.arch} · ${m.params}`,
       href: m.link,
+      keywords: m.tasks.flatMap((task) => [task, taskName(task)]).join(' '),
     })),
     ...tools.map((t) => ({ type: 'Tool', name: t.name, meta: t.desc.slice(0, 50), href: `${base}/tools` })),
   ];
