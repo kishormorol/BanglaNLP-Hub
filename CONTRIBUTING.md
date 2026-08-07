@@ -39,8 +39,9 @@ npm run dev          # preview at localhost:4321
 ```
 
 1. **Fork and branch.** One logical change per PR.
-2. **Edit the YAML.** Files are grouped by task: `data/datasets/sentiment.yaml`,
-   `data/papers/ner.yaml`, and so on. The filename must match the entry's `task`.
+2. **Edit the YAML.** Dataset and paper files are grouped by task, such as
+   `data/datasets/sentiment.yaml` and `data/papers/ner.yaml`. Models use
+   `data/models.yaml` and list one or more `tasks`.
 3. **Run `npm run validate`.** It fails on missing or malformed fields, bad URLs,
    duplicate ids, stale `verified` dates, and leaderboards pointing at a dataset id
    that does not exist.

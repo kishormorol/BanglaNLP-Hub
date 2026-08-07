@@ -39,6 +39,8 @@ const fail = (file: string, msg: string) => errors.push(`${file}: ${msg}`);
 
 const rel = (p: string) => p.slice(root.length + 1);
 const read = (p: string) => parse(readFileSync(p, 'utf8'));
+const normalizeLink = (link: string) =>
+  link.toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '');
 
 /** Parse an array-of-entries YAML file against a schema. */
 function loadList<T>(path: string, schema: z.ZodType<T>): T[] {
@@ -123,6 +125,9 @@ function loadTaskDir<T extends { id: string; task: string }>(
 
 const datasets = loadTaskDir('datasets', DatasetSchema);
 const papers = loadTaskDir('papers', PaperSchema);
+if (existsSync(resolve(dataDir, 'models'))) {
+  fail('data/models', 'legacy model directory is not allowed; use data/models.yaml');
+}
 const modelsPath = resolve(dataDir, 'models.yaml');
 const modelItems = loadList(modelsPath, ModelSchema);
 const models = {
@@ -146,9 +151,10 @@ for (const m of models.items) {
   const duplicateName = modelNames.get(m.name);
   if (duplicateName) fail('data/models.yaml', `[${m.id}] name duplicates '${duplicateName}'`);
   else modelNames.set(m.name, m.id);
-  const duplicateLink = modelLinks.get(m.link);
+  const link = normalizeLink(m.link);
+  const duplicateLink = modelLinks.get(link);
   if (duplicateLink) fail('data/models.yaml', `[${m.id}] link duplicates '${duplicateLink}'`);
-  else modelLinks.set(m.link, m.id);
+  else modelLinks.set(link, m.id);
 }
 
 // ---- tools -----------------------------------------------------------------
