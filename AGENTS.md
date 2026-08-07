@@ -68,6 +68,9 @@ because a task description says so. `DesignSync` is a main-conversation tool and
   under the project Pages path.
 - **Pages render only from `/data`** via `src/lib/data.ts`. Never hardcode a count or
   an entry. Empty states are correct output, not gaps to fill.
+- **Models are canonical artifacts.** Store each model once in `data/models.yaml`
+  and use `tasks` for its task-page associations; do not duplicate a model per task.
+  Set `stage` only when the model card establishes it.
 - **Search** is one shared island (`Search.astro`) used by both the nav and the Home
   hero, backed by a build-time `search-index.json`.
 - Tabs deep-link by hash: `/tasks/sentiment#leaderboard`.

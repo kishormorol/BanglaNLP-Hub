@@ -57,7 +57,7 @@ function loadTaskDir<T>(sub: string, schema: { parse: (v: unknown) => T }): T[] 
 export const tasks: Task[] = loadList('tasks.yaml', TaskSchema);
 export const datasets: Dataset[] = loadTaskDir('datasets', DatasetSchema);
 export const papers: Paper[] = loadTaskDir('papers', PaperSchema);
-export const models: Model[] = loadTaskDir('models', ModelSchema);
+export const models: Model[] = loadList('models.yaml', ModelSchema);
 export const tools: Tool[] = loadList('tools.yaml', ToolSchema);
 export const contributors: Contributor[] = existsSync(resolve(dataDir, 'contributors.yaml'))
   ? loadList('contributors.yaml', ContributorSchema)
@@ -99,7 +99,7 @@ export const stats = {
 export const byTask = {
   datasets: (id: string) => datasets.filter((d) => d.task === id),
   papers: (id: string) => papers.filter((p) => p.task === id),
-  models: (id: string) => models.filter((m) => m.task === id),
+  models: (id: string) => models.filter((m) => m.tasks.includes(id)),
   leaderboards: (id: string) => leaderboards[id] ?? [],
 };
 
@@ -156,9 +156,9 @@ export function recentlyAdded(limit = 6): RecentEntry[] {
     ...models.map((m) => ({
       type: 'Model' as const,
       name: m.name,
-      task: taskName(m.task),
+      task: m.tasks.length === 1 ? taskName(m.tasks[0]) : `${m.tasks.length} tasks`,
       date: m.verified,
-      href: `${base}/tasks/${m.task}#models`,
+      href: m.link,
     })),
     ...tools.map((t) => ({
       type: 'Tool' as const,

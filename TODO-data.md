@@ -118,6 +118,14 @@ kind of plausible invention the catalog forbids.
   provide. HF import therefore requires hand-curation, not a bulk pass — do not
   promote these wholesale.
 
+## Model catalog audit
+
+The catalog has **20 unique model artifacts** with **26 task associations**. Models
+are stored once in `data/models.yaml`; `tasks` records every relevant catalog task.
+Six duplicate task-specific records were collapsed without changing their links or
+task-page coverage. `stage` is present only when the model card establishes whether
+an artifact is a base or fine-tuned model.
+
 ## Leaderboards with no curated rows
 
 Each has a real dataset and metric but zero score rows, and renders an empty state

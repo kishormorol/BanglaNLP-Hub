@@ -123,7 +123,12 @@ function loadTaskDir<T extends { id: string; task: string }>(
 
 const datasets = loadTaskDir('datasets', DatasetSchema);
 const papers = loadTaskDir('papers', PaperSchema);
-const models = loadTaskDir('models', ModelSchema);
+const modelsPath = resolve(dataDir, 'models.yaml');
+const modelItems = loadList(modelsPath, ModelSchema);
+const models = {
+  items: modelItems,
+  where: new Map(modelItems.map((model) => [model.id, 'data/models.yaml'])),
+};
 
 checkDuplicates('task', tasks, new Map(tasks.map((t) => [t.id, 'data/tasks.yaml'])));
 checkDuplicates('dataset', datasets.items, datasets.where);
@@ -131,7 +136,20 @@ checkDuplicates('paper', papers.items, papers.where);
 checkDuplicates('model', models.items, models.where);
 
 for (const d of datasets.items) checkVerified(datasets.where.get(d.id)!, d.id, d.verified);
-for (const m of models.items) checkVerified(models.where.get(m.id)!, m.id, m.verified);
+const modelNames = new Map<string, string>();
+const modelLinks = new Map<string, string>();
+for (const m of models.items) {
+  checkVerified(models.where.get(m.id)!, m.id, m.verified);
+  for (const task of m.tasks) {
+    if (!taskIds.has(task)) fail('data/models.yaml', `[${m.id}] unknown task '${task}'`);
+  }
+  const duplicateName = modelNames.get(m.name);
+  if (duplicateName) fail('data/models.yaml', `[${m.id}] name duplicates '${duplicateName}'`);
+  else modelNames.set(m.name, m.id);
+  const duplicateLink = modelLinks.get(m.link);
+  if (duplicateLink) fail('data/models.yaml', `[${m.id}] link duplicates '${duplicateLink}'`);
+  else modelLinks.set(m.link, m.id);
+}
 
 // ---- tools -----------------------------------------------------------------
 const toolsPath = resolve(dataDir, 'tools.yaml');
@@ -203,10 +221,10 @@ if (existsSync(contributorsPath)) {
         const m = modelByName.get(e.title);
         if (!m) {
           fail('data/contributors.yaml', `[${c.github}] no catalog model named "${e.title}"`);
-        } else if (m.task !== e.task) {
+        } else if (!m.tasks.includes(e.task)) {
           fail(
             'data/contributors.yaml',
-            `[${c.github}] "${e.title}" is task '${m.task}', not '${e.task}'`,
+            `[${c.github}] "${e.title}" is not associated with task '${e.task}'`,
           );
         }
       } else if (e.kind === 'tool') {

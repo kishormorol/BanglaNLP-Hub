@@ -88,18 +88,24 @@ Fields marked optional may be omitted entirely; do not include them as empty str
 Use the **published** title and venue, not the arXiv preprint's, when both exist.
 Prefer an ACL Anthology or DOI link over arXiv.
 
-### Model — `data/models/<task>.yaml`
+### Model — `data/models.yaml`
 
 ```yaml
 - id: csebuetnlp-banglabert
   name: csebuetnlp/banglabert      # the Hugging Face repo id where applicable
-  task: llm
+  tasks: [llm, sentiment, ner, hate, textcls]
+  stage: base                    # optional: base | fine-tuned; omit when unclear
   arch: ELECTRA
   params: 110M
   link: https://huggingface.co/csebuetnlp/banglabert
   verified: 2026-06-28
-  note: SOTA Bangla encoder.       # optional
+  note: Pretrained Bangla ELECTRA discriminator.   # optional
 ```
+
+Use one record per downloadable model artifact. List every relevant catalog task in
+`tasks`; do not create task-specific records that point back to the same base-model URL.
+Only set `stage` when the model card establishes whether the artifact is a base or
+fine-tuned checkpoint.
 
 ### Tool — `data/tools.yaml`
 
