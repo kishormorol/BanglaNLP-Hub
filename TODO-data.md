@@ -114,9 +114,9 @@ kind of plausible invention the catalog forbids.
 - **396 Hugging Face hits are NOT imported.** The `language:bn` filter is
   low-precision: most are giant multilingual corpora (WildChat, tagengo,
   multilingual-sentences) or Tamil/other datasets carrying a `bn` tag, not Bangla
-  resources. The Model schema also needs `arch`/`params` the list API does not
-  provide. HF import therefore requires hand-curation, not a bulk pass — do not
-  promote these wholesale.
+  resources. The list API also does not establish a model's architecture or catalog
+  task associations. HF import therefore requires hand-curation, not a bulk pass —
+  do not promote these wholesale.
 
 ## Model catalog audit
 

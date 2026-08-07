@@ -65,7 +65,7 @@ export const ModelSchema = z.object({
     .refine((tasks) => new Set(tasks).size === tasks.length, 'must not contain duplicate tasks'),
   stage: z.enum(['base', 'fine-tuned']).optional(),
   arch: z.string().min(1),
-  params: z.string().min(1),
+  params: z.string().min(1).optional(),
   link: url,
   verified: isoDate,
   note: z.string().min(1).optional(),
