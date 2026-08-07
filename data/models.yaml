@@ -93,7 +93,7 @@
   params: 177M
   link: https://huggingface.co/sagorsarker/mbert-bengali-ner
   verified: 2026-05-16
-  note: Fine-tuned on WikiANN and custom NER data.
+  note: Fine-tuned on WikiANN.
 - id: sagorsarker-bangla-pos-tagger
   name: sagorsarker/bangla-pos-tagger
   tasks: [pos]
