@@ -104,3 +104,7 @@
       kind: model
       task: llm
       pr: 68
+    - title: "Kothon: A large-scale dataset for machine translation of the Chittagonian and Sylheti dialects into standard Bangla"
+      task: mt
+      authors: "Md. Atique Faisal, Farhan Sadaf, Dipta Chowdhury, H.M. Azrof, Monojit Paul Tanmay"
+      pr: 73
