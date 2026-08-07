@@ -62,7 +62,7 @@ function listYaml(dir: string): string[] {
   return readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
     const p = join(dir, e.name);
     if (e.isDirectory()) return e.name === 'inbox' ? [] : listYaml(p);
-    return e.name.endsWith('.yaml') ? [p] : [];
+    return e.name.endsWith('.yaml') && e.name !== 'home-contributors.yaml' ? [p] : [];
   });
 }
 

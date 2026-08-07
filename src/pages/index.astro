@@ -4,7 +4,18 @@
  * are still derived from /data at build time — the polish is presentation only. */
 import Base from '../layouts/Base.astro';
 import Search from '../components/Search.astro';
-import { tasks, byTask, stats, recentlyAdded, typeTone, models, datasets, tools } from '../lib/data.ts';
+import {
+  tasks,
+  byTask,
+  stats,
+  recentlyAdded,
+  typeTone,
+  models,
+  datasets,
+  tools,
+  communityContributors,
+  codeContributors,
+} from '../lib/data.ts';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -35,112 +46,10 @@ const recent = recentlyAdded(6);
  * /data at build time (like every other count on this page), never written down.
  * To add someone, credit a concrete contribution — do not invent a claim.
  */
-const contributors = [
-  {
-    name: 'BUET CSE NLP',
-    handle: 'csebuetnlp',
-    match: 'csebuetnlp',
-    blurb: 'The research group behind much of the modern Bangla NLP stack.',
-    notable: 'BanglaBERT · BanglaT5 · XL-Sum · BanglaNMT',
-    link: 'https://huggingface.co/csebuetnlp',
-  },
-  {
-    name: 'Bengali.AI',
-    handle: 'bengaliai',
-    match: 'bengaliai',
-    blurb: 'Community non-profit running open speech and handwriting datasets and competitions.',
-    notable: 'OOD-Speech and community ASR / OCR corpora',
-    link: 'https://bengaliai.github.io',
-  },
-  {
-    name: 'Hishab',
-    handle: 'hishab',
-    match: 'hishab',
-    blurb: 'Builds and openly releases Bangla large language models.',
-    notable: 'TituLM Bangla LLM family',
-    link: 'https://huggingface.co/hishab',
-  },
-  {
-    name: 'Language Technology Lab',
-    handle: 'LanguageTechnologyLab',
-    match: 'LanguageTechnologyLab',
-    blurb: 'Releases code-mixed and offensive-language datasets for Bangla.',
-    notable: 'TB-OLID · SentMix-3L · OffMix-3L',
-    link: 'https://github.com/LanguageTechnologyLab',
-  },
-  {
-    name: 'Sagor Sarker',
-    handle: 'sagorsarker',
-    match: 'sagorsarker',
-    blurb: 'Maintainer of the BNLP toolkit and early open Bangla models.',
-    notable: 'bnlp-toolkit · bangla-bert-base',
-    link: 'https://huggingface.co/sagorsarker',
-  },
-  {
-    name: 'Md. Sagor Chowdhury',
-    match: '11545654',
-    blurb: 'Co-authored the Bengali physics MCQ solver using LLM chain-of-thought reasoning.',
-    notable: 'Automated Bengali Physics MCQ Solver (IEEE QPAIN 2026)',
-    link: 'https://ieeexplore.ieee.org/author/820866223382516',
-  },
-  {
-    name: 'Adiba Fairooz Chowdhury',
-    match: '11545654',
-    blurb: 'Co-authored the Bengali physics MCQ solver using LLM chain-of-thought reasoning.',
-    notable: 'Automated Bengali Physics MCQ Solver (IEEE QPAIN 2026)',
-    link: 'https://ieeexplore.ieee.org/author/711227386891734',
-  },
-  {
-    name: 'Ayesha Banu',
-    match: '11545654',
-    blurb: 'Co-authored the Bengali physics MCQ solver using LLM chain-of-thought reasoning.',
-    notable: 'Automated Bengali Physics MCQ Solver (IEEE QPAIN 2026)',
-    link: 'https://ieeexplore.ieee.org/author/262191840673764',
-  },
-  {
-    name: 'Riad Hossain',
-    match: '11545654',
-    blurb: 'Co-authored the Bengali physics MCQ solver using LLM chain-of-thought reasoning.',
-    notable: 'Automated Bengali Physics MCQ Solver (IEEE QPAIN 2026)',
-    link: 'https://ieeexplore.ieee.org/author/37088761086',
-  },
-  {
-    name: 'Sanjid Hasan',
-    handle: 'Sanjidh090',
-    match: 'Sanjidh090',
-    blurb: 'Released the Lipi-Ghor long-form, multi-speaker Bengali speech corpus (ASR + diarization).',
-    notable: 'Lipi-Ghor (bn-882-SSTT)',
-    link: 'https://huggingface.co/Sanjidh090',
-  },
-].map((c) => ({
+const contributors = communityContributors.map((c) => ({
   ...c,
   entries: allEntries.filter((e) => String(e.link ?? '').includes(c.match)).length,
 }));
-
-/**
- * People who contribute to the site and tooling itself — separate from the
- * catalog-credited panel above, which only credits released resources that
- * appear in /data. This list is code/maintenance contribution, sourced from the
- * repo's own git history (`git shortlog`), not invented. Add a person here only
- * once their work is merged to main.
- */
-const codeContributors = [
-  {
-    name: 'Md Kishor Morol',
-    handle: 'kishormorol',
-    blurb: 'Creator and maintainer — built the Astro catalog, the ingestion pipeline, and every view.',
-    notable: 'Maintainer',
-    link: 'https://github.com/kishormorol',
-  },
-  {
-    name: 'Meftahul Jannati Anonna',
-    handle: 'Meftahul-Anu13',
-    blurb:
-      'Added the Speech Emotion Recognition and Speaker tasks, and fixed the Home hero search dropdown layering.',
-    notable: 'PRs #45 · #46',
-    link: 'https://github.com/Meftahul-Anu13',
-  },
-];
 ---
 
 <Base title="BanglaNLP Hub — the definitive index of Bangla NLP research" footerShowData>

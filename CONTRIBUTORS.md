@@ -4,9 +4,10 @@ BanglaNLP Hub is built on resources suggested by the community. Thank you to
 everyone who has submitted an entry — see [CONTRIBUTING.md](./CONTRIBUTING.md)
 to add one.
 
-The canonical source for this list is [`data/contributors.yaml`](./data/contributors.yaml),
-which is validated in CI and rendered on the site's
-[Contribute page](https://kishormorol.github.io/BanglaNLP-Hub/contribute).
+Resource submissions are recorded in [`data/contributors.yaml`](./data/contributors.yaml)
+and rendered on the site's [Contribute page](https://kishormorol.github.io/BanglaNLP-Hub/contribute).
+Community and code credits shown on Home are recorded separately in
+[`data/home-contributors.yaml`](./data/home-contributors.yaml). Both files are validated in CI.
 
 ## Resource contributions
 
@@ -57,3 +58,16 @@ list** is shown as published; model and tool submissions link to the resource.
 - `hishab/titulm-llama-3.2-1b-v2.0` — model, llm ([#68](https://github.com/kishormorol/BanglaNLP-Hub/pull/68))
 - _Kothon: A large-scale dataset for machine translation of the Chittagonian and Sylheti dialects into standard Bangla_ — mt ([#73](https://github.com/kishormorol/BanglaNLP-Hub/pull/73))
   - Authors: Md. Atique Faisal, Farhan Sadaf, Dipta Chowdhury, H.M. Azrof, Monojit Paul Tanmay
+
+## Site and code contributions
+
+People whose merged work builds or maintains the Hub itself. These credits are
+kept separate from resource submissions.
+
+### [@kishormorol](https://github.com/kishormorol) (Md Kishor Morol)
+
+- Creator and maintainer — built the Astro catalog, the ingestion pipeline, and every view.
+
+### [@Meftahul-Anu13](https://github.com/Meftahul-Anu13) (Meftahul Jannati Anonna)
+
+- Added the Speech Emotion Recognition and Speaker tasks, and fixed the Home hero search dropdown layering ([#45](https://github.com/kishormorol/BanglaNLP-Hub/pull/45), [#46](https://github.com/kishormorol/BanglaNLP-Hub/pull/46)).

@@ -17,6 +17,7 @@ import {
   LeaderboardSchema,
   VenuesSchema,
   ContributorSchema,
+  HomeContributorSchema,
   type Task,
   type Dataset,
   type Paper,
@@ -25,6 +26,9 @@ import {
   type Leaderboard,
   type VenueToneName,
   type Contributor,
+  type HomeContributor,
+  type CommunityContributor,
+  type CodeContributor,
 } from './schemas.ts';
 
 const dataDir = resolve(process.cwd(), 'data');
@@ -58,6 +62,16 @@ export const tools: Tool[] = loadList('tools.yaml', ToolSchema);
 export const contributors: Contributor[] = existsSync(resolve(dataDir, 'contributors.yaml'))
   ? loadList('contributors.yaml', ContributorSchema)
   : [];
+const homeContributors: HomeContributor[] = loadList(
+  'home-contributors.yaml',
+  HomeContributorSchema,
+);
+export const communityContributors: CommunityContributor[] = homeContributors.filter(
+  (contributor): contributor is CommunityContributor => contributor.type === 'community',
+);
+export const codeContributors: CodeContributor[] = homeContributors.filter(
+  (contributor): contributor is CodeContributor => contributor.type === 'code',
+);
 export const venues: Record<string, VenueToneName> = VenuesSchema.parse(
   readYaml(resolve(dataDir, 'venues.yaml')),
 );

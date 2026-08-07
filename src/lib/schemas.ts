@@ -126,6 +126,33 @@ export const ContributorSchema = z.object({
   entries: z.array(ContributionSchema).min(1),
 });
 
+export const CommunityContributorSchema = z
+  .object({
+    type: z.literal('community'),
+    name: z.string().min(1),
+    match: z.string().min(1),
+    blurb: z.string().min(1),
+    notable: z.string().min(1),
+    link: url,
+  })
+  .strict();
+
+export const CodeContributorSchema = z
+  .object({
+    type: z.literal('code'),
+    name: z.string().min(1),
+    handle: z.string().min(1),
+    blurb: z.string().min(1),
+    notable: z.string().min(1),
+    link: url,
+  })
+  .strict();
+
+export const HomeContributorSchema = z.discriminatedUnion('type', [
+  CommunityContributorSchema,
+  CodeContributorSchema,
+]);
+
 export const RecentSchema = z.object({
   type: z.enum(['Dataset', 'Paper', 'Model', 'Tool']),
   name: z.string().min(1),
@@ -142,4 +169,7 @@ export type Leaderboard = z.infer<typeof LeaderboardSchema>;
 export type Recent = z.infer<typeof RecentSchema>;
 export type Contributor = z.infer<typeof ContributorSchema>;
 export type Contribution = z.infer<typeof ContributionSchema>;
+export type HomeContributor = z.infer<typeof HomeContributorSchema>;
+export type CommunityContributor = z.infer<typeof CommunityContributorSchema>;
+export type CodeContributor = z.infer<typeof CodeContributorSchema>;
 export type VenueToneName = z.infer<typeof VenueTone>;
