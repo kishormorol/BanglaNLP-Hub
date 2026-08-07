@@ -55,3 +55,5 @@ list** is shown as published; model and tool submissions link to the resource.
 - `Kothon` — dataset, mt ([#67](https://github.com/kishormorol/BanglaNLP-Hub/pull/67))
 - `SOMADHAN` — dataset, llm ([#68](https://github.com/kishormorol/BanglaNLP-Hub/pull/68))
 - `hishab/titulm-llama-3.2-1b-v2.0` — model, llm ([#68](https://github.com/kishormorol/BanglaNLP-Hub/pull/68))
+- _Kothon: A large-scale dataset for machine translation of the Chittagonian and Sylheti dialects into standard Bangla_ — mt ([#73](https://github.com/kishormorol/BanglaNLP-Hub/pull/73))
+  - Authors: Md. Atique Faisal, Farhan Sadaf, Dipta Chowdhury, H.M. Azrof, Monojit Paul Tanmay
