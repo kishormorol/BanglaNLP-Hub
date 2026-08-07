@@ -42,6 +42,8 @@ data/
   models/<task>.yaml
   leaderboards/<task>.yaml
   tools.yaml
+  contributors.yaml         resource submitters and their catalog entries
+  home-contributors.yaml    community and code credits shown on Home
   venues.yaml             venue -> badge tone
 ```
 
