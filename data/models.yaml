@@ -90,18 +90,17 @@
   tasks: [ner]
   stage: fine-tuned
   arch: mBERT
-  params: 177M
+  params: 167M
   link: https://huggingface.co/sagorsarker/mbert-bengali-ner
   verified: 2026-05-16
   note: Fine-tuned on WikiANN.
-- id: sagorsarker-bangla-pos-tagger
-  name: sagorsarker/bangla-pos-tagger
+- id: bnlp-bengali-pos-tag-model
+  name: Bengali POS Tag model
   tasks: [pos]
-  arch: BiLSTM-CRF
-  params: 12M
-  link: https://github.com/sagorbrur/bnlp
-  verified: 2026-05-27
-  note: Ships with bnlp-toolkit; trained on SNLTR corpus.
+  arch: CRF
+  link: https://github.com/sagorbrur/bnlp/blob/master/model/bn_pos.pkl
+  verified: 2026-08-07
+  note: Ships with bnlp-toolkit; trained on the NLTR dataset.
 - id: csebuetnlp-mt5-multilingual-xlsum
   name: csebuetnlp/mT5_multilingual_XLSum
   tasks: [summ]

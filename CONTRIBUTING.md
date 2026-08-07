@@ -97,7 +97,7 @@ Prefer an ACL Anthology or DOI link over arXiv.
   tasks: [llm, sentiment, ner, hate, textcls]
   stage: base                    # optional: base | fine-tuned; omit when unclear
   arch: ELECTRA
-  params: 110M
+  params: 110M                  # optional: omit when the source does not publish it
   link: https://huggingface.co/csebuetnlp/banglabert
   verified: 2026-06-28
   note: Pretrained Bangla ELECTRA discriminator.   # optional
@@ -106,7 +106,7 @@ Prefer an ACL Anthology or DOI link over arXiv.
 Use one record per downloadable model artifact. List every relevant catalog task in
 `tasks`; do not create task-specific records that point back to the same base-model URL.
 Only set `stage` when the model card establishes whether the artifact is a base or
-fine-tuned checkpoint.
+fine-tuned checkpoint. Omit `params` when the source does not publish a parameter count.
 
 ### Tool — `data/tools.yaml`
 

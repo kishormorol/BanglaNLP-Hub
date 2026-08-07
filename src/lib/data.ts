@@ -198,7 +198,7 @@ export function searchIndex(): SearchEntry[] {
     ...models.map((m) => ({
       type: 'Model',
       name: m.name,
-      meta: `${m.arch} · ${m.params}`,
+      meta: [m.arch, m.params].filter(Boolean).join(' · '),
       href: m.link,
       keywords: m.tasks.flatMap((task) => [task, taskName(task)]).join(' '),
     })),

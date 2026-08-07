@@ -125,8 +125,8 @@ candidate's fields from the ACL Anthology's own BibTeX and files it under a task
   system-name prefix (`systemName()`) so a preprint of an already-published paper
   is skipped even when its subtitle drifted.
 - **HF hits are not promotable in bulk** — `language:bn` is low-precision
-  (multilingual megacorpora, mis-tagged datasets) and the Model schema needs
-  `arch`/`params` the list API lacks. Curate by hand.
+  (multilingual megacorpora, mis-tagged datasets), and the list API does not establish
+  a model's architecture or catalog task associations. Curate by hand.
 - promote.ts needs `.cache/anthology.bib` (gitignored, ~85 MB): `mkdir -p .cache &&
   curl -sL https://aclanthology.org/anthology.bib.gz | gunzip > .cache/anthology.bib`.
 - The July 2026 sweeps took papers from 27 to 405 (ACL 260 + arXiv 145).
