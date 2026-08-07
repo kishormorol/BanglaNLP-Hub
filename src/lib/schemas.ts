@@ -85,9 +85,8 @@ export const ToolSchema = z.object({
 export const LeaderboardRowSchema = z.object({
   model: z.string().min(1),
   score: z.string().min(1),
-  paper: z.string().min(1),
-  year,
-});
+  paperId: id,
+}).strict();
 
 export const LeaderboardSchema = z.object({
   /** Must match a dataset id — enforced cross-file in validate.ts. */

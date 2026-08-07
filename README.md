@@ -71,7 +71,7 @@ Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than qu
 | `npm run validate` | Validate `/data` against the Zod schemas |
 | `npm run check-links` | Check every `link:` URL in `/data` |
 
-`npm run validate` fails on missing or malformed fields, bad URLs, `verified` dates older than 12 months, duplicate ids, and leaderboards referencing an unknown dataset id. It runs in CI on every pull request and gates deployment.
+`npm run validate` fails on missing or malformed fields, bad URLs, `verified` dates older than 12 months, duplicate ids, and leaderboards referencing an unknown dataset or paper id. It runs in CI on every pull request and gates deployment.
 
 ## Status
 
