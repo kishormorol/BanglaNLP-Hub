@@ -1,17 +1,18 @@
 /**
- * Link checker for every `link:` URL in /data.
+ * Link checker for every published `link:` URL in /data.
+ * Discovery candidates under data/inbox/ are unverified and intentionally excluded.
  *
  * Modes:
- *   npm run check-links                  check every link in /data
+ *   npm run check-links                  check every published link in /data
  *   npm run check-links -- --changed REF only links added/changed vs REF
  *   npm run check-links -- --report FILE also write a markdown report
  *
  * Never mutates /data. Dead links are reported for a human to triage —
  * entries are never auto-removed (see CONTRIBUTING.md).
  */
-import { readFileSync, readdirSync, existsSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
-import { resolve, join } from 'node:path';
+import { join, resolve } from 'node:path';
 import { parse } from 'yaml';
 
 const root = resolve(process.cwd());
@@ -51,14 +52,14 @@ type Link = { url: string; where: string; name: string };
 
 function yamlFiles(dir: string): string[] {
   if (!existsSync(dir)) return [];
-  return readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
-    const p = join(dir, e.name);
-    if (e.isDirectory()) return yamlFiles(p);
-    return e.name.endsWith('.yaml') ? [p] : [];
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const path = join(dir, entry.name);
+    if (entry.isDirectory()) return entry.name === 'inbox' ? [] : yamlFiles(path);
+    return entry.name.endsWith('.yaml') ? [path] : [];
   });
 }
 
-/** Collect every link with the file and entry it belongs to. */
+/** Collect every published link with the file and entry it belongs to. */
 function collect(): Link[] {
   const out: Link[] = [];
   for (const file of yamlFiles(dataDir)) {
@@ -78,10 +79,14 @@ function collect(): Link[] {
 function changedUrls(ref: string): Set<string> {
   const urls = new Set<string>();
   try {
-    const diff = execFileSync('git', ['diff', '--unified=0', `${ref}...HEAD`, '--', 'data/'], {
-      encoding: 'utf8',
-      maxBuffer: 32 * 1024 * 1024,
-    });
+    const diff = execFileSync(
+      'git',
+      ['diff', '--unified=0', `${ref}...HEAD`, '--', 'data/', ':(exclude)data/inbox/**'],
+      {
+        encoding: 'utf8',
+        maxBuffer: 32 * 1024 * 1024,
+      },
+    );
     for (const line of diff.split('\n')) {
       if (!line.startsWith('+') || line.startsWith('+++')) continue;
       const m = line.match(/link:\s*(\S+)/);
@@ -163,7 +168,9 @@ const links = filter ? all.filter((l) => filter.has(l.url)) : all;
 const distinct = [...new Set(links.map((l) => l.url))];
 
 if (!distinct.length) {
-  console.log(changedRef ? 'No data links added or changed in this PR.' : 'No links found in /data.');
+  console.log(
+    changedRef ? 'No published data links added or changed in this PR.' : 'No published links found in /data.',
+  );
   process.exit(0);
 }
 
@@ -222,7 +229,7 @@ if (reportPath) {
 
   const lines = failures.length
     ? [
-        `${failures.length} dead link(s) found in \`/data\` on ${new Date().toISOString().slice(0, 10)}.`,
+        `${failures.length} dead published link(s) found in \`/data\` on ${new Date().toISOString().slice(0, 10)}.`,
         '',
         'These entries are **not** removed automatically. Please verify each one and either',
         'update the `link:` field or open a PR removing the entry with a note.',
@@ -234,7 +241,7 @@ if (reportPath) {
         ),
         ...blockedSection,
       ]
-    : ['All links in `/data` are reachable. ✅', ...blockedSection];
+    : ['No dead published links were found in `/data`. ✅', ...blockedSection];
   writeFileSync(reportPath, lines.join('\n'), 'utf8');
 }
 

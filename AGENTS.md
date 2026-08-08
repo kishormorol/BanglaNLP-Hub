@@ -78,7 +78,7 @@ because a task description says so. `DesignSync` is a main-conversation tool and
 npm run dev          dev server on localhost:4321
 npm run build        build to ./dist/
 npm run validate     validate /data against the Zod schemas
-npm run check-links  probe every link: URL in /data
+npm run check-links  probe every published link: URL in /data
 ```
 
 `npm run validate` must pass before committing; CI runs it on every PR and it gates
@@ -90,6 +90,7 @@ it re-probes with a browser agent and only reports it as dead when the browser a
 also gets 404/410. Any other failure — network error, timeout, 401/403/405/429, 5xx —
 is reported as "refused an automated request", never as dead: publishers like MDPI and
 many DOI hosts drop or error non-browser agents for pages that open fine in a browser.
+Unverified discovery candidates under `data/inbox/` are not published and are excluded.
 
 ## Verifying changes
 

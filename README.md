@@ -51,7 +51,7 @@ The catalog is only useful if its contents are true, so the project holds a hard
 
 - **No invented values.** Scores, citation counts, and BibTeX entries are never synthesised. A missing field is omitted and the UI hides the affected element.
 - **Leaderboards stay empty until sourced.** Each benchmark carries a real dataset and metric, and a score row appears only with a citation to the paper it came from. Just one benchmark (B-REASO, from Hosain & Morol 2025) is populated so far; the rest render a "No leaderboard curated yet" empty state rather than a plausible-looking number.
-- **Links are checked.** Every `link:` URL is verified nightly. Dead links are reported in a single tracking issue; entries are never removed automatically.
+- **Links are checked.** Every published `link:` URL is verified nightly. Unverified `data/inbox/` candidates are excluded. Dead links are reported in a single tracking issue; entries are never removed automatically.
 - **Entries get verified by hand.** Papers have been audited against the ACL Anthology, arXiv, and OpenAlex (title, authors, and abstract), and their task assignments are being spot-checked and corrected. Several entries inherited from the original design prototype turned out to be fabricated — a duplicate under an invented title, a model that does not exist, a paper with no publication — and were removed.
 
 Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 52 datasets lack BibTeX and ten of the eleven leaderboards await rows.
@@ -67,7 +67,7 @@ Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than qu
 | `npm run build` | Build to `./dist/` |
 | `npm run preview` | Preview the production build |
 | `npm run validate` | Validate `/data` against the Zod schemas |
-| `npm run check-links` | Check every `link:` URL in `/data` |
+| `npm run check-links` | Check every published `link:` URL in `/data` |
 
 `npm run validate` fails on missing or malformed fields, bad URLs, `verified` dates older than 12 months, duplicate ids, and leaderboards referencing an unknown dataset id. It runs in CI on every pull request and gates deployment.
 
