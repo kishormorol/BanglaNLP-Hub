@@ -79,10 +79,14 @@ function collect(): Link[] {
 function changedUrls(ref: string): Set<string> {
   const urls = new Set<string>();
   try {
-    const diff = execFileSync('git', ['diff', '--unified=0', `${ref}...HEAD`, '--', 'data/'], {
-      encoding: 'utf8',
-      maxBuffer: 32 * 1024 * 1024,
-    });
+    const diff = execFileSync(
+      'git',
+      ['diff', '--unified=0', `${ref}...HEAD`, '--', 'data/', ':(exclude)data/inbox/**'],
+      {
+        encoding: 'utf8',
+        maxBuffer: 32 * 1024 * 1024,
+      },
+    );
     for (const line of diff.split('\n')) {
       if (!line.startsWith('+') || line.startsWith('+++')) continue;
       const m = line.match(/link:\s*(\S+)/);

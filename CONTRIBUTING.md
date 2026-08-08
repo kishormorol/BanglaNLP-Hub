@@ -44,8 +44,9 @@ npm run dev          # preview at localhost:4321
 3. **Run `npm run validate`.** It fails on missing or malformed fields, bad URLs,
    duplicate ids, stale `verified` dates, and leaderboards pointing at a dataset id
    that does not exist.
-4. **Open a PR.** CI runs validation, builds the site, and link-checks any published URL
-   your PR added or changed. Unverified `data/inbox/` candidates are excluded.
+4. **Open a PR.** CI runs validation, builds the site, and link-checks any URL your PR
+   added or changed.
+   Unverified `data/inbox/` candidates are excluded.
 
 ## Entry formats
 
