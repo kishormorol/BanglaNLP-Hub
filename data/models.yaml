@@ -26,7 +26,7 @@
   name: sagorsarker/bangla-bert-base
   tasks: [llm]
   arch: BERT
-  params: 110M
+  params: 165M
   link: https://huggingface.co/sagorsarker/bangla-bert-base
   verified: 2026-05-11
 - id: neuropark-sahajbert

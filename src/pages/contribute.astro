@@ -225,7 +225,7 @@ const preStyle =
                     const caption =
                       e.authors ??
                       (model
-                        ? `${model.arch} · ${model.params}`
+                        ? [model.arch, model.params].filter(Boolean).join(' · ')
                         : dataset
                           ? `${dataset.size} · ${dataset.license}`
                           : '');
