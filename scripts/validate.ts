@@ -6,7 +6,7 @@
  *   2. malformed URLs
  *   3. `verified` dates older than VERIFY_MAX_AGE_MONTHS
  *   4. duplicate ids within an entity type
- *   5. a leaderboard referencing a dataset id that does not exist
+ *   5. a leaderboard referencing a dataset or paper id that does not exist
  *   6. an entry whose `task` is not a known task id
  *   7. a paper venue with no tone in venues.yaml
  *
@@ -27,6 +27,7 @@ import {
   VenuesSchema,
   RecentSchema,
   ContributorSchema,
+  HomeContributorSchema,
   VERIFY_MAX_AGE_MONTHS,
 } from '../src/lib/schemas.ts';
 
@@ -38,6 +39,8 @@ const fail = (file: string, msg: string) => errors.push(`${file}: ${msg}`);
 
 const rel = (p: string) => p.slice(root.length + 1);
 const read = (p: string) => parse(readFileSync(p, 'utf8'));
+const normalizeLink = (link: string) =>
+  link.toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '');
 
 /** Parse an array-of-entries YAML file against a schema. */
 function loadList<T>(path: string, schema: z.ZodType<T>): T[] {
@@ -122,7 +125,15 @@ function loadTaskDir<T extends { id: string; task: string }>(
 
 const datasets = loadTaskDir('datasets', DatasetSchema);
 const papers = loadTaskDir('papers', PaperSchema);
-const models = loadTaskDir('models', ModelSchema);
+if (existsSync(resolve(dataDir, 'models'))) {
+  fail('data/models', 'legacy model directory is not allowed; use data/models.yaml');
+}
+const modelsPath = resolve(dataDir, 'models.yaml');
+const modelItems = loadList(modelsPath, ModelSchema);
+const models = {
+  items: modelItems,
+  where: new Map(modelItems.map((model) => [model.id, 'data/models.yaml'])),
+};
 
 checkDuplicates('task', tasks, new Map(tasks.map((t) => [t.id, 'data/tasks.yaml'])));
 checkDuplicates('dataset', datasets.items, datasets.where);
@@ -130,7 +141,21 @@ checkDuplicates('paper', papers.items, papers.where);
 checkDuplicates('model', models.items, models.where);
 
 for (const d of datasets.items) checkVerified(datasets.where.get(d.id)!, d.id, d.verified);
-for (const m of models.items) checkVerified(models.where.get(m.id)!, m.id, m.verified);
+const modelNames = new Map<string, string>();
+const modelLinks = new Map<string, string>();
+for (const m of models.items) {
+  checkVerified(models.where.get(m.id)!, m.id, m.verified);
+  for (const task of m.tasks) {
+    if (!taskIds.has(task)) fail('data/models.yaml', `[${m.id}] unknown task '${task}'`);
+  }
+  const duplicateName = modelNames.get(m.name);
+  if (duplicateName) fail('data/models.yaml', `[${m.id}] name duplicates '${duplicateName}'`);
+  else modelNames.set(m.name, m.id);
+  const link = normalizeLink(m.link);
+  const duplicateLink = modelLinks.get(link);
+  if (duplicateLink) fail('data/models.yaml', `[${m.id}] link duplicates '${duplicateLink}'`);
+  else modelLinks.set(link, m.id);
+}
 
 // ---- tools -----------------------------------------------------------------
 const toolsPath = resolve(dataDir, 'tools.yaml');
@@ -155,6 +180,7 @@ for (const p of papers.items) {
 
 // ---- leaderboards ----------------------------------------------------------
 const datasetIds = new Set(datasets.items.map((d) => d.id));
+const paperById = new Map(papers.items.map((paper) => [paper.id, paper]));
 for (const path of listDir('leaderboards')) {
   const file = rel(path);
   const expected = basename(path, '.yaml');
@@ -166,6 +192,14 @@ for (const path of listDir('leaderboards')) {
       const ds = datasets.items.find((d) => d.id === board.dataset)!;
       if (ds.task !== expected) {
         fail(file, `leaderboard '${board.label}' references dataset '${ds.id}' which belongs to task '${ds.task}'`);
+      }
+    }
+    for (const row of board.rows) {
+      const paper = paperById.get(row.paperId);
+      if (!paper) {
+        fail(file, `leaderboard '${board.label}' references unknown paper id '${row.paperId}'`);
+      } else if (paper.task !== expected) {
+        fail(file, `leaderboard '${board.label}' references paper '${paper.id}' which belongs to task '${paper.task}'`);
       }
     }
   }
@@ -202,10 +236,10 @@ if (existsSync(contributorsPath)) {
         const m = modelByName.get(e.title);
         if (!m) {
           fail('data/contributors.yaml', `[${c.github}] no catalog model named "${e.title}"`);
-        } else if (m.task !== e.task) {
+        } else if (!m.tasks.includes(e.task)) {
           fail(
             'data/contributors.yaml',
-            `[${c.github}] "${e.title}" is task '${m.task}', not '${e.task}'`,
+            `[${c.github}] "${e.title}" is not associated with task '${e.task}'`,
           );
         }
       } else if (e.kind === 'tool') {
@@ -224,6 +258,31 @@ if (existsSync(contributorsPath)) {
         }
       }
     }
+  }
+}
+
+// ---- home contributors -----------------------------------------------------
+const homeContributorsPath = resolve(dataDir, 'home-contributors.yaml');
+const homeContributors = loadList(homeContributorsPath, HomeContributorSchema);
+const catalogLinks = [
+  ...papers.items.map((p) => p.link),
+  ...datasets.items.map((d) => d.link),
+  ...models.items.map((m) => m.link),
+  ...tools.map((t) => t.link),
+];
+for (const contributor of homeContributors) {
+  if (contributor.type === 'community') {
+    if (!catalogLinks.some((link) => link.includes(contributor.match))) {
+      fail(
+        'data/home-contributors.yaml',
+        `[${contributor.name}] match '${contributor.match}' does not occur in a catalog link`,
+      );
+    }
+  } else if (contributor.link.replace(/\/+$/, '') !== `https://github.com/${contributor.handle}`) {
+    fail(
+      'data/home-contributors.yaml',
+      `[${contributor.name}] link does not match GitHub handle '${contributor.handle}'`,
+    );
   }
 }
 

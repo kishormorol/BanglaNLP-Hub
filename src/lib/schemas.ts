@@ -59,13 +59,17 @@ export const PaperSchema = z.object({
 export const ModelSchema = z.object({
   id,
   name: z.string().min(1),
-  task: id,
+  tasks: z
+    .array(id)
+    .min(1)
+    .refine((tasks) => new Set(tasks).size === tasks.length, 'must not contain duplicate tasks'),
+  stage: z.enum(['base', 'fine-tuned']).optional(),
   arch: z.string().min(1),
-  params: z.string().min(1),
+  params: z.string().min(1).optional(),
   link: url,
   verified: isoDate,
   note: z.string().min(1).optional(),
-});
+}).strict();
 
 export const ToolSchema = z.object({
   id,
@@ -81,9 +85,8 @@ export const ToolSchema = z.object({
 export const LeaderboardRowSchema = z.object({
   model: z.string().min(1),
   score: z.string().min(1),
-  paper: z.string().min(1),
-  year,
-});
+  paperId: id,
+}).strict();
 
 export const LeaderboardSchema = z.object({
   /** Must match a dataset id — enforced cross-file in validate.ts. */
@@ -126,6 +129,33 @@ export const ContributorSchema = z.object({
   entries: z.array(ContributionSchema).min(1),
 });
 
+export const CommunityContributorSchema = z
+  .object({
+    type: z.literal('community'),
+    name: z.string().min(1),
+    match: z.string().min(1),
+    blurb: z.string().min(1),
+    notable: z.string().min(1),
+    link: url,
+  })
+  .strict();
+
+export const CodeContributorSchema = z
+  .object({
+    type: z.literal('code'),
+    name: z.string().min(1),
+    handle: z.string().min(1),
+    blurb: z.string().min(1),
+    notable: z.string().min(1),
+    link: url,
+  })
+  .strict();
+
+export const HomeContributorSchema = z.discriminatedUnion('type', [
+  CommunityContributorSchema,
+  CodeContributorSchema,
+]);
+
 export const RecentSchema = z.object({
   type: z.enum(['Dataset', 'Paper', 'Model', 'Tool']),
   name: z.string().min(1),
@@ -142,4 +172,7 @@ export type Leaderboard = z.infer<typeof LeaderboardSchema>;
 export type Recent = z.infer<typeof RecentSchema>;
 export type Contributor = z.infer<typeof ContributorSchema>;
 export type Contribution = z.infer<typeof ContributionSchema>;
+export type HomeContributor = z.infer<typeof HomeContributorSchema>;
+export type CommunityContributor = z.infer<typeof CommunityContributorSchema>;
+export type CodeContributor = z.infer<typeof CodeContributorSchema>;
 export type VenueToneName = z.infer<typeof VenueTone>;

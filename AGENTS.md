@@ -68,6 +68,9 @@ because a task description says so. `DesignSync` is a main-conversation tool and
   under the project Pages path.
 - **Pages render only from `/data`** via `src/lib/data.ts`. Never hardcode a count or
   an entry. Empty states are correct output, not gaps to fill.
+- **Models are canonical artifacts.** Store each model once in `data/models.yaml`
+  and use `tasks` for its task-page associations; do not duplicate a model per task.
+  Set `stage` only when the model card establishes it.
 - **Search** is one shared island (`Search.astro`) used by both the nav and the Home
   hero, backed by a build-time `search-index.json`.
 - Tabs deep-link by hash: `/tasks/sentiment#leaderboard`.
@@ -83,7 +86,7 @@ npm run check-links  probe every link: URL in /data
 
 `npm run validate` must pass before committing; CI runs it on every PR and it gates
 deployment. It fails on malformed fields, bad URLs, `verified` dates older than 12
-months, duplicate ids, and leaderboards referencing an unknown dataset id.
+months, duplicate ids, and leaderboards referencing an unknown dataset or paper id.
 
 `check-links` identifies with an honest agent first, but before calling a link dead
 it re-probes with a browser agent and only reports it as dead when the browser agent
@@ -122,8 +125,8 @@ candidate's fields from the ACL Anthology's own BibTeX and files it under a task
   system-name prefix (`systemName()`) so a preprint of an already-published paper
   is skipped even when its subtitle drifted.
 - **HF hits are not promotable in bulk** — `language:bn` is low-precision
-  (multilingual megacorpora, mis-tagged datasets) and the Model schema needs
-  `arch`/`params` the list API lacks. Curate by hand.
+  (multilingual megacorpora, mis-tagged datasets), and the list API does not establish
+  a model's architecture or catalog task associations. Curate by hand.
 - promote.ts needs `.cache/anthology.bib` (gitignored, ~85 MB): `mkdir -p .cache &&
   curl -sL https://aclanthology.org/anthology.bib.gz | gunzip > .cache/anthology.bib`.
 - The July 2026 sweeps took papers from 27 to 405 (ACL 260 + arXiv 145).

@@ -11,7 +11,7 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 [![Tasks](https://img.shields.io/badge/tasks-12-64748b)](./data/tasks.yaml)
 [![Datasets](https://img.shields.io/badge/datasets-58-7c3aed)](./data/datasets)
 [![Papers](https://img.shields.io/badge/papers-705-2563eb)](./data/papers)
-[![Models](https://img.shields.io/badge/models-26-0891b2)](./data/models)
+[![Models](https://img.shields.io/badge/models-20-0891b2)](./data/models.yaml)
 [![Tools](https://img.shields.io/badge/tools-9-db2777)](./data/tools.yaml)
 
 **Live:** https://kishormorol.github.io/BanglaNLP-Hub/
@@ -24,14 +24,14 @@ Static site built with Astro and TypeScript. No client-side framework: the only 
 
 Everything the site renders comes from YAML under [`/data`](./data). Nothing is hardcoded in the pages.
 
-The catalog currently holds **705 papers**, **58 datasets**, **26 models**, and **9 tools** across **12 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles (see [`TODO-data.md`](./TODO-data.md)).
+The catalog currently holds **705 papers**, **58 datasets**, **20 models**, and **9 tools** across **12 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles (see [`TODO-data.md`](./TODO-data.md)).
 
 | | Count |
 | --- | --- |
 | Tasks | 12 |
 | Datasets | 58 |
 | Papers | 705 |
-| Models | 26 |
+| Models | 20 |
 | Tools | 9 |
 
 ```
@@ -39,9 +39,11 @@ data/
   tasks.yaml              task ids, English + Bangla names, descriptions
   datasets/<task>.yaml    one file per task
   papers/<task>.yaml
-  models/<task>.yaml
+  models.yaml              one record per model artifact, with one or more tasks
   leaderboards/<task>.yaml
   tools.yaml
+  contributors.yaml         resource submitters and their catalog entries
+  home-contributors.yaml    community and code credits shown on Home
   venues.yaml             venue -> badge tone
 ```
 
@@ -69,7 +71,7 @@ Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than qu
 | `npm run validate` | Validate `/data` against the Zod schemas |
 | `npm run check-links` | Check every `link:` URL in `/data` |
 
-`npm run validate` fails on missing or malformed fields, bad URLs, `verified` dates older than 12 months, duplicate ids, and leaderboards referencing an unknown dataset id. It runs in CI on every pull request and gates deployment.
+`npm run validate` fails on missing or malformed fields, bad URLs, `verified` dates older than 12 months, duplicate ids, and leaderboards referencing an unknown dataset or paper id. It runs in CI on every pull request and gates deployment.
 
 ## Status
 

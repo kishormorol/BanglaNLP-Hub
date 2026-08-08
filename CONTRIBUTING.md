@@ -16,9 +16,8 @@ that is 95% accurate is worse than useless, because nobody can tell which 5% to 
 Concretely:
 
 - **No invented scores.** Every leaderboard row must cite the paper the number comes
-  from. All leaderboards currently ship with `rows: []` and render a
-  "No leaderboard curated yet" state. That is correct output, not a gap to fill with
-  plausible numbers.
+  from. Ten leaderboards currently ship with `rows: []` and render a "No leaderboard
+  curated yet" state. That is correct output, not a gap to fill with plausible numbers.
 - **No invented BibTeX.** Copy it from the ACL Anthology or publisher page. If there
   is none, omit the field — the UI hides the copy button.
 - **No invented metadata.** Titles, venues, and years must match the published record.
@@ -39,11 +38,12 @@ npm run dev          # preview at localhost:4321
 ```
 
 1. **Fork and branch.** One logical change per PR.
-2. **Edit the YAML.** Files are grouped by task: `data/datasets/sentiment.yaml`,
-   `data/papers/ner.yaml`, and so on. The filename must match the entry's `task`.
+2. **Edit the YAML.** Dataset and paper files are grouped by task, such as
+   `data/datasets/sentiment.yaml` and `data/papers/ner.yaml`. Models use
+   `data/models.yaml` and list one or more `tasks`.
 3. **Run `npm run validate`.** It fails on missing or malformed fields, bad URLs,
-   duplicate ids, stale `verified` dates, and leaderboards pointing at a dataset id
-   that does not exist.
+   duplicate ids, stale `verified` dates, and leaderboards pointing at an unknown or
+   cross-task dataset or paper id.
 4. **Open a PR.** CI runs validation, builds the site, and link-checks any URL your PR
    added or changed.
 
@@ -88,18 +88,24 @@ Fields marked optional may be omitted entirely; do not include them as empty str
 Use the **published** title and venue, not the arXiv preprint's, when both exist.
 Prefer an ACL Anthology or DOI link over arXiv.
 
-### Model — `data/models/<task>.yaml`
+### Model — `data/models.yaml`
 
 ```yaml
 - id: csebuetnlp-banglabert
   name: csebuetnlp/banglabert      # the Hugging Face repo id where applicable
-  task: llm
+  tasks: [llm, sentiment, ner, hate, textcls]
+  stage: base                    # optional: base | fine-tuned; omit when unclear
   arch: ELECTRA
-  params: 110M
+  params: 110M                  # optional: omit when the source does not publish it
   link: https://huggingface.co/csebuetnlp/banglabert
   verified: 2026-06-28
-  note: SOTA Bangla encoder.       # optional
+  note: Pretrained Bangla ELECTRA discriminator.   # optional
 ```
+
+Use one record per downloadable model artifact. List every relevant catalog task in
+`tasks`; do not create task-specific records that point back to the same base-model URL.
+Only set `stage` when the model card establishes whether the artifact is a base or
+fine-tuned checkpoint. Omit `params` when the source does not publish a parameter count.
 
 ### Tool — `data/tools.yaml`
 
@@ -120,18 +126,18 @@ from this catalog for that reason.
 ### Leaderboard — `data/leaderboards/<task>.yaml`
 
 ```yaml
-- dataset: sentnob                 # must be an existing dataset id in the same task
-  label: SentNoB                   # display name; may add direction, e.g. "FLORES bn→en"
-  metric: Micro-F1
+- dataset: breaso                  # must be an existing dataset id in the same task
+  label: B-REASO                   # display name; may add direction, e.g. "FLORES bn→en"
+  metric: Accuracy (answer-only)
   rows:
-    - model: BanglaBERT (large)
-      score: "0.742"
-      paper: Bhattacharjee et al. 2022
-      year: 2022
+    - model: Claude-3.5-Sonnet
+      score: "68.53"
+      paperId: b-reaso-p           # existing paper id in data/papers/<task>.yaml
 ```
 
-**Adding a row requires a citation.** `paper` must identify a real publication that
-reports that exact number on that exact benchmark. Do not copy scores between papers
+**Adding a row requires a citation.** `paperId` must reference a catalog paper in the
+same task that reports that exact number on that exact benchmark. The site resolves the
+paper title, year, and URL from that canonical record. Do not copy scores between papers
 that used different splits or metrics.
 
 ## Verified dates
@@ -142,6 +148,12 @@ a nightly job re-checks every link, reporting failures in a single tracking issu
 
 Dead links are never removed automatically — a human decides whether to relink or drop
 the entry.
+
+## Contributor credits
+
+Resource submissions are credited through `data/contributors.yaml` after the resource
+is merged into the catalog. Community and code credits shown on Home are kept separately
+in `data/home-contributors.yaml`; code work is credited only after its pull request merges.
 
 ## Review
 

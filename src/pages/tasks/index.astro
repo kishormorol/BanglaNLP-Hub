@@ -17,11 +17,11 @@ const cards = tasks.map((t) => {
     dCount: byTask.datasets(t.id).length,
     pCount: byTask.papers(t.id).length,
     mCount: byTask.models(t.id).length,
-    // No curated rows anywhere yet — every card shows the honest empty state.
-    lbPrefix: top ? 'SOTA ·' : 'No leaderboard curated yet — contribute via PR',
-    sota: top ? top.model : '',
-    sotaScore: top ? `${top.score} ${board!.metric}` : '',
-    sotaOn: top ? `on ${board!.label}` : '',
+    // Most boards are uncurated; those cards show the honest empty state.
+    lbPrefix: top ? 'Top listed ·' : 'No leaderboard curated yet — contribute via PR',
+    leader: top ? top.model : '',
+    leaderScore: top ? `${top.score} ${board!.metric}` : '',
+    leaderOn: top ? `on ${board!.label}` : '',
   };
 });
 ---
@@ -36,7 +36,7 @@ const cards = tasks.map((t) => {
         style="color:var(--text2);font-size:15.5px;max-width:620px;line-height:1.6;margin:10px 0 0;text-wrap:pretty"
       >
         Every resource in the catalog is organized under a task. Each task page collects its
-        datasets, leaderboard, papers, and pretrained models.
+        datasets, leaderboard, papers, and model checkpoints.
       </p>
     </section>
 
@@ -75,8 +75,8 @@ const cards = tasks.map((t) => {
             </div>
             <div style="font-size:12px;color:var(--text2);border-top:1px solid var(--border);padding-top:10px;margin-top:2px">
               {t.lbPrefix}{' '}
-              <span style="font-weight:600;color:var(--text)">{t.sota}</span>{' '}
-              <span style="font-family:'IBM Plex Mono',monospace">{t.sotaScore}</span> {t.sotaOn}
+              <span style="font-weight:600;color:var(--text)">{t.leader}</span>{' '}
+              <span style="font-family:'IBM Plex Mono',monospace">{t.leaderScore}</span> {t.leaderOn}
             </div>
           </a>
         ))
