@@ -12,6 +12,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "validate": "tsx scripts/validate.ts",
+    "test:links": "node --import tsx --test scripts/check-links.test.ts",
     "check-links": "tsx scripts/check-links.ts",
     "discover": "tsx scripts/discover.ts",
     "promote": "tsx scripts/promote.ts",

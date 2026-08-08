@@ -27,7 +27,7 @@ jobs:
 
       - run: npm ci
 
-      - name: Check every link in /data
+      - name: Check every published link in /data
         id: check
         # Writes report.md either way; non-zero exit just means dead links exist.
         run: npm run check-links -- --report report.md
@@ -48,7 +48,7 @@ jobs:
           if [ "$FAILED" != "true" ]; then
             # Everything resolves — close a previously-open report, if any.
             if [ -n "$existing" ]; then
-              gh issue comment "$existing" --body "All links in \`/data\` are reachable again as of $(date -u +%Y-%m-%d). Closing."
+              gh issue comment "$existing" --body "No dead published links were found in \`/data\` as of $(date -u +%Y-%m-%d). Closing."
               gh issue close "$existing"
             fi
             echo "No dead links."

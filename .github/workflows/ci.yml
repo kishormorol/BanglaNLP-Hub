@@ -30,6 +30,9 @@ jobs:
       - name: Validate data
         run: npm run validate
 
+      - name: Test published link collection
+        run: npm run test:links
+
       - name: Build site
         run: npm run build
 
