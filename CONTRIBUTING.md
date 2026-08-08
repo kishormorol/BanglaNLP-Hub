@@ -39,8 +39,9 @@ npm run dev          # preview at localhost:4321
 ```
 
 1. **Fork and branch.** One logical change per PR.
-2. **Edit the YAML.** Files are grouped by task: `data/datasets/sentiment.yaml`,
-   `data/papers/ner.yaml`, and so on. The filename must match the entry's `task`.
+2. **Edit the YAML.** Dataset and paper files are grouped by task, such as
+   `data/datasets/sentiment.yaml` and `data/papers/ner.yaml`. Models use
+   `data/models.yaml` and list one or more `tasks`.
 3. **Run `npm run validate`.** It fails on missing or malformed fields, bad URLs,
    duplicate ids, stale `verified` dates, and leaderboards pointing at a dataset id
    that does not exist.
@@ -88,18 +89,24 @@ Fields marked optional may be omitted entirely; do not include them as empty str
 Use the **published** title and venue, not the arXiv preprint's, when both exist.
 Prefer an ACL Anthology or DOI link over arXiv.
 
-### Model — `data/models/<task>.yaml`
+### Model — `data/models.yaml`
 
 ```yaml
 - id: csebuetnlp-banglabert
   name: csebuetnlp/banglabert      # the Hugging Face repo id where applicable
-  task: llm
+  tasks: [llm, sentiment, ner, hate, textcls]
+  stage: base                    # optional: base | fine-tuned; omit when unclear
   arch: ELECTRA
-  params: 110M
+  params: 110M                  # optional: omit when the source does not publish it
   link: https://huggingface.co/csebuetnlp/banglabert
   verified: 2026-06-28
-  note: SOTA Bangla encoder.       # optional
+  note: Pretrained Bangla ELECTRA discriminator.   # optional
 ```
+
+Use one record per downloadable model artifact. List every relevant catalog task in
+`tasks`; do not create task-specific records that point back to the same base-model URL.
+Only set `stage` when the model card establishes whether the artifact is a base or
+fine-tuned checkpoint. Omit `params` when the source does not publish a parameter count.
 
 ### Tool — `data/tools.yaml`
 
@@ -142,6 +149,12 @@ a nightly job re-checks every link, reporting failures in a single tracking issu
 
 Dead links are never removed automatically — a human decides whether to relink or drop
 the entry.
+
+## Contributor credits
+
+Resource submissions are credited through `data/contributors.yaml` after the resource
+is merged into the catalog. Community and code credits shown on Home are kept separately
+in `data/home-contributors.yaml`; code work is credited only after its pull request merges.
 
 ## Review
 

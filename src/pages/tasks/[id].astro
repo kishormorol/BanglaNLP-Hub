@@ -365,13 +365,15 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
               style="text-decoration:none;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px"
             >
               <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;color:var(--green);word-break:break-all">
-                <span style="font-size:9.5px;font-weight:700;letter-spacing:0.05em;color:var(--gold);background:var(--goldSoft);padding:2px 6px;border-radius:5px;margin-right:7px">
-                  HF
-                </span>
+                {m.stage && (
+                  <span style="font-size:9.5px;font-weight:700;letter-spacing:0.05em;color:var(--gold);background:var(--goldSoft);padding:2px 6px;border-radius:5px;margin-right:7px">
+                    {m.stage === 'base' ? 'BASE' : 'FINE-TUNED'}
+                  </span>
+                )}
                 {m.name}
               </div>
               <div style="font-size:12.5px;color:var(--text2);margin-top:6px">
-                {m.arch} · {m.params}
+                {[m.arch, m.params].filter(Boolean).join(' · ')}
               </div>
               {m.note && (
                 <div style="font-size:12.5px;color:var(--text2);margin-top:4px">{m.note}</div>
