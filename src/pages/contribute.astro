@@ -11,7 +11,7 @@
  *     a pre-filled GitHub issue against the Submit a resource template.
  */
 import Base from '../layouts/Base.astro';
-import { tasks, contributors, papers, models, datasets } from '../lib/data.ts';
+import { tasks, contributors, papers, models, datasets, leaderboards } from '../lib/data.ts';
 
 const REPO = 'https://github.com/kishormorol/BanglaNLP-Hub';
 
@@ -21,6 +21,9 @@ const paperLink = new Map(papers.map((p) => [p.title, p.link]));
 // record so the card can link to it and caption its details.
 const modelByName = new Map(models.map((m) => [m.name, m]));
 const datasetByName = new Map(datasets.map((d) => [d.name, d]));
+const emptyLeaderboardCount = Object.values(leaderboards)
+  .flat()
+  .filter((leaderboard) => leaderboard.rows.length === 0).length;
 
 const steps = [
   {
@@ -107,9 +110,10 @@ const preStyle =
       </div>
       <p style="margin:6px 0 0;font-size:13.5px;color:var(--text2);line-height:1.6;text-wrap:pretty">
         No invented scores, sizes, licenses, or BibTeX. Every leaderboard row must cite the paper
-        reporting that exact number on that exact benchmark — which is why all leaderboards are
-        currently empty. A working link does not prove the metadata is right. If you are unsure
-        about a field, leave it out and say so in the pull request; missing is fine, wrong is not.
+        reporting that exact number on that exact benchmark — which is why {emptyLeaderboardCount}
+        leaderboards still render an empty state. A working link does not prove the metadata is
+        right. If you are unsure about a field, leave it out and say so in the pull request; missing
+        is fine, wrong is not.
         Full rules in <a href={`${REPO}/blob/main/CONTRIBUTING.md`} target="_blank" rel="noopener"
           >CONTRIBUTING.md</a
         >.

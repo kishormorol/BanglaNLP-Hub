@@ -22,6 +22,7 @@ const task = tasks.find((t) => t.id === id)!;
 // Default sort matches the prototype: year descending.
 const datasets = [...byTask.datasets(task.id)].sort((a, b) => b.year - a.year);
 const papers = [...byTask.papers(task.id)].sort((a, b) => b.year - a.year);
+const paperById = new Map(papers.map((paper) => [paper.id, paper]));
 const models = byTask.models(task.id);
 // Curated boards first, so the default-selected pill is never an empty one.
 const boards = [...byTask.leaderboards(task.id)].sort(
@@ -29,12 +30,11 @@ const boards = [...byTask.leaderboards(task.id)].sort(
 );
 
 // A board with zero rows carries no information, so it is treated as "not
-// curated" for display. Every board is currently empty by design — see
-// TODO-data.md. This differs from the prototype, which would render an
-// empty table whenever a board existed at all.
+// curated" for display instead of rendering a blank table.
 const hasRows = boards.some((b) => b.rows.length > 0);
 const topBoard = hasRows ? boards.find((b) => b.rows.length > 0)! : null;
 const top = topBoard?.rows[0] ?? null;
+const topPaper = top ? paperById.get(top.paperId)! : null;
 
 const tabs = [
   ['datasets', `Datasets (${datasets.length})`],
@@ -82,9 +82,9 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
         <span>·</span>
         <span><strong style="color:var(--text)">{papers.length}</strong> papers</span>
         {
-          top && topBoard && (
+          top && topBoard && topPaper && (
             <span style="background:var(--greenSoft);color:var(--green);padding:4px 12px;border-radius:99px;font-weight:600;font-size:12.5px">
-              SOTA · {top.model} — {top.score} {topBoard.metric} ({top.year})
+              Top listed · {top.model} — {top.score} {topBoard.metric} ({topPaper.year})
             </span>
           )
         }
@@ -234,7 +234,7 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
                 ) : (
                 <>
                 <div style="font-size:13px;color:var(--text2);margin-bottom:12px">
-                  State of the art on{' '}
+                  Results listed for{' '}
                   <span style="font-weight:600;color:var(--text)">{b.label}</span> · metric:{' '}
                   <span style="font-family:'IBM Plex Mono',monospace">{b.metric}</span>
                 </div>
@@ -260,7 +260,9 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
                       </tr>
                     </thead>
                     <tbody>
-                      {b.rows.map((r, ri) => (
+                      {b.rows.map((r, ri) => {
+                        const source = paperById.get(r.paperId)!;
+                        return (
                         <tr style={`background:${ri === 0 ? 'var(--greenSoft)' : 'transparent'}`}>
                           <td style={`${tdBase};font-family:'IBM Plex Mono',monospace;font-weight:600;color:${ri === 0 ? 'var(--green)' : 'var(--text2)'}`}>
                             {ri + 1}
@@ -269,19 +271,22 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
                             {r.model}
                             {ri === 0 && (
                               <span style="font-size:10.5px;font-weight:600;color:var(--green);background:var(--greenSoft);padding:2px 7px;border-radius:99px;margin-left:6px;display:inline-block">
-                                SOTA
+                                Top listed
                               </span>
                             )}
                           </td>
                           <td style={`${tdBase};font-family:'IBM Plex Mono',monospace;font-size:13px`}>
                             {r.score}
                           </td>
-                          <td style={`${tdBase};font-size:12.5px;color:var(--text2)`}>{r.paper}</td>
+                          <td style={`${tdBase};font-size:12.5px;color:var(--text2)`}>
+                            <a href={source.link} target="_blank" rel="noopener">{source.title}</a>
+                          </td>
                           <td style={`${tdBase};font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--text2)`}>
-                            {r.year}
+                            {source.year}
                           </td>
                         </tr>
-                      ))}
+                        );
+                      })}
                     </tbody>
                   </table>
                 </div>

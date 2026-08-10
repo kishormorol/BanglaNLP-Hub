@@ -86,7 +86,7 @@ npm run check-links  probe every link: URL in /data
 
 `npm run validate` must pass before committing; CI runs it on every PR and it gates
 deployment. It fails on malformed fields, bad URLs, `verified` dates older than 12
-months, duplicate ids, and leaderboards referencing an unknown dataset id.
+months, duplicate ids, and leaderboards referencing an unknown dataset or paper id.
 
 `check-links` identifies with an honest agent first, but before calling a link dead
 it re-probes with a browser agent and only reports it as dead when the browser agent

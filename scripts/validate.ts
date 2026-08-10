@@ -6,7 +6,7 @@
  *   2. malformed URLs
  *   3. `verified` dates older than VERIFY_MAX_AGE_MONTHS
  *   4. duplicate ids within an entity type
- *   5. a leaderboard referencing a dataset id that does not exist
+ *   5. a leaderboard referencing a dataset or paper id that does not exist
  *   6. an entry whose `task` is not a known task id
  *   7. a paper venue with no tone in venues.yaml
  *
@@ -180,6 +180,7 @@ for (const p of papers.items) {
 
 // ---- leaderboards ----------------------------------------------------------
 const datasetIds = new Set(datasets.items.map((d) => d.id));
+const paperById = new Map(papers.items.map((paper) => [paper.id, paper]));
 for (const path of listDir('leaderboards')) {
   const file = rel(path);
   const expected = basename(path, '.yaml');
@@ -191,6 +192,14 @@ for (const path of listDir('leaderboards')) {
       const ds = datasets.items.find((d) => d.id === board.dataset)!;
       if (ds.task !== expected) {
         fail(file, `leaderboard '${board.label}' references dataset '${ds.id}' which belongs to task '${ds.task}'`);
+      }
+    }
+    for (const row of board.rows) {
+      const paper = paperById.get(row.paperId);
+      if (!paper) {
+        fail(file, `leaderboard '${board.label}' references unknown paper id '${row.paperId}'`);
+      } else if (paper.task !== expected) {
+        fail(file, `leaderboard '${board.label}' references paper '${paper.id}' which belongs to task '${paper.task}'`);
       }
     }
   }
