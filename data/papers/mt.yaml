@@ -131,13 +131,6 @@
   year: 2025
   link: https://aclanthology.org/2025.iwslt-1.23/
   task: mt
-- id: haider-etal-2025-robustness
-  title: Robustness of LLMs to Transliteration Perturbations in Bangla
-  authors: Haider et al.
-  venue: BLP @ EMNLP
-  year: 2025
-  link: https://aclanthology.org/2025.banglalp-1.27/
-  task: mt
 - id: arxiv-2510-18898
   title: "Transformer-Based Low-Resource Language Translation: A Study on Standard Bengali to Sylheti"
   authors: Oni et al.
