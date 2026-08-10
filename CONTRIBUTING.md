@@ -149,7 +149,9 @@ a nightly job re-checks every published link, reporting failures in a single tra
 issue. Unverified `data/inbox/` candidates are excluded.
 
 Dead links are never removed automatically — a human decides whether to relink or drop
-the entry.
+the entry. A link is only called dead when a browser agent gets a 404/410 and a second
+probe reproduces it; anything else is reported as "refused an automated request". Even
+so, re-probe by hand before dropping an entry — a report is evidence, not a verdict.
 
 ## Contributor credits
 
