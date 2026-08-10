@@ -90,9 +90,11 @@ months, duplicate ids, and leaderboards referencing an unknown dataset or paper 
 
 `check-links` identifies with an honest agent first, but before calling a link dead
 it re-probes with a browser agent and only reports it as dead when the browser agent
-also gets 404/410. Any other failure — network error, timeout, 401/403/405/429, 5xx —
-is reported as "refused an automated request", never as dead: publishers like MDPI and
-many DOI hosts drop or error non-browser agents for pages that open fine in a browser.
+also gets 404/410 **and a second probe reproduces it**. Any other failure — network
+error, timeout, 401/403/405/429, 5xx, or a 404 that does not reproduce — is reported
+as "refused an automated request", never as dead: publishers like MDPI and many DOI
+hosts drop or error non-browser agents for pages that open fine in a browser, and
+flaky origins serve one-off 404s under load (issue #83 reported a live paper as dead).
 Unverified discovery candidates under `data/inbox/` are not published and are excluded.
 
 ## Verifying changes

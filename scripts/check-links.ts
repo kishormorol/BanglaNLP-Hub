@@ -28,8 +28,8 @@ const reportPath = argOf('--report');
 const CONCURRENCY = 8;
 const TIMEOUT_MS = 20_000;
 // Slow-but-alive hosts (e.g. nltr.org, ~6–28s) throw transient connection
-// errors under load. Retry those before calling a link dead; HTTP statuses
-// are deterministic and never retried.
+// errors under load. Retry those before calling a link dead. HTTP statuses are
+// not retried here — a 404/410 is instead confirmed once in classify().
 const RETRIES = 2;
 const RETRY_DELAY_MS = 3_000;
 const TRANSIENT = new Set(['timeout', 'network error']);
@@ -149,6 +149,11 @@ type Verdict = 'reachable' | 'dead' | 'blocked';
  * was refused. Every other failure is 'blocked': surfaced for awareness but
  * never failing the run, so the nightly issue stays trustworthy instead of
  * drowning maintainers in links that open fine in a browser.
+ *
+ * A 404/410 is confirmed with one more probe before we report it. HTTP statuses
+ * are deterministic in principle, but flaky origins do serve a one-off 404 under
+ * load: a single unconfirmed status put a live paper on the nightly issue and
+ * nearly got the entry deleted (#83).
  */
 async function classify(url: string): Promise<{ verdict: Verdict; status: string }> {
   const honest = await probeWithRetry(url, HONEST_UA);
@@ -156,8 +161,13 @@ async function classify(url: string): Promise<{ verdict: Verdict; status: string
 
   const browser = await probeWithRetry(url, BROWSER_UA);
   if (browser.ok) return { verdict: 'blocked', status: `${honest.status} (bot-only)` };
-  if (DEAD_STATUSES.has(browser.status)) return { verdict: 'dead', status: browser.status };
-  return { verdict: 'blocked', status: browser.status };
+  if (!DEAD_STATUSES.has(browser.status)) return { verdict: 'blocked', status: browser.status };
+
+  await sleep(RETRY_DELAY_MS);
+  const confirm = await probe(url, BROWSER_UA);
+  if (confirm.ok) return { verdict: 'blocked', status: `${browser.status} (not reproducible)` };
+  if (DEAD_STATUSES.has(confirm.status)) return { verdict: 'dead', status: confirm.status };
+  return { verdict: 'blocked', status: confirm.status };
 }
 
 const all = collect();
