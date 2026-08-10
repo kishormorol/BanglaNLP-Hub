@@ -308,6 +308,26 @@ for (const [name, fn] of Object.entries(sources)) {
 
 found.sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.title));
 
+/**
+ * Merge into the existing inbox rather than replacing it. This file is a triage
+ * queue a human works through over time, and each source is capped by --limit,
+ * so a later sweep returns a different slice than an earlier one. Overwriting
+ * silently discarded every candidate nobody had got to yet — a run that found
+ * 203 candidates once dropped a 2,558-entry OpenAlex backlog.
+ *
+ * Dedup uses the same normalised link/title comparison as the catalogue diff
+ * above, so re-finding a candidate already queued is a no-op.
+ */
+const existing: Candidate[] = existsSync(OUT)
+  ? ((parse(readFileSync(OUT, 'utf8')) as Candidate[] | null) ?? [])
+  : [];
+const merged = [...existing];
+for (const c of found) {
+  if (!merged.some((m) => normUrl(m.link) === normUrl(c.link) || norm(m.title) === norm(c.title)))
+    merged.push(c);
+}
+const addedCount = merged.length - existing.length;
+
 mkdirSync(inboxDir, { recursive: true });
 const header = `# Discovery candidates — NOT part of the catalog.
 #
@@ -320,9 +340,12 @@ const header = `# Discovery candidates — NOT part of the catalog.
 # data/datasets/<task>.yaml for datasets, or data/models.yaml for models.
 # See CONTRIBUTING.md. Do not bulk-import this file.
 `;
-writeFileSync(OUT, `${header}\n${stringify(found, { lineWidth: 0 })}`, 'utf8');
+writeFileSync(OUT, `${header}\n${stringify(merged, { lineWidth: 0 })}`, 'utf8');
 
-const by = (k: string) => found.filter((c) => c.source === k).length;
-console.log(`\n${found.length} candidates → data/inbox/candidates.yaml`);
+const by = (k: string) => merged.filter((c) => c.source === k).length;
+console.log(
+  `\n${found.length} found this sweep · ${addedCount} new · ${found.length - addedCount} already queued`,
+);
+console.log(`${merged.length} candidates in data/inbox/candidates.yaml (was ${existing.length})`);
 console.log(`  acl ${by('acl')} · arxiv ${by('arxiv')} · huggingface ${by('huggingface')} · openalex ${by('openalex')}`);
-console.log(`  ${found.filter((c) => !c.suggestedTask).length} with no task guess (need manual triage)`);
+console.log(`  ${merged.filter((c) => !c.suggestedTask).length} with no task guess (need manual triage)`);
