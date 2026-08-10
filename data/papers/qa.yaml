@@ -43,14 +43,14 @@
 - id: ahmad-etal-2025-bncontextqa
   title: "bnContextQA: Benchmarking Long-Context Question Answering and Challenges in Bangla"
   authors: Ahmad et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.29/
   task: qa
 - id: shahriar-etal-2025-p6jiggasha
   title: "P6Jiggasha: Benchmarking Large Language Models on Bangla Physics Question Answering with Cross-lingual Evaluation"
   authors: Shahriar et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.16/
   task: qa

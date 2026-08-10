@@ -29,7 +29,7 @@
 - id: sami-etal-2025-comparative
   title: A Comparative Analysis of Retrieval-Augmented Generation Techniques for Bengali Standard-to-Dialect Machine Translation Using LLMs
   authors: Sami et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.22/
   task: mt
@@ -57,7 +57,7 @@
 - id: bhuiyan-etal-2025-bhasabodh
   title: "BhasaBodh: Bridging Bangla Dialects and Romanized Forms through Machine Translation"
   authors: Bhuiyan et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.9/
   task: mt
@@ -85,7 +85,7 @@
 - id: shahrier-etal-2025-cuet
   title: "CUET\\_Expelliarmus at BLP2025 Task 2: Leveraging Instruction Translation and Refinement for Bangla-to-Python Code Generation with Open-Source LLMs"
   authors: Shahrier et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.62/
   task: mt
@@ -106,7 +106,7 @@
 - id: mahjabin-etal-2025-human
   title: "Human--LLM Benchmarks for Bangla Dialect Translation: Sylheti and Chittagonian on the BanglaCHQ-Summ Corpus"
   authors: Mahjabin et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.18/
   task: mt

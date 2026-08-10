@@ -15,7 +15,7 @@
 - id: haider-alam-2025-comprehensive
   title: A Comprehensive Text Optimization Approach to Bangla Summarization
   authors: Haider et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.13/
   task: summ
