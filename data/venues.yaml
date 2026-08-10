@@ -2,7 +2,12 @@ ACL: green
 Findings ACL: green
 EMNLP: red
 Findings EMNLP: red
+# The BLP workshop moves between host conferences: BLP-2023 was at EMNLP,
+# BLP-2025 at IJCNLP-AACL. Each inherits its host's tone. `BLP` alone is the
+# honest fallback for an edition whose host nobody has verified yet.
 BLP @ EMNLP: red
+BLP @ IJCNLP-AACL: gold
+BLP: gray
 NAACL: blue
 Findings NAACL: blue
 Findings EACL: blue

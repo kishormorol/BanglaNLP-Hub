@@ -43,7 +43,7 @@
 - id: chowdhury-ferdous-2025-boigenre
   title: "BOIGENRE: A Large-Scale Bangla Dataset for Genre Classification from Book Summaries"
   authors: Chowdhury et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.20/
   task: textcls
@@ -57,7 +57,7 @@
 - id: rahman-ali-2025-clustering
   title: Clustering LLM-based Word Embeddings to Determine Topics from Bangla Articles
   authors: Rahman et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.25/
   task: textcls
@@ -85,7 +85,7 @@
 - id: sarkar-etal-2025-zero
   title: "Zero-Shot Multi-Label Classification of Bangla Documents: Large Decoders Vs. Classic Encoders"
   authors: Sarkar et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.7/
   task: textcls

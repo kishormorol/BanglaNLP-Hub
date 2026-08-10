@@ -33,6 +33,12 @@ headed "Real resources where known". A meaningful fraction was not real. Removed
 Also corrected: two papers whose ACL links resolved fine but pointed at *entirely
 different papers*, and several truncated or invented titles and venues.
 
+**Venues can be wrong in bulk.** All 54 BLP-2025 papers were labelled `BLP @ EMNLP`;
+that workshop was co-located with IJCNLP-AACL 2025, not EMNLP (BLP-2023 *was* at
+EMNLP). The cause was a `normalizeVenue()` rule in `promote.ts` that mapped every
+"Workshop on Bangla Language Processing" booktitle to one host. A per-entry link
+check cannot catch this class of error — only reading the volume can.
+
 **Implication:** a link returning 200 proves nothing about whether the metadata is
 right. When touching an entry, verify it against the authoritative source — ACL
 Anthology `.bib`, the arXiv API, or the Hugging Face API.

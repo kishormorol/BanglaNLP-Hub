@@ -94,7 +94,15 @@ function normalizeVenue(bookRaw: string | undefined, key: string): string | unde
     if (/ACL/i.test(b)) return 'Findings ACL';
     return 'Findings ACL';
   }
-  if (/Workshop on Bangla Language Processing/i.test(b)) return 'BLP @ EMNLP';
+  // BLP moves between host conferences — 2023 at EMNLP, 2025 at IJCNLP-AACL —
+  // so the host cannot be inferred from the booktitle wording alone. Claiming
+  // the wrong one is a metadata error no link check can catch, so only label a
+  // host that has been verified against the volume; later editions fall back to
+  // a bare `BLP` until someone checks.
+  if (/Workshop on Bangla Language Processing/i.test(b)) {
+    const host = { '2023': 'EMNLP', '2025': 'IJCNLP-AACL' }[/\(BLP-(\d{4})\)/.exec(b)?.[1] ?? ''];
+    return host ? `BLP @ ${host}` : 'BLP';
+  }
   if (/Annual Meeting of the Association for Computational Linguistics/i.test(b)) return 'ACL';
   if (/Conference on Empirical Methods in Natural Language Processing/i.test(b)) return 'EMNLP';
   // NAACL renamed its 2025 edition "Nations of the Americas Chapter".

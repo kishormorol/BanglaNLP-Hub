@@ -36,7 +36,7 @@
 - id: kawser-etal-2025-hybrid
   title: A Hybrid Transformer--Sequential Model for Depression Detection in Bangla--English Code-Mixed Text
   authors: Kawser et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.8/
   task: sentiment
@@ -50,7 +50,7 @@
 - id: kabir-etal-2025-advancing
   title: Advancing Subjectivity Detection in Bengali News Articles Using Transformer Models with POS-Aware Features
   authors: Kabir et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.11/
   task: sentiment
@@ -92,7 +92,7 @@
 - id: jawad-etal-2025-benchmarking
   title: Benchmarking Large Language Models on Bangla Dialect Translation and Dialectal Sentiment Analysis
   authors: Jawad et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.26/
   task: sentiment
@@ -120,7 +120,7 @@
 - id: pal-das-2025-checksent
   title: "CheckSent-BN: A Bengali Multi-Task Dataset for Claim Checkworthiness and Sentiment Classification from News Headlines"
   authors: Pal et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.10/
   task: sentiment

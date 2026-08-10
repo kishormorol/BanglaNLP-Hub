@@ -64,7 +64,7 @@
 - id: laskar-paul-2025-bahash
   title: "Bahash-AI at BLP-2025 Task 1: Bangla Hate Speech Detection using Data Augmentation and Pre-trained Model"
   authors: Laskar et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.33/
   task: hate
@@ -78,14 +78,14 @@
 - id: raquib-etal-2025-banhate
   title: "BanHate: An Up-to-Date and Fine-Grained Bangla Hate Speech Dataset"
   authors: Raquib et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.19/
   task: hate
 - id: mia-fahim-2025-banhateme
   title: "BanHateME : Understanding Hate in Bangla Memes thorough Detection, Categorization, and Target Profiling"
   authors: Mia et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.15/
   task: hate
@@ -106,7 +106,7 @@
 - id: tripty-etal-2025-belite
   title: "BElite at BLP-2025 Task 1: Leveraging Ensemble for Multi Task Hate Speech Detection in Bangla"
   authors: Tripty et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.36/
   task: hate
@@ -127,77 +127,77 @@
 - id: hasan-2025-catalyst
   title: "Catalyst at BLP-2025 Task 1: Transformer Ensembles and Multi-task Learning Approaches for Bangla Hate Speech Detection"
   authors: Hasan
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.41/
   task: hate
 - id: islam-etal-2025-code
   title: "Code\\_Gen at BLP-2025 Task 1: Enhancing Bangla Hate Speech Detection with Transformers through Token-Aware Adversarial Contrastive Training and Layer-wise Learning Rate Decay"
   authors: Islam et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.47/
   task: hate
 - id: alam-etal-2025-cou
   title: "CoU-CU-DSG at BLP-2025 Task 1: Leveraging Weighted Probabilistic Fusion of Language Models for Bangla Hate Speech Detection"
   authors: Alam et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.44/
   task: hate
 - id: hossan-etal-2025-cuet-nlp-zenith
   title: "CUET-NLP\\_Zenith at BLP-2025 Task 1: A Multi-Task Ensemble Approach for Detecting Hate Speech in Bengali YouTube Comments"
   authors: Hossan et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.38/
   task: hate
 - id: tripty-etal-2025-cuet
   title: "CUET\\_Sntx\\_Srfrs at BLP-2025 Task 1: Combining Hierarchical Classification and Ensemble Learning for Bengali Hate Speech Detection"
   authors: Tripty et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.48/
   task: hate
 - id: hasan-etal-2025-ecstasy
   title: "Ecstasy at BLP-2025 Task 1: TF-IDF Informed Prompt Engineering with LoRA Fine-tuning for Bangla Hate Speech Detection"
   authors: Hasan et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.52/
   task: hate
 - id: hoque-etal-2025-gradient
   title: "Gradient Masters at BLP-2025 Task 1: Advancing Low-Resource NLP for Bengali using Ensemble-Based Adversarial Training for Hate Speech Detection"
   authors: Hoque et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.34/
   task: hate
 - id: anam-etal-2025-hatenet
   title: "HateNet-BN at BLP-2025 Task 1: A Hierarchical Attention Approach for Bangla Hate Speech Detection"
   authors: Anam et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.51/
   task: hate
 - id: yasir-2025-heisenberg
   title: "Heisenberg at BLP-2025 Task 1: Bangla Hate Speech Classification using Pretrained Language Models and Data Augmentation"
   authors: Yasir
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.42/
   task: hate
 - id: nabil-etal-2025-nsu
   title: "NSU\\_MILab at BLP-2025 Task 1: Decoding Bangla Hate Speech: Fine-Grained Type and Target Detection via Transformer Ensembles"
   authors: Nabil et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.40/
   task: hate
 - id: hasan-etal-2025-overview
   title: "Overview of BLP-2025 Task 1: Bangla Hate Speech Identification"
   authors: Hasan et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.32/
   task: hate
@@ -211,42 +211,42 @@
 - id: tahmid-etal-2025-pentaml
   title: "PentaML at BLP-2025 Task 1: Linear Probing of Pre-trained Transformer-based Models for Bangla Hate Speech Detection"
   authors: Tahmid et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.50/
   task: hate
 - id: fahim-khan-2025-perceptionlab
   title: "PerceptionLab at BLP-2025 Task 1: Domain-Adapted BERT for Bangla Hate Speech Detection: Contrasting Single-Shot and Hierarchical Multiclass Classification"
   authors: Fahim et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.45/
   task: hate
 - id: hossan-roy-dipta-2025-promptguard
   title: "PromptGuard at BLP-2025 Task 1: A Few-Shot Classification Framework Using Majority Voting and Keyword Similarity for Bengali Hate Speech Detection"
   authors: Hossan et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.35/
   task: hate
 - id: saha-etal-2025-retriv
   title: "Retriv at BLP-2025 Task 1: A Transformer Ensemble and Multi-Task Learning Approach for Bangla Hate Speech Identification"
   authors: Saha et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.43/
   task: hate
 - id: mahim-hasan-2025-teamhatemate
   title: "TeamHateMate at BLP Task1: Divide and Conquer: A Two-Stage Cascaded Framework with K-Fold Ensembling for Multi-Label Bangla Hate Speech Classification"
   authors: Mahim et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.39/
   task: hate
 - id: sayem-rahman-2025-velora
   title: "Velora at BLP-2025 Task 1: Multi-Method Evaluation for Hate Speech Classification in Bangla Text"
   authors: Sayem et al.
-  venue: BLP @ EMNLP
+  venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.49/
   task: hate
