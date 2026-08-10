@@ -19,7 +19,9 @@ TACL: green
 Interspeech: red
 SLTU: gold
 NeurIPS: blue
-WACV: blue
+# WACV is a computer-vision venue with no tier in this NLP-family palette, so it
+# takes gray — the honest default — rather than an invented tier mapping.
+WACV: gray
 arXiv: gray
 IEEE Access: gray
 IEEE DSAA: gray
