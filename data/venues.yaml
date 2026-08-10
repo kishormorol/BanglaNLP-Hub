@@ -19,6 +19,7 @@ TACL: green
 Interspeech: red
 SLTU: gold
 NeurIPS: blue
+WACV: blue
 arXiv: gray
 IEEE Access: gray
 IEEE DSAA: gray

@@ -46,3 +46,7 @@
   name: LLM Benchmarks
   bn: বৃহৎ ভাষা মডেল মূল্যায়ন
   desc: Evaluating large language models on Bangla knowledge, reasoning, and generation.
+- id: vqa
+  name: Visual Question Answering
+  bn: চিত্রভিত্তিক প্রশ্নোত্তর
+  desc: Answering questions about images in Bangla, and evaluating vision-language models on Bengali visual and cultural content.

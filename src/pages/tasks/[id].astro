@@ -78,9 +78,15 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
       <div
         style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:16px;font-size:13.5px;color:var(--text2)"
       >
-        <span><strong style="color:var(--text)">{datasets.length}</strong> datasets</span>
+        <span>
+          <strong style="color:var(--text)">{datasets.length}</strong>
+          {datasets.length === 1 ? ' dataset' : ' datasets'}
+        </span>
         <span>·</span>
-        <span><strong style="color:var(--text)">{papers.length}</strong> papers</span>
+        <span>
+          <strong style="color:var(--text)">{papers.length}</strong>
+          {papers.length === 1 ? ' paper' : ' papers'}
+        </span>
         {
           top && topBoard && topPaper && (
             <span style="background:var(--greenSoft);color:var(--green);padding:4px 12px;border-radius:99px;font-weight:600;font-size:12.5px">

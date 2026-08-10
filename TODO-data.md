@@ -3,6 +3,26 @@
 Known gaps, deliberately left empty rather than filled with invented values.
 Contributions welcome — see CONTRIBUTING.md.
 
+## VQA task added (2026-08-10)
+
+`vqa` — Visual Question Answering — is the catalog's first **vision-language** task,
+added from issue #85. It ships with one paper (BanglaProtha, WACV 2026) and no
+datasets, models, or leaderboard; those empty states are correct output.
+
+Outstanding:
+
+- **BanglaProtha dataset not filed.** The Kaggle release
+  (`kaggle.com/datasets/sourove/bangla-culturally-relevant-vqa`) resolves, but its
+  `license` and `size` could not be read without Kaggle credentials — the page is
+  JS-rendered and the only `License-Identifier` strings in its HTML belong to bundled
+  JS libraries, not the dataset. Both fields are schema-required, so the dataset is
+  deliberately absent rather than guessed. Needs a human with a Kaggle account, or
+  the figures from the paper.
+- **`bn` label needs a native-speaker check.** `চিত্রভিত্তিক প্রশ্নোত্তর` is a
+  translation, not a sourced term.
+- **Scope.** Admitting vision-language work invites image captioning, OCR-VQA, and
+  document VQA. Whether those belong is still open.
+
 ## Speech taxonomy split: SER + Speaker tasks (2026-07-23)
 
 The single `speech` ("ASR / TTS") task was silently acting as a catch-all for all
