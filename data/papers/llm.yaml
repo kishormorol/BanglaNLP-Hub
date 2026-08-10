@@ -685,3 +685,10 @@
   year: 2021
   link: https://doi.org/10.14419/ijet.v10i2.31538
   task: llm
+- id: haider-etal-2025-robustness
+  title: Robustness of LLMs to Transliteration Perturbations in Bangla
+  authors: Haider et al.
+  venue: BLP @ EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.27/
+  task: llm
