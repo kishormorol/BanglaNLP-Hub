@@ -1,0 +1,8 @@
+- id: banglaprotha-p
+  title: "BanglaProtha: Evaluating Vision Language Models in Underrepresented Long-tail Cultural Contexts"
+  authors: Fahim et al.
+  venue: WACV
+  year: 2026
+  link: https://openaccess.thecvf.com/content/WACV2026/html/Fahim_BanglaProtha_Evaluating_Vision_Language_Models_in_Underrepresented_Long-tail_Cultural_Contexts_WACV_2026_paper.html
+  task: vqa
+  note: Aspect-based evaluation of vision-language models on Bengali cultural images with native Bengali questions and multiple-choice options.
