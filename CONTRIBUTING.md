@@ -46,6 +46,7 @@ npm run dev          # preview at localhost:4321
    cross-task dataset or paper id.
 4. **Open a PR.** CI runs validation, builds the site, and link-checks any URL your PR
    added or changed.
+   Unverified `data/inbox/` candidates are excluded.
 
 ## Entry formats
 
@@ -144,7 +145,8 @@ that used different splits or metrics.
 
 `verified` means *you personally opened the link and confirmed the resource is there*.
 It is not the publication date. Validation rejects anything older than 12 months, and
-a nightly job re-checks every link, reporting failures in a single tracking issue.
+a nightly job re-checks every published link, reporting failures in a single tracking
+issue. Unverified `data/inbox/` candidates are excluded.
 
 Dead links are never removed automatically — a human decides whether to relink or drop
 the entry.
