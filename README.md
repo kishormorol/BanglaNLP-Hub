@@ -24,7 +24,7 @@ Static site built with Astro and TypeScript. No client-side framework: the only 
 
 Everything the site renders comes from YAML under [`/data`](./data). Nothing is hardcoded in the pages.
 
-The catalog currently holds **706 papers**, **58 datasets**, **20 models**, and **9 tools** across **13 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles (see [`TODO-data.md`](./TODO-data.md)).
+The catalog currently holds **706 papers**, **59 datasets**, **20 models**, and **9 tools** across **13 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles (see [`TODO-data.md`](./TODO-data.md)).
 
 | | Count |
 | --- | --- |
@@ -56,7 +56,7 @@ The catalog is only useful if its contents are true, so the project holds a hard
 - **Links are checked.** Every published `link:` URL is verified nightly. Unverified `data/inbox/` candidates are excluded. Dead links are reported in a single tracking issue; entries are never removed automatically.
 - **Entries get verified by hand.** Papers have been audited against the ACL Anthology, arXiv, and OpenAlex (title, authors, and abstract), and their task assignments are being spot-checked and corrected. Several entries inherited from the original design prototype turned out to be fabricated — a duplicate under an invented title, a model that does not exist, a paper with no publication — and were removed.
 
-Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 52 datasets lack BibTeX and ten of the eleven leaderboards await rows.
+Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 53 datasets lack BibTeX and ten of the eleven leaderboards await rows.
 
 **Dataset fields are verified at the source.** `license`, `size`, and `year` have each had an audit pass (July 2026), and the datasets added by mining resource papers had their `license` and `size` read from the dataset's own repository or card — never the paper's license icon, which describes the paper, not the data. Corrections and the entries still unconfirmed (because no reachable source states a figure) are listed in `TODO-data.md`, along with ~55 candidate datasets held back for unverifiable licenses or being out of the text-NLP scope. One field is recorded as *known wrong* with no known replacement — deliberately. A wrong value we can point at is more useful than a plausible one we invented.
 

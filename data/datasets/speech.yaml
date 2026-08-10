@@ -42,3 +42,14 @@
   link: https://huggingface.co/datasets/Sanjidh090/Lipi-Ghor-bn-882-SSTT
   verified: 2026-07-22
   desc: Long-form multi-speaker Bangla ASR and speaker-diarization corpus with aligned transcriptions and timestamps. Gated access.
+- id: bengali-loop-asr
+  name: Bengali-Loop (ASR corpus)
+  task: speech
+  size: 191 recordings / 158.6 hrs
+  sizeN: 158.6
+  license: Mixed
+  year: 2026
+  source: Bengali-Loop (DL Sprint 4.0, Tabib et al.)
+  link: https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-long-form-speech-recognition/data
+  verified: 2026-08-10
+  desc: Long-form Bangla ASR corpus of 792k words from 11 YouTube channels, built by subtitle extraction with human-in-the-loop transcript verification.

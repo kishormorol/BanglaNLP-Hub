@@ -3,6 +3,29 @@
 Known gaps, deliberately left empty rather than filled with invented values.
 Contributions welcome — see CONTRIBUTING.md.
 
+## Bengali-Loop ASR corpus filed (2026-08-10)
+
+From issue #86. Every field is sourced from the Bengali-Loop paper
+(arXiv:2602.14291) — 191 recordings, 158.6 hours, 792k words, 11 YouTube
+channels — and the `link` is the paper's own hyperlink target. Two caveats:
+
+- **`license: Mixed` is an interpretation, not a quoted value.** The paper's
+  "Release, Licensing, and Reproducibility" section assigns no license: audio is
+  drawn from publicly accessible Bengali media, annotations rather than raw media
+  are released where redistribution is constrained, and users are asked to
+  "respect original source licenses". `Mixed` is the closest true label the
+  schema allows (precedent: `megaverse`), but the real state is *unspecified and
+  source-dependent*. Worth revisiting if the authors ever declare one.
+- **The link is a Kaggle *competition* data tab.** It returns 200, but competition
+  data commonly requires accepting the rules to download, and that has not been
+  confirmed for a closed competition. If it turns out to be gated, this should be
+  repointed at a more open canonical location.
+
+Not yet filed from the same paper: the **diarization corpus** (24 recordings,
+22 hours, 5,744 segments) — blocked on the same licensing question in #86 — and
+the **Bengali-Loop paper itself**, which would be a straightforward `speech`
+paper entry.
+
 ## VQA task added (2026-08-10)
 
 `vqa` — Visual Question Answering — is the catalog's first **vision-language** task,
