@@ -13,7 +13,8 @@
  * *candidate*: unverified, with a guessed task, and often with no license or size
  * information. Promoting a candidate means opening its link, confirming the
  * metadata against the source, filling in the missing fields, and moving it into
- * data/<kind>/<task>.yaml by hand — see CONTRIBUTING.md.
+ * data/papers/<task>.yaml, data/datasets/<task>.yaml, or data/models.yaml by hand.
+ * See CONTRIBUTING.md.
  */
 import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve, join } from 'node:path';
@@ -315,7 +316,8 @@ const header = `# Discovery candidates — NOT part of the catalog.
 # and metadata are absent. Nothing in this file is rendered by the site.
 #
 # To promote one: open its link, confirm the metadata against the source, fill in
-# the required fields, and move it into data/<kind>/<task>.yaml by hand.
+# the required fields, then use data/papers/<task>.yaml for papers,
+# data/datasets/<task>.yaml for datasets, or data/models.yaml for models.
 # See CONTRIBUTING.md. Do not bulk-import this file.
 `;
 writeFileSync(OUT, `${header}\n${stringify(found, { lineWidth: 0 })}`, 'utf8');

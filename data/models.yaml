@@ -1,0 +1,160 @@
+- id: csebuetnlp-banglabert
+  name: csebuetnlp/banglabert
+  tasks: [llm, sentiment, ner, hate, textcls]
+  stage: base
+  arch: ELECTRA
+  params: 110M
+  link: https://huggingface.co/csebuetnlp/banglabert
+  verified: 2026-06-28
+  note: Pretrained Bangla ELECTRA discriminator evaluated on the BLUB benchmark.
+- id: csebuetnlp-banglabert-large
+  name: csebuetnlp/banglabert_large
+  tasks: [llm]
+  arch: ELECTRA
+  params: 335M
+  link: https://huggingface.co/csebuetnlp/banglabert_large
+  verified: 2026-06-28
+- id: csebuetnlp-banglishbert
+  name: csebuetnlp/banglishbert
+  tasks: [llm]
+  arch: ELECTRA
+  params: 110M
+  link: https://huggingface.co/csebuetnlp/banglishbert
+  verified: 2026-05-11
+  note: Code-mixed Bangla-English encoder.
+- id: sagorsarker-bangla-bert-base
+  name: sagorsarker/bangla-bert-base
+  tasks: [llm]
+  arch: BERT
+  params: 165M
+  link: https://huggingface.co/sagorsarker/bangla-bert-base
+  verified: 2026-05-11
+- id: neuropark-sahajbert
+  name: neuropark/sahajBERT
+  tasks: [llm]
+  arch: ALBERT
+  params: 18M
+  link: https://huggingface.co/neuropark/sahajBERT
+  verified: 2026-03-19
+  note: Collaboratively trained.
+- id: google-muril-base-cased
+  name: google/muril-base-cased
+  tasks: [llm]
+  arch: BERT
+  params: 236M
+  link: https://huggingface.co/google/muril-base-cased
+  verified: 2026-03-19
+  note: 17 Indian languages including Bangla.
+- id: hishab-titulm-llama-3-2-3b-v2-0
+  name: hishab/titulm-llama-3.2-3b-v2.0
+  tasks: [llm]
+  arch: Llama 3.2
+  params: 3B
+  link: https://huggingface.co/hishab/titulm-llama-3.2-3b-v2.0
+  verified: 2026-06-28
+  note: Continually pretrained Bangla LLM.
+- id: hishab-titulm-llama-3-2-1b-v2-0
+  name: hishab/titulm-llama-3.2-1b-v2.0
+  tasks: [llm]
+  arch: Llama 3.2
+  params: 1B
+  link: https://huggingface.co/hishab/titulm-llama-3.2-1b-v2.0
+  verified: 2026-07-26
+  note: Continually pretrained on 37B Bangla tokens with an extended tokenizer.
+- id: csebuetnlp-banglat5
+  name: csebuetnlp/banglat5
+  tasks: [mt, qa, summ]
+  stage: base
+  arch: T5
+  params: 247M
+  link: https://huggingface.co/csebuetnlp/banglat5
+  verified: 2026-06-28
+  note: Seq2seq pretrained model for Bangla generation tasks.
+- id: facebook-nllb-200-3-3b
+  name: facebook/nllb-200-3.3B
+  tasks: [mt]
+  arch: Transformer
+  params: 3.3B
+  link: https://huggingface.co/facebook/nllb-200-3.3B
+  verified: 2026-06-02
+  note: Multilingual translation model supporting Bengali and English.
+- id: csebuetnlp-banglat5-nmt-bn-en
+  name: csebuetnlp/banglat5_nmt_bn_en
+  tasks: [mt]
+  arch: T5
+  params: 247M
+  link: https://huggingface.co/csebuetnlp/banglat5_nmt_bn_en
+  verified: 2026-06-02
+- id: sagorsarker-mbert-bengali-ner
+  name: sagorsarker/mbert-bengali-ner
+  tasks: [ner]
+  stage: fine-tuned
+  arch: mBERT
+  params: 167M
+  link: https://huggingface.co/sagorsarker/mbert-bengali-ner
+  verified: 2026-05-16
+  note: Fine-tuned on WikiANN.
+- id: bnlp-bengali-pos-tag-model
+  name: Bengali POS Tag model
+  tasks: [pos]
+  arch: CRF
+  link: https://github.com/sagorbrur/bnlp/blob/master/model/bn_pos.pkl
+  verified: 2026-08-07
+  note: Ships with bnlp-toolkit; trained on the NLTR dataset.
+- id: csebuetnlp-mt5-multilingual-xlsum
+  name: csebuetnlp/mT5_multilingual_XLSum
+  tasks: [summ]
+  arch: mT5
+  params: 580M
+  link: https://huggingface.co/csebuetnlp/mT5_multilingual_XLSum
+  verified: 2026-06-02
+  note: XL-Sum official checkpoint.
+- id: arijitx-wav2vec2-xls-r-300m-bengali
+  name: arijitx/wav2vec2-xls-r-300m-bengali
+  tasks: [speech]
+  stage: fine-tuned
+  arch: wav2vec 2.0
+  params: 300M
+  link: https://huggingface.co/arijitx/wav2vec2-xls-r-300m-bengali
+  verified: 2026-04-22
+  note: Fine-tuned on OpenSLR 53.
+- id: bangla-speech-processing-banglaasr
+  name: bangla-speech-processing/BanglaASR
+  tasks: [speech]
+  arch: Whisper-small
+  params: 244M
+  link: https://huggingface.co/bangla-speech-processing/BanglaASR
+  verified: 2026-04-22
+- id: sanjidh090-moonshine-base-bn
+  name: Sanjidh090/moonshine-base-bn
+  tasks: [speech]
+  arch: Moonshine
+  params: 61.5M
+  link: https://huggingface.co/Sanjidh090/moonshine-base-bn
+  verified: 2026-07-23
+  note: Bengali ASR model adapted from Moonshine-Base using tokenizer transplantation.
+- id: bengaliai-tugstugi-regional-asr-whisper-medium
+  name: bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium
+  tasks: [speech]
+  arch: Whisper-medium
+  params: 0.8B
+  link: https://huggingface.co/bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium
+  verified: 2026-07-23
+  note: Trained on regional Bengali speech covering 10 dialects.
+- id: hishab-titu-stt-bn-conformer-large
+  name: hishab/titu_stt_bn_conformer_large
+  tasks: [speech]
+  stage: fine-tuned
+  arch: Conformer-CTC
+  params: ~120M
+  link: https://huggingface.co/hishab/titu_stt_bn_conformer_large
+  verified: 2026-07-23
+  note: Fine-tuned on approximately 4.4K hours of non-telephony open data.
+- id: facebook-mms-tts-ben
+  name: facebook/mms-tts-ben
+  tasks: [speech]
+  arch: VITS
+  params: 36M
+  link: https://huggingface.co/facebook/mms-tts-ben
+  verified: 2026-04-22
+  note: Massively Multilingual Speech TTS.

@@ -14,8 +14,7 @@
     "validate": "tsx scripts/validate.ts",
     "check-links": "tsx scripts/check-links.ts",
     "discover": "tsx scripts/discover.ts",
-    "promote": "tsx scripts/promote.ts",
-    "migrate": "tsx scripts/migrate.ts"
+    "promote": "tsx scripts/promote.ts"
   },
   "dependencies": {
     "astro": "^7.1.1"

@@ -59,13 +59,17 @@ export const PaperSchema = z.object({
 export const ModelSchema = z.object({
   id,
   name: z.string().min(1),
-  task: id,
+  tasks: z
+    .array(id)
+    .min(1)
+    .refine((tasks) => new Set(tasks).size === tasks.length, 'must not contain duplicate tasks'),
+  stage: z.enum(['base', 'fine-tuned']).optional(),
   arch: z.string().min(1),
-  params: z.string().min(1),
+  params: z.string().min(1).optional(),
   link: url,
   verified: isoDate,
   note: z.string().min(1).optional(),
-});
+}).strict();
 
 export const ToolSchema = z.object({
   id,

@@ -57,7 +57,7 @@ function loadTaskDir<T>(sub: string, schema: { parse: (v: unknown) => T }): T[] 
 export const tasks: Task[] = loadList('tasks.yaml', TaskSchema);
 export const datasets: Dataset[] = loadTaskDir('datasets', DatasetSchema);
 export const papers: Paper[] = loadTaskDir('papers', PaperSchema);
-export const models: Model[] = loadTaskDir('models', ModelSchema);
+export const models: Model[] = loadList('models.yaml', ModelSchema);
 export const tools: Tool[] = loadList('tools.yaml', ToolSchema);
 export const contributors: Contributor[] = existsSync(resolve(dataDir, 'contributors.yaml'))
   ? loadList('contributors.yaml', ContributorSchema)
@@ -99,7 +99,7 @@ export const stats = {
 export const byTask = {
   datasets: (id: string) => datasets.filter((d) => d.task === id),
   papers: (id: string) => papers.filter((p) => p.task === id),
-  models: (id: string) => models.filter((m) => m.task === id),
+  models: (id: string) => models.filter((m) => m.tasks.includes(id)),
   leaderboards: (id: string) => leaderboards[id] ?? [],
 };
 
@@ -156,9 +156,9 @@ export function recentlyAdded(limit = 6): RecentEntry[] {
     ...models.map((m) => ({
       type: 'Model' as const,
       name: m.name,
-      task: taskName(m.task),
+      task: m.tasks.length === 1 ? taskName(m.tasks[0]) : `${m.tasks.length} tasks`,
       date: m.verified,
-      href: `${base}/tasks/${m.task}#models`,
+      href: m.link,
     })),
     ...tools.map((t) => ({
       type: 'Tool' as const,
@@ -173,7 +173,7 @@ export function recentlyAdded(limit = 6): RecentEntry[] {
     .slice(0, limit);
 }
 
-export type SearchEntry = { type: string; name: string; meta: string; href: string };
+export type SearchEntry = { type: string; name: string; meta: string; href: string; keywords?: string };
 
 /**
  * Search index, built here and emitted as a static JSON blob by
@@ -198,8 +198,9 @@ export function searchIndex(): SearchEntry[] {
     ...models.map((m) => ({
       type: 'Model',
       name: m.name,
-      meta: `${m.arch} · ${m.params}`,
+      meta: [m.arch, m.params].filter(Boolean).join(' · '),
       href: m.link,
+      keywords: m.tasks.flatMap((task) => [task, taskName(task)]).join(' '),
     })),
     ...tools.map((t) => ({ type: 'Tool', name: t.name, meta: t.desc.slice(0, 50), href: `${base}/tools` })),
   ];

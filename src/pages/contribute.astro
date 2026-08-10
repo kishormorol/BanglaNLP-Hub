@@ -26,7 +26,7 @@ const steps = [
   {
     n: '01',
     title: 'Fork the repo',
-    body: 'kishormorol/BanglaNLP-Hub — every resource is one small YAML record under data/datasets/, data/papers/, data/models/, or data/tools.yaml.',
+    body: 'kishormorol/BanglaNLP-Hub — every resource is one small YAML record under data/datasets/, data/papers/, data/models.yaml, or data/tools.yaml.',
   },
   {
     n: '02',
@@ -224,7 +224,7 @@ const preStyle =
                     const caption =
                       e.authors ??
                       (model
-                        ? `${model.arch} · ${model.params}`
+                        ? [model.arch, model.params].filter(Boolean).join(' · ')
                         : dataset
                           ? `${dataset.size} · ${dataset.license}`
                           : '');
