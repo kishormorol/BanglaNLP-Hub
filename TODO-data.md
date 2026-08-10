@@ -22,9 +22,31 @@ channels — and the `link` is the paper's own hyperlink target. Two caveats:
   repointed at a more open canonical location.
 
 The **Bengali-Loop paper** (`arxiv-2602-14291`) is now filed under `speech`.
-Still outstanding from the same benchmark: the **diarization corpus**
-(24 recordings, 22 hours, 5,744 segments), blocked on the licensing and
-availability question in #86.
+
+**Still unfiled: the Bengali-Loop diarization corpus.** Issue #86 was closed with
+this outstanding, so the verified figures are kept here rather than lost with it.
+All of the following are confirmed against the paper's own abstract
+(arXiv:2602.14291) and need no re-derivation:
+
+- 24 recordings, 22 hours, 5,744 manually annotated speaker-turn segments
+- baseline 40.08% DER (pyannote), against 34.07% WER for the ASR half
+- task would be `speaker` (Speaker ID / Diarization)
+- link candidate: `kaggle.com/competitions/dl-sprint-4-0-bengali-speaker-diarization-challenge/data`
+
+What blocks it is the same pair of unknowns as the ASR corpus, neither of which
+could be resolved without Kaggle credentials:
+
+- **`license`** — the paper's "Release, Licensing, and Reproducibility" section
+  assigns none, deferring to original source licenses (the audio is third-party
+  media). The ASR entry uses `Mixed` for this reason; the same choice would apply.
+- **availability** — the link is a Kaggle *competition* data tab, and whether it is
+  downloadable now that DL Sprint 4.0 has closed is unconfirmed.
+
+Competition-system papers reporting DER on this corpus (arXiv `2602.21741`,
+`2603.19256`, `2603.03158`, `2602.21183`) were all verified to exist and would be
+citable for a `speaker` leaderboard once the dataset entry lands. Note their
+public/private DER split is a leaderboard artifact, so the metric needs stating
+precisely.
 
 ## VQA task added (2026-08-10)
 
