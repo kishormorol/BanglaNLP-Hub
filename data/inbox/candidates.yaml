@@ -18063,14 +18063,6 @@
   year: 1876
   authors: Mendies et al.
   venue: Medical Entomology and Zoology
-- source: arxiv
-  kind: paper
-  title: "Aligned in Form, Not in Meaning: The Comprehension - Containment Decoupling of LLM Safety in Low-Resource Bangla Derogatory Speech"
-  link: http://arxiv.org/abs/2608.02941
-  year: 2026
-  authors: Habib et al.
-  venue: arXiv
-  suggestedTask: speech
 - source: acl
   kind: paper
   title: "Bangla Key2Text: Text Generation from Keywords for a Low Resource Language"
@@ -18078,14 +18070,6 @@
   year: 2026
   authors: Talukder et al.
   venue: Proceedings of the Fifteenth Language Resources and Evaluation Conference
-- source: arxiv
-  kind: paper
-  title: "BanglaWild: An In-the-Wild Bengali Scene Text Recognition Benchmark for OCR and Vision-Language Models"
-  link: http://arxiv.org/abs/2608.03884
-  year: 2026
-  authors: Shiper et al.
-  venue: arXiv
-  suggestedTask: llm
 - source: acl
   kind: paper
   title: "BanSuite: A Unified Toolkit and Software Platform for Low-Resource NLP in Bangla"
@@ -18093,14 +18077,6 @@
   year: 2026
   authors: Sayed et al.
   venue: "Proceedings of the 19th Conference of the {E}uropean Chapter of the {A}ssociation for {C}omputational {L}inguistics (Volume 3: System Demonstrations)"
-- source: acl
-  kind: paper
-  title: Bengali-English and Hindi-English Code Mixed Speech Data with Disfluencies
-  link: https://aclanthology.org/2026.wildre-1.5/
-  year: 2026
-  authors: Mitra et al.
-  venue: "Proceedings of the 8th Workshop on {I}ndian Language Data: Resources and Evaluation"
-  suggestedTask: speech
 - source: arxiv
   kind: paper
   title: "Beyond Clean Text: Evaluating Encoder and Decoder Robustness for Bangla Event Detection in Noisy Text"
@@ -18163,14 +18139,6 @@
   suggestedTask: mt
 - source: arxiv
   kind: paper
-  title: Do Small Models Use the Law You Give Them? Context-Injected Fine-Tuning for Legal QA in Bangladesh
-  link: http://arxiv.org/abs/2607.23446
-  year: 2026
-  authors: Mahadi et al.
-  venue: arXiv
-  suggestedTask: mt
-- source: arxiv
-  kind: paper
   title: "Echoes of Unrest: A Multimodal NLP Framework for Early Warning of Fake News and Violence-Driven Mob Activity"
   link: http://arxiv.org/abs/2607.02734
   year: 2026
@@ -18208,14 +18176,6 @@
   year: 2026
   authors: Koli et al.
   venue: arXiv
-- source: acl
-  kind: paper
-  title: Exploring Large Language Models for Multitask Learning in Bengali Text Classification
-  link: https://aclanthology.org/2026.chipsal-1.10/
-  year: 2026
-  authors: Hossain et al.
-  venue: Proceedings of the Second workshop on Challenges in Processing {S}outh {A}sian Languages ({CH}i{PSAL}2026)
-  suggestedTask: textcls
 - source: arxiv
   kind: paper
   title: "FIND: Toward Multimodal Financial Reasoning and Question Answering for Indic Languages"
@@ -18249,27 +18209,12 @@
   suggestedTask: mt
 - source: arxiv
   kind: paper
-  title: "Khondo: A Multimodal Benchmark for Document Packet Splitting of Bangla Forms"
-  link: http://arxiv.org/abs/2607.21780
-  year: 2026
-  authors: Azad et al.
-  venue: arXiv
-- source: arxiv
-  kind: paper
   title: "Many Dialects, Many Languages, One Cultural Lens: Evaluating Multilingual VLMs for Bengali Culture Understanding Across Historically Linked Languages and Regional Dialects"
   link: http://arxiv.org/abs/2603.21165
   year: 2026
   authors: Sayeedi et al.
   venue: arXiv
   suggestedTask: qa
-- source: acl
-  kind: paper
-  title: "Meaning Over Morphology: A Multi-Metric Benchmark of LLMs for Bangla Dialect Translation"
-  link: https://aclanthology.org/2026.dialres-1.24/
-  year: 2026
-  authors: Niloy et al.
-  venue: Proceedings of the First Workshop on Dialects in {NLP} {---} A Resource Perspective
-  suggestedTask: mt
 - source: arxiv
   kind: paper
   title: "MedAidDialog: A Multilingual Multi-Turn Medical Dialogue Dataset for Accessible Healthcare"
@@ -18372,22 +18317,6 @@
   year: 2026
   authors: Saha et al.
   venue: Proceedings of the 20th {I}nternational {W}orkshop on {S}emantic {E}valuation (2026)
-- source: arxiv
-  kind: paper
-  title: "Two-Stage Bengali Sentiment Classification: Domain Adaptation Through Continual Learning and Parameter-Efficient Fine-Tuning"
-  link: http://arxiv.org/abs/2608.01471
-  year: 2026
-  authors: Rahman et al.
-  venue: arXiv
-  suggestedTask: sentiment
-- source: arxiv
-  kind: paper
-  title: "When a Name Is Not a Name: A Benchmark Dataset and Distilled Reasoning for Culturally Entangled Bangla Homographs in Low-Resource LLMs"
-  link: http://arxiv.org/abs/2607.17828
-  year: 2026
-  authors: Shuvo et al.
-  venue: arXiv
-  suggestedTask: llm
 - source: arxiv
   kind: paper
   title: When Does Knowledge Distillation Hurt? Reliability-Aware Distillation for Low-Resource Language Summarization
@@ -19081,3 +19010,26 @@
   title: wikimedia/wit_base
   link: https://huggingface.co/datasets/wikimedia/wit_base
   note: 7361 downloads at discovery time
+- source: arxiv
+  kind: paper
+  title: "Aligned in Form, Not in Meaning: The Comprehension - Containment Decoupling of LLM Safety in Low-Resource Bangla Derogatory Speech"
+  link: http://arxiv.org/abs/2608.02941
+  year: 2026
+  authors: Habib et al.
+  venue: arXiv
+  suggestedTask: speech
+- source: arxiv
+  kind: paper
+  title: "BanglaWild: An In-the-Wild Bengali Scene Text Recognition Benchmark for OCR and Vision-Language Models"
+  link: http://arxiv.org/abs/2608.03884
+  year: 2026
+  authors: Shiper et al.
+  venue: arXiv
+  suggestedTask: llm
+- source: arxiv
+  kind: paper
+  title: "Khondo: A Multimodal Benchmark for Document Packet Splitting of Bangla Forms"
+  link: http://arxiv.org/abs/2607.21780
+  year: 2026
+  authors: Azad et al.
+  venue: arXiv

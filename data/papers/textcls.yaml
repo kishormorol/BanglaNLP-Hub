@@ -1,9 +1,9 @@
-- id: shibu-etal-2025-scarcity
-  title: "From Scarcity to Capability: Empowering Fake News Detection in Low-Resource Languages with LLMs"
-  authors: Shibu et al.
-  venue: IndoNLP
-  year: 2025
-  link: https://aclanthology.org/2025.indonlp-1.12/
+- id: sultana-etal-2026-bangla-regional-textcls-bert-ensemble
+  title: A hybrid approach for Bangla regional text classification using region-specific lexical oversampling and BERT ensemble learning
+  authors: Sultana et al.
+  venue: Array
+  year: 2026
+  link: https://doi.org/10.1016/j.array.2026.100817
   task: textcls
 - id: arxiv-2605-01292
   title: "Addressing Data Scarcity in Bangla Fake News Detection: An LLM-Based Dataset Augmentation Approach"
@@ -12,12 +12,47 @@
   year: 2026
   link: http://arxiv.org/abs/2605.01292
   task: textcls
+- id: gupta-2026-anvay-bengali-topic-modelling
+  title: "anvay: A Web-based Tool for Interpretive Topic Modelling in Bengali"
+  authors: Gupta
+  venue: The Journal of Open Source Software
+  year: 2026
+  link: https://doi.org/10.21105/joss.08641
+  task: textcls
+- id: joy-2026-bangla-fake-news-distilbert
+  title: Bangla Fake News Detection using DistilBERT
+  authors: Joy
+  venue: International Journal for Research in Applied Science and Engineering Technology
+  year: 2026
+  link: https://doi.org/10.22214/ijraset.2026.78248
+  task: textcls
 - id: arxiv-2601-12132
   title: "Bengali Text Classification: An Evaluation of Large Language Model Approaches"
   authors: Hoque et al.
   venue: arXiv
   year: 2026
   link: http://arxiv.org/abs/2601.12132
+  task: textcls
+- id: tanjim-etal-2026-bangla-fake-news-linguistic-psychological
+  title: Detecting Fake News in Bangla Using Linguistic and Psychological Features
+  authors: Tanjim et al.
+  venue: ACM Transactions on Social Computing
+  year: 2026
+  link: https://doi.org/10.1145/3798302
+  task: textcls
+- id: hussen-etal-2026-bangla-news-classification-xai
+  title: "Explainable AI-Driven Bangla News Classification: Comparative Study of ML and DL Approaches"
+  authors: Hussen et al.
+  venue: The Journal of Applied Technology and Innovation
+  year: 2026
+  link: https://doi.org/10.65136/jati.v10i1.325
+  task: textcls
+- id: hossain-etal-2026-exploring
+  title: Exploring Large Language Models for Multitask Learning in Bengali Text Classification
+  authors: Hossain et al.
+  venue: CHiPSAL
+  year: 2026
+  link: https://aclanthology.org/2026.chipsal-1.10/
   task: textcls
 - id: arxiv-2605-17481
   title: Hybrid Feature Combinations with CNN for Bangla Fake News Classification
@@ -26,12 +61,54 @@
   year: 2026
   link: http://arxiv.org/abs/2605.17481
   task: textcls
+- id: jakaria-etal-2025-bangla-document-categorization-ml
+  title: A Comparative Study on different Machine Learning Approaches for Categorizing Bangla Documents
+  authors: Jakaria et al.
+  venue: International Journal of Computer Applications
+  year: 2025
+  link: https://doi.org/10.5120/ijca2025924391
+  task: textcls
+- id: yadav-etal-2025-bengali-fake-news-tri-encoder-lime
+  title: A Hybrid Tri-Encoder model for fake news detection in Bengali with LIME-based explainability
+  authors: Yadav et al.
+  venue: Intelligent Decision Technologies
+  year: 2025
+  link: https://doi.org/10.1177/18724981251384403
+  task: textcls
+- id: hossen-etal-2025-bangla-english-fake-news-stacked
+  title: A sophisticated feature vectorization-based stacked machine learning approach for fake news detection in Bangla and English
+  authors: Hossen et al.
+  venue: Social Network Analysis and Mining
+  year: 2025
+  link: https://doi.org/10.1007/s13278-025-01552-6
+  task: textcls
+- id: akther-etal-2025-manipulated-bangla-news-knowledge-driven
+  title: "Automatic detection of manipulated Bangla news: A new knowledge-driven approach"
+  authors: Akther et al.
+  venue: Natural Language Processing Journal
+  year: 2025
+  link: https://doi.org/10.1016/j.nlp.2025.100155
+  task: textcls
 - id: arxiv-2503-04781
   title: Bangla Fake News Detection Based On Multichannel Combined CNN-LSTM
   authors: George et al.
   venue: arXiv
   year: 2025
   link: http://arxiv.org/abs/2503.04781
+  task: textcls
+- id: azim-etal-2025-bangla-news-categorization-bert
+  title: Bangla News Document Categorization using Deep Learning Approaches and Fine-tuned BERT
+  authors: Azim et al.
+  venue: International Journal of Computer Applications
+  year: 2025
+  link: https://doi.org/10.5120/ijca2025924469
+  task: textcls
+- id: hossain-etal-2025-banglanewsclassifier
+  title: "BanglaNewsClassifier: A machine learning approach for news classification in Bangla Newspapers using hybrid stacking classifiers"
+  authors: Hossain et al.
+  venue: PLoS ONE
+  year: 2025
+  link: https://doi.org/10.1371/journal.pone.0321291
   task: textcls
 - id: arxiv-2511-08085
   title: "BARD10: A New Benchmark Reveals Significance of Bangla Stop-Words in Authorship Attribution"
@@ -40,12 +117,26 @@
   year: 2025
   link: http://arxiv.org/abs/2511.08085
   task: textcls
+- id: sultana-etal-2025-bdregiontext
+  title: "BdRegionText: resource creation and evaluation for Bangla regional text classification with machine learning"
+  authors: Sultana et al.
+  venue: Indonesian Journal of Electrical Engineering and Computer Science
+  year: 2025
+  link: https://doi.org/10.11591/ijeecs.v40.i1.pp411-425
+  task: textcls
 - id: chowdhury-ferdous-2025-boigenre
   title: "BOIGENRE: A Large-Scale Bangla Dataset for Genre Classification from Book Summaries"
   authors: Chowdhury et al.
   venue: BLP @ IJCNLP-AACL
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.20/
+  task: textcls
+- id: nath-etal-2025-bonghope-annotated-corpus-bengali-hope
+  title: "BongHope: An annotated corpus for Bengali hope speech detection"
+  authors: Nath et al.
+  venue: International Journal of Information Technology
+  year: 2025
+  link: https://doi.org/10.1007/s41870-025-02484-2
   task: textcls
 - id: arxiv-2501-18766
   title: "Breaking the Fake News Barrier: Deep Learning Approaches in Bangla Language"
@@ -68,12 +159,54 @@
   year: 2025
   link: https://aclanthology.org/2025.findings-ijcnlp.135/
   task: textcls
+- id: barua-etal-2025-bangla-news-fake-multiclass-bert-fasttext
+  title: "Comparative analysis of Bangla news classification: a study of fake news detection and multiclass classification using BERT and FastText"
+  authors: Barua et al.
+  venue: International Journal of Computers and Applications
+  year: 2025
+  link: https://doi.org/10.1080/1206212x.2025.2495288
+  task: textcls
+- id: faisal-etal-2025-bengali-contextual-textcls-data-cleaning
+  title: "Context-Aware Data Cleaning: Optimizing Bengali Text for Contextual Text Classification"
+  authors: Faisal et al.
+  venue: SN Computer Science
+  year: 2025
+  link: https://doi.org/10.1007/s42979-025-03891-9
+  task: textcls
+- id: jahin-etal-2025-bangla-fake-news-lda-lime
+  title: "Enhancing Fake News Analysis in Bangla: A Hybrid Model with LDA, and LIME for Interpretable Classification"
+  authors: Jahin et al.
+  venue: International Journal of Innovative Computing
+  year: 2025
+  link: https://doi.org/10.11113/ijic.v15n2.543
+  task: textcls
+- id: naeen-etal-2025-bengali-news-title-classification
+  title: "Explainable detection: a transformer-based language modeling approach for Bengali news title classification with comparative explainability analysis using ML and DL"
+  authors: Naeen et al.
+  venue: Frontiers in Artificial Intelligence
+  year: 2025
+  link: https://doi.org/10.3389/frai.2025.1537432
+  task: textcls
+- id: shibu-etal-2025-scarcity
+  title: "From Scarcity to Capability: Empowering Fake News Detection in Low-Resource Languages with LLMs"
+  authors: Shibu et al.
+  venue: IndoNLP
+  year: 2025
+  link: https://aclanthology.org/2025.indonlp-1.12/
+  task: textcls
 - id: arxiv-2508-00605
   title: "GHTM: A Graph-based Hybrid Topic Modeling Approach with a Benchmark Dataset for the Low-Resource Bengali Language"
   authors: Haque et al.
   venue: arXiv
   year: 2025
   link: http://arxiv.org/abs/2508.00605
+  task: textcls
+- id: das-etal-2025-crisis-microblog-classification
+  title: "Humanitarian classification of crisis-related microblogs in Bengali: A comparison of multilingual pre-trained language models"
+  authors: Das et al.
+  venue: International Journal of Disaster Risk Reduction
+  year: 2025
+  link: https://doi.org/10.1016/j.ijdrr.2025.105673
   task: textcls
 - id: shanto-etal-2025-mdc3
   title: "MDC$^3$: A Novel Multimodal Dataset for Commercial Content Classification in Bengali"
@@ -89,6 +222,13 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.7/
   task: textcls
+- id: mugdha-etal-2024-bangla-stemmer-categorization
+  title: Accurate Prediction of Bangla Text Article Categorization by Utilizing Novel Bangla Stemmer
+  authors: Mugdha et al.
+  venue: International Journal of Automation and Smart Technology
+  year: 2024
+  link: https://doi.org/10.5875/xbzrk013
+  task: textcls
 - id: arxiv-2403-05519
   title: Authorship Attribution in Bangla Literature (AABL) via Transfer Learning using ULMFiT
   authors: Khatun et al.
@@ -96,12 +236,54 @@
   year: 2024
   link: http://arxiv.org/abs/2403.05519
   task: textcls
+- id: bandan-etal-2024-bengali-fake-news-deep-learning
+  title: "Deep Learning for Bengali Fake News Detection: Innovative Approaches for Accurate Classification"
+  authors: Bandan et al.
+  venue: International Journal of Research and Innovation in Applied Science
+  year: 2024
+  link: https://doi.org/10.51584/ijrias.2024.908034
+  task: textcls
+- id: afroze-etal-2024-bengali-literary-genre-identification
+  title: Empirical Text Analysis for Identifying the Genres of Bengali Literary Work
+  authors: Afroze et al.
+  venue: Journal of Advances in Information Technology
+  year: 2024
+  link: https://doi.org/10.12720/jait.15.5.602-613
+  task: textcls
 - id: arxiv-2404-01345
   title: Enhancing Bangla Fake News Detection Using Bidirectional Gated Recurrent Units and Deep Learning Techniques
   authors: Roy et al.
   venue: arXiv
   year: 2024
   link: http://arxiv.org/abs/2404.01345
+  task: textcls
+- id: sazan-etal-2024-bangla-depressive-post-detection
+  title: "Enhancing Depressive Post Detection in Bangla: A Comparative Study of TF-IDF, BERT and FastText Embeddings"
+  authors: Sazan et al.
+  venue: Annals of Emerging Technologies in Computing
+  year: 2024
+  link: https://doi.org/10.33166/aetic.2024.03.003
+  task: textcls
+- id: dawn-etal-2024-bengali-document-class-topic-modelling
+  title: "Likelihood corpus distribution: an efficient topic modelling scheme for Bengali document class identification"
+  authors: Dawn et al.
+  venue: Sadhana
+  year: 2024
+  link: https://doi.org/10.1007/s12046-024-02470-7
+  task: textcls
+- id: ahammad-etal-2024-bangla-fake-news-roberta-gcn
+  title: "RoBERTa-GCN: A Novel Approach for Combating Fake News in Bangla Using Advanced Language Processing and Graph Convolutional Networks"
+  authors: Ahammad et al.
+  venue: IEEE Access
+  year: 2024
+  link: https://doi.org/10.1109/access.2024.3457860
+  task: textcls
+- id: das-etal-2024-bangla-fake-news-detection
+  title: Social Media Bangla Fake News Detection Using Deep and Machine Learning Algorithms
+  authors: Das et al.
+  venue: International Journal of Engineering Trends and Technology
+  year: 2024
+  link: https://doi.org/10.14445/22315381/ijett-v72i5p135
   task: textcls
 - id: arxiv-2310-11465
   title: "BaitBuster-Bangla: A Comprehensive Dataset for Clickbait Detection in Bangla with Multi-Feature and Multi-Modal Analysis"
@@ -131,6 +313,13 @@
   year: 2023
   link: https://aclanthology.org/2023.contents-1.7/
   task: textcls
+- id: ahmed-etal-2023-bengali-news-headline-categorization
+  title: "Bengali News Headline Categorization: A Comprehensive Analysis of Machine Learning and Deep Learning Approach"
+  authors: Ahmed et al.
+  venue: BAIUST ACADEMIC JOURNAL
+  year: 2023
+  link: https://doi.org/10.63307/baj.4.1.s3
+  task: textcls
 - id: sazzed-2023-discourse
   title: Discourse Mode Categorization of Bengali Social Media Health Text
   authors: Sazzed
@@ -145,12 +334,26 @@
   year: 2023
   link: http://arxiv.org/abs/2308.13545
   task: textcls
+- id: dhar-etal-2023-bangla-news-text-categorization
+  title: "Hybrid approach for text categorization: A case study with Bangla news article"
+  authors: Dhar et al.
+  venue: Journal of Information Science
+  year: 2023
+  link: https://doi.org/10.1177/01655515211027770
+  task: textcls
 - id: dehan-etal-2023-investigating
   title: Investigating the Effectiveness of Graph-based Algorithm for Bangla Text Classification
   authors: Dehan et al.
   venue: BLP @ EMNLP
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.12/
+  task: textcls
+- id: dawn-etal-2022-bengali-document-classification-dictionary
+  title: A dictionary based model for bengali document classification
+  authors: Dawn et al.
+  venue: Applied Intelligence
+  year: 2022
+  link: https://doi.org/10.1007/s10489-022-03955-w
   task: textcls
 - id: sazzed-2022-annotated
   title: An Annotated Dataset and Automatic Approaches for Discourse Mode Identification in Low-resource Bengali Language
@@ -159,6 +362,13 @@
   year: 2022
   link: https://aclanthology.org/2022.mia-1.2/
   task: textcls
+- id: rafi-ur-rashid-etal-2022-bangla-textcls-class-imbalance
+  title: "Breaking the Curse of Class Imbalance: Bangla Text Classification"
+  authors: Rafi-Ur-Rashid et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2022
+  link: https://doi.org/10.1145/3511601
+  task: textcls
 - id: arxiv-2210-09389
   title: "Potrika: Raw and Balanced Newspaper Datasets in the Bangla Language with Eight Topics and Five Attributes"
   authors: Ahmad et al.
@@ -166,12 +376,54 @@
   year: 2022
   link: http://arxiv.org/abs/2210.09389
   task: textcls
+- id: hossain-etal-2021-bangla-news-headline-categorization
+  title: Bangla News Headline Categorization
+  authors: Hossain et al.
+  venue: International Journal of Education and Management Engineering
+  year: 2021
+  link: https://doi.org/10.5815/ijeme.2021.06.05
+  task: textcls
+- id: dhar-etal-2021-bengali-news-headline-ml-pipeline
+  title: Bengali News Headline Categorization UsingOptimized Machine Learning Pipeline
+  authors: Dhar et al.
+  venue: International Journal of Information Engineering and Electronic Business
+  year: 2021
+  link: https://doi.org/10.5815/ijieeb.2021.01.02
+  task: textcls
+- id: hossain-etal-2021-bengali-document-categorization-cnn
+  title: Bengali text document categorization based on very deep convolution neural network
+  authors: Hossain et al.
+  venue: Expert Systems with Applications
+  year: 2021
+  link: https://doi.org/10.1016/j.eswa.2021.115394
+  task: textcls
+- id: yeasmin-etal-2021-bangla-news-classification-dense-nn
+  title: Multi-category Bangla News Classification using Machine Learning Classifiers and Multi-layer Dense Neural Network
+  authors: Yeasmin et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2021
+  link: https://doi.org/10.14569/ijacsa.2021.0120588
+  task: textcls
+- id: mahmud-etal-2020-bengali-document-categorization-mlp
+  title: A Multi Layer Perceptron Along with Memory Efficient Feature Extraction Approach for Bengali Document Categorization
+  authors: Mahmud et al.
+  venue: Journal of Computer Science
+  year: 2020
+  link: https://doi.org/10.3844/jcssp.2020.378.390
+  task: textcls
 - id: banfakenews-p
   title: "BanFakeNews: A Dataset for Detecting Fake News in Bangla"
   authors: Hossain et al.
   venue: LREC
   year: 2020
   link: https://aclanthology.org/2020.lrec-1.349/
+  task: textcls
+- id: dhar-etal-2020-cess-bangla-web-text-categorization
+  title: CESS-A System to Categorize Bangla Web Text Documents
+  authors: Dhar et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2020
+  link: https://doi.org/10.1145/3398070
   task: textcls
 - id: bemod
   title: Classification Benchmarks for Under-resourced Bengali Language based on Multichannel Convolutional-LSTM Network
@@ -181,6 +433,27 @@
   link: https://arxiv.org/abs/2004.07807
   task: textcls
   note: BengFastText embeddings.
+- id: uddin-etal-2020-bengali-spam-sms-rnn
+  title: Detecting Bengali Spam SMS Using Recurrent Neural Network
+  authors: Uddin et al.
+  venue: Journal of Communications
+  year: 2020
+  link: https://doi.org/10.12720/jcm.15.4.325-331
+  task: textcls
+- id: rabib-etal-2020-bengali-news-categorization
+  title: Different Machine Learning based Approaches of Baseline and Deep Learning Models for Bengali News Categorization
+  authors: Rabib et al.
+  venue: International Journal of Computer Applications
+  year: 2020
+  link: https://doi.org/10.5120/ijca2020920107
+  task: textcls
+- id: hassan-etal-2019-bangla-document-categorization-term-graph
+  title: Bangla Document Categorization using Term Graph
+  authors: Hassan et al.
+  venue: International Journal of Computer Applications
+  year: 2019
+  link: https://doi.org/10.5120/ijca2019919329
+  task: textcls
 - id: das-chatterji-2019-identification
   title: Identification of Synthetic Sentence in Bengali News using Hybrid Approach
   authors: Das et al.
@@ -188,12 +461,47 @@
   year: 2019
   link: https://aclanthology.org/2019.icon-1.23/
   task: textcls
+- id: anisuzzaman-etal-2018-bengali-authorship-ngram-naive-bayes
+  title: Authorship Attribution for Bengali Language Using the Fusion of N-Gram and Naive Bayes Algorithms
+  authors: Anisuzzaman et al.
+  venue: International Journal of Information Technology and Computer Science
+  year: 2018
+  link: https://doi.org/10.5815/ijitcs.2018.10.02
+  task: textcls
+- id: pandian-etal-2018-bengali-poems-authorship
+  title: Comparison of Algorithms in Authorship Identification using Bengali Poems
+  authors: Pandian et al.
+  venue: International Journal of Engineering & Technology
+  year: 2018
+  link: https://doi.org/10.14419/ijet.v7i4.19.21989
+  task: textcls
+- id: mouhoub-etal-2018-bangla-topic-modelling-lda-news
+  title: "Topic Modelling in Bangla Language: An LDA Approach to Optimize Topics and News Classification"
+  authors: Mouhoub et al.
+  venue: Computer and Information Science
+  year: 2018
+  link: https://doi.org/10.5539/cis.v11n4p77
+  task: textcls
+- id: phani-etal-2017-bengali-authorship-attribution
+  title: A Supervised Learning Approach for Authorship Attribution of Bengali Literary Texts
+  authors: Phani et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2017
+  link: https://doi.org/10.1145/3099473
+  task: textcls
 - id: phani-etal-2015-authorship
   title: Authorship Attribution in Bengali Language
   authors: Phani et al.
   venue: ICON
   year: 2015
   link: https://aclanthology.org/W15-5915/
+  task: textcls
+- id: mandal-etal-2014-bangla-web-document-categorization
+  title: Supervised Learning Methods for Bangla Web Document Categorization
+  authors: Mandal et al.
+  venue: International Journal of Artificial Intelligence & Applications
+  year: 2014
+  link: https://doi.org/10.5121/ijaia.2014.5508
   task: textcls
 - id: chakraborty-2012-authorship
   title: "Authorship Identification in Bengali Literature: a Comparative Analysis"
@@ -208,305 +516,4 @@
   venue: ALR
   year: 2009
   link: https://aclanthology.org/W09-3411/
-  task: textcls
-- id: naeen-etal-2025-bengali-news-title-classification
-  title: "Explainable detection: a transformer-based language modeling approach for Bengali news title classification with comparative explainability analysis using ML and DL"
-  authors: Naeen et al.
-  venue: Frontiers in Artificial Intelligence
-  year: 2025
-  link: https://doi.org/10.3389/frai.2025.1537432
-  task: textcls
-- id: das-etal-2025-crisis-microblog-classification
-  title: "Humanitarian classification of crisis-related microblogs in Bengali: A comparison of multilingual pre-trained language models"
-  authors: Das et al.
-  venue: International Journal of Disaster Risk Reduction
-  year: 2025
-  link: https://doi.org/10.1016/j.ijdrr.2025.105673
-  task: textcls
-- id: sazan-etal-2024-bangla-depressive-post-detection
-  title: "Enhancing Depressive Post Detection in Bangla: A Comparative Study of TF-IDF, BERT and FastText Embeddings"
-  authors: Sazan et al.
-  venue: Annals of Emerging Technologies in Computing
-  year: 2024
-  link: https://doi.org/10.33166/aetic.2024.03.003
-  task: textcls
-- id: sultana-etal-2026-bangla-regional-textcls-bert-ensemble
-  title: "A hybrid approach for Bangla regional text classification using region-specific lexical oversampling and BERT ensemble learning"
-  authors: Sultana et al.
-  venue: Array
-  year: 2026
-  link: https://doi.org/10.1016/j.array.2026.100817
-  task: textcls
-- id: gupta-2026-anvay-bengali-topic-modelling
-  title: "anvay: A Web-based Tool for Interpretive Topic Modelling in Bengali"
-  authors: Gupta
-  venue: The Journal of Open Source Software
-  year: 2026
-  link: https://doi.org/10.21105/joss.08641
-  task: textcls
-- id: joy-2026-bangla-fake-news-distilbert
-  title: "Bangla Fake News Detection using DistilBERT"
-  authors: Joy
-  venue: International Journal for Research in Applied Science and Engineering Technology
-  year: 2026
-  link: https://doi.org/10.22214/ijraset.2026.78248
-  task: textcls
-- id: tanjim-etal-2026-bangla-fake-news-linguistic-psychological
-  title: "Detecting Fake News in Bangla Using Linguistic and Psychological Features"
-  authors: Tanjim et al.
-  venue: ACM Transactions on Social Computing
-  year: 2026
-  link: https://doi.org/10.1145/3798302
-  task: textcls
-- id: hussen-etal-2026-bangla-news-classification-xai
-  title: "Explainable AI-Driven Bangla News Classification: Comparative Study of ML and DL Approaches"
-  authors: Hussen et al.
-  venue: The Journal of Applied Technology and Innovation
-  year: 2026
-  link: https://doi.org/10.65136/jati.v10i1.325
-  task: textcls
-- id: jakaria-etal-2025-bangla-document-categorization-ml
-  title: "A Comparative Study on different Machine Learning Approaches for Categorizing Bangla Documents"
-  authors: Jakaria et al.
-  venue: International Journal of Computer Applications
-  year: 2025
-  link: https://doi.org/10.5120/ijca2025924391
-  task: textcls
-- id: yadav-etal-2025-bengali-fake-news-tri-encoder-lime
-  title: "A Hybrid Tri-Encoder model for fake news detection in Bengali with LIME-based explainability"
-  authors: Yadav et al.
-  venue: Intelligent Decision Technologies
-  year: 2025
-  link: https://doi.org/10.1177/18724981251384403
-  task: textcls
-- id: hossen-etal-2025-bangla-english-fake-news-stacked
-  title: "A sophisticated feature vectorization-based stacked machine learning approach for fake news detection in Bangla and English"
-  authors: Hossen et al.
-  venue: Social Network Analysis and Mining
-  year: 2025
-  link: https://doi.org/10.1007/s13278-025-01552-6
-  task: textcls
-- id: akther-etal-2025-manipulated-bangla-news-knowledge-driven
-  title: "Automatic detection of manipulated Bangla news: A new knowledge-driven approach"
-  authors: Akther et al.
-  venue: Natural Language Processing Journal
-  year: 2025
-  link: https://doi.org/10.1016/j.nlp.2025.100155
-  task: textcls
-- id: azim-etal-2025-bangla-news-categorization-bert
-  title: "Bangla News Document Categorization using Deep Learning Approaches and Fine-tuned BERT"
-  authors: Azim et al.
-  venue: International Journal of Computer Applications
-  year: 2025
-  link: https://doi.org/10.5120/ijca2025924469
-  task: textcls
-- id: hossain-etal-2025-banglanewsclassifier
-  title: "BanglaNewsClassifier: A machine learning approach for news classification in Bangla Newspapers using hybrid stacking classifiers"
-  authors: Hossain et al.
-  venue: PLoS ONE
-  year: 2025
-  link: https://doi.org/10.1371/journal.pone.0321291
-  task: textcls
-- id: sultana-etal-2025-bdregiontext
-  title: "BdRegionText: resource creation and evaluation for Bangla regional text classification with machine learning"
-  authors: Sultana et al.
-  venue: Indonesian Journal of Electrical Engineering and Computer Science
-  year: 2025
-  link: https://doi.org/10.11591/ijeecs.v40.i1.pp411-425
-  task: textcls
-- id: barua-etal-2025-bangla-news-fake-multiclass-bert-fasttext
-  title: "Comparative analysis of Bangla news classification: a study of fake news detection and multiclass classification using BERT and FastText"
-  authors: Barua et al.
-  venue: International Journal of Computers and Applications
-  year: 2025
-  link: https://doi.org/10.1080/1206212x.2025.2495288
-  task: textcls
-- id: faisal-etal-2025-bengali-contextual-textcls-data-cleaning
-  title: "Context-Aware Data Cleaning: Optimizing Bengali Text for Contextual Text Classification"
-  authors: Faisal et al.
-  venue: SN Computer Science
-  year: 2025
-  link: https://doi.org/10.1007/s42979-025-03891-9
-  task: textcls
-- id: jahin-etal-2025-bangla-fake-news-lda-lime
-  title: "Enhancing Fake News Analysis in Bangla: A Hybrid Model with LDA, and LIME for Interpretable Classification"
-  authors: Jahin et al.
-  venue: International Journal of Innovative Computing
-  year: 2025
-  link: https://doi.org/10.11113/ijic.v15n2.543
-  task: textcls
-- id: bandan-etal-2024-bengali-fake-news-deep-learning
-  title: "Deep Learning for Bengali Fake News Detection: Innovative Approaches for Accurate Classification"
-  authors: Bandan et al.
-  venue: International Journal of Research and Innovation in Applied Science
-  year: 2024
-  link: https://doi.org/10.51584/ijrias.2024.908034
-  task: textcls
-- id: afroze-etal-2024-bengali-literary-genre-identification
-  title: "Empirical Text Analysis for Identifying the Genres of Bengali Literary Work"
-  authors: Afroze et al.
-  venue: Journal of Advances in Information Technology
-  year: 2024
-  link: https://doi.org/10.12720/jait.15.5.602-613
-  task: textcls
-- id: dawn-etal-2024-bengali-document-class-topic-modelling
-  title: "Likelihood corpus distribution: an efficient topic modelling scheme for Bengali document class identification"
-  authors: Dawn et al.
-  venue: Sadhana
-  year: 2024
-  link: https://doi.org/10.1007/s12046-024-02470-7
-  task: textcls
-- id: ahammad-etal-2024-bangla-fake-news-roberta-gcn
-  title: "RoBERTa-GCN: A Novel Approach for Combating Fake News in Bangla Using Advanced Language Processing and Graph Convolutional Networks"
-  authors: Ahammad et al.
-  venue: IEEE Access
-  year: 2024
-  link: https://doi.org/10.1109/access.2024.3457860
-  task: textcls
-- id: das-etal-2024-bangla-fake-news-detection
-  title: "Social Media Bangla Fake News Detection Using Deep and Machine Learning Algorithms"
-  authors: Das et al.
-  venue: International Journal of Engineering Trends and Technology
-  year: 2024
-  link: https://doi.org/10.14445/22315381/ijett-v72i5p135
-  task: textcls
-- id: ahmed-etal-2023-bengali-news-headline-categorization
-  title: "Bengali News Headline Categorization: A Comprehensive Analysis of Machine Learning and Deep Learning Approach"
-  authors: Ahmed et al.
-  venue: BAIUST ACADEMIC JOURNAL
-  year: 2023
-  link: https://doi.org/10.63307/baj.4.1.s3
-  task: textcls
-- id: dhar-etal-2023-bangla-news-text-categorization
-  title: "Hybrid approach for text categorization: A case study with Bangla news article"
-  authors: Dhar et al.
-  venue: Journal of Information Science
-  year: 2023
-  link: https://doi.org/10.1177/01655515211027770
-  task: textcls
-- id: dawn-etal-2022-bengali-document-classification-dictionary
-  title: "A dictionary based model for bengali document classification"
-  authors: Dawn et al.
-  venue: Applied Intelligence
-  year: 2022
-  link: https://doi.org/10.1007/s10489-022-03955-w
-  task: textcls
-- id: rafi-ur-rashid-etal-2022-bangla-textcls-class-imbalance
-  title: "Breaking the Curse of Class Imbalance: Bangla Text Classification"
-  authors: Rafi-Ur-Rashid et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
-  year: 2022
-  link: https://doi.org/10.1145/3511601
-  task: textcls
-- id: hossain-etal-2021-bangla-news-headline-categorization
-  title: "Bangla News Headline Categorization"
-  authors: Hossain et al.
-  venue: International Journal of Education and Management Engineering
-  year: 2021
-  link: https://doi.org/10.5815/ijeme.2021.06.05
-  task: textcls
-- id: dhar-etal-2021-bengali-news-headline-ml-pipeline
-  title: "Bengali News Headline Categorization UsingOptimized Machine Learning Pipeline"
-  authors: Dhar et al.
-  venue: International Journal of Information Engineering and Electronic Business
-  year: 2021
-  link: https://doi.org/10.5815/ijieeb.2021.01.02
-  task: textcls
-- id: hossain-etal-2021-bengali-document-categorization-cnn
-  title: "Bengali text document categorization based on very deep convolution neural network"
-  authors: Hossain et al.
-  venue: Expert Systems with Applications
-  year: 2021
-  link: https://doi.org/10.1016/j.eswa.2021.115394
-  task: textcls
-- id: yeasmin-etal-2021-bangla-news-classification-dense-nn
-  title: "Multi-category Bangla News Classification using Machine Learning Classifiers and Multi-layer Dense Neural Network"
-  authors: Yeasmin et al.
-  venue: International Journal of Advanced Computer Science and Applications
-  year: 2021
-  link: https://doi.org/10.14569/ijacsa.2021.0120588
-  task: textcls
-- id: mahmud-etal-2020-bengali-document-categorization-mlp
-  title: "A Multi Layer Perceptron Along with Memory Efficient Feature Extraction Approach for Bengali Document Categorization"
-  authors: Mahmud et al.
-  venue: Journal of Computer Science
-  year: 2020
-  link: https://doi.org/10.3844/jcssp.2020.378.390
-  task: textcls
-- id: dhar-etal-2020-cess-bangla-web-text-categorization
-  title: "CESS-A System to Categorize Bangla Web Text Documents"
-  authors: Dhar et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
-  year: 2020
-  link: https://doi.org/10.1145/3398070
-  task: textcls
-- id: uddin-etal-2020-bengali-spam-sms-rnn
-  title: "Detecting Bengali Spam SMS Using Recurrent Neural Network"
-  authors: Uddin et al.
-  venue: Journal of Communications
-  year: 2020
-  link: https://doi.org/10.12720/jcm.15.4.325-331
-  task: textcls
-- id: rabib-etal-2020-bengali-news-categorization
-  title: "Different Machine Learning based Approaches of Baseline and Deep Learning Models for Bengali News Categorization"
-  authors: Rabib et al.
-  venue: International Journal of Computer Applications
-  year: 2020
-  link: https://doi.org/10.5120/ijca2020920107
-  task: textcls
-- id: hassan-etal-2019-bangla-document-categorization-term-graph
-  title: "Bangla Document Categorization using Term Graph"
-  authors: Hassan et al.
-  venue: International Journal of Computer Applications
-  year: 2019
-  link: https://doi.org/10.5120/ijca2019919329
-  task: textcls
-- id: anisuzzaman-etal-2018-bengali-authorship-ngram-naive-bayes
-  title: "Authorship Attribution for Bengali Language Using the Fusion of N-Gram and Naive Bayes Algorithms"
-  authors: Anisuzzaman et al.
-  venue: International Journal of Information Technology and Computer Science
-  year: 2018
-  link: https://doi.org/10.5815/ijitcs.2018.10.02
-  task: textcls
-- id: pandian-etal-2018-bengali-poems-authorship
-  title: "Comparison of Algorithms in Authorship Identification using Bengali Poems"
-  authors: Pandian et al.
-  venue: International Journal of Engineering & Technology
-  year: 2018
-  link: https://doi.org/10.14419/ijet.v7i4.19.21989
-  task: textcls
-- id: mouhoub-etal-2018-bangla-topic-modelling-lda-news
-  title: "Topic Modelling in Bangla Language: An LDA Approach to Optimize Topics and News Classification"
-  authors: Mouhoub et al.
-  venue: Computer and Information Science
-  year: 2018
-  link: https://doi.org/10.5539/cis.v11n4p77
-  task: textcls
-- id: phani-etal-2017-bengali-authorship-attribution
-  title: "A Supervised Learning Approach for Authorship Attribution of Bengali Literary Texts"
-  authors: Phani et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
-  year: 2017
-  link: https://doi.org/10.1145/3099473
-  task: textcls
-- id: mandal-etal-2014-bangla-web-document-categorization
-  title: "Supervised Learning Methods for Bangla Web Document Categorization"
-  authors: Mandal et al.
-  venue: International Journal of Artificial Intelligence & Applications
-  year: 2014
-  link: https://doi.org/10.5121/ijaia.2014.5508
-  task: textcls
-- id: nath-etal-2025-bonghope-annotated-corpus-bengali-hope
-  title: "BongHope: An annotated corpus for Bengali hope speech detection"
-  authors: Nath et al.
-  venue: International Journal of Information Technology
-  year: 2025
-  link: https://doi.org/10.1007/s41870-025-02484-2
-  task: textcls
-- id: mugdha-etal-2024-bangla-stemmer-categorization
-  title: "Accurate Prediction of Bangla Text Article Categorization by Utilizing Novel Bangla Stemmer"
-  authors: Mugdha et al.
-  venue: International Journal of Automation and Smart Technology
-  year: 2024
-  link: https://doi.org/10.5875/xbzrk013
   task: textcls

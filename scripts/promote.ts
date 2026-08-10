@@ -136,13 +136,23 @@ function normalizeVenue(bookRaw: string | undefined, key: string): string | unde
   if (/Australasian Language Technology|\bALTA\b/i.test(b)) return 'ALTA';
   if (/Conference on Language Modeling|\bCOLM\b/i.test(b)) return 'COLM';
 
-  // A brace-protected acronym in the original, e.g. "({WSSANLP}2016)".
-  const acro = bookRaw.match(/\{([A-Z][A-Za-z][A-Za-z-]{1,14})\}/);
-  if (acro) return acro[1].toUpperCase();
-
-  // A parenthetical mixed-case acronym, e.g. "… Studies (ConTeNTS) Incorporating …".
-  const paren = b.match(/\(([A-Za-z]*[A-Z][A-Za-z]*[A-Z][A-Za-z-]*)\)/);
-  if (paren) return paren[1];
+  /**
+   * An acronym in parentheses, brace-protected or not, with an optional trailing
+   * year: "({CH}i{PSAL}2026)" -> CHiPSAL, "({WSSANLP}2016)" -> WSSANLP,
+   * "(ConTeNTS)" -> ConTeNTS.
+   *
+   * Only parentheses mark an acronym. The anthology also brace-protects ordinary
+   * words for capitalisation ("Dialects in {NLP}", "{B}engali"), and an earlier
+   * rule that matched any brace-protected capitals produced venues like `NLP`
+   * and `PSAL` — the latter a fragment of `{CH}i{PSAL}`. Requiring parentheses
+   * and at least two capitals keeps real acronyms and rejects protected words.
+   */
+  for (const group of bookRaw.match(/\([^)]+\)/g) ?? []) {
+    const inner = debrace(group.slice(1, -1))
+      .replace(/[\s-]*\d{4}\s*$/, '')
+      .trim();
+    if (/^[A-Za-z][A-Za-z-]{1,14}$/.test(inner) && /[A-Z][A-Za-z-]*[A-Z]/.test(inner)) return inner;
+  }
 
   // The anthology key's venue segment, when the key is the modern form
   // ("2023.blp-1.4" -> "BLP").
@@ -161,6 +171,9 @@ function normalizeVenue(bookRaw: string | undefined, key: string): string | unde
     // part before them is the venue's own name.
     .replace(/\s+within the .*$/i, '')
     .replace(/:\s.*$/, '')
+    // The anthology uses a LaTeX em dash for a subtitle too: "Dialects in NLP
+    // --- A Resource Perspective". Same treatment as the colon above.
+    .replace(/\s*---\s.*$/, '')
     .replace(/,\s*(Varieties and Dialects|Sentiment).*$/i, '')
     .replace(/\s+/g, ' ')
     .trim();
@@ -252,7 +265,15 @@ for (const raw of bib.split(/\n@/)) {
 }
 console.log(`  indexed ${byUrl.size} anthology records`);
 
-const candidates = parse(readFileSync(INBOX, 'utf8')) as any[];
+const inboxRaw = readFileSync(INBOX, 'utf8');
+/**
+ * discover.ts heads the inbox with a comment block stating that nothing in the
+ * file is catalogued, that every entry is unverified, and that it must not be
+ * bulk-imported. Rewriting the file used to drop it, quietly turning a warned
+ * file into an unmarked one. Preserve it verbatim.
+ */
+const inboxHeader = /^(#[^\n]*\n)+/.exec(inboxRaw)?.[0] ?? '';
+const candidates = parse(inboxRaw) as any[];
 console.log(`  ${candidates.length} candidates in the inbox\n`);
 
 // -------------------------------------------------------------- existing state
@@ -431,5 +452,5 @@ for (const task of tasks) {
   list.sort((a, b) => b.year - a.year || String(a.title).localeCompare(String(b.title)));
   writeFileSync(resolve(paperDir, `${task}.yaml`), stringify(list, { lineWidth: 0 }));
 }
-writeFileSync(INBOX, stringify(leftover, { lineWidth: 0 }));
+writeFileSync(INBOX, `${inboxHeader}${inboxHeader ? '\n' : ''}${stringify(leftover, { lineWidth: 0 })}`);
 console.log('\nWritten. Run `npm run validate` before committing.');

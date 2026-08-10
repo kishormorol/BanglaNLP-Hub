@@ -1,16 +1,16 @@
-- id: siam-wafa-2026-babsa
-  title: "BABSA: A large scale bangla aspect based sentiment analysis dataset"
-  authors: Siam and Wafa
-  venue: Data in Brief
+- id: barua-etal-2026-deep-learning-framework-dataset-creation
+  title: A Deep Learning–Based Framework for Dataset Creation and Sentiment Classification of English–Bengali Code-Mixed Texts
+  authors: Barua et al.
+  venue: Engineering Technology & Applied Science Research
   year: 2026
-  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC12962122/
+  link: https://doi.org/10.48084/etasr.15475
   task: sentiment
-- id: biswas-etal-2025-banglasarc3
-  title: "BanglaSarc3: A benchmark dataset for Bangla sarcasm detection from social media to advance Bangla NLP"
-  authors: Biswas et al.
-  venue: Data in Brief
-  year: 2025
-  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC12396290/
+- id: sajid-etal-2026-multi-class-classification-feminist-sentiment
+  title: A multi-class classification approach for feminist sentiment analysis in Bangla social media using TF-IDF and ensemble learning
+  authors: Sajid et al.
+  venue: Indonesian Journal of Electrical Engineering and Computer Science
+  year: 2026
+  link: https://doi.org/10.11591/ijeecs.v42.i2.pp584-595
   task: sentiment
 - id: arxiv-2604-13057
   title: A Multi-Model Approach to English-Bangla Sentiment Classification of Government Mobile Banking App Reviews
@@ -19,12 +19,82 @@
   year: 2026
   link: http://arxiv.org/abs/2604.13057
   task: sentiment
+- id: barua-etal-2026-dual-order-hybrid-bilstm-bigru
+  title: A Novel Dual-Order Hybrid BiLSTM–BiGRU Ensemble Model for English-Bengali Code-Mixed Sentiment Analysis
+  authors: Barua et al.
+  venue: Engineering Technology & Applied Science Research
+  year: 2026
+  link: https://doi.org/10.48084/etasr.17370
+  task: sentiment
+- id: siam-wafa-2026-babsa
+  title: "BABSA: A large scale bangla aspect based sentiment analysis dataset"
+  authors: Siam and Wafa
+  venue: Data in Brief
+  year: 2026
+  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC12962122/
+  task: sentiment
+- id: islam-etal-2026-ban-aste-unified-neural-framework
+  title: "BAN-ASTE: A unified neural framework for Bengali aspect sentiment triplet extraction"
+  authors: Islam et al.
+  venue: Natural Language Processing Journal
+  year: 2026
+  link: https://doi.org/10.1016/j.nlp.2026.100216
+  task: sentiment
+- id: hussen-etal-2026-bangla-suicidal-ideation-detection-performance
+  title: "Bangla Suicidal Ideation Detection: Performance and Efficiency Benchmark of Simple and Complex Classifiers on Social Media Data"
+  authors: Hussen et al.
+  venue: The Journal of Applied Technology and Innovation
+  year: 2026
+  link: https://doi.org/10.65136/jati.v10i1.11
+  task: sentiment
+- id: alam-etal-2026-bengali-emotion-classification-social-media-explainability
+  title: Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer-Based Models with Explainability
+  authors: Alam et al.
+  venue: Journal of Engineering Research and Sciences
+  year: 2026
+  link: https://doi.org/10.55708/js0506004
+  task: sentiment
+- id: alam-etal-2026-bengali-emotion-classification-social-media
+  title: Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer‑Based Models with Explainability
+  authors: Alam et al.
+  venue: Journal of Engineering Research and Sciences
+  year: 2026
+  link: https://doi.org/10.55708/js0506004
+  task: sentiment
+- id: ibnath-etal-2026-beyond-polarity-bengali-texts-multi
+  title: "Beyond Polarity in Bengali Texts: Can Multi-Task Modeling Capture Sarcasm Intensity and Classification?"
+  authors: Ibnath et al.
+  venue: IEEE Open Journal of the Computer Society
+  year: 2026
+  link: https://doi.org/10.1109/ojcs.2026.3697802
+  task: sentiment
 - id: hasan-etal-2026-enhancing
   title: Enhancing Mental Health Counseling Support in Bangladesh using Culturally-grounded Knowledge
   authors: Hasan et al.
   venue: CLP
   year: 2026
   link: https://aclanthology.org/2026.clpsych-1.13/
+  task: sentiment
+- id: khandokar-etal-2026-ssabe-tscm-drift-aware-interpretable
+  title: "SSABE-TSCM: drift-aware and interpretable financial sentiment analysis for low-resource Bangla via adaptive semi-supervised and temporal contrastive modeling"
+  authors: Khandokar et al.
+  venue: Frontiers in Artificial Intelligence
+  year: 2026
+  link: https://doi.org/10.3389/frai.2026.1724407
+  task: sentiment
+- id: arxiv-2608-01471
+  title: "Two-Stage Bengali Sentiment Classification: Domain Adaptation Through Continual Learning and Parameter-Efficient Fine-Tuning"
+  authors: Rahman et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2608.01471
+  task: sentiment
+- id: tasnim-etal-2026-what-s-your-mind-mental
+  title: What’s on Your Mind? - Mental Health Disorder Risk Detection From Bangla Social Media Text Using Weighted Ensemble of Transformers
+  authors: Tasnim et al.
+  venue: Journal of Technology in Behavioral Science
+  year: 2026
+  link: https://doi.org/10.1007/s41347-026-00614-6
   task: sentiment
 - id: arxiv-2602-12921
   title: "When Words Don't Mean What They Say: Figurative Understanding in Bengali Idioms"
@@ -40,12 +110,26 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.8/
   task: sentiment
+- id: rejuan-etal-2025-machine-dl-classifying-customer-sentiments
+  title: A machine and DL approach for classifying customer sentiments from online shopping reviews in Bangla text
+  authors: Rejuan et al.
+  venue: Bulletin of Electrical Engineering and Informatics
+  year: 2025
+  link: https://doi.org/10.11591/eei.v14i4.9122
+  task: sentiment
 - id: arxiv-2511-18618
   title: A Unified BERT-CNN-BiLSTM Framework for Simultaneous Headline Classification and Sentiment Analysis of Bangla News
   authors: Raquib et al.
   venue: arXiv
   year: 2025
   link: http://arxiv.org/abs/2511.18618
+  task: sentiment
+- id: bhattacharjee-2025-advancing-bengali-sentiment-benchmark-elmo
+  title: "Advancing Bengali Sentiment Analysis: A Benchmark Study with ELMo and XLNet Architecture"
+  authors: Bhattacharjee
+  venue: International Journal of Computer Applications
+  year: 2025
+  link: https://doi.org/10.5120/ijca2025925755
   task: sentiment
 - id: kabir-etal-2025-advancing
   title: Advancing Subjectivity Detection in Bengali News Articles Using Transformer Models with POS-Aware Features
@@ -82,12 +166,33 @@
   year: 2025
   link: http://arxiv.org/abs/2511.21381
   task: sentiment
+- id: biswas-etal-2025-banglasarc3
+  title: "BanglaSarc3: A benchmark dataset for Bangla sarcasm detection from social media to advance Bangla NLP"
+  authors: Biswas et al.
+  venue: Data in Brief
+  year: 2025
+  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC12396290/
+  task: sentiment
 - id: arxiv-2511-23264
   title: "BanglaSentNet: An Explainable Hybrid Deep Learning Framework for Multi-Aspect Sentiment Analysis with Cross-Domain Transfer Learning"
   authors: Islam et al.
   venue: arXiv
   year: 2025
   link: http://arxiv.org/abs/2511.23264
+  task: sentiment
+- id: ullah-2025-bclsa-advancing-bangla-sentiment-concept
+  title: "BCLSA: Advancing Bangla sentiment analysis with concept-level reasoning and efficiency"
+  authors: Ullah
+  venue: Machine Learning with Applications
+  year: 2025
+  link: https://doi.org/10.1016/j.mlwa.2025.100793
+  task: sentiment
+- id: seal-etal-2025-ben-ed-pr-emotion-detection
+  title: "BEN-ED-PR: Emotion detection from Bengali text with polysemy resolution"
+  authors: Seal et al.
+  venue: International Journal of Information Technology
+  year: 2025
+  link: https://doi.org/10.1007/s41870-025-02653-3
   task: sentiment
 - id: jawad-etal-2025-benchmarking
   title: Benchmarking Large Language Models on Bangla Dialect Translation and Dialectal Sentiment Analysis
@@ -96,12 +201,33 @@
   year: 2025
   link: https://aclanthology.org/2025.banglalp-1.26/
   task: sentiment
+- id: mahmud-etal-2025-bengali-human-sentiment-attention-bidirectional-lstm
+  title: Bengali Human Sentiment Detection and Classification using Attention based Bidirectional LSTM
+  authors: Mahmud et al.
+  venue: IEEE NCIM
+  year: 2025
+  link: https://doi.org/10.1109/NCIM65934.2025.11160248
+  task: sentiment
 - id: al-sefat-2025-bengalifig
   title: "BengaliFig: A Low-Resource Challenge for Figurative and Culturally Grounded Reasoning in Bengali"
   authors: Al Sefat
   venue: Workshop on Multimodal Models for Low-Resource Contexts and Social Impact
   year: 2025
   link: https://aclanthology.org/2025.mmloso-1.6/
+  task: sentiment
+- id: ahamed-etal-2025-beyond-likes-loves-uncovering-complex
+  title: "Beyond Likes and Loves: Uncovering Complex Sentiments in Bengali Food Reviews on Facebook"
+  authors: Ahamed et al.
+  venue: International Journal of Computer Applications
+  year: 2025
+  link: https://doi.org/10.5120/ijca2025925106
+  task: sentiment
+- id: bhowmik-etal-2025-bn-graph-data-augmentation-bangla
+  title: "BN-GRAPH: Data Augmentation Based Bangla Text Sentiment Analysis in Deep Graph Neural Network"
+  authors: Bhowmik et al.
+  venue: SN Computer Science
+  year: 2025
+  link: https://doi.org/10.1007/s42979-025-03763-2
   task: sentiment
 - id: alam-etal-2025-bnsentmix
   title: "BnSentMix: A Diverse Bengali-English Code-Mixed Dataset for Sentiment Analysis"
@@ -145,12 +271,33 @@
   year: 2025
   link: http://arxiv.org/abs/2510.01276
   task: sentiment
+- id: rumy-etal-2025-multi-label-emotion-sentiment-detection
+  title: Multi-label emotion and sentiment detection from Bengali text using hybrid deep learning model
+  authors: Rumy et al.
+  venue: International Journal of Cognitive Computing in Engineering
+  year: 2025
+  link: https://doi.org/10.1016/j.ijcce.2025.10.005
+  task: sentiment
 - id: arxiv-2507-11084
   title: "Social Media Sentiments Analysis on the July Revolution in Bangladesh: A Hybrid Transformer Based Machine Learning Approach"
   authors: Hossen et al.
   venue: arXiv
   year: 2025
   link: http://arxiv.org/abs/2507.11084
+  task: sentiment
+- id: hasan-etal-2025-future-bangla-sentiment-advancements-challenges
+  title: "THE FUTURE OF BANGLA SENTIMENT ANALYSIS: ADVANCEMENTS, CHALLENGES, AND OPPORTUNITIES FOR PRACTICAL AND RESEARCH INNOVATION"
+  authors: Hasan et al.
+  venue: Journal of Information System and Technology Management
+  year: 2025
+  link: https://doi.org/10.35631/jistm.1039002
+  task: sentiment
+- id: islam-etal-2025-transformer-sentiment-classification-non-depressive
+  title: Transformer-Based Sentiment Analysis for classification of non-depressive and suicidal thought from Bangla Text
+  authors: Islam et al.
+  venue: International Journal of Research in Business and Social Science (2147-4478)
+  year: 2025
+  link: https://doi.org/10.20525/ijrbs.v14i5.4274
   task: sentiment
 - id: arxiv-2512-15547
   title: "When a Nation Speaks: Machine Learning and NLP in People's Sentiment Analysis During Bangladesh's 2024 Mass Uprising"
@@ -166,6 +313,27 @@
   year: 2024
   link: https://aclanthology.org/2024.wnut-1.5/
   task: sentiment
+- id: paul-etal-2024-detect-suicidal-bengali-posts-social
+  title: An Approach to Detect Suicidal Bengali Posts from Social Media Using Machine Learning Algorithms
+  authors: Paul et al.
+  venue: International Journal of Engineering Trends and Technology
+  year: 2024
+  link: https://doi.org/10.14445/22315381/ijett-v72i5p105
+  task: sentiment
+- id: rahman-etal-2024-analyzing-sentiments-elearning-bangla-romanized
+  title: "Analyzing Sentiments in eLearning: A Comparative Study of Bangla and Romanized Bangla Text Using Transformers"
+  authors: Rahman et al.
+  venue: IEEE Access
+  year: 2024
+  link: https://doi.org/10.1109/access.2024.3419024
+  task: sentiment
+- id: lora-etal-2024-ben-sarc-self-annotated-corpus
+  title: "Ben-Sarc: A self-annotated corpus for sarcasm detection from Bengali social media comments and its baseline evaluation"
+  authors: Lora et al.
+  venue: Natural language processing.
+  year: 2024
+  link: https://doi.org/10.1017/nlp.2024.11
+  task: sentiment
 - id: arxiv-2411-06548
   title: "CineXDrama: Relevance Detection and Sentiment Analysis of Bangla YouTube Comments on Movie-Drama using Transformers: Insights from Interpretability Tool"
   authors: Rifa et al.
@@ -180,12 +348,33 @@
   year: 2024
   link: http://arxiv.org/abs/2412.05861
   task: sentiment
+- id: hoque-etal-2024-depressive-suicidal-text-sentiment-bangla
+  title: Depressive and Suicidal Text-Based Sentiment Analysis in Bangla Using Deep Learning Models
+  authors: Hoque et al.
+  venue: Business & IT
+  year: 2024
+  link: https://doi.org/10.14311/bit.2024.02.13
+  task: sentiment
 - id: raihan-etal-2024-emomix
   title: "EmoMix-3L: A Code-Mixed Dataset for Bangla-English-Hindi for Emotion Detection"
   authors: Raihan et al.
   venue: Workshop on Indian Language Data
   year: 2024
   link: https://aclanthology.org/2024.wildre-1.2/
+  task: sentiment
+- id: shafi-etal-2024-emotion-classification-bangla-text-data
+  title: "Emotion Classification in Bangla Text Data Using Gaussian Naive Bayes Classifier: A Computational Linguistic Study"
+  authors: Shafi et al.
+  venue: Malaysian Journal of Science and Advanced Technology
+  year: 2024
+  link: https://doi.org/10.56532/mjsat.v4i4.273
+  task: sentiment
+- id: hoque-etal-2024-exploring-transformer-sentiment-task-under
+  title: Exploring transformer models in the sentiment analysis task for the under-resource Bengali language
+  authors: Hoque et al.
+  venue: Natural Language Processing Journal
+  year: 2024
+  link: https://doi.org/10.1016/j.nlp.2024.100091
   task: sentiment
 - id: arxiv-2401-07847
   title: "Milestones in Bengali Sentiment Analysis leveraging Transformer-models: Fundamentals, Challenges and Future Directions"
@@ -201,6 +390,27 @@
   year: 2024
   link: http://arxiv.org/abs/2407.19528
   task: sentiment
+- id: rahman-etal-2024-optimizing-bert-bengali-emotion-classification
+  title: "Optimizing BERT for Bengali Emotion Classification: Evaluating Knowledge Distillation, Pruning, and Quantization"
+  authors: Rahman et al.
+  venue: Computer Modeling in Engineering & Sciences
+  year: 2024
+  link: https://doi.org/10.32604/cmes.2024.058329
+  task: sentiment
+- id: tanjum-etal-2024-predicting-customer-sentiment-bengali-food
+  title: Predicting Customer Sentiment from Bengali Food Reviews of Social Media Using Deep Learning
+  authors: Tanjum et al.
+  venue: BAUET Journal
+  year: 2024
+  link: https://doi.org/10.59321/bauetj.v4i2.13
+  task: sentiment
+- id: islam-etal-2024-sentiment-bangla-language-dataset-bangdsa
+  title: Sentiment analysis of Bangla language using a new comprehensive dataset BangDSA and the novel feature metric skipBangla-BERT
+  authors: Islam et al.
+  venue: Natural Language Processing Journal
+  year: 2024
+  link: https://doi.org/10.1016/j.nlp.2024.100069
+  task: sentiment
 - id: arxiv-2405-06667
   title: Sentiment Polarity Analysis of Bangla Food Reviews Using Machine and Deep Learning Algorithms
   authors: Amin et al.
@@ -215,6 +425,20 @@
   year: 2024
   link: http://arxiv.org/abs/2401.10535
   task: sentiment
+- id: ahmed-etal-2024-trf-bert-transformative-aspect-sentiment
+  title: "tRF-BERT: A transformative approach to aspect-based sentiment analysis in the bengali language"
+  authors: Ahmed et al.
+  venue: PLoS ONE
+  year: 2024
+  link: https://doi.org/10.1371/journal.pone.0308050
+  task: sentiment
+- id: mia-etal-2024-verse-emotion-bengali-music-lyricsusing
+  title: Verse-Based Emotion Analysis of Bengali Music from LyricsUsing Machine Learning and Neural Network Classifiers
+  authors: Mia et al.
+  venue: International Journal of Computing and Digital Systems
+  year: 2024
+  link: https://doi.org/10.12785/ijcds/150128
+  task: sentiment
 - id: hasan-etal-2024-zero
   title: "Zero- and Few-Shot Prompting with LLMs: A Comparative Study with Fine-tuned Models for Bangla Sentiment Analysis"
   authors: Hasan et al.
@@ -222,12 +446,26 @@
   year: 2024
   link: https://aclanthology.org/2024.lrec-main.1549/
   task: sentiment
+- id: lora-etal-2023-transformer-generative-adversarial-learning-detect
+  title: A transformer-based generative adversarial learning to detect sarcasm from Bengali text with correct classification of confusing text
+  authors: Lora et al.
+  venue: Heliyon
+  year: 2023
+  link: https://doi.org/10.1016/j.heliyon.2023.e22531
+  task: sentiment
 - id: fahim-2023-aambela-blp
   title: "Aambela at BLP-2023 Task 2: Enhancing BanglaBERT Performance for Bangla Sentiment Analysis Task with In Task Pretraining and Adversarial Weight Perturbation"
   authors: Fahim
   venue: BLP @ EMNLP
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.42/
+  task: sentiment
+- id: ahmed-etal-2023-advancement-bangla-sentiment-transformer-transfer
+  title: "Advancement in Bangla Sentiment Analysis: A Comparative Study of Transformer-Based and Transfer Learning Models for E-commerce Sentiment Classification"
+  authors: Ahmed et al.
+  venue: Journal of Information Systems Engineering and Business Intelligence
+  year: 2023
+  link: https://doi.org/10.20473/jisebi.9.2.181-194
   task: sentiment
 - id: kabir-etal-2023-banglabook
   title: "BanglaBook: A Large-scale Bangla Dataset for Sentiment Analysis from Book Reviews"
@@ -249,6 +487,20 @@
   venue: BLP @ EMNLP
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.7/
+  task: sentiment
+- id: shanto-etal-2023-binary-vs-multiclass-sentiment-classification
+  title: "Binary vs. Multiclass Sentiment Classification for Bangla E-commerce Product Reviews: A Comparative Analysis of Machine Learning Models"
+  authors: Shanto et al.
+  venue: International Journal of Information Engineering and Electronic Business
+  year: 2023
+  link: https://doi.org/10.5815/ijieeb.2023.06.04
+  task: sentiment
+- id: tareq-etal-2023-data-augmentation-bangla-english-code
+  title: "Data-Augmentation for Bangla-English Code-Mixed Sentiment Analysis: Enhancing Cross Linguistic Contextual Understanding"
+  authors: Tareq et al.
+  venue: IEEE Access
+  year: 2023
+  link: https://doi.org/10.1109/access.2023.3277787
   task: sentiment
 - id: fatema-etal-2023-emptymind
   title: "EmptyMind at BLP-2023 Task 2: Sentiment Analysis of Bangla Social Media Posts using Transformer-Based Models"
@@ -292,12 +544,33 @@
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.36/
   task: sentiment
+- id: shanto-etal-2023-mining-user-opinions-balanced-bangla
+  title: "Mining User Opinions: A Balanced Bangla Sentiment Analysis Dataset for E-Commerce"
+  authors: Shanto et al.
+  venue: Malaysian Journal of Science and Advanced Technology
+  year: 2023
+  link: https://doi.org/10.56532/mjsat.v3i4.200
+  task: sentiment
 - id: arxiv-2309-15670
   title: "MONOVAB : An Annotated Corpus for Bangla Multi-label Emotion Detection"
   authors: Banshal et al.
   venue: arXiv
   year: 2023
   link: http://arxiv.org/abs/2309.15670
+  task: sentiment
+- id: haque-etal-2023-multi-class-sentiment-classification-bengali
+  title: Multi-class sentiment classification on Bengali social media comments using machine learning
+  authors: Haque et al.
+  venue: International Journal of Cognitive Computing in Engineering
+  year: 2023
+  link: https://doi.org/10.1016/j.ijcce.2023.01.001
+  task: sentiment
+- id: hasan-etal-2023-natural-language-processing-sentiment-bangla
+  title: Natural Language Processing and Sentiment Analysis on Bangla Social Media Comments on Russia–Ukraine War Using Transformers
+  authors: Hasan et al.
+  venue: Vietnam Journal of Computer Science
+  year: 2023
+  link: https://doi.org/10.1142/s2196888823500021
   task: sentiment
 - id: arxiv-2311-15032
   title: "nlpBDpatriots at BLP-2023 Task 2: A Transfer Learning Approach to Bangla Sentiment Analysis"
@@ -362,6 +635,34 @@
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.38/
   task: sentiment
+- id: shammi-etal-2022-roadmap-bangla-text-sentiment
+  title: A Comprehensive Roadmap on Bangla Text-based Sentiment Analysis
+  authors: Shammi et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2022
+  link: https://doi.org/10.1145/3572783
+  task: sentiment
+- id: rahman-etal-2022-dynamic-strategy-classifying-sentiment-bengali
+  title: A Dynamic Strategy for Classifying Sentiment From Bengali Text by Utilizing Word2vector Model
+  authors: Rahman et al.
+  venue: Journal of Information Technology Research
+  year: 2022
+  link: https://doi.org/10.4018/jitr.299919
+  task: sentiment
+- id: purba-etal-2022-hybrid-convolutional-long-short-term
+  title: A hybrid convolutional long short-term memory (CNN-LSTM) based natural language processing (NLP) model for sentiment analysis of customer product reviews in Bangla
+  authors: Purba et al.
+  venue: Journal of Discrete Mathematical Sciences and Cryptography
+  year: 2022
+  link: https://doi.org/10.1080/09720529.2022.2133250
+  task: sentiment
+- id: samia-etal-2022-aspect-sentiment-bengali-text-bidirectional
+  title: Aspect-based Sentiment Analysis for Bengali Text using Bidirectional Encoder Representations from Transformers (BERT)
+  authors: Samia et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2022
+  link: https://doi.org/10.14569/ijacsa.2022.01312112
+  task: sentiment
 - id: arxiv-2209-13461
   title: "BanglaSarc: A Dataset for Sarcasm Detection"
   authors: Apon et al.
@@ -376,6 +677,13 @@
   year: 2022
   link: https://link.springer.com/article/10.1007/s42979-022-01028-w
   task: sentiment
+- id: kabir-etal-2022-detection-depression-severity-bengali-social
+  title: "Detection of Depression Severity Using Bengali Social Media Posts on Mental Health: Study Using Natural Language Processing Techniques"
+  authors: Kabir et al.
+  venue: JMIR Formative Research
+  year: 2022
+  link: https://doi.org/10.2196/36118
+  task: sentiment
 - id: islam-etal-2022-emonoba
   title: "EmoNoBa: A Dataset for Analyzing Fine-Grained Emotions on Noisy Bangla Texts"
   authors: Islam et al.
@@ -383,12 +691,61 @@
   year: 2022
   link: https://aclanthology.org/2022.aacl-short.17/
   task: sentiment
+- id: khan-etal-2022-hindi-bengali-sentiment-transfer-learningand
+  title: Hindi/Bengali sentiment analysis using transfer learningand joint dual input learning with self-attention
+  authors: Khan et al.
+  venue: BOHR International Journal of Computer Science
+  year: 2022
+  link: https://doi.org/10.54646/bijcs.2022.05
+  task: sentiment
+- id: bodini-2022-opinion-mining-machine-translated-bangla
+  title: Opinion mining from machine translated Bangla reviews with stacked contractive auto-encoders
+  authors: Bodini
+  venue: Journal of Ambient Intelligence and Humanized Computing
+  year: 2022
+  link: https://doi.org/10.1007/s12652-022-03760-w
+  task: sentiment
+- id: hassan-etal-2022-sentiment-bangla-conversation-machine-learning
+  title: Sentiment analysis on Bangla conversation using machine learning approach
+  authors: Hassan et al.
+  venue: International Journal of Power Electronics and Drive Systems/International Journal of Electrical and Computer Engineering
+  year: 2022
+  link: https://doi.org/10.11591/ijece.v12i5.pp5562-5572
+  task: sentiment
+- id: bhowmik-etal-2022-sentiment-bangla-text-extended-lexicon
+  title: Sentiment analysis on Bangla text using extended lexicon dictionary and deep learning algorithms
+  authors: Bhowmik et al.
+  venue: Array
+  year: 2022
+  link: https://doi.org/10.1016/j.array.2021.100123
+  task: sentiment
 - id: arxiv-2210-06405
   title: Transformer-based Text Classification on Unified Bangla Multi-class Emotion Corpus
   authors: Sourav et al.
   venue: arXiv
   year: 2022
   link: http://arxiv.org/abs/2210.06405
+  task: sentiment
+- id: mukta-etal-2021-guideline-bengali-sentiment-annotation
+  title: A Comprehensive Guideline for Bengali Sentiment Annotation
+  authors: Mukta et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2021
+  link: https://doi.org/10.1145/3474363
+  task: sentiment
+- id: bhowmik-etal-2021-bangla-text-sentiment-supervised-machine
+  title: Bangla Text Sentiment Analysis Using Supervised Machine Learning with Extended Lexicon Dictionary
+  authors: Bhowmik et al.
+  venue: Natural Language Processing Research
+  year: 2021
+  link: https://doi.org/10.2991/nlpr.d.210316.001
+  task: sentiment
+- id: sazzed-2021-bengsentilex-bengswearlex-creating-lexicons-sentimen
+  title: "BengSentiLex and BengSwearLex: creating lexicons for sentiment analysis and profanity detection in low-resource Bengali language"
+  authors: Sazzed
+  venue: PeerJ Computer Science
+  year: 2021
+  link: https://doi.org/10.7717/peerj-cs.681
   task: sentiment
 - id: bhowmick-jana-2021-sentiment
   title: Sentiment Analysis For Bengali Using Transformer Based Models
@@ -405,12 +762,61 @@
   link: https://aclanthology.org/2021.findings-emnlp.278/
   task: sentiment
   note: Noisy user-generated content, 13 domains.
+- id: maisha-etal-2021-supervised-machine-learning-algorithms-sentiment
+  title: Supervised Machine Learning Algorithms for Sentiment Analysis of Bangla Newspaper
+  authors: Maisha et al.
+  venue: International Journal of Innovative Computing
+  year: 2021
+  link: https://doi.org/10.11113/ijic.v11n2.321
+  task: sentiment
+- id: sharmin-etal-2020-attention-convolutional-neural-network-bangla
+  title: Attention-based convolutional neural network for Bangla sentiment analysis
+  authors: Sharmin et al.
+  venue: AI & Society
+  year: 2020
+  link: https://doi.org/10.1007/s00146-020-01011-0
+  task: sentiment
 - id: sazzed-2020-cross
   title: Cross-lingual sentiment classification in low-resource Bengali language
   authors: Sazzed
   venue: W-NUT
   year: 2020
   link: https://aclanthology.org/2020.wnut-1.8/
+  task: sentiment
+- id: jamatia-etal-2020-deep-learning-sentiment-code-mixed
+  title: Deep Learning Based Sentiment Analysis in a Code-Mixed English-Hindi and English-Bengali Social Media Corpus
+  authors: Jamatia et al.
+  venue: International Journal of Artificial Intelligence Tools
+  year: 2020
+  link: https://doi.org/10.1142/s0218213020500141
+  task: sentiment
+- id: sarkar-2020-heterogeneous-classifier-ensemble-sentiment-bengali
+  title: Heterogeneous classifier ensemble for sentiment analysis of Bengali and Hindi tweets
+  authors: Sarkar
+  venue: Sadhana
+  year: 2020
+  link: https://doi.org/10.1007/s12046-020-01424-z
+  task: sentiment
+- id: rahman-etal-2020-bangla-opinion-identification
+  title: Identifying and Categorizing Opinions Expressed in Bangla Sentences using Deep Learning Technique
+  authors: Rahman et al.
+  venue: International Journal of Computer Applications
+  year: 2020
+  link: https://doi.org/10.5120/ijca2020920119
+  task: sentiment
+- id: durga-etal-2020-sentiment-bangla-youtube-comments-machine
+  title: SENTIMENT ANALYSIS ON BANGLA YOUTUBE COMMENTS USING MACHINE LEARNING TECHNIQUES
+  authors: Durga et al.
+  venue: Journal of Emerging Technologies and Innovative Research
+  year: 2020
+  link: https://www.jetir.org/papers/JETIR2011265.pdf
+  task: sentiment
+- id: billah-etal-2019-depression-detection-bangla-facebook-status
+  title: Depression Detection from Bangla Facebook Status using Machine Learning Approach
+  authors: Billah et al.
+  venue: International Journal of Computer Applications
+  year: 2019
+  link: https://doi.org/10.5120/ijca2019919314
   task: sentiment
 - id: absa-p
   title: Datasets for Aspect-Based Sentiment Analysis in Bangla and Its Baseline Evaluation
@@ -420,6 +826,27 @@
   link: https://www.mdpi.com/2306-5729/3/2/15
   task: sentiment
   note: "Two datasets: cricket comments and customer reviews."
+- id: sarkar-2018-sentiment-polarity-detection-bengali-tweets
+  title: Sentiment Polarity Detection in Bengali Tweets Using Deep Convolutional Neural Networks
+  authors: Sarkar
+  venue: Journal of Intelligent Systems
+  year: 2018
+  link: https://doi.org/10.1515/jisys-2017-0418
+  task: sentiment
+- id: mahmudun-etal-2016-detecting-sentiment-bangla-text-machine
+  title: Detecting Sentiment from Bangla Text using Machine Learning Technique and Feature Analysis
+  authors: Mahmudun et al.
+  venue: International Journal of Computer Applications
+  year: 2016
+  link: https://doi.org/10.5120/ijca2016912230
+  task: sentiment
+- id: das-etal-2012-tracking-emotions-bloggers-case-bengali
+  title: Tracking Emotions of Bloggers - A Case Study for Bengali
+  authors: Das et al.
+  venue: Polibits
+  year: 2012
+  link: https://www.scielo.org.mx/pdf/poli/n45/n45a7.pdf
+  task: sentiment
 - id: das-bandyopadhyay-2010-discerning
   title: Discerning Emotions of Bloggers based on Topics -- a Supervised Coreference Approach in Bengali
   authors: Das et al.
@@ -447,424 +874,4 @@
   venue: ACL
   year: 2009
   link: https://aclanthology.org/P09-2038/
-  task: sentiment
-- id: rahman-etal-2020-bangla-opinion-identification
-  title: "Identifying and Categorizing Opinions Expressed in Bangla Sentences using Deep Learning Technique"
-  authors: Rahman et al.
-  venue: International Journal of Computer Applications
-  year: 2020
-  link: https://doi.org/10.5120/ijca2020920119
-  task: sentiment
-- id: barua-etal-2026-deep-learning-framework-dataset-creation
-  title: "A Deep Learning–Based Framework for Dataset Creation and Sentiment Classification of English–Bengali Code-Mixed Texts"
-  authors: Barua et al.
-  venue: Engineering Technology & Applied Science Research
-  year: 2026
-  link: https://doi.org/10.48084/etasr.15475
-  task: sentiment
-- id: sajid-etal-2026-multi-class-classification-feminist-sentiment
-  title: "A multi-class classification approach for feminist sentiment analysis in Bangla social media using TF-IDF and ensemble learning"
-  authors: Sajid et al.
-  venue: Indonesian Journal of Electrical Engineering and Computer Science
-  year: 2026
-  link: https://doi.org/10.11591/ijeecs.v42.i2.pp584-595
-  task: sentiment
-- id: barua-etal-2026-dual-order-hybrid-bilstm-bigru
-  title: "A Novel Dual-Order Hybrid BiLSTM–BiGRU Ensemble Model for English-Bengali Code-Mixed Sentiment Analysis"
-  authors: Barua et al.
-  venue: Engineering Technology & Applied Science Research
-  year: 2026
-  link: https://doi.org/10.48084/etasr.17370
-  task: sentiment
-- id: islam-etal-2026-ban-aste-unified-neural-framework
-  title: "BAN-ASTE: A unified neural framework for Bengali aspect sentiment triplet extraction"
-  authors: Islam et al.
-  venue: Natural Language Processing Journal
-  year: 2026
-  link: https://doi.org/10.1016/j.nlp.2026.100216
-  task: sentiment
-- id: hussen-etal-2026-bangla-suicidal-ideation-detection-performance
-  title: "Bangla Suicidal Ideation Detection: Performance and Efficiency Benchmark of Simple and Complex Classifiers on Social Media Data"
-  authors: Hussen et al.
-  venue: The Journal of Applied Technology and Innovation
-  year: 2026
-  link: https://doi.org/10.65136/jati.v10i1.11
-  task: sentiment
-- id: alam-etal-2026-bengali-emotion-classification-social-media
-  title: "Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer‑Based Models with Explainability"
-  authors: Alam et al.
-  venue: Journal of Engineering Research and Sciences
-  year: 2026
-  link: https://doi.org/10.55708/js0506004
-  task: sentiment
-- id: ibnath-etal-2026-beyond-polarity-bengali-texts-multi
-  title: "Beyond Polarity in Bengali Texts: Can Multi-Task Modeling Capture Sarcasm Intensity and Classification?"
-  authors: Ibnath et al.
-  venue: IEEE Open Journal of the Computer Society
-  year: 2026
-  link: https://doi.org/10.1109/ojcs.2026.3697802
-  task: sentiment
-- id: khandokar-etal-2026-ssabe-tscm-drift-aware-interpretable
-  title: "SSABE-TSCM: drift-aware and interpretable financial sentiment analysis for low-resource Bangla via adaptive semi-supervised and temporal contrastive modeling"
-  authors: Khandokar et al.
-  venue: Frontiers in Artificial Intelligence
-  year: 2026
-  link: https://doi.org/10.3389/frai.2026.1724407
-  task: sentiment
-- id: tasnim-etal-2026-what-s-your-mind-mental
-  title: "What’s on Your Mind? - Mental Health Disorder Risk Detection From Bangla Social Media Text Using Weighted Ensemble of Transformers"
-  authors: Tasnim et al.
-  venue: Journal of Technology in Behavioral Science
-  year: 2026
-  link: https://doi.org/10.1007/s41347-026-00614-6
-  task: sentiment
-- id: rejuan-etal-2025-machine-dl-classifying-customer-sentiments
-  title: "A machine and DL approach for classifying customer sentiments from online shopping reviews in Bangla text"
-  authors: Rejuan et al.
-  venue: Bulletin of Electrical Engineering and Informatics
-  year: 2025
-  link: https://doi.org/10.11591/eei.v14i4.9122
-  task: sentiment
-- id: bhattacharjee-2025-advancing-bengali-sentiment-benchmark-elmo
-  title: "Advancing Bengali Sentiment Analysis: A Benchmark Study with ELMo and XLNet Architecture"
-  authors: Bhattacharjee
-  venue: International Journal of Computer Applications
-  year: 2025
-  link: https://doi.org/10.5120/ijca2025925755
-  task: sentiment
-- id: ullah-2025-bclsa-advancing-bangla-sentiment-concept
-  title: "BCLSA: Advancing Bangla sentiment analysis with concept-level reasoning and efficiency"
-  authors: Ullah
-  venue: Machine Learning with Applications
-  year: 2025
-  link: https://doi.org/10.1016/j.mlwa.2025.100793
-  task: sentiment
-- id: seal-etal-2025-ben-ed-pr-emotion-detection
-  title: "BEN-ED-PR: Emotion detection from Bengali text with polysemy resolution"
-  authors: Seal et al.
-  venue: International Journal of Information Technology
-  year: 2025
-  link: https://doi.org/10.1007/s41870-025-02653-3
-  task: sentiment
-- id: ahamed-etal-2025-beyond-likes-loves-uncovering-complex
-  title: "Beyond Likes and Loves: Uncovering Complex Sentiments in Bengali Food Reviews on Facebook"
-  authors: Ahamed et al.
-  venue: International Journal of Computer Applications
-  year: 2025
-  link: https://doi.org/10.5120/ijca2025925106
-  task: sentiment
-- id: bhowmik-etal-2025-bn-graph-data-augmentation-bangla
-  title: "BN-GRAPH: Data Augmentation Based Bangla Text Sentiment Analysis in Deep Graph Neural Network"
-  authors: Bhowmik et al.
-  venue: SN Computer Science
-  year: 2025
-  link: https://doi.org/10.1007/s42979-025-03763-2
-  task: sentiment
-- id: rumy-etal-2025-multi-label-emotion-sentiment-detection
-  title: "Multi-label emotion and sentiment detection from Bengali text using hybrid deep learning model"
-  authors: Rumy et al.
-  venue: International Journal of Cognitive Computing in Engineering
-  year: 2025
-  link: https://doi.org/10.1016/j.ijcce.2025.10.005
-  task: sentiment
-- id: hasan-etal-2025-future-bangla-sentiment-advancements-challenges
-  title: "THE FUTURE OF BANGLA SENTIMENT ANALYSIS: ADVANCEMENTS, CHALLENGES, AND OPPORTUNITIES FOR PRACTICAL AND RESEARCH INNOVATION"
-  authors: Hasan et al.
-  venue: Journal of Information System and Technology Management
-  year: 2025
-  link: https://doi.org/10.35631/jistm.1039002
-  task: sentiment
-- id: islam-etal-2025-transformer-sentiment-classification-non-depressive
-  title: "Transformer-Based Sentiment Analysis for classification of non-depressive and suicidal thought from Bangla Text"
-  authors: Islam et al.
-  venue: International Journal of Research in Business and Social Science (2147-4478)
-  year: 2025
-  link: https://doi.org/10.20525/ijrbs.v14i5.4274
-  task: sentiment
-- id: paul-etal-2024-detect-suicidal-bengali-posts-social
-  title: "An Approach to Detect Suicidal Bengali Posts from Social Media Using Machine Learning Algorithms"
-  authors: Paul et al.
-  venue: International Journal of Engineering Trends and Technology
-  year: 2024
-  link: https://doi.org/10.14445/22315381/ijett-v72i5p105
-  task: sentiment
-- id: rahman-etal-2024-analyzing-sentiments-elearning-bangla-romanized
-  title: "Analyzing Sentiments in eLearning: A Comparative Study of Bangla and Romanized Bangla Text Using Transformers"
-  authors: Rahman et al.
-  venue: IEEE Access
-  year: 2024
-  link: https://doi.org/10.1109/access.2024.3419024
-  task: sentiment
-- id: lora-etal-2024-ben-sarc-self-annotated-corpus
-  title: "Ben-Sarc: A self-annotated corpus for sarcasm detection from Bengali social media comments and its baseline evaluation"
-  authors: Lora et al.
-  venue: Natural language processing.
-  year: 2024
-  link: https://doi.org/10.1017/nlp.2024.11
-  task: sentiment
-- id: hoque-etal-2024-depressive-suicidal-text-sentiment-bangla
-  title: "Depressive and Suicidal Text-Based Sentiment Analysis in Bangla Using Deep Learning Models"
-  authors: Hoque et al.
-  venue: Business & IT
-  year: 2024
-  link: https://doi.org/10.14311/bit.2024.02.13
-  task: sentiment
-- id: shafi-etal-2024-emotion-classification-bangla-text-data
-  title: "Emotion Classification in Bangla Text Data Using Gaussian Naive Bayes Classifier: A Computational Linguistic Study"
-  authors: Shafi et al.
-  venue: Malaysian Journal of Science and Advanced Technology
-  year: 2024
-  link: https://doi.org/10.56532/mjsat.v4i4.273
-  task: sentiment
-- id: hoque-etal-2024-exploring-transformer-sentiment-task-under
-  title: "Exploring transformer models in the sentiment analysis task for the under-resource Bengali language"
-  authors: Hoque et al.
-  venue: Natural Language Processing Journal
-  year: 2024
-  link: https://doi.org/10.1016/j.nlp.2024.100091
-  task: sentiment
-- id: rahman-etal-2024-optimizing-bert-bengali-emotion-classification
-  title: "Optimizing BERT for Bengali Emotion Classification: Evaluating Knowledge Distillation, Pruning, and Quantization"
-  authors: Rahman et al.
-  venue: Computer Modeling in Engineering & Sciences
-  year: 2024
-  link: https://doi.org/10.32604/cmes.2024.058329
-  task: sentiment
-- id: tanjum-etal-2024-predicting-customer-sentiment-bengali-food
-  title: "Predicting Customer Sentiment from Bengali Food Reviews of Social Media Using Deep Learning"
-  authors: Tanjum et al.
-  venue: BAUET Journal
-  year: 2024
-  link: https://doi.org/10.59321/bauetj.v4i2.13
-  task: sentiment
-- id: islam-etal-2024-sentiment-bangla-language-dataset-bangdsa
-  title: "Sentiment analysis of Bangla language using a new comprehensive dataset BangDSA and the novel feature metric skipBangla-BERT"
-  authors: Islam et al.
-  venue: Natural Language Processing Journal
-  year: 2024
-  link: https://doi.org/10.1016/j.nlp.2024.100069
-  task: sentiment
-- id: ahmed-etal-2024-trf-bert-transformative-aspect-sentiment
-  title: "tRF-BERT: A transformative approach to aspect-based sentiment analysis in the bengali language"
-  authors: Ahmed et al.
-  venue: PLoS ONE
-  year: 2024
-  link: https://doi.org/10.1371/journal.pone.0308050
-  task: sentiment
-- id: mia-etal-2024-verse-emotion-bengali-music-lyricsusing
-  title: "Verse-Based Emotion Analysis of Bengali Music from LyricsUsing Machine Learning and Neural Network Classifiers"
-  authors: Mia et al.
-  venue: International Journal of Computing and Digital Systems
-  year: 2024
-  link: https://doi.org/10.12785/ijcds/150128
-  task: sentiment
-- id: lora-etal-2023-transformer-generative-adversarial-learning-detect
-  title: "A transformer-based generative adversarial learning to detect sarcasm from Bengali text with correct classification of confusing text"
-  authors: Lora et al.
-  venue: Heliyon
-  year: 2023
-  link: https://doi.org/10.1016/j.heliyon.2023.e22531
-  task: sentiment
-- id: ahmed-etal-2023-advancement-bangla-sentiment-transformer-transfer
-  title: "Advancement in Bangla Sentiment Analysis: A Comparative Study of Transformer-Based and Transfer Learning Models for E-commerce Sentiment Classification"
-  authors: Ahmed et al.
-  venue: Journal of Information Systems Engineering and Business Intelligence
-  year: 2023
-  link: https://doi.org/10.20473/jisebi.9.2.181-194
-  task: sentiment
-- id: shanto-etal-2023-binary-vs-multiclass-sentiment-classification
-  title: "Binary vs. Multiclass Sentiment Classification for Bangla E-commerce Product Reviews: A Comparative Analysis of Machine Learning Models"
-  authors: Shanto et al.
-  venue: International Journal of Information Engineering and Electronic Business
-  year: 2023
-  link: https://doi.org/10.5815/ijieeb.2023.06.04
-  task: sentiment
-- id: tareq-etal-2023-data-augmentation-bangla-english-code
-  title: "Data-Augmentation for Bangla-English Code-Mixed Sentiment Analysis: Enhancing Cross Linguistic Contextual Understanding"
-  authors: Tareq et al.
-  venue: IEEE Access
-  year: 2023
-  link: https://doi.org/10.1109/access.2023.3277787
-  task: sentiment
-- id: shanto-etal-2023-mining-user-opinions-balanced-bangla
-  title: "Mining User Opinions: A Balanced Bangla Sentiment Analysis Dataset for E-Commerce"
-  authors: Shanto et al.
-  venue: Malaysian Journal of Science and Advanced Technology
-  year: 2023
-  link: https://doi.org/10.56532/mjsat.v3i4.200
-  task: sentiment
-- id: haque-etal-2023-multi-class-sentiment-classification-bengali
-  title: "Multi-class sentiment classification on Bengali social media comments using machine learning"
-  authors: Haque et al.
-  venue: International Journal of Cognitive Computing in Engineering
-  year: 2023
-  link: https://doi.org/10.1016/j.ijcce.2023.01.001
-  task: sentiment
-- id: hasan-etal-2023-natural-language-processing-sentiment-bangla
-  title: "Natural Language Processing and Sentiment Analysis on Bangla Social Media Comments on Russia–Ukraine War Using Transformers"
-  authors: Hasan et al.
-  venue: Vietnam Journal of Computer Science
-  year: 2023
-  link: https://doi.org/10.1142/s2196888823500021
-  task: sentiment
-- id: shammi-etal-2022-roadmap-bangla-text-sentiment
-  title: "A Comprehensive Roadmap on Bangla Text-based Sentiment Analysis"
-  authors: Shammi et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
-  year: 2022
-  link: https://doi.org/10.1145/3572783
-  task: sentiment
-- id: rahman-etal-2022-dynamic-strategy-classifying-sentiment-bengali
-  title: "A Dynamic Strategy for Classifying Sentiment From Bengali Text by Utilizing Word2vector Model"
-  authors: Rahman et al.
-  venue: Journal of Information Technology Research
-  year: 2022
-  link: https://doi.org/10.4018/jitr.299919
-  task: sentiment
-- id: purba-etal-2022-hybrid-convolutional-long-short-term
-  title: "A hybrid convolutional long short-term memory (CNN-LSTM) based natural language processing (NLP) model for sentiment analysis of customer product reviews in Bangla"
-  authors: Purba et al.
-  venue: Journal of Discrete Mathematical Sciences and Cryptography
-  year: 2022
-  link: https://doi.org/10.1080/09720529.2022.2133250
-  task: sentiment
-- id: samia-etal-2022-aspect-sentiment-bengali-text-bidirectional
-  title: "Aspect-based Sentiment Analysis for Bengali Text using Bidirectional Encoder Representations from Transformers (BERT)"
-  authors: Samia et al.
-  venue: International Journal of Advanced Computer Science and Applications
-  year: 2022
-  link: https://doi.org/10.14569/ijacsa.2022.01312112
-  task: sentiment
-- id: kabir-etal-2022-detection-depression-severity-bengali-social
-  title: "Detection of Depression Severity Using Bengali Social Media Posts on Mental Health: Study Using Natural Language Processing Techniques"
-  authors: Kabir et al.
-  venue: JMIR Formative Research
-  year: 2022
-  link: https://doi.org/10.2196/36118
-  task: sentiment
-- id: khan-etal-2022-hindi-bengali-sentiment-transfer-learningand
-  title: "Hindi/Bengali sentiment analysis using transfer learningand joint dual input learning with self-attention"
-  authors: Khan et al.
-  venue: BOHR International Journal of Computer Science
-  year: 2022
-  link: https://doi.org/10.54646/bijcs.2022.05
-  task: sentiment
-- id: hassan-etal-2022-sentiment-bangla-conversation-machine-learning
-  title: "Sentiment analysis on Bangla conversation using machine learning approach"
-  authors: Hassan et al.
-  venue: International Journal of Power Electronics and Drive Systems/International Journal of Electrical and Computer Engineering
-  year: 2022
-  link: https://doi.org/10.11591/ijece.v12i5.pp5562-5572
-  task: sentiment
-- id: bhowmik-etal-2022-sentiment-bangla-text-extended-lexicon
-  title: "Sentiment analysis on Bangla text using extended lexicon dictionary and deep learning algorithms"
-  authors: Bhowmik et al.
-  venue: Array
-  year: 2022
-  link: https://doi.org/10.1016/j.array.2021.100123
-  task: sentiment
-- id: mukta-etal-2021-guideline-bengali-sentiment-annotation
-  title: "A Comprehensive Guideline for Bengali Sentiment Annotation"
-  authors: Mukta et al.
-  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
-  year: 2021
-  link: https://doi.org/10.1145/3474363
-  task: sentiment
-- id: bhowmik-etal-2021-bangla-text-sentiment-supervised-machine
-  title: "Bangla Text Sentiment Analysis Using Supervised Machine Learning with Extended Lexicon Dictionary"
-  authors: Bhowmik et al.
-  venue: Natural Language Processing Research
-  year: 2021
-  link: https://doi.org/10.2991/nlpr.d.210316.001
-  task: sentiment
-- id: sazzed-2021-bengsentilex-bengswearlex-creating-lexicons-sentimen
-  title: "BengSentiLex and BengSwearLex: creating lexicons for sentiment analysis and profanity detection in low-resource Bengali language"
-  authors: Sazzed
-  venue: PeerJ Computer Science
-  year: 2021
-  link: https://doi.org/10.7717/peerj-cs.681
-  task: sentiment
-- id: maisha-etal-2021-supervised-machine-learning-algorithms-sentiment
-  title: "Supervised Machine Learning Algorithms for Sentiment Analysis of Bangla Newspaper"
-  authors: Maisha et al.
-  venue: International Journal of Innovative Computing
-  year: 2021
-  link: https://doi.org/10.11113/ijic.v11n2.321
-  task: sentiment
-- id: sharmin-etal-2020-attention-convolutional-neural-network-bangla
-  title: "Attention-based convolutional neural network for Bangla sentiment analysis"
-  authors: Sharmin et al.
-  venue: AI & Society
-  year: 2020
-  link: https://doi.org/10.1007/s00146-020-01011-0
-  task: sentiment
-- id: jamatia-etal-2020-deep-learning-sentiment-code-mixed
-  title: "Deep Learning Based Sentiment Analysis in a Code-Mixed English-Hindi and English-Bengali Social Media Corpus"
-  authors: Jamatia et al.
-  venue: International Journal of Artificial Intelligence Tools
-  year: 2020
-  link: https://doi.org/10.1142/s0218213020500141
-  task: sentiment
-- id: sarkar-2020-heterogeneous-classifier-ensemble-sentiment-bengali
-  title: "Heterogeneous classifier ensemble for sentiment analysis of Bengali and Hindi tweets"
-  authors: Sarkar
-  venue: Sadhana
-  year: 2020
-  link: https://doi.org/10.1007/s12046-020-01424-z
-  task: sentiment
-- id: durga-etal-2020-sentiment-bangla-youtube-comments-machine
-  title: "SENTIMENT ANALYSIS ON BANGLA YOUTUBE COMMENTS USING MACHINE LEARNING TECHNIQUES"
-  authors: Durga et al.
-  venue: Journal of Emerging Technologies and Innovative Research
-  year: 2020
-  link: https://www.jetir.org/papers/JETIR2011265.pdf
-  task: sentiment
-- id: billah-etal-2019-depression-detection-bangla-facebook-status
-  title: "Depression Detection from Bangla Facebook Status using Machine Learning Approach"
-  authors: Billah et al.
-  venue: International Journal of Computer Applications
-  year: 2019
-  link: https://doi.org/10.5120/ijca2019919314
-  task: sentiment
-- id: sarkar-2018-sentiment-polarity-detection-bengali-tweets
-  title: "Sentiment Polarity Detection in Bengali Tweets Using Deep Convolutional Neural Networks"
-  authors: Sarkar
-  venue: Journal of Intelligent Systems
-  year: 2018
-  link: https://doi.org/10.1515/jisys-2017-0418
-  task: sentiment
-- id: mahmudun-etal-2016-detecting-sentiment-bangla-text-machine
-  title: "Detecting Sentiment from Bangla Text using Machine Learning Technique and Feature Analysis"
-  authors: Mahmudun et al.
-  venue: International Journal of Computer Applications
-  year: 2016
-  link: https://doi.org/10.5120/ijca2016912230
-  task: sentiment
-- id: das-etal-2012-tracking-emotions-bloggers-case-bengali
-  title: "Tracking Emotions of Bloggers - A Case Study for Bengali"
-  authors: Das et al.
-  venue: Polibits
-  year: 2012
-  link: https://www.scielo.org.mx/pdf/poli/n45/n45a7.pdf
-  task: sentiment
-- id: bodini-2022-opinion-mining-machine-translated-bangla
-  title: "Opinion mining from machine translated Bangla reviews with stacked contractive auto-encoders"
-  authors: Bodini
-  venue: Journal of Ambient Intelligence and Humanized Computing
-  year: 2022
-  link: https://doi.org/10.1007/s12652-022-03760-w
-  task: sentiment
-- id: alam-etal-2026-bengali-emotion-classification-social-media-explainability
-  title: "Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer-Based Models with Explainability"
-  authors: Alam et al.
-  venue: Journal of Engineering Research and Sciences
-  year: 2026
-  link: https://doi.org/10.55708/js0506004
-  task: sentiment
-- id: mahmud-etal-2025-bengali-human-sentiment-attention-bidirectional-lstm
-  title: "Bengali Human Sentiment Detection and Classification using Attention based Bidirectional LSTM"
-  authors: Mahmud et al.
-  venue: IEEE NCIM
-  year: 2025
-  link: https://doi.org/10.1109/NCIM65934.2025.11160248
   task: sentiment
