@@ -685,3 +685,11 @@
   year: 2026
   link: http://arxiv.org/abs/2605.08214
   task: speech
+- id: arxiv-2602-14291
+  title: "Bengali-Loop: Community Benchmarks for Long-Form Bangla ASR and Speaker Diarization"
+  authors: Tabib et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2602.14291
+  task: speech
+  note: Introduces the Bengali-Loop ASR and diarization benchmarks with baselines of 34.07% WER and 40.08% DER.
