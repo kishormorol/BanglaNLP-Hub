@@ -143,6 +143,12 @@ a nightly job re-checks every link, reporting failures in a single tracking issu
 Dead links are never removed automatically — a human decides whether to relink or drop
 the entry.
 
+## Contributor credits
+
+Resource submissions are credited through `data/contributors.yaml` after the resource
+is merged into the catalog. Community and code credits shown on Home are kept separately
+in `data/home-contributors.yaml`; code work is credited only after its pull request merges.
+
 ## Review
 
 A maintainer reviews within about a week. CI must be green. Expect questions about

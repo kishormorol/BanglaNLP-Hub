@@ -27,6 +27,7 @@ import {
   VenuesSchema,
   RecentSchema,
   ContributorSchema,
+  HomeContributorSchema,
   VERIFY_MAX_AGE_MONTHS,
 } from '../src/lib/schemas.ts';
 
@@ -224,6 +225,31 @@ if (existsSync(contributorsPath)) {
         }
       }
     }
+  }
+}
+
+// ---- home contributors -----------------------------------------------------
+const homeContributorsPath = resolve(dataDir, 'home-contributors.yaml');
+const homeContributors = loadList(homeContributorsPath, HomeContributorSchema);
+const catalogLinks = [
+  ...papers.items.map((p) => p.link),
+  ...datasets.items.map((d) => d.link),
+  ...models.items.map((m) => m.link),
+  ...tools.map((t) => t.link),
+];
+for (const contributor of homeContributors) {
+  if (contributor.type === 'community') {
+    if (!catalogLinks.some((link) => link.includes(contributor.match))) {
+      fail(
+        'data/home-contributors.yaml',
+        `[${contributor.name}] match '${contributor.match}' does not occur in a catalog link`,
+      );
+    }
+  } else if (contributor.link.replace(/\/+$/, '') !== `https://github.com/${contributor.handle}`) {
+    fail(
+      'data/home-contributors.yaml',
+      `[${contributor.name}] link does not match GitHub handle '${contributor.handle}'`,
+    );
   }
 }
 
