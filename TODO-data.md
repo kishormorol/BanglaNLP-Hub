@@ -41,10 +41,14 @@ Outstanding:
   JS libraries, not the dataset. Both fields are schema-required, so the dataset is
   deliberately absent rather than guessed. Needs a human with a Kaggle account, or
   the figures from the paper.
-- **`bn` label needs a native-speaker check.** `চিত্রভিত্তিক প্রশ্নোত্তর` is a
-  translation, not a sourced term.
 - **Scope.** Admitting vision-language work invites image captioning, OCR-VQA, and
   document VQA. Whether those belong is still open.
+
+Resolved:
+
+- **`bn` label confirmed.** `চিত্রভিত্তিক প্রশ্নোত্তর` was reviewed by the maintainer
+  on 2026-08-10 and kept. It keeps the `qa` root `প্রশ্নোত্তর` and modifies it with
+  `চিত্র`, matching the native-compound pattern the other task labels use.
 
 ## Speech taxonomy split: SER + Speaker tasks (2026-07-23)
 
