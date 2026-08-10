@@ -21,10 +21,10 @@ channels — and the `link` is the paper's own hyperlink target. Two caveats:
   confirmed for a closed competition. If it turns out to be gated, this should be
   repointed at a more open canonical location.
 
-Not yet filed from the same paper: the **diarization corpus** (24 recordings,
-22 hours, 5,744 segments) — blocked on the same licensing question in #86 — and
-the **Bengali-Loop paper itself**, which would be a straightforward `speech`
-paper entry.
+The **Bengali-Loop paper** (`arxiv-2602-14291`) is now filed under `speech`.
+Still outstanding from the same benchmark: the **diarization corpus**
+(24 recordings, 22 hours, 5,744 segments), blocked on the licensing and
+availability question in #86.
 
 ## VQA task added (2026-08-10)
 
