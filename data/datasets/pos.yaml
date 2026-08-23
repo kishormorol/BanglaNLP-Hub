@@ -2,7 +2,7 @@
   name: UD Bengali-BRU Treebank
   task: pos
   size: 320 tokens / 56 sentences
-  sizeN: 320
+  sizeN: 56
   license: CC BY-SA 4.0
   year: 2021
   source: Universal Dependencies (since v2.9)
