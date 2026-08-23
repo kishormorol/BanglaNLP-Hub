@@ -73,6 +73,7 @@ function listDir(sub: string): string[] {
   }
   return readdirSync(dir)
     .filter((f) => f.endsWith('.yaml'))
+    .sort()
     .map((f) => resolve(dir, f));
 }
 
