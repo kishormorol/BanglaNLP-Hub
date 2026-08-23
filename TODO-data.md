@@ -365,8 +365,8 @@ No source consulted states a figure, so these remain as inherited from the proto
 
 ### Unit inconsistency in `sizeN`
 
-`sizeN` sorts within a task, so units only need to agree among datasets sharing a
-task. One violation remains: `megaverse` is `22` datasets in the suite, while the
-other `llm` entries count questions, question-option pairs, or problems. Its
-position in a size sort is not comparable to the other entries. Speech datasets
-are internally consistent because their sort keys all use hours.
+`sizeN` sorts within a task, but the schema does not record its unit. Every change
+needs source-by-source review because several tasks mix displayed units. One known
+mismatch is `megaverse`: its value is `22` datasets in the suite, while the other
+`llm` entries count questions, question-option pairs, or problems. Its position in
+a size sort is not comparable to the other entries.

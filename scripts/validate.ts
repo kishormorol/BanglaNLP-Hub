@@ -5,7 +5,7 @@
  *   1. missing / malformed required fields (per the Zod schemas)
  *   2. malformed URLs
  *   3. `verified` dates older than VERIFY_MAX_AGE_MONTHS
- *   4. duplicate ids or links within an entity type
+ *   4. duplicate ids, paper links, or model links
  *   5. a leaderboard referencing a dataset or paper id that does not exist
  *   6. an entry whose `task` is not a known task id
  *   7. a paper venue with no tone in venues.yaml
