@@ -54,13 +54,6 @@
   year: 2026
   link: https://doi.org/10.55708/js0506004
   task: sentiment
-- id: alam-etal-2026-bengali-emotion-classification-social-media
-  title: Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer‑Based Models with Explainability
-  authors: Alam et al.
-  venue: Journal of Engineering Research and Sciences
-  year: 2026
-  link: https://doi.org/10.55708/js0506004
-  task: sentiment
 - id: ibnath-etal-2026-beyond-polarity-bengali-texts-multi
   title: "Beyond Polarity in Bengali Texts: Can Multi-Task Modeling Capture Sarcasm Intensity and Classification?"
   authors: Ibnath et al.

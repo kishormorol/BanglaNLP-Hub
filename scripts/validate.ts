@@ -5,7 +5,7 @@
  *   1. missing / malformed required fields (per the Zod schemas)
  *   2. malformed URLs
  *   3. `verified` dates older than VERIFY_MAX_AGE_MONTHS
- *   4. duplicate ids within an entity type
+ *   4. duplicate ids or links within an entity type
  *   5. a leaderboard referencing a dataset or paper id that does not exist
  *   6. an entry whose `task` is not a known task id
  *   7. a paper venue with no tone in venues.yaml
@@ -139,6 +139,17 @@ checkDuplicates('task', tasks, new Map(tasks.map((t) => [t.id, 'data/tasks.yaml'
 checkDuplicates('dataset', datasets.items, datasets.where);
 checkDuplicates('paper', papers.items, papers.where);
 checkDuplicates('model', models.items, models.where);
+
+const paperLinks = new Map<string, string>();
+for (const paper of papers.items) {
+  const link = normalizeLink(paper.link);
+  const duplicateLink = paperLinks.get(link);
+  if (duplicateLink) {
+    fail(papers.where.get(paper.id)!, `[${paper.id}] link duplicates '${duplicateLink}'`);
+  } else {
+    paperLinks.set(link, paper.id);
+  }
+}
 
 for (const d of datasets.items) checkVerified(datasets.where.get(d.id)!, d.id, d.verified);
 const modelNames = new Map<string, string>();
