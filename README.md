@@ -58,7 +58,7 @@ The catalog is only useful if its contents are true, so the project holds a hard
 
 Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 53 datasets lack BibTeX and ten of the eleven leaderboards await rows.
 
-**Dataset fields are verified at the source.** `license`, `size`, and `year` have each had an audit pass (July 2026), and the datasets added by mining resource papers had their `license` and `size` read from the dataset's own repository or card — never the paper's license icon, which describes the paper, not the data. Corrections and the entries still unconfirmed (because no reachable source states a figure) are listed in `TODO-data.md`, along with ~55 candidate datasets held back for unverifiable licenses or being out of the text-NLP scope. One field is recorded as *known wrong* with no known replacement — deliberately. A wrong value we can point at is more useful than a plausible one we invented.
+**Dataset fields are verified at the source.** `license`, `size`, and `year` have each had an audit pass (July 2026), and the datasets added by mining resource papers had their `license` and `size` read from the dataset's own repository or card — never the paper's license icon, which describes the paper, not the data. Corrections and the entries still unconfirmed (because no reachable source states a figure) are listed in `TODO-data.md`. Candidate datasets with unverifiable licenses or outside the current scope are held back rather than published. One field is recorded as *known wrong* with no known replacement — deliberately. A wrong value we can point at is more useful than a plausible one we invented.
 
 ## Commands
 

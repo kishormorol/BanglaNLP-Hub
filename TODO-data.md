@@ -125,8 +125,8 @@ icon (that trap produced several false positives, e.g. Vashantor's page shows
 CC BY 4.0, not the CC0 a search claimed; BanglaBook is CC BY-NC-SA 4.0 though
 its paper page says "not stated").
 
-**The rest of the ~55 candidates are held**, for two recurring reasons — this is
-the same wall that already leaves a third of the older datasets unverified:
+**The remaining candidates from that pass are held** for two recurring reasons.
+This is the same wall that already leaves a third of the older datasets unverified:
 
 - **Unverifiable license.** Hosted on Kaggle / Mendeley / a bare arXiv with no
   repo LICENSE and no license statement in the paper. Adding one needs a real
