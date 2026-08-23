@@ -75,3 +75,40 @@
   link: https://data.mendeley.com/datasets/gphbs7vsbz/3
   verified: 2026-07-26
   desc: Context-aware toxic-comment corpus retaining news metadata and neighbouring comments, with balanced toxic/non-toxic labels.
+- id: banhate
+  name: BanHate
+  task: hate
+  size: 19,203 comments
+  sizeN: 19203
+  license: MIT
+  year: 2025
+  source: BanHate (BLP 2025)
+  link: https://huggingface.co/datasets/aplycaebous/BanHate
+  verified: 2026-08-23
+  desc: YouTube comments annotated for binary hate, hate-category, and target-group labels.
+  bibtex: |-
+    @inproceedings{raquib-etal-2025-banhate,
+      title = "{B}an{H}ate: An Up-to-Date and Fine-Grained {B}angla Hate Speech Dataset",
+      author = "Raquib, Faisal Hossain  and
+        Mazumder, Akm Moshiur Rahman  and
+        Fuad, Md Tahmid Hasan  and
+        Ishmam, Md Farhan  and
+        Fahim, Md",
+      editor = "Alam, Firoj  and
+        Kar, Sudipta  and
+        Chowdhury, Shammur Absar  and
+        Hassan, Naeemul  and
+        Hoque, Enamul  and
+        Laskar, Md Tahmid Rahman  and
+        Mohiuddin, Tasnim  and
+        Rony, Md Rashad Al Hasan",
+      booktitle = "Proceedings of the Second Workshop on Bangla Language Processing (BLP-2025)",
+      month = dec,
+      year = "2025",
+      address = "Mumbai, India",
+      publisher = "Association for Computational Linguistics",
+      url = "https://aclanthology.org/2025.banglalp-1.19/",
+      doi = "10.18653/v1/2025.banglalp-1.19",
+      pages = "237--248",
+      ISBN = "979-8-89176-314-2"
+    }

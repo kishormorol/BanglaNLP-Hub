@@ -92,7 +92,7 @@ npm run check-links  probe every published link: URL in /data
 
 `npm run validate` must pass before committing; CI runs it on every PR and it gates
 deployment. It fails on malformed fields, bad URLs, `verified` dates older than 12
-months, duplicate ids, and leaderboards referencing an unknown dataset or paper id.
+months, duplicate ids or links, and leaderboards referencing an unknown dataset or paper id.
 
 `check-links` identifies with an honest agent first, but before calling a link dead
 it re-probes with a browser agent and only reports it as dead when the browser agent
@@ -118,12 +118,14 @@ with `astro dev stop | status | logs`.
 
 ## Ingestion: discover + promote
 
-`scripts/discover.ts` sweeps ACL / arXiv / HF for Bangla work and writes unverified
-*candidates* to `data/inbox/`. `scripts/promote.ts` is its counterpart: it fills a
-candidate's fields from the ACL Anthology's own BibTeX and files it under a task.
+`scripts/discover.ts` sweeps ACL / arXiv / HF / OpenAlex for Bangla work and writes
+unverified *candidates* to `data/inbox/`. `scripts/promote.ts` is its counterpart: it
+fills a candidate's fields from the ACL Anthology's own BibTeX and files it under a task.
 
 - Both are candidate-safe: discover never touches live data; promote only reads the
   anthology and writes `data/papers/<task>.yaml` + the trimmed inbox.
+- Discovery merges new results into the inbox and prunes queued records whose
+  normalized title or link is now present in the published catalog.
 - Every promoted field except `task` is copied verbatim (ACL from the anthology
   BibTeX; arXiv from the arXiv API via the candidate, venue forced to `arXiv`).
   `task` is a title-keyword heuristic (`classify()`) — a paper it cannot place is
@@ -143,5 +145,5 @@ candidate's fields from the ACL Anthology's own BibTeX and files it under a task
 ## Not built yet
 
 Nothing outstanding on the view layer — all views are ported. Remaining work is
-data, not code: see TODO-data.md (heuristic paper tasks to review, 54 out-of-taxonomy
-candidates in the inbox, empty leaderboards, missing BibTeX, unverified sizes).
+data, not code: see TODO-data.md (heuristic paper tasks to review, inbox triage,
+empty leaderboards, missing BibTeX, unverified sizes).

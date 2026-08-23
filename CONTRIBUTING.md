@@ -42,7 +42,7 @@ npm run dev          # preview at localhost:4321
    `data/datasets/sentiment.yaml` and `data/papers/ner.yaml`. Models use
    `data/models.yaml` and list one or more `tasks`.
 3. **Run `npm run validate`.** It fails on missing or malformed fields, bad URLs,
-   duplicate ids, stale `verified` dates, and leaderboards pointing at an unknown or
+   duplicate ids or links, stale `verified` dates, and leaderboards pointing at an unknown or
    cross-task dataset or paper id.
 4. **Open a PR.** CI runs validation, builds the site, and link-checks any URL your PR
    added or changed.

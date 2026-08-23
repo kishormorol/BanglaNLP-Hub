@@ -170,22 +170,19 @@ task is a welcome, low-risk contribution. `note` was intentionally left blank on
 imported papers rather than auto-generated — a one-line summary is exactly the
 kind of plausible invention the catalog forbids.
 
-**What is left out on purpose (638 candidates still in `data/inbox/`):**
+**What is currently held (2,692 candidates in `data/inbox/` on 2026-08-23):**
 
-- **~99 papers (ACL + arXiv) describe tasks outside the 10-task taxonomy** —
-  OCR / handwriting recognition, image captioning, WordNet construction,
-  readability, dialogue, word embeddings, lexical complexity, spell checking.
-  Filing them under an ill-fitting task would be worse than holding them; adding
-  a task is the prerequisite for promoting them. (One, "Training a BN-based user
-  model…", is a false positive — BN there means Bayesian Network, not Bangla.)
-- **143 arXiv hits whose title is not about Bangla** — tangential multilingual
-  papers matched on an abstract keyword. Correctly not catalogued as Bangla work.
-- **396 Hugging Face hits are NOT imported.** The `language:bn` filter is
-  low-precision: most are giant multilingual corpora (WildChat, tagengo,
-  multilingual-sentences) or Tamil/other datasets carrying a `bn` tag, not Bangla
-  resources. The list API also does not establish a model's architecture or catalog
-  task associations. HF import therefore requires hand-curation, not a bulk pass —
-  do not promote these wholesale.
+- **2,543 OpenAlex papers.** The title-wide journal sweep intentionally catches many
+  non-NLP and non-computational records. Most have no task suggestion and require
+  human topic, metadata, and scope review before promotion.
+- **57 ACL and 35 arXiv papers.** These still require source verification, task review,
+  and a preprint/publication duplicate check before entering the catalog.
+- **57 Hugging Face datasets.** The `language:bn` filter is low-precision, and the list
+  API does not establish a dataset's scope, size, or license. Curate each card and
+  release individually; do not promote these wholesale.
+
+Discovery merges new results into this queue and prunes records whose normalized title
+or link is now present in the published catalog.
 
 ## Model catalog audit
 
