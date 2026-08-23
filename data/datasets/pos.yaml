@@ -7,7 +7,7 @@
   year: 2021
   source: Universal Dependencies (since v2.9)
   link: https://universaldependencies.org/treebanks/bn_bru/
-  verified: 2026-07-19
+  verified: 2026-08-23
   desc: Tiny Universal Dependencies sample treebank with UPOS and dependency relations.
 - id: snltr
   name: SNLTR POS Corpus

@@ -36,7 +36,7 @@
   year: 2024
   source: MEGAVERSE (NAACL 2024)
   link: https://github.com/microsoft/MEGAVERSE
-  verified: 2026-07-19
+  verified: 2026-08-23
   desc: Multilingual LLM evaluation suite including Bangla tasks.
 - id: breaso
   name: B-REASO
