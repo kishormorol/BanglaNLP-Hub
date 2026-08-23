@@ -170,22 +170,23 @@ task is a welcome, low-risk contribution. `note` was intentionally left blank on
 imported papers rather than auto-generated — a one-line summary is exactly the
 kind of plausible invention the catalog forbids.
 
-**What is left out on purpose (638 candidates still in `data/inbox/`):**
+**What is left out on purpose (2,707 candidates still in `data/inbox/`):**
 
-- **~99 papers (ACL + arXiv) describe tasks outside the 10-task taxonomy** —
-  OCR / handwriting recognition, image captioning, WordNet construction,
-  readability, dialogue, word embeddings, lexical complexity, spell checking.
-  Filing them under an ill-fitting task would be worse than holding them; adding
-  a task is the prerequisite for promoting them. (One, "Training a BN-based user
-  model…", is a false positive — BN there means Bayesian Network, not Bangla.)
-- **143 arXiv hits whose title is not about Bangla** — tangential multilingual
-  papers matched on an abstract keyword. Correctly not catalogued as Bangla work.
-- **396 Hugging Face hits are NOT imported.** The `language:bn` filter is
-  low-precision: most are giant multilingual corpora (WildChat, tagengo,
-  multilingual-sentences) or Tamil/other datasets carrying a `bn` tag, not Bangla
-  resources. The list API also does not establish a model's architecture or catalog
-  task associations. HF import therefore requires hand-curation, not a bulk pass —
-  do not promote these wholesale.
+The inbox is a merged triage queue, not a catalog. It currently contains 2,650
+paper candidates and 57 dataset candidates: 2,558 OpenAlex records, 57 ACL
+records, 35 arXiv records, and 57 Hugging Face records.
+
+- **Some papers describe tasks outside the current 13-task taxonomy.** Examples
+  include OCR, handwriting recognition, image captioning, WordNet construction,
+  readability, dialogue, word embeddings, lexical complexity, and spell checking.
+  Adding a suitable task is a prerequisite for promoting them.
+- **Some paper matches are tangential to Bangla.** Multilingual papers can match
+  an abstract keyword without being about Bangla research. These need individual
+  review before promotion.
+- **The 57 Hugging Face hits are not imported.** The `language:bn` filter is
+  low-precision. It can return multilingual corpora or datasets for other
+  languages that carry a `bn` tag. Hugging Face import therefore requires
+  hand-curation. Do not promote these wholesale.
 
 ## Model catalog audit
 
@@ -223,20 +224,26 @@ Anthology or publisher page — do not hand-write one.
 | `hate` | BD-SHS | `bdshs` |
 | `hate` | Bengali Hate Speech | `bhs` |
 | `hate` | TB-OLID | `tbolid` |
+| `hate` | OffMix-3L | `offmix3l` |
+| `hate` | BanTH | `banth` |
 | `hate` | ALERT | `alert` |
 | `hate` | Bangla-ToCo | `banglatoco` |
 | `llm` | Global-MMLU (bn) | `globalmmlu` |
 | `llm` | MEGAVERSE (bn subset) | `megaverse` |
 | `llm` | BnMMLU | `bnmmlu` |
+| `llm` | BanglaMATH | `banglamath` |
 | `llm` | SOMADHAN | `somadhan` |
 | `mt` | FLORES-200 (bn) | `flores` |
 | `mt` | BanglaParaphrase | `banglaparaphrase` |
 | `mt` | Samanantar (bn–en) | `samanantar` |
+| `mt` | BanglaTLit | `banglatlit` |
+| `mt` | Vashantor | `vashantor` |
 | `mt` | BanglaRegionalTextCorpus | `banglaregionaltextcorpus` |
 | `mt` | Kothon | `kothon` |
 | `ner` | MultiCoNER (bn) | `multiconer` |
 | `ner` | B-NER | `bner` |
 | `ner` | WikiANN (bn) | `wikiann` |
+| `ner` | ANCHOLIK-NER | `ancholikner` |
 | `ner` | Bangla-MedER | `banglameder` |
 | `pos` | UD Bengali-BRU Treebank | `udbru` |
 | `pos` | SNLTR POS Corpus | `snltr` |
@@ -244,6 +251,11 @@ Anthology or publisher page — do not hand-write one.
 | `qa` | TyDi QA (bn) | `tydiqa` |
 | `sentiment` | BEmoC | `bemoc` |
 | `sentiment` | ABSA Cricket & Restaurant | `absa` |
+| `sentiment` | BanglaBook | `banglabook` |
+| `sentiment` | Motamot | `motamot` |
+| `sentiment` | SentMix-3L | `sentmix3l` |
+| `sentiment` | EmoMix-3L | `emomix3l` |
+| `sentiment` | BnSentMix | `bnsentmix` |
 | `sentiment` | BABSA | `babsa` |
 | `sentiment` | BanglaSarc3 | `banglasarc3` |
 | `ser` | SUBESCO | `subesco` |
@@ -253,10 +265,14 @@ Anthology or publisher page — do not hand-write one.
 | `speech` | OpenSLR SLR53 (Large Bengali ASR) | `openslr53` |
 | `speech` | Common Voice (bn) | `commonvoice` |
 | `speech` | OOD-Speech | `oodspeech` |
+| `speech` | Lipi-Ghor (bn-882-SSTT) | `lipighor` |
+| `speech` | Bengali-Loop (ASR corpus) | `bengali-loop-asr` |
 | `summ` | BANSData | `bansdata` |
+| `summ` | BanglaCHQ-Summ | `banglachqsumm` |
 | `textcls` | BanFakeNews | `banfakenews` |
 | `textcls` | Potrika | `potrika` |
 | `textcls` | BARD | `bard` |
+| `textcls` | BTTC | `bttc` |
 | `textcls` | BanFakeNews-2.0 | `banfakenews2` |
 
 ## Dataset licenses needing verification
