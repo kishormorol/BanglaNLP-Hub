@@ -156,20 +156,12 @@ export const HomeContributorSchema = z.discriminatedUnion('type', [
   CodeContributorSchema,
 ]);
 
-export const RecentSchema = z.object({
-  type: z.enum(['Dataset', 'Paper', 'Model', 'Tool']),
-  name: z.string().min(1),
-  task: z.string().min(1),
-  date: isoDate,
-});
-
 export type Task = z.infer<typeof TaskSchema>;
 export type Dataset = z.infer<typeof DatasetSchema>;
 export type Paper = z.infer<typeof PaperSchema>;
 export type Model = z.infer<typeof ModelSchema>;
 export type Tool = z.infer<typeof ToolSchema>;
 export type Leaderboard = z.infer<typeof LeaderboardSchema>;
-export type Recent = z.infer<typeof RecentSchema>;
 export type Contributor = z.infer<typeof ContributorSchema>;
 export type Contribution = z.infer<typeof ContributionSchema>;
 export type HomeContributor = z.infer<typeof HomeContributorSchema>;

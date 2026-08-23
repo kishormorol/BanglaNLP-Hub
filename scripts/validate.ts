@@ -25,7 +25,6 @@ import {
   ToolSchema,
   LeaderboardSchema,
   VenuesSchema,
-  RecentSchema,
   ContributorSchema,
   HomeContributorSchema,
   VERIFY_MAX_AGE_MONTHS,
@@ -215,10 +214,6 @@ for (const path of listDir('leaderboards')) {
     }
   }
 }
-
-// ---- recent ----------------------------------------------------------------
-const recentPath = resolve(dataDir, 'recent.yaml');
-if (existsSync(recentPath)) loadList(recentPath, RecentSchema);
 
 // ---- contributors ----------------------------------------------------------
 // A credit is only allowed for a resource actually in the catalog. For a paper,
