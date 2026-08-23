@@ -30,7 +30,7 @@
 - id: megaverse
   name: MEGAVERSE (bn subset)
   task: llm
-  size: 22 tasks
+  size: 22 datasets
   sizeN: 22
   license: Mixed
   year: 2024
