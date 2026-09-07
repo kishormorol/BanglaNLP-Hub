@@ -101,6 +101,15 @@ error, timeout, 401/403/405/429, 5xx, or a 404 that does not reproduce — is re
 as "refused an automated request", never as dead: publishers like MDPI and many DOI
 hosts drop or error non-browser agents for pages that open fine in a browser, and
 flaky origins serve one-off 404s under load (issue #83 reported a live paper as dead).
+
+A link that stays 404 because of something broken at the publisher — not a wrong
+entry — goes in `KNOWN_UNREACHABLE` in `scripts/check-links.ts`. It is still probed
+and still listed, in the "refused an automated request" section with the reason,
+so a publisher's broken hosting stops re-filing the same nightly issue. Add one
+only after confirming the entry's own address is right (the DOI resolves and is
+registered, no mirror exists to switch to) and record why and when. It is not a
+way to silence a genuinely dead link. If a listed URL works again, the run says so
+and the entry should be deleted.
 Unverified discovery candidates under `data/inbox/` are not published and are excluded.
 
 ## Verifying changes

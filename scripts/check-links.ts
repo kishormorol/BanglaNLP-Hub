@@ -48,6 +48,28 @@ const BROWSER_UA =
 // automated request", reported for awareness but never failing the run.
 const DEAD_STATUSES = new Set(['404', '410']);
 
+/**
+ * Links known to be unreachable for a reason upstream of us, where the entry is
+ * still correct and there is nothing to fix in /data. These are still probed and
+ * still reported — they move into the "refused an automated request" section
+ * rather than the dead table, so a publisher's broken hosting stops re-filing the
+ * same nightly issue (#64, #74, #75, #81, #83, #100, #103 were all the same link).
+ *
+ * This is not a way to silence a genuinely dead link. Add one only after
+ * establishing that the entry's own address is right: the DOI resolves and is
+ * registered, and no mirror exists to switch to. Record why and when, so the
+ * decision can be re-checked rather than inherited on trust. If a listed URL
+ * becomes reachable again the run says so, and the entry should be deleted.
+ */
+const KNOWN_UNREACHABLE = new Map<string, string>([
+  [
+    'https://doi.org/10.35444/ijana.2021.12611',
+    "publisher serves plain HTTP on port 443, so every HTTPS fetch fails; DOI is " +
+      "Crossref-registered and correct, and OpenAlex and Semantic Scholar list no " +
+      "mirror to switch to (checked 2026-09-07, #103)",
+  ],
+]);
+
 type Link = { url: string; where: string; name: string };
 
 function yamlFiles(dir: string): string[] {
@@ -166,7 +188,11 @@ async function classify(url: string): Promise<{ verdict: Verdict; status: string
   await sleep(RETRY_DELAY_MS);
   const confirm = await probe(url, BROWSER_UA);
   if (confirm.ok) return { verdict: 'blocked', status: `${browser.status} (not reproducible)` };
-  if (DEAD_STATUSES.has(confirm.status)) return { verdict: 'dead', status: confirm.status };
+  if (DEAD_STATUSES.has(confirm.status)) {
+    return KNOWN_UNREACHABLE.has(url)
+      ? { verdict: 'blocked', status: `${confirm.status} (known upstream)` }
+      : { verdict: 'dead', status: confirm.status };
+  }
   return { verdict: 'blocked', status: confirm.status };
 }
 
@@ -189,6 +215,8 @@ console.log(`Checking ${distinct.length} link(s)${changedRef ? ` changed vs ${ch
 type Finding = { url: string; status: string; entries: Link[] };
 const failures: Finding[] = [];
 const blocked: Finding[] = [];
+/** KNOWN_UNREACHABLE entries that now resolve — the list entry should be removed. */
+const recovered: string[] = [];
 let done = 0;
 
 async function worker(queue: string[]) {
@@ -197,7 +225,10 @@ async function worker(queue: string[]) {
     if (!url) return;
     const { verdict, status } = await classify(url);
     done++;
-    if (verdict === 'reachable') continue;
+    if (verdict === 'reachable') {
+      if (KNOWN_UNREACHABLE.has(url)) recovered.push(url);
+      continue;
+    }
     const finding = { url, status, entries: links.filter((l) => l.url === url) };
     if (verdict === 'dead') {
       failures.push(finding);
@@ -218,6 +249,10 @@ console.log(
     (failures.length ? `, ${failures.length} dead.` : '.'),
 );
 
+for (const url of recovered) {
+  console.log(`  ℹ ${url} is reachable again — remove it from KNOWN_UNREACHABLE.`);
+}
+
 if (reportPath) {
   const blockedSection = blocked.length
     ? [
@@ -227,13 +262,29 @@ if (reportPath) {
         '',
         'A browser agent reached these, or they failed with a non-404/410 status —',
         'publishers and CDNs routinely block non-browser agents. Listed for awareness',
-        'only; no action is usually needed.',
+        'only; no action is usually needed. A `(known upstream)` row is a link already',
+        'triaged as broken at the publisher, with the catalog entry confirmed correct;',
+        'the reason is given in the Note column.',
         '',
-        '| Status | Entry | URL |',
-        '| --- | --- | --- |',
-        ...blocked.flatMap((f) => f.entries.map((e) => `| \`${f.status}\` | ${e.name} | ${f.url} |`)),
+        '| Status | Entry | URL | Note |',
+        '| --- | --- | --- | --- |',
+        ...blocked.flatMap((f) =>
+          f.entries.map(
+            (e) => `| \`${f.status}\` | ${e.name} | ${f.url} | ${KNOWN_UNREACHABLE.get(f.url) ?? ''} |`,
+          ),
+        ),
         '',
         '</details>',
+      ]
+    : [];
+
+  const recoveredSection = recovered.length
+    ? [
+        '',
+        `${recovered.length} link(s) listed in \`KNOWN_UNREACHABLE\` are reachable again`,
+        'and should be removed from that list in `scripts/check-links.ts`:',
+        '',
+        ...recovered.map((url) => `- ${url}`),
       ]
     : [];
 
@@ -250,8 +301,9 @@ if (reportPath) {
           f.entries.map((e) => `| \`${f.status}\` | ${e.name} | \`${e.where}\` | ${f.url} |`),
         ),
         ...blockedSection,
+        ...recoveredSection,
       ]
-    : ['No dead published links were found in `/data`. ✅', ...blockedSection];
+    : ['No dead published links were found in `/data`. ✅', ...blockedSection, ...recoveredSection];
   writeFileSync(reportPath, lines.join('\n'), 'utf8');
 }
 
