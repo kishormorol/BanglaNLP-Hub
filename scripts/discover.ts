@@ -55,35 +55,62 @@ type Candidate = {
 // ---------------------------------------------------------------- existing set
 const norm = (s: string) =>
   String(s ?? '').toLowerCase().replace(/[{}]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
-const normUrl = (u: string) =>
-  String(u ?? '').toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '');
+const normUrl = (link: string) => {
+  let parsed: URL;
+  try {
+    parsed = new URL(link);
+  } catch {
+    // A malformed link from an upstream API must not abort the whole sweep.
+    return String(link ?? '').toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '');
+  }
+  const host = parsed.hostname
+    .toLowerCase()
+    .replace(/^www\./, '')
+    .replace(/^dx\.doi\.org$/, 'doi.org');
+  const port = parsed.port ? `:${parsed.port}` : '';
+  const path = parsed.pathname.replace(/\/+$/, '');
+  if (host === 'doi.org') return `${host}${path.toLowerCase()}`;
+  return `${host}${port}${path}${parsed.search}${parsed.hash}`;
+};
 
 function listYaml(dir: string): string[] {
   if (!existsSync(dir)) return [];
   return readdirSync(dir, { withFileTypes: true }).flatMap((e) => {
     const p = join(dir, e.name);
-    if (e.isDirectory()) return e.name === 'inbox' ? [] : listYaml(p);
-    return e.name.endsWith('.yaml') && !['contributors.yaml', 'home-contributors.yaml'].includes(e.name)
-      ? [p]
-      : [];
+    if (e.isDirectory()) return listYaml(p);
+    return e.name.endsWith('.yaml') ? [p] : [];
   });
 }
 
-const knownLinks = new Set<string>();
-const knownTitles = new Set<string>();
-for (const f of listYaml(dataDir)) {
-  const doc = parse(readFileSync(f, 'utf8'));
-  if (!Array.isArray(doc)) continue;
-  for (const e of doc) {
-    if (e?.link) knownLinks.add(normUrl(e.link));
-    if (e?.title) knownTitles.add(norm(e.title));
-    if (e?.name) knownTitles.add(norm(e.name));
+const known: Record<Candidate['kind'], { links: Set<string>; titles: Set<string> }> = {
+  paper: { links: new Set(), titles: new Set() },
+  dataset: { links: new Set(), titles: new Set() },
+  model: { links: new Set(), titles: new Set() },
+};
+const catalogFiles: Record<Candidate['kind'], string[]> = {
+  paper: listYaml(resolve(dataDir, 'papers')),
+  dataset: listYaml(resolve(dataDir, 'datasets')),
+  model: [resolve(dataDir, 'models.yaml')].filter(existsSync),
+};
+for (const kind of Object.keys(catalogFiles) as Candidate['kind'][]) {
+  for (const f of catalogFiles[kind]) {
+    const doc = parse(readFileSync(f, 'utf8'));
+    if (!Array.isArray(doc)) continue;
+    for (const e of doc) {
+      if (e?.link) known[kind].links.add(normUrl(e.link));
+      if (e?.title) known[kind].titles.add(norm(e.title));
+      if (e?.name) known[kind].titles.add(norm(e.name));
+    }
   }
 }
-console.log(`Catalogued already: ${knownLinks.size} links, ${knownTitles.size} titles\n`);
+const knownLinkCount = Object.values(known).reduce((sum, entries) => sum + entries.links.size, 0);
+const knownTitleCount = Object.values(known).reduce((sum, entries) => sum + entries.titles.size, 0);
+console.log(`Catalogued already: ${knownLinkCount} links, ${knownTitleCount} titles\n`);
 
 const isNew = (c: Candidate) =>
-  !knownLinks.has(normUrl(c.link)) && !knownTitles.has(norm(c.title));
+  !known[c.kind].links.has(normUrl(c.link)) && !known[c.kind].titles.has(norm(c.title));
+const isSameResource = (a: Candidate, b: Candidate) =>
+  a.kind === b.kind && (normUrl(a.link) === normUrl(b.link) || norm(a.title) === norm(b.title));
 
 /** Cheap keyword → task guess. Always a suggestion for a human to confirm. */
 function guessTask(text: string): string | undefined {
@@ -297,8 +324,7 @@ for (const [name, fn] of Object.entries(sources)) {
     const fresh = rows.filter(isNew);
     // De-duplicate within this run too.
     for (const c of fresh) {
-      if (!found.some((f) => normUrl(f.link) === normUrl(c.link) || norm(f.title) === norm(c.title)))
-        found.push(c);
+      if (!found.some((f) => isSameResource(f, c))) found.push(c);
     }
     console.log(`${name}: ${rows.length} matched, ${fresh.length} not already catalogued`);
   } catch (err) {
@@ -315,18 +341,20 @@ found.sort((a, b) => (b.year ?? 0) - (a.year ?? 0) || a.title.localeCompare(b.ti
  * silently discarded every candidate nobody had got to yet — a run that found
  * 203 candidates once dropped a 2,558-entry OpenAlex backlog.
  *
- * Dedup uses the same normalised link/title comparison as the catalogue diff
- * above, so re-finding a candidate already queued is a no-op.
+ * Existing candidates that have since entered the catalogue are pruned first.
+ * Dedup then uses the same normalised link/title comparison as the catalogue
+ * diff above, so re-finding a candidate already queued is a no-op.
  */
 const existing: Candidate[] = existsSync(OUT)
   ? ((parse(readFileSync(OUT, 'utf8')) as Candidate[] | null) ?? [])
   : [];
-const merged = [...existing];
+const queued = existing.filter(isNew);
+const prunedCount = existing.length - queued.length;
+const merged = [...queued];
 for (const c of found) {
-  if (!merged.some((m) => normUrl(m.link) === normUrl(c.link) || norm(m.title) === norm(c.title)))
-    merged.push(c);
+  if (!merged.some((m) => isSameResource(m, c))) merged.push(c);
 }
-const addedCount = merged.length - existing.length;
+const addedCount = merged.length - queued.length;
 
 mkdirSync(inboxDir, { recursive: true });
 const header = `# Discovery candidates — NOT part of the catalog.
@@ -344,7 +372,7 @@ writeFileSync(OUT, `${header}\n${stringify(merged, { lineWidth: 0 })}`, 'utf8');
 
 const by = (k: string) => merged.filter((c) => c.source === k).length;
 console.log(
-  `\n${found.length} found this sweep · ${addedCount} new · ${found.length - addedCount} already queued`,
+  `\n${found.length} found this sweep · ${addedCount} new · ${found.length - addedCount} already queued · ${prunedCount} now published`,
 );
 console.log(`${merged.length} candidates in data/inbox/candidates.yaml (was ${existing.length})`);
 console.log(`  acl ${by('acl')} · arxiv ${by('arxiv')} · huggingface ${by('huggingface')} · openalex ${by('openalex')}`);

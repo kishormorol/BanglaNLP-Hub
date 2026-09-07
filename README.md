@@ -9,7 +9,7 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 [![License: MIT](https://img.shields.io/badge/license-MIT-black)](#license)
 
 [![Tasks](https://img.shields.io/badge/tasks-13-64748b)](./data/tasks.yaml)
-[![Datasets](https://img.shields.io/badge/datasets-59-7c3aed)](./data/datasets)
+[![Datasets](https://img.shields.io/badge/datasets-63-7c3aed)](./data/datasets)
 [![Papers](https://img.shields.io/badge/papers-712-2563eb)](./data/papers)
 [![Models](https://img.shields.io/badge/models-20-0891b2)](./data/models.yaml)
 [![Tools](https://img.shields.io/badge/tools-9-db2777)](./data/tools.yaml)
@@ -24,12 +24,12 @@ Static site built with Astro and TypeScript. No client-side framework: the only 
 
 Everything the site renders comes from YAML under [`/data`](./data). Nothing is hardcoded in the pages.
 
-The catalog currently holds **712 papers**, **59 datasets**, **20 models**, and **9 tools** across **13 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles (see [`TODO-data.md`](./TODO-data.md)).
+The catalog currently holds **712 papers**, **63 datasets**, **20 models**, and **9 tools** across **13 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles (see [`TODO-data.md`](./TODO-data.md)).
 
 | | Count |
 | --- | --- |
 | Tasks | 13 |
-| Datasets | 59 |
+| Datasets | 63 |
 | Papers | 712 |
 | Models | 20 |
 | Tools | 9 |
@@ -71,7 +71,7 @@ Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than qu
 | `npm run validate` | Validate `/data` against the Zod schemas |
 | `npm run check-links` | Check every published `link:` URL in `/data` |
 
-`npm run validate` fails on missing or malformed fields, bad URLs, `verified` dates older than 12 months, duplicate ids, duplicate paper or model links, and leaderboards referencing an unknown dataset or paper id. It runs in CI on every pull request and gates deployment.
+`npm run validate` fails on missing or malformed fields, bad URLs, `verified` dates older than 12 months, duplicate ids or links, and leaderboards referencing an unknown dataset or paper id. It runs in CI on every pull request and gates deployment.
 
 ## Status
 

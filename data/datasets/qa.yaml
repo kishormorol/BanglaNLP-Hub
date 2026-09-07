@@ -38,3 +38,24 @@
   link: https://github.com/google-research-datasets/tydiqa
   verified: 2026-03-12
   desc: Typologically diverse info-seeking QA; Bengali portion.
+- id: nctbqa
+  name: NCTB-QA
+  task: qa
+  size: 87,805 QA pairs
+  sizeN: 87805
+  license: CC BY-NC 4.0
+  year: 2026
+  source: NCTB-QA (arXiv 2026)
+  link: https://huggingface.co/datasets/eyasir2047/NCTB-QA
+  verified: 2026-08-23
+  desc: Educational QA from 50 NCTB textbooks with answerable, unanswerable, and adversarial instances.
+  bibtex: |-
+    @misc{eyasir2026nctbqalargescalebanglaeducational,
+      title={NCTB-QA: A Large-Scale Bangla Educational Question Answering Dataset and Benchmarking Performance},
+      author={Abrar Eyasir and Tahsin Ahmed and Muhammad Ibrahim},
+      year={2026},
+      eprint={2603.05462},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2603.05462}
+    }

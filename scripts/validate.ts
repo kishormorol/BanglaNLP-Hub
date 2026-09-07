@@ -5,7 +5,7 @@
  *   1. missing / malformed required fields (per the Zod schemas)
  *   2. malformed URLs
  *   3. `verified` dates older than VERIFY_MAX_AGE_MONTHS
- *   4. duplicate ids, paper links, or model links
+ *   4. duplicate ids or links within an entity type
  *   5. a leaderboard referencing a dataset or paper id that does not exist
  *   6. an entry whose `task` is not a known task id
  *   7. a paper venue with no tone in venues.yaml
@@ -38,8 +38,17 @@ const fail = (file: string, msg: string) => errors.push(`${file}: ${msg}`);
 
 const rel = (p: string) => p.slice(root.length + 1);
 const read = (p: string) => parse(readFileSync(p, 'utf8'));
-const normalizeLink = (link: string) =>
-  link.toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '');
+const normalizeLink = (link: string) => {
+  const parsed = new URL(link);
+  const host = parsed.hostname
+    .toLowerCase()
+    .replace(/^www\./, '')
+    .replace(/^dx\.doi\.org$/, 'doi.org');
+  const port = parsed.port ? `:${parsed.port}` : '';
+  const path = parsed.pathname.replace(/\/+$/, '');
+  if (host === 'doi.org') return `${host}${path.toLowerCase()}`;
+  return `${host}${port}${path}${parsed.search}${parsed.hash}`;
+};
 
 /** Parse an array-of-entries YAML file against a schema. */
 function loadList<T>(path: string, schema: z.ZodType<T>): T[] {
@@ -140,16 +149,25 @@ checkDuplicates('dataset', datasets.items, datasets.where);
 checkDuplicates('paper', papers.items, papers.where);
 checkDuplicates('model', models.items, models.where);
 
-const paperLinks = new Map<string, string>();
-for (const paper of papers.items) {
-  const link = normalizeLink(paper.link);
-  const duplicateLink = paperLinks.get(link);
-  if (duplicateLink) {
-    fail(papers.where.get(paper.id)!, `[${paper.id}] link duplicates '${duplicateLink}'`);
-  } else {
-    paperLinks.set(link, paper.id);
+function checkDuplicateLinks(
+  kind: string,
+  items: { id: string; link: string }[],
+  where: Map<string, string>,
+) {
+  const seen = new Map<string, string>();
+  for (const item of items) {
+    const link = normalizeLink(item.link);
+    const duplicate = seen.get(link);
+    if (duplicate) {
+      fail(where.get(item.id)!, `[${item.id}] ${kind} link duplicates '${duplicate}'`);
+    } else {
+      seen.set(link, item.id);
+    }
   }
 }
+
+checkDuplicateLinks('dataset', datasets.items, datasets.where);
+checkDuplicateLinks('paper', papers.items, papers.where);
 
 for (const d of datasets.items) checkVerified(datasets.where.get(d.id)!, d.id, d.verified);
 const modelNames = new Map<string, string>();
@@ -172,6 +190,7 @@ for (const m of models.items) {
 const toolsPath = resolve(dataDir, 'tools.yaml');
 const tools = loadList(toolsPath, ToolSchema);
 checkDuplicates('tool', tools, new Map(tools.map((t) => [t.id, 'data/tools.yaml'])));
+checkDuplicateLinks('tool', tools, new Map(tools.map((t) => [t.id, 'data/tools.yaml'])));
 for (const t of tools) checkVerified('data/tools.yaml', t.id, t.verified);
 
 // ---- venues ----------------------------------------------------------------

@@ -195,13 +195,6 @@
   venue: Jagannath University Journal of Arts
 - source: openalex
   kind: paper
-  title: "Bangla MedER: Multi-BERT ensemble approach for the recognition of Bangla medical entity"
-  link: https://doi.org/10.1371/journal.pone.0342558
-  year: 2026
-  authors: Aurpa et al.
-  venue: PLoS ONE
-- source: openalex
-  kind: paper
   title: "Bangla Pir Kathā and the Fātimār Suratnāmā: Reflecting the Female Sufi Horizon of Bengal"
   link: https://doi.org/10.59815/bhs.vol2802
   year: 2026
@@ -617,13 +610,6 @@
   year: 2026
   authors: Mondal et al.
   venue: Indian Dermatology Online Journal
-- source: openalex
-  kind: paper
-  title: "Literary Style Transfer in Bengali Literature Using Hybrid BERT-GAN Architecture: A Comprehensive Study on Tagore and Nazrul"
-  link: https://doi.org/10.1007/s42979-026-04943-4
-  year: 2026
-  authors: Nihal et al.
-  venue: SN Computer Science
 - source: openalex
   kind: paper
   title: "Meaning as Distribution: A U–M–C Model of Contextual Interpretation in Bangla"
@@ -1757,13 +1743,6 @@
   venue: International Journal For Multidisciplinary Research
 - source: openalex
   kind: paper
-  title: "Explainable detection: a transformer-based language modeling approach for Bengali news title classification with comparative explainability analysis using ML and DL"
-  link: https://doi.org/10.3389/frai.2025.1537432
-  year: 2025
-  authors: Naeen et al.
-  venue: Frontiers in Artificial Intelligence
-- source: openalex
-  kind: paper
   title: Exploration of Semantic Priming Studies in Native Language of Children:Study on Bengali L1 and English L2 Bilingual Children
   link: https://doi.org/10.1007/s42979-025-03664-4
   year: 2025
@@ -1896,13 +1875,6 @@
   year: 2025
   authors: Sarkar et al.
   venue: Molecular Biology Reports
-- source: openalex
-  kind: paper
-  title: "Humanitarian classification of crisis-related microblogs in Bengali: A comparison of multilingual pre-trained language models"
-  link: https://doi.org/10.1016/j.ijdrr.2025.105673
-  year: 2025
-  authors: Das et al.
-  venue: International Journal of Disaster Risk Reduction
 - source: openalex
   kind: paper
   title: "Identity And Arranged Marriage: Perspectives Of Potential Bengali Muslim Brides In Higher Education"
@@ -3508,13 +3480,6 @@
   suggestedTask: speech
 - source: openalex
   kind: paper
-  title: "Enhancing Depressive Post Detection in Bangla: A Comparative Study of TF-IDF, BERT and FastText Embeddings"
-  link: https://doi.org/10.33166/aetic.2024.03.003
-  year: 2024
-  authors: Sazan et al.
-  venue: Annals of Emerging Technologies in Computing
-- source: openalex
-  kind: paper
   title: ENVIRONMENTAL EDUCATION AMONG SCHOOL CHILDREN OF BANGLA NAGAR, PUGAL ROAD, BIKANER (RAJASTHAN)
   link: https://doi.org/10.26480/ees.01.2024.07.15
   year: 2024
@@ -3785,13 +3750,6 @@
   authors: Nipa et al.
   venue: Bulletin of Faculty of Physical Therapy
   suggestedTask: mt
-- source: openalex
-  kind: paper
-  title: Medical nearest-word embedding technique implemented using an unsupervised machine learning approach for Bengali language
-  link: https://doi.org/10.2478/ijssis-2024-0018
-  year: 2024
-  authors: Mandal et al.
-  venue: International Journal on Smart Sensing and Intelligent Systems
 - source: openalex
   kind: paper
   title: Michael Madhusudan Dutta’s Use of Blank Verse as a Milestone in Westernized Modern Bengali Poetry and Drama
@@ -5236,13 +5194,6 @@
   venue: Multimedia Tools and Applications
 - source: openalex
   kind: paper
-  title: Next Words Prediction and Sentence Completion in Bangla Language Using GRU-Based RNN on N-Gram Language Model
-  link: https://doi.org/10.4236/jdaip.2023.114020
-  year: 2023
-  authors: Hoque et al.
-  venue: Journal of Data Analysis and Information Processing
-- source: openalex
-  kind: paper
   title: Normative for Motor Speech Profile in Bengali-speaking Adults
   link: https://doi.org/10.5005/jp-journals-10023-1239
   year: 2023
@@ -5975,13 +5926,6 @@
   venue: Sensors
 - source: openalex
   kind: paper
-  title: Bangla text generation system by incorporating attention in sequence-to-sequence model
-  link: https://doi.org/10.30574/wjarr.2022.14.1.0292
-  year: 2022
-  authors: Banik et al.
-  venue: World Journal of Advanced Research and Reviews
-- source: openalex
-  kind: paper
   title: "Bangla Version of the Boston Carpal Tunnel Questionnaire: Translation, Cross-Cultural Adaptation, Validation and Reliability Assessment"
   link: https://doi.org/10.3329/kyamcj.v13i1.59877
   year: 2022
@@ -6003,13 +5947,6 @@
   authors: Rahman et al.
   venue: Journal of Bangladesh College of Physicians and Surgeons
   suggestedTask: mt
-- source: openalex
-  kind: paper
-  title: "Bangla-BERT: Transformer-Based Efficient Model for Transfer Learning and Language Understanding"
-  link: https://doi.org/10.1109/access.2022.3197662
-  year: 2022
-  authors: Kowsher et al.
-  venue: IEEE Access
 - source: openalex
   kind: paper
   title: "Barishaler Jogen Mandal: Construal of the Undisputed Dalit Leader of Undivided Bengal through a Twenty-first Century Bengali Novel"
@@ -7105,13 +7042,6 @@
   venue: Journal of Communication Disorders
 - source: openalex
   kind: paper
-  title: "BnVec: Towards the Development of Word Embedding for Bangla Language Processing"
-  link: https://doi.org/10.14419/ijet.v10i2.31538
-  year: 2021
-  authors: Kowsher et al.
-  venue: International Journal of Engineering & Technology
-- source: openalex
-  kind: paper
   title: Body composition and somatotype profile of pre and post menarche stage of Bengali school girls
   link: https://www.kheljournal.com/archives/2021/vol8issue1/PartD/8-1-54-198.pdf
   year: 2021
@@ -7186,13 +7116,6 @@
   link: https://doi.org/10.34104/ajssls.021.02470255
   year: 2021
   venue: Asian Journal of Social Sciences and Legal Studies
-- source: openalex
-  kind: paper
-  title: Context-driven Bengali Text Generation using Conditional Language Model
-  link: https://doi.org/10.19139/soic-2310-5070-1061
-  year: 2021
-  authors: Kibria et al.
-  venue: Statistics Optimization & Information Computing
 - source: openalex
   kind: paper
   title: Contrastive Analysis and its Implications for Bengali Learners of ESL
@@ -7464,13 +7387,6 @@
   year: 2021
   authors: Sazzed et al.
   venue: PeerJ Computer Science
-- source: openalex
-  kind: paper
-  title: Implementation Of Recurrent Neural Network With Language Model For Automatic Articulation Identification System In Bangla
-  link: https://doi.org/10.35444/ijana.2021.12611
-  year: 2021
-  authors: Mubassira et al.
-  venue: International Journal of Advanced Networking and Applications
 - source: openalex
   kind: paper
   title: In search of a suitable method for disambiguation of word senses in Bengali
@@ -9013,13 +8929,6 @@
   venue: The International Arab Journal of Information Technology
 - source: openalex
   kind: paper
-  title: An investigative design of optimum stochastic language model for bangla autocomplete
-  link: https://doi.org/10.11591/ijeecs.v13.i2.pp671-676
-  year: 2019
-  authors: Eyamin et al.
-  venue: Indonesian Journal of Electrical Engineering and Computer Science
-- source: openalex
-  kind: paper
   title: "An Oral History of Bengali Immigrants in British Columbia: 1960-2017"
   link: http://www.alternateroutes.ca/index.php/ar/article/download/22469/18269
   year: 2019
@@ -9818,13 +9727,6 @@
   year: 2018
   authors: Ali et al.
   venue: JP Journal of Heat and Mass Transfer
-- source: openalex
-  kind: paper
-  title: An Exploratory Approach to Find a Novel Metric Based Optimum Language Model for Automatic Bangla Word Prediction
-  link: https://doi.org/10.5815/ijisa.2018.02.05
-  year: 2018
-  authors: Habib et al.
-  venue: International Journal of Intelligent Systems and Applications
 - source: openalex
   kind: paper
   title: An Innovative Approach of Dehooking for Online Handwritten Bengali Characters and Words
@@ -11764,13 +11666,6 @@
   year: 2015
   authors: Sinha et al.
   venue: International Journal of Pediatric Otorhinolaryngology
-- source: openalex
-  kind: paper
-  title: Automated Word Prediction in Bangla Language Using Stochastic Language Models
-  link: https://doi.org/10.5121/ijfcst.2015.5607
-  year: 2015
-  authors: Haque et al.
-  venue: International Journal in Foundations of Computer Science & Technology
 - source: openalex
   kind: paper
   title: Automatic Classification of Bengali Sentences Based on Sense Definitions Present in Bengali Wordnet

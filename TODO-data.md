@@ -170,23 +170,19 @@ task is a welcome, low-risk contribution. `note` was intentionally left blank on
 imported papers rather than auto-generated — a one-line summary is exactly the
 kind of plausible invention the catalog forbids.
 
-**What is left out on purpose (2,707 candidates still in `data/inbox/`):**
+**What is currently held (2,692 candidates in `data/inbox/` on 2026-08-23):**
 
-The inbox is a merged triage queue, not a catalog. It currently contains 2,650
-paper candidates and 57 dataset candidates: 2,558 OpenAlex records, 57 ACL
-records, 35 arXiv records, and 57 Hugging Face records.
+- **2,543 OpenAlex papers.** The title-wide journal sweep intentionally catches many
+  non-NLP and non-computational records. Most have no task suggestion and require
+  human topic, metadata, and scope review before promotion.
+- **57 ACL and 35 arXiv papers.** These still require source verification, task review,
+  and a preprint/publication duplicate check before entering the catalog.
+- **57 Hugging Face datasets.** The `language:bn` filter is low-precision, and the list
+  API does not establish a dataset's scope, size, or license. Curate each card and
+  release individually; do not promote these wholesale.
 
-- **Some papers describe tasks outside the current 13-task taxonomy.** Examples
-  include OCR, handwriting recognition, image captioning, WordNet construction,
-  readability, dialogue, word embeddings, lexical complexity, and spell checking.
-  Adding a suitable task is a prerequisite for promoting them.
-- **Some paper matches are tangential to Bangla.** Multilingual papers can match
-  an abstract keyword without being about Bangla research. These need individual
-  review before promotion.
-- **The 57 Hugging Face hits are not imported.** The `language:bn` filter is
-  low-precision. It can return multilingual corpora or datasets for other
-  languages that carry a `bn` tag. Hugging Face import therefore requires
-  hand-curation. Do not promote these wholesale.
+Discovery merges new results into this queue and prunes records whose normalized title
+or link is now present in the published catalog.
 
 ## Model catalog audit
 

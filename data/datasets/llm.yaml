@@ -93,3 +93,35 @@
   link: https://data.mendeley.com/datasets/34bs5cxk9j/2
   verified: 2026-07-26
   desc: Bengali math word problems with step-by-step solutions adapted from the GSM8K train and test sets.
+- id: banglasocialbench
+  name: BanglaSocialBench
+  task: llm
+  size: 1,719 instances
+  sizeN: 1719
+  license: CC BY 4.0
+  year: 2026
+  source: BanglaSocialBench (ACL SRW 2026)
+  link: https://huggingface.co/datasets/sijantanvir/BanglaSocialBench
+  verified: 2026-08-23
+  desc: Sociopragmatic LLM benchmark over Bangla address terms, kinship reasoning, and social customs.
+  bibtex: |-
+    @inproceedings{sijan-etal-2026-banglasocialbench,
+      title = "{B}angla{S}ocial{B}ench: A Benchmark for Evaluating Sociopragmatic and Cultural Alignment of {LLM}s in Bangladeshi Social Interaction",
+      author = "Sijan, Tanvir Ahmed  and
+        Rifat, S. M. Golam  and
+        Partha, Pankaj  and
+        Islam, Md. Tanjeed  and
+        Anwar, Md Musfique",
+      editor = "T.Y.S.S., Santosh  and
+        Rodriguez, Juan Diego  and
+        de Gibert, Ona",
+      booktitle = "Proceedings of the 64th Annual Meeting of the {A}ssociation for {C}omputational {L}inguistics (Volume 4: Student Research Workshop)",
+      month = jul,
+      year = "2026",
+      address = "San Diego, California, United States",
+      publisher = "Association for Computational Linguistics",
+      url = "https://aclanthology.org/2026.acl-srw.22/",
+      doi = "10.18653/v1/2026.acl-srw.22",
+      pages = "247--280",
+      ISBN = "979-8-89176-393-7"
+    }

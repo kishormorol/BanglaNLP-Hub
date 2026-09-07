@@ -53,3 +53,40 @@
   link: https://data.mendeley.com/datasets/jt4gywvwtj/2
   verified: 2026-07-26
   desc: Manually annotated medical text covering six entity types, with a separate English translation.
+- id: bannerd
+  name: BanNERD
+  task: ner
+  size: 85,175 sentences
+  sizeN: 85175
+  license: CC BY-NC-ND 4.0
+  year: 2025
+  source: BanNERD (Findings NAACL 2025)
+  link: https://github.com/eblict-sd07/BanNERD
+  verified: 2026-08-23
+  desc: Human-annotated Bangla NER corpus spanning 29 domains and 10 entity classes.
+  bibtex: |-
+    @inproceedings{mahtab-etal-2025-bannerd,
+      title = "{B}an{NERD}: A Benchmark Dataset and Context-Driven Approach for {B}angla Named Entity Recognition",
+      author = "Mahtab, Md. Motahar  and
+        Khan, Faisal Ahamed  and
+        Islam, Md. Ekramul  and
+        Chowdhury, Md. Shahad Mahmud  and
+        Chowdhury, Labib Imam  and
+        Afrin, Sadia  and
+        Ali, Hazrat  and
+        Rashid, Mohammad Mamun Or  and
+        Mohammed, Nabeel  and
+        Amin, Mohammad Ruhul",
+      editor = "Chiruzzo, Luis  and
+        Ritter, Alan  and
+        Wang, Lu",
+      booktitle = "Findings of the Association for Computational Linguistics: NAACL 2025",
+      month = apr,
+      year = "2025",
+      address = "Albuquerque, New Mexico",
+      publisher = "Association for Computational Linguistics",
+      url = "https://aclanthology.org/2025.findings-naacl.380/",
+      doi = "10.18653/v1/2025.findings-naacl.380",
+      pages = "6822--6843",
+      ISBN = "979-8-89176-195-7"
+    }
