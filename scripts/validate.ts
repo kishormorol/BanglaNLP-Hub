@@ -5,7 +5,7 @@
  *   1. missing / malformed required fields (per the Zod schemas)
  *   2. malformed URLs
  *   3. `verified` dates older than VERIFY_MAX_AGE_MONTHS
- *   4. duplicate ids within an entity type
+ *   4. duplicate ids, paper links, or model links
  *   5. a leaderboard referencing a dataset or paper id that does not exist
  *   6. an entry whose `task` is not a known task id
  *   7. a paper venue with no tone in venues.yaml
@@ -25,7 +25,6 @@ import {
   ToolSchema,
   LeaderboardSchema,
   VenuesSchema,
-  RecentSchema,
   ContributorSchema,
   HomeContributorSchema,
   VERIFY_MAX_AGE_MONTHS,
@@ -74,6 +73,7 @@ function listDir(sub: string): string[] {
   }
   return readdirSync(dir)
     .filter((f) => f.endsWith('.yaml'))
+    .sort()
     .map((f) => resolve(dir, f));
 }
 
@@ -140,6 +140,17 @@ checkDuplicates('dataset', datasets.items, datasets.where);
 checkDuplicates('paper', papers.items, papers.where);
 checkDuplicates('model', models.items, models.where);
 
+const paperLinks = new Map<string, string>();
+for (const paper of papers.items) {
+  const link = normalizeLink(paper.link);
+  const duplicateLink = paperLinks.get(link);
+  if (duplicateLink) {
+    fail(papers.where.get(paper.id)!, `[${paper.id}] link duplicates '${duplicateLink}'`);
+  } else {
+    paperLinks.set(link, paper.id);
+  }
+}
+
 for (const d of datasets.items) checkVerified(datasets.where.get(d.id)!, d.id, d.verified);
 const modelNames = new Map<string, string>();
 const modelLinks = new Map<string, string>();
@@ -204,10 +215,6 @@ for (const path of listDir('leaderboards')) {
     }
   }
 }
-
-// ---- recent ----------------------------------------------------------------
-const recentPath = resolve(dataDir, 'recent.yaml');
-if (existsSync(recentPath)) loadList(recentPath, RecentSchema);
 
 // ---- contributors ----------------------------------------------------------
 // A credit is only allowed for a resource actually in the catalog. For a paper,

@@ -6,10 +6,10 @@
  *  - It said links are re-verified "weekly"; the actual workflow runs nightly.
  *  - Its citation pointed at https://banglanlp-hub.github.io, which is not this site.
  *  - Its "Leaderboard scores link to their source" claim is restated as the policy it
- *    actually is, since no scores are currently curated.
+ *    actually is, since most benchmarks still have no curated rows.
  */
 import Base from '../layouts/Base.astro';
-import { stats } from '../lib/data.ts';
+import { stats, tasks } from '../lib/data.ts';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const SITE = 'https://kishormorol.github.io/BanglaNLP-Hub/';
@@ -68,10 +68,11 @@ const h2Style = "font-family:'Spectral',serif;font-weight:600;font-size:22px;mar
       </p>
       <p style="margin:0 0 16px;text-wrap:pretty">
         It currently indexes <strong>{stats.papers}</strong> papers, <strong>{stats.datasets}</strong
-        > datasets, <strong>{stats.models}</strong> models, and <strong>{stats.tools}</strong> tools across
-        10 tasks. Entries seeded from the original design prototype are being audited against ACL Anthology
-        and arXiv; several turned out to be inaccurate and were corrected or removed. Dataset size, license,
-        and year fields have not yet been through that audit.
+        > datasets, <strong>{stats.models}</strong> models, and <strong>{stats.tools}</strong> tools across{' '}
+        <strong>{tasks.length}</strong> tasks. Entries seeded from the original design prototype are being
+        audited against ACL Anthology, arXiv, OpenAlex, and publisher records; several turned out to be
+        inaccurate and were corrected or removed. Dataset size, license, and year have each had an audit
+        pass. Unresolved fields remain listed in the repository.
       </p>
       <p style="margin:0;text-wrap:pretty">
         Corrections, additions, and new benchmark results are welcome — see <a

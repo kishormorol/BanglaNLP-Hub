@@ -2,12 +2,12 @@
   name: UD Bengali-BRU Treebank
   task: pos
   size: 320 tokens / 56 sentences
-  sizeN: 320
+  sizeN: 56
   license: CC BY-SA 4.0
   year: 2021
   source: Universal Dependencies (since v2.9)
   link: https://universaldependencies.org/treebanks/bn_bru/
-  verified: 2026-07-19
+  verified: 2026-08-23
   desc: Tiny Universal Dependencies sample treebank with UPOS and dependency relations.
 - id: snltr
   name: SNLTR POS Corpus

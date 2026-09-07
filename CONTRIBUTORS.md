@@ -35,7 +35,7 @@ list** is shown as published; model and tool submissions link to the resource.
 
 ### [@SM-Shaan](https://github.com/SM-Shaan) (Sha Newaz Mahmud)
 
-- _Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer-Based Models with Explainability_ — sentiment ([#48](https://github.com/kishormorol/BanglaNLP-Hub/issues/48))
+- _Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer‑Based Models with Explainability_ — sentiment ([#48](https://github.com/kishormorol/BanglaNLP-Hub/issues/48))
   - Authors: Mujtahid Alam, Shuhena Salam Aonty, Sha Newaz Mahmud, Nahid Riaz Swachha, Ahmed Talal Wazih
 - _Bengali Human Sentiment Detection and Classification using Attention based Bidirectional LSTM_ — sentiment ([#49](https://github.com/kishormorol/BanglaNLP-Hub/issues/49))
   - Authors: Sha Newaz Mahmud, Nahid Riaz Swachha, Ahmed Talal Wazih, Shuvodwip Saha, Shougata Paul, Shuhena Salam Aonty

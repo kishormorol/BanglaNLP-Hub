@@ -140,10 +140,10 @@ const links = [
       box-shadow: 0 10px 26px rgba(10, 30, 20, 0.12);
       padding: 8px 16px 12px !important;
       overflow: visible !important;
-      display: none;
+      display: none !important;
     }
     :global(html.js) .navrow.open {
-      display: flex;
+      display: flex !important;
     }
     /* No-JS fallback: the button can't open, so keep links visible as a
        wrapping row rather than stranding them behind it. */

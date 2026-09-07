@@ -5,9 +5,9 @@
  * One deliberate departure: the prototype's genBibtex() SYNTHESISED an @misc
  * entry whenever a dataset had no real bibtex field. That contradicts the rule
  * published in CONTRIBUTING.md ("no invented BibTeX") and TaskDetail's
- * behaviour, and 25 of 31 datasets currently lack one — so it would have
- * manufactured citations for most of the table. Rows without BibTeX say so and
- * link to the contribution guide instead.
+ * behaviour. Many datasets currently lack one, so it would manufacture
+ * citations for much of the table. Rows without BibTeX say so and link to the
+ * contribution guide instead.
  */
 import Base from '../layouts/Base.astro';
 import { datasets, tasks } from '../lib/data.ts';

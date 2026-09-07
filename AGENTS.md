@@ -92,7 +92,8 @@ npm run check-links  probe every published link: URL in /data
 
 `npm run validate` must pass before committing; CI runs it on every PR and it gates
 deployment. It fails on malformed fields, bad URLs, `verified` dates older than 12
-months, duplicate ids, and leaderboards referencing an unknown dataset or paper id.
+months, duplicate ids, duplicate paper or model links, and leaderboards referencing
+an unknown dataset or paper id.
 
 `check-links` identifies with an honest agent first, but before calling a link dead
 it re-probes with a browser agent and only reports it as dead when the browser agent
@@ -143,5 +144,5 @@ candidate's fields from the ACL Anthology's own BibTeX and files it under a task
 ## Not built yet
 
 Nothing outstanding on the view layer — all views are ported. Remaining work is
-data, not code: see TODO-data.md (heuristic paper tasks to review, 54 out-of-taxonomy
-candidates in the inbox, empty leaderboards, missing BibTeX, unverified sizes).
+data, not code: see TODO-data.md (heuristic paper tasks to review, 2,707 unverified
+inbox candidates, empty leaderboards, missing BibTeX, unverified sizes).
