@@ -123,3 +123,19 @@
       task: mt
       authors: "Md. Atique Faisal, Farhan Sadaf, Dipta Chowdhury, H.M. Azrof, Monojit Paul Tanmay"
       pr: 73
+    - title: BanHate
+      kind: dataset
+      task: hate
+      pr: 102
+    - title: BanNERD
+      kind: dataset
+      task: ner
+      pr: 102
+    - title: NCTB-QA
+      kind: dataset
+      task: qa
+      pr: 102
+    - title: BanglaSocialBench
+      kind: dataset
+      task: llm
+      pr: 102

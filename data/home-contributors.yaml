@@ -65,6 +65,12 @@
   notable: Maintainer
   link: https://github.com/kishormorol
 - type: code
+  name: Mohammed Efaz
+  handle: WhiteHades
+  blurb: Refactored the contributor, model, and leaderboard data layers, tightened link checking, and fixed catalog consistency and mobile navigation.
+  notable: "PRs #78 · #79 · #80 · #82 · #101"
+  link: https://github.com/WhiteHades
+- type: code
   name: Meftahul Jannati Anonna
   handle: Meftahul-Anu13
   blurb: Added the Speech Emotion Recognition and Speaker tasks, and fixed the Home hero search dropdown layering.
