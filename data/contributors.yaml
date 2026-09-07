@@ -9,6 +9,13 @@
       task: qa
       authors: "Md. Sagor Chowdhury, Adiba Fairooz Chowdhury, Ayesha Banu, Riad Hossain"
       issue: 39
+- github: farhanishmam
+  name: Md Farhan Ishmam
+  entries:
+    - title: "BanglaProtha: Evaluating Vision Language Models in Underrepresented Long-tail Cultural Contexts"
+      task: vqa
+      authors: "Md Fahim, Md Sakib Ul Rahman, Akm Moshiur Rahman, Md Farhan Ishmam, Md Tasmim Rahman, Fariha Tanjim Shifat, Fabiha Haider, Md Farhad Alam Bhuiyan"
+      issue: 85
 - github: LTNEW52
   name: Labib Tahmid
   entries:
@@ -53,6 +60,14 @@
       kind: model
       task: speech
       pr: 54
+    - title: Bengali-Loop (ASR corpus)
+      kind: dataset
+      task: speech
+      issue: 86
+    - title: "Bengali-Loop: Community Benchmarks for Long-Form Bangla ASR and Speaker Diarization"
+      task: speech
+      authors: "H. M. Shadman Tabib, Istiak Ahmmed Rifti, Abdullah Muhammed Amimul Ehsan, Somik Dasgupta, Md Zim Mim Siddiqee Sowdha, Abrar Jahin Sarker, Md. Rafiul Islam Nijamy, Tanvir Hossain, Mst. Metaly Khatun, Munzer Mahmood, Rakesh Debnath, Gourab Biswas, Asif Karim, Wahid Al Azad Navid, Masnoon Muztahid, Fuad Ahmed Udoy, Shahad Shahriar Rahman, Md. Tashdiqur Rahman Shifat, Most. Sonia Khatun, Mushfiqur Rahman, Md. Miraj Hasan, Anik Saha, Mohammad Ninad Mahmud Nobo, Soumik Bhattacharjee, Tusher Bhomik, Ahmmad Nur Swapnil, Shahriar Kabir"
+      issue: 86
 - github: WhiteHades
   name: Mohammed Efaz
   entries:

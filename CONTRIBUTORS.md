@@ -19,6 +19,11 @@ list** is shown as published; model and tool submissions link to the resource.
 - _Automated Bengali Physics MCQ Solver: A Large Language Model Approach with Chain-of-Thought Reasoning_ — qa ([#39](https://github.com/kishormorol/BanglaNLP-Hub/issues/39))
   - Authors: Md. Sagor Chowdhury, Adiba Fairooz Chowdhury, Ayesha Banu, Riad Hossain
 
+### [@farhanishmam](https://github.com/farhanishmam) (Md Farhan Ishmam)
+
+- _BanglaProtha: Evaluating Vision Language Models in Underrepresented Long-tail Cultural Contexts_ — vqa ([#85](https://github.com/kishormorol/BanglaNLP-Hub/issues/85))
+  - Authors: Md Fahim, Md Sakib Ul Rahman, Akm Moshiur Rahman, Md Farhan Ishmam, Md Tasmim Rahman, Fariha Tanjim Shifat, Fabiha Haider, Md Farhad Alam Bhuiyan
+
 ### [@LTNEW52](https://github.com/LTNEW52) (Labib Tahmid)
 
 - `BTTC` — dataset, textcls ([#60](https://github.com/kishormorol/BanglaNLP-Hub/issues/60))
@@ -41,6 +46,9 @@ list** is shown as published; model and tool submissions link to the resource.
 - `Sanjidh090/moonshine-base-bn` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
 - `bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
 - `hishab/titu_stt_bn_conformer_large` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
+- `Bengali-Loop (ASR corpus)` — dataset, speech ([#86](https://github.com/kishormorol/BanglaNLP-Hub/issues/86))
+- _Bengali-Loop: Community Benchmarks for Long-Form Bangla ASR and Speaker Diarization_ — speech ([#86](https://github.com/kishormorol/BanglaNLP-Hub/issues/86))
+  - Authors: H. M. Shadman Tabib, Istiak Ahmmed Rifti, Abdullah Muhammed Amimul Ehsan, Somik Dasgupta, Md Zim Mim Siddiqee Sowdha, Abrar Jahin Sarker, Md. Rafiul Islam Nijamy, Tanvir Hossain, Mst. Metaly Khatun, Munzer Mahmood, Rakesh Debnath, Gourab Biswas, Asif Karim, Wahid Al Azad Navid, Masnoon Muztahid, Fuad Ahmed Udoy, Shahad Shahriar Rahman, Md. Tashdiqur Rahman Shifat, Most. Sonia Khatun, Mushfiqur Rahman, Md. Miraj Hasan, Anik Saha, Mohammad Ninad Mahmud Nobo, Soumik Bhattacharjee, Tusher Bhomik, Ahmmad Nur Swapnil, Shahriar Kabir
 
 ### [@WhiteHades](https://github.com/WhiteHades) (Mohammed Efaz)
 
