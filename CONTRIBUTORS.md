@@ -66,6 +66,10 @@ list** is shown as published; model and tool submissions link to the resource.
 - `hishab/titulm-llama-3.2-1b-v2.0` — model, llm ([#68](https://github.com/kishormorol/BanglaNLP-Hub/pull/68))
 - _Kothon: A large-scale dataset for machine translation of the Chittagonian and Sylheti dialects into standard Bangla_ — mt ([#73](https://github.com/kishormorol/BanglaNLP-Hub/pull/73))
   - Authors: Md. Atique Faisal, Farhan Sadaf, Dipta Chowdhury, H.M. Azrof, Monojit Paul Tanmay
+- `BanHate` — dataset, hate ([#102](https://github.com/kishormorol/BanglaNLP-Hub/pull/102))
+- `BanNERD` — dataset, ner ([#102](https://github.com/kishormorol/BanglaNLP-Hub/pull/102))
+- `NCTB-QA` — dataset, qa ([#102](https://github.com/kishormorol/BanglaNLP-Hub/pull/102))
+- `BanglaSocialBench` — dataset, llm ([#102](https://github.com/kishormorol/BanglaNLP-Hub/pull/102))
 
 ## Site and code contributions
 
@@ -75,6 +79,11 @@ kept separate from resource submissions.
 ### [@kishormorol](https://github.com/kishormorol) (Md Kishor Morol)
 
 - Creator and maintainer — built the Astro catalog, the ingestion pipeline, and every view.
+
+### [@WhiteHades](https://github.com/WhiteHades) (Mohammed Efaz)
+
+- Refactored the contributor, model, and leaderboard data layers, tightened link
+  checking, and fixed catalog consistency and mobile navigation ([#78](https://github.com/kishormorol/BanglaNLP-Hub/pull/78), [#79](https://github.com/kishormorol/BanglaNLP-Hub/pull/79), [#80](https://github.com/kishormorol/BanglaNLP-Hub/pull/80), [#82](https://github.com/kishormorol/BanglaNLP-Hub/pull/82), [#101](https://github.com/kishormorol/BanglaNLP-Hub/pull/101)).
 
 ### [@Meftahul-Anu13](https://github.com/Meftahul-Anu13) (Meftahul Jannati Anonna)
 
