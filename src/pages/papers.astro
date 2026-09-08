@@ -66,6 +66,7 @@ const selectStyle =
           return (
             <a
               class="papercard"
+              id={p.id}
               href={p.link}
               target="_blank"
               rel="noopener"
@@ -108,6 +109,14 @@ const selectStyle =
 </Base>
 
 <style>
+  .papercard {
+    scroll-margin-top: 80px;
+  }
+  .papercard:target,
+  .papercard:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+  }
   .papercard:hover {
     border-color: var(--green);
   }
@@ -153,4 +162,20 @@ const selectStyle =
     el.addEventListener('input', apply);
     el.addEventListener('change', apply);
   });
+
+  function revealHash() {
+    const card = cards.find((c) => encodeURIComponent(c.id) === location.hash.slice(1));
+    if (!card) return;
+    apply();
+    if (card.hidden) {
+      [q, year, venue, task].forEach((el) => {
+        el.value = '';
+      });
+      apply();
+    }
+    card.focus({ preventScroll: true });
+    card.scrollIntoView({ block: 'start' });
+  }
+  window.addEventListener('hashchange', revealHash);
+  window.addEventListener('load', revealHash, { once: true });
 </script>

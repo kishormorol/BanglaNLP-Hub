@@ -27,10 +27,28 @@
   sizeN: 12000
   license: ODC-BY
   year: 2019
-  source: Cross-lingual name tagging (ACL 2017)
+  source: Massively Multilingual Transfer for NER (ACL 2019)
   link: https://huggingface.co/datasets/unimelb-nlp/wikiann
-  verified: 2026-07-19
-  desc: Silver-standard PER/LOC/ORG from Wikipedia anchors.
+  verified: 2026-09-08
+  desc: Silver-standard Wikipedia PER/LOC/ORG annotations in the Rahimi et al. balanced splits; Bengali train/validation/test contain 10,000/1,000/1,000 sentences.
+  bibtex: |-
+    @inproceedings{rahimi-etal-2019-massively,
+        title = "Massively Multilingual Transfer for {NER}",
+        author = "Rahimi, Afshin  and
+          Li, Yuan  and
+          Cohn, Trevor",
+        editor = "Korhonen, Anna  and
+          Traum, David  and
+          M{\`a}rquez, Llu{\'i}s",
+        booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+        month = jul,
+        year = "2019",
+        address = "Florence, Italy",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/P19-1015/",
+        doi = "10.18653/v1/P19-1015",
+        pages = "151--164"
+    }
 - id: ancholikner
   name: ANCHOLIK-NER
   task: ner
@@ -42,6 +60,17 @@
   link: https://data.mendeley.com/datasets/gbkszkt8z3/4
   verified: 2026-07-19
   desc: Bangla regional NER across five dialects with 10 entity types, BIO-tagged.
+  bibtex: |-
+    @misc{paul2025ancholiknerbenchmarkdatasetbangla,
+          title={ANCHOLIK-NER: A Benchmark Dataset for Bangla Regional Named Entity Recognition},
+          author={Bidyarthi Paul and Faika Fairuj Preotee and Shuvashis Sarker and Shamim Rahim Refat and Shifat Islam and Tashreef Muhammad and Mohammad Ashraful Hoque and Shahriar Manzoor},
+          year={2025},
+          eprint={2502.11198},
+          archivePrefix={arXiv},
+          primaryClass={cs.CL},
+          doi={https://doi.org/10.1371/journal.pone.0342786},
+          url={https://arxiv.org/abs/2502.11198},
+    }
 - id: banglameder
   name: Bangla-MedER
   task: ner
