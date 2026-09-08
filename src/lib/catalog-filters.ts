@@ -38,10 +38,13 @@ export function initCatalogFilters(
     apply();
   }
 
-  function revealHash() {
+  function revealHash(clearConflicts = true) {
     const item = items.find((item) => encodeURIComponent(item.id) === location.hash.slice(1));
     if (!item) return;
-    if (item.hidden) reset();
+    if (item.hidden) {
+      if (!clearConflicts) return;
+      reset();
+    }
     writeURL();
     reveal(item);
   }
@@ -74,10 +77,7 @@ export function initCatalogFilters(
   });
 
   readURL();
-  const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-  // A history return can reload the document when the back/forward cache is off.
-  if (navigation?.type !== 'back_forward' || history.state?.catalogFiltersURL !== location.href) {
-    revealHash();
-  }
+  // Shared URLs, reloads, and history returns keep explicit filters over a retained hash.
+  revealHash(false);
   writeURL();
 }

@@ -15,9 +15,10 @@ import { datasets, tasks } from '../lib/data.ts';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 const taskName = (id: string) => tasks.find((t) => t.id === id)?.name ?? id;
 
-/** Mirrors the prototype's licenseGroup() buckets. */
+// Classify catalog text, not the underlying dataset's verified licensing status.
 const licenseGroup = (l: string) =>
-  /NC|Non-comm/i.test(l) ? 'nc' : /research/i.test(l) ? 'research' : 'open';
+  /NC|Non-comm/i.test(l) ? 'nc' : /research/i.test(l) ? 'research' :
+    ['MIT', 'Apache 2.0', 'CC0', 'ODC-BY', 'CC BY 4.0', 'CC BY-SA 4.0'].includes(l) ? 'open' : 'other';
 
 const rows = [...datasets].sort((a, b) => b.year - a.year || a.name.localeCompare(b.name));
 const yearOpts = [...new Set(rows.map((d) => d.year))].sort((a, b) => b - a);
@@ -62,6 +63,7 @@ const selectStyle =
         <option value="open">Open / permissive</option>
         <option value="nc">Non-commercial</option>
         <option value="research">Research only</option>
+        <option value="other">Other / restricted</option>
       </select>
       <select id="f-year" aria-label="Filter by year" style={selectStyle}>
         <option value="">Any year</option>
