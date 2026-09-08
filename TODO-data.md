@@ -258,10 +258,52 @@ and 512-token limits; T5 models use 1,024 input and 256 output tokens. These
 architectures and truncation limits differ, so the rows do not imply identical
 model inputs. Table 8's transfer results are excluded.
 
-SentNoB rows remain empty. Its paper describes micro-averaged F1, but Table 3
-reports unequal precision and recall for most systems. Confirm the evaluation
-implementation or ask the authors before assigning a metric to those scores.
-See [SentNoB sections 4 and 5](https://aclanthology.org/2021.findings-emnlp.278.pdf#page=3).
+## SentNoB evaluation audit (2026-09-08)
+
+SentNoB rows remain empty because the released evaluation code has a reproduced
+indexing error. The catalog metric is `F1 (evaluation unresolved)`.
+[Section 4 of the paper](https://aclanthology.org/2021.findings-emnlp.278.pdf#page=3)
+describes micro averaged F1. Table 3 on printed page 3268 reports precision and
+recall values that differ for most systems. The code provides stronger evidence
+than that discrepancy alone.
+
+At revision `2798a0c0f33d97943a70e796fe417d83bbdb4ddb`, the false positive sum
+includes `arr[2][2]`, a correct prediction, and omits `arr[2][0]`. This occurs in
+all four released evaluation functions:
+
+* [Feature models, lines 32 to 48](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/feature_based.py#L32-L48).
+* [mBERT, lines 273 to 287](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/mbert.py#L273-L287).
+* [Random embedding BiLSTM, lines 382 to 402](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/neural_network_%28random%29.py#L382-L402).
+* [FastText BiLSTM, lines 391 to 411](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/neural_network_%28fasttext%29.py#L391-L411).
+
+We extracted and executed each function without importing the model scripts or
+training a model. Supplying the identity confusion matrix for three classes
+produced precision 75.00, recall 100.00, and F1 85.71. Changing only the false
+positive index in memory produced 100.00 for all three metrics. The BiLSTM
+functions print the faulty metrics but return accuracy, which remained 1.0 for
+this fixture. The calculation can also be reproduced without dependencies:
+
+```python
+arr = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+fp = arr[0][1] + arr[0][2] + arr[1][0] + arr[1][2] + arr[2][1] + arr[2][2]
+fn = arr[1][0] + arr[2][0] + arr[0][1] + arr[2][1] + arr[0][2] + arr[1][2]
+tp = arr[0][0] + arr[1][1] + arr[2][2]
+precision, recall = tp / (tp + fp), tp / (tp + fn)
+f1 = 2 * precision * recall / (precision + recall)
+assert [round(x * 100, 2) for x in (precision, recall, f1)] == [75.0, 100.0, 85.71]
+```
+
+The [random embedding test loader](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/neural_network_%28random%29.py#L269-L294)
+and [FastText test loader](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/neural_network_%28fasttext%29.py#L278-L303)
+use batches of 256 with `drop_last=True`. Applied to the 1,586 test examples,
+these settings evaluate 1,536 and omit 50. This is a check of the code and batch
+arithmetic, not a reconstruction of a historical training run.
+
+These findings establish defects in the pinned implementation. They do not
+prove which code generated every published score or establish corrected scores.
+Adding rows requires original predictions or an author correction that identifies
+both the evaluation method and test examples. Do not rename the published metric
+as macro or weighted F1, or derive corrected F1 from the paper's recall column.
 
 ## Leaderboards with no curated rows
 
