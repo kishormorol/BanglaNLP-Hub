@@ -47,6 +47,33 @@ data/
   venues.yaml             venue -> badge tone
 ```
 
+### Shareable filters
+
+Copy the address bar URL to share a filtered catalog view. Datasets accepts `q`,
+`task`, `license`, and `year`; Papers accepts `q`, `task`, `venue`, and `year`.
+For example: `/BanglaNLP-Hub/datasets?task=sentiment&license=open` or
+`/BanglaNLP-Hub/papers?q=BanglaBERT&venue=ACL`.
+Select values must match an option's value. Dataset license values are `open`,
+`nc`, `research`, and `other` (Other / restricted). Unknown select values are
+ignored; repeated parameters use the first value. Empty filters are removed from
+the URL. Filter text is limited to 1,000 characters, including when read from a URL,
+to keep shared addresses bounded.
+
+License filters group the catalog's license text; they do not verify or certify a
+dataset's license. Non-commercial and research labels take precedence. `open`
+matches only MIT, Apache 2.0, CC0, ODC-BY, CC BY 4.0, and CC BY-SA 4.0.
+All other text, including ND, Mixed, GPL/AGPL, and unknown labels, falls under `other`.
+Unresolved license fields remain documented in [`TODO-data.md`](./TODO-data.md).
+
+Typing replaces the current history entry. Select changes and **Clear filters**
+add an entry when the URL changes, so Back and Forward restore those views.
+Other query parameters and resource hashes are kept. Initial loads, copied URLs,
+reloads, and Back/Forward preserve explicit filters even when a retained resource
+hash points to a hidden item. Hidden targets are not revealed or focused on load;
+visible hash targets still open normally. Only explicit hash navigation after
+load, including selecting the same hash again through search, can clear conflicting
+filters to reveal a target. Without JavaScript, both pages show their full lists.
+
 ## Data honesty
 
 The catalog is only useful if its contents are true, so the project holds a hard line:
@@ -56,9 +83,18 @@ The catalog is only useful if its contents are true, so the project holds a hard
 - **Links are checked.** Every published `link:` URL is verified nightly. Unverified `data/inbox/` candidates are excluded. Dead links are reported in a single tracking issue; entries are never removed automatically.
 - **Entries get verified by hand.** Papers have been audited against the ACL Anthology, arXiv, and OpenAlex (title, authors, and abstract), and their task assignments are being spot-checked and corrected. Several entries inherited from the original design prototype turned out to be fabricated — a duplicate under an invented title, a model that does not exist, a paper with no publication — and were removed.
 
-Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 53 datasets lack BibTeX and ten of the eleven leaderboards await rows.
+Known gaps are tracked in [`TODO-data.md`](./TODO-data.md): 2 datasets lack BibTeX and nine of the eleven leaderboards await rows.
 
-**Dataset fields are verified at the source.** `license`, `size`, and `year` have each had an audit pass (July 2026), and the datasets added by mining resource papers had their `license` and `size` read from the dataset's own repository or card — never the paper's license icon, which describes the paper, not the data. Corrections and the entries still unconfirmed (because no reachable source states a figure) are listed in `TODO-data.md`. Candidate datasets with unverifiable licenses or outside the current scope are held back rather than published. One field is recorded as *known wrong* with no known replacement — deliberately. A wrong value we can point at is more useful than a plausible one we invented.
+Canonical BibTeX may come from ACL Anthology, arXiv, a publisher export, or an
+official Crossref or DataCite export of registered metadata. Both
+[Crossref](https://www.crossref.org/documentation/retrieve-metadata/content-negotiation/)
+and [DataCite](https://support.datacite.org/docs/datacite-content-resolver) support
+DOI content negotiation with `Accept: application/x-bibtex`. These registry
+exports are canonical sources, not handcrafted citations. Preserve every exported
+field and document the paper or release association in `TODO-data.md`; a citation
+does not verify the dataset's other metadata.
+
+**Dataset fields are verified at the source.** `license`, `size`, and `year` have each had an audit pass (July 2026), and the datasets added by mining resource papers had their `license` and `size` read from the dataset's own repository or card — never the paper's license icon, which describes the paper, not the data. Corrections and the entries still unconfirmed (because no reachable source states a figure) are listed in `TODO-data.md`. Candidate datasets with unverifiable licenses or outside the current scope are held back rather than published. A September 2026 audit replaced BHS's unsupported 30,000 count with 3,418 labelled statements in v1.0 and checked SentNoB, FLORES-200, TyDi QA, and WikiANN against pinned releases. The evidence and remaining license disputes are recorded in `TODO-data.md`.
 
 ## Commands
 
@@ -94,10 +130,9 @@ Everyone who has contributed a resource is credited in [`CONTRIBUTORS.md`](./CON
 These are concrete, self-contained, and each one is genuinely useful on its own — full detail in [`TODO-data.md`](./TODO-data.md):
 
 - **Reviewing paper tasks.** Most of the 712 papers were bulk-imported (ACL Anthology, arXiv, and hand-verified OpenAlex journal articles); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
-- **Leaderboard rows.** Ten of the eleven benchmarks ship empty. Each needs scores with a citation to the paper they came from. Even one more populated benchmark is a real improvement.
-- **BibTeX.** 53 datasets have no citation entry. Copy the published one from the ACL Anthology or the publisher page — please do not hand-write one.
+- **Leaderboard rows.** Nine of the eleven benchmarks ship empty. Each needs scores with a citation to the paper they came from. Keep the dataset version, test split, and evaluation conditions explicit.
+* **BibTeX.** 2 datasets have no citation entry, `udbru` and `snltr`. Establish the resource association before copying a canonical export under the policy above. Do not invent a citation.
 - **Unverified dataset sizes.** About a dozen datasets are hosted where no count is published (Kaggle, openslr.org, nltr.org). If you know the paper, you can settle these.
-- **One known-wrong value.** The `bhs` entry claims 30,000 documents and no source supports it. If you have the paper, this is a five-minute fix.
 - **Missing resources.** New papers, datasets, models, and tools — especially anything published recently, and anything from researchers outside the usual venues.
 
 ### The one rule
