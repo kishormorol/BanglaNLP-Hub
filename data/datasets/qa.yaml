@@ -30,14 +30,14 @@
 - id: tydiqa
   name: TyDi QA (bn)
   task: qa
-  size: ~10k questions
-  sizeN: 10000
+  size: 11,096 questions
+  sizeN: 11096
   license: Apache 2.0
   year: 2020
-  source: TyDi QA (TACL 2020)
+  source: TyDi QA primary tasks v1.0 (TACL 2020)
   link: https://github.com/google-research-datasets/tydiqa
-  verified: 2026-03-12
-  desc: Typologically diverse info-seeking QA; Bengali portion.
+  verified: 2026-09-08
+  desc: Bengali primary-task data with 10,768 train and 328 dev questions for passage selection and minimal answer extraction; not the GoldP subset.
 - id: nctbqa
   name: NCTB-QA
   task: qa

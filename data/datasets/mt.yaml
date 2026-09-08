@@ -19,14 +19,14 @@
 - id: flores
   name: FLORES-200 (bn)
   task: mt
-  size: 3,001 sentences
-  sizeN: 3001
+  size: 2,009 public sentences
+  sizeN: 2009
   license: CC BY-SA 4.0
   year: 2022
   source: No Language Left Behind (2022)
   link: https://github.com/facebookresearch/flores
-  verified: 2026-05-19
-  desc: Standard many-to-many evaluation benchmark; Bengali dev/devtest.
+  verified: 2026-09-08
+  desc: Bengali ben_Beng evaluation data with 997 dev and 1,012 devtest sentences; excludes the hidden test split.
 - id: banglaparaphrase
   name: BanglaParaphrase
   task: mt
