@@ -3,6 +3,45 @@
 Known gaps, deliberately left empty rather than filled with invented values.
 Contributions welcome — see CONTRIBUTING.md.
 
+## Dataset metadata audit (2026-09-08)
+
+Checked the following five entries against primary GitHub/Hugging Face metadata
+and release files. Counts below are records, not unique texts. Existing dataset
+ids and links are unchanged; version and split scope are explicit in the entries.
+
+| id | result | pinned evidence |
+| --- | --- | --- |
+| `bhs` | Corrected 30,000 documents to 3,418 labelled statements in v1.0. Kept 2020 and identified the version in `source`. Each record has one of five labels, not multiple labels. | [v1.0 file](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/bengali_%20hate_v1.0.csv), [README](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/README.md) |
+| `sentnob` | Confirmed 15,728 comments: Train 12,575 + Val 1,567 + Test 1,586. Corrected the license to CC BY-ND 4.0, as declared on the author's HF card. Kept 2021. | [release files](https://huggingface.co/datasets/khondoker/SentNoB/tree/7f9ab8ccd02457b79cd15d300fc1f0eece47b81b), [card](https://huggingface.co/datasets/khondoker/SentNoB/blob/7f9ab8ccd02457b79cd15d300fc1f0eece47b81b/README.md), [author's GitHub README](https://github.com/KhondokerIslam/SentNoB/blob/fd6fd0bb7163b5e713cb36ec4442628f84a257e0/README.md) |
+| `flores` | Corrected the public Bengali count to 2,009: dev 997 + devtest 1,012. The documented 3,001 total includes the hidden test split. Confirmed CC BY-SA 4.0 and the 2022 release year. | [ben_Beng split metadata via HF API](https://huggingface.co/api/datasets/facebook/flores/revision/71abf77d8b7beb5cfef59898d6b24d92ab7654fc), [composition](https://github.com/facebookresearch/flores/blob/a6c830c6e1051fb4ac1a44b32358f00463f332bd/flores200/README.md), [dataset license and release date](https://github.com/facebookresearch/flores/blob/a6c830c6e1051fb4ac1a44b32358f00463f332bd/README.md) |
+| `tydiqa` | Corrected ~10k to 11,096 Bengali primary-task questions: train 10,768 + dev 328. Identified v1.0 and excluded the separate GoldP task. Kept Apache 2.0 and 2020. | [primary-task release files](https://huggingface.co/datasets/google-research-datasets/tydiqa/tree/da78f23f9119363459acbaf46bf89426ff26c259/primary_task), [card](https://huggingface.co/datasets/google-research-datasets/tydiqa/blob/da78f23f9119363459acbaf46bf89426ff26c259/README.md), [task/version definitions](https://github.com/google-research-datasets/tydiqa/blob/43cde6d598c1cf88c1a8b9ed32e89263ffb5e03b/README.md) |
+| `wikiann` | Confirmed 12,000 sentences: train 10,000 + validation 1,000 + test 1,000. Corrected `source` to the Rahimi et al. 2019 balanced splits distributed at the existing link. Kept 2019. | [Bengali release files](https://huggingface.co/datasets/unimelb-nlp/wikiann/tree/f0a3be6dc5564c0cc4150bb660144800a1f539d4/bn), [version and split documentation](https://huggingface.co/datasets/unimelb-nlp/wikiann/blob/f0a3be6dc5564c0cc4150bb660144800a1f539d4/README.md) |
+
+BHS v1.0 was parsed as tab-separated data despite its `.csv` extension. Its 3,418
+records contain 3,185 distinct text strings. Label counts are geopolitical 1,379,
+religious 502, personal 629, gender abusive 316, and political 592. The README's
+per-class table disagrees with the file, so the audit uses the file counts.
+The v1.0 file has Git blob `a42e09559b2a6e9fe6a4fe2b08a3246952387259`, identical to
+the [2020 file under its previous name](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/7916f1fd141dcf97555ab5e0b7f188fa1b757f2f/Bengali_%20Hate_Speech_Dataset_Subset.csv).
+The [v2.0 file](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/bengali_hate_v2.0.csv)
+has 5,698 records. Neither version supports 30,000, and v2.0 was not substituted
+for the catalog's 2020 resource.
+
+SentNoB counts exclude each CSV header. WikiANN counts were checked by reading
+all three Bengali Parquet files. TyDi QA counts came from reading the `language`
+column in all 12 primary-task train shards and the validation shard, selecting
+`bengali`; HF calls the original dev split `validation`. FLORES counts came from
+the publisher's `ben_Beng` card metadata through the revision-pinned HF API.
+FLORES was not recounted locally because its HF files require access approval
+and returned HTTP 401 without authentication.
+
+Two license questions remain unresolved, and their catalog values are unchanged.
+BHS has an [MIT LICENSE](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/LICENSE),
+but the README says the dataset is available "only for research purposes".
+WikiANN's HF card declares `unknown` and leaves its licensing section unfilled;
+it does not establish the inherited ODC-BY value. Neither a paper license nor a
+repository software license resolves dataset permissions by itself.
+
 ## Bengali-Loop ASR corpus filed (2026-08-10)
 
 From issue #86. Every field is sourced from the Bengali-Loop paper
@@ -289,12 +328,10 @@ Corrected in this pass: `globalmmlu` — HF card states apache-2.0, not CC BY 4.
 | `tbolid` | CC BY 4.0 | repo LICENSE is AGPL-3.0 (may cover code only; README silent) |
 | `megaverse` | Mixed | repo LICENSE is MIT |
 | `wikiann` | ODC-BY | HF card says "unknown" |
-| `flores` | CC BY-SA 4.0 | GitHub cannot classify the LICENSE file |
 | `bnmmlu` | CC BY-SA 4.0 | LICENSE file text says CC BY-SA 4.0; GitHub reports NOASSERTION — ours is probably right |
 | `benqa` | CC BY-NC-SA 4.0 | repo declares no LICENSE |
 | `banglanmt` | Research only | repo declares no LICENSE |
 | `banglarqa` | CC BY-NC 4.0 | repo declares no LICENSE |
-| `sentnob` | CC BY-NC-SA 4.0 | repo declares no LICENSE |
 | `bemoc` | Research only | repo declares no LICENSE |
 | `absa` | Research only | repo declares no LICENSE |
 | `banfakenews` | CC BY-NC 4.0 | repo declares no LICENSE |
@@ -338,23 +375,14 @@ replaced with a guess.
 `bnmmlu` (134,375 pairs), `xlsum` (10,126 articles, 2021), `bdshs` (README: "more
 than 50,200"), `benqa` (README: "approximately 5K"), `banfakenews` (README: "~50K").
 
-### Known wrong, correct value unknown
-
-| id | our value | problem |
-| --- | --- | --- |
-| `bhs` | 30,000 documents | Unsupported by the source. The README documents 3,418 labelled hate statements in v1.0 plus "an additional 3,000" in v2.0, and states no 30,000 figure for any quantity. Needs the paper. |
-
 ### Still unverified
 
 No source consulted states a figure, so these remain as inherited from the prototype:
 
 | id | field(s) | why |
 | --- | --- | --- |
-| `sentnob` | 15,728 comments | not stated in README |
 | `absa` | 5,038 comments | not stated in README |
 | `tbolid` | 5,000 comments | README not readable via fetch |
-| `tydiqa` | ~10k questions | README gives only the 200k all-language total, no Bengali split |
-| `flores` | 3,001 sentences | README gives no per-language split sizes |
 | `breaso` | 13,497 questions | HF viewer fails to parse the files; card states no count |
 | `bner`, `bansdata` | sizes | hosted on Kaggle — not machine-checkable |
 | `samanantar`, `snltr`, `openslr53`, `commonvoice`, `oodspeech`, `potrika`, `multiconer` | sizes | hosted off-platform — not machine-checkable |
