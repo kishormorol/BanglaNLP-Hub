@@ -3,18 +3,31 @@
   task: sentiment
   size: 15,728 comments
   sizeN: 15728
-  license: CC BY-NC-SA 4.0
+  license: CC BY-ND 4.0
   year: 2021
   source: SentNoB (Findings EMNLP 2021)
   link: https://github.com/KhondokerIslam/SentNoB
-  verified: 2026-06-28
+  verified: 2026-09-08
   desc: Sentiment on noisy user comments from news and social platforms across 13 domains.
   bibtex: |-
-    @inproceedings{islam-etal-2021-sentnob,
-      title = {SentNoB: A Dataset for Analysing Sentiment on Noisy {B}angla Texts},
-      author = {Islam, Khondoker Ittehadul and Kar, Sudipta and Islam, Md Saiful and Amin, Mohammad Ruhul},
-      booktitle = {Findings of EMNLP},
-      year = {2021}
+    @inproceedings{islam-etal-2021-sentnob-dataset,
+        title = "{S}ent{N}o{B}: A Dataset for Analysing Sentiment on Noisy {B}angla Texts",
+        author = "Islam, Khondoker Ittehadul  and
+          Kar, Sudipta  and
+          Islam, Md Saiful  and
+          Amin, Mohammad Ruhul",
+        editor = "Moens, Marie-Francine  and
+          Huang, Xuanjing  and
+          Specia, Lucia  and
+          Yih, Scott Wen-tau",
+        booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2021",
+        month = nov,
+        year = "2021",
+        address = "Punta Cana, Dominican Republic",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2021.findings-emnlp.278/",
+        doi = "10.18653/v1/2021.findings-emnlp.278",
+        pages = "3265--3271"
     }
 - id: bemoc
   name: BEmoC
@@ -27,6 +40,26 @@
   link: https://github.com/avishek-018/BEmoC
   verified: 2026-07-19
   desc: Six-class emotion corpus (anger, disgust, fear, joy, sadness, surprise).
+  bibtex: |-
+    @Article{Iqbal2022,
+    author="Iqbal, MD. Asif
+    and Das, Avishek
+    and Sharif, Omar
+    and Hoque, Mohammed Moshiul
+    and Sarker, Iqbal H.",
+    title="BEmoC: A Corpus for Identifying Emotion in Bengali Texts",
+    journal="SN Computer Science",
+    year="2022",
+    month="Jan",
+    day="17",
+    volume="3",
+    number="2",
+    pages="135",
+    abstract="Emotion classification in text has growing interest among NLP experts due to the enormous availability of people's emotions and its emergence on various Web 2.0 applications/services. Emotion classification in the Bengali texts is also gradually being considered as an important task for sports, e-commerce, entertainments, and security applications. However, It is a very critical task to develop an automatic emotion classification system for low-resource languages such as, Bengali. Scarcity of resources and deficiency of benchmark corpora make the task more complicated. Thus, the development of a benchmark corpus is the prerequisite to develop an emotion classifier for Bengali texts. This paper describes the development of an emotional corpus (hereafter called `BEmoC') for classifying six emotions in Bengali texts. The corpus development process consists of four key steps: data crawling, pre-processing, labelling, and verification. A total of 7000 texts are labelled into six basic emotion categories such as anger, fear, surprise, sadness, joy, and disgust, respectively. Dataset evaluation with 0.969 Cohen's $\kappa$ score indicates the close agreement between the corpus annotators and the expert. The analysis of evaluation also represents that the distribution of emotion words obeys Zipf's law. Moreover, the results of BEmoC analysis shown in terms of coding reliability, emotion density, and most frequent emotion words, respectively.",
+    issn="2661-8907",
+    doi="10.1007/s42979-022-01028-w",
+    url="https://doi.org/10.1007/s42979-022-01028-w"
+    }
 - id: absa
   name: ABSA Cricket & Restaurant
   task: sentiment
@@ -38,6 +71,8 @@
   link: https://github.com/AtikRahman/Bangla_ABSA_Datasets
   verified: 2026-04-02
   desc: Aspect-based sentiment in two domains.
+  bibtex: |-
+    @article{Rahman_2018, title={Datasets for Aspect-Based Sentiment Analysis in Bangla and Its Baseline Evaluation}, volume={3}, ISSN={2306-5729}, url={http://dx.doi.org/10.3390/data3020015}, DOI={10.3390/data3020015}, number={2}, journal={Data}, publisher={MDPI AG}, author={Rahman, Md. Atikur and Kumar Dey, Emon}, year={2018}, month=May, pages={15} }
 - id: banglabook
   name: BanglaBook
   task: sentiment
@@ -49,6 +84,26 @@
   link: https://github.com/mohsinulkabir14/BanglaBook
   verified: 2026-07-19
   desc: Large-scale Bangla book-review sentiment dataset in three classes (positive, negative, neutral).
+  bibtex: |-
+    @inproceedings{kabir-etal-2023-banglabook,
+        title = "{B}angla{B}ook: A Large-scale {B}angla Dataset for Sentiment Analysis from Book Reviews",
+        author = "Kabir, Mohsinul  and
+          Bin Mahfuz, Obayed  and
+          Raiyan, Syed Rifat  and
+          Mahmud, Hasan  and
+          Hasan, Md Kamrul",
+        editor = "Rogers, Anna  and
+          Boyd-Graber, Jordan  and
+          Okazaki, Naoaki",
+        booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
+        month = jul,
+        year = "2023",
+        address = "Toronto, Canada",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2023.findings-acl.80/",
+        doi = "10.18653/v1/2023.findings-acl.80",
+        pages = "1237--1247"
+    }
 - id: motamot
   name: Motamot
   task: sentiment
@@ -60,6 +115,8 @@
   link: https://github.com/mukaffi28/bengali-political-sentiment-analysis
   verified: 2026-07-19
   desc: Bengali political sentiment dataset compiled from election-period news, labelled positive/negative.
+  bibtex: |-
+    @inproceedings{Johora_Faria_2024, title={Motamot: A Dataset for Revealing the Supremacy of Large Language Models Over Transformer Models in Bengali Political Sentiment Analysis}, url={http://dx.doi.org/10.1109/TENSYMP61132.2024.10752197}, DOI={10.1109/tensymp61132.2024.10752197}, booktitle={2024 IEEE Region 10 Symposium (TENSYMP)}, publisher={IEEE}, author={Johora Faria, Fatema Tuj and Moin, Mukaffi Bin and Mumu, Rabeya Islam and Alam Abir, Md Mahabubul and Alfy, Abrar Nawar and Alam, Mohammad Shafiul}, year={2024}, month=Sept, pages={1–8} }
 - id: sentmix3l
   name: SentMix-3L
   task: sentiment
@@ -71,6 +128,28 @@
   link: https://github.com/LanguageTechnologyLab/SentMix-3L
   verified: 2026-07-19
   desc: Gold-standard Bangla-English-Hindi code-mixed sentiment analysis test set.
+  bibtex: |-
+    @inproceedings{raihan-etal-2023-sentmix,
+        title = "{S}ent{M}ix-3{L}: A Novel Code-Mixed Test Dataset in {B}angla-{E}nglish-{H}indi for Sentiment Analysis",
+        author = "Raihan, Md Nishat  and
+          Goswami, Dhiman  and
+          Mahmud, Antara  and
+          Anastasopoulos, Antonios  and
+          Zampieri, Marcos",
+        editor = "Wijaya, Derry  and
+          Aji, Alham Fikri  and
+          Vania, Clara  and
+          Winata, Genta Indra  and
+          Purwarianti, Ayu",
+        booktitle = "Proceedings of the First Workshop in South East Asian Language Processing",
+        month = nov,
+        year = "2023",
+        address = "Nusa Dua, Bali, Indonesia",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2023.sealp-1.6/",
+        doi = "10.18653/v1/2023.sealp-1.6",
+        pages = "79--84"
+    }
 - id: emomix3l
   name: EmoMix-3L
   task: sentiment
@@ -82,6 +161,26 @@
   link: https://github.com/GoswamiDhiman/EmoMix-3L
   verified: 2026-07-19
   desc: Bangla-English-Hindi code-mixed emotion detection test set.
+  bibtex: |-
+    @inproceedings{raihan-etal-2024-emomix,
+        title = "{E}mo{M}ix-3{L}: A Code-Mixed Dataset for {B}angla-{E}nglish-{H}indi for Emotion Detection",
+        author = "Raihan, Nishat  and
+          Goswami, Dhiman  and
+          Mahmud, Antara  and
+          Anastasopoulos, Antonios  and
+          Zampieri, Marcos",
+        editor = "Jha, Girish Nath  and
+          L., Sobha  and
+          Bali, Kalika  and
+          Ojha, Atul Kr.",
+        booktitle = "Proceedings of the 7th Workshop on Indian Language Data: Resources and Evaluation",
+        month = may,
+        year = "2024",
+        address = "Torino, Italia",
+        publisher = "ELRA and ICCL",
+        url = "https://aclanthology.org/2024.wildre-1.2/",
+        pages = "11--16"
+    }
 - id: bnsentmix
   name: BnSentMix
   task: sentiment
@@ -93,6 +192,31 @@
   link: https://huggingface.co/datasets/aplycaebous/BnSentMix
   verified: 2026-07-19
   desc: Bengali-English code-mixed sentiment dataset with 4 labels from social media and e-commerce.
+  bibtex: |-
+    @inproceedings{alam-etal-2025-bnsentmix,
+        title = "{B}n{S}ent{M}ix: A Diverse {B}engali-{E}nglish Code-Mixed Dataset for Sentiment Analysis",
+        author = "Alam, Sadia  and
+          Ishmam, Md Farhan  and
+          Alvee, Navid Hasin  and
+          Siddique, Md Shahnewaz  and
+          Hossain, Md Azam  and
+          Kamal, Abu Raihan Mostofa",
+        editor = "Hettiarachchi, Hansi  and
+          Ranasinghe, Tharindu  and
+          Rayson, Paul  and
+          Mitkov, Ruslan  and
+          Gaber, Mohamed  and
+          Premasiri, Damith  and
+          Tan, Fiona Anting  and
+          Uyangodage, Lasitha",
+        booktitle = "Proceedings of the First Workshop on Language Models for Low-Resource Languages",
+        month = jan,
+        year = "2025",
+        address = "Abu Dhabi, United Arab Emirates",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2025.loreslm-1.4/",
+        pages = "68--77"
+    }
 - id: babsa
   name: BABSA
   task: sentiment
@@ -104,6 +228,8 @@
   link: https://data.mendeley.com/datasets/j7yb2sv263/1
   verified: 2026-07-26
   desc: Aspect-based sentiment corpus across 21 domains with manually annotated aspect terms and positive, neutral, or negative labels.
+  bibtex: |-
+    @article{Siam_2026, title={BABSA: A large scale bangla aspect based sentiment analysis dataset}, volume={65}, ISSN={2352-3409}, url={http://dx.doi.org/10.1016/j.dib.2026.112604}, DOI={10.1016/j.dib.2026.112604}, journal={Data in Brief}, publisher={Elsevier BV}, author={Siam, M.F.R. and Wafa, Narmeen}, year={2026}, month=Apr, pages={112604} }
 - id: banglasarc3
   name: BanglaSarc3
   task: sentiment
@@ -115,3 +241,5 @@
   link: https://data.mendeley.com/datasets/7tn76wdhsr/1
   verified: 2026-07-26
   desc: Balanced ternary Facebook-comment corpus labelled sarcastic, non-sarcastic, or neutral.
+  bibtex: |-
+    @article{Biswas_2025, title={BanglaSarc3: A benchmark dataset for Bangla sarcasm detection from social media to advance Bangla NLP}, volume={62}, ISSN={2352-3409}, url={http://dx.doi.org/10.1016/j.dib.2025.111953}, DOI={10.1016/j.dib.2025.111953}, journal={Data in Brief}, publisher={Elsevier BV}, author={Biswas, Susmoy and Zahid, Md. Mostafizur Rahman and Rabeya, Mst Taposi and Abedin, Md. Minhazul and Bijoy, Md. Hasan Imam and Rahman, Md. Sadekur}, year={2025}, month=Oct, pages={111953} }
