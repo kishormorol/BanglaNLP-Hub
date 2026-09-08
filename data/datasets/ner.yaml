@@ -52,12 +52,12 @@
   task: ner
   size: 12,000 sentences
   sizeN: 12000
-  license: ODC-BY
+  license: ODC-By; research use only
   year: 2019
   source: Massively Multilingual Transfer for NER (ACL 2019)
   link: https://huggingface.co/datasets/unimelb-nlp/wikiann
   verified: 2026-09-08
-  desc: Silver-standard Wikipedia PER/LOC/ORG annotations in the Rahimi et al. balanced splits; Bengali train/validation/test contain 10,000/1,000/1,000 sentences.
+  desc: "Silver standard Wikipedia PER/LOC/ORG annotations in the Rahimi et al. balanced splits; Bengali train/validation/test contain 10,000/1,000/1,000 sentences. The license field records the original release's ODC-By and 'For research use only' statements."
   bibtex: |-
     @inproceedings{rahimi-etal-2019-massively,
         title = "Massively Multilingual Transfer for {NER}",

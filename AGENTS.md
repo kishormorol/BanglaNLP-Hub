@@ -46,9 +46,11 @@ Anthology `.bib`, the arXiv API, or the Hugging Face API.
 **Dataset fields are partly audited** (2026-07-19) — see TODO-data.md for the full
 per-entry status. `license` and `size`/`year` have each had a pass. The `udbru`
 suspicion was correct and worse than recorded: it claimed ~7,340 tokens when the
-treebank has **320**. The 2026-09-08 release-file audit corrected `bhs` to 3,418
-labelled statements in v1.0; its license remains disputed. See TODO-data.md for
-the pinned evidence and the SentNoB, FLORES, TyDi QA, and WikiANN findings.
+treebank has **320**. The 2026-09-08 audit of release files corrected `bhs` to 3,418
+labelled statements in v1.0. Its MIT label cites the original repository license.
+WikiANN records both original release clauses as `ODC-By; research use only`.
+See TODO-data.md for pinned license sources, version scope, and the SentNoB,
+FLORES, TyDi QA, and WikiANN findings.
 Roughly a third of `size` values remain unverified because the host is not
 machine-checkable.
 

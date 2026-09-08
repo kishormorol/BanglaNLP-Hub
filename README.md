@@ -60,10 +60,11 @@ the URL. Filter text is limited to 1,000 characters, including when read from a 
 to keep shared addresses bounded.
 
 License filters group the catalog's license text; they do not verify or certify a
-dataset's license. Non-commercial and research labels take precedence. `open`
+dataset's license. Labels restricting commercial use and research labels take precedence. `open`
 matches only MIT, Apache 2.0, CC0, ODC-BY, CC BY 4.0, and CC BY-SA 4.0.
 All other text, including ND, Mixed, GPL/AGPL, and unknown labels, falls under `other`.
-Unresolved license fields remain documented in [`TODO-data.md`](./TODO-data.md).
+WikiANN's `ODC-By; research use only` label belongs to `research`, not `open`.
+License sources and pending checks are documented in [`TODO-data.md`](./TODO-data.md).
 
 Typing replaces the current history entry. Select changes and **Clear filters**
 add an entry when the URL changes, so Back and Forward restore those views.
@@ -94,7 +95,9 @@ exports are canonical sources, not handcrafted citations. Preserve every exporte
 field and document the paper or release association in `TODO-data.md`; a citation
 does not verify the dataset's other metadata.
 
-**Dataset fields are verified at the source.** `license`, `size`, and `year` have each had an audit pass (July 2026), and the datasets added by mining resource papers had their `license` and `size` read from the dataset's own repository or card — never the paper's license icon, which describes the paper, not the data. Corrections and the entries still unconfirmed (because no reachable source states a figure) are listed in `TODO-data.md`. Candidate datasets with unverifiable licenses or outside the current scope are held back rather than published. A September 2026 audit replaced BHS's unsupported 30,000 count with 3,418 labelled statements in v1.0 and checked SentNoB, FLORES-200, TyDi QA, and WikiANN against pinned releases. The evidence and remaining license disputes are recorded in `TODO-data.md`.
+**Dataset fields are verified at the source.** `license`, `size`, and `year` each had an audit pass in July 2026. Datasets added from resource papers use license and size statements from their own repository or card. A paper's license describes the paper. Corrections and entries without a confirmed figure are listed in `TODO-data.md`. Candidate datasets with unverifiable licenses or outside the current scope are held back rather than published.
+
+A September 2026 audit replaced BHS's unsupported 30,000 count with 3,418 labelled statements in v1.0 and checked SentNoB, FLORES-200, TyDi QA, and WikiANN against pinned releases. BHS retains MIT from the original repository license, with that attribution in its description. WikiANN records both original release clauses as `ODC-By; research use only` while retaining its balanced split details. Pinned evidence and version scope are recorded in `TODO-data.md`. These labels report the sources without deciding their legal effect.
 
 ## Commands
 
