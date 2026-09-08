@@ -3,18 +3,31 @@
   task: sentiment
   size: 15,728 comments
   sizeN: 15728
-  license: CC BY-NC-SA 4.0
+  license: CC BY-ND 4.0
   year: 2021
   source: SentNoB (Findings EMNLP 2021)
   link: https://github.com/KhondokerIslam/SentNoB
-  verified: 2026-06-28
+  verified: 2026-09-08
   desc: Sentiment on noisy user comments from news and social platforms across 13 domains.
   bibtex: |-
-    @inproceedings{islam-etal-2021-sentnob,
-      title = {SentNoB: A Dataset for Analysing Sentiment on Noisy {B}angla Texts},
-      author = {Islam, Khondoker Ittehadul and Kar, Sudipta and Islam, Md Saiful and Amin, Mohammad Ruhul},
-      booktitle = {Findings of EMNLP},
-      year = {2021}
+    @inproceedings{islam-etal-2021-sentnob-dataset,
+        title = "{S}ent{N}o{B}: A Dataset for Analysing Sentiment on Noisy {B}angla Texts",
+        author = "Islam, Khondoker Ittehadul  and
+          Kar, Sudipta  and
+          Islam, Md Saiful  and
+          Amin, Mohammad Ruhul",
+        editor = "Moens, Marie-Francine  and
+          Huang, Xuanjing  and
+          Specia, Lucia  and
+          Yih, Scott Wen-tau",
+        booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2021",
+        month = nov,
+        year = "2021",
+        address = "Punta Cana, Dominican Republic",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2021.findings-emnlp.278/",
+        doi = "10.18653/v1/2021.findings-emnlp.278",
+        pages = "3265--3271"
     }
 - id: bemoc
   name: BEmoC
@@ -49,6 +62,26 @@
   link: https://github.com/mohsinulkabir14/BanglaBook
   verified: 2026-07-19
   desc: Large-scale Bangla book-review sentiment dataset in three classes (positive, negative, neutral).
+  bibtex: |-
+    @inproceedings{kabir-etal-2023-banglabook,
+        title = "{B}angla{B}ook: A Large-scale {B}angla Dataset for Sentiment Analysis from Book Reviews",
+        author = "Kabir, Mohsinul  and
+          Bin Mahfuz, Obayed  and
+          Raiyan, Syed Rifat  and
+          Mahmud, Hasan  and
+          Hasan, Md Kamrul",
+        editor = "Rogers, Anna  and
+          Boyd-Graber, Jordan  and
+          Okazaki, Naoaki",
+        booktitle = "Findings of the Association for Computational Linguistics: ACL 2023",
+        month = jul,
+        year = "2023",
+        address = "Toronto, Canada",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2023.findings-acl.80/",
+        doi = "10.18653/v1/2023.findings-acl.80",
+        pages = "1237--1247"
+    }
 - id: motamot
   name: Motamot
   task: sentiment
@@ -71,6 +104,28 @@
   link: https://github.com/LanguageTechnologyLab/SentMix-3L
   verified: 2026-07-19
   desc: Gold-standard Bangla-English-Hindi code-mixed sentiment analysis test set.
+  bibtex: |-
+    @inproceedings{raihan-etal-2023-sentmix,
+        title = "{S}ent{M}ix-3{L}: A Novel Code-Mixed Test Dataset in {B}angla-{E}nglish-{H}indi for Sentiment Analysis",
+        author = "Raihan, Md Nishat  and
+          Goswami, Dhiman  and
+          Mahmud, Antara  and
+          Anastasopoulos, Antonios  and
+          Zampieri, Marcos",
+        editor = "Wijaya, Derry  and
+          Aji, Alham Fikri  and
+          Vania, Clara  and
+          Winata, Genta Indra  and
+          Purwarianti, Ayu",
+        booktitle = "Proceedings of the First Workshop in South East Asian Language Processing",
+        month = nov,
+        year = "2023",
+        address = "Nusa Dua, Bali, Indonesia",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2023.sealp-1.6/",
+        doi = "10.18653/v1/2023.sealp-1.6",
+        pages = "79--84"
+    }
 - id: emomix3l
   name: EmoMix-3L
   task: sentiment
@@ -82,6 +137,26 @@
   link: https://github.com/GoswamiDhiman/EmoMix-3L
   verified: 2026-07-19
   desc: Bangla-English-Hindi code-mixed emotion detection test set.
+  bibtex: |-
+    @inproceedings{raihan-etal-2024-emomix,
+        title = "{E}mo{M}ix-3{L}: A Code-Mixed Dataset for {B}angla-{E}nglish-{H}indi for Emotion Detection",
+        author = "Raihan, Nishat  and
+          Goswami, Dhiman  and
+          Mahmud, Antara  and
+          Anastasopoulos, Antonios  and
+          Zampieri, Marcos",
+        editor = "Jha, Girish Nath  and
+          L., Sobha  and
+          Bali, Kalika  and
+          Ojha, Atul Kr.",
+        booktitle = "Proceedings of the 7th Workshop on Indian Language Data: Resources and Evaluation",
+        month = may,
+        year = "2024",
+        address = "Torino, Italia",
+        publisher = "ELRA and ICCL",
+        url = "https://aclanthology.org/2024.wildre-1.2/",
+        pages = "11--16"
+    }
 - id: bnsentmix
   name: BnSentMix
   task: sentiment
@@ -93,6 +168,31 @@
   link: https://huggingface.co/datasets/aplycaebous/BnSentMix
   verified: 2026-07-19
   desc: Bengali-English code-mixed sentiment dataset with 4 labels from social media and e-commerce.
+  bibtex: |-
+    @inproceedings{alam-etal-2025-bnsentmix,
+        title = "{B}n{S}ent{M}ix: A Diverse {B}engali-{E}nglish Code-Mixed Dataset for Sentiment Analysis",
+        author = "Alam, Sadia  and
+          Ishmam, Md Farhan  and
+          Alvee, Navid Hasin  and
+          Siddique, Md Shahnewaz  and
+          Hossain, Md Azam  and
+          Kamal, Abu Raihan Mostofa",
+        editor = "Hettiarachchi, Hansi  and
+          Ranasinghe, Tharindu  and
+          Rayson, Paul  and
+          Mitkov, Ruslan  and
+          Gaber, Mohamed  and
+          Premasiri, Damith  and
+          Tan, Fiona Anting  and
+          Uyangodage, Lasitha",
+        booktitle = "Proceedings of the First Workshop on Language Models for Low-Resource Languages",
+        month = jan,
+        year = "2025",
+        address = "Abu Dhabi, United Arab Emirates",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2025.loreslm-1.4/",
+        pages = "68--77"
+    }
 - id: babsa
   name: BABSA
   task: sentiment

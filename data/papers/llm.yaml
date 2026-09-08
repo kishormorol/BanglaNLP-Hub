@@ -181,6 +181,13 @@
   year: 2025
   link: https://aclanthology.org/2025.findings-acl.179/
   task: llm
+- id: al-sefat-2025-bengalifig
+  title: "BengaliFig: A Low-Resource Challenge for Figurative and Culturally Grounded Reasoning in Bengali"
+  authors: Al Sefat
+  venue: Workshop on Multimodal Models for Low-Resource Contexts and Social Impact
+  year: 2025
+  link: https://aclanthology.org/2025.mmloso-1.6/
+  task: llm
 - id: arxiv-2511-03180
   title: "BengaliMoralBench: A Benchmark for Auditing Moral Reasoning in Large Language Models within Bengali Language and Culture"
   authors: Ridoy et al.
@@ -570,20 +577,6 @@
   venue: arXiv
   year: 2023
   link: http://arxiv.org/abs/2303.10612
-  task: llm
-- id: arxiv-2304-02739
-  title: Bengali Fake Review Detection using Semi-supervised Generative Adversarial Networks
-  authors: Shawon et al.
-  venue: arXiv
-  year: 2023
-  link: http://arxiv.org/abs/2304.02739
-  task: llm
-- id: arxiv-2308-01987
-  title: "Bengali Fake Reviews: A Benchmark Dataset and Detection System"
-  authors: Shahariar et al.
-  venue: arXiv
-  year: 2023
-  link: http://arxiv.org/abs/2308.01987
   task: llm
 - id: arxiv-2312-10679
   title: Bengali Intent Classification with Generative Adversarial BERT
