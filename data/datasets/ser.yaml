@@ -36,6 +36,8 @@
   link: https://data.mendeley.com/datasets/rdwn4bs5ky/2
   verified: 2026-07-22
   desc: Bangla emotional speech; 22 speakers (11M/11F), 6 emotions.
+  bibtex: |-
+    @article{Sultana_2025, title={BanSpEmo: a Bangla audio dataset for speech emotion recognition and its baseline evaluation}, volume={37}, ISSN={2502-4752}, url={http://dx.doi.org/10.11591/ijeecs.v37.i3.pp2044-2057}, DOI={10.11591/ijeecs.v37.i3.pp2044-2057}, number={3}, journal={Indonesian Journal of Electrical Engineering and Computer Science}, publisher={Institute of Advanced Engineering and Science}, author={Sultana, Babe and Hussain, Md Gulzar and Rahman, Mahmuda}, year={2025}, month=Mar, pages={2044} }
 - id: banglaser
   name: BanglaSER
   task: ser
@@ -47,6 +49,8 @@
   link: https://data.mendeley.com/datasets/t9h6p943xy/5
   verified: 2026-07-26
   desc: Realistic Bangla emotional speech from 34 speakers, balanced by gender, across 5 emotions.
+  bibtex: |-
+    @article{Das_2022, title={BanglaSER: A speech emotion recognition dataset for the Bangla language}, volume={42}, ISSN={2352-3409}, url={http://dx.doi.org/10.1016/j.dib.2022.108091}, DOI={10.1016/j.dib.2022.108091}, journal={Data in Brief}, publisher={Elsevier BV}, author={Das, Rakesh Kumar and Islam, Nahidul and Ahmed, Md. Rayhan and Islam, Salekul and Shatabda, Swakkhar and Islam, A.K.M. Muzahidul}, year={2022}, month=June, pages={108091} }
 - id: kbes
   name: KBES (KUET Bangla Emotional Speech)
   task: ser
@@ -58,3 +62,5 @@
   link: https://data.mendeley.com/datasets/vsn37ps3rx/4
   verified: 2026-07-26
   desc: Realistic Bangla emotional speech from 35 actors, with low/high intensity labels for 4 of 5 emotions.
+  bibtex: |-
+    @article{Billah_2023, title={KBES: A dataset for realistic Bangla speech emotion recognition with intensity level}, volume={51}, ISSN={2352-3409}, url={http://dx.doi.org/10.1016/j.dib.2023.109741}, DOI={10.1016/j.dib.2023.109741}, journal={Data in Brief}, publisher={Elsevier BV}, author={Billah, Md. Masum and Sarker, Md. Likhon and Akhand, M. A. H.}, year={2023}, month=Dec, pages={109741} }
