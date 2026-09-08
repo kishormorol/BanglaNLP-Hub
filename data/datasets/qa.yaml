@@ -9,6 +9,29 @@
   link: https://huggingface.co/datasets/csebuetnlp/squad_bn
   verified: 2026-07-19
   desc: Machine-translated + human-curated SQuAD 2.0 for Bangla.
+  bibtex: |-
+    @inproceedings{bhattacharjee-etal-2022-banglabert,
+        title = "{B}angla{BERT}: Language Model Pretraining and Benchmarks for Low-Resource Language Understanding Evaluation in {B}angla",
+        author = "Bhattacharjee, Abhik  and
+          Hasan, Tahmid  and
+          Ahmad, Wasi  and
+          Mubasshir, Kazi Samin  and
+          Islam, Md Saiful  and
+          Iqbal, Anindya  and
+          Rahman, M. Sohel  and
+          Shahriyar, Rifat",
+        editor = "Carpuat, Marine  and
+          de Marneffe, Marie-Catherine  and
+          Meza Ruiz, Ivan Vladimir",
+        booktitle = "Findings of the Association for Computational Linguistics: NAACL 2022",
+        month = jul,
+        year = "2022",
+        address = "Seattle, United States",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2022.findings-naacl.98/",
+        doi = "10.18653/v1/2022.findings-naacl.98",
+        pages = "1318--1327"
+    }
 - id: banglarqa
   name: BanglaRQA
   task: qa
@@ -22,22 +45,60 @@
   desc: Human-annotated reading comprehension with answerable/unanswerable questions.
   bibtex: |-
     @inproceedings{ekram-etal-2022-banglarqa,
-      title = {{B}angla{RQA}: A Benchmark Dataset for Under-resourced {B}angla Language Reading Comprehension},
-      author = {Ekram, Syed Mohammed Sartaj and others},
-      booktitle = {Findings of EMNLP},
-      year = {2022}
+        title = "{B}angla{RQA}: A Benchmark Dataset for Under-resourced {B}angla Language Reading Comprehension-based Question Answering with Diverse Question-Answer Types",
+        author = "Ekram, Syed Mohammed Sartaj  and
+          Rahman, Adham Arik  and
+          Altaf, Md. Sajid  and
+          Islam, Mohammed Saidul  and
+          Rahman, Mehrab Mustafy  and
+          Rahman, Md Mezbaur  and
+          Hossain, Md Azam  and
+          Kamal, Abu Raihan Mostofa",
+        editor = "Goldberg, Yoav  and
+          Kozareva, Zornitsa  and
+          Zhang, Yue",
+        booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2022",
+        month = dec,
+        year = "2022",
+        address = "Abu Dhabi, United Arab Emirates",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2022.findings-emnlp.186/",
+        doi = "10.18653/v1/2022.findings-emnlp.186",
+        pages = "2518--2532"
     }
 - id: tydiqa
   name: TyDi QA (bn)
   task: qa
-  size: ~10k questions
-  sizeN: 10000
+  size: 11,096 questions
+  sizeN: 11096
   license: Apache 2.0
   year: 2020
-  source: TyDi QA (TACL 2020)
+  source: TyDi QA primary tasks v1.0 (TACL 2020)
   link: https://github.com/google-research-datasets/tydiqa
-  verified: 2026-03-12
-  desc: Typologically diverse info-seeking QA; Bengali portion.
+  verified: 2026-09-08
+  desc: Bengali primary-task data with 10,768 train and 328 dev questions for passage selection and minimal answer extraction; not the GoldP subset.
+  bibtex: |-
+    @article{clark-etal-2020-tydi,
+        title = "{T}y{D}i {QA}: A Benchmark for Information-Seeking Question Answering in Typologically Diverse Languages",
+        author = "Clark, Jonathan H.  and
+          Choi, Eunsol  and
+          Collins, Michael  and
+          Garrette, Dan  and
+          Kwiatkowski, Tom  and
+          Nikolaev, Vitaly  and
+          Palomaki, Jennimaria",
+        editor = "Johnson, Mark  and
+          Roark, Brian  and
+          Nenkova, Ani",
+        journal = "Transactions of the Association for Computational Linguistics",
+        volume = "8",
+        year = "2020",
+        address = "Cambridge, MA",
+        publisher = "MIT Press",
+        url = "https://aclanthology.org/2020.tacl-1.30/",
+        doi = "10.1162/tacl_a_00317",
+        pages = "454--470"
+    }
 - id: nctbqa
   name: NCTB-QA
   task: qa

@@ -9,17 +9,57 @@
   link: https://github.com/naurosromim/hate-speech-dataset-for-Bengali-social-media
   verified: 2026-06-05
   desc: "Hierarchically annotated hate speech: target, type, severity."
+  bibtex: |-
+    @inproceedings{romim-etal-2022-bd,
+        title = "{BD}-{SHS}: A Benchmark Dataset for Learning to Detect Online {B}angla Hate Speech in Different Social Contexts",
+        author = "Romim, Nauros  and
+          Ahmed, Mosahed  and
+          Islam, Md Saiful  and
+          Sen Sharma, Arnab  and
+          Talukder, Hriteshwar  and
+          Amin, Mohammad Ruhul",
+        editor = "Calzolari, Nicoletta  and
+          B{\'e}chet, Fr{\'e}d{\'e}ric  and
+          Blache, Philippe  and
+          Choukri, Khalid  and
+          Cieri, Christopher  and
+          Declerck, Thierry  and
+          Goggi, Sara  and
+          Isahara, Hitoshi  and
+          Maegaard, Bente  and
+          Mariani, Joseph  and
+          Mazo, H{\'e}l{\`e}ne  and
+          Odijk, Jan  and
+          Piperidis, Stelios",
+        booktitle = "Proceedings of the Thirteenth Language Resources and Evaluation Conference",
+        month = jun,
+        year = "2022",
+        address = "Marseille, France",
+        publisher = "European Language Resources Association",
+        url = "https://aclanthology.org/2022.lrec-1.552/",
+        pages = "5153--5162"
+    }
 - id: bhs
   name: Bengali Hate Speech
   task: hate
-  size: 30,000 documents
-  sizeN: 30000
+  size: 3,418 labelled statements
+  sizeN: 3418
   license: MIT
   year: 2020
-  source: Classification benchmarks (Karim et al.)
+  source: Bengali Hate Speech v1.0 (Karim et al., 2020)
   link: https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset
-  verified: 2026-04-18
-  desc: Multi-label hate categories across political, religious, personal.
+  verified: 2026-09-08
+  desc: "v1.0 release with one label per statement: geopolitical, religious, personal, gender abusive, or political hate. Repository license: MIT."
+  bibtex: |-
+    @misc{karim2020classificationbenchmarksunderresourcedbengali,
+          title={Classification Benchmarks for Under-resourced Bengali Language based on Multichannel Convolutional-LSTM Network},
+          author={Md. Rezaul Karim and Bharathi Raja Chakravarthi and John P. McCrae and Michael Cochez},
+          year={2020},
+          eprint={2004.07807},
+          archivePrefix={arXiv},
+          primaryClass={cs.CL},
+          url={https://arxiv.org/abs/2004.07807},
+    }
 - id: tbolid
   name: TB-OLID
   task: hate
@@ -31,6 +71,30 @@
   link: https://github.com/LanguageTechnologyLab/TB-OLID
   verified: 2026-03-08
   desc: Offensive language in transliterated (Banglish) text.
+  bibtex: |-
+    @inproceedings{raihan-etal-2023-offensive,
+        title = "Offensive Language Identification in Transliterated and Code-Mixed {B}angla",
+        author = "Raihan, Md Nishat  and
+          Tanmoy, Umma  and
+          Islam, Anika Binte  and
+          North, Kai  and
+          Ranasinghe, Tharindu  and
+          Anastasopoulos, Antonios  and
+          Zampieri, Marcos",
+        editor = "Alam, Firoj  and
+          Kar, Sudipta  and
+          Chowdhury, Shammur Absar  and
+          Sadeque, Farig  and
+          Amin, Ruhul",
+        booktitle = "Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)",
+        month = dec,
+        year = "2023",
+        address = "Singapore",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2023.banglalp-1.1/",
+        doi = "10.18653/v1/2023.banglalp-1.1",
+        pages = "1--6"
+    }
 - id: offmix3l
   name: OffMix-3L
   task: hate
@@ -42,6 +106,25 @@
   link: https://github.com/LanguageTechnologyLab/OffMix-3L
   verified: 2026-07-19
   desc: Bangla-English-Hindi code-mixed offensive language identification test set.
+  bibtex: |-
+    @inproceedings{goswami-etal-2023-offmix,
+        title = "{O}ff{M}ix-3{L}: A Novel Code-Mixed Test Dataset in {B}angla-{E}nglish-{H}indi for Offensive Language Identification",
+        author = "Goswami, Dhiman  and
+          Raihan, Md Nishat  and
+          Mahmud, Antara  and
+          Anastasopoulos, Antonios  and
+          Zampieri, Marcos",
+        editor = "Ku, Lun-Wei  and
+          Li, Cheng-Te",
+        booktitle = "Proceedings of the 11th International Workshop on Natural Language Processing for Social Media",
+        month = nov,
+        year = "2023",
+        address = "Bali, Indonesia",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2023.socialnlp-1.3/",
+        doi = "10.18653/v1/2023.socialnlp-1.3",
+        pages = "21--27"
+    }
 - id: banth
   name: BanTH
   task: hate
@@ -53,6 +136,29 @@
   link: https://github.com/farhanishmam/BanTH
   verified: 2026-07-19
   desc: Multi-label transliterated (romanized) Bangla hate speech dataset from YouTube across 7 target classes.
+  bibtex: |-
+    @inproceedings{haider-etal-2025-banth,
+        title = "{B}an{TH}: A Multi-label Hate Speech Detection Dataset for Transliterated {B}angla",
+        author = "Haider, Fabiha  and
+          Shifat, Fariha Tanjim  and
+          Ishmam, Md Farhan  and
+          Sourove, Md Sakib Ul Rahman  and
+          Barua, Deeparghya Dutta  and
+          Fahim, Md  and
+          Bhuiyan, Md Farhad Alam",
+        editor = "Chiruzzo, Luis  and
+          Ritter, Alan  and
+          Wang, Lu",
+        booktitle = "Findings of the Association for Computational Linguistics: NAACL 2025",
+        month = apr,
+        year = "2025",
+        address = "Albuquerque, New Mexico",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2025.findings-naacl.403/",
+        doi = "10.18653/v1/2025.findings-naacl.403",
+        pages = "7232--7251",
+        ISBN = "979-8-89176-195-7"
+    }
 - id: alert
   name: ALERT
   task: hate
@@ -64,6 +170,8 @@
   link: https://data.mendeley.com/datasets/f4xz5d4fzd/1
   verified: 2026-07-26
   desc: Bangla religious-aggression texts with English translations, labelled hate speech, vandalism, atrocity, or no aggression.
+  bibtex: |-
+    @article{Rashid_2025, title={ALERT: A benchmark Bengali dataset for identifying and categorizing religiously aggressive texts}, volume={63}, ISSN={2352-3409}, url={http://dx.doi.org/10.1016/j.dib.2025.112094}, DOI={10.1016/j.dib.2025.112094}, journal={Data in Brief}, publisher={Elsevier BV}, author={Rashid, Suhana Binta and Piyas, Bibhas Roy Chowdhury and Rahman, Sadia and Preenon, Bijoy Roy Chowdhury}, year={2025}, month=Dec, pages={112094} }
 - id: banglatoco
   name: Bangla-ToCo
   task: hate
@@ -75,6 +183,8 @@
   link: https://data.mendeley.com/datasets/gphbs7vsbz/3
   verified: 2026-07-26
   desc: Context-aware toxic-comment corpus retaining news metadata and neighbouring comments, with balanced toxic/non-toxic labels.
+  bibtex: |-
+    @article{Rupa_2025, title={Bangla-ToCo: A context-aware dataset for Bengali toxic comment detection}, volume={63}, ISSN={2352-3409}, url={http://dx.doi.org/10.1016/j.dib.2025.112277}, DOI={10.1016/j.dib.2025.112277}, journal={Data in Brief}, publisher={Elsevier BV}, author={Rupa, Sayma Akter and Anwar, Md. Musfique and Ritu, Nadia Afrin and Arifin, Khandoker Nosiba}, year={2025}, month=Dec, pages={112277} }
 - id: banhate
   name: BanHate
   task: hate

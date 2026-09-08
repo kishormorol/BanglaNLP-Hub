@@ -1,4 +1,18 @@
 - dataset: banglarqa
-  label: BanglaRQA
-  metric: Answer F1
-  rows: []
+  label: BanglaRQA overall test (fine-tuned)
+  metric: Answer F1 (0-100, higher is better)
+  # Table 5, printed p. 2525 / PDF page 8. Includes unanswerable questions.
+  # https://aclanthology.org/2022.findings-emnlp.186.pdf#page=8
+  rows:
+    - model: BanglaT5
+      score: "78.11"
+      paperId: banglarqa-p
+    - model: mT5
+      score: "68.83"
+      paperId: banglarqa-p
+    - model: BanglaBERT
+      score: "63.15"
+      paperId: banglarqa-p
+    - model: mBERT
+      score: "39.40"
+      paperId: banglarqa-p

@@ -3,6 +3,55 @@
 Known gaps, deliberately left empty rather than filled with invented values.
 Contributions welcome — see CONTRIBUTING.md.
 
+## Dataset metadata audit (2026-09-08)
+
+Checked the following five entries against primary GitHub/Hugging Face metadata
+and release files. Counts below are records, not unique texts. Existing dataset
+ids and links are unchanged; version and split scope are explicit in the entries.
+
+| id | result | pinned evidence |
+| --- | --- | --- |
+| `bhs` | Corrected 30,000 documents to 3,418 labelled statements in v1.0. Kept 2020 and identified the version in `source`. Each record has one of five labels, not multiple labels. Retained MIT from the original repository's root license and attributed it in `desc`. | [v1.0 file](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/bengali_%20hate_v1.0.csv), [README](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/README.md), [root license](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/LICENSE#L1-L10) |
+| `sentnob` | Confirmed 15,728 comments: Train 12,575 + Val 1,567 + Test 1,586. Corrected the license to CC BY-ND 4.0, as declared on the author's HF card. Kept 2021. | [release files](https://huggingface.co/datasets/khondoker/SentNoB/tree/7f9ab8ccd02457b79cd15d300fc1f0eece47b81b), [card](https://huggingface.co/datasets/khondoker/SentNoB/blob/7f9ab8ccd02457b79cd15d300fc1f0eece47b81b/README.md), [author's GitHub README](https://github.com/KhondokerIslam/SentNoB/blob/fd6fd0bb7163b5e713cb36ec4442628f84a257e0/README.md) |
+| `flores` | Corrected the public Bengali count to 2,009: dev 997 + devtest 1,012. The documented 3,001 total includes the hidden test split. Confirmed CC BY-SA 4.0 and the 2022 release year. | [ben_Beng split metadata via HF API](https://huggingface.co/api/datasets/facebook/flores/revision/71abf77d8b7beb5cfef59898d6b24d92ab7654fc), [composition](https://github.com/facebookresearch/flores/blob/a6c830c6e1051fb4ac1a44b32358f00463f332bd/flores200/README.md), [dataset license and release date](https://github.com/facebookresearch/flores/blob/a6c830c6e1051fb4ac1a44b32358f00463f332bd/README.md) |
+| `tydiqa` | Corrected ~10k to 11,096 Bengali primary-task questions: train 10,768 + dev 328. Identified v1.0 and excluded the separate GoldP task. Kept Apache 2.0 and 2020. | [primary-task release files](https://huggingface.co/datasets/google-research-datasets/tydiqa/tree/da78f23f9119363459acbaf46bf89426ff26c259/primary_task), [card](https://huggingface.co/datasets/google-research-datasets/tydiqa/blob/da78f23f9119363459acbaf46bf89426ff26c259/README.md), [task/version definitions](https://github.com/google-research-datasets/tydiqa/blob/43cde6d598c1cf88c1a8b9ed32e89263ffb5e03b/README.md) |
+| `wikiann` | Confirmed 12,000 sentences: train 10,000 + validation 1,000 + test 1,000. Corrected `source` to the Rahimi et al. 2019 balanced splits distributed at the existing link. Kept 2019. The license now records both original release clauses as `ODC-By; research use only`, with attribution in `desc`. | [Bengali release files](https://huggingface.co/datasets/unimelb-nlp/wikiann/tree/f0a3be6dc5564c0cc4150bb660144800a1f539d4/bn), [version and split documentation](https://huggingface.co/datasets/unimelb-nlp/wikiann/blob/f0a3be6dc5564c0cc4150bb660144800a1f539d4/README.md), [original license statement](https://github.com/elisa-ie/elisa-ie.github.io/blob/75856b5a3b594566be5f3dee49cddece5f2e9870/wikiann/index.html#L59) |
+
+BHS v1.0 was parsed as tab-separated data despite its `.csv` extension. Its 3,418
+records contain 3,185 distinct text strings. Label counts are geopolitical 1,379,
+religious 502, personal 629, gender abusive 316, and political 592. The README's
+per-class table disagrees with the file, so the audit uses the file counts.
+The v1.0 file has Git blob `a42e09559b2a6e9fe6a4fe2b08a3246952387259`, identical to
+the [2020 file under its previous name](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/7916f1fd141dcf97555ab5e0b7f188fa1b757f2f/Bengali_%20Hate_Speech_Dataset_Subset.csv).
+The [v2.0 file](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/bengali_hate_v2.0.csv)
+has 5,698 records. Neither version supports 30,000, and v2.0 was not substituted
+for the catalog's 2020 resource.
+
+SentNoB counts exclude each CSV header. WikiANN counts were checked by reading
+all three Bengali Parquet files. TyDi QA counts came from reading the `language`
+column in all 12 primary-task train shards and the validation shard, selecting
+`bengali`; HF calls the original dev split `validation`. FLORES counts came from
+the publisher's `ben_Beng` card metadata through the revision-pinned HF API.
+FLORES was not recounted locally because its HF files require access approval
+and returned HTTP 401 without authentication.
+
+BHS retains MIT from the original repository's
+[root LICENSE](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/LICENSE#L1-L10).
+The description identifies it as the repository license. The README's
+[general warning](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/README.md#L5)
+describes collection and annotation for research purposes. Its availability
+statement saying "only for research purposes" appears under
+[v2.0](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/README.md#L61-L71),
+so the catalog does not assign that statement to v1.0.
+
+WikiANN's [original release](https://github.com/elisa-ie/elisa-ie.github.io/blob/75856b5a3b594566be5f3dee49cddece5f2e9870/wikiann/index.html#L59)
+says "This data is licensed under the Attribution License (ODC-By). For research use only."
+The catalog preserves both clauses as `ODC-By; research use only`. The linked
+balanced distribution's [HF card](https://huggingface.co/datasets/unimelb-nlp/wikiann/blob/f0a3be6dc5564c0cc4150bb660144800a1f539d4/README.md)
+lists `unknown`; the displayed license is attributed to the original release,
+not to that card. These labels record source statements without deciding their
+legal effect or granting permission for every item of content.
+
 ## Bengali-Loop ASR corpus filed (2026-08-10)
 
 From issue #86. Every field is sourced from the Bengali-Loop paper
@@ -113,8 +162,9 @@ ASR technique) still routes to `speech`.
   connected-speech papers. Promoting them is the prerequisite-adds-a-task case, like
   OCR and captioning below.
 
-New SER datasets need BibTeX (see the missing-BibTeX table). Sizes and licenses are
-verified at source, so they are not listed under the unverified tables.
+BANSpEmo now has a canonical registry citation, added on 2026-09-08. The final
+citation ledger below records its paper and release differences. Sizes and
+licenses were verified at source in the original filing pass.
 
 ## Datasets: mining from resource papers (2026-07-19)
 
@@ -192,6 +242,69 @@ Six duplicate task-specific records were collapsed without changing their links 
 task-page coverage. `stage` is present only when the model card establishes whether
 an artifact is a base or fine-tuned model.
 
+## BanglaRQA test baselines (2026-09-08)
+
+The QA leaderboard reproduces Table 5 from the [BanglaRQA paper](https://aclanthology.org/2022.findings-emnlp.186.pdf#page=8),
+printed page 2525. Answer F1 is on a 0-100 scale, with higher scores better:
+BanglaT5 78.11, mT5 68.83, BanglaBERT 63.15, and mBERT 39.40.
+These are the paper's fine-tuned baselines, not a claim about current state of the art.
+
+Section 3.1.6 splits passages 80/10/10 before assigning their questions. The test
+set has 300 passages and 1,493 questions, including answerable and unanswerable
+questions. Section 4.2 follows DROP for multiple-span answer F1 and SQuAD 2.0 for
+other answer types. Each model was trained for 15 epochs; checkpoints were selected
+on validation before test evaluation. BERT models use BIO token classification
+and 512-token limits; T5 models use 1,024 input and 256 output tokens. These
+architectures and truncation limits differ, so the rows do not imply identical
+model inputs. Table 8's transfer results are excluded.
+
+## SentNoB evaluation audit (2026-09-08)
+
+SentNoB rows remain empty because the released evaluation code has a reproduced
+indexing error. The catalog metric is `F1 (evaluation unresolved)`.
+[Section 4 of the paper](https://aclanthology.org/2021.findings-emnlp.278.pdf#page=3)
+describes micro averaged F1. Table 3 on printed page 3268 reports precision and
+recall values that differ for most systems. The code provides stronger evidence
+than that discrepancy alone.
+
+At revision `2798a0c0f33d97943a70e796fe417d83bbdb4ddb`, the false positive sum
+includes `arr[2][2]`, a correct prediction, and omits `arr[2][0]`. This occurs in
+all four released evaluation functions:
+
+* [Feature models, lines 32 to 48](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/feature_based.py#L32-L48).
+* [mBERT, lines 273 to 287](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/mbert.py#L273-L287).
+* [Random embedding BiLSTM, lines 382 to 402](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/neural_network_%28random%29.py#L382-L402).
+* [FastText BiLSTM, lines 391 to 411](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/neural_network_%28fasttext%29.py#L391-L411).
+
+We extracted and executed each function without importing the model scripts or
+training a model. Supplying the identity confusion matrix for three classes
+produced precision 75.00, recall 100.00, and F1 85.71. Changing only the false
+positive index in memory produced 100.00 for all three metrics. The BiLSTM
+functions print the faulty metrics but return accuracy, which remained 1.0 for
+this fixture. The calculation can also be reproduced without dependencies:
+
+```python
+arr = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
+fp = arr[0][1] + arr[0][2] + arr[1][0] + arr[1][2] + arr[2][1] + arr[2][2]
+fn = arr[1][0] + arr[2][0] + arr[0][1] + arr[2][1] + arr[0][2] + arr[1][2]
+tp = arr[0][0] + arr[1][1] + arr[2][2]
+precision, recall = tp / (tp + fp), tp / (tp + fn)
+f1 = 2 * precision * recall / (precision + recall)
+assert [round(x * 100, 2) for x in (precision, recall, f1)] == [75.0, 100.0, 85.71]
+```
+
+The [random embedding test loader](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/neural_network_%28random%29.py#L269-L294)
+and [FastText test loader](https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/neural_network_%28fasttext%29.py#L278-L303)
+use batches of 256 with `drop_last=True`. Applied to the 1,586 test examples,
+these settings evaluate 1,536 and omit 50. This is a check of the code and batch
+arithmetic, not a reconstruction of a historical training run.
+
+These findings establish defects in the pinned implementation. They do not
+prove which code generated every published score or establish corrected scores.
+Adding rows requires original predictions or an author correction that identifies
+both the evaluation method and test examples. Do not rename the published metric
+as macro or weighted F1, or derive corrected F1 from the paper's recall column.
+
 ## Leaderboards with no curated rows
 
 Each has a real dataset and metric but zero score rows, and renders an empty state
@@ -204,72 +317,161 @@ until rows are added with a citation to the paper the score comes from.
 | `mt` | FLORES-200 bn→en |
 | `ner` | B-NER |
 | `pos` | UD Bengali-BRU |
-| `qa` | BanglaRQA |
 | `sentiment` | SentNoB |
 | `sentiment` | BEmoC |
 | `summ` | XL-Sum (bn) |
 | `textcls` | BanFakeNews |
 
+## Citation curation (2026-09-08)
+
+Added 23 missing dataset citations and replaced the abbreviated SentNoB and
+BanglaRQA citations with complete canonical exports. All exported fields, author
+order, and punctuation are preserved. Only line-end whitespace and YAML indentation
+changed. These are paper citations, not version-specific dataset DOI citations.
+This pass does not validate unchanged names, descriptions, sizes, licenses, years,
+links, or `verified` dates. The metadata questions below remain open.
+
+Parsed YAML citation strings match all 25 downloaded exports after stripping
+line-end whitespace and trimming the surrounding whitespace.
+Validation and build pass with
+63 datasets and 712 papers, unchanged from before this pass.
+
+### Canonical source ledger
+
+| Dataset id | Canonical BibTeX export | Citation scope or variant caveat |
+| --- | --- | --- |
+| `bdshs` | [ACL 2022.lrec-1.552](https://aclanthology.org/2022.lrec-1.552.bib) | BD-SHS paper; does not resolve the license question below. |
+| `tbolid` | [ACL 2023.banglalp-1.1](https://aclanthology.org/2023.banglalp-1.1.bib) | Transliterated and code-mixed offensive language identification. |
+| `offmix3l` | [ACL 2023.socialnlp-1.3](https://aclanthology.org/2023.socialnlp-1.3.bib) | Code-mixed offensive-language test set. |
+| `banth` | [ACL 2025.findings-naacl.403](https://aclanthology.org/2025.findings-naacl.403.bib) | Multi-label transliterated Bangla hate speech. |
+| `globalmmlu` | [arXiv 2412.03304](https://arxiv.org/bibtex/2412.03304) | Parent benchmark for `bn`, not Global-MMLU-Lite; revised export says 2025, initial submission was 2024. |
+| `megaverse` | [ACL 2024.naacl-long.143](https://aclanthology.org/2024.naacl-long.143.bib) | Whole multilingual suite; does not establish Bengali coverage in every constituent dataset. |
+| `bnmmlu` | [ACL 2026.findings-acl.593](https://aclanthology.org/2026.findings-acl.593.bib) | Published version preferred over the saved arXiv 2505.18951 export; catalog still describes the 2025 preprint. |
+| `banglamath` | [ACL 2025.mathnlp-main.10](https://aclanthology.org/2025.mathnlp-main.10.bib) | Grade 6, 7, and 8 benchmark; canonical workshop title retained. |
+| `somadhan` | [arXiv 2505.21354](https://arxiv.org/bibtex/2505.21354) | Paper experiments use an earlier 4,000-problem sample, not the later 8,792-problem v2 release. |
+| `banglaparaphrase` | [ACL 2022.aacl-short.33](https://aclanthology.org/2022.aacl-short.33.bib) | BanglaParaphrase paper for the linked BUET release. |
+| `samanantar` | [ACL 2022.tacl-1.9](https://aclanthology.org/2022.tacl-1.9.bib) | Parent 11-language parallel collection for the bn-en subset. |
+| `banglatlit` | [ACL 2024.findings-emnlp.859](https://aclanthology.org/2024.findings-emnlp.859.bib) | Romanized Bangla back-transliteration benchmark. |
+| `vashantor` | [arXiv 2311.11142](https://arxiv.org/bibtex/2311.11142) | Revised export says 2025; catalog says 2023 and linked Mendeley v2 was released in 2024. |
+| `wikiann` | [ACL P19-1015](https://aclanthology.org/P19-1015.bib) | Rahimi et al. 2019 balanced splits used by the linked HF artifact, not the original 2017 construction paper. |
+| `ancholikner` | [arXiv 2502.11198](https://arxiv.org/bibtex/2502.11198) | Canonical arXiv record retained, including its full HTTPS PLOS DOI; not a citation for Mendeley v4. |
+| `banglarqa` | [ACL 2022.findings-emnlp.186](https://aclanthology.org/2022.findings-emnlp.186.bib) | Replaces shortened title, byline, and venue with the complete export. |
+| `tydiqa` | [ACL 2020.tacl-1.30](https://aclanthology.org/2020.tacl-1.30.bib) | Parent dataset paper for Bengali primary tasks v1.0; does not substitute GoldP. |
+| `sentnob` | [ACL 2021.findings-emnlp.278](https://aclanthology.org/2021.findings-emnlp.278.bib) | Replaces abbreviated citation, including the canonical citation key. |
+| `banglabook` | [ACL 2023.findings-acl.80](https://aclanthology.org/2023.findings-acl.80.bib) | Book-review sentiment corpus. |
+| `sentmix3l` | [ACL 2023.sealp-1.6](https://aclanthology.org/2023.sealp-1.6.bib) | Code-mixed sentiment test set, distinct from OffMix-3L and EmoMix-3L. |
+| `emomix3l` | [ACL 2024.wildre-1.2](https://aclanthology.org/2024.wildre-1.2.bib) | Multi-label emotion test set; ACL spelling and byline retained. |
+| `bnsentmix` | [ACL 2025.loreslm-1.4](https://aclanthology.org/2025.loreslm-1.4.bib) | Publication year 2025 differs from release year 2024; ACL's final two author positions differ from the PDF, and the export order is retained. |
+| `subesco` | [PLOS ONE 0250173](https://journals.plos.org/plosone/article/citation/bibtex?id=10.1371/journal.pone.0250173) | Corpus paper linked to Zenodo 4526477; publisher abstract and all other fields retained. |
+| `banfakenews` | [ACL 2020.lrec-1.349](https://aclanthology.org/2020.lrec-1.349.bib) | Original BanFakeNews, not BanFakeNews-2.0. |
+| `potrika` | [arXiv 2210.09389](https://arxiv.org/bibtex/2210.09389) | Paper covers raw and balanced corpora; catalog's rounded 665k refers to the raw corpus. |
+
+### Metadata follow-ups
+
+These discrepancies surfaced during citation matching. Catalog fields remain
+unchanged pending a separate metadata and release review.
+
+- `bnmmlu`: the [published abstract](https://aclanthology.org/2026.findings-acl.593/) and [repository](https://github.com/samanjoy2/bnmmlu) say 41 domains; both the dataset description and `bnmmlu-p` note say 23. The paper record also retains its 2025 arXiv venue, year, and link. Review the version scope before updating these fields.
+- `vashantor`: the [paper](https://arxiv.org/abs/2311.11142) and [Mendeley v2](https://data.mendeley.com/datasets/bj5jgk878b/2) describe Bangla, Banglish, and English forms. The 32,500 total is sentences, not distinct parallel pairs. Resolve the 2023 catalog year, January 2024 v2 release, and 2025 revised citation separately.
+- `somadhan`: [paper v2](https://arxiv.org/html/2505.21354v2) section 4.3 describes 4,000 annotated samples and a planned v2. [Mendeley v2](https://data.mendeley.com/datasets/34bs5cxk9j/2), released August 5, 2025, describes 8,792 problems. Do not use the paper's experimental sample to validate the later release size.
+- `bnsentmix`: the [paper](https://aclanthology.org/2025.loreslm-1.4.pdf) says CC BY 4.0, the [repository](https://github.com/Nishita2000/BnSentMix) has Apache 2.0, and the [HF card](https://huggingface.co/datasets/aplycaebous/BnSentMix) and catalog say MIT. The card reports both 20,000 samples and 21,873 unique sentences; its viewer reports 20,015 rows. License and count scope remain unresolved.
+- `ancholikner`: the [arXiv record](https://arxiv.org/abs/2502.11198) links a February 2026 [PLOS publication](https://doi.org/10.1371/journal.pone.0342786), while [Mendeley v4](https://data.mendeley.com/datasets/gbkszkt8z3/4) was released April 8, 2026. The catalog retains 2025; the paper citation does not establish v4 metadata.
+- `potrika`: the [paper](https://arxiv.org/abs/2210.09389) and [Mendeley v2](https://data.mendeley.com/datasets/v362rp78dc/2) distinguish 664,880 raw articles from 320,000 balanced articles. Catalog `sizeN: 665000` is rounded. Mendeley v2 is dated 2021, while the paper and catalog say 2022.
+
+The earlier export failures for `banspemo`, `kothon`, and `banglameder` are
+superseded by official registry exports obtained and added on 2026-09-08.
+The failed publisher responses were not used as citations. The final citation
+ledger below records the successful endpoints and the remaining release caveats.
+
+### Paper task corrections
+
+Re-read the primary abstracts before moving these existing records. Only `task`
+and the containing file changed; ids and all other fields are preserved. Checks
+found no contributor or leaderboard references and no duplicate ids, normalized
+titles, or normalized links for these records.
+
+| Paper id | Move | Primary abstract evidence |
+| --- | --- | --- |
+| `al-sefat-2025-bengalifig` | `sentiment` to `llm` | [ACL](https://aclanthology.org/2025.mmloso-1.6/) describes 435 riddles and evaluation of eight LLMs for figurative and culturally grounded reasoning. |
+| `arxiv-2304-02739` | `llm` to `textcls` | [arXiv](https://arxiv.org/abs/2304.02739) classifies fake versus real Bengali reviews using semi-supervised GANs and pretrained language models. |
+| `arxiv-2308-01987` | `llm` to `textcls` | [arXiv](https://arxiv.org/abs/2308.01987) introduces BFRD and detects review authenticity using transformer ensembles. |
+
+## Final citation curation, 2026-09-08
+
+Added the 28 remaining sourced citations from the two research ledgers, 10 plus
+18, using only `.tmp/final-citations/<id>.bib`. The saved alternatives were not
+substituted. Missing citations fell from 30 to 2, with 61 of 63 datasets now
+carrying BibTeX. All other catalog fields and existing citations remain unchanged.
+
+Verification found all 28 parsed YAML citation strings equal to their saved
+exports after trimming trailing and surrounding whitespace. Removing only the
+28 added citation blocks reproduces the original dataset files exactly.
+`npm run validate` passed with 63 datasets, 712 papers, and 2 missing citations;
+`npm run build` passed with 20 pages.
+
+Canonical sources include ACL Anthology, arXiv, publisher exports, and official
+Crossref or DataCite exports of registered metadata. Both
+[Crossref](https://www.crossref.org/documentation/retrieve-metadata/content-negotiation/)
+and [DataCite](https://support.datacite.org/docs/datacite-content-resolver) document
+`Accept: application/x-bibtex` for DOI content negotiation. Crossref also exposes
+its REST API transform route. These are official exports, not handcrafted
+citations. Preserve all fields, keys, author order, Unicode, DOI casing, internal
+spaces, and bare month tokens. Only trailing whitespace and YAML indentation
+may change. Registry metadata can contain errors; record them rather than
+silently repairing the export.
+
+### Final citation ledger
+
+DOI export links below require `Accept: application/x-bibtex` and redirects.
+The matching sources establish citation associations, not every catalog field.
+BTTC cites a dataset release; the other 27 entries cite papers.
+
+| id | Canonical export | Primary matching evidence and caveats |
+| --- | --- | --- |
+| `bhs` | [arXiv](https://arxiv.org/bibtex/2004.07807) | The [pinned author README](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/README.md) assigns this paper to v1.0 with 3,418 samples. DeepHateExplainer belongs to v2.0. The metadata audit above attributes MIT to the repository license. The README class count discrepancy remains open. |
+| `alert` | [Crossref](https://api.crossref.org/works/10.1016/j.dib.2025.112094/transform/application/x-bibtex) | The [publisher article in PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12516529/) identifies the exact [Mendeley v1](https://data.mendeley.com/datasets/f4xz5d4fzd/1), 4,027 texts, four classes, and English translations. |
+| `banglatoco` | [Crossref](https://api.crossref.org/works/10.1016/j.dib.2025.112277/transform/application/x-bibtex) | The [publisher article in PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12703972/) identifies the exact [Mendeley v3](https://data.mendeley.com/datasets/gphbs7vsbz/3), 1,004 comments with 507 toxic and 497 nontoxic labels. |
+| `flores` | [arXiv](https://arxiv.org/bibtex/2207.04672) | The [pinned FLORES-200 README](https://github.com/facebookresearch/flores/blob/a6c830c6e1051fb4ac1a44b32358f00463f332bd/flores200/README.md) requests NLLB 2022 and lists `ben_Beng`. Parent benchmark citation, not FLORES-101, FLORES+, or a Bengali dataset DOI. |
+| `banglaregionaltextcorpus` | [Crossref](https://api.crossref.org/works/10.1016/j.dib.2026.112585/transform/application/x-bibtex) | The [publisher's indexed specifications](https://www.sciencedirect.com/science/article/pii/S2352340926001381) identify [Mendeley v4](https://data.mendeley.com/datasets/92r62h4k5k/4). The [PMC article](https://pmc.ncbi.nlm.nih.gov/articles/PMC12934226/) matches 4,653 sentences and four dialects. Exact version evidence came from a publisher search snippet; direct ScienceDirect access was blocked. |
+| `kothon` | [Crossref](https://api.crossref.org/works/10.1016/j.dib.2026.112789/transform/application/x-bibtex) | [Mendeley v4](https://data.mendeley.com/datasets/2fv6vf9v2z/4) links the [associated article](https://www.sciencedirect.com/science/article/pii/S2352340926003422) and reports 8,000 plus 9,300 pairs. The article's indexed specifications cite v3, while v4 was released May 8, 2026. This paper citation does not certify v4 metadata. |
+| `multiconer` | [ACL](https://aclanthology.org/2022.semeval-1.196.bib) | The [AWS registry](https://registry.opendata.aws/multiconer/) separates the 2022 and 2023 collections; the [organizer site](https://multiconer.github.io/) links this MultiCoNER I overview, whose abstract includes Bangla. Not MultiCoNER II; the inherited 15,300 total remains unverified. |
+| `bner` | [Crossref](https://api.crossref.org/works/10.1109/ACCESS.2023.3267746/transform/application/x-bibtex) | The [author README](https://github.com/alvi75/B-NER) matches the title, six authors, 22,144 sentences, and eight entity types. The [catalog Kaggle page](https://www.kaggle.com/datasets/mdzahidulhaquealvi/b-ner) indexes that title but crashes when rendered; the [IEEE PDF search result](https://ieeexplore.ieee.org/iel7/6287639/6514899/10103464.pdf) confirms the DOI. README CC BY 4.0 conflicts with catalog MIT and needs separate review. |
+| `banglameder` | [Crossref](https://api.crossref.org/works/10.1016/j.dib.2026.112705/transform/application/x-bibtex) | The [publisher article in PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC13054271/) matches 2,980 texts and six entity types in [Mendeley v2](https://data.mendeley.com/datasets/jt4gywvwtj/2). It cites v1 and discusses translated supplementary files, but does not certify v2 metadata. This is the dataset descriptor, not the separate PLOS Multi-BERT paper; publication year 2026 does not replace release year 2025. |
+| `squadbn` | [ACL](https://aclanthology.org/2022.findings-naacl.98.bib) | The [HF card](https://huggingface.co/datasets/csebuetnlp/squad_bn) requests BanglaBERT; the [official repository](https://github.com/csebuetnlp/banglabert) requests the published 2022 version for its datasets. Retained all eight final authors rather than seven in the older preprint. The card describes filtered SQuAD 2.0 training data and TyDi QA validation/test, so the catalog description needs separate review; release year 2021 is unchanged. |
+| `bemoc` | [Springer](https://citation-needed.springer.com/v2/references/10.1007/s42979-022-01028-w?format=bibtex&flavour=citation) | The [author repository](https://github.com/avishek-018/BEmoC) names this corpus paper; the export abstract describes 7,000 texts and six emotions. Retained complete names and article number 135 from the 2022 publisher export. |
+| `absa` | [DOI export](https://doi.org/10.3390/data3020015) | The [MDPI descriptor](https://www.mdpi.com/2306-5729/3/2/15) introduces the cricket and restaurant datasets and links the [catalog repository](https://github.com/AtikRahman/Bangla_ABSA_Datasets), now redirecting to `atik-05/Bangla_ABSA_Datasets`. Not BABSA or BAN-ABSA. Its dataset license is CC0, unlike catalog `Research only`; review separately. |
+| `motamot` | [DOI export](https://doi.org/10.1109/TENSYMP61132.2024.10752197) | The [author repository](https://github.com/mukaffi28/bengali-political-sentiment-analysis) names Motamot, reports splits of 5,647/706/705, and cites this DOI. Published TENSYMP 2024 citation preferred over arXiv 2407.19528. |
+| `babsa` | [DOI export](https://doi.org/10.1016/j.dib.2026.112604) | The [publisher article in PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12962122/) identifies [Mendeley v1](https://data.mendeley.com/datasets/j7yb2sv263/1), 15,860 instances and 21 domains. Release December 8, 2025; article online February 16, 2026, April issue. The registry export supersedes a publisher HTTP 403; citation year does not replace release year. |
+| `banglasarc3` | [DOI export](https://doi.org/10.1016/j.dib.2025.111953) | The [publisher article in PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12396290/) identifies [Mendeley v1](https://data.mendeley.com/datasets/7tn76wdhsr/1), 12,089 comments and matching label counts. Release February 24, 2025; article online August 6, October issue. Not BanglaSarc or BanglaSarc-2. |
+| `banspemo` | [DOI export](https://doi.org/10.11591/ijeecs.v37.i3.pp2044-2057), [Crossref confirmation](https://api.crossref.org/works/10.11591/ijeecs.v37.i3.pp2044-2057/transform/application/x-bibtex) | The [publisher article 39012](https://ijeecs.iaescore.com/index.php/IJEECS/article/view/39012) matches [Mendeley v2](https://data.mendeley.com/datasets/rdwn4bs5ky/2), 792 recordings, 22 speakers, and six emotions. Paper March 2025; release May 30, 2023. The paper has three authors; the release also credits Ye Shiren. Export retains starting page 2044 only, although the issue lists pages 2044 to 2057. Dataset CC BY and article CC BY-SA have different scopes. |
+| `banglaser` | [DOI export](https://doi.org/10.1016/j.dib.2022.108091) | The [publisher article in PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC8980634/) identifies the exact [Mendeley v5](https://data.mendeley.com/datasets/t9h6p943xy/5), 1,467 recordings and 34 speakers. Release March 14, 2022; article online March 22, June issue. It calls recordings acted and scripted; catalog `Realistic` needs separate review. |
+| `kbes` | [DOI export](https://doi.org/10.1016/j.dib.2023.109741) | The [publisher article in PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC10641593/) and [Mendeley v4](https://data.mendeley.com/datasets/vsn37ps3rx/4) identify this descriptor, 900 recordings and 35 actors. Release May 16, 2023; article online October 31, December issue. Not the 2024 classifier paper. Exported narrow spaces in author initials remain intact. |
+| `openslr53` | [DOI export](https://doi.org/10.21437/SLTU.2018-11) | [OpenSLR 53](https://openslr.org/53/) explicitly requests this SLTU 2018 paper. Parent corpus for five languages, including Bangladeshi Bengali, not SLR37 or a later Google collection. It does not independently verify catalog hours. |
+| `commonvoice` | [ACL](https://aclanthology.org/2020.lrec-1.520.bib) | The [parent corpus paper](https://aclanthology.org/2020.lrec-1.520/) identifies Mozilla Common Voice; the [catalog target](https://commonvoice.mozilla.org/bn) yielded only loading text. Parent project citation, not evidence of the unspecified 2024 snapshot or 1,200+ Bengali hours. The [Bengali paper alternative](https://arxiv.org/abs/2206.14053) covers over 400 hours in 2022 and was not substituted. |
+| `oodspeech` | [arXiv](https://arxiv.org/bibtex/2305.09688) | The [official project](https://bengaliai.github.io/asr) requests this 2023 introduction; the [abstract](https://arxiv.org/abs/2305.09688) distinguishes 1,177.94 training hours from a 23.03 hour OOD test set. The project says Interspeech 2023, but no corresponding ISCA export was authenticated. Retained arXiv without invented conference fields. |
+| `lipighor` | [arXiv](https://arxiv.org/bibtex/2602.23070) | The [official HF card](https://huggingface.co/datasets/Sanjidh090/Lipi-Ghor-bn-882-SSTT) prescribes this Team Villagers system paper. The [dataset DOI alternative](https://doi.org/10.57967/hf/7877) was not substituted. Card distinguishes about 882 hours sourced, about 856 annotated, and pending uploads; video totals and APA 2025 versus BibTeX 2026 conflict. No metadata or gating change follows from citation matching. |
+| `bengali-loop-asr` | [arXiv](https://arxiv.org/bibtex/2602.14291) | The [paper abstract](https://arxiv.org/abs/2602.14291) matches 191 recordings, 158.6 hours, 792k words and 11 channels. All 27 authors retained. Citation covers the ASR portion of a joint paper, not its separate 22 hour diarization corpus. Dataset license and Kaggle access remain unresolved as documented above. |
+| `bansdata` | [Springer](https://citation-needed.springer.com/v2/references/10.1007/978-981-33-4673-4_4?format=bibtex&flavour=citation) | The export abstract introduces over 19k pairs and links the [same Kaggle owner and dataset slug](https://www.kaggle.com/prithwirajsust/bengali-news-summarization-dataset). BANS introduces BANSData, not BANS133. TCCE-2020 proceedings published 2021. Retained four authors, the concatenated author prefix in the abstract, and the DOI citation key without adding an absent DOI field. Kaggle failed to load its CSS. |
+| `banglachqsumm` | [ACL](https://aclanthology.org/2023.banglalp-1.10.bib) | The [author repository](https://github.com/alvi-khan/BanglaCHQ-Summ) identifies this paper and DOI; the [ACL abstract](https://aclanthology.org/2023.banglalp-1.10/) introduces 2,350 pairs. Original BLP-2023 summarization corpus, not its later dialect translation use. |
+| `bard` | [DOI export](https://doi.org/10.1109/ICBSLP.2018.8554382) | The [author repository](https://github.com/tanvirfahim15/BARD-Bangla-Article-Classifier) has the corpus abstract and five category counts totaling 376,226. The [DOI indexed abstract](https://doi.org/10.1109/icbslp.2018.8554382) links [BARD_SC](https://bit.ly/BARD_SC), which resolves to that repository; [IEEE registry metadata](https://api.crossref.org/works/10.1109/ICBSLP.2018.8554382) confirms the title and two authors. IEEE returned robot verification and its PDF HTTP 418, so matching does not claim a fresh full paper read. Not BARD10. |
+| `bttc` | [DataCite DOI export](https://doi.org/10.17632/5wrm959d6f.1) | [Official Mendeley v1](https://data.mendeley.com/datasets/5wrm959d6f/1) identifies the exact DOI and 10,283 HAM/PROMO/SPAM messages. Dataset release citation dated March 5, 2026; no separate paper was established or needed. Exported contributor names and internal spaces are unchanged. |
+| `banfakenews2` | [ACL](https://aclanthology.org/2025.indonlp-1.12.bib) | The [author repository](https://github.com/Shibu4064/IndoNLP) prescribes this paper and links the [catalog Kaggle release](https://www.kaggle.com/datasets/hrithikmajumdar/bangla-fake-news) and [Mendeley v1](https://data.mendeley.com/datasets/kjh887ct4j/1). The [ACL abstract](https://aclanthology.org/2025.indonlp-1.12/) introduces 47,000 authentic and 13,000 fake articles in 13 categories. Not the 2020 corpus; the separate external 1,000 item test set is excluded. Release date still needs separate review. |
+
+Crossref's bare `Sept` and `June` tokens may not work in every BibTeX consumer.
+The source ledger reports that Pandoc omitted BARD's month; the canonical tokens
+and year fields are retained. Citation matching does not resolve the existing
+metadata questions or replace dataset release dates with paper publication dates.
+
 ## Datasets missing BibTeX
 
-The BibTeX copy button is hidden for these. Add a `bibtex:` field copied from the ACL
-Anthology or publisher page — do not hand-write one.
+2 datasets still lack BibTeX. Their copy buttons remain hidden. Establish the
+resource association before adding an export under the canonical source policy
+above. Neither absence justifies inventing a citation.
 
-| Task | Dataset | id |
-| --- | --- | --- |
-| `hate` | BD-SHS | `bdshs` |
-| `hate` | Bengali Hate Speech | `bhs` |
-| `hate` | TB-OLID | `tbolid` |
-| `hate` | OffMix-3L | `offmix3l` |
-| `hate` | BanTH | `banth` |
-| `hate` | ALERT | `alert` |
-| `hate` | Bangla-ToCo | `banglatoco` |
-| `llm` | Global-MMLU (bn) | `globalmmlu` |
-| `llm` | MEGAVERSE (bn subset) | `megaverse` |
-| `llm` | BnMMLU | `bnmmlu` |
-| `llm` | BanglaMATH | `banglamath` |
-| `llm` | SOMADHAN | `somadhan` |
-| `mt` | FLORES-200 (bn) | `flores` |
-| `mt` | BanglaParaphrase | `banglaparaphrase` |
-| `mt` | Samanantar (bn–en) | `samanantar` |
-| `mt` | BanglaTLit | `banglatlit` |
-| `mt` | Vashantor | `vashantor` |
-| `mt` | BanglaRegionalTextCorpus | `banglaregionaltextcorpus` |
-| `mt` | Kothon | `kothon` |
-| `ner` | MultiCoNER (bn) | `multiconer` |
-| `ner` | B-NER | `bner` |
-| `ner` | WikiANN (bn) | `wikiann` |
-| `ner` | ANCHOLIK-NER | `ancholikner` |
-| `ner` | Bangla-MedER | `banglameder` |
-| `pos` | UD Bengali-BRU Treebank | `udbru` |
-| `pos` | SNLTR POS Corpus | `snltr` |
-| `qa` | SQuAD_bn | `squadbn` |
-| `qa` | TyDi QA (bn) | `tydiqa` |
-| `sentiment` | BEmoC | `bemoc` |
-| `sentiment` | ABSA Cricket & Restaurant | `absa` |
-| `sentiment` | BanglaBook | `banglabook` |
-| `sentiment` | Motamot | `motamot` |
-| `sentiment` | SentMix-3L | `sentmix3l` |
-| `sentiment` | EmoMix-3L | `emomix3l` |
-| `sentiment` | BnSentMix | `bnsentmix` |
-| `sentiment` | BABSA | `babsa` |
-| `sentiment` | BanglaSarc3 | `banglasarc3` |
-| `ser` | SUBESCO | `subesco` |
-| `ser` | BANSpEmo | `banspemo` |
-| `ser` | BanglaSER | `banglaser` |
-| `ser` | KBES (KUET Bangla Emotional Speech) | `kbes` |
-| `speech` | OpenSLR SLR53 (Large Bengali ASR) | `openslr53` |
-| `speech` | Common Voice (bn) | `commonvoice` |
-| `speech` | OOD-Speech | `oodspeech` |
-| `speech` | Lipi-Ghor (bn-882-SSTT) | `lipighor` |
-| `speech` | Bengali-Loop (ASR corpus) | `bengali-loop-asr` |
-| `summ` | BANSData | `bansdata` |
-| `summ` | BanglaCHQ-Summ | `banglachqsumm` |
-| `textcls` | BanFakeNews | `banfakenews` |
-| `textcls` | Potrika | `potrika` |
-| `textcls` | BARD | `bard` |
-| `textcls` | BTTC | `bttc` |
-| `textcls` | BanFakeNews-2.0 | `banfakenews2` |
+| Task | Dataset | id | Evidence and next requirement |
+| --- | --- | --- | --- |
+| `pos` | UD Bengali-BRU Treebank | `udbru` | The [official README](https://github.com/UniversalDependencies/UD_Bengali-BRU/blob/master/README.md) has only `* (citation)` under References and records the initial UD v2.9 release on 2021-11-15. It supplies no usable paper citation; this does not prove no paper exists. Do not recreate the removed invented `udbru-p` or substitute a generic UD paper. A release DOI would require an explicitly identified release and a separate citation choice. |
+| `pos` | SNLTR POS Corpus | `snltr` | The [catalog address](http://nltr.org/snltr-software/) redirects through HTTPS to [the current host](https://nltr.itewb.gov.in), which timed out during the 2026-09-08 research pass. Browser reads returned `target_unreachable` or `proxy_error`; a direct 15 second probe returned curl exit 28. Searches found no primary source authenticating the paper association for the claimed 7,390 sentences, 40 tags, and 2010 resource. Needs a reachable official corpus README, author release, or authenticated archive; a downstream tagging paper is insufficient. |
 
 ## Dataset licenses needing verification
 
@@ -283,18 +485,19 @@ and the remainder that matched their source exactly.
 
 Corrected in this pass: `globalmmlu` — HF card states apache-2.0, not CC BY 4.0.
 
+The September metadata audit above records BHS's repository MIT license and
+WikiANN's original `ODC-By; research use only` statement. WikiANN is removed from
+this pending list; its HF card's `unknown` metadata is documented above.
+
 | id | our license | what the source says |
 | --- | --- | --- |
 | `bdshs` | CC BY-NC 4.0 | repo LICENSE is MIT (may cover code only; README silent) |
 | `tbolid` | CC BY 4.0 | repo LICENSE is AGPL-3.0 (may cover code only; README silent) |
 | `megaverse` | Mixed | repo LICENSE is MIT |
-| `wikiann` | ODC-BY | HF card says "unknown" |
-| `flores` | CC BY-SA 4.0 | GitHub cannot classify the LICENSE file |
 | `bnmmlu` | CC BY-SA 4.0 | LICENSE file text says CC BY-SA 4.0; GitHub reports NOASSERTION — ours is probably right |
 | `benqa` | CC BY-NC-SA 4.0 | repo declares no LICENSE |
 | `banglanmt` | Research only | repo declares no LICENSE |
 | `banglarqa` | CC BY-NC 4.0 | repo declares no LICENSE |
-| `sentnob` | CC BY-NC-SA 4.0 | repo declares no LICENSE |
 | `bemoc` | Research only | repo declares no LICENSE |
 | `absa` | Research only | repo declares no LICENSE |
 | `banfakenews` | CC BY-NC 4.0 | repo declares no LICENSE |
@@ -338,23 +541,14 @@ replaced with a guess.
 `bnmmlu` (134,375 pairs), `xlsum` (10,126 articles, 2021), `bdshs` (README: "more
 than 50,200"), `benqa` (README: "approximately 5K"), `banfakenews` (README: "~50K").
 
-### Known wrong, correct value unknown
-
-| id | our value | problem |
-| --- | --- | --- |
-| `bhs` | 30,000 documents | Unsupported by the source. The README documents 3,418 labelled hate statements in v1.0 plus "an additional 3,000" in v2.0, and states no 30,000 figure for any quantity. Needs the paper. |
-
 ### Still unverified
 
 No source consulted states a figure, so these remain as inherited from the prototype:
 
 | id | field(s) | why |
 | --- | --- | --- |
-| `sentnob` | 15,728 comments | not stated in README |
 | `absa` | 5,038 comments | not stated in README |
 | `tbolid` | 5,000 comments | README not readable via fetch |
-| `tydiqa` | ~10k questions | README gives only the 200k all-language total, no Bengali split |
-| `flores` | 3,001 sentences | README gives no per-language split sizes |
 | `breaso` | 13,497 questions | HF viewer fails to parse the files; card states no count |
 | `bner`, `bansdata` | sizes | hosted on Kaggle — not machine-checkable |
 | `samanantar`, `snltr`, `openslr53`, `commonvoice`, `oodspeech`, `potrika`, `multiconer` | sizes | hosted off-platform — not machine-checkable |

@@ -1,6 +1,8 @@
 - dataset: sentnob
   label: SentNoB
-  metric: Micro-F1
+  metric: F1 (evaluation unresolved)
+  # Pinned evaluation code miscounts false positives. See TODO-data.md.
+  # https://github.com/KhondokerIslam/SentNoB/blob/2798a0c0f33d97943a70e796fe417d83bbdb4ddb/Models/feature_based.py#L32-L48
   rows: []
 - dataset: bemoc
   label: BEmoC
