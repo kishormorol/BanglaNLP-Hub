@@ -81,7 +81,7 @@ const selectStyle =
               <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--text2);flex-shrink:0;padding-top:2px">
                 {p.year}
               </span>
-              <span style="flex:1;min-width:0">
+              <span style="flex:1 1 16rem;min-width:0">
                 <span style="display:block;font-weight:600;font-size:14.5px;color:var(--text);line-height:1.45;text-wrap:pretty">
                   {p.title}
                 </span>
@@ -91,7 +91,7 @@ const selectStyle =
                 </span>
               </span>
               <span
-                style={`font-size:11px;font-weight:600;letter-spacing:0.04em;color:${tone.fg};background:${tone.bg};padding:3px 9px;border-radius:99px;flex-shrink:0`}
+                style={`font-size:11px;font-weight:600;letter-spacing:0.04em;color:${tone.fg};background:${tone.bg};padding:3px 9px;border-radius:99px;min-width:0;max-width:100%`}
               >
                 {p.venue}
               </span>
@@ -111,8 +111,15 @@ const selectStyle =
 </Base>
 
 <style>
+  select {
+    min-width: 0;
+    max-width: 100%;
+  }
   .papercard {
     scroll-margin-top: 80px;
+    /* Keep text readable and move the venue below when the row is too narrow. */
+    flex-wrap: wrap;
+    overflow-wrap: anywhere;
   }
   .papercard:target,
   .papercard:focus-visible {
