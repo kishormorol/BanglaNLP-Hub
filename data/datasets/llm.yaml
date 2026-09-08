@@ -27,6 +27,16 @@
   link: https://huggingface.co/datasets/CohereLabs/Global-MMLU
   verified: 2026-07-19
   desc: Culturally adapted MMLU; Bengali split.
+  bibtex: |-
+    @misc{singh2025globalmmluunderstandingaddressing,
+          title={Global MMLU: Understanding and Addressing Cultural and Linguistic Biases in Multilingual Evaluation},
+          author={Shivalika Singh and Angelika Romanou and Clémentine Fourrier and David I. Adelani and Jian Gang Ngui and Daniel Vila-Suero and Peerat Limkonchotiwat and Kelly Marchisio and Wei Qi Leong and Yosephine Susanto and Raymond Ng and Shayne Longpre and Wei-Yin Ko and Sebastian Ruder and Madeline Smith and Antoine Bosselut and Alice Oh and Andre F. T. Martins and Leshem Choshen and Daphne Ippolito and Enzo Ferrante and Marzieh Fadaee and Beyza Ermis and Sara Hooker},
+          year={2025},
+          eprint={2412.03304},
+          archivePrefix={arXiv},
+          primaryClass={cs.CL},
+          url={https://arxiv.org/abs/2412.03304},
+    }
 - id: megaverse
   name: MEGAVERSE (bn subset)
   task: llm
@@ -38,6 +48,32 @@
   link: https://github.com/microsoft/MEGAVERSE
   verified: 2026-08-23
   desc: Multilingual LLM evaluation suite including Bangla tasks.
+  bibtex: |-
+    @inproceedings{ahuja-etal-2024-megaverse,
+        title = "{MEGAVERSE}: Benchmarking Large Language Models Across Languages, Modalities, Models and Tasks",
+        author = "Ahuja, Sanchit  and
+          Aggarwal, Divyanshu  and
+          Gumma, Varun  and
+          Watts, Ishaan  and
+          Sathe, Ashutosh  and
+          Ochieng, Millicent  and
+          Hada, Rishav  and
+          Jain, Prachi  and
+          Ahmed, Mohamed  and
+          Bali, Kalika  and
+          Sitaram, Sunayana",
+        editor = "Duh, Kevin  and
+          Gomez, Helena  and
+          Bethard, Steven",
+        booktitle = "Proceedings of the 2024 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies (Volume 1: Long Papers)",
+        month = jun,
+        year = "2024",
+        address = "Mexico City, Mexico",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2024.naacl-long.143/",
+        doi = "10.18653/v1/2024.naacl-long.143",
+        pages = "2598--2637"
+    }
 - id: breaso
   name: B-REASO
   task: llm
@@ -71,6 +107,25 @@
   link: https://github.com/samanjoy2/bnmmlu
   verified: 2026-07-19
   desc: Bengali massive multitask language understanding benchmark spanning 23 domains.
+  bibtex: |-
+    @inproceedings{joy-shatabda-2026-bnmmlu,
+        title = "{B}n{MMLU}: Measuring Massive Multitask Language Understanding in {B}engali",
+        author = "Joy, Saman Sarker  and
+          Shatabda, Swakkhar",
+        editor = "Liakata, Maria  and
+          Moreira, Viviane P.  and
+          Zhang, Jiajun  and
+          Jurgens, David",
+        booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {ACL} 2026",
+        month = jul,
+        year = "2026",
+        address = "San Diego, California, United States",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2026.findings-acl.593/",
+        doi = "10.18653/v1/2026.findings-acl.593",
+        pages = "12211--12230",
+        ISBN = "979-8-89176-395-1"
+    }
 - id: banglamath
   name: BanglaMATH
   task: llm
@@ -82,6 +137,27 @@
   link: https://github.com/TabiaTanzin/BanglaMATH-A-Bangla-benchmark-dataset-for-testing-LLM-mathematical-reasoning-at-grades-6-7-and-8
   verified: 2026-07-19
   desc: Bangla grade 6-8 math word problems for testing LLM mathematical reasoning.
+  bibtex: |-
+    @inproceedings{prama-etal-2025-banglamath,
+        title = "{B}angla{MATH} : A {B}angla benchmark dataset for testing {LLM} mathematical reasoning at grades 6, 7, and 8",
+        author = "Prama, Tabia Tanzin  and
+          Danforth, Christopher M.  and
+          Dodds, Peter",
+        editor = "Valentino, Marco  and
+          Ferreira, Deborah  and
+          Thayaparan, Mokanarangan  and
+          Ranaldi, Leonardo  and
+          Freitas, Andre",
+        booktitle = "Proceedings of The 3rd Workshop on Mathematical Natural Language Processing (MathNLP 2025)",
+        month = nov,
+        year = "2025",
+        address = "Suzhou, China",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2025.mathnlp-main.10/",
+        doi = "10.18653/v1/2025.mathnlp-main.10",
+        pages = "134--149",
+        ISBN = "979-8-89176-348-7"
+    }
 - id: somadhan
   name: SOMADHAN
   task: llm
@@ -93,6 +169,16 @@
   link: https://data.mendeley.com/datasets/34bs5cxk9j/2
   verified: 2026-07-26
   desc: Bengali math word problems with step-by-step solutions adapted from the GSM8K train and test sets.
+  bibtex: |-
+    @misc{paul2025leveraginglargelanguagemodels,
+          title={Leveraging Large Language Models for Bengali Math Word Problem Solving with Chain of Thought Reasoning},
+          author={Bidyarthi Paul and Jalisha Jashim Era and Mirazur Rahman Zim and Tahmid Sattar Aothoi and Faisal Muhammad Shah},
+          year={2025},
+          eprint={2505.21354},
+          archivePrefix={arXiv},
+          primaryClass={cs.CL},
+          url={https://arxiv.org/abs/2505.21354},
+    }
 - id: banglasocialbench
   name: BanglaSocialBench
   task: llm

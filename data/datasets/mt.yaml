@@ -38,6 +38,27 @@
   link: https://huggingface.co/datasets/csebuetnlp/BanglaParaphrase
   verified: 2026-07-19
   desc: High-quality synthetic paraphrase pairs.
+  bibtex: |-
+    @inproceedings{akil-etal-2022-banglaparaphrase,
+        title = "{B}angla{P}araphrase: A High-Quality {B}angla Paraphrase Dataset",
+        author = "Akil, Ajwad  and
+          Sultana, Najrin  and
+          Bhattacharjee, Abhik  and
+          Shahriyar, Rifat",
+        editor = "He, Yulan  and
+          Ji, Heng  and
+          Li, Sujian  and
+          Liu, Yang  and
+          Chang, Chua-Hui",
+        booktitle = "Proceedings of the 2nd Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics and the 12th International Joint Conference on Natural Language Processing (Volume 2: Short Papers)",
+        month = nov,
+        year = "2022",
+        address = "Online only",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2022.aacl-short.33/",
+        doi = "10.18653/v1/2022.aacl-short.33",
+        pages = "261--272"
+    }
 - id: samanantar
   name: Samanantar (bn–en)
   task: mt
@@ -49,6 +70,38 @@
   link: https://indicnlp.ai4bharat.org/samanantar/
   verified: 2026-07-19
   desc: Largest publicly available bn–en parallel collection.
+  bibtex: |-
+    @article{ramesh-etal-2022-samanantar,
+        title = "Samanantar: The Largest Publicly Available Parallel Corpora Collection for 11 {I}ndic Languages",
+        author = "Ramesh, Gowtham  and
+          Doddapaneni, Sumanth  and
+          Bheemaraj, Aravinth  and
+          Jobanputra, Mayank  and
+          AK, Raghavan  and
+          Sharma, Ajitesh  and
+          Sahoo, Sujit  and
+          Diddee, Harshita  and
+          J, Mahalakshmi  and
+          Kakwani, Divyanshu  and
+          Kumar, Navneet  and
+          Pradeep, Aswin  and
+          Nagaraj, Srihari  and
+          Deepak, Kumar  and
+          Raghavan, Vivek  and
+          Kunchukuttan, Anoop  and
+          Kumar, Pratyush  and
+          Khapra, Mitesh Shantadevi",
+        editor = "Roark, Brian  and
+          Nenkova, Ani",
+        journal = "Transactions of the Association for Computational Linguistics",
+        volume = "10",
+        year = "2022",
+        address = "Cambridge, MA",
+        publisher = "MIT Press",
+        url = "https://aclanthology.org/2022.tacl-1.9/",
+        doi = "10.1162/tacl_a_00452",
+        pages = "145--162"
+    }
 - id: banglatlit
   name: BanglaTLit
   task: mt
@@ -60,6 +113,28 @@
   link: https://github.com/farhanishmam/BanglaTLit
   verified: 2026-07-19
   desc: Benchmark for back-transliteration of romanized Bangla to Bangla script.
+  bibtex: |-
+    @inproceedings{fahim-etal-2024-banglatlit,
+        title = "{B}angla{TL}it: A Benchmark Dataset for Back-Transliteration of {R}omanized {B}angla",
+        author = "Fahim, Md  and
+          Shifat, Fariha Tanjim  and
+          Haider, Fabiha  and
+          Barua, Deeparghya Dutta  and
+          Sourove, MD Sakib Ul Rahman  and
+          Ishmam, Md Farhan  and
+          Bhuiyan, Md Farhad Alam",
+        editor = "Al-Onaizan, Yaser  and
+          Bansal, Mohit  and
+          Chen, Yun-Nung",
+        booktitle = "Findings of the Association for Computational Linguistics: EMNLP 2024",
+        month = nov,
+        year = "2024",
+        address = "Miami, Florida, USA",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2024.findings-emnlp.859/",
+        doi = "10.18653/v1/2024.findings-emnlp.859",
+        pages = "14656--14672"
+    }
 - id: vashantor
   name: Vashantor
   task: mt
@@ -71,6 +146,16 @@
   link: https://data.mendeley.com/datasets/bj5jgk878b/2
   verified: 2026-07-19
   desc: Translation benchmark from five Bangla regional dialects to standard Bangla.
+  bibtex: |-
+    @misc{faria2025vashantorlargescalemultilingualbenchmark,
+          title={Vashantor: A Large-scale Multilingual Benchmark Dataset for Automated Translation of Bangla Regional Dialects to Bangla Language},
+          author={Fatema Tuj Johora Faria and Mukaffi Bin Moin and Ahmed Al Wase and Mehidi Ahmmed and Md. Rabius Sani and Tashreef Muhammad},
+          year={2025},
+          eprint={2311.11142},
+          archivePrefix={arXiv},
+          primaryClass={cs.CL},
+          url={https://arxiv.org/abs/2311.11142},
+    }
 - id: banglaregionaltextcorpus
   name: BanglaRegionalTextCorpus
   task: mt

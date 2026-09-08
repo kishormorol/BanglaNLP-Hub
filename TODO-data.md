@@ -152,7 +152,7 @@ ASR technique) still routes to `speech`.
   connected-speech papers. Promoting them is the prerequisite-adds-a-task case, like
   OCR and captioning below.
 
-New SER datasets need BibTeX (see the missing-BibTeX table). Sizes and licenses are
+BANSpEmo still needs BibTeX (see the missing-BibTeX table). Sizes and licenses are
 verified at source, so they are not listed under the unverified tables.
 
 ## Datasets: mining from resource papers (2026-07-19)
@@ -249,51 +249,108 @@ until rows are added with a citation to the paper the score comes from.
 | `summ` | XL-Sum (bn) |
 | `textcls` | BanFakeNews |
 
+## Citation curation (2026-09-08)
+
+Added 23 missing dataset citations and replaced the abbreviated SentNoB and
+BanglaRQA citations with complete canonical exports. All exported fields, author
+order, and punctuation are preserved. Only line-end whitespace and YAML indentation
+changed. These are paper citations, not version-specific dataset DOI citations.
+This pass does not validate unchanged names, descriptions, sizes, licenses, years,
+links, or `verified` dates. The metadata questions below remain open.
+
+Parsed YAML citation strings match all 25 downloaded exports after stripping
+line-end whitespace and trimming the surrounding whitespace.
+Validation and build pass with
+63 datasets and 712 papers, unchanged from before this pass.
+
+### Canonical source ledger
+
+| Dataset id | Canonical BibTeX export | Citation scope or variant caveat |
+| --- | --- | --- |
+| `bdshs` | [ACL 2022.lrec-1.552](https://aclanthology.org/2022.lrec-1.552.bib) | BD-SHS paper; does not resolve the license question below. |
+| `tbolid` | [ACL 2023.banglalp-1.1](https://aclanthology.org/2023.banglalp-1.1.bib) | Transliterated and code-mixed offensive language identification. |
+| `offmix3l` | [ACL 2023.socialnlp-1.3](https://aclanthology.org/2023.socialnlp-1.3.bib) | Code-mixed offensive-language test set. |
+| `banth` | [ACL 2025.findings-naacl.403](https://aclanthology.org/2025.findings-naacl.403.bib) | Multi-label transliterated Bangla hate speech. |
+| `globalmmlu` | [arXiv 2412.03304](https://arxiv.org/bibtex/2412.03304) | Parent benchmark for `bn`, not Global-MMLU-Lite; revised export says 2025, initial submission was 2024. |
+| `megaverse` | [ACL 2024.naacl-long.143](https://aclanthology.org/2024.naacl-long.143.bib) | Whole multilingual suite; does not establish Bengali coverage in every constituent dataset. |
+| `bnmmlu` | [ACL 2026.findings-acl.593](https://aclanthology.org/2026.findings-acl.593.bib) | Published version preferred over the saved arXiv 2505.18951 export; catalog still describes the 2025 preprint. |
+| `banglamath` | [ACL 2025.mathnlp-main.10](https://aclanthology.org/2025.mathnlp-main.10.bib) | Grade 6, 7, and 8 benchmark; canonical workshop title retained. |
+| `somadhan` | [arXiv 2505.21354](https://arxiv.org/bibtex/2505.21354) | Paper experiments use an earlier 4,000-problem sample, not the later 8,792-problem v2 release. |
+| `banglaparaphrase` | [ACL 2022.aacl-short.33](https://aclanthology.org/2022.aacl-short.33.bib) | BanglaParaphrase paper for the linked BUET release. |
+| `samanantar` | [ACL 2022.tacl-1.9](https://aclanthology.org/2022.tacl-1.9.bib) | Parent 11-language parallel collection for the bn-en subset. |
+| `banglatlit` | [ACL 2024.findings-emnlp.859](https://aclanthology.org/2024.findings-emnlp.859.bib) | Romanized Bangla back-transliteration benchmark. |
+| `vashantor` | [arXiv 2311.11142](https://arxiv.org/bibtex/2311.11142) | Revised export says 2025; catalog says 2023 and linked Mendeley v2 was released in 2024. |
+| `wikiann` | [ACL P19-1015](https://aclanthology.org/P19-1015.bib) | Rahimi et al. 2019 balanced splits used by the linked HF artifact, not the original 2017 construction paper. |
+| `ancholikner` | [arXiv 2502.11198](https://arxiv.org/bibtex/2502.11198) | Canonical arXiv record retained, including its full HTTPS PLOS DOI; not a citation for Mendeley v4. |
+| `banglarqa` | [ACL 2022.findings-emnlp.186](https://aclanthology.org/2022.findings-emnlp.186.bib) | Replaces shortened title, byline, and venue with the complete export. |
+| `tydiqa` | [ACL 2020.tacl-1.30](https://aclanthology.org/2020.tacl-1.30.bib) | Parent dataset paper for Bengali primary tasks v1.0; does not substitute GoldP. |
+| `sentnob` | [ACL 2021.findings-emnlp.278](https://aclanthology.org/2021.findings-emnlp.278.bib) | Replaces abbreviated citation, including the canonical citation key. |
+| `banglabook` | [ACL 2023.findings-acl.80](https://aclanthology.org/2023.findings-acl.80.bib) | Book-review sentiment corpus. |
+| `sentmix3l` | [ACL 2023.sealp-1.6](https://aclanthology.org/2023.sealp-1.6.bib) | Code-mixed sentiment test set, distinct from OffMix-3L and EmoMix-3L. |
+| `emomix3l` | [ACL 2024.wildre-1.2](https://aclanthology.org/2024.wildre-1.2.bib) | Multi-label emotion test set; ACL spelling and byline retained. |
+| `bnsentmix` | [ACL 2025.loreslm-1.4](https://aclanthology.org/2025.loreslm-1.4.bib) | Publication year 2025 differs from release year 2024; ACL's final two author positions differ from the PDF, and the export order is retained. |
+| `subesco` | [PLOS ONE 0250173](https://journals.plos.org/plosone/article/citation/bibtex?id=10.1371/journal.pone.0250173) | Corpus paper linked to Zenodo 4526477; publisher abstract and all other fields retained. |
+| `banfakenews` | [ACL 2020.lrec-1.349](https://aclanthology.org/2020.lrec-1.349.bib) | Original BanFakeNews, not BanFakeNews-2.0. |
+| `potrika` | [arXiv 2210.09389](https://arxiv.org/bibtex/2210.09389) | Paper covers raw and balanced corpora; catalog's rounded 665k refers to the raw corpus. |
+
+### Metadata follow-ups
+
+These discrepancies surfaced during citation matching. Catalog fields remain
+unchanged pending a separate metadata and release review.
+
+- `bnmmlu`: the [published abstract](https://aclanthology.org/2026.findings-acl.593/) and [repository](https://github.com/samanjoy2/bnmmlu) say 41 domains; both the dataset description and `bnmmlu-p` note say 23. The paper record also retains its 2025 arXiv venue, year, and link. Review the version scope before updating these fields.
+- `vashantor`: the [paper](https://arxiv.org/abs/2311.11142) and [Mendeley v2](https://data.mendeley.com/datasets/bj5jgk878b/2) describe Bangla, Banglish, and English forms. The 32,500 total is sentences, not distinct parallel pairs. Resolve the 2023 catalog year, January 2024 v2 release, and 2025 revised citation separately.
+- `somadhan`: [paper v2](https://arxiv.org/html/2505.21354v2) section 4.3 describes 4,000 annotated samples and a planned v2. [Mendeley v2](https://data.mendeley.com/datasets/34bs5cxk9j/2), released August 5, 2025, describes 8,792 problems. Do not use the paper's experimental sample to validate the later release size.
+- `bnsentmix`: the [paper](https://aclanthology.org/2025.loreslm-1.4.pdf) says CC BY 4.0, the [repository](https://github.com/Nishita2000/BnSentMix) has Apache 2.0, and the [HF card](https://huggingface.co/datasets/aplycaebous/BnSentMix) and catalog say MIT. The card reports both 20,000 samples and 21,873 unique sentences; its viewer reports 20,015 rows. License and count scope remain unresolved.
+- `ancholikner`: the [arXiv record](https://arxiv.org/abs/2502.11198) links a February 2026 [PLOS publication](https://doi.org/10.1371/journal.pone.0342786), while [Mendeley v4](https://data.mendeley.com/datasets/gbkszkt8z3/4) was released April 8, 2026. The catalog retains 2025; the paper citation does not establish v4 metadata.
+- `potrika`: the [paper](https://arxiv.org/abs/2210.09389) and [Mendeley v2](https://data.mendeley.com/datasets/v362rp78dc/2) distinguish 664,880 raw articles from 320,000 balanced articles. Catalog `sizeN: 665000` is rounded. Mendeley v2 is dated 2021, while the paper and catalog say 2022.
+
+No usable canonical export was saved for `banspemo`; the saved response is HTML.
+For `kothon` and `banglameder`, publisher HTTP 403 and browser fetch `bot_blocked`
+responses prevented export retrieval in the evidence-gathering pass. No citations were
+reconstructed. Retry the [Kothon export](https://www.sciencedirect.com/sdfe/arp/cite?pii=S2352340926003422&format=text%2Fx-bibtex&withabstract=false)
+and [Bangla-MedER export](https://www.sciencedirect.com/sdfe/arp/cite?pii=S2352340926002581&format=text%2Fx-bibtex&withabstract=false).
+The [Bangla-MedER dataset article](https://pmc.ncbi.nlm.nih.gov/articles/PMC13054271/)
+cites dataset v1, while the catalog links v2 with an English translation; it is
+not the separate Multi-BERT ensemble research article.
+
+### Paper task corrections
+
+Re-read the primary abstracts before moving these existing records. Only `task`
+and the containing file changed; ids and all other fields are preserved. Checks
+found no contributor or leaderboard references and no duplicate ids, normalized
+titles, or normalized links for these records.
+
+| Paper id | Move | Primary abstract evidence |
+| --- | --- | --- |
+| `al-sefat-2025-bengalifig` | `sentiment` to `llm` | [ACL](https://aclanthology.org/2025.mmloso-1.6/) describes 435 riddles and evaluation of eight LLMs for figurative and culturally grounded reasoning. |
+| `arxiv-2304-02739` | `llm` to `textcls` | [arXiv](https://arxiv.org/abs/2304.02739) classifies fake versus real Bengali reviews using semi-supervised GANs and pretrained language models. |
+| `arxiv-2308-01987` | `llm` to `textcls` | [arXiv](https://arxiv.org/abs/2308.01987) introduces BFRD and detects review authenticity using transformer ensembles. |
+
 ## Datasets missing BibTeX
 
-The BibTeX copy button is hidden for these. Add a `bibtex:` field copied from the ACL
-Anthology or publisher page — do not hand-write one.
+30 datasets still lack BibTeX. The copy button is hidden for these. Add a `bibtex:`
+field copied from the ACL Anthology, arXiv, or publisher export. Do not hand-write one.
 
 | Task | Dataset | id |
 | --- | --- | --- |
-| `hate` | BD-SHS | `bdshs` |
 | `hate` | Bengali Hate Speech | `bhs` |
-| `hate` | TB-OLID | `tbolid` |
-| `hate` | OffMix-3L | `offmix3l` |
-| `hate` | BanTH | `banth` |
 | `hate` | ALERT | `alert` |
 | `hate` | Bangla-ToCo | `banglatoco` |
-| `llm` | Global-MMLU (bn) | `globalmmlu` |
-| `llm` | MEGAVERSE (bn subset) | `megaverse` |
-| `llm` | BnMMLU | `bnmmlu` |
-| `llm` | BanglaMATH | `banglamath` |
-| `llm` | SOMADHAN | `somadhan` |
 | `mt` | FLORES-200 (bn) | `flores` |
-| `mt` | BanglaParaphrase | `banglaparaphrase` |
-| `mt` | Samanantar (bn–en) | `samanantar` |
-| `mt` | BanglaTLit | `banglatlit` |
-| `mt` | Vashantor | `vashantor` |
 | `mt` | BanglaRegionalTextCorpus | `banglaregionaltextcorpus` |
 | `mt` | Kothon | `kothon` |
 | `ner` | MultiCoNER (bn) | `multiconer` |
 | `ner` | B-NER | `bner` |
-| `ner` | WikiANN (bn) | `wikiann` |
-| `ner` | ANCHOLIK-NER | `ancholikner` |
 | `ner` | Bangla-MedER | `banglameder` |
 | `pos` | UD Bengali-BRU Treebank | `udbru` |
 | `pos` | SNLTR POS Corpus | `snltr` |
 | `qa` | SQuAD_bn | `squadbn` |
-| `qa` | TyDi QA (bn) | `tydiqa` |
 | `sentiment` | BEmoC | `bemoc` |
 | `sentiment` | ABSA Cricket & Restaurant | `absa` |
-| `sentiment` | BanglaBook | `banglabook` |
 | `sentiment` | Motamot | `motamot` |
-| `sentiment` | SentMix-3L | `sentmix3l` |
-| `sentiment` | EmoMix-3L | `emomix3l` |
-| `sentiment` | BnSentMix | `bnsentmix` |
 | `sentiment` | BABSA | `babsa` |
 | `sentiment` | BanglaSarc3 | `banglasarc3` |
-| `ser` | SUBESCO | `subesco` |
 | `ser` | BANSpEmo | `banspemo` |
 | `ser` | BanglaSER | `banglaser` |
 | `ser` | KBES (KUET Bangla Emotional Speech) | `kbes` |
@@ -304,8 +361,6 @@ Anthology or publisher page — do not hand-write one.
 | `speech` | Bengali-Loop (ASR corpus) | `bengali-loop-asr` |
 | `summ` | BANSData | `bansdata` |
 | `summ` | BanglaCHQ-Summ | `banglachqsumm` |
-| `textcls` | BanFakeNews | `banfakenews` |
-| `textcls` | Potrika | `potrika` |
 | `textcls` | BARD | `bard` |
 | `textcls` | BTTC | `bttc` |
 | `textcls` | BanFakeNews-2.0 | `banfakenews2` |
