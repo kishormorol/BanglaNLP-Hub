@@ -38,6 +38,7 @@ const selectStyle =
       <input
         id="f-q"
         type="search"
+        maxlength="1000"
         placeholder="Filter by title or author…"
         aria-label="Filter papers"
         style="flex:1;min-width:200px;padding:9px 14px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:14px;font-family:'IBM Plex Sans',sans-serif;outline:none"
@@ -54,6 +55,7 @@ const selectStyle =
         <option value="">All tasks</option>
         {tasks.map((t) => <option value={t.id}>{t.name}</option>)}
       </select>
+      <button id="f-clear" type="button" hidden style={`${selectStyle};cursor:pointer`}>Clear filters</button>
       <span id="f-count" aria-live="polite" style="font-size:12.5px;color:var(--text2)"
         >{list.length} shown</span
       >
@@ -134,6 +136,8 @@ const selectStyle =
 </style>
 
 <script>
+  import { initCatalogFilters } from '../lib/catalog-filters';
+
   const q = document.getElementById('f-q') as HTMLInputElement;
   const year = document.getElementById('f-year') as HTMLSelectElement;
   const venue = document.getElementById('f-venue') as HTMLSelectElement;
@@ -158,24 +162,8 @@ const selectStyle =
     if (empty) empty.hidden = shown > 0;
   }
 
-  [q, year, venue, task].forEach((el) => {
-    el.addEventListener('input', apply);
-    el.addEventListener('change', apply);
-  });
-
-  function revealHash() {
-    const card = cards.find((c) => encodeURIComponent(c.id) === location.hash.slice(1));
-    if (!card) return;
-    apply();
-    if (card.hidden) {
-      [q, year, venue, task].forEach((el) => {
-        el.value = '';
-      });
-      apply();
-    }
+  initCatalogFilters({ q, task, venue, year }, cards, apply, (card) => {
     card.focus({ preventScroll: true });
     card.scrollIntoView({ block: 'start' });
-  }
-  window.addEventListener('hashchange', revealHash);
-  window.addEventListener('load', revealHash, { once: true });
+  });
 </script>

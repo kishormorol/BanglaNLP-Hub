@@ -48,6 +48,7 @@ const selectStyle =
       <input
         id="f-q"
         type="search"
+        maxlength="1000"
         placeholder="Filter by name or description…"
         aria-label="Filter datasets"
         style="flex:1;min-width:200px;padding:9px 14px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:14px;font-family:'IBM Plex Sans',sans-serif;outline:none"
@@ -66,6 +67,7 @@ const selectStyle =
         <option value="">Any year</option>
         {yearOpts.map((y) => <option value={String(y)}>{y}</option>)}
       </select>
+      <button id="f-clear" type="button" hidden style={`${selectStyle};cursor:pointer`}>Clear filters</button>
       <span id="f-count" aria-live="polite" style="font-size:12.5px;color:var(--text2)"
         >{rows.length} shown</span
       >
@@ -214,6 +216,8 @@ const selectStyle =
 </style>
 
 <script>
+  import { initCatalogFilters } from '../lib/catalog-filters';
+
   const q = document.getElementById('f-q') as HTMLInputElement;
   const task = document.getElementById('f-task') as HTMLSelectElement;
   const lic = document.getElementById('f-license') as HTMLSelectElement;
@@ -263,11 +267,6 @@ const selectStyle =
     });
   });
 
-  [q, task, lic, year].forEach((el) => {
-    el.addEventListener('input', apply);
-    el.addEventListener('change', apply);
-  });
-
   document.querySelectorAll<HTMLButtonElement>('.bibbtn').forEach((btn) => {
     btn.addEventListener('click', async (e) => {
       e.stopPropagation();
@@ -296,20 +295,9 @@ const selectStyle =
   });
 
   // Deep link: /datasets#sentnob expands that row.
-  function revealHash() {
-    const row = rows.find((r) => encodeURIComponent(r.id) === location.hash.slice(1));
-    if (!row) return;
-    apply();
-    if (row.hidden) {
-      [q, task, lic, year].forEach((el) => {
-        el.value = '';
-      });
-      apply();
-    }
+  initCatalogFilters({ q, task, license: lic, year }, rows, apply, (row) => {
     setOpen(row.id, true);
     row.querySelector<HTMLButtonElement>('.ds-toggle')?.focus({ preventScroll: true });
     row.scrollIntoView({ block: 'start' });
-  }
-  window.addEventListener('hashchange', revealHash);
-  window.addEventListener('load', revealHash, { once: true });
+  });
 </script>
