@@ -9,6 +9,31 @@
   link: https://registry.opendata.aws/multiconer/
   verified: 2026-06-10
   desc: "Complex NER: creative works, groups, products; Bangla track."
+  bibtex: |-
+    @inproceedings{malmasi-etal-2022-semeval,
+        title = "{S}em{E}val-2022 Task 11: Multilingual Complex Named Entity Recognition ({M}ulti{C}o{NER})",
+        author = "Malmasi, Shervin  and
+          Fang, Anjie  and
+          Fetahu, Besnik  and
+          Kar, Sudipta  and
+          Rokhlenko, Oleg",
+        editor = "Emerson, Guy  and
+          Schluter, Natalie  and
+          Stanovsky, Gabriel  and
+          Kumar, Ritesh  and
+          Palmer, Alexis  and
+          Schneider, Nathan  and
+          Singh, Siddharth  and
+          Ratan, Shyam",
+        booktitle = "Proceedings of the 16th International Workshop on Semantic Evaluation (SemEval-2022)",
+        month = jul,
+        year = "2022",
+        address = "Seattle, United States",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2022.semeval-1.196/",
+        doi = "10.18653/v1/2022.semeval-1.196",
+        pages = "1412--1437"
+    }
 - id: bner
   name: B-NER
   task: ner
@@ -20,17 +45,37 @@
   link: https://www.kaggle.com/datasets/mdzahidulhaquealvi/b-ner
   verified: 2026-07-19
   desc: Largest gold-standard Bangla NER corpus, 8 entity types.
+  bibtex: |-
+    @article{Haque_2023, title={B-NER: A Novel Bangla Named Entity Recognition Dataset With Largest Entities and Its Baseline Evaluation}, volume={11}, ISSN={2169-3536}, url={http://dx.doi.org/10.1109/ACCESS.2023.3267746}, DOI={10.1109/access.2023.3267746}, journal={IEEE Access}, publisher={Institute of Electrical and Electronics Engineers (IEEE)}, author={Haque, Md. Zahidul and Zaman, Sakib and Saurav, Jillur Rahman and Haque, Summit and Islam, Md. Saiful and Amin, Mohammad Ruhul}, year={2023}, pages={45194–45205} }
 - id: wikiann
   name: WikiANN (bn)
   task: ner
   size: 12,000 sentences
   sizeN: 12000
-  license: ODC-BY
+  license: ODC-By; research use only
   year: 2019
-  source: Cross-lingual name tagging (ACL 2017)
+  source: Massively Multilingual Transfer for NER (ACL 2019)
   link: https://huggingface.co/datasets/unimelb-nlp/wikiann
-  verified: 2026-07-19
-  desc: Silver-standard PER/LOC/ORG from Wikipedia anchors.
+  verified: 2026-09-08
+  desc: "Silver standard Wikipedia PER/LOC/ORG annotations in the Rahimi et al. balanced splits; Bengali train/validation/test contain 10,000/1,000/1,000 sentences. The license field records the original release's ODC-By and 'For research use only' statements."
+  bibtex: |-
+    @inproceedings{rahimi-etal-2019-massively,
+        title = "Massively Multilingual Transfer for {NER}",
+        author = "Rahimi, Afshin  and
+          Li, Yuan  and
+          Cohn, Trevor",
+        editor = "Korhonen, Anna  and
+          Traum, David  and
+          M{\`a}rquez, Llu{\'i}s",
+        booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
+        month = jul,
+        year = "2019",
+        address = "Florence, Italy",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/P19-1015/",
+        doi = "10.18653/v1/P19-1015",
+        pages = "151--164"
+    }
 - id: ancholikner
   name: ANCHOLIK-NER
   task: ner
@@ -42,6 +87,17 @@
   link: https://data.mendeley.com/datasets/gbkszkt8z3/4
   verified: 2026-07-19
   desc: Bangla regional NER across five dialects with 10 entity types, BIO-tagged.
+  bibtex: |-
+    @misc{paul2025ancholiknerbenchmarkdatasetbangla,
+          title={ANCHOLIK-NER: A Benchmark Dataset for Bangla Regional Named Entity Recognition},
+          author={Bidyarthi Paul and Faika Fairuj Preotee and Shuvashis Sarker and Shamim Rahim Refat and Shifat Islam and Tashreef Muhammad and Mohammad Ashraful Hoque and Shahriar Manzoor},
+          year={2025},
+          eprint={2502.11198},
+          archivePrefix={arXiv},
+          primaryClass={cs.CL},
+          doi={https://doi.org/10.1371/journal.pone.0342786},
+          url={https://arxiv.org/abs/2502.11198},
+    }
 - id: banglameder
   name: Bangla-MedER
   task: ner
@@ -53,6 +109,8 @@
   link: https://data.mendeley.com/datasets/jt4gywvwtj/2
   verified: 2026-07-26
   desc: Manually annotated medical text covering six entity types, with a separate English translation.
+  bibtex: |-
+    @article{Sheikh_2026, title={Bangla-MedER: An annotated Bangla dataset for multi-type medical entity recognition from medical text}, volume={66}, ISSN={2352-3409}, url={http://dx.doi.org/10.1016/j.dib.2026.112705}, DOI={10.1016/j.dib.2026.112705}, journal={Data in Brief}, publisher={Elsevier BV}, author={Sheikh, Rubel and Rafiq, Shifat Ara and Hasan, Md. Mehedi and Ahmed, Shakil and Aurpa, Tanjim Taharat and Akter, Farzana}, year={2026}, month=June, pages={112705} }
 - id: bannerd
   name: BanNERD
   task: ner

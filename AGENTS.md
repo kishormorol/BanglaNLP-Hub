@@ -12,8 +12,8 @@ cannot source.**
 
 - No invented scores, citation counts, star counts, or BibTeX. If a field is
   unknown, omit it — the UI already hides the affected element.
-- Of the 11 leaderboards, 10 intentionally have `rows: []`; only B-REASO
-  (`llm.yaml`) is populated, from a cited source. Do not populate the empty ones
+- Of the 11 leaderboards, 9 intentionally have `rows: []`; B-REASO (`llm.yaml`)
+  and BanglaRQA (`qa.yaml`) are populated from cited sources. Do not populate the empty ones
   with plausible numbers. Rows require a citation to the paper the score came from.
 - Do not "fix" a broken entry by guessing a replacement URL. Verify it first.
 
@@ -46,7 +46,11 @@ Anthology `.bib`, the arXiv API, or the Hugging Face API.
 **Dataset fields are partly audited** (2026-07-19) — see TODO-data.md for the full
 per-entry status. `license` and `size`/`year` have each had a pass. The `udbru`
 suspicion was correct and worse than recorded: it claimed ~7,340 tokens when the
-treebank has **320**. `bhs` is still known wrong (30,000 documents, unsupported).
+treebank has **320**. The 2026-09-08 audit of release files corrected `bhs` to 3,418
+labelled statements in v1.0. Its MIT label cites the original repository license.
+WikiANN records both original release clauses as `ODC-By; research use only`.
+See TODO-data.md for pinned license sources, version scope, and the SentNoB,
+FLORES, TyDi QA, and WikiANN findings.
 Roughly a third of `size` values remain unverified because the host is not
 machine-checkable.
 

@@ -313,6 +313,20 @@
   year: 2023
   link: https://aclanthology.org/2023.contents-1.7/
   task: textcls
+- id: arxiv-2304-02739
+  title: Bengali Fake Review Detection using Semi-supervised Generative Adversarial Networks
+  authors: Shawon et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2304.02739
+  task: textcls
+- id: arxiv-2308-01987
+  title: "Bengali Fake Reviews: A Benchmark Dataset and Detection System"
+  authors: Shahariar et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2308.01987
+  task: textcls
 - id: ahmed-etal-2023-bengali-news-headline-categorization
   title: "Bengali News Headline Categorization: A Comprehensive Analysis of Machine Learning and Deep Learning Approach"
   authors: Ahmed et al.
