@@ -9,6 +9,37 @@
   link: https://github.com/Rowan1224/FakeNews
   verified: 2026-06-11
   desc: Annotated fake vs. authentic Bangla news articles.
+  bibtex: |-
+    @inproceedings{hossain-etal-2020-banfakenews,
+        title = "{B}an{F}ake{N}ews: A Dataset for Detecting Fake News in {B}angla",
+        author = "Hossain, Md Zobaer  and
+          Rahman, Md Ashraful  and
+          Islam, Md Saiful  and
+          Kar, Sudipta",
+        editor = "Calzolari, Nicoletta  and
+          B{\'e}chet, Fr{\'e}d{\'e}ric  and
+          Blache, Philippe  and
+          Choukri, Khalid  and
+          Cieri, Christopher  and
+          Declerck, Thierry  and
+          Goggi, Sara  and
+          Isahara, Hitoshi  and
+          Maegaard, Bente  and
+          Mariani, Joseph  and
+          Mazo, H{\'e}l{\`e}ne  and
+          Moreno, Asuncion  and
+          Odijk, Jan  and
+          Piperidis, Stelios",
+        booktitle = "Proceedings of the Twelfth Language Resources and Evaluation Conference",
+        month = may,
+        year = "2020",
+        address = "Marseille, France",
+        publisher = "European Language Resources Association",
+        url = "https://aclanthology.org/2020.lrec-1.349/",
+        pages = "2862--2871",
+        language = "eng",
+        ISBN = "979-10-95546-34-4"
+    }
 - id: potrika
   name: Potrika
   task: textcls
@@ -20,6 +51,16 @@
   link: https://doi.org/10.17632/v362rp78dc.2
   verified: 2026-01-30
   desc: Large single-label news corpus, 8 categories, 6 dailies.
+  bibtex: |-
+    @misc{ahmad2022potrikarawbalancednewspaper,
+          title={Potrika: Raw and Balanced Newspaper Datasets in the Bangla Language with Eight Topics and Five Attributes},
+          author={Istiak Ahmad and Fahad AlQurashi and Rashid Mehmood},
+          year={2022},
+          eprint={2210.09389},
+          archivePrefix={arXiv},
+          primaryClass={cs.CL},
+          url={https://arxiv.org/abs/2210.09389},
+    }
 - id: bard
   name: BARD
   task: textcls
@@ -31,6 +72,8 @@
   link: https://github.com/tanvirfahim15/BARD-Bangla-Article-Classifier
   verified: 2026-02-14
   desc: News articles across 5 categories.
+  bibtex: |-
+    @inproceedings{Tanvir_Alam_2018, title={BARD: Bangla Article Classification Using a New Comprehensive Dataset}, url={http://dx.doi.org/10.1109/ICBSLP.2018.8554382}, DOI={10.1109/icbslp.2018.8554382}, booktitle={2018 International Conference on Bangla Speech and Language Processing (ICBSLP)}, publisher={IEEE}, author={Tanvir Alam, Md and Mofijul Islam, Md}, year={2018}, month=Sept, pages={1–5} }
 - id: bttc
   name: BTTC
   task: textcls
@@ -42,6 +85,16 @@
   link: https://doi.org/10.17632/5wrm959d6f.1
   verified: 2026-07-24
   desc: Tri-class Bangla SMS/Telegram corpus for spam, ham, and promotional message classification.
+  bibtex: |-
+    @misc{https://doi.org/10.17632/5wrm959d6f.1,
+      doi = {10.17632/5WRM959D6F.1},
+      url = {https://data.mendeley.com/datasets/5wrm959d6f/1},
+      author = {Tahmid, Labib and Abedin, Istiak and Ahmed, Kawsar and Hassan Chowdhury , Zinedin and Sultana, Babe },
+      keywords = {Computer Science, Artificial Intelligence, Cybersecurity, Natural Language Processing, Machine Learning},
+      title = {BTTC - A Bangla Tri-class Text Corpus for Spam, Ham, and Promotional Messages},
+      publisher = {Mendeley Data},
+      year = {2026}
+    }
 - id: banfakenews2
   name: BanFakeNews-2.0
   task: textcls
@@ -53,3 +106,23 @@
   link: https://www.kaggle.com/datasets/hrithikmajumdar/bangla-fake-news
   verified: 2026-07-26
   desc: Fake-news corpus with 47,000 authentic and 13,000 manually annotated fake articles across 13 categories.
+  bibtex: |-
+    @inproceedings{shibu-etal-2025-scarcity,
+        title = "From Scarcity to Capability: Empowering Fake News Detection in Low-Resource Languages with {LLM}s",
+        author = "Shibu, Hrithik Majumdar  and
+          Datta, Shrestha  and
+          Miah, Md. Sumon  and
+          Sami, Nasrullah  and
+          Chowdhury, Mahruba Sharmin  and
+          Islam, Md Saiful",
+        editor = "Weerasinghe, Ruvan  and
+          Anuradha, Isuri  and
+          Sumanathilaka, Deshan",
+        booktitle = "Proceedings of the First Workshop on Natural Language Processing for Indo-Aryan and Dravidian Languages",
+        month = jan,
+        year = "2025",
+        address = "Abu Dhabi",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2025.indonlp-1.12/",
+        pages = "100--107"
+    }

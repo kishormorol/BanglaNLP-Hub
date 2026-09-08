@@ -31,6 +31,8 @@ import { tools } from '../lib/data.ts';
         tools.map((t) => (
           <div
             class="toolcard"
+            id={t.id}
+            tabindex="-1"
             style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:10px"
           >
             <div style="display:flex;align-items:baseline;gap:10px">
@@ -73,6 +75,14 @@ import { tools } from '../lib/data.ts';
 </Base>
 
 <style>
+  .toolcard {
+    scroll-margin-top: 80px;
+  }
+  .toolcard:target,
+  .toolcard:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 3px;
+  }
   .toolcard:hover {
     border-color: var(--green);
   }
