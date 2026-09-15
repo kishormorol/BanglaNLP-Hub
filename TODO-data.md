@@ -11,11 +11,11 @@ ids and links are unchanged; version and split scope are explicit in the entries
 
 | id | result | pinned evidence |
 | --- | --- | --- |
-| `bhs` | Corrected 30,000 documents to 3,418 labelled statements in v1.0. Kept 2020 and identified the version in `source`. Each record has one of five labels, not multiple labels. | [v1.0 file](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/bengali_%20hate_v1.0.csv), [README](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/README.md) |
+| `bhs` | Corrected 30,000 documents to 3,418 labelled statements in v1.0. Kept 2020 and identified the version in `source`. Each record has one of five labels, not multiple labels. Retained MIT from the original repository's root license and attributed it in `desc`. | [v1.0 file](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/bengali_%20hate_v1.0.csv), [README](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/README.md), [root license](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/LICENSE#L1-L10) |
 | `sentnob` | Confirmed 15,728 comments: Train 12,575 + Val 1,567 + Test 1,586. Corrected the license to CC BY-ND 4.0, as declared on the author's HF card. Kept 2021. | [release files](https://huggingface.co/datasets/khondoker/SentNoB/tree/7f9ab8ccd02457b79cd15d300fc1f0eece47b81b), [card](https://huggingface.co/datasets/khondoker/SentNoB/blob/7f9ab8ccd02457b79cd15d300fc1f0eece47b81b/README.md), [author's GitHub README](https://github.com/KhondokerIslam/SentNoB/blob/fd6fd0bb7163b5e713cb36ec4442628f84a257e0/README.md) |
 | `flores` | Corrected the public Bengali count to 2,009: dev 997 + devtest 1,012. The documented 3,001 total includes the hidden test split. Confirmed CC BY-SA 4.0 and the 2022 release year. | [ben_Beng split metadata via HF API](https://huggingface.co/api/datasets/facebook/flores/revision/71abf77d8b7beb5cfef59898d6b24d92ab7654fc), [composition](https://github.com/facebookresearch/flores/blob/a6c830c6e1051fb4ac1a44b32358f00463f332bd/flores200/README.md), [dataset license and release date](https://github.com/facebookresearch/flores/blob/a6c830c6e1051fb4ac1a44b32358f00463f332bd/README.md) |
 | `tydiqa` | Corrected ~10k to 11,096 Bengali primary-task questions: train 10,768 + dev 328. Identified v1.0 and excluded the separate GoldP task. Kept Apache 2.0 and 2020. | [primary-task release files](https://huggingface.co/datasets/google-research-datasets/tydiqa/tree/da78f23f9119363459acbaf46bf89426ff26c259/primary_task), [card](https://huggingface.co/datasets/google-research-datasets/tydiqa/blob/da78f23f9119363459acbaf46bf89426ff26c259/README.md), [task/version definitions](https://github.com/google-research-datasets/tydiqa/blob/43cde6d598c1cf88c1a8b9ed32e89263ffb5e03b/README.md) |
-| `wikiann` | Confirmed 12,000 sentences: train 10,000 + validation 1,000 + test 1,000. Corrected `source` to the Rahimi et al. 2019 balanced splits distributed at the existing link. Kept 2019. | [Bengali release files](https://huggingface.co/datasets/unimelb-nlp/wikiann/tree/f0a3be6dc5564c0cc4150bb660144800a1f539d4/bn), [version and split documentation](https://huggingface.co/datasets/unimelb-nlp/wikiann/blob/f0a3be6dc5564c0cc4150bb660144800a1f539d4/README.md) |
+| `wikiann` | Confirmed 12,000 sentences: train 10,000 + validation 1,000 + test 1,000. Corrected `source` to the Rahimi et al. 2019 balanced splits distributed at the existing link. Kept 2019. The license now records both original release clauses as `ODC-By; research use only`, with attribution in `desc`. | [Bengali release files](https://huggingface.co/datasets/unimelb-nlp/wikiann/tree/f0a3be6dc5564c0cc4150bb660144800a1f539d4/bn), [version and split documentation](https://huggingface.co/datasets/unimelb-nlp/wikiann/blob/f0a3be6dc5564c0cc4150bb660144800a1f539d4/README.md), [original license statement](https://github.com/elisa-ie/elisa-ie.github.io/blob/75856b5a3b594566be5f3dee49cddece5f2e9870/wikiann/index.html#L59) |
 
 BHS v1.0 was parsed as tab-separated data despite its `.csv` extension. Its 3,418
 records contain 3,185 distinct text strings. Label counts are geopolitical 1,379,
@@ -35,12 +35,22 @@ the publisher's `ben_Beng` card metadata through the revision-pinned HF API.
 FLORES was not recounted locally because its HF files require access approval
 and returned HTTP 401 without authentication.
 
-Two license questions remain unresolved, and their catalog values are unchanged.
-BHS has an [MIT LICENSE](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/LICENSE),
-but the README says the dataset is available "only for research purposes".
-WikiANN's HF card declares `unknown` and leaves its licensing section unfilled;
-it does not establish the inherited ODC-BY value. Neither a paper license nor a
-repository software license resolves dataset permissions by itself.
+BHS retains MIT from the original repository's
+[root LICENSE](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/LICENSE#L1-L10).
+The description identifies it as the repository license. The README's
+[general warning](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/README.md#L5)
+describes collection and annotation for research purposes. Its availability
+statement saying "only for research purposes" appears under
+[v2.0](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/README.md#L61-L71),
+so the catalog does not assign that statement to v1.0.
+
+WikiANN's [original release](https://github.com/elisa-ie/elisa-ie.github.io/blob/75856b5a3b594566be5f3dee49cddece5f2e9870/wikiann/index.html#L59)
+says "This data is licensed under the Attribution License (ODC-By). For research use only."
+The catalog preserves both clauses as `ODC-By; research use only`. The linked
+balanced distribution's [HF card](https://huggingface.co/datasets/unimelb-nlp/wikiann/blob/f0a3be6dc5564c0cc4150bb660144800a1f539d4/README.md)
+lists `unknown`; the displayed license is attributed to the original release,
+not to that card. These labels record source statements without deciding their
+legal effect or granting permission for every item of content.
 
 ## Bengali-Loop ASR corpus filed (2026-08-10)
 
@@ -376,7 +386,7 @@ BTTC cites a dataset release; the other 27 entries cite papers.
 
 | id | Canonical export | Primary matching evidence and caveats |
 | --- | --- | --- |
-| `bhs` | [arXiv](https://arxiv.org/bibtex/2004.07807) | The [pinned author README](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/README.md) assigns this paper to v1.0 with 3,418 samples. DeepHateExplainer belongs to v2.0. The license dispute and README class count discrepancy remain open. |
+| `bhs` | [arXiv](https://arxiv.org/bibtex/2004.07807) | The [pinned author README](https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset/blob/9e1ce5b6b46f8353c20a179abdbcd35077fdda1c/README.md) assigns this paper to v1.0 with 3,418 samples. DeepHateExplainer belongs to v2.0. The metadata audit above attributes MIT to the repository license. The README class count discrepancy remains open. |
 | `alert` | [Crossref](https://api.crossref.org/works/10.1016/j.dib.2025.112094/transform/application/x-bibtex) | The [publisher article in PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12516529/) identifies the exact [Mendeley v1](https://data.mendeley.com/datasets/f4xz5d4fzd/1), 4,027 texts, four classes, and English translations. |
 | `banglatoco` | [Crossref](https://api.crossref.org/works/10.1016/j.dib.2025.112277/transform/application/x-bibtex) | The [publisher article in PMC](https://pmc.ncbi.nlm.nih.gov/articles/PMC12703972/) identifies the exact [Mendeley v3](https://data.mendeley.com/datasets/gphbs7vsbz/3), 1,004 comments with 507 toxic and 497 nontoxic labels. |
 | `flores` | [arXiv](https://arxiv.org/bibtex/2207.04672) | The [pinned FLORES-200 README](https://github.com/facebookresearch/flores/blob/a6c830c6e1051fb4ac1a44b32358f00463f332bd/flores200/README.md) requests NLLB 2022 and lists `ben_Beng`. Parent benchmark citation, not FLORES-101, FLORES+, or a Bengali dataset DOI. |
@@ -433,12 +443,15 @@ and the remainder that matched their source exactly.
 
 Corrected in this pass: `globalmmlu` — HF card states apache-2.0, not CC BY 4.0.
 
+The September metadata audit above records BHS's repository MIT license and
+WikiANN's original `ODC-By; research use only` statement. WikiANN is removed from
+this pending list; its HF card's `unknown` metadata is documented above.
+
 | id | our license | what the source says |
 | --- | --- | --- |
 | `bdshs` | CC BY-NC 4.0 | repo LICENSE is MIT (may cover code only; README silent) |
 | `tbolid` | CC BY 4.0 | repo LICENSE is AGPL-3.0 (may cover code only; README silent) |
 | `megaverse` | Mixed | repo LICENSE is MIT |
-| `wikiann` | ODC-BY | HF card says "unknown" |
 | `bnmmlu` | CC BY-SA 4.0 | LICENSE file text says CC BY-SA 4.0; GitHub reports NOASSERTION — ours is probably right |
 | `benqa` | CC BY-NC-SA 4.0 | repo declares no LICENSE |
 | `banglanmt` | Research only | repo declares no LICENSE |

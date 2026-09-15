@@ -49,7 +49,7 @@
   source: Bengali Hate Speech v1.0 (Karim et al., 2020)
   link: https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset
   verified: 2026-09-08
-  desc: "v1.0 release with one label per statement: geopolitical, religious, personal, gender abusive, or political hate."
+  desc: "v1.0 release with one label per statement: geopolitical, religious, personal, gender abusive, or political hate. Repository license: MIT."
   bibtex: |-
     @misc{karim2020classificationbenchmarksunderresourcedbengali,
           title={Classification Benchmarks for Under-resourced Bengali Language based on Multichannel Convolutional-LSTM Network},
