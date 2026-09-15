@@ -462,16 +462,57 @@ The source ledger reports that Pandoc omitted BARD's month; the canonical tokens
 and year fields are retained. Citation matching does not resolve the existing
 metadata questions or replace dataset release dates with paper publication dates.
 
+### Verified UD release citation
+
+Verified on September 8, 2026. `udbru` now cites **Universal Dependencies 2.9**,
+issued November 15, 2021. The identifier is [Handle 11234/1-4611](http://hdl.handle.net/11234/1-4611),
+not a DOI. The [official deposit](https://lindat.mff.cuni.cz/repository/items/32ee1b06-e9e7-4942-ac6d-3de64af47c6d),
+[metadata API](https://lindat.mff.cuni.cz/repository/server/api/core/items/32ee1b06-e9e7-4942-ac6d-3de64af47c6d),
+and [canonical BibTeX export](https://lindat.mff.cuni.cz/repository/server/api/core/refbox/citations?type=bibtex&handle=11234/1-4611)
+identify the release. The citation preserves all 477 authors in export order,
+every field, TeX escapes, Unicode, and internal whitespace. Only trailing
+whitespace on each line is trimmed. It credits the complete multilingual release,
+including this treebank, without attributing the treebank to all release authors.
+
+The [official archive](https://lindat.mff.cuni.cz/repository/server/api/core/bitstreams/b6ba6512-596e-4f7f-a211-d61e8bb1b344/content),
+`ud-treebanks-v2.9.tgz`, contains `UD_Bengali-BRU` with 56 sentences and 320 tokens,
+all in the test split. The complete downloaded archive matched the deposit's MD5
+`2d5d04a1868093977cef42c92c870153`. Its treebank file is byte identical to the
+[official CoNLL-U file](https://raw.githubusercontent.com/UniversalDependencies/UD_Bengali-BRU/7c3a8408c2771b4fd0b11b2cd8eb9edf7e6ba373/bn_bru-ud-test.conllu)
+at the `r2.9` commit `7c3a8408c2771b4fd0b11b2cd8eb9edf7e6ba373`.
+The [pinned statistics](https://github.com/UniversalDependencies/UD_Bengali-BRU/blob/7c3a8408c2771b4fd0b11b2cd8eb9edf7e6ba373/stats.xml)
+confirm the same counts. The [pinned README](https://github.com/UniversalDependencies/UD_Bengali-BRU/blob/7c3a8408c2771b4fd0b11b2cd8eb9edf7e6ba373/README.md)
+records the initial UD 2.9 release but still has only `* (citation)` under
+References. This is a release citation, not a separate treebank paper. No
+`udbru-p` record is restored. Existing dataset fields remain unchanged apart from
+the added citation and a sentence explaining its scope.
+
 ## Datasets missing BibTeX
 
-2 datasets still lack BibTeX. Their copy buttons remain hidden. Establish the
+1 dataset still lacks BibTeX, SNLTR. Its copy button remains hidden. Establish the
 resource association before adding an export under the canonical source policy
-above. Neither absence justifies inventing a citation.
+above. An unresolved identity does not justify inventing a citation.
 
 | Task | Dataset | id | Evidence and next requirement |
 | --- | --- | --- | --- |
-| `pos` | UD Bengali-BRU Treebank | `udbru` | The [official README](https://github.com/UniversalDependencies/UD_Bengali-BRU/blob/master/README.md) has only `* (citation)` under References and records the initial UD v2.9 release on 2021-11-15. It supplies no usable paper citation; this does not prove no paper exists. Do not recreate the removed invented `udbru-p` or substitute a generic UD paper. A release DOI would require an explicitly identified release and a separate citation choice. |
-| `pos` | SNLTR POS Corpus | `snltr` | The [catalog address](http://nltr.org/snltr-software/) redirects through HTTPS to [the current host](https://nltr.itewb.gov.in), which timed out during the 2026-09-08 research pass. Browser reads returned `target_unreachable` or `proxy_error`; a direct 15 second probe returned curl exit 28. Searches found no primary source authenticating the paper association for the claimed 7,390 sentences, 40 tags, and 2010 resource. Needs a reachable official corpus README, author release, or authenticated archive; a downstream tagging paper is insufficient. |
+| `pos` | SNLTR POS Corpus | `snltr` | The [archived original directory](https://web.archive.org/web/20090911101117/http://nltr.org:80/snltr-software/) distributes distinct CEL and MSR Bengali resources. The combined catalog claims of 7,390 sentences, 40 tags, and 2010 remain unverified. The blocker is resource identity, beyond the current host's access failures. Identify the intended corpus and version before choosing a citation. All existing fields remain unchanged. |
+
+### SNLTR archive findings
+
+The [archived CEL README](https://web.archive.org/web/20090901180720/http://www.cel.iitkgp.ernet.in:80/%7Enltr/resources/POS_Tagger/POS_Tagger_IITKGP/Readme.txt)
+describes a CEL resource with 40 tags and explicitly lists
+[Dandapat, Sarkar, and Basu's ACL 2007 paper](https://aclanthology.org/P07-2056/).
+That paper reports 3,625 training sentences and 400 test sentences. This verifies
+the CEL resource association, not the catalog's 7,390 sentences or 2010 year.
+
+The separate [archived MSR README](https://web.archive.org/web/20090901180615/http://www.cel.iitkgp.ernet.in:80/%7Enltr/resources/POS_Tagger/MSR/README_pos_tagger_bangla_linux)
+identifies Microsoft Research India data using IL-POST. The official
+[LDC2010T16 deposit](https://catalog.ldc.upenn.edu/LDC2010T16) and its
+[original README](https://catalog.ldc.upenn.edu/docs/LDC2010T16/README_bangla-data.pdf)
+give 7,168 sentences and 102,933 words for the separate MSR resource released in
+2010. The archived 2009 tagger package is not established as the same version.
+Neither resource authenticates the catalog's combined identity or license.
+No SNLTR BibTeX is added, and no unrelated paper fills the gap.
 
 ## Dataset licenses needing verification
 

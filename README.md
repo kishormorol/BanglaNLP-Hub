@@ -84,7 +84,7 @@ The catalog is only useful if its contents are true, so the project holds a hard
 - **Links are checked.** Every published `link:` URL is verified nightly. Unverified `data/inbox/` candidates are excluded. Dead links are reported in a single tracking issue; entries are never removed automatically.
 - **Entries get verified by hand.** Papers have been audited against the ACL Anthology, arXiv, and OpenAlex (title, authors, and abstract), and their task assignments are being spot-checked and corrected. Several entries inherited from the original design prototype turned out to be fabricated — a duplicate under an invented title, a model that does not exist, a paper with no publication — and were removed.
 
-Known gaps are tracked in [`TODO-data.md`](./TODO-data.md): 2 datasets lack BibTeX and nine of the eleven leaderboards await rows.
+Known gaps are tracked in [`TODO-data.md`](./TODO-data.md): 1 dataset lacks BibTeX, SNLTR, and nine of the eleven leaderboards await rows.
 
 Canonical BibTeX may come from ACL Anthology, arXiv, a publisher export, or an
 official Crossref or DataCite export of registered metadata. Both
@@ -134,7 +134,7 @@ These are concrete, self-contained, and each one is genuinely useful on its own 
 
 - **Reviewing paper tasks.** Most of the 712 papers were bulk-imported (ACL Anthology, arXiv, and hand-verified OpenAlex journal articles); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
 - **Leaderboard rows.** Nine of the eleven benchmarks ship empty. Each needs scores with a citation to the paper they came from. Keep the dataset version, test split, and evaluation conditions explicit.
-* **BibTeX.** 2 datasets have no citation entry, `udbru` and `snltr`. Establish the resource association before copying a canonical export under the policy above. Do not invent a citation.
+* **BibTeX.** 1 dataset has no citation entry, `snltr`. Establish the resource association before copying a canonical export under the policy above. Do not invent a citation.
 - **Unverified dataset sizes.** About a dozen datasets are hosted where no count is published (Kaggle, openslr.org, nltr.org). If you know the paper, you can settle these.
 - **Missing resources.** New papers, datasets, models, and tools — especially anything published recently, and anything from researchers outside the usual venues.
 
