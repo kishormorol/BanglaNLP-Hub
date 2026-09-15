@@ -19,7 +19,7 @@ const V = {
   nav: {
     wrap: 'position:relative;flex:0 1 260px;min-width:110px',
     input:
-      "width:100%;padding:7px 12px 7px 30px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font-size:13.5px;font-family:'IBM Plex Sans',sans-serif;outline:none",
+      "width:100%;padding:7px 12px 7px 30px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font-size:13.5px;font-family:'IBM Plex Sans',sans-serif",
     icon: 'position:absolute;left:10px;top:8px;color:var(--text2);font-size:13px',
     panel:
       'position:absolute;top:40px;left:0;right:0;max-width:360px;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(10,30,20,0.12);overflow:hidden;max-height:340px;overflow-y:auto;z-index:20',
@@ -28,7 +28,7 @@ const V = {
   hero: {
     wrap: 'position:relative;max-width:600px;margin:32px auto 0',
     input:
-      "width:100%;padding:15px 20px 15px 46px;border:1.5px solid var(--border);border-radius:12px;background:var(--surface);color:var(--text);font-size:15.5px;font-family:'IBM Plex Sans',sans-serif;outline:none;box-shadow:0 2px 10px rgba(14,60,40,0.05)",
+      "width:100%;padding:15px 20px 15px 46px;border:1.5px solid var(--border);border-radius:12px;background:var(--surface);color:var(--text);font-size:15.5px;font-family:'IBM Plex Sans',sans-serif;box-shadow:0 2px 10px rgba(14,60,40,0.05)",
     icon: 'position:absolute;left:17px;top:15px;color:var(--text2);font-size:18px',
     panel:
       'position:absolute;top:58px;left:0;right:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(10,30,20,0.14);overflow:hidden;z-index:20;text-align:left;max-height:360px;overflow-y:auto',
@@ -41,7 +41,6 @@ const V = {
   data-search
   data-variant={variant}
   data-index-url={`${base}/search-index.json`}
-  data-contribute-url={`${base}/contribute`}
   style={V.wrap}
 >
   <input
@@ -51,6 +50,7 @@ const V = {
     placeholder={V.placeholder}
     aria-label="Search the catalog"
     role="combobox"
+    aria-autocomplete="list"
     aria-expanded="false"
     aria-controls={`${id}-results`}
     data-search-input
@@ -58,22 +58,39 @@ const V = {
   />
   <span aria-hidden="true" style={V.icon}>⌕</span>
   <div
-    id={`${id}-results`}
-    role="listbox"
-    aria-label="Search results"
     data-search-panel
+    tabindex="-1"
     hidden
     style={V.panel}
   >
+    <div role="status" aria-live="polite" data-search-status style="padding:10px 12px;font-size:12px;color:var(--text2)"></div>
+    <div id={`${id}-results`} role="listbox" aria-label="Search results" data-search-results></div>
   </div>
 </div>
 
 <style>
   [data-search] input:focus {
     border-color: var(--green);
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
   }
-  [data-search] [data-search-panel] a:hover {
+  [data-search] :global([role='option']:hover),
+  [data-search] :global([aria-selected='true']) {
     background: var(--surface2);
+    box-shadow: inset 3px 0 var(--green);
+  }
+  [data-search] :global([role='option']:focus-visible) {
+    outline: 2px solid var(--green);
+    outline-offset: -2px;
+  }
+  @media (max-width: 640px) {
+    [data-search][data-variant='nav'] [data-search-panel] {
+      position: fixed !important;
+      top: 60px !important;
+      left: 16px !important;
+      right: 16px !important;
+      max-width: none !important;
+    }
   }
 </style>
 
@@ -93,8 +110,15 @@ const V = {
     if (index) return Promise.resolve();
     if (!pending) {
       pending = fetch(url)
-        .then((r) => r.json())
+        .then((r) => {
+          if (!r.ok) throw new Error('Search index unavailable');
+          return r.json();
+        })
         .then((j) => {
+          if (!Array.isArray(j) || !j.every((r) =>
+            r && ['type', 'name', 'meta', 'href'].every((key) => typeof r[key] === 'string') &&
+            (r.keywords === undefined || typeof r.keywords === 'string')
+          )) throw new Error('Invalid search index');
           index = j;
         })
         .catch(() => {
@@ -107,11 +131,31 @@ const V = {
   document.querySelectorAll<HTMLElement>('[data-search]').forEach((root) => {
     const input = root.querySelector<HTMLInputElement>('[data-search-input]');
     const panel = root.querySelector<HTMLElement>('[data-search-panel]');
-    if (!input || !panel) return;
+    const results = root.querySelector<HTMLElement>('[data-search-results]');
+    const status = root.querySelector<HTMLElement>('[data-search-status]');
+    if (!input || !panel || !results || !status) return;
 
     const hero = root.dataset.variant === 'hero';
     const indexUrl = root.dataset.indexUrl!;
-    const contributeUrl = root.dataset.contributeUrl!;
+    let active = -1;
+    let options: HTMLAnchorElement[] = [];
+    let revision = 0;
+
+    function select(next: number, scroll = true) {
+      active = next;
+      options.forEach((option, i) => option.setAttribute('aria-selected', String(i === active)));
+      if (options[active]) {
+        input!.setAttribute('aria-activedescendant', options[active].id);
+        if (scroll) options[active].scrollIntoView({ block: 'nearest' });
+      } else input!.removeAttribute('aria-activedescendant');
+    }
+
+    function close() {
+      revision++;
+      panel!.hidden = true;
+      input!.setAttribute('aria-expanded', 'false');
+      select(-1, false);
+    }
 
     // Row metrics differ between the nav and hero variants in the prototype.
     const pad = hero ? '11px 16px' : '9px 12px';
@@ -120,56 +164,94 @@ const V = {
     const metaSize = hero ? '12px' : '11.5px';
     const gap = hero ? '12px' : '10px';
 
-    function render() {
+    async function render() {
+      const current = ++revision;
       const q = input!.value.trim().toLowerCase();
       if (q.length < 2 || document.activeElement !== input) {
-        panel!.hidden = true;
-        input!.setAttribute('aria-expanded', 'false');
+        close();
         return;
       }
+      select(-1, false);
+      options = [];
+      results!.replaceChildren();
+      panel!.hidden = false;
+      input!.setAttribute('aria-expanded', 'true');
       if (!index) {
-        load(indexUrl).then(() => {
-          if (index) render();
-        });
-        return;
+        status!.textContent = 'Loading search results...';
+        await load(indexUrl);
+        if (current !== revision) return;
+        if (!index) {
+          status!.textContent = 'Search could not load. Type again to retry, or browse the catalog using the menu.';
+          return;
+        }
       }
       const terms = q.split(/\s+/);
+      const rank = (name: string) => {
+        const text = name.toLowerCase();
+        return text === q ? 0 : text.startsWith(q) ? 1 : text.includes(q) ? 2 : 3;
+      };
       const hits = index
         .filter((r) => {
           const text = `${r.name} ${r.meta} ${r.keywords ?? ''}`.toLowerCase();
           return terms.every((term) => text.includes(term));
         })
-        .slice(0, 8);
+        .sort((a, b) => rank(a.name) - rank(b.name));
 
-      panel!.innerHTML = hits.length
-        ? hits
+      results!.innerHTML = hits
             .map(
-              (r) =>
-                `<a role="option" href="${esc(r.href)}" style="display:flex;gap:${gap};align-items:baseline;padding:${pad};border-bottom:1px solid var(--border);text-decoration:none">` +
+              (r, i) =>
+                `<a id="${input!.id}-option-${i}" role="option" aria-selected="false" tabindex="-1" href="${esc(r.href)}" style="display:flex;gap:${gap};align-items:baseline;padding:${pad};border-bottom:1px solid var(--border);text-decoration:none">` +
                 `<span style="font-size:10.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--red);flex-shrink:0;width:${typeW}">${esc(r.type)}</span>` +
-                `<span style="font-size:${nameSize};color:var(--text);overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc(r.name)}</span>` +
-                `<span style="font-size:${metaSize};color:var(--text2);margin-left:auto;flex-shrink:0">${esc(r.meta)}</span>` +
+                `<span style="min-width:0;overflow-wrap:anywhere"><span ${/[\u0980-\u09ff]/.test(r.name) ? 'class="bn"' : ''} style="display:block;font-size:${nameSize};color:var(--text)">${esc(r.name)}</span>` +
+                `<span ${/[\u0980-\u09ff]/.test(r.meta) ? 'class="bn"' : ''} style="display:block;font-size:${metaSize};color:var(--text2);margin-top:3px">${esc(r.meta)}</span></span>` +
                 `</a>`,
             )
-            .join('')
-        : hero
-          ? `<div style="padding:14px 16px;font-size:14px;color:var(--text2)">No matches in the catalog yet — <a href="${esc(contributeUrl)}">add it via PR</a>.</div>`
-          : `<div style="padding:12px;font-size:13px;color:var(--text2)">No matches in the catalog.</div>`;
-
-      panel!.hidden = false;
-      input!.setAttribute('aria-expanded', 'true');
+            .join('');
+      options = [...results!.querySelectorAll<HTMLAnchorElement>('[role="option"]')];
+      panel!.scrollTop = 0;
+      status!.textContent = hits.length
+        ? `${hits.length} ${hits.length === 1 ? 'result' : 'results'}. Use arrow keys to select and Enter to open.`
+        : 'No matches in the catalog. Try another name, author, or task.';
     }
 
-    input.addEventListener('focus', () => {
-      load(indexUrl);
-      render();
-    });
+    input.addEventListener('focus', render);
     input.addEventListener('input', render);
-    input.addEventListener('blur', () => setTimeout(render, 200));
-    input.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        input.value = '';
-        render();
+    root.addEventListener('focusout', (e) => {
+      if (!root.contains(e.relatedTarget as Node | null)) close();
+    });
+    results.addEventListener('mouseover', (e) => {
+      const option = (e.target as HTMLElement).closest<HTMLAnchorElement>('[role="option"]');
+      if (option) select(options.indexOf(option), false);
+    });
+    results.addEventListener('focusin', (e) => {
+      select(options.indexOf(e.target as HTMLAnchorElement), false);
+    });
+    results.addEventListener('click', (e) => {
+      const option = (e.target as HTMLElement).closest<HTMLAnchorElement>('[role="option"]');
+      close();
+      // Reopen a filtered or collapsed target even when its hash has not changed.
+      if (option?.href === location.href && !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey) {
+        window.dispatchEvent(new HashChangeEvent('hashchange'));
+      }
+    });
+    root.addEventListener('keydown', (e) => {
+      if (e.isComposing) return;
+      if (e.key === 'Tab') {
+        close();
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        input.focus();
+        close();
+      } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (panel.hidden) void render();
+        if (options.length) select(e.key === 'ArrowDown'
+          ? (active + 1) % options.length
+          : (active < 0 ? options.length - 1 : (active - 1 + options.length) % options.length));
+        if (document.activeElement !== input) options[active]?.focus({ preventScroll: true });
+      } else if (e.key === 'Enter' && !panel.hidden && document.activeElement === input && options.length) {
+        e.preventDefault();
+        options[active < 0 ? 0 : active].click();
       }
     });
   });

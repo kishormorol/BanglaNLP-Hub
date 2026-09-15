@@ -186,14 +186,16 @@ export function searchIndex(): SearchEntry[] {
     ...datasets.map((d) => ({
       type: 'Dataset',
       name: d.name,
-      meta: d.size,
-      href: `${base}/tasks/${d.task}#datasets`,
+      meta: [taskName(d.task), d.size].filter(Boolean).join(' · '),
+      href: `${base}/datasets#${d.id}`,
+      keywords: `${d.task} ${d.desc} ${d.source}`,
     })),
     ...papers.map((p) => ({
       type: 'Paper',
       name: p.title,
-      meta: `${p.venue} ${p.year}`,
-      href: `${base}/tasks/${p.task}#papers`,
+      meta: `${p.authors} · ${taskName(p.task)} · ${p.venue} ${p.year}`,
+      href: `${base}/papers#${p.id}`,
+      keywords: p.task,
     })),
     ...models.map((m) => ({
       type: 'Model',
@@ -202,6 +204,12 @@ export function searchIndex(): SearchEntry[] {
       href: m.link,
       keywords: m.tasks.flatMap((task) => [task, taskName(task)]).join(' '),
     })),
-    ...tools.map((t) => ({ type: 'Tool', name: t.name, meta: t.desc.slice(0, 50), href: `${base}/tools` })),
+    ...tools.map((t) => ({
+      type: 'Tool',
+      name: t.name,
+      meta: t.author,
+      keywords: t.desc,
+      href: `${base}/tools#${t.id}`,
+    })),
   ];
 }
