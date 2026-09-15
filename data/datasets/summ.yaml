@@ -27,6 +27,25 @@
   link: https://www.kaggle.com/datasets/prithwirajsust/bengali-news-summarization-dataset
   verified: 2026-02-20
   desc: News summarization pairs crawled from Bangla dailies.
+  bibtex: |-
+    @InProceedings{10.1007/978-981-33-4673-4_4,
+    author="Bhattacharjee, Prithwiraj
+    and Mallick, Avi
+    and Saiful Islam, Md.
+    and Marium-E-Jannat",
+    editor="Kaiser, M. Shamim
+    and Bandyopadhyay, Anirban
+    and Mahmud, Mufti
+    and Ray, Kanad",
+    title="Bengali Abstractive News Summarization (BANS): A Neural Attention Approach",
+    booktitle="Proceedings of International Conference on Trends in Computational and Cognitive Engineering",
+    year="2021",
+    publisher="Springer Singapore",
+    address="Singapore",
+    pages="41--51",
+    abstract="Bhattacharjee, PrithwirajMallick, AviSaiful Islam, Md.Marium-E-JannatAbstractive summarization is the process of generating novel sentences based on the information extracted from the original text document while retaining the context. Due to abstractive summarization's underlying complexities, most of the past research work has been done on the extractive summarization approach. Nevertheless, with the triumph of the sequence-to-sequence (seq2seq) model, abstractive summarization becomes more viable. Although a significant number of notable research has been done in the English language based on abstractive summarization, only a couple of works have been done on Bengali abstractive news summarization (BANS). In this article, we presented a seq2seq based Long Short-Term Memory (LSTM) network model with attention at encoder-decoder. Our proposed system deploys a local attention-based model that produces a long sequence of words with lucid and human-like generated sentences with noteworthy information of the original document. We also prepared a dataset of more than 19 k articles and corresponding human-written summaries collected from bangla.bdnews24.com (https://bangla.bdnews24.com/) which is till now the most extensive dataset for Bengali news document summarization and publicly published in Kaggle (https://www.kaggle.com/prithwirajsust/bengali-news-summarization-dataset) We evaluated our model qualitatively and quantitatively and compared it with other published results. It showed significant improvement in terms of human evaluation scores with state-of-the-art approaches for BANS.",
+    isbn="978-981-33-4673-4"
+    }
 - id: banglachqsumm
   name: BanglaCHQ-Summ
   task: summ
@@ -38,3 +57,26 @@
   link: https://github.com/alvi-khan/BanglaCHQ-Summ
   verified: 2026-07-19
   desc: Abstractive summarization dataset for Bangla consumer health questions.
+  bibtex: |-
+    @inproceedings{khan-etal-2023-banglachq,
+        title = "{B}angla{CHQ}-Summ: An Abstractive Summarization Dataset for Medical Queries in {B}angla Conversational Speech",
+        author = "Khan, Alvi  and
+          Kamal, Fida  and
+          Chowdhury, Mohammad Abrar  and
+          Ahmed, Tasnim  and
+          Laskar, Md Tahmid Rahman  and
+          Ahmed, Sabbir",
+        editor = "Alam, Firoj  and
+          Kar, Sudipta  and
+          Chowdhury, Shammur Absar  and
+          Sadeque, Farig  and
+          Amin, Ruhul",
+        booktitle = "Proceedings of the First Workshop on Bangla Language Processing (BLP-2023)",
+        month = dec,
+        year = "2023",
+        address = "Singapore",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2023.banglalp-1.10/",
+        doi = "10.18653/v1/2023.banglalp-1.10",
+        pages = "85--93"
+    }

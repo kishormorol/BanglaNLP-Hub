@@ -9,6 +9,8 @@
   link: https://openslr.org/53/
   verified: 2026-06-28
   desc: Crowdsourced Bangladeshi Bangla read speech.
+  bibtex: |-
+    @inproceedings{Kjartansson_2018, series={sltu_2018}, title={Crowd-Sourced Speech Corpora for Javanese, Sundanese, Sinhala, Nepali, and Bangladeshi Bengali}, url={http://dx.doi.org/10.21437/SLTU.2018-11}, DOI={10.21437/sltu.2018-11}, booktitle={6th Workshop on Spoken Language Technologies for Under-Resourced Languages (SLTU 2018)}, publisher={ISCA}, author={Kjartansson, Oddur and Sarin, Supheakmungkol and Pipatsrisawat, Knot and Jansche, Martin and Ha, Linne}, year={2018}, month=Aug, pages={52–55}, collection={sltu_2018} }
 - id: commonvoice
   name: Common Voice (bn)
   task: speech
@@ -20,6 +22,43 @@
   link: https://commonvoice.mozilla.org/bn
   verified: 2026-07-01
   desc: Continuously growing crowdsourced speech corpus.
+  bibtex: |-
+    @inproceedings{ardila-etal-2020-common,
+        title = "Common Voice: A Massively-Multilingual Speech Corpus",
+        author = "Ardila, Rosana  and
+          Branson, Megan  and
+          Davis, Kelly  and
+          Kohler, Michael  and
+          Meyer, Josh  and
+          Henretty, Michael  and
+          Morais, Reuben  and
+          Saunders, Lindsay  and
+          Tyers, Francis  and
+          Weber, Gregor",
+        editor = "Calzolari, Nicoletta  and
+          B{\'e}chet, Fr{\'e}d{\'e}ric  and
+          Blache, Philippe  and
+          Choukri, Khalid  and
+          Cieri, Christopher  and
+          Declerck, Thierry  and
+          Goggi, Sara  and
+          Isahara, Hitoshi  and
+          Maegaard, Bente  and
+          Mariani, Joseph  and
+          Mazo, H{\'e}l{\`e}ne  and
+          Moreno, Asuncion  and
+          Odijk, Jan  and
+          Piperidis, Stelios",
+        booktitle = "Proceedings of the Twelfth Language Resources and Evaluation Conference",
+        month = may,
+        year = "2020",
+        address = "Marseille, France",
+        publisher = "European Language Resources Association",
+        url = "https://aclanthology.org/2020.lrec-1.520/",
+        pages = "4218--4222",
+        language = "eng",
+        ISBN = "979-10-95546-34-4"
+    }
 - id: oodspeech
   name: OOD-Speech
   task: speech
@@ -31,6 +70,16 @@
   link: https://bengaliai.github.io/asr
   verified: 2026-07-19
   desc: Large-scale out-of-distribution Bangla ASR benchmark.
+  bibtex: |-
+    @misc{rakib2023oodspeechlargebengalispeech,
+          title={OOD-Speech: A Large Bengali Speech Recognition Dataset for Out-of-Distribution Benchmarking},
+          author={Fazle Rabbi Rakib and Souhardya Saha Dip and Samiul Alam and Nazia Tasnim and Md. Istiak Hossain Shihab and Md. Nazmuddoha Ansary and Syed Mobassir Hossen and Marsia Haque Meghla and Mamunur Mamun and Farig Sadeque and Sayma Sultana Chowdhury and Tahsin Reasat and Asif Sushmit and Ahmed Imtiaz Humayun},
+          year={2023},
+          eprint={2305.09688},
+          archivePrefix={arXiv},
+          primaryClass={eess.AS},
+          url={https://arxiv.org/abs/2305.09688},
+    }
 - id: lipighor
   name: Lipi-Ghor (bn-882-SSTT)
   task: speech
@@ -42,6 +91,16 @@
   link: https://huggingface.co/datasets/Sanjidh090/Lipi-Ghor-bn-882-SSTT
   verified: 2026-07-22
   desc: Long-form multi-speaker Bangla ASR and speaker-diarization corpus with aligned transcriptions and timestamps. Gated access.
+  bibtex: |-
+    @misc{hasan2026makehardheareasy,
+          title={Make It Hard to Hear, Easy to Learn: Long-Form Bengali ASR and Speaker Diarization via Extreme Augmentation and Perfect Alignment},
+          author={Sanjid Hasan and Risalat Labib and A H M Fuad and Bayazid Hasan},
+          year={2026},
+          eprint={2602.23070},
+          archivePrefix={arXiv},
+          primaryClass={cs.SD},
+          url={https://arxiv.org/abs/2602.23070},
+    }
 - id: bengali-loop-asr
   name: Bengali-Loop (ASR corpus)
   task: speech
@@ -53,3 +112,13 @@
   link: https://www.kaggle.com/competitions/dl-sprint-4-0-bengali-long-form-speech-recognition/data
   verified: 2026-08-10
   desc: Long-form Bangla ASR corpus of 792k words from 11 YouTube channels, built by subtitle extraction with human-in-the-loop transcript verification.
+  bibtex: |-
+    @misc{tabib2026bengaliloopcommunitybenchmarkslongform,
+          title={Bengali-Loop: Community Benchmarks for Long-Form Bangla ASR and Speaker Diarization},
+          author={H. M. Shadman Tabib and Istiak Ahmmed Rifti and Abdullah Muhammed Amimul Ehsan and Somik Dasgupta and Md Zim Mim Siddiqee Sowdha and Abrar Jahin Sarker and Md. Rafiul Islam Nijamy and Tanvir Hossain and Mst. Metaly Khatun and Munzer Mahmood and Rakesh Debnath and Gourab Biswas and Asif Karim and Wahid Al Azad Navid and Masnoon Muztahid and Fuad Ahmed Udoy and Shahad Shahriar Rahman and Md. Tashdiqur Rahman Shifat and Most. Sonia Khatun and Mushfiqur Rahman and Md. Miraj Hasan and Anik Saha and Mohammad Ninad Mahmud Nobo and Soumik Bhattacharjee and Tusher Bhomik and Ahmmad Nur Swapnil and Shahriar Kabir},
+          year={2026},
+          eprint={2602.14291},
+          archivePrefix={arXiv},
+          primaryClass={cs.SD},
+          url={https://arxiv.org/abs/2602.14291},
+    }

@@ -83,7 +83,16 @@ The catalog is only useful if its contents are true, so the project holds a hard
 - **Links are checked.** Every published `link:` URL is verified nightly. Unverified `data/inbox/` candidates are excluded. Dead links are reported in a single tracking issue; entries are never removed automatically.
 - **Entries get verified by hand.** Papers have been audited against the ACL Anthology, arXiv, and OpenAlex (title, authors, and abstract), and their task assignments are being spot-checked and corrected. Several entries inherited from the original design prototype turned out to be fabricated — a duplicate under an invented title, a model that does not exist, a paper with no publication — and were removed.
 
-Known gaps are tracked in [`TODO-data.md`](./TODO-data.md): 30 datasets lack BibTeX and nine of the eleven leaderboards await rows.
+Known gaps are tracked in [`TODO-data.md`](./TODO-data.md): 2 datasets lack BibTeX and nine of the eleven leaderboards await rows.
+
+Canonical BibTeX may come from ACL Anthology, arXiv, a publisher export, or an
+official Crossref or DataCite export of registered metadata. Both
+[Crossref](https://www.crossref.org/documentation/retrieve-metadata/content-negotiation/)
+and [DataCite](https://support.datacite.org/docs/datacite-content-resolver) support
+DOI content negotiation with `Accept: application/x-bibtex`. These registry
+exports are canonical sources, not handcrafted citations. Preserve every exported
+field and document the paper or release association in `TODO-data.md`; a citation
+does not verify the dataset's other metadata.
 
 **Dataset fields are verified at the source.** `license`, `size`, and `year` have each had an audit pass (July 2026), and the datasets added by mining resource papers had their `license` and `size` read from the dataset's own repository or card — never the paper's license icon, which describes the paper, not the data. Corrections and the entries still unconfirmed (because no reachable source states a figure) are listed in `TODO-data.md`. Candidate datasets with unverifiable licenses or outside the current scope are held back rather than published. A September 2026 audit replaced BHS's unsupported 30,000 count with 3,418 labelled statements in v1.0 and checked SentNoB, FLORES-200, TyDi QA, and WikiANN against pinned releases. The evidence and remaining license disputes are recorded in `TODO-data.md`.
 
@@ -122,7 +131,7 @@ These are concrete, self-contained, and each one is genuinely useful on its own 
 
 - **Reviewing paper tasks.** Most of the 712 papers were bulk-imported (ACL Anthology, arXiv, and hand-verified OpenAlex journal articles); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
 - **Leaderboard rows.** Nine of the eleven benchmarks ship empty. Each needs scores with a citation to the paper they came from. Keep the dataset version, test split, and evaluation conditions explicit.
-- **BibTeX.** 30 datasets have no citation entry. Copy the published one from the ACL Anthology or the publisher page — please do not hand-write one.
+* **BibTeX.** 2 datasets have no citation entry, `udbru` and `snltr`. Establish the resource association before copying a canonical export under the policy above. Do not invent a citation.
 - **Unverified dataset sizes.** About a dozen datasets are hosted where no count is published (Kaggle, openslr.org, nltr.org). If you know the paper, you can settle these.
 - **Missing resources.** New papers, datasets, models, and tools — especially anything published recently, and anything from researchers outside the usual venues.
 

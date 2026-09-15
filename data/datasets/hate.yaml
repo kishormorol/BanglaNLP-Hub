@@ -50,6 +50,16 @@
   link: https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset
   verified: 2026-09-08
   desc: "v1.0 release with one label per statement: geopolitical, religious, personal, gender abusive, or political hate."
+  bibtex: |-
+    @misc{karim2020classificationbenchmarksunderresourcedbengali,
+          title={Classification Benchmarks for Under-resourced Bengali Language based on Multichannel Convolutional-LSTM Network},
+          author={Md. Rezaul Karim and Bharathi Raja Chakravarthi and John P. McCrae and Michael Cochez},
+          year={2020},
+          eprint={2004.07807},
+          archivePrefix={arXiv},
+          primaryClass={cs.CL},
+          url={https://arxiv.org/abs/2004.07807},
+    }
 - id: tbolid
   name: TB-OLID
   task: hate
@@ -160,6 +170,8 @@
   link: https://data.mendeley.com/datasets/f4xz5d4fzd/1
   verified: 2026-07-26
   desc: Bangla religious-aggression texts with English translations, labelled hate speech, vandalism, atrocity, or no aggression.
+  bibtex: |-
+    @article{Rashid_2025, title={ALERT: A benchmark Bengali dataset for identifying and categorizing religiously aggressive texts}, volume={63}, ISSN={2352-3409}, url={http://dx.doi.org/10.1016/j.dib.2025.112094}, DOI={10.1016/j.dib.2025.112094}, journal={Data in Brief}, publisher={Elsevier BV}, author={Rashid, Suhana Binta and Piyas, Bibhas Roy Chowdhury and Rahman, Sadia and Preenon, Bijoy Roy Chowdhury}, year={2025}, month=Dec, pages={112094} }
 - id: banglatoco
   name: Bangla-ToCo
   task: hate
@@ -171,6 +183,8 @@
   link: https://data.mendeley.com/datasets/gphbs7vsbz/3
   verified: 2026-07-26
   desc: Context-aware toxic-comment corpus retaining news metadata and neighbouring comments, with balanced toxic/non-toxic labels.
+  bibtex: |-
+    @article{Rupa_2025, title={Bangla-ToCo: A context-aware dataset for Bengali toxic comment detection}, volume={63}, ISSN={2352-3409}, url={http://dx.doi.org/10.1016/j.dib.2025.112277}, DOI={10.1016/j.dib.2025.112277}, journal={Data in Brief}, publisher={Elsevier BV}, author={Rupa, Sayma Akter and Anwar, Md. Musfique and Ritu, Nadia Afrin and Arifin, Khandoker Nosiba}, year={2025}, month=Dec, pages={112277} }
 - id: banhate
   name: BanHate
   task: hate

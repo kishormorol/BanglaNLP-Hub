@@ -9,6 +9,29 @@
   link: https://huggingface.co/datasets/csebuetnlp/squad_bn
   verified: 2026-07-19
   desc: Machine-translated + human-curated SQuAD 2.0 for Bangla.
+  bibtex: |-
+    @inproceedings{bhattacharjee-etal-2022-banglabert,
+        title = "{B}angla{BERT}: Language Model Pretraining and Benchmarks for Low-Resource Language Understanding Evaluation in {B}angla",
+        author = "Bhattacharjee, Abhik  and
+          Hasan, Tahmid  and
+          Ahmad, Wasi  and
+          Mubasshir, Kazi Samin  and
+          Islam, Md Saiful  and
+          Iqbal, Anindya  and
+          Rahman, M. Sohel  and
+          Shahriyar, Rifat",
+        editor = "Carpuat, Marine  and
+          de Marneffe, Marie-Catherine  and
+          Meza Ruiz, Ivan Vladimir",
+        booktitle = "Findings of the Association for Computational Linguistics: NAACL 2022",
+        month = jul,
+        year = "2022",
+        address = "Seattle, United States",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2022.findings-naacl.98/",
+        doi = "10.18653/v1/2022.findings-naacl.98",
+        pages = "1318--1327"
+    }
 - id: banglarqa
   name: BanglaRQA
   task: qa
