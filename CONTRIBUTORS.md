@@ -84,6 +84,9 @@ kept separate from resource submissions.
 
 - Refactored the contributor, model, and leaderboard data layers, tightened link
   checking, and fixed catalog consistency and mobile navigation ([#78](https://github.com/kishormorol/BanglaNLP-Hub/pull/78), [#79](https://github.com/kishormorol/BanglaNLP-Hub/pull/79), [#80](https://github.com/kishormorol/BanglaNLP-Hub/pull/80), [#82](https://github.com/kishormorol/BanglaNLP-Hub/pull/82), [#101](https://github.com/kishormorol/BanglaNLP-Hub/pull/101)).
+- Audited dataset release counts, citations, and license statements, documented the
+  SentNoB evaluation defect, added sourced BanglaRQA baselines, and added keyboard
+  search, shareable catalog filters, and a mobile fix for the papers page ([#105](https://github.com/kishormorol/BanglaNLP-Hub/pull/105), [#106](https://github.com/kishormorol/BanglaNLP-Hub/pull/106), [#107](https://github.com/kishormorol/BanglaNLP-Hub/pull/107), [#108](https://github.com/kishormorol/BanglaNLP-Hub/pull/108), [#109](https://github.com/kishormorol/BanglaNLP-Hub/pull/109), [#110](https://github.com/kishormorol/BanglaNLP-Hub/pull/110), [#111](https://github.com/kishormorol/BanglaNLP-Hub/pull/111), [#112](https://github.com/kishormorol/BanglaNLP-Hub/pull/112), [#113](https://github.com/kishormorol/BanglaNLP-Hub/pull/113), [#114](https://github.com/kishormorol/BanglaNLP-Hub/pull/114)).
 
 ### [@Meftahul-Anu13](https://github.com/Meftahul-Anu13) (Meftahul Jannati Anonna)
 
