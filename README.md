@@ -47,6 +47,33 @@ data/
   venues.yaml             venue -> badge tone
 ```
 
+### Shareable filters
+
+Copy the address bar URL to share a filtered catalog view. Datasets accepts `q`,
+`task`, `license`, and `year`; Papers accepts `q`, `task`, `venue`, and `year`.
+For example: `/BanglaNLP-Hub/datasets?task=sentiment&license=open` or
+`/BanglaNLP-Hub/papers?q=BanglaBERT&venue=ACL`.
+Select values must match an option's value. Dataset license values are `open`,
+`nc`, `research`, and `other` (Other / restricted). Unknown select values are
+ignored; repeated parameters use the first value. Empty filters are removed from
+the URL. Filter text is limited to 1,000 characters, including when read from a URL,
+to keep shared addresses bounded.
+
+License filters group the catalog's license text; they do not verify or certify a
+dataset's license. Non-commercial and research labels take precedence. `open`
+matches only MIT, Apache 2.0, CC0, ODC-BY, CC BY 4.0, and CC BY-SA 4.0.
+All other text, including ND, Mixed, GPL/AGPL, and unknown labels, falls under `other`.
+Unresolved license fields remain documented in [`TODO-data.md`](./TODO-data.md).
+
+Typing replaces the current history entry. Select changes and **Clear filters**
+add an entry when the URL changes, so Back and Forward restore those views.
+Other query parameters and resource hashes are kept. Initial loads, copied URLs,
+reloads, and Back/Forward preserve explicit filters even when a retained resource
+hash points to a hidden item. Hidden targets are not revealed or focused on load;
+visible hash targets still open normally. Only explicit hash navigation after
+load, including selecting the same hash again through search, can clear conflicting
+filters to reveal a target. Without JavaScript, both pages show their full lists.
+
 ## Data honesty
 
 The catalog is only useful if its contents are true, so the project holds a hard line:
