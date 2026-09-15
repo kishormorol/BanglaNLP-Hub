@@ -9,6 +9,22 @@
   link: https://doi.org/10.5281/zenodo.4526477
   verified: 2026-07-22
   desc: Audio-only Bangla emotional speech; 20 actors (gender-balanced), 7 emotions.
+  bibtex: |-
+    @article{10.1371/journal.pone.0250173,
+        doi = {10.1371/journal.pone.0250173},
+        author = {Sultana, Sadia AND Rahman, M. Shahidur AND Selim, M. Reza AND Iqbal, M. Zafar},
+        journal = {PLOS ONE},
+        publisher = {Public Library of Science},
+        title = {SUST Bangla Emotional Speech Corpus (SUBESCO): An audio-only emotional speech corpus for Bangla},
+        year = {2021},
+        month = {04},
+        volume = {16},
+        url = {https://doi.org/10.1371/journal.pone.0250173},
+        pages = {1-27},
+        abstract = {SUBESCO is an audio-only emotional speech corpus for Bangla language. The total duration of the corpus is in excess of 7 hours containing 7000 utterances, and it is the largest emotional speech corpus available for this language. Twenty native speakers participated in the gender-balanced set, each recording of 10 sentences simulating seven targeted emotions. Fifty university students participated in the evaluation of this corpus. Each audio clip of this corpus, except those of Disgust emotion, was validated four times by male and female raters. Raw hit rates and unbiased rates were calculated producing scores above chance level of responses. Overall recognition rate was reported to be above 70% for human perception tests. Kappa statistics and intra-class correlation coefficient scores indicated high-level of inter-rater reliability and consistency of this corpus evaluation. SUBESCO is an Open Access database, licensed under Creative Common Attribution 4.0 International, and can be downloaded free of charge from the web link: https://doi.org/10.5281/zenodo.4526477.},
+        number = {4},
+
+    }
 - id: banspemo
   name: BANSpEmo
   task: ser

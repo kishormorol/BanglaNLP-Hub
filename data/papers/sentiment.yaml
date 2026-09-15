@@ -201,13 +201,6 @@
   year: 2025
   link: https://doi.org/10.1109/NCIM65934.2025.11160248
   task: sentiment
-- id: al-sefat-2025-bengalifig
-  title: "BengaliFig: A Low-Resource Challenge for Figurative and Culturally Grounded Reasoning in Bengali"
-  authors: Al Sefat
-  venue: Workshop on Multimodal Models for Low-Resource Contexts and Social Impact
-  year: 2025
-  link: https://aclanthology.org/2025.mmloso-1.6/
-  task: sentiment
 - id: ahamed-etal-2025-beyond-likes-loves-uncovering-complex
   title: "Beyond Likes and Loves: Uncovering Complex Sentiments in Bengali Food Reviews on Facebook"
   authors: Ahamed et al.
