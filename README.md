@@ -58,7 +58,7 @@ The catalog is only useful if its contents are true, so the project holds a hard
 
 Known gaps are tracked openly in [`TODO-data.md`](./TODO-data.md) rather than quietly papered over: 53 datasets lack BibTeX and ten of the eleven leaderboards await rows.
 
-**Dataset fields are verified at the source.** `license`, `size`, and `year` have each had an audit pass (July 2026), and the datasets added by mining resource papers had their `license` and `size` read from the dataset's own repository or card — never the paper's license icon, which describes the paper, not the data. Corrections and the entries still unconfirmed (because no reachable source states a figure) are listed in `TODO-data.md`. Candidate datasets with unverifiable licenses or outside the current scope are held back rather than published. One field is recorded as *known wrong* with no known replacement — deliberately. A wrong value we can point at is more useful than a plausible one we invented.
+**Dataset fields are verified at the source.** `license`, `size`, and `year` have each had an audit pass (July 2026), and the datasets added by mining resource papers had their `license` and `size` read from the dataset's own repository or card — never the paper's license icon, which describes the paper, not the data. Corrections and the entries still unconfirmed (because no reachable source states a figure) are listed in `TODO-data.md`. Candidate datasets with unverifiable licenses or outside the current scope are held back rather than published. A September 2026 audit replaced BHS's unsupported 30,000 count with 3,418 labelled statements in v1.0 and checked SentNoB, FLORES-200, TyDi QA, and WikiANN against pinned releases. The evidence and remaining license disputes are recorded in `TODO-data.md`.
 
 ## Commands
 
@@ -97,7 +97,6 @@ These are concrete, self-contained, and each one is genuinely useful on its own 
 - **Leaderboard rows.** Ten of the eleven benchmarks ship empty. Each needs scores with a citation to the paper they came from. Even one more populated benchmark is a real improvement.
 - **BibTeX.** 53 datasets have no citation entry. Copy the published one from the ACL Anthology or the publisher page — please do not hand-write one.
 - **Unverified dataset sizes.** About a dozen datasets are hosted where no count is published (Kaggle, openslr.org, nltr.org). If you know the paper, you can settle these.
-- **One known-wrong value.** The `bhs` entry claims 30,000 documents and no source supports it. If you have the paper, this is a five-minute fix.
 - **Missing resources.** New papers, datasets, models, and tools — especially anything published recently, and anything from researchers outside the usual venues.
 
 ### The one rule

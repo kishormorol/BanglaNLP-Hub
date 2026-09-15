@@ -3,11 +3,11 @@
   task: sentiment
   size: 15,728 comments
   sizeN: 15728
-  license: CC BY-NC-SA 4.0
+  license: CC BY-ND 4.0
   year: 2021
   source: SentNoB (Findings EMNLP 2021)
   link: https://github.com/KhondokerIslam/SentNoB
-  verified: 2026-06-28
+  verified: 2026-09-08
   desc: Sentiment on noisy user comments from news and social platforms across 13 domains.
   bibtex: |-
     @inproceedings{islam-etal-2021-sentnob,

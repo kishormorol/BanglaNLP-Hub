@@ -12,14 +12,14 @@
 - id: bhs
   name: Bengali Hate Speech
   task: hate
-  size: 30,000 documents
-  sizeN: 30000
+  size: 3,418 labelled statements
+  sizeN: 3418
   license: MIT
   year: 2020
-  source: Classification benchmarks (Karim et al.)
+  source: Bengali Hate Speech v1.0 (Karim et al., 2020)
   link: https://github.com/rezacsedu/Bengali-Hate-Speech-Dataset
-  verified: 2026-04-18
-  desc: Multi-label hate categories across political, religious, personal.
+  verified: 2026-09-08
+  desc: "v1.0 release with one label per statement: geopolitical, religious, personal, gender abusive, or political hate."
 - id: tbolid
   name: TB-OLID
   task: hate
