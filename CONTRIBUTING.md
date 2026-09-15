@@ -16,7 +16,7 @@ that is 95% accurate is worse than useless, because nobody can tell which 5% to 
 Concretely:
 
 - **No invented scores.** Every leaderboard row must cite the paper the number comes
-  from. Ten leaderboards currently ship with `rows: []` and render a "No leaderboard
+  from. Nine leaderboards currently ship with `rows: []` and render a "No leaderboard
   curated yet" state. That is correct output, not a gap to fill with plausible numbers.
 - **No invented BibTeX.** Copy it from the ACL Anthology or publisher page. If there
   is none, omit the field — the UI hides the copy button.

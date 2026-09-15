@@ -231,6 +231,27 @@ Six duplicate task-specific records were collapsed without changing their links 
 task-page coverage. `stage` is present only when the model card establishes whether
 an artifact is a base or fine-tuned model.
 
+## BanglaRQA test baselines (2026-09-08)
+
+The QA leaderboard reproduces Table 5 from the [BanglaRQA paper](https://aclanthology.org/2022.findings-emnlp.186.pdf#page=8),
+printed page 2525. Answer F1 is on a 0-100 scale, with higher scores better:
+BanglaT5 78.11, mT5 68.83, BanglaBERT 63.15, and mBERT 39.40.
+These are the paper's fine-tuned baselines, not a claim about current state of the art.
+
+Section 3.1.6 splits passages 80/10/10 before assigning their questions. The test
+set has 300 passages and 1,493 questions, including answerable and unanswerable
+questions. Section 4.2 follows DROP for multiple-span answer F1 and SQuAD 2.0 for
+other answer types. Each model was trained for 15 epochs; checkpoints were selected
+on validation before test evaluation. BERT models use BIO token classification
+and 512-token limits; T5 models use 1,024 input and 256 output tokens. These
+architectures and truncation limits differ, so the rows do not imply identical
+model inputs. Table 8's transfer results are excluded.
+
+SentNoB rows remain empty. Its paper describes micro-averaged F1, but Table 3
+reports unequal precision and recall for most systems. Confirm the evaluation
+implementation or ask the authors before assigning a metric to those scores.
+See [SentNoB sections 4 and 5](https://aclanthology.org/2021.findings-emnlp.278.pdf#page=3).
+
 ## Leaderboards with no curated rows
 
 Each has a real dataset and metric but zero score rows, and renders an empty state
@@ -243,7 +264,6 @@ until rows are added with a citation to the paper the score comes from.
 | `mt` | FLORES-200 bn→en |
 | `ner` | B-NER |
 | `pos` | UD Bengali-BRU |
-| `qa` | BanglaRQA |
 | `sentiment` | SentNoB |
 | `sentiment` | BEmoC |
 | `summ` | XL-Sum (bn) |
