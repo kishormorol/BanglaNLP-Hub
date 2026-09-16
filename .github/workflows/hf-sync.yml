@@ -1,0 +1,89 @@
+name: Sync Hugging Face mirror
+
+# Republishes the Space mirror and the bangla-nlp-catalog dataset from /data.
+# Both used to be uploaded by hand, which is how the dataset came to sit 101
+# papers and 13 tasks behind the repo.
+on:
+  push:
+    branches: [main]
+    # Only what the mirror is built from. A README or docs commit does not
+    # need a republish.
+    paths:
+      - 'data/**'
+      - 'src/**'
+      - 'public/**'
+      - 'astro.config.mjs'
+      - 'scripts/build-hf-space.ts'
+      - 'scripts/export-hf-dataset.ts'
+      - 'scripts/hf-space-card.md'
+      - 'scripts/hf-dataset-card.md'
+      - '.github/workflows/hf-sync.yml'
+  # Allows a manual republish without an empty commit.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Never let two publishes race for the same Hub repos; don't cancel one
+# mid-upload.
+concurrency:
+  group: hf-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Publish to the Hub
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # Data must be valid before anything ships, same as the Pages deploy.
+      - run: npm run validate
+
+      # `secrets` is not available to a job- or step-level `if`, so the token
+      # check has to become an output. Without it every push from a fork — or
+      # from this repo before the secret is set — would fail the workflow for a
+      # reason nobody can act on from the run log.
+      - name: Check for a Hugging Face token
+        id: token
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          if [ -n "$HF_TOKEN" ]; then
+            echo "present=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::HF_TOKEN is not set, so nothing was published. Add a Hugging Face write token as a repository secret named HF_TOKEN to enable this."
+          fi
+
+      - uses: actions/setup-python@v7
+        if: steps.token.outputs.present == 'true'
+        with:
+          python-version: '3.12'
+
+      # Provides the `hf` CLI the two scripts upload with.
+      - name: Install the Hugging Face CLI
+        if: steps.token.outputs.present == 'true'
+        run: pip install --upgrade huggingface_hub
+
+      # Each script verifies its own output before it uploads: the Space build
+      # refuses to publish if an internal link does not resolve, and the export
+      # revalidates every row against the Zod schemas.
+      - name: Publish the Space mirror
+        if: steps.token.outputs.present == 'true'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: npm run build:hf-space -- --upload
+
+      - name: Publish the dataset
+        if: steps.token.outputs.present == 'true'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: npm run export:hf-dataset -- --upload
