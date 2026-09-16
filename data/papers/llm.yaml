@@ -103,13 +103,6 @@
   year: 2026
   link: http://arxiv.org/abs/2605.18111
   task: llm
-- id: nihal-etal-2026-bengali-literary-style-transfer
-  title: "Literary Style Transfer in Bengali Literature Using Hybrid BERT-GAN Architecture: A Comprehensive Study on Tagore and Nazrul"
-  authors: Nihal et al.
-  venue: SN Computer Science
-  year: 2026
-  link: https://doi.org/10.1007/s42979-026-04943-4
-  task: llm
 - id: wasi-etal-2026-mina
   title: "Mina: A Multilingual LLM-Powered Legal Assistant Agent for Empowering Access to Justice in Bangladesh"
   authors: Wasi et al.
@@ -316,13 +309,6 @@
   year: 2025
   link: http://arxiv.org/abs/2505.21354
   task: llm
-- id: arxiv-2504-05642
-  title: Leveraging Prompt-Tuning for Bengali Grammatical Error Explanation Using Large Language Models
-  authors: Maity et al.
-  venue: arXiv
-  year: 2025
-  link: http://arxiv.org/abs/2504.05642
-  task: llm
 - id: arxiv-2511-22769
   title: "Modeling Romanized Hindi and Bengali: Dataset Creation and Multilingual LLM Integration"
   authors: Gharami et al.
@@ -522,13 +508,6 @@
   year: 2024
   link: http://arxiv.org/abs/2401.07310
   task: llm
-- id: arxiv-2406-00039
-  title: How Ready Are Generative Pre-trained Large Language Models for Explaining Bengali Grammatical Errors?
-  authors: Maity et al.
-  venue: arXiv
-  year: 2024
-  link: http://arxiv.org/abs/2406.00039
-  task: llm
 - id: shahriar-barbosa-2024-improving
   title: Improving Bengali and Hindi Large Language Models
   authors: Shahriar et al.
@@ -557,26 +536,12 @@
   year: 2024
   link: http://arxiv.org/abs/2409.09504
   task: llm
-- id: arxiv-2405-02937
-  title: "Unraveling the Dominance of Large Language Models Over Transformer Models for Bangla Natural Language Inference: A Comprehensive Study"
-  authors: Faria et al.
-  venue: arXiv
-  year: 2024
-  link: http://arxiv.org/abs/2405.02937
-  task: llm
 - id: thapa-etal-2023-assessing
   title: Assessing Political Inclination of Bangla Language Models
   authors: Thapa et al.
   venue: BLP @ EMNLP
   year: 2023
   link: https://aclanthology.org/2023.banglalp-1.8/
-  task: llm
-- id: arxiv-2303-10612
-  title: Bangla Grammatical Error Detection Using T5 Transformer Model
-  authors: Shahgir et al.
-  venue: arXiv
-  year: 2023
-  link: http://arxiv.org/abs/2303.10612
   task: llm
 - id: arxiv-2312-10679
   title: Bengali Intent Classification with Generative Adversarial BERT
@@ -642,13 +607,6 @@
   link: https://aclanthology.org/2022.findings-naacl.98/
   task: llm
   note: Introduces BanglaBERT + the BLUB benchmark.
-- id: arxiv-2206-08977
-  title: "BN-HTRd: A Benchmark Dataset for Document Level Offline Bangla Handwritten Text Recognition (HTR) and Line Segmentation"
-  authors: Rahman et al.
-  venue: arXiv
-  year: 2022
-  link: http://arxiv.org/abs/2206.08977
-  task: llm
 - id: kowsher-etal-2021-bnvec-word-embedding
   title: "BnVec: Towards the Development of Word Embedding for Bangla Language Processing"
   authors: Kowsher et al.

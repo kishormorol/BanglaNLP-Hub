@@ -1,0 +1,7 @@
+- id: mahmud-etal-2025-grasp
+  title: "GRASP-ChoQ: Knowledge Graph-Based Retrieval Augmentation for Stance Detection in Political Texts with Chain-of-Questions Reasoning"
+  authors: Mahmud et al.
+  venue: BLP @ IJCNLP-AACL
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.2/
+  task: stance

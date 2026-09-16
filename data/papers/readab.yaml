@@ -1,0 +1,63 @@
+- id: ayman-etal-2024-bengalilcp
+  title: "BengaliLCP: A Dataset for Lexical Complexity Prediction in the Bengali Texts"
+  authors: Ayman et al.
+  venue: LREC-COLING
+  year: 2024
+  link: https://aclanthology.org/2024.lrec-main.200/
+  task: readab
+- id: arxiv-2012-07701
+  title: Simple or Complex? Learning to Predict Readability of Bengali Texts
+  authors: Chakraborty et al.
+  venue: arXiv
+  year: 2020
+  link: http://arxiv.org/abs/2012.07701
+  task: readab
+- id: phani-etal-2018-readability-analysis-bengali-literary-texts
+  title: Readability Analysis of Bengali Literary Texts
+  authors: Phani et al.
+  venue: Journal of Quantitative Linguistics
+  year: 2018
+  link: https://doi.org/10.1080/09296174.2018.1499456
+  task: readab
+- id: arxiv-1607-05755
+  title: A New Bengali Readability Score
+  authors: Phani et al.
+  venue: arXiv
+  year: 2016
+  link: http://arxiv.org/abs/1607.05755
+  task: readab
+- id: islam-rahman-2014-readability
+  title: Readability of Bangla News Articles for Children
+  authors: Islam et al.
+  venue: PACLIC
+  year: 2014
+  link: https://aclanthology.org/Y14-1037/
+  task: readab
+- id: sinha-etal-2014-influence
+  title: "Influence of Target Reader Background and Text Features on Text Readability in Bangla: A Computational Approach"
+  authors: Sinha et al.
+  venue: COLING
+  year: 2014
+  link: https://aclanthology.org/C14-1034/
+  task: readab
+- id: phani-etal-2014-inter-rater-agreement-study-readability-assessment
+  title: Inter-Rater Agreement Study on Readability Assessment in Bengali
+  authors: Phani et al.
+  venue: International Journal on Natural Language Computing
+  year: 2014
+  link: https://doi.org/10.5121/ijnlc.2014.3303
+  task: readab
+- id: sinha-etal-2012-new
+  title: New Readability Measures for Bangla and Hindi Texts
+  authors: Sinha et al.
+  venue: COLING
+  year: 2012
+  link: https://aclanthology.org/C12-2111/
+  task: readab
+- id: das-etal-2006-readability-modelling-comparison-one-two-parametric
+  title: "Readability modelling and comparison of one and two parametric fit: A case study in Bangla*"
+  authors: Das et al.
+  venue: Journal of Quantitative Linguistics
+  year: 2006
+  link: https://doi.org/10.1080/09296170500500843
+  task: readab

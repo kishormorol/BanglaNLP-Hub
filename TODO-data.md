@@ -97,6 +97,52 @@ citable for a `speaker` leaderboard once the dataset entry lands. Note their
 public/private DER split is a leaderboard artifact, so the metric needs stating
 precisely.
 
+## Taxonomy expansion: 13 new tasks (2026-09-16)
+
+The taxonomy went from 13 tasks to 26. Every added paper's fields come from an
+authoritative source — ACL Anthology BibTeX, the arXiv API, OpenAlex by DOI, or
+Crossref where OpenAlex had no venue. 101 papers were added and 12 refiled.
+
+New tasks: `ocr`, `gec`, `coref`, `nli`, `wsd`, `punct`, `style`, `stance`,
+`readab`, `caption`, `dialogue`, `st`, `el`.
+
+**`ocr` has a deliberate scope boundary.** It covers OCR systems and pipelines,
+word/line/document/scene-level recognition, and document image resources. It
+excludes **isolated character, grapheme and digit classification**, which is image
+classification rather than text recognition. That exclusion is large and arguable:
+roughly 100 such papers sit in `data/inbox/candidates.yaml` (CMATERdb, NumtaDB,
+BanglaLekha-Isolated, the Bengali.AI grapheme challenge and many CNN comparisons).
+If the project decides isolated-character work belongs, they are already queued —
+this is a scope decision, not an oversight. Also excluded: licence-plate
+recognition, writer verification, personality analysis from handwriting, and
+psycholinguistic visual word recognition.
+
+**`el` (Entity Linking) ships with no papers at all.** No Bangla-specific entity
+linking work was found in the ACL Anthology, OpenAlex (title search, 0 hits) or
+arXiv. The only relevant work is multilingual and not Bangla-specific — e.g.
+*Cross-lingual Name Tagging and Linking for 282 Languages* (ACL 2017), which covers
+Bengali among 281 others. The empty page is the honest output: it says nothing has
+been curated, not that nothing exists. If a Bangla entity linking paper is found,
+it is the first entry.
+
+**Could not be verified, so not filed:**
+
+- *Anaphora Resolution for Bengali: An Experiment with Domain Adaptation*
+  (`10.13053/cys-17-2-1518`, Computación y Sistemas). The DOI 404s at Crossref and
+  OpenAlex has no venue for it. Needs the volume checked by hand.
+- *Recommendation System for Bangla News Article with Anaphora Resolution*
+  (`10.1109/ceeict.2018.8628075`) — anaphora is a component, not the subject; left
+  out pending a read of the paper.
+
+**`bn` labels need a native-speaker check.** All 13 new Bangla task names are
+translations, not sourced terms. Same caveat as `vqa` carried in August.
+
+**Venue labels.** 15 new venues were added to `data/venues.yaml`, all gray. Two
+IEEE conference labels (`ICECCME`, `IALP`) come from the Crossref `event` name.
+OpenAlex series names are kept verbatim where that is what the record says, so two
+coreference papers read `Lecture notes in computer science` rather than `CICLing`.
+Correcting those to the conference is a good first contribution.
+
 ## VQA task added (2026-08-10)
 
 `vqa` — Visual Question Answering — is the catalog's first **vision-language** task,

@@ -1,0 +1,91 @@
+- id: bhattacharyya-bhattacharya-2025-leveraging
+  title: "Leveraging LLMs for Bangla Grammar Error Correction: Error Categorization, Synthetic Data, and Model Evaluation"
+  authors: Bhattacharyya et al.
+  venue: Findings ACL
+  year: 2025
+  link: https://aclanthology.org/2025.findings-acl.431/
+  task: gec
+- id: arxiv-2504-05642
+  title: Leveraging Prompt-Tuning for Bengali Grammatical Error Explanation Using Large Language Models
+  authors: Maity et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2504.05642
+  task: gec
+- id: arxiv-2411-08344
+  title: Bangla Grammatical Error Detection Leveraging Transformer-based Token Classification
+  authors: Islam et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2411.08344
+  task: gec
+- id: bijoy-etal-2024-transformer-spelling-error-correction-framework-bangla
+  title: A transformer-based spelling error correction framework for Bangla and resource scarce Indic languages
+  authors: Bijoy et al.
+  venue: Computer Speech & Language
+  year: 2024
+  link: https://doi.org/10.1016/j.csl.2024.101703
+  task: gec
+- id: banik-etal-2024-bert-inspired-progressive-stacking-enhance-spelling
+  title: BERT-Inspired Progressive Stacking to Enhance Spelling Correction in Bengali Text
+  authors: Banik et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2024
+  link: https://doi.org/10.1145/3669941
+  task: gec
+- id: arxiv-2406-00039
+  title: How Ready Are Generative Pre-trained Large Language Models for Explaining Bengali Grammatical Errors?
+  authors: Maity et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2406.00039
+  task: gec
+- id: rahman-etal-2023-bspell
+  title: "BSpell: A CNN-Blended BERT Based Bangla Spell Checker"
+  authors: Rahman et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.2/
+  task: gec
+- id: hossain-etal-2023-panini-transformer-grammatical-error-correction-method
+  title: "Panini: a transformer-based grammatical error correction method for Bangla"
+  authors: Hossain et al.
+  venue: Neural Computing and Applications
+  year: 2023
+  link: https://doi.org/10.1007/s00521-023-09211-7
+  task: gec
+- id: arxiv-2303-10612
+  title: Bangla Grammatical Error Detection Using T5 Transformer Model
+  authors: Shahgir et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2303.10612
+  task: gec
+- id: ahamed-etal-2021-spell-corrector-bangla-language-norvig-s
+  title: Spell corrector for Bangla language using Norvig’s algorithm and Jaro-Winkler distance
+  authors: Ahamed et al.
+  venue: Bulletin of Electrical Engineering and Informatics
+  year: 2021
+  link: https://doi.org/10.11591/eei.v10i4.2410
+  task: gec
+- id: hossain-etal-2021-bangla-spell-grammar-checker
+  title: "Development of Bangla Spell and Grammar Checkers: Resource Creation and Evaluation"
+  authors: Hossain et al.
+  venue: IEEE Access
+  year: 2021
+  link: https://doi.org/10.1109/access.2021.3119627
+  task: gec
+- id: rahman-etal-2020-bangla-grammar-checking
+  title: An exploratory research on grammar checking of Bangla sentences using statistical language models
+  authors: Rahman et al.
+  venue: International Journal of Electrical and Computer Engineering (IJECE)
+  year: 2020
+  link: https://doi.org/10.11591/ijece.v10i3.pp3244-3252
+  task: gec
+- id: islam-etal-2018-context-sensitive-approach-find-optimum-language
+  title: A Context-Sensitive Approach to Find Optimum Language Model for Automatic Bangla Spelling Correction
+  authors: Islam et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2018
+  link: https://doi.org/10.14569/ijacsa.2018.091126
+  task: gec

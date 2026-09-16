@@ -266,3 +266,23 @@ International Journal of Computer Processing Of Languages: gray
 Journal of Imaging: gray
 Advances in Science Technology and Engineering Systems Journal: gray
 International Journal of Mathematical Sciences and Computing: gray
+
+# --- Venues introduced by the 2026-09-16 taxonomy expansion (OCR, GEC,
+# coreference, NLI, WSD, punctuation, style, stance, readability, captioning,
+# dialogue, speech translation). Journals and non-ACL conferences render gray,
+# the honest default: this NLP-family palette has no tier for them. ---
+Computer Speech & Language: gray
+Computers, materials & continua/Computers, materials & continua (Print): gray
+Discover Artificial Intelligence: gray
+IALP: gray
+ICECCME: gray
+IET Image Processing: gray
+International Journal on Document Analysis and Recognition (IJDAR): gray
+Journal of Quantitative Linguistics: gray
+Lecture notes in computer science: gray
+Lecture notes in networks and systems: gray
+MM-NLG: gray
+Neural Computing and Applications: gray
+Pattern Analysis and Applications: gray
+Pattern Recognition: gray
+Research in Computing Science: gray

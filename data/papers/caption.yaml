@@ -1,0 +1,105 @@
+- id: dey-etal-2026-advancing-bengali-vision-language-comprehension-deep
+  title: "Advancing Bengali Vision-Language Comprehension: A Deep Learning and NLP Paradigm for Image Captioning"
+  authors: Dey et al.
+  venue: SN Computer Science
+  year: 2026
+  link: https://doi.org/10.1007/s42979-025-04676-w
+  task: caption
+- id: bulbul-2025-bicap
+  title: "BiCap: Bangla Image Captioning Using Attention-based Encoder-Decoder Architecture"
+  authors: Bulbul
+  venue: BLP @ IJCNLP-AACL
+  year: 2025
+  link: https://aclanthology.org/2025.banglalp-1.6/
+  task: caption
+- id: masud-etal-2025-image-captioning-bengali-language-visual-attention
+  title: Image captioning in Bengali language using visual attention
+  authors: Masud et al.
+  venue: PLoS ONE
+  year: 2025
+  link: https://doi.org/10.1371/journal.pone.0309364
+  task: caption
+- id: das-etal-2023-visual-attention-model-bengali-image-captioning
+  title: A Visual Attention-Based Model for Bengali Image Captioning
+  authors: Das et al.
+  venue: SN Computer Science
+  year: 2023
+  link: https://doi.org/10.1007/s42979-023-01671-x
+  task: caption
+- id: hossain-etal-2023-automatic-bangla-image-captioning-transformer-model
+  title: Automatic Bangla Image Captioning Based on Transformer Model in Deep Learning
+  authors: Hossain et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2023
+  link: https://doi.org/10.14569/ijacsa.2023.01411113
+  task: caption
+- id: zaoad-etal-2022-attention-hybrid-deep-learning-approach-bengali
+  title: An attention-based hybrid deep learning approach for bengali video captioning
+  authors: Zaoad et al.
+  venue: Journal of King Saud University - Computer and Information Sciences
+  year: 2022
+  link: https://doi.org/10.1016/j.jksuci.2022.11.015
+  task: caption
+- id: rahman-etal-2022-capnet-encoder-decoder-neural-network-model
+  title: "CapNet: An Encoder-Decoder based Neural Network Model for Automatic Bangla Image Caption Generation"
+  authors: Rahman et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2022
+  link: https://doi.org/10.14569/ijacsa.2022.0130886
+  task: caption
+- id: humaira-etal-2021-hybridized-deep-learning-method-bengali-image
+  title: A Hybridized Deep Learning Method for Bengali Image Captioning
+  authors: Humaira et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2021
+  link: https://doi.org/10.14569/ijacsa.2021.0120287
+  task: caption
+- id: shah-etal-2021-bornon-bengali-image-captioning-transformer-deep
+  title: "Bornon: Bengali Image Captioning with Transformer-Based Deep Learning Approach"
+  authors: Shah et al.
+  venue: SN Computer Science
+  year: 2021
+  link: https://doi.org/10.1007/s42979-021-00975-0
+  task: caption
+- id: arxiv-2110-12442
+  title: Bangla Image Caption Generation through CNN-Transformer based Encoder-Decoder Network
+  authors: Palash et al.
+  venue: arXiv
+  year: 2021
+  link: http://arxiv.org/abs/2110.12442
+  task: caption
+- id: arxiv-2102-07192
+  title: Improved Bengali Image Captioning via deep convolutional neural network based encoder-decoder model
+  authors: Khan et al.
+  venue: arXiv
+  year: 2021
+  link: http://arxiv.org/abs/2102.07192
+  task: caption
+- id: arxiv-2010-08066
+  title: "TextMage: The Automated Bangla Caption Generator Based On Deep Learning"
+  authors: Kamal et al.
+  venue: arXiv
+  year: 2020
+  link: http://arxiv.org/abs/2010.08066
+  task: caption
+- id: arxiv-2012-12139
+  title: Image to Bengali Caption Generation Using Deep CNN and Bidirectional Gated Recurrent Unit
+  authors: Faruk et al.
+  venue: arXiv
+  year: 2020
+  link: http://arxiv.org/abs/2012.12139
+  task: caption
+- id: deb-etal-2019-oboyob-sequential-semantic-bengali-image-captioning
+  title: "Oboyob: A sequential-semantic Bengali image captioning engine"
+  authors: Deb et al.
+  venue: Journal of Intelligent & Fuzzy Systems
+  year: 2019
+  link: https://doi.org/10.3233/jifs-179351
+  task: caption
+- id: arxiv-1809-00339
+  title: "Chittron: An Automatic Bangla Image Captioning System"
+  authors: Rahman et al.
+  venue: arXiv
+  year: 2018
+  link: http://arxiv.org/abs/1809.00339
+  task: caption

@@ -1,0 +1,14 @@
+- id: nihal-etal-2026-bengali-literary-style-transfer
+  title: "Literary Style Transfer in Bengali Literature Using Hybrid BERT-GAN Architecture: A Comprehensive Study on Tagore and Nazrul"
+  authors: Nihal et al.
+  venue: SN Computer Science
+  year: 2026
+  link: https://doi.org/10.1007/s42979-026-04943-4
+  task: style
+- id: mukherjee-etal-2023-low
+  title: "Low-Resource Text Style Transfer for Bangla: Data & Models"
+  authors: Mukherjee et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.5/
+  task: style
