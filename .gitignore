@@ -31,3 +31,6 @@ pnpm-debug.log*
 
 # Hugging Face Space mirror build output
 dist-hf/
+
+# Hugging Face dataset export output
+dist-hf-dataset/

@@ -93,7 +93,15 @@ npm run build        build to ./dist/
 npm run validate     validate /data against the Zod schemas
 npm run check-links  probe every published link: URL in /data
 npm run build:hf-space  build the Hugging Face Space mirror to ./dist-hf/
+npm run export:hf-dataset  export the catalog to ./dist-hf-dataset/
 ```
+
+`export:hf-dataset` writes the four JSONL configs and the card for the dataset
+[kishormorol/bangla-nlp-catalog](https://huggingface.co/datasets/kishormorol/bangla-nlp-catalog)
+from `/data`, validating every row against the same Zod schemas as `validate`.
+Add `-- --upload` to publish. Like the Space it is not deployed by CI, so the
+published snapshot lags `/data` between runs — rerun both after a batch of
+catalog changes.
 
 The site is also mirrored to the Space [kishormorol/BanglaNLP-Hub](https://huggingface.co/spaces/kishormorol/BanglaNLP-Hub).
 A static Space serves exact file paths from the domain root and has no directory

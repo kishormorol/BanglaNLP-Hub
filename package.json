@@ -10,6 +10,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "build:hf-space": "tsx scripts/build-hf-space.ts",
+    "export:hf-dataset": "tsx scripts/export-hf-dataset.ts",
     "preview": "astro preview",
     "astro": "astro",
     "validate": "tsx scripts/validate.ts",
