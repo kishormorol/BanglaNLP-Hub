@@ -99,9 +99,7 @@ npm run export:hf-dataset  export the catalog to ./dist-hf-dataset/
 `export:hf-dataset` writes the four JSONL configs and the card for the dataset
 [kishormorol/bangla-nlp-catalog](https://huggingface.co/datasets/kishormorol/bangla-nlp-catalog)
 from `/data`, validating every row against the same Zod schemas as `validate`.
-Add `-- --upload` to publish. Like the Space it is not deployed by CI, so the
-published snapshot lags `/data` between runs — rerun both after a batch of
-catalog changes.
+Add `-- --upload` to publish.
 
 The site is also mirrored to the Space [kishormorol/BanglaNLP-Hub](https://huggingface.co/spaces/kishormorol/BanglaNLP-Hub).
 A static Space serves exact file paths from the domain root and has no directory
@@ -110,8 +108,14 @@ indexes, so `./dist/` cannot be copied across: `build:hf-space` rebuilds with
 mirror's canonical URLs back at Pages, and regenerates the Space card from `/data`.
 It refuses to publish if any internal link — including the search index behind the
 nav search — does not resolve. Add `-- --upload` to push it; that needs `hf` on PATH
-and a write token. The mirror is not deployed by CI; rerun it when the catalog changes
-enough to be worth republishing.
+and a write token.
+
+Both publish from CI: `.github/workflows/hf-sync.yml` runs them on pushes to `main`
+that touch `/data`, `/src`, `/public`, the Astro config, or either script, and on
+`workflow_dispatch`. It needs an `HF_TOKEN` repository secret holding a Hugging Face
+**write** token; without one the workflow still succeeds and leaves a notice on the
+run saying so, publishing nothing. Run the scripts locally with `-- --upload` to
+republish out of band.
 
 `npm run validate` must pass before committing; CI runs it on every PR and it gates
 deployment. It fails on malformed fields, bad URLs, `verified` dates older than 12
