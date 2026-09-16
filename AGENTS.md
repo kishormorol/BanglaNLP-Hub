@@ -92,7 +92,18 @@ npm run dev          dev server on localhost:4321
 npm run build        build to ./dist/
 npm run validate     validate /data against the Zod schemas
 npm run check-links  probe every published link: URL in /data
+npm run build:hf-space  build the Hugging Face Space mirror to ./dist-hf/
 ```
+
+The site is also mirrored to the Space [kishormorol/BanglaNLP-Hub](https://huggingface.co/spaces/kishormorol/BanglaNLP-Hub).
+A static Space serves exact file paths from the domain root and has no directory
+indexes, so `./dist/` cannot be copied across: `build:hf-space` rebuilds with
+`HF_SPACE=1`, rewrites the page links to the `.html` files that exist, points the
+mirror's canonical URLs back at Pages, and regenerates the Space card from `/data`.
+It refuses to publish if any internal link — including the search index behind the
+nav search — does not resolve. Add `-- --upload` to push it; that needs `hf` on PATH
+and a write token. The mirror is not deployed by CI; rerun it when the catalog changes
+enough to be worth republishing.
 
 `npm run validate` must pass before committing; CI runs it on every PR and it gates
 deployment. It fails on malformed fields, bad URLs, `verified` dates older than 12

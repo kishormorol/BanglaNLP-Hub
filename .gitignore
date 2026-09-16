@@ -28,3 +28,6 @@ pnpm-debug.log*
 /_*.mjs
 /_*.json
 /_*_add.yaml
+
+# Hugging Face Space mirror build output
+dist-hf/

@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:hf-space": "tsx scripts/build-hf-space.ts",
     "preview": "astro preview",
     "astro": "astro",
     "validate": "tsx scripts/validate.ts",
