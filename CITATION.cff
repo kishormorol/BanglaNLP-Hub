@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "BanglaNLP Hub"
+abstract: "A community-maintained catalog of Bangla (Bengali) NLP resources: papers, datasets, models, tools, and benchmarks."
+authors:
+  - family-names: Morol
+    given-names: Md Kishor
+repository-code: "https://github.com/kishormorol/BanglaNLP-Hub"
+url: "https://kishormorol.github.io/BanglaNLP-Hub/"
+license: MIT
+keywords:
+  - astro
+  - awesome-list
+  - bangla
+  - bangla-nlp
+  - benchmark
+  - bengali
+  - datasets
+  - indic-nlp
+  - language-resources
+  - low-resource-languages
