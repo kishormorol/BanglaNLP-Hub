@@ -7,6 +7,7 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 [![Deploy](https://github.com/kishormorol/BanglaNLP-Hub/actions/workflows/deploy.yml/badge.svg)](https://github.com/kishormorol/BanglaNLP-Hub/actions/workflows/deploy.yml)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-22c55e)](./CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-black)](#license)
+[![HF Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20dataset-bangla--nlp--catalog-FFD21E)](https://huggingface.co/datasets/kishormorol/bangla-nlp-catalog)
 
 [![Tasks](https://img.shields.io/badge/tasks-13-64748b)](./data/tasks.yaml)
 [![Datasets](https://img.shields.io/badge/datasets-63-7c3aed)](./data/datasets)
