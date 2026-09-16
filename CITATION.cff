@@ -7,6 +7,10 @@ authors:
   - family-names: Morol
     given-names: Md Kishor
     orcid: "https://orcid.org/0000-0002-4468-8260"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22798635
+    description: "Concept DOI — always resolves to the latest release."
 repository-code: "https://github.com/kishormorol/BanglaNLP-Hub"
 url: "https://kishormorol.github.io/BanglaNLP-Hub/"
 license: MIT

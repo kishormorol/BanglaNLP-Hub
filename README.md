@@ -9,11 +9,12 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 [![License: MIT](https://img.shields.io/badge/license-MIT-black)](#license)
 [![HF Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20dataset-bangla--nlp--catalog-FFD21E)](https://huggingface.co/datasets/kishormorol/bangla-nlp-catalog)
 
-[![Tasks](https://img.shields.io/badge/tasks-13-64748b)](./data/tasks.yaml)
+[![Tasks](https://img.shields.io/badge/tasks-26-64748b)](./data/tasks.yaml)
 [![Datasets](https://img.shields.io/badge/datasets-63-7c3aed)](./data/datasets)
-[![Papers](https://img.shields.io/badge/papers-712-2563eb)](./data/papers)
+[![Papers](https://img.shields.io/badge/papers-813-2563eb)](./data/papers)
 [![Models](https://img.shields.io/badge/models-20-0891b2)](./data/models.yaml)
 [![Tools](https://img.shields.io/badge/tools-9-db2777)](./data/tools.yaml)
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22798635-1682D4?style=flat)](https://doi.org/10.5281/zenodo.22798635)
 
 **Live:** https://kishormorol.github.io/BanglaNLP-Hub/
 ![BanglaNLP Hub home page: search across 712 papers, 63 datasets, 20 models and 9 tools, browsable by task](docs/screenshot.jpg)
