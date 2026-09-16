@@ -15,6 +15,8 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 [![Tools](https://img.shields.io/badge/tools-9-db2777)](./data/tools.yaml)
 
 **Live:** https://kishormorol.github.io/BanglaNLP-Hub/
+![BanglaNLP Hub home page: search across 712 papers, 63 datasets, 20 models and 9 tools, browsable by task](docs/screenshot.jpg)
+
 
 > Keywords: Bangla NLP · Bengali NLP · Bangla datasets · Bengali datasets · Bangla language models · Bengali benchmarks · low-resource / Indic NLP resources.
 
