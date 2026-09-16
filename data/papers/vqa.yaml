@@ -6,3 +6,10 @@
   link: https://openaccess.thecvf.com/content/WACV2026/html/Fahim_BanglaProtha_Evaluating_Vision_Language_Models_in_Underrepresented_Long-tail_Cultural_Contexts_WACV_2026_paper.html
   task: vqa
   note: Aspect-based evaluation of vision-language models on Bengali cultural images with native Bengali questions and multiple-choice options.
+- id: hasan-etal-2023-visual
+  title: Visual Question Generation in Bengali
+  authors: Hasan et al.
+  venue: MM-NLG
+  year: 2023
+  link: https://aclanthology.org/2023.mmnlg-1.2/
+  task: vqa

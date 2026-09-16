@@ -1,0 +1,21 @@
+- id: sarkar-etal-2026-cascaded-speech-speech-translation-system-bengali
+  title: A Cascaded Speech-to-Speech Translation System for Bengali to English
+  authors: Sarkar et al.
+  venue: Lecture notes in networks and systems
+  year: 2026
+  link: https://doi.org/10.1007/978-981-96-9494-5_27
+  task: st
+- id: dhar-etal-2025-ju
+  title: JU-CSE-NLP's Cascaded Speech to Text Translation Systems for IWSLT 2025 in Indic Track
+  authors: Dhar et al.
+  venue: IWSLT
+  year: 2025
+  link: https://aclanthology.org/2025.iwslt-1.18/
+  task: st
+- id: das-etal-2025-iwslt
+  title: "IWSLT 2025 Indic Track System Description Paper: Speech-to-Text Translation from Low-Resource Indian Languages (Bengali and Tamil) to English"
+  authors: Das et al.
+  venue: IWSLT
+  year: 2025
+  link: https://aclanthology.org/2025.iwslt-1.23/
+  task: st

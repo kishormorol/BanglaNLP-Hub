@@ -50,3 +50,55 @@
   name: Visual Question Answering
   bn: চিত্রভিত্তিক প্রশ্নোত্তর
   desc: Answering questions about images in Bangla, and evaluating vision-language models on Bengali visual and cultural content.
+- id: ocr
+  name: OCR & Document Understanding
+  bn: লিখন শনাক্তকরণ ও নথি বিশ্লেষণ
+  desc: Recognising printed and handwritten Bangla text at word, line, document and scene level, and extracting information from document images. Isolated character and digit classification is out of scope — see TODO-data.md.
+- id: gec
+  name: Spelling & Grammar Correction
+  bn: বানান ও ব্যাকরণ সংশোধন
+  desc: Detecting, correcting and explaining spelling and grammatical errors in Bangla text.
+- id: coref
+  name: Coreference & Anaphora
+  bn: অন্বয় ও সর্বনাম নির্দেশ
+  desc: Resolving pronouns and linking mentions that refer to the same entity in Bangla text.
+- id: nli
+  name: Natural Language Inference
+  bn: ভাষাগত অনুমান
+  desc: Deciding whether one Bangla sentence entails, contradicts or is neutral towards another.
+- id: wsd
+  name: Word Sense Disambiguation
+  bn: শব্দার্থ নিরূপণ
+  desc: Choosing the intended sense of an ambiguous Bangla word in context, and inducing sense inventories.
+- id: punct
+  name: Punctuation Restoration
+  bn: যতিচিহ্ন পুনরুদ্ধার
+  desc: Restoring punctuation and sentence boundaries in unpunctuated Bangla text, typically ASR output.
+- id: style
+  name: Text Style Transfer
+  bn: রচনাশৈলী রূপান্তর
+  desc: Rewriting Bangla text into a different style or register while preserving its meaning.
+- id: stance
+  name: Stance Detection
+  bn: অবস্থান শনাক্তকরণ
+  desc: Identifying the position a Bangla text takes towards a target claim, person or topic.
+- id: readab
+  name: Readability & Complexity
+  bn: পাঠযোগ্যতা ও জটিলতা
+  desc: Measuring how hard Bangla text is to read, including readability formulas and lexical complexity prediction.
+- id: caption
+  name: Image Captioning
+  bn: চিত্র বর্ণনা
+  desc: Generating Bangla descriptions of images and video.
+- id: dialogue
+  name: Dialogue & Chatbots
+  bn: সংলাপ ও চ্যাটবট
+  desc: Open-domain and task-oriented Bangla conversational systems, and the corpora behind them.
+- id: st
+  name: Speech Translation
+  bn: কথন অনুবাদ
+  desc: Translating Bangla speech into text or speech in another language, cascaded or end-to-end.
+- id: el
+  name: Entity Linking
+  bn: সত্তা সংযুক্তিকরণ
+  desc: Linking Bangla entity mentions to entries in a knowledge base. No Bangla-specific work was found when this task was added — see TODO-data.md.

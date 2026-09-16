@@ -366,6 +366,14 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
           );
         })
       }
+      {/* A task can legitimately have no papers yet — `el` was added with none,
+          because no Bangla-specific entity linking work was found. Without this
+          the panel renders as an empty gap and reads as a broken page. */}
+      {papers.length === 0 && (
+        <p style="font-size:13.5px;color:var(--text2);background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:0">
+          No papers curated for this task yet — <a href={`${base}/contribute`}>add one via PR</a>.
+        </p>
+      )}
     </div>
 
     {/* ---- Models ---- */}

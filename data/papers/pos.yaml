@@ -1,10 +1,3 @@
-- id: bhattacharyya-bhattacharya-2025-leveraging
-  title: "Leveraging LLMs for Bangla Grammar Error Correction: Error Categorization, Synthetic Data, and Model Evaluation"
-  authors: Bhattacharyya et al.
-  venue: Findings ACL
-  year: 2025
-  link: https://aclanthology.org/2025.findings-acl.431/
-  task: pos
 - id: arxiv-2508-15711
   title: Stemming -- The Evolution and Current State with a Focus on Bangla
   authors: Paul et al.
@@ -124,13 +117,6 @@
   year: 2014
   link: https://aclanthology.org/W14-5143/
   task: pos
-- id: senapati-garain-2013-guitar
-  title: GuiTAR-based Pronominal Anaphora Resolution in Bengali
-  authors: Senapati et al.
-  venue: ACL
-  year: 2013
-  link: https://aclanthology.org/P13-2023/
-  task: pos
 - id: sarkar-bandyopadhyay-2013-application
   title: On Application of Conditional Random Field in Stemming of Bengali Natural Language Text
   authors: Sarkar et al.
@@ -222,13 +208,6 @@
   year: 1997
   link: https://aclanthology.org/J97-2005/
   task: pos
-- id: rahman-etal-2020-bangla-grammar-checking
-  title: "An exploratory research on grammar checking of Bangla sentences using statistical language models"
-  authors: Rahman et al.
-  venue: International Journal of Electrical and Computer Engineering (IJECE)
-  year: 2020
-  link: https://doi.org/10.11591/ijece.v10i3.pp3244-3252
-  task: pos
 - id: islam-etal-2026-bengali-stemming-morphological-challenges
   title: "Morphological challenges in Bengali NLP: evaluating stemming techniques for improved text classification and efficiency"
   authors: Islam et al.
@@ -257,13 +236,6 @@
   year: 2022
   link: https://doi.org/10.1007/s42452-022-04985-2
   task: pos
-- id: hossain-etal-2021-bangla-spell-grammar-checker
-  title: "Development of Bangla Spell and Grammar Checkers: Resource Creation and Evaluation"
-  authors: Hossain et al.
-  venue: IEEE Access
-  year: 2021
-  link: https://doi.org/10.1109/access.2021.3119627
-  task: pos
 - id: khatun-etal-2021-bengali-stochastic-parsing
   title: "Stochastic Approach of Parsing Bengali Sentences"
   authors: Khatun et al.
@@ -277,13 +249,6 @@
   venue: Global Journal of Researches in Engineering
   year: 2017
   link: https://engineeringresearch.org/index.php/GJRE/article/download/1597/1528
-  task: pos
-- id: tazakka-etal-2016-bangla-anaphora-resolution
-  title: "Anaphora Resolution in Bangla Language"
-  authors: Tazakka et al.
-  venue: International Journal of Computer Applications
-  year: 2016
-  link: https://doi.org/10.5120/ijca2016912204
   task: pos
 - id: chakrabarty-etal-2016-benlem-lemmatizer
   title: "BenLem (A Bengali Lemmatizer) and Its Role in WSD"

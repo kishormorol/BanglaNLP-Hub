@@ -1,0 +1,63 @@
+- id: das-etal-2024-modified-lesk-algorithm-word-sense-disambiguation
+  title: Modified lesk algorithm for word sense disambiguation in Bengali
+  authors: Das et al.
+  venue: Sadhana
+  year: 2024
+  link: https://doi.org/10.1007/s12046-024-02495-y
+  task: wsd
+- id: dawn-etal-2023-lexeme-connexion-measure-cohesive-lexical-ambiguity
+  title: "Lexeme connexion measure of cohesive lexical ambiguity revealing factor: a robust approach for word sense disambiguation of Bengali text"
+  authors: Dawn et al.
+  venue: Multimedia Tools and Applications
+  year: 2023
+  link: https://doi.org/10.1007/s11042-023-14676-8
+  task: wsd
+- id: dawn-etal-2022-dataset-evaluating-bengali-word-sense-disambiguation
+  title: A dataset for evaluating Bengali word sense disambiguation techniques
+  authors: Dawn et al.
+  venue: Journal of Ambient Intelligence and Humanized Computing
+  year: 2022
+  link: https://doi.org/10.1007/s12652-022-04471-y
+  task: wsd
+- id: pal-etal-2021-search-suitable-method-disambiguation-word-senses
+  title: In search of a suitable method for disambiguation of word senses in Bengali
+  authors: Pal et al.
+  venue: International Journal of Speech Technology
+  year: 2021
+  link: https://doi.org/10.1007/s10772-020-09787-8
+  task: wsd
+- id: dawn-etal-2019-comprehensive-review-bengali-word-sense-disambiguation
+  title: A comprehensive review of Bengali word sense disambiguation
+  authors: Dawn et al.
+  venue: Artificial Intelligence Review
+  year: 2019
+  link: https://doi.org/10.1007/s10462-019-09790-9
+  task: wsd
+- id: pal-etal-2019-novel-approach-word-sense-disambiguation-bengali
+  title: A novel approach to word sense disambiguation in Bengali language using supervised methodology
+  authors: Pal et al.
+  venue: Sadhana
+  year: 2019
+  link: https://doi.org/10.1007/s12046-019-1165-2
+  task: wsd
+- id: pal-etal-2019-word-sense-disambiguation-bengali-language-unsupervised
+  title: Word Sense Disambiguation in Bengali language using unsupervised methodology with modifications
+  authors: Pal et al.
+  venue: Sadhana
+  year: 2019
+  link: https://doi.org/10.1007/s12046-019-1149-2
+  task: wsd
+- id: sengupta-etal-2019-word-sense-induction-bengali-parallel-corpora
+  title: Word sense induction in bengali using parallel corpora and distributional semantics
+  authors: Sengupta et al.
+  venue: Journal of Intelligent & Fuzzy Systems
+  year: 2019
+  link: https://doi.org/10.3233/jifs-179030
+  task: wsd
+- id: pal-etal-2018-word-sense-disambiguation-bangla-language-supervised
+  title: Word Sense Disambiguation in Bangla Language Using Supervised Methodology with Necessary Modifications
+  authors: Pal et al.
+  venue: Journal of The Institution of Engineers (India) Series B
+  year: 2018
+  link: https://doi.org/10.1007/s40031-018-0337-5
+  task: wsd

@@ -1,0 +1,42 @@
+- id: hossain-etal-2023-benco-first-step-towards-coreference-resolution
+  title: "BenCo: First Step Towards Coreference Resolution in Bengali"
+  authors: Hossain et al.
+  venue: ICECCME
+  year: 2023
+  link: https://doi.org/10.1109/iceccme57830.2023.10252703
+  task: coref
+- id: tazakka-etal-2016-bangla-anaphora-resolution
+  title: Anaphora Resolution in Bangla Language
+  authors: Tazakka et al.
+  venue: International Journal of Computer Applications
+  year: 2016
+  link: https://doi.org/10.5120/ijca2016912204
+  task: coref
+- id: sikdar-etal-2015-feature-selection-anaphora-resolution-bengali-multiobjective
+  title: "Feature Selection in Anaphora Resolution for Bengali: A Multiobjective Approach"
+  authors: Sikdar et al.
+  venue: Lecture notes in computer science
+  year: 2015
+  link: https://doi.org/10.1007/978-3-319-18111-0_20
+  task: coref
+- id: senapati-etal-2014-maximum-entropy-honorificity-identification-bengali-pronominal
+  title: A Maximum Entropy Based Honorificity Identification for Bengali Pronominal Anaphora Resolution
+  authors: Senapati et al.
+  venue: Lecture notes in computer science
+  year: 2014
+  link: https://doi.org/10.1007/978-3-642-54906-9_26
+  task: coref
+- id: senapati-garain-2013-guitar
+  title: GuiTAR-based Pronominal Anaphora Resolution in Bengali
+  authors: Senapati et al.
+  venue: ACL
+  year: 2013
+  link: https://aclanthology.org/P13-2023/
+  task: coref
+- id: senapati-etal-2012-anaphora-resolution-bangla-global-discourse-knowledge
+  title: Anaphora Resolution in Bangla Using Global Discourse Knowledge
+  authors: Senapati et al.
+  venue: IALP
+  year: 2012
+  link: https://doi.org/10.1109/ialp.2012.25
+  task: coref

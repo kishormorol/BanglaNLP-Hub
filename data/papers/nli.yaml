@@ -1,0 +1,21 @@
+- id: haque-etal-2026-bnli
+  title: "BNLI: A Linguistically-Refined Bengali Dataset for Natural Language Inference"
+  authors: Haque et al.
+  venue: CHiPSAL
+  year: 2026
+  link: https://aclanthology.org/2026.chipsal-1.9/
+  task: nli
+- id: arxiv-2405-02937
+  title: "Unraveling the Dominance of Large Language Models Over Transformer Models for Bangla Natural Language Inference: A Comprehensive Study"
+  authors: Faria et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2405.02937
+  task: nli
+- id: das-etal-2014-exploring-partial-textual-entailment-problem-bengali
+  title: Exploring the Partial Textual Entailment Problem for Bengali News Texts
+  authors: Das et al.
+  venue: Research in Computing Science
+  year: 2014
+  link: https://doi.org/10.13053/rcs-86-1-3
+  task: nli

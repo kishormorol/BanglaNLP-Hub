@@ -1,0 +1,28 @@
+- id: arxiv-2503-22283
+  title: "BanglAssist: A Bengali-English Generative AI Chatbot for Code-Switching and Dialect-Handling in Customer Service"
+  authors: Kruk et al.
+  venue: arXiv
+  year: 2025
+  link: http://arxiv.org/abs/2503.22283
+  task: dialogue
+- id: monsur-etal-2022-shonglap
+  title: "SHONGLAP: A Large Bengali Open-Domain Dialogue Corpus"
+  authors: Monsur et al.
+  venue: LREC
+  year: 2022
+  link: https://aclanthology.org/2022.lrec-1.623/
+  task: dialogue
+- id: arxiv-2111-03937
+  title: Transformer Based Bengali Chatbot Using General Knowledge Dataset
+  authors: Masum et al.
+  venue: arXiv
+  year: 2021
+  link: http://arxiv.org/abs/2111.03937
+  task: dialogue
+- id: arxiv-2107-05541
+  title: End-to-End Natural Language Understanding Pipeline for Bangla Conversational Agents
+  authors: Khan et al.
+  venue: arXiv
+  year: 2021
+  link: http://arxiv.org/abs/2107.05541
+  task: dialogue

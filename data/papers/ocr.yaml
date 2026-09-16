@@ -1,0 +1,308 @@
+- id: islam-etal-2026-bornodrishti
+  title: "BornoDrishti: Leveraging Vision Encoders and Domain-Adaptive Learning for Bangla OCR on Diverse Documents"
+  authors: Islam et al.
+  venue: EACL
+  year: 2026
+  link: https://aclanthology.org/2026.eacl-industry.20/
+  task: ocr
+- id: arxiv-2608-03884
+  title: "BanglaWild: An In-the-Wild Bengali Scene Text Recognition Benchmark for OCR and Vision-Language Models"
+  authors: Shiper et al.
+  venue: arXiv
+  year: 2026
+  link: http://arxiv.org/abs/2608.03884
+  task: ocr
+- id: mahbub-etal-2026-asegmentation-optical-character-recognition-system-bangla
+  title: Asegmentation based optical character recognition system for Bangla printed text
+  authors: Mahbub et al.
+  venue: TELKOMNIKA (Telecommunication Computing Electronics and Control)
+  year: 2026
+  link: https://doi.org/10.12928/telkomnika.v24i3.26961
+  task: ocr
+- id: hasan-etal-2025-gradet
+  title: "GraDeT-HTR: A Resource-Efficient Bengali Handwritten Text Recognition System utilizing Grapheme-based Tokenizer and Decoder-only Transformer"
+  authors: Hasan et al.
+  venue: EMNLP
+  year: 2025
+  link: https://aclanthology.org/2025.emnlp-demos.52/
+  task: ocr
+- id: saha-etal-2025-cnn-transformer-approach-bengali-handwritten-word
+  title: A CNN-Transformer Approach for Bengali Handwritten Word Recognition
+  authors: Saha et al.
+  venue: Journal of The Institution of Engineers (India) Series B
+  year: 2025
+  link: https://doi.org/10.1007/s40031-025-01245-w
+  task: ocr
+- id: maung-etal-2025-hybrid-approach-bangla-handwritten-ocr-combining
+  title: "A hybrid approach to Bangla handwritten OCR: combining YOLO and an advanced CNN"
+  authors: Maung et al.
+  venue: Discover Artificial Intelligence
+  year: 2025
+  link: https://doi.org/10.1007/s44163-025-00251-7
+  task: ocr
+- id: alam-etal-2025-bilingual-bangla-ocr-rural-empowerment-detecting
+  title: "Bilingual Bangla OCR for Rural Empowerment: Detecting Handwritten Queries and Agricultural Assistance"
+  authors: Alam et al.
+  venue: IEEE Open Journal of the Computer Society
+  year: 2025
+  link: https://doi.org/10.1109/ojcs.2025.3573317
+  task: ocr
+- id: dutta-etal-2025-multilingual-scene-text-recognition-faster-r
+  title: "Multilingual scene text recognition: A faster R-CNN approach for Bengali and English scripts"
+  authors: Dutta et al.
+  venue: Expert Systems with Applications
+  year: 2025
+  link: https://doi.org/10.1016/j.eswa.2025.130482
+  task: ocr
+- id: arxiv-2404-02375
+  title: "Optical Text Recognition in Nepali and Bengali: A Transformer-based Approach"
+  authors: Hasan et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2404.02375
+  task: ocr
+- id: arxiv-2402-05158
+  title: Enhancement of Bengali OCR by Specialized Models and Advanced Techniques for Diverse Document Types
+  authors: Rabby et al.
+  venue: arXiv
+  year: 2024
+  link: http://arxiv.org/abs/2402.05158
+  task: ocr
+- id: hossain-etal-2024-bangla-handwritten-word-recognition-yolo-v5
+  title: Bangla handwritten word recognition using YOLO V5
+  authors: Hossain et al.
+  venue: Bulletin of Electrical Engineering and Informatics
+  year: 2024
+  link: https://doi.org/10.11591/eei.v13i3.6953
+  task: ocr
+- id: tusher-etal-2024-development-lightweight-model-handwritten-dataset-recognition
+  title: "Development of a Lightweight Model for Handwritten Dataset Recognition: Bangladeshi City Names in Bangla Script"
+  authors: Tusher et al.
+  venue: Computers, materials & continua/Computers, materials & continua (Print)
+  year: 2024
+  link: https://doi.org/10.32604/cmc.2024.049296
+  task: ocr
+- id: ali-etal-2023-gold
+  title: "Gold Standard Bangla OCR Dataset: An In-Depth Look at Data Preprocessing and Annotation Processes"
+  authors: Ali et al.
+  venue: EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.emnlp-industry.44/
+  task: ocr
+- id: monsur-etal-2023-synthnid
+  title: "SynthNID: Synthetic Data to Improve End-to-end Bangla Document Key Information Extraction"
+  authors: Monsur et al.
+  venue: BLP @ EMNLP
+  year: 2023
+  link: https://aclanthology.org/2023.banglalp-1.13/
+  task: ocr
+- id: arxiv-2308-10647
+  title: "bbOCR: An Open-source Multi-domain OCR Pipeline for Bengali Documents"
+  authors: Zulkarnain et al.
+  venue: arXiv
+  year: 2023
+  link: http://arxiv.org/abs/2308.10647
+  task: ocr
+- id: roy-etal-2023-multifaceted-evaluation-representation-graphemes-practically-effective
+  title: A multifaceted evaluation of representation of graphemes for practically effective Bangla OCR
+  authors: Roy et al.
+  venue: International Journal on Document Analysis and Recognition (IJDAR)
+  year: 2023
+  link: https://doi.org/10.1007/s10032-023-00446-7
+  task: ocr
+- id: bhattacharyya-etal-2023-bworddeepnet-novel-deep-learning-architecture-recognition
+  title: "BWordDeepNet: a novel deep learning architecture for the recognition of online handwritten Bangla words"
+  authors: Bhattacharyya et al.
+  venue: Multimedia Tools and Applications
+  year: 2023
+  link: https://doi.org/10.1007/s11042-023-16709-8
+  task: ocr
+- id: ghosh-2023-newspaper-text-recognition-bengali-script-support
+  title: Newspaper text recognition in Bengali script using support vector machine
+  authors: Ghosh
+  venue: Multimedia Tools and Applications
+  year: 2023
+  link: https://doi.org/10.1007/s11042-023-16862-0
+  task: ocr
+- id: chaudhury-etal-2022-deep-ocr-degraded-bangla-documents
+  title: A Deep OCR for Degraded Bangla Documents
+  authors: Chaudhury et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2022
+  link: https://doi.org/10.1145/3511807
+  task: ocr
+- id: majid-etal-2022-character-spotting-autonomous-tagging-offline-handwriting
+  title: "Character spotting and autonomous tagging: offline handwriting recognition for Bangla, Korean and other alphabetic scripts"
+  authors: Majid et al.
+  venue: International Journal on Document Analysis and Recognition (IJDAR)
+  year: 2022
+  link: https://doi.org/10.1007/s10032-022-00410-x
+  task: ocr
+- id: arxiv-2206-08977
+  title: "BN-HTRd: A Benchmark Dataset for Document Level Offline Bangla Handwritten Text Recognition (HTR) and Line Segmentation"
+  authors: Rahman et al.
+  venue: arXiv
+  year: 2022
+  link: http://arxiv.org/abs/2206.08977
+  task: ocr
+- id: arxiv-2105-04020
+  title: End-to-End Optical Character Recognition for Bengali Handwritten Words
+  authors: Safir et al.
+  venue: arXiv
+  year: 2021
+  link: http://arxiv.org/abs/2105.04020
+  task: ocr
+- id: sen-etal-2021-byanjon-ground-truth-preparation-system-online
+  title: "BYANJON: A Ground Truth Preparation System for Online Handwritten Bangla Documents"
+  authors: Sen et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2021
+  link: https://doi.org/10.1145/3464379
+  task: ocr
+- id: pramanik-etal-2021-handwritten-bangla-city-name-word-recognition
+  title: Handwritten Bangla city name word recognition using CNN-based transfer learning and FCN
+  authors: Pramanik et al.
+  venue: Neural Computing and Applications
+  year: 2021
+  link: https://doi.org/10.1007/s00521-021-05693-5
+  task: ocr
+- id: arxiv-2009-08037
+  title: Word Segmentation from Unconstrained Handwritten Bangla Document Images using Distance Transform
+  authors: Singh et al.
+  venue: arXiv
+  year: 2020
+  link: http://arxiv.org/abs/2009.08037
+  task: ocr
+- id: malakar-etal-2020-image-database-handwritten-bangla-words-automatic
+  title: An image database of handwritten Bangla words with automatic benchmarking facilities for character segmentation algorithms
+  authors: Malakar et al.
+  venue: Neural Computing and Applications
+  year: 2020
+  link: https://doi.org/10.1007/s00521-020-04981-w
+  task: ocr
+- id: rajbongshi-etal-2020-bangla-optical-character-recognition-text-speech
+  title: Bangla Optical Character Recognition and Text-to-Speech Conversion using Raspberry Pi
+  authors: Rajbongshi et al.
+  venue: International Journal of Advanced Computer Science and Applications
+  year: 2020
+  link: https://doi.org/10.14569/ijacsa.2020.0110636
+  task: ocr
+- id: mukherjee-etal-2020-nn-analytic-approach-symbol-level-recognition
+  title: NN-based analytic approach to symbol level recognition for degraded Bengali printed documents
+  authors: Mukherjee et al.
+  venue: Sadhana
+  year: 2020
+  link: https://doi.org/10.1007/s12046-020-01492-1
+  task: ocr
+- id: pramanik-etal-2020-segmentation-recognition-system-handwritten-bangla-devanagari
+  title: Segmentation‐based recognition system for handwritten Bangla and Devanagari words using conventional classification and transfer learning
+  authors: Pramanik et al.
+  venue: IET Image Processing
+  year: 2020
+  link: https://doi.org/10.1049/iet-ipr.2019.0208
+  task: ocr
+- id: arxiv-1908-08674
+  title: A BLSTM Network for Printed Bengali OCR System with High Accuracy
+  authors: Paul et al.
+  venue: arXiv
+  year: 2019
+  link: http://arxiv.org/abs/1908.08674
+  task: ocr
+- id: garai-etal-2019-automatic-rectification-warped-bangla-document-images
+  title: Automatic rectification of warped Bangla document images
+  authors: Garai et al.
+  venue: IET Image Processing
+  year: 2019
+  link: https://doi.org/10.1049/iet-ipr.2019.0831
+  task: ocr
+- id: sen-etal-2019-online-bangla-handwritten-word-recognition-hmm
+  title: Online Bangla handwritten word recognition using HMM and language model
+  authors: Sen et al.
+  venue: Neural Computing and Applications
+  year: 2019
+  link: https://doi.org/10.1007/s00521-019-04518-w
+  task: ocr
+- id: ghosh-etal-2019-rnn-online-handwritten-word-recognition-devanagari
+  title: RNN based online handwritten word recognition in Devanagari and Bengali scripts using horizontal zoning
+  authors: Ghosh et al.
+  venue: Pattern Recognition
+  year: 2019
+  link: https://doi.org/10.1016/j.patcog.2019.03.030
+  task: ocr
+- id: das-etal-2019-segmentation-free-word-spotting-historical-bangla
+  title: Segmentation-free word spotting in historical Bangla handwritten document using Wave Kernel Signature
+  authors: Das et al.
+  venue: Pattern Analysis and Applications
+  year: 2019
+  link: https://doi.org/10.1007/s10044-019-00823-1
+  task: ocr
+- id: sen-etal-2018-novel-segmentation-technique-online-handwritten-bangla
+  title: A novel segmentation technique for online handwritten Bangla words
+  authors: Sen et al.
+  venue: Pattern Recognition Letters
+  year: 2018
+  link: https://doi.org/10.1016/j.patrec.2018.02.008
+  task: ocr
+- id: bhowmik-etal-2018-off-line-bangla-handwritten-word-recognition
+  title: "Off-line Bangla handwritten word recognition: a holistic approach"
+  authors: Bhowmik et al.
+  venue: Neural Computing and Applications
+  year: 2018
+  link: https://doi.org/10.1007/s00521-018-3389-1
+  task: ocr
+- id: singh-etal-2017-benchmark-databases-handwritten-bangla-roman-devanagari
+  title: Benchmark databases of handwritten Bangla-Roman and Devanagari-Roman mixed-script document images
+  authors: Singh et al.
+  venue: Multimedia Tools and Applications
+  year: 2017
+  link: https://doi.org/10.1007/s11042-017-4745-3
+  task: ocr
+- id: bhattacharya-etal-2017-cleaning-online-bangla-free-form-handwritten
+  title: Cleaning of Online Bangla Free-form Handwritten Text
+  authors: Bhattacharya et al.
+  venue: ACM Transactions on Asian and Low-Resource Language Information Processing
+  year: 2017
+  link: https://doi.org/10.1145/3145538
+  task: ocr
+- id: arxiv-1401-1190
+  title: "Bangla Text Recognition from Video Sequence: A New Focus"
+  authors: Bhowmick et al.
+  venue: arXiv
+  year: 2014
+  link: http://arxiv.org/abs/1401.1190
+  task: ocr
+- id: bag-etal-2013-survey-optical-character-recognition-bangla-devanagari
+  title: A survey on optical character recognition for Bangla and Devanagari scripts
+  authors: Bag et al.
+  venue: Sadhana
+  year: 2013
+  link: https://doi.org/10.1007/s12046-013-0121-9
+  task: ocr
+- id: arxiv-1202-3046
+  title: Segmentation of Offline Handwritten Bengali Script
+  authors: Basu et al.
+  venue: arXiv
+  year: 2012
+  link: http://arxiv.org/abs/1202.3046
+  task: ocr
+- id: sarkar-etal-2011-cmaterdb1-database-unconstrained-handwritten-bangla-bangla
+  title: "CMATERdb1: a database of unconstrained handwritten Bangla and Bangla–English mixed script document image"
+  authors: Sarkar et al.
+  venue: International Journal on Document Analysis and Recognition (IJDAR)
+  year: 2011
+  link: https://doi.org/10.1007/s10032-011-0148-6
+  task: ocr
+- id: pal-etal-2010-multi-oriented-bangla-devnagari-text-recognition
+  title: Multi-oriented Bangla and Devnagari text recognition
+  authors: Pal et al.
+  venue: Pattern Recognition
+  year: 2010
+  link: https://doi.org/10.1016/j.patcog.2010.06.017
+  task: ocr
+- id: chaudhuri-etal-1998-complete-printed-bangla-ocr-system
+  title: A complete printed Bangla OCR system
+  authors: Chaudhuri et al.
+  venue: Pattern Recognition
+  year: 1998
+  link: https://doi.org/10.1016/s0031-3203(97)00078-2
+  task: ocr
