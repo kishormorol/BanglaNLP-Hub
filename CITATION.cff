@@ -6,6 +6,7 @@ abstract: "A community-maintained catalog of Bangla (Bengali) NLP resources: pap
 authors:
   - family-names: Morol
     given-names: Md Kishor
+    orcid: "https://orcid.org/0000-0002-4468-8260"
 repository-code: "https://github.com/kishormorol/BanglaNLP-Hub"
 url: "https://kishormorol.github.io/BanglaNLP-Hub/"
 license: MIT
