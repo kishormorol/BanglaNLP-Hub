@@ -205,11 +205,11 @@
 - id: bnmmlu-p
   title: "BnMMLU: Measuring Massive Multitask Language Understanding in Bengali"
   authors: Joy and Shatabda
-  venue: arXiv
-  year: 2025
-  link: https://arxiv.org/abs/2505.18951
+  venue: Findings ACL
+  year: 2026
+  link: https://aclanthology.org/2026.findings-acl.593/
   task: llm
-  note: 134,375 question-option pairs across 23 domains.
+  note: 134,375 question-option pairs across 41 domains.
 - id: juboraj-etal-2025-bracu
   title: "BRACU\\_CL at BLP-2025 Task 2: CodeMist: A Transformer-Based Framework for Bangla Instruction-to-Code Generation"
   authors: Juboraj et al.

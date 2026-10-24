@@ -392,7 +392,7 @@ Validation and build pass with
 | `banth` | [ACL 2025.findings-naacl.403](https://aclanthology.org/2025.findings-naacl.403.bib) | Multi-label transliterated Bangla hate speech. |
 | `globalmmlu` | [arXiv 2412.03304](https://arxiv.org/bibtex/2412.03304) | Parent benchmark for `bn`, not Global-MMLU-Lite; revised export says 2025, initial submission was 2024. |
 | `megaverse` | [ACL 2024.naacl-long.143](https://aclanthology.org/2024.naacl-long.143.bib) | Whole multilingual suite; does not establish Bengali coverage in every constituent dataset. |
-| `bnmmlu` | [ACL 2026.findings-acl.593](https://aclanthology.org/2026.findings-acl.593.bib) | Published version preferred over the saved arXiv 2505.18951 export; catalog still describes the 2025 preprint. |
+| `bnmmlu` | [ACL 2026.findings-acl.593](https://aclanthology.org/2026.findings-acl.593.bib) | Published version; the dataset release year remains 2025. |
 | `banglamath` | [ACL 2025.mathnlp-main.10](https://aclanthology.org/2025.mathnlp-main.10.bib) | Grade 6, 7, and 8 benchmark; canonical workshop title retained. |
 | `somadhan` | [arXiv 2505.21354](https://arxiv.org/bibtex/2505.21354) | Paper experiments use an earlier 4,000-problem sample, not the later 8,792-problem v2 release. |
 | `banglaparaphrase` | [ACL 2022.aacl-short.33](https://aclanthology.org/2022.aacl-short.33.bib) | BanglaParaphrase paper for the linked BUET release. |
@@ -414,10 +414,10 @@ Validation and build pass with
 
 ### Metadata follow-ups
 
-These discrepancies surfaced during citation matching. Catalog fields remain
-unchanged pending a separate metadata and release review.
+These discrepancies surfaced during citation matching. The remaining discrepancies
+need a separate metadata and release review.
 
-- `bnmmlu`: the [published abstract](https://aclanthology.org/2026.findings-acl.593/) and [repository](https://github.com/samanjoy2/bnmmlu) say 41 domains; both the dataset description and `bnmmlu-p` note say 23. The paper record also retains its 2025 arXiv venue, year, and link. Review the version scope before updating these fields.
+- `bnmmlu`: the [ACL 2026 paper](https://aclanthology.org/2026.findings-acl.593/) and [pinned author README](https://github.com/samanjoy2/bnmmlu/blob/0030d622ea1fcb462f9aa17b410d533c48667120/README.md) report 41 domains and 134,375 question option pairs. The paper record now describes the published version. The dataset release year remains 2025.
 - `vashantor`: the [paper](https://arxiv.org/abs/2311.11142) and [Mendeley v2](https://data.mendeley.com/datasets/bj5jgk878b/2) describe Bangla, Banglish, and English forms. The 32,500 total is sentences, not distinct parallel pairs. Resolve the 2023 catalog year, January 2024 v2 release, and 2025 revised citation separately.
 - `somadhan`: [paper v2](https://arxiv.org/html/2505.21354v2) section 4.3 describes 4,000 annotated samples and a planned v2. [Mendeley v2](https://data.mendeley.com/datasets/34bs5cxk9j/2), released August 5, 2025, describes 8,792 problems. Do not use the paper's experimental sample to validate the later release size.
 - `bnsentmix`: the [paper](https://aclanthology.org/2025.loreslm-1.4.pdf) says CC BY 4.0, the [repository](https://github.com/Nishita2000/BnSentMix) has Apache 2.0, and the [HF card](https://huggingface.co/datasets/aplycaebous/BnSentMix) and catalog say MIT. The card reports both 20,000 samples and 21,873 unique sentences; its viewer reports 20,015 rows. License and count scope remain unresolved.

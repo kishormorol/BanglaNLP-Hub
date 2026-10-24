@@ -105,8 +105,8 @@
   year: 2025
   source: BnMMLU (2025)
   link: https://github.com/samanjoy2/bnmmlu
-  verified: 2026-07-19
-  desc: Bengali massive multitask language understanding benchmark spanning 23 domains.
+  verified: 2026-10-23
+  desc: Bengali massive multitask language understanding benchmark spanning 41 domains.
   bibtex: |-
     @inproceedings{joy-shatabda-2026-bnmmlu,
         title = "{B}n{MMLU}: Measuring Massive Multitask Language Understanding in {B}engali",
