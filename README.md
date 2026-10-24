@@ -12,7 +12,7 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 [![Tasks](https://img.shields.io/badge/tasks-26-64748b)](./data/tasks.yaml)
 [![Datasets](https://img.shields.io/badge/datasets-67-7c3aed)](./data/datasets)
 [![Papers](https://img.shields.io/badge/papers-814-2563eb)](./data/papers)
-[![Models](https://img.shields.io/badge/models-20-0891b2)](./data/models.yaml)
+[![Models](https://img.shields.io/badge/models-22-0891b2)](./data/models.yaml)
 [![Tools](https://img.shields.io/badge/tools-9-db2777)](./data/tools.yaml)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22798635-1682D4?style=flat)](https://doi.org/10.5281/zenodo.22798635)
 
@@ -28,14 +28,14 @@ Static site built with Astro and TypeScript. No client-side framework: the only 
 
 Everything the site renders comes from YAML under [`/data`](./data). Nothing is hardcoded in the pages.
 
-The catalog currently holds **814 papers**, **67 datasets**, **20 models**, and **9 tools** across **26 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles, and the taxonomy doubled in September 2026 to cover work the original 13 tasks had no home for (see [`TODO-data.md`](./TODO-data.md)).
+The catalog currently holds **814 papers**, **67 datasets**, **22 models**, and **9 tools** across **26 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles, and the taxonomy doubled in September 2026 to cover work the original 13 tasks had no home for (see [`TODO-data.md`](./TODO-data.md)).
 
 | | Count |
 | --- | --- |
 | Tasks | 26 |
 | Datasets | 67 |
 | Papers | 814 |
-| Models | 20 |
+| Models | 22 |
 | Tools | 9 |
 
 ```

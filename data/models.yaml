@@ -78,6 +78,20 @@
   link: https://huggingface.co/facebook/nllb-200-3.3B
   verified: 2026-06-02
   note: Multilingual translation model supporting Bengali and English.
+- id: ai4bharat-indictrans2-indic-en-1b
+  name: ai4bharat/indictrans2-indic-en-1B
+  tasks: [mt]
+  arch: IndicTransForConditionalGeneration
+  link: https://huggingface.co/ai4bharat/indictrans2-indic-en-1B/tree/ac3daf0ecd37be3b6957764a9179ab2b07fa9d6a
+  verified: 2026-10-23
+  note: Indic to English translation, including Bengali. Gated with automatic access approval. The model card declares MIT.
+- id: ai4bharat-indictrans2-en-indic-1b
+  name: ai4bharat/indictrans2-en-indic-1B
+  tasks: [mt]
+  arch: IndicTransForConditionalGeneration
+  link: https://huggingface.co/ai4bharat/indictrans2-en-indic-1B/tree/89cd0007fd7b9e0693a2fd4404d187e07dac79fd
+  verified: 2026-10-23
+  note: English to Indic translation, including Bengali. Gated with automatic access approval. The model card declares MIT.
 - id: csebuetnlp-banglat5-nmt-bn-en
   name: csebuetnlp/banglat5_nmt_bn_en
   tasks: [mt]
