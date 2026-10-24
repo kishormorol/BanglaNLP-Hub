@@ -22,6 +22,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 import { z } from 'zod';
+import './validate.ts';
 import {
   DatasetSchema,
   ModelSchema,
@@ -110,19 +111,6 @@ const counts = {
   tools: tools.length,
   tasks: tasks.length,
 };
-
-// Every entry's task must be one the taxonomy knows, or a config would carry a
-// label nothing in the catalog explains. validate.ts enforces this too; the
-// export re-checks rather than trusting that it was run.
-const known = new Set(tasks.map((t) => t.id));
-const orphans = [...papers, ...datasets]
-  .map((e) => (e as { task?: string; id?: string }))
-  .filter((e) => e.task && !known.has(e.task));
-if (orphans.length) {
-  throw new Error(
-    `${orphans.length} entr(ies) reference an unknown task, e.g. ${orphans[0]?.id} -> ${orphans[0]?.task}`,
-  );
-}
 
 rmSync(outDir, { recursive: true, force: true });
 mkdirSync(outDir, { recursive: true });

@@ -6,7 +6,10 @@ export const VERIFY_MAX_AGE_MONTHS = 12;
 const isoDate = z
   .string()
   .regex(/^\d{4}-\d{2}-\d{2}$/, 'must be an ISO date (YYYY-MM-DD)')
-  .refine((s) => !Number.isNaN(Date.parse(s)), 'is not a real calendar date');
+  .refine((s) => {
+    const date = new Date(s);
+    return !Number.isNaN(date.getTime()) && date.toISOString().slice(0, 10) === s;
+  }, 'is not a real calendar date');
 
 /** http(s) only — no mailto:, no relative paths, no javascript:. */
 const url = z
