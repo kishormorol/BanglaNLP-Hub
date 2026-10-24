@@ -12,16 +12,14 @@ import Base from '../layouts/Base.astro';
 import { stats, tasks } from '../lib/data.ts';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const SITE = 'https://kishormorol.github.io/BanglaNLP-Hub/';
 const REPO = 'https://github.com/kishormorol/BanglaNLP-Hub';
-const today = new Date().toISOString().slice(0, 10);
 
-const bibtex = `@misc{banglanlphub2026,
-  title        = {{B}angla{NLP} Hub: A Community-Maintained Catalog of {B}angla {NLP} Resources},
-  author       = {{ELITE Research Lab} and contributors},
-  year         = {2026},
-  howpublished = {\\url{${SITE}}},
-  note         = {Accessed ${today}}
+const bibtex = `@software{morol_banglanlp_hub,
+  author  = {Morol, Md Kishor},
+  title   = {BanglaNLP Hub},
+  doi     = {10.5281/zenodo.22798635},
+  url     = {${REPO}},
+  license = {MIT}
 }`;
 
 const principles = [
@@ -100,7 +98,8 @@ const h2Style = "font-family:'Spectral',serif;font-weight:600;font-size:22px;mar
     <section style="padding-top:36px">
       <h2 style={h2Style.replace('0 0 12px', '0 0 6px')}>Cite this catalog</h2>
       <p style="color:var(--text2);font-size:14px;margin:0 0 12px">
-        If the Hub helped your research, cite it:
+        This citation identifies the project. To cite a release, use its version DOI from <a
+          href="https://doi.org/10.5281/zenodo.22798635" target="_blank" rel="noopener">Zenodo</a>.
       </p>
       <div style="position:relative">
         <pre

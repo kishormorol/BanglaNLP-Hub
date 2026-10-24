@@ -64,10 +64,13 @@ Coverage is best for tasks with active published work (classification, MT, NER, 
 
 ## Citation
 
+This citation identifies the project. To cite a release, use its version DOI from [Zenodo](https://doi.org/10.5281/zenodo.22798635).
+
 ```bibtex
 @software{morol_banglanlp_hub,
   author  = {Morol, Md Kishor},
-  title   = {BanglaNLP Hub: A Catalog of Bangla NLP Resources},
+  title   = {BanglaNLP Hub},
+  doi     = {10.5281/zenodo.22798635},
   url     = {https://github.com/kishormorol/BanglaNLP-Hub},
   license = {MIT}
 }
