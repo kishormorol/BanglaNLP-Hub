@@ -8,6 +8,7 @@ Contributions welcome — see CONTRIBUTING.md.
 | id | release evidence and caveat |
 | --- | --- |
 | `xnli-bn` | The [pinned author card](https://huggingface.co/datasets/csebuetnlp/xnli_bn/blob/a18ecb62d7ffd4a6bff5756afb6e799bbb91dd3e/README.md) reports 381,449 training pairs, 2,419 validation pairs, and 4,895 test pairs. It declares CC BY-NC-SA 4.0 and restricts use to noncommercial research. The data is translated from the MNLI subset used for XNLI. The [release history](https://huggingface.co/api/datasets/csebuetnlp/xnli_bn/commits/main) begins in September 2021. The citation follows the published [BanglaBERT record](https://aclanthology.org/2022.findings-naacl.98.bib). |
+| `dailydialogue-bn` | The [pinned author card](https://huggingface.co/datasets/csebuetnlp/dailydialogue_bn/blob/27ea717c9e5ff2b930890415817698a93bd82ea8/README.md) reports 11,118 training dialogues, 1,000 validation dialogues, and 1,000 test dialogues. It declares CC BY-NC-SA 4.0 and restricts use to noncommercial research. It describes English DailyDialog conversations translated into Bengali, with training examples filtered using sentence embedding similarity. The [release history](https://huggingface.co/api/datasets/csebuetnlp/dailydialogue_bn/commits/main) begins on July 15, 2023. The citation follows the [BanglaNLG record](https://aclanthology.org/2023.findings-eacl.54.bib). |
 
 ## Dataset metadata audit (2026-09-08)
 

@@ -1,0 +1,29 @@
+- id: dailydialogue-bn
+  name: DailyDialogue-BN
+  task: dialogue
+  size: 13,118 dialogues
+  sizeN: 13118
+  license: CC BY-NC-SA 4.0; noncommercial research only (author card)
+  year: 2023
+  source: Author's Hugging Face release history (2023)
+  link: https://huggingface.co/datasets/csebuetnlp/dailydialogue_bn/tree/27ea717c9e5ff2b930890415817698a93bd82ea8
+  verified: 2026-10-23
+  desc: Bengali dialogues with multiple turns, translated from English DailyDialog. Train 11,118, validation 1,000, and test 1,000 dialogues. Training examples were filtered using sentence embedding similarity.
+  bibtex: |-
+    @inproceedings{bhattacharjee-etal-2023-banglanlg,
+        title = "{B}angla{NLG} and {B}angla{T}5: Benchmarks and Resources for Evaluating Low-Resource Natural Language Generation in {B}angla",
+        author = "Bhattacharjee, Abhik  and
+          Hasan, Tahmid  and
+          Ahmad, Wasi Uddin  and
+          Shahriyar, Rifat",
+        editor = "Vlachos, Andreas  and
+          Augenstein, Isabelle",
+        booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {EACL} 2023",
+        month = may,
+        year = "2023",
+        address = "Dubrovnik, Croatia",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2023.findings-eacl.54/",
+        doi = "10.18653/v1/2023.findings-eacl.54",
+        pages = "726--735"
+    }
