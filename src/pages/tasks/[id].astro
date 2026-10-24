@@ -110,6 +110,7 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
             data-tab={tid}
             aria-controls={`panel-${tid}`}
             aria-selected={tid === 'datasets' ? 'true' : 'false'}
+            tabindex={tid === 'datasets' ? '0' : '-1'}
             style="border:none;background:none;cursor:pointer;padding:10px 16px;font-size:14px;font-family:'IBM Plex Sans',sans-serif;margin-bottom:-1.5px;white-space:nowrap"
           >
             {label}
@@ -139,10 +140,13 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
                   class={c.sticky ? 'stickycol' : undefined}
                   data-sort={c.key ?? undefined}
                   aria-sort={c.key === 'year' ? 'descending' : c.key ? 'none' : undefined}
-                  style={`${thBase};cursor:${c.key ? 'pointer' : 'default'};color:${c.key === 'year' ? 'var(--green)' : 'var(--text2)'}`}
+                  style={`${thBase};${c.key ? 'padding:0;' : ''}color:${c.key === 'year' ? 'var(--green)' : 'var(--text2)'}`}
                 >
-                  {c.label}
-                  <span data-ind>{c.key === 'year' ? ' ▾' : ''}</span>
+                  {c.key ? (
+                    <button type="button" data-sort-button style="display:block;inline-size:100%;min-block-size:44px;border:0;padding-block:10px;padding-inline:16px;background:none;color:inherit;font:inherit;letter-spacing:inherit;text-transform:inherit;text-align:inherit;cursor:pointer">
+                      {c.label}<span data-ind aria-hidden="true">{c.key === 'year' ? ' ▾' : ''}</span>
+                    </button>
+                  ) : c.label}
                 </th>
               ))
             }
@@ -430,8 +434,25 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
     font-weight: 500;
     border-bottom: 2.5px solid transparent;
   }
-  [role='tab']:hover {
-    color: var(--green);
+  @media (hover: hover) and (pointer: fine) {
+    [role='tab']:hover {
+      color: var(--green);
+    }
+  }
+  [role='tab']:focus-visible,
+  [data-sort-button]:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+  [role='tab']:active,
+  [data-sort-button]:active {
+    transform: scale(0.97);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    [role='tab'],
+    [data-sort-button] {
+      transition: transform 160ms ease-out;
+    }
   }
   [role='tab'][aria-selected='true'] {
     color: var(--green);
@@ -457,6 +478,7 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
     const tab = TABS.includes(name) ? name : 'datasets';
     document.querySelectorAll<HTMLElement>('[data-tab]').forEach((b) => {
       b.setAttribute('aria-selected', String(b.dataset.tab === tab));
+      b.tabIndex = b.dataset.tab === tab ? 0 : -1;
     });
     document.querySelectorAll<HTMLElement>('[data-panel]').forEach((p) => {
       p.hidden = p.dataset.panel !== tab;
@@ -464,8 +486,29 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
     if (push) history.replaceState(null, '', tab === 'datasets' ? location.pathname : `#${tab}`);
   }
 
-  document.querySelectorAll<HTMLElement>('[data-tab]').forEach((b) => {
-    b.addEventListener('click', () => showTab(b.dataset.tab!, true));
+  document.querySelectorAll<HTMLButtonElement>('[data-tab]').forEach((b) => {
+    b.addEventListener('click', () => {
+      if (b.dataset.tab) showTab(b.dataset.tab, true);
+    });
+    b.addEventListener('keydown', (event) => {
+      const tabs = [...document.querySelectorAll<HTMLButtonElement>('[data-tab]')];
+      const current = tabs.indexOf(b);
+      const next = event.key === 'ArrowRight'
+        ? (current + 1) % tabs.length
+        : event.key === 'ArrowLeft'
+          ? (current - 1 + tabs.length) % tabs.length
+          : event.key === 'Home'
+            ? 0
+            : event.key === 'End'
+              ? tabs.length - 1
+              : -1;
+      if (next < 0) return;
+      event.preventDefault();
+      const nextTab = tabs[next];
+      if (!nextTab?.dataset.tab) return;
+      nextTab.focus();
+      showTab(nextTab.dataset.tab, true);
+    });
   });
   window.addEventListener('hashchange', () => showTab(location.hash.slice(1), false));
   showTab(location.hash.slice(1), false);
@@ -477,9 +520,11 @@ const tdBase = 'padding:12px 16px;border-bottom:1px solid var(--border)';
     let key = 'year';
     let dir = -1;
 
-    table.querySelectorAll<HTMLElement>('th[data-sort]').forEach((th) => {
-      th.addEventListener('click', () => {
-        const k = th.dataset.sort!;
+    table.querySelectorAll<HTMLButtonElement>('[data-sort-button]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const th = button.closest('th');
+        const k = th?.dataset.sort;
+        if (!th || !k) return;
         if (k === key) dir = -dir;
         else {
           key = k;
