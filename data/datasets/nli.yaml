@@ -1,0 +1,34 @@
+- id: xnli-bn
+  name: XNLI Bengali
+  task: nli
+  size: 388,763 sentence pairs
+  sizeN: 388763
+  license: CC BY-NC-SA 4.0; noncommercial research only (author card)
+  year: 2021
+  source: Author's Hugging Face release history (2021)
+  link: https://huggingface.co/datasets/csebuetnlp/xnli_bn/tree/a18ecb62d7ffd4a6bff5756afb6e799bbb91dd3e
+  verified: 2026-10-23
+  desc: Bengali NLI from the XNLI subset of MNLI, machine translated from English. Train 381,449, validation 2,419, and test 4,895 pairs.
+  bibtex: |-
+    @inproceedings{bhattacharjee-etal-2022-banglabert,
+        title = "{B}angla{BERT}: Language Model Pretraining and Benchmarks for Low-Resource Language Understanding Evaluation in {B}angla",
+        author = "Bhattacharjee, Abhik  and
+          Hasan, Tahmid  and
+          Ahmad, Wasi  and
+          Mubasshir, Kazi Samin  and
+          Islam, Md Saiful  and
+          Iqbal, Anindya  and
+          Rahman, M. Sohel  and
+          Shahriyar, Rifat",
+        editor = "Carpuat, Marine  and
+          de Marneffe, Marie-Catherine  and
+          Meza Ruiz, Ivan Vladimir",
+        booktitle = "Findings of the {A}ssociation for {C}omputational {L}inguistics: {NAACL} 2022",
+        month = jul,
+        year = "2022",
+        address = "Seattle, United States",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2022.findings-naacl.98/",
+        doi = "10.18653/v1/2022.findings-naacl.98",
+        pages = "1318--1327"
+    }

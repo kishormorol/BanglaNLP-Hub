@@ -3,6 +3,12 @@
 Known gaps, deliberately left empty rather than filled with invented values.
 Contributions welcome — see CONTRIBUTING.md.
 
+## Dataset release provenance (2026-10-23)
+
+| id | release evidence and caveat |
+| --- | --- |
+| `xnli-bn` | The [pinned author card](https://huggingface.co/datasets/csebuetnlp/xnli_bn/blob/a18ecb62d7ffd4a6bff5756afb6e799bbb91dd3e/README.md) reports 381,449 training pairs, 2,419 validation pairs, and 4,895 test pairs. It declares CC BY-NC-SA 4.0 and restricts use to noncommercial research. The data is translated from the MNLI subset used for XNLI. The [release history](https://huggingface.co/api/datasets/csebuetnlp/xnli_bn/commits/main) begins in September 2021. The citation follows the published [BanglaBERT record](https://aclanthology.org/2022.findings-naacl.98.bib). |
+
 ## Dataset metadata audit (2026-09-08)
 
 Checked the following five entries against primary GitHub/Hugging Face metadata
