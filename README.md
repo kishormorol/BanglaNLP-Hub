@@ -10,8 +10,8 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 [![HF Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20dataset-bangla--nlp--catalog-FFD21E)](https://huggingface.co/datasets/kishormorol/bangla-nlp-catalog)
 
 [![Tasks](https://img.shields.io/badge/tasks-26-64748b)](./data/tasks.yaml)
-[![Datasets](https://img.shields.io/badge/datasets-65-7c3aed)](./data/datasets)
-[![Papers](https://img.shields.io/badge/papers-813-2563eb)](./data/papers)
+[![Datasets](https://img.shields.io/badge/datasets-66-7c3aed)](./data/datasets)
+[![Papers](https://img.shields.io/badge/papers-814-2563eb)](./data/papers)
 [![Models](https://img.shields.io/badge/models-20-0891b2)](./data/models.yaml)
 [![Tools](https://img.shields.io/badge/tools-9-db2777)](./data/tools.yaml)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22798635-1682D4?style=flat)](https://doi.org/10.5281/zenodo.22798635)
@@ -28,13 +28,13 @@ Static site built with Astro and TypeScript. No client-side framework: the only 
 
 Everything the site renders comes from YAML under [`/data`](./data). Nothing is hardcoded in the pages.
 
-The catalog currently holds **813 papers**, **65 datasets**, **20 models**, and **9 tools** across **26 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles, and the taxonomy doubled in September 2026 to cover work the original 13 tasks had no home for (see [`TODO-data.md`](./TODO-data.md)).
+The catalog currently holds **814 papers**, **66 datasets**, **20 models**, and **9 tools** across **26 tasks** — the paper count roughly tripled in July 2026 through hand-verified sweeps of the ACL Anthology, arXiv, and OpenAlex journal articles, and the taxonomy doubled in September 2026 to cover work the original 13 tasks had no home for (see [`TODO-data.md`](./TODO-data.md)).
 
 | | Count |
 | --- | --- |
 | Tasks | 26 |
-| Datasets | 65 |
-| Papers | 813 |
+| Datasets | 66 |
+| Papers | 814 |
 | Models | 20 |
 | Tools | 9 |
 
@@ -136,7 +136,7 @@ Everyone who has contributed a resource is credited in [`CONTRIBUTORS.md`](./CON
 
 These are concrete, self-contained, and each one is genuinely useful on its own — full detail in [`TODO-data.md`](./TODO-data.md):
 
-- **Reviewing paper tasks.** Most of the 813 papers were bulk-imported (ACL Anthology, arXiv, and hand-verified OpenAlex journal articles); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
+- **Reviewing paper tasks.** Most of the 814 papers were bulk-imported (ACL Anthology, arXiv, and hand-verified OpenAlex journal articles); their metadata is authoritative but each one's *task* was assigned by a title heuristic. Spotting a paper filed under the wrong task and moving it is a quick, high-value fix.
 - **Leaderboard rows.** Nine of the eleven benchmarks ship empty. Each needs scores with a citation to the paper they came from. Keep the dataset version, test split, and evaluation conditions explicit.
 * **BibTeX.** 1 dataset has no citation entry, `snltr`. Establish the resource association before copying a canonical export under the policy above. Do not invent a citation.
 - **Unverified dataset sizes.** About a dozen datasets are hosted where no count is published (Kaggle, openslr.org, nltr.org). If you know the paper, you can settle these.

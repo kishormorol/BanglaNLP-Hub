@@ -306,3 +306,11 @@
   year: 1998
   link: https://doi.org/10.1016/s0031-3203(97)00078-2
   task: ocr
+- id: mridha-etal-2021-banglawriting
+  title: "BanglaWriting: A multi-purpose offline Bangla handwriting dataset"
+  authors: Mridha et al.
+  venue: Data in Brief
+  year: 2021
+  link: https://pmc.ncbi.nlm.nih.gov/articles/PMC7744928/
+  task: ocr
+  note: The dataset release is dated 2020; the article appeared online in December 2020 and in the 2021 issue. Its CC BY 4.0 article license differs from the dataset's CC BY-NC 3.0 license.
