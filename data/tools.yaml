@@ -24,12 +24,12 @@
   verified: 2026-05-30
 - id: sbnltk
   name: sbnltk
-  author: soumitri
+  author: Foysal87
   desc: "Bangla NLP toolkit: NER, POS, stemmer, sentiment, extractive summarizer."
   lang: Python
   install: pip install sbnltk
   link: https://github.com/Foysal87/sbnltk
-  verified: 2026-04-15
+  verified: 2026-10-23
 - id: bkit
   name: bkit
   author: giga-tech
