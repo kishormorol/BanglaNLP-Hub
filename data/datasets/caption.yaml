@@ -1,0 +1,21 @@
+- id: banglalekha-image-captions
+  name: BanglaLekhaImageCaptions v2
+  task: caption
+  size: 9,154 images with Bengali captions
+  sizeN: 9154
+  license: CC BY 4.0
+  year: 2019
+  source: Mendeley Data v2 (2019)
+  link: https://data.mendeley.com/datasets/rxxch9vw59/2
+  verified: 2026-10-23
+  desc: Human Bengali captions for 9,154 images. Version 2 lists a captions JSON file and a 6.76 GB image archive. Version 1 lists only the image archive. The DataCite record registers Nafees Mansoor as the creator.
+  bibtex: |-
+    @misc{https://doi.org/10.17632/rxxch9vw59.2,
+      doi = {10.17632/RXXCH9VW59.2},
+      url = {https://data.mendeley.com/datasets/rxxch9vw59/2},
+      author = {Mansoor, Nafees},
+      keywords = {Artificial Intelligence, Computer Vision, Natural Language Processing, Machine Learning, Bengali Language, Bangladesh, Image Analysis},
+      title = {BanglaLekhaImageCaptions},
+      publisher = {Mendeley},
+      year = {2019}
+    }
