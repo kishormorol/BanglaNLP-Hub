@@ -60,7 +60,7 @@ Fields marked optional may be omitted entirely; do not include them as empty str
   task: sentiment                  # must match the filename and a tasks.yaml id
   size: "15,728 comments"          # human-readable, as you would say it aloud
   sizeN: 15728                     # numeric, used for sorting — approximate is fine
-  license: CC BY-NC-SA 4.0
+  license: CC BY-ND 4.0
   year: 2021
   source: SentNoB (Findings EMNLP 2021)
   link: https://github.com/KhondokerIslam/SentNoB

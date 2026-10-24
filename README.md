@@ -84,7 +84,7 @@ filters to reveal a target. Without JavaScript, both pages show their full lists
 The catalog is only useful if its contents are true, so the project holds a hard line:
 
 - **No invented values.** Scores, citation counts, and BibTeX entries are never synthesised. A missing field is omitted and the UI hides the affected element.
-- **Leaderboards stay empty until sourced.** Each benchmark carries a real dataset and metric, and a score row appears only with a citation to the paper it came from. Just one benchmark (B-REASO, from Hosain & Morol 2025) is populated so far; the rest render a "No leaderboard curated yet" empty state rather than a plausible-looking number.
+- **Leaderboards stay empty until sourced.** Each benchmark carries a real dataset and metric, and a score row appears only with a citation to the paper it came from. B-REASO and BanglaRQA are populated, with four cited rows on BanglaRQA; the rest render a "No leaderboard curated yet" empty state rather than a plausible-looking number.
 - **Links are checked.** Every published `link:` URL is verified nightly. Unverified `data/inbox/` candidates are excluded. Dead links are reported in a single tracking issue; entries are never removed automatically.
 - **Entries get verified by hand.** Papers have been audited against the ACL Anthology, arXiv, and OpenAlex (title, authors, and abstract), and their task assignments are being spot-checked and corrected. Several entries inherited from the original design prototype turned out to be fabricated — a duplicate under an invented title, a model that does not exist, a paper with no publication — and were removed.
 

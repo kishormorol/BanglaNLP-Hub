@@ -102,7 +102,7 @@ body:
         Leave blank what you do not know — do not estimate.
       placeholder: |
         size: 15,728 comments
-        license: CC BY-NC-SA 4.0
+        license: CC BY-ND 4.0
         year: 2021
 
   - type: checkboxes
