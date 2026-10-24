@@ -11,10 +11,26 @@
   desc: High-quality Bangla–English parallel corpus built with aligner ensembling.
   bibtex: |-
     @inproceedings{hasan-etal-2020-low,
-      title = {Not Low-Resource Anymore: Aligner Ensembling, Batch Filtering, and New Datasets for {B}engali-{E}nglish Machine Translation},
-      author = {Hasan, Tahmid and Bhattacharjee, Abhik and others},
-      booktitle = {EMNLP},
-      year = {2020}
+        title = "Not Low-Resource Anymore: Aligner Ensembling, Batch Filtering, and New Datasets for {B}engali-{E}nglish Machine Translation",
+        author = "Hasan, Tahmid  and
+          Bhattacharjee, Abhik  and
+          Samin, Kazi  and
+          Hasan, Masum  and
+          Basak, Madhusudan  and
+          Rahman, M. Sohel  and
+          Shahriyar, Rifat",
+        editor = "Webber, Bonnie  and
+          Cohn, Trevor  and
+          He, Yulan  and
+          Liu, Yang",
+        booktitle = "Proceedings of the 2020 Conference on Empirical Methods in Natural Language Processing ({EMNLP})",
+        month = nov,
+        year = "2020",
+        address = "Online",
+        publisher = "Association for Computational Linguistics",
+        url = "https://aclanthology.org/2020.emnlp-main.207/",
+        doi = "10.18653/v1/2020.emnlp-main.207",
+        pages = "2612--2623"
     }
 - id: flores
   name: FLORES-200 (bn)
