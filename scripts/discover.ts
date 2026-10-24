@@ -117,8 +117,30 @@ function guessTask(text: string): string | undefined {
   const t = text.toLowerCase();
   // Emotion from the acoustic signal is SER, and speaker ID/diarization is its
   // own task — both must win over the 'emotion'/'speech' keyword rules below.
-  if (/speech emotion|emotional speech|emotion.*\b(from|in)\b.*(speech|audio|voice)|acoustic.*emotion/.test(t)) return 'ser';
+  if (/speech emotion|emotional speech|emotion.*\b(from|in)\b.*(speech|audio|voice)|acoustic.*emotion|\bspeech\b.*\bser\b/.test(t)) return 'ser';
   if (/speaker (identif|recogni|verif|diariz)|diariz/.test(t)) return 'speaker';
+  if (/machine translation.*word sense disambiguation/.test(t)) return 'mt';
+  const ocrSubject = t.replace(/optical character recognition/g, 'ocr');
+  if (/\bocr\b/.test(ocrSubject) &&
+    (/licen[cs]e plate/.test(ocrSubject) || (/\b(characters?|digits?)\b/.test(ocrSubject) && !/\b(words?|lines?|documents?|scenes?|texts?)\b/.test(ocrSubject)))) return undefined;
+  const specific: [RegExp, string][] = [
+    [/speech translation|speech-to-(speech|text) translation|spoken language translation/, 'st'],
+    [/visual question answer|\bvqa\b/, 'vqa'],
+    [/image caption|caption generation/, 'caption'],
+    [/dialogue|conversational system|chatbot/, 'dialogue'],
+    [/grammar error (detection|correction)|grammatical error (detection|correction|explanation)|spelling correction|spell checker/, 'gec'],
+    [/coreference resolution|anaphora resolution/, 'coref'],
+    [/natural language inference|\bnli\b/, 'nli'],
+    [/word sense disambiguation/, 'wsd'],
+    [/punctuation restoration|punctuation prediction/, 'punct'],
+    [/style transfer/, 'style'],
+    [/stance detection/, 'stance'],
+    [/readability|lexical complexity/, 'readab'],
+    [/\bocr\b(?!['’`]d)|optical character recognition|scene text recognition/, 'ocr'],
+    [/entity linking/, 'el'],
+  ];
+  const specificTask = specific.find(([re]) => re.test(t))?.[1];
+  if (specificTask) return specificTask;
   const rules: [RegExp, string][] = [
     [/sentiment|emotion|polarity/, 'sentiment'],
     [/named entity|\bner\b/, 'ner'],

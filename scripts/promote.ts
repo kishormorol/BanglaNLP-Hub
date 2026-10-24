@@ -202,10 +202,35 @@ function classify(title: string): string | undefined {
   // 'emotion' keyword hits the sentiment rule first, so guard it here. Kept
   // tight: bare "emotion" still routes text papers to sentiment, and expressive
   // "emotion classification for text-to-speech" stays under speech.
-  if (/speech emotion|emotional speech|emotion.*\b(from|in)\b.*(speech|audio|voice)|acoustic.*emotion/.test(t)) return 'ser';
+  if (/speech emotion|emotional speech|emotion.*\b(from|in)\b.*(speech|audio|voice)|acoustic.*emotion|\bspeech\b.*\bser\b/.test(t)) return 'ser';
   //   Speaker identification / verification / diarization is its own task.
   //   "speaker adaptation" (an ASR technique) deliberately does not match.
   if (/speaker (identif|recogni|verif|diariz)|diariz/.test(t)) return 'speaker';
+  if (/machine translation.*word sense disambiguation/.test(t)) return 'mt';
+  const ocrSubject = t.replace(/optical character recognition/g, 'ocr');
+  if (/\bocr\b/.test(ocrSubject) &&
+    (/licen[cs]e plate/.test(ocrSubject) || (/\b(characters?|digits?)\b/.test(ocrSubject) && !/\b(words?|lines?|documents?|scenes?|texts?)\b/.test(ocrSubject)))) return undefined;
+
+  // Narrow task phrases must win over broad keyword rules below (e.g. grammar
+  // error correction vs POS, and anaphora resolution vs honorific/LLM).
+  const specific: [RegExp, string][] = [
+    [/speech translation|speech-to-(speech|text) translation|spoken language translation/, 'st'],
+    [/visual question answer|\bvqa\b/, 'vqa'],
+    [/image caption|caption generation/, 'caption'],
+    [/dialogue|conversational system|chatbot/, 'dialogue'],
+    [/grammar error (detection|correction)|grammatical error (detection|correction|explanation)|spelling correction|spell checker/, 'gec'],
+    [/coreference resolution|anaphora resolution/, 'coref'],
+    [/natural language inference|\bnli\b/, 'nli'],
+    [/word sense disambiguation/, 'wsd'],
+    [/punctuation restoration|punctuation prediction/, 'punct'],
+    [/style transfer/, 'style'],
+    [/stance detection/, 'stance'],
+    [/readability|lexical complexity/, 'readab'],
+    [/\bocr\b(?!['’`]d)|optical character recognition|scene text recognition/, 'ocr'],
+    [/entity linking/, 'el'],
+  ];
+  const specificTask = specific.find(([re]) => re.test(t))?.[1];
+  if (specificTask) return specificTask;
 
   // Shared tasks, by their published subject.
   if (/blp-2023\s*task\s*1/.test(t)) return 'hate';       // Violence Inciting Text Detection

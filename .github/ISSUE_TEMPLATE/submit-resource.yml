@@ -43,6 +43,20 @@ body:
         - textcls — Text Classification
         - pos — POS Tagging
         - llm — LLM Benchmarks
+        - 'vqa: Visual Question Answering'
+        - 'ocr: OCR & Document Understanding'
+        - 'gec: Spelling & Grammar Correction'
+        - 'coref: Coreference & Anaphora'
+        - 'nli: Natural Language Inference'
+        - 'wsd: Word Sense Disambiguation'
+        - 'punct: Punctuation Restoration'
+        - 'style: Text Style Transfer'
+        - 'stance: Stance Detection'
+        - 'readab: Readability & Complexity'
+        - 'caption: Image Captioning'
+        - 'dialogue: Dialogue & Chatbots'
+        - 'st: Speech Translation'
+        - 'el: Entity Linking'
         - (none / new task)
     validations:
       required: true
