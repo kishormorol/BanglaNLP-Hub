@@ -16,7 +16,7 @@
  * the Hub. Field order is pinned per entity type: the JSONL is regenerated in
  * full every run, and a stable order keeps the diff to what actually changed.
  */
-import { execFileSync } from 'node:child_process';
+import { execFileSync, type ExecFileSyncOptionsWithStringEncoding } from 'node:child_process';
 import { mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -112,12 +112,27 @@ const counts = {
   tasks: tasks.length,
 };
 
+const repository = 'https://github.com/kishormorol/BanglaNLP-Hub';
+const source = (() => {
+  try {
+    const options = { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] } satisfies ExecFileSyncOptionsWithStringEncoding;
+    const commit = execFileSync('git', ['rev-parse', 'HEAD'], options).trim();
+    const modified = execFileSync('git', ['--no-optional-locks', 'status', '--porcelain', '--untracked-files=all', '--', 'data'], options).trim().length > 0;
+    return { repository, commit, modified };
+  } catch {
+    console.warn('Git metadata unavailable; source commit is omitted.');
+    return { repository };
+  }
+})();
+
 rmSync(outDir, { recursive: true, force: true });
 mkdirSync(outDir, { recursive: true });
 writeFileSync(resolve(outDir, 'papers.jsonl'), toJsonl(papers));
 writeFileSync(resolve(outDir, 'datasets.jsonl'), toJsonl(datasets));
 writeFileSync(resolve(outDir, 'models.jsonl'), toJsonl(models));
 writeFileSync(resolve(outDir, 'tools.jsonl'), toJsonl(tools));
+writeFileSync(resolve(outDir, 'tasks.jsonl'), toJsonl(tasks));
+writeFileSync(resolve(outDir, 'source.json'), JSON.stringify(source, null, 2) + '\n');
 
 const template = readFileSync(resolve(root, 'scripts/hf-dataset-card.md'), 'utf8');
 const fills: Record<string, string | number> = {

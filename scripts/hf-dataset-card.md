@@ -26,6 +26,8 @@ configs:
     data_files: models.jsonl
   - config_name: tools
     data_files: tools.jsonl
+  - config_name: tasks
+    data_files: tasks.jsonl
 ---
 
 # Bangla NLP Catalog
@@ -46,6 +48,7 @@ Bangla is spoken by roughly 240 million people and is still treated as low-resou
 | `datasets` | {{datasets}} | A dataset, with `name`, `desc`, `size`, `license`, `link`, and `bibtex` where known |
 | `models` | {{models}} | A released model, with `arch`, `params`, `tasks`, `stage`, and `link` |
 | `tools` | {{tools}} | A library or tool, with `lang`, `install`, `author`, and a `verified` flag |
+| `tasks` | {{tasks}} | A task definition, with `id`, `name`, `bn`, and `desc` |
 
 ```python
 from datasets import load_dataset
@@ -57,6 +60,8 @@ datasets_ = load_dataset("kishormorol/bangla-nlp-catalog", "datasets", split="tr
 ## How it is maintained
 
 Entries are added and corrected through pull requests on [the GitHub repo](https://github.com/kishormorol/BanglaNLP-Hub), where links are checked in CI. This dataset is a snapshot of that catalog; the repo is the source of truth.
+
+The [source record](source.json) identifies the repository and checkout commit. If `modified` is true, files under `data` differ from that commit. Git metadata is omitted when unavailable.
 
 ## Limitations
 
