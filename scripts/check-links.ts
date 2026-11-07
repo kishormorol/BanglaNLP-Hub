@@ -39,7 +39,7 @@ const TRANSIENT = new Set(['timeout', 'network error']);
 // routinely drop the connection, 404, 405, or 5xx a non-browser agent for a
 // page that opens fine in a browser. See classify().
 const HONEST_UA =
-  'BanglaNLP-Hub-link-check/1.0 (+https://github.com/kishormorol/BanglaNLP-Hub)';
+  'BanglaNLP-Hub-link-check/1.0 (+https://github.com/eliteresearchlab/BanglaNLP-Hub)';
 const BROWSER_UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
 

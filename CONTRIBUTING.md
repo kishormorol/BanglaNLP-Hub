@@ -30,7 +30,7 @@ wrong is not.
 ## Quick start
 
 ```sh
-git clone https://github.com/kishormorol/BanglaNLP-Hub.git
+git clone https://github.com/eliteresearchlab/BanglaNLP-Hub.git
 cd BanglaNLP-Hub
 npm install
 npm run validate     # must pass
@@ -165,5 +165,5 @@ A maintainer reviews within about a week. CI must be green. Expect questions abo
 sourcing on any entry with a score, a license claim, or a size figure.
 
 Not comfortable with Git? Open a
-[Submit a resource](https://github.com/kishormorol/BanglaNLP-Hub/issues/new?template=submit-resource.yml)
+[Submit a resource](https://github.com/eliteresearchlab/BanglaNLP-Hub/issues/new?template=submit-resource.yml)
 issue instead and a maintainer will turn it into a PR, credited to you.

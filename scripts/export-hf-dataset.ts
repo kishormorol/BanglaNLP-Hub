@@ -112,7 +112,7 @@ const counts = {
   tasks: tasks.length,
 };
 
-const repository = 'https://github.com/kishormorol/BanglaNLP-Hub';
+const repository = 'https://github.com/eliteresearchlab/BanglaNLP-Hub';
 const source = (() => {
   try {
     const options = { cwd: root, encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] } satisfies ExecFileSyncOptionsWithStringEncoding;

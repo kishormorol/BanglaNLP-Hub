@@ -36,7 +36,7 @@ const argOf = (f: string) => {
 };
 const onlySource = argOf('--source');
 const LIMIT = Number(argOf('--limit') ?? 60);
-const UA = 'BanglaNLP-Hub-discover/1.0 (+https://github.com/kishormorol/BanglaNLP-Hub)';
+const UA = 'BanglaNLP-Hub-discover/1.0 (+https://github.com/eliteresearchlab/BanglaNLP-Hub)';
 
 const TERMS = /\b(bangla|bengali|banglish|bn-|bangladesh)/i;
 

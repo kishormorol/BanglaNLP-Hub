@@ -13,7 +13,7 @@
 import Base from '../layouts/Base.astro';
 import { tasks, contributors, papers, models, datasets, leaderboards } from '../lib/data.ts';
 
-const REPO = 'https://github.com/kishormorol/BanglaNLP-Hub';
+const REPO = 'https://github.com/eliteresearchlab/BanglaNLP-Hub';
 
 // Link each credited paper to its actual catalog link, by title.
 const paperLink = new Map(papers.map((p) => [p.title, p.link]));
@@ -29,7 +29,7 @@ const steps = [
   {
     n: '01',
     title: 'Fork the repo',
-    body: 'kishormorol/BanglaNLP-Hub — every resource is one small YAML record under data/datasets/, data/papers/, data/models.yaml, or data/tools.yaml.',
+    body: 'eliteresearchlab/BanglaNLP-Hub — every resource is one small YAML record under data/datasets/, data/papers/, data/models.yaml, or data/tools.yaml.',
   },
   {
     n: '02',

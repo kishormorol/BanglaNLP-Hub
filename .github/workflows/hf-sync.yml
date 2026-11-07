@@ -34,6 +34,7 @@ jobs:
   sync:
     name: Publish to the Hub
     runs-on: ubuntu-latest
+    environment: huggingface
     steps:
       - uses: actions/checkout@v7
 

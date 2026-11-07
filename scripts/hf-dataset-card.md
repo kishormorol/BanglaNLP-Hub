@@ -34,7 +34,7 @@ configs:
 
 A machine-readable catalog of Bangla (Bengali) NLP resources: **{{papers}} papers, {{datasets}} datasets, {{models}} models, and {{tools}} tools** across {{tasks}} tasks, each tagged by task and carrying a source link.
 
-This is the data behind [BanglaNLP Hub](https://kishormorol.github.io/BanglaNLP-Hub/). It is metadata about resources, not the resources themselves: no corpora or model weights are redistributed here, only structured records pointing at them.
+This is the data behind [BanglaNLP Hub](https://eliteresearchlab.github.io/BanglaNLP-Hub/). It is metadata about resources, not the resources themselves: no corpora or model weights are redistributed here, only structured records pointing at them.
 
 ## Why this exists
 
@@ -59,7 +59,7 @@ datasets_ = load_dataset("kishormorol/bangla-nlp-catalog", "datasets", split="tr
 
 ## How it is maintained
 
-Entries are added and corrected through pull requests on [the GitHub repo](https://github.com/kishormorol/BanglaNLP-Hub), where links are checked in CI. This dataset is a snapshot of that catalog; the repo is the source of truth.
+Entries are added and corrected through pull requests on [the GitHub repo](https://github.com/eliteresearchlab/BanglaNLP-Hub), where links are checked in CI. This dataset is a snapshot of that catalog; the repo is the source of truth.
 
 The [source record](source.json) identifies the repository and checkout commit. If `modified` is true, files under `data` differ from that commit. Git metadata is omitted when unavailable.
 
@@ -76,7 +76,7 @@ This citation identifies the project. To cite a release, use its version DOI fro
   author  = {Morol, Md Kishor},
   title   = {BanglaNLP Hub},
   doi     = {10.5281/zenodo.22798635},
-  url     = {https://github.com/kishormorol/BanglaNLP-Hub},
+  url     = {https://github.com/eliteresearchlab/BanglaNLP-Hub},
   license = {MIT}
 }
 ```
