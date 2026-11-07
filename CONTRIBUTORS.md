@@ -5,7 +5,7 @@ everyone who has submitted an entry — see [CONTRIBUTING.md](./CONTRIBUTING.md)
 to add one.
 
 Resource submissions are recorded in [`data/contributors.yaml`](./data/contributors.yaml)
-and rendered on the site's [Contribute page](https://kishormorol.github.io/BanglaNLP-Hub/contribute).
+and rendered on the site's [Contribute page](https://eliteresearchlab.github.io/BanglaNLP-Hub/contribute).
 Community and code credits shown on Home are recorded separately in
 [`data/home-contributors.yaml`](./data/home-contributors.yaml). Both files are validated in CI.
 
@@ -16,60 +16,60 @@ list** is shown as published; model and tool submissions link to the resource.
 
 ### [@AdibAFC](https://github.com/AdibAFC) (Adiba Fairooz Chowdhury)
 
-- _Automated Bengali Physics MCQ Solver: A Large Language Model Approach with Chain-of-Thought Reasoning_ — qa ([#39](https://github.com/kishormorol/BanglaNLP-Hub/issues/39))
+- _Automated Bengali Physics MCQ Solver: A Large Language Model Approach with Chain-of-Thought Reasoning_ — qa ([#39](https://github.com/eliteresearchlab/BanglaNLP-Hub/issues/39))
   - Authors: Md. Sagor Chowdhury, Adiba Fairooz Chowdhury, Ayesha Banu, Riad Hossain
 
 ### [@farhanishmam](https://github.com/farhanishmam) (Md Farhan Ishmam)
 
-- _BanglaProtha: Evaluating Vision Language Models in Underrepresented Long-tail Cultural Contexts_ — vqa ([#85](https://github.com/kishormorol/BanglaNLP-Hub/issues/85))
+- _BanglaProtha: Evaluating Vision Language Models in Underrepresented Long-tail Cultural Contexts_ — vqa ([#85](https://github.com/eliteresearchlab/BanglaNLP-Hub/issues/85))
   - Authors: Md Fahim, Md Sakib Ul Rahman, Akm Moshiur Rahman, Md Farhan Ishmam, Md Tasmim Rahman, Fariha Tanjim Shifat, Fabiha Haider, Md Farhad Alam Bhuiyan
 
 ### [@LTNEW52](https://github.com/LTNEW52) (Labib Tahmid)
 
-- `BTTC` — dataset, textcls ([#60](https://github.com/kishormorol/BanglaNLP-Hub/issues/60))
+- `BTTC` — dataset, textcls ([#60](https://github.com/eliteresearchlab/BanglaNLP-Hub/issues/60))
 
 ### [@SambasBoyyyy](https://github.com/SambasBoyyyy) (Samiul Basir)
 
-- _Bangla-WhisperDiar: Fine-Tuning Whisper and PyAnnote for Bangla Long-Form Speech Recognition and Speaker Diarization_ — speech ([#47](https://github.com/kishormorol/BanglaNLP-Hub/issues/47))
+- _Bangla-WhisperDiar: Fine-Tuning Whisper and PyAnnote for Bangla Long-Form Speech Recognition and Speaker Diarization_ — speech ([#47](https://github.com/eliteresearchlab/BanglaNLP-Hub/issues/47))
   - Authors: Mohammed Aman Bhuiyan, Md Sazzad Hossain Adib, Samiul Basir Bhuiyan, Amit Chakraborty, Aritra Islam Saswato, Ahmed Faizul Haque Dhrubo, Mohammad Ashrafuzzaman Khan
 
 ### [@SM-Shaan](https://github.com/SM-Shaan) (Sha Newaz Mahmud)
 
-- _Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer-Based Models with Explainability_ — sentiment ([#48](https://github.com/kishormorol/BanglaNLP-Hub/issues/48))
+- _Bengali Emotion Classification from Social Media Text Using Deep Learning and Transformer-Based Models with Explainability_ — sentiment ([#48](https://github.com/eliteresearchlab/BanglaNLP-Hub/issues/48))
   - Authors: Mujtahid Alam, Shuhena Salam Aonty, Sha Newaz Mahmud, Nahid Riaz Swachha, Ahmed Talal Wazih
-- _Bengali Human Sentiment Detection and Classification using Attention based Bidirectional LSTM_ — sentiment ([#49](https://github.com/kishormorol/BanglaNLP-Hub/issues/49))
+- _Bengali Human Sentiment Detection and Classification using Attention based Bidirectional LSTM_ — sentiment ([#49](https://github.com/eliteresearchlab/BanglaNLP-Hub/issues/49))
   - Authors: Sha Newaz Mahmud, Nahid Riaz Swachha, Ahmed Talal Wazih, Shuvodwip Saha, Shougata Paul, Shuhena Salam Aonty
 
 ### [@Sanjidh090](https://github.com/Sanjidh090) (Sanjid Hasan)
 
-- `Lipi-Ghor (bn-882-SSTT)` — dataset, speech ([#40](https://github.com/kishormorol/BanglaNLP-Hub/issues/40))
-- `Sanjidh090/moonshine-base-bn` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
-- `bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
-- `hishab/titu_stt_bn_conformer_large` — model, speech ([#54](https://github.com/kishormorol/BanglaNLP-Hub/pull/54))
-- `Bengali-Loop (ASR corpus)` — dataset, speech ([#86](https://github.com/kishormorol/BanglaNLP-Hub/issues/86))
-- _Bengali-Loop: Community Benchmarks for Long-Form Bangla ASR and Speaker Diarization_ — speech ([#86](https://github.com/kishormorol/BanglaNLP-Hub/issues/86))
+- `Lipi-Ghor (bn-882-SSTT)` — dataset, speech ([#40](https://github.com/eliteresearchlab/BanglaNLP-Hub/issues/40))
+- `Sanjidh090/moonshine-base-bn` — model, speech ([#54](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/54))
+- `bengaliAI/tugstugi_bengaliai-regional-asr_whisper-medium` — model, speech ([#54](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/54))
+- `hishab/titu_stt_bn_conformer_large` — model, speech ([#54](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/54))
+- `Bengali-Loop (ASR corpus)` — dataset, speech ([#86](https://github.com/eliteresearchlab/BanglaNLP-Hub/issues/86))
+- _Bengali-Loop: Community Benchmarks for Long-Form Bangla ASR and Speaker Diarization_ — speech ([#86](https://github.com/eliteresearchlab/BanglaNLP-Hub/issues/86))
   - Authors: H. M. Shadman Tabib, Istiak Ahmmed Rifti, Abdullah Muhammed Amimul Ehsan, Somik Dasgupta, Md Zim Mim Siddiqee Sowdha, Abrar Jahin Sarker, Md. Rafiul Islam Nijamy, Tanvir Hossain, Mst. Metaly Khatun, Munzer Mahmood, Rakesh Debnath, Gourab Biswas, Asif Karim, Wahid Al Azad Navid, Masnoon Muztahid, Fuad Ahmed Udoy, Shahad Shahriar Rahman, Md. Tashdiqur Rahman Shifat, Most. Sonia Khatun, Mushfiqur Rahman, Md. Miraj Hasan, Anik Saha, Mohammad Ninad Mahmud Nobo, Soumik Bhattacharjee, Tusher Bhomik, Ahmmad Nur Swapnil, Shahriar Kabir
 
 ### [@WhiteHades](https://github.com/WhiteHades) (Mohammed Efaz)
 
-- `BanglaSER` — dataset, ser ([#65](https://github.com/kishormorol/BanglaNLP-Hub/pull/65))
-- `KBES (KUET Bangla Emotional Speech)` — dataset, ser ([#65](https://github.com/kishormorol/BanglaNLP-Hub/pull/65))
-- `ALERT` — dataset, hate ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
-- `Bangla-ToCo` — dataset, hate ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
-- `Bangla-MedER` — dataset, ner ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
-- `BABSA` — dataset, sentiment ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
-- `BanglaSarc3` — dataset, sentiment ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
-- `BanFakeNews-2.0` — dataset, textcls ([#66](https://github.com/kishormorol/BanglaNLP-Hub/pull/66))
-- `BanglaRegionalTextCorpus` — dataset, mt ([#67](https://github.com/kishormorol/BanglaNLP-Hub/pull/67))
-- `Kothon` — dataset, mt ([#67](https://github.com/kishormorol/BanglaNLP-Hub/pull/67))
-- `SOMADHAN` — dataset, llm ([#68](https://github.com/kishormorol/BanglaNLP-Hub/pull/68))
-- `hishab/titulm-llama-3.2-1b-v2.0` — model, llm ([#68](https://github.com/kishormorol/BanglaNLP-Hub/pull/68))
-- _Kothon: A large-scale dataset for machine translation of the Chittagonian and Sylheti dialects into standard Bangla_ — mt ([#73](https://github.com/kishormorol/BanglaNLP-Hub/pull/73))
+- `BanglaSER` — dataset, ser ([#65](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/65))
+- `KBES (KUET Bangla Emotional Speech)` — dataset, ser ([#65](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/65))
+- `ALERT` — dataset, hate ([#66](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/66))
+- `Bangla-ToCo` — dataset, hate ([#66](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/66))
+- `Bangla-MedER` — dataset, ner ([#66](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/66))
+- `BABSA` — dataset, sentiment ([#66](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/66))
+- `BanglaSarc3` — dataset, sentiment ([#66](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/66))
+- `BanFakeNews-2.0` — dataset, textcls ([#66](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/66))
+- `BanglaRegionalTextCorpus` — dataset, mt ([#67](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/67))
+- `Kothon` — dataset, mt ([#67](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/67))
+- `SOMADHAN` — dataset, llm ([#68](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/68))
+- `hishab/titulm-llama-3.2-1b-v2.0` — model, llm ([#68](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/68))
+- _Kothon: A large-scale dataset for machine translation of the Chittagonian and Sylheti dialects into standard Bangla_ — mt ([#73](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/73))
   - Authors: Md. Atique Faisal, Farhan Sadaf, Dipta Chowdhury, H.M. Azrof, Monojit Paul Tanmay
-- `BanHate` — dataset, hate ([#102](https://github.com/kishormorol/BanglaNLP-Hub/pull/102))
-- `BanNERD` — dataset, ner ([#102](https://github.com/kishormorol/BanglaNLP-Hub/pull/102))
-- `NCTB-QA` — dataset, qa ([#102](https://github.com/kishormorol/BanglaNLP-Hub/pull/102))
-- `BanglaSocialBench` — dataset, llm ([#102](https://github.com/kishormorol/BanglaNLP-Hub/pull/102))
+- `BanHate` — dataset, hate ([#102](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/102))
+- `BanNERD` — dataset, ner ([#102](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/102))
+- `NCTB-QA` — dataset, qa ([#102](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/102))
+- `BanglaSocialBench` — dataset, llm ([#102](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/102))
 
 ## Site and code contributions
 
@@ -83,11 +83,11 @@ kept separate from resource submissions.
 ### [@WhiteHades](https://github.com/WhiteHades) (Mohammed Efaz)
 
 - Refactored the contributor, model, and leaderboard data layers, tightened link
-  checking, and fixed catalog consistency and mobile navigation ([#78](https://github.com/kishormorol/BanglaNLP-Hub/pull/78), [#79](https://github.com/kishormorol/BanglaNLP-Hub/pull/79), [#80](https://github.com/kishormorol/BanglaNLP-Hub/pull/80), [#82](https://github.com/kishormorol/BanglaNLP-Hub/pull/82), [#101](https://github.com/kishormorol/BanglaNLP-Hub/pull/101)).
+  checking, and fixed catalog consistency and mobile navigation ([#78](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/78), [#79](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/79), [#80](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/80), [#82](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/82), [#101](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/101)).
 - Audited dataset release counts, citations, and license statements, documented the
   SentNoB evaluation defect, added sourced BanglaRQA baselines, and added keyboard
-  search, shareable catalog filters, and a mobile fix for the papers page ([#105](https://github.com/kishormorol/BanglaNLP-Hub/pull/105), [#106](https://github.com/kishormorol/BanglaNLP-Hub/pull/106), [#107](https://github.com/kishormorol/BanglaNLP-Hub/pull/107), [#108](https://github.com/kishormorol/BanglaNLP-Hub/pull/108), [#109](https://github.com/kishormorol/BanglaNLP-Hub/pull/109), [#110](https://github.com/kishormorol/BanglaNLP-Hub/pull/110), [#111](https://github.com/kishormorol/BanglaNLP-Hub/pull/111), [#112](https://github.com/kishormorol/BanglaNLP-Hub/pull/112), [#113](https://github.com/kishormorol/BanglaNLP-Hub/pull/113), [#114](https://github.com/kishormorol/BanglaNLP-Hub/pull/114)).
+  search, shareable catalog filters, and a mobile fix for the papers page ([#105](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/105), [#106](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/106), [#107](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/107), [#108](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/108), [#109](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/109), [#110](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/110), [#111](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/111), [#112](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/112), [#113](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/113), [#114](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/114)).
 
 ### [@Meftahul-Anu13](https://github.com/Meftahul-Anu13) (Meftahul Jannati Anonna)
 
-- Added the Speech Emotion Recognition and Speaker tasks, and fixed the Home hero search dropdown layering ([#45](https://github.com/kishormorol/BanglaNLP-Hub/pull/45), [#46](https://github.com/kishormorol/BanglaNLP-Hub/pull/46)).
+- Added the Speech Emotion Recognition and Speaker tasks, and fixed the Home hero search dropdown layering ([#45](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/45), [#46](https://github.com/eliteresearchlab/BanglaNLP-Hub/pull/46)).

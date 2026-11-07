@@ -8,9 +8,9 @@ import { defineConfig } from 'astro/config';
 // mirror's fixes live in scripts/build-hf-space.ts.
 const hfSpace = process.env.HF_SPACE === '1';
 
-// Deployed to GitHub Pages at https://kishormorol.github.io/BanglaNLP-Hub
+// Deployed to GitHub Pages at https://eliteresearchlab.github.io/BanglaNLP-Hub
 export default defineConfig({
-  site: 'https://kishormorol.github.io',
+  site: 'https://eliteresearchlab.github.io',
   base: hfSpace ? '/' : '/BanglaNLP-Hub',
   trailingSlash: 'ignore',
   outDir: hfSpace ? './dist-hf' : './dist',

@@ -2,9 +2,9 @@
 
 A community-maintained catalog of Bangla (Bengali) NLP resources — papers, datasets, models, tools, and benchmarks.
 
-[![Live site](https://img.shields.io/badge/live-kishormorol.github.io%2FBanglaNLP--Hub-2563eb)](https://kishormorol.github.io/BanglaNLP-Hub/)
-[![CI](https://github.com/kishormorol/BanglaNLP-Hub/actions/workflows/ci.yml/badge.svg)](https://github.com/kishormorol/BanglaNLP-Hub/actions/workflows/ci.yml)
-[![Deploy](https://github.com/kishormorol/BanglaNLP-Hub/actions/workflows/deploy.yml/badge.svg)](https://github.com/kishormorol/BanglaNLP-Hub/actions/workflows/deploy.yml)
+[![Live site](https://img.shields.io/badge/live-eliteresearchlab.github.io%2FBanglaNLP--Hub-2563eb)](https://eliteresearchlab.github.io/BanglaNLP-Hub/)
+[![CI](https://github.com/eliteresearchlab/BanglaNLP-Hub/actions/workflows/ci.yml/badge.svg)](https://github.com/eliteresearchlab/BanglaNLP-Hub/actions/workflows/ci.yml)
+[![Deploy](https://github.com/eliteresearchlab/BanglaNLP-Hub/actions/workflows/deploy.yml/badge.svg)](https://github.com/eliteresearchlab/BanglaNLP-Hub/actions/workflows/deploy.yml)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-22c55e)](./CONTRIBUTING.md)
 [![License: MIT](https://img.shields.io/badge/license-MIT-black)](#license)
 [![HF Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20dataset-bangla--nlp--catalog-FFD21E)](https://huggingface.co/datasets/kishormorol/bangla-nlp-catalog)
@@ -16,7 +16,7 @@ A community-maintained catalog of Bangla (Bengali) NLP resources — papers, dat
 [![Tools](https://img.shields.io/badge/tools-9-db2777)](./data/tools.yaml)
 [![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.22798635-1682D4?style=flat)](https://doi.org/10.5281/zenodo.22798635)
 
-**Live:** https://kishormorol.github.io/BanglaNLP-Hub/
+**Live:** https://eliteresearchlab.github.io/BanglaNLP-Hub/
 ![BanglaNLP Hub home page: search across 712 papers, 63 datasets, 20 models and 9 tools, browsable by task](docs/screenshot.jpg)
 
 
@@ -126,7 +126,7 @@ The site is complete: Home, Tasks and per-task detail, Datasets, Papers, Tools, 
 
 Contributions are genuinely welcome, and you do not need to know Astro or TypeScript to make one. Every entry on the site is a few lines of YAML under [`/data`](./data).
 
-**The fastest way in:** open a [Submit a resource](https://github.com/kishormorol/BanglaNLP-Hub/issues/new?template=submit-resource.yml) issue with a link. That is enough — someone else can turn it into an entry.
+**The fastest way in:** open a [Submit a resource](https://github.com/eliteresearchlab/BanglaNLP-Hub/issues/new?template=submit-resource.yml) issue with a link. That is enough — someone else can turn it into an entry.
 
 **If you would rather open a PR directly**, [`CONTRIBUTING.md`](./CONTRIBUTING.md) has the field format for each entry type and a worked example. Edit or add one YAML file and open the PR; CI runs `npm run validate` and must pass before merge.
 

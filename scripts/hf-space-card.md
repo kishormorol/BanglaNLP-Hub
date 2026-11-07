@@ -19,8 +19,8 @@ Bangla is spoken by roughly 240 million people and is still treated as low-resou
 Every entry is link-verified in CI and maintained through pull requests.
 
 - Catalog as a dataset: [kishormorol/bangla-nlp-catalog](https://huggingface.co/datasets/kishormorol/bangla-nlp-catalog)
-- Source and contributions: [github.com/kishormorol/BanglaNLP-Hub](https://github.com/kishormorol/BanglaNLP-Hub)
+- Source and contributions: [github.com/eliteresearchlab/BanglaNLP-Hub](https://github.com/eliteresearchlab/BanglaNLP-Hub)
 
-This Space mirrors <https://kishormorol.github.io/BanglaNLP-Hub/>, which is the canonical site.
+This Space mirrors <https://eliteresearchlab.github.io/BanglaNLP-Hub/>, which is the canonical site.
 
 MIT licensed.

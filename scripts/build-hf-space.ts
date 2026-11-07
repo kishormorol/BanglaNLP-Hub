@@ -36,7 +36,7 @@ const outDir = resolve(root, 'dist-hf');
 const dataDir = resolve(root, 'data');
 
 const REPO_ID = 'kishormorol/BanglaNLP-Hub';
-const PAGES_ORIGIN = 'https://kishormorol.github.io';
+const PAGES_ORIGIN = 'https://eliteresearchlab.github.io';
 const PAGES_BASE = '/BanglaNLP-Hub';
 
 const upload = process.argv.slice(2).includes('--upload');
