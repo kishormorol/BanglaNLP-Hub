@@ -1,0 +1,102 @@
+/* Hallmark · checked: 2026-11-04 · built: the project · redesign: polish · genre: editorial · theme: locked Bangla research desk · v2.0.0 */
+/* Hallmark · pre-emit critique: P4 H4 E3 S5 R4 V3 · weakest: E, the figure repeated its parent frame */
+.catalog-workbench {
+  --workbench-art-size: clamp(14rem, 9rem + 12vw, 20rem);
+  --workbench-pad: clamp(1rem, 0.5rem + 2vw, 2rem);
+  --art-line: color-mix(in oklch, var(--accent) 40%, var(--surface));
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1rem, 0.75rem + 1vw, 1.5rem);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-panel);
+  background: var(--surface);
+  color: var(--text);
+}
+.workbench-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1rem; font: 400 1.5rem/1.4 var(--font-display); }
+.workbench-heading .bn { color: var(--secondary); font-size: var(--text-label); }
+.workbench-stage { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 25rem), 1fr)); }
+.workbench-figure-wrap { display: flex; flex-direction: column; justify-content: center; gap: 0.75rem; padding: var(--workbench-pad); }
+.workbench-figure { inline-size: 100%; block-size: auto; min-block-size: var(--workbench-art-size); flex: none; color: var(--accent); }
+.iso-plate-top, .iso-plate-front, .iso-plate-side { fill: color-mix(in oklch, var(--accent) 12%, var(--surface)); stroke: var(--art-line); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.iso-guide { fill: none; stroke: var(--art-line); stroke-width: 0.7; stroke-dasharray: 1.5 4; vector-effect: non-scaling-stroke; }
+.iso-top, .iso-front, .iso-side { fill: var(--surface); stroke: var(--art-line); stroke-width: 1; vector-effect: non-scaling-stroke; }
+.iso-side { fill: color-mix(in oklch, var(--accent) 18%, var(--surface)); }
+.iso-top { fill: color-mix(in oklch, var(--accent) 6%, var(--surface)); }
+.iso-details { color: var(--accent); }
+.iso-inset { fill: var(--surface); stroke: var(--art-line); stroke-width: 0.8; vector-effect: non-scaling-stroke; }
+.iso-bangla { fill: currentColor; font: 28px/1.6 var(--font-bn); }
+.iso-label { fill: currentColor; font: 600 12px/1.4 var(--font-sans); }
+.iso-label-bn { fill: currentColor; font: 12px/1.6 var(--font-bn); }
+.iso-hairline { fill: none; stroke: currentColor; stroke-width: 0.85; vector-effect: non-scaling-stroke; }
+.workbench-object.is-lit :is(.iso-top, .iso-front, .iso-side) { fill: var(--brand); stroke: var(--on-brand); }
+.workbench-object.is-lit .iso-front { fill: var(--secondary-solid); }
+html.dark .workbench-object.is-lit :is(.iso-top, .iso-front, .iso-side) { filter: url(#workbench-glow); }
+.workbench-object.is-lit .iso-details { color: var(--on-brand); }
+.workbench-object.is-lit .iso-inset { fill: color-mix(in oklch, var(--secondary-solid) 90%, var(--brand-deep)); stroke: var(--on-brand); }
+.workbench-caption-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.workbench-motion-toggle { min-inline-size: 7rem; }
+.workbench-motion-toggle:disabled { cursor: wait; }
+@media (prefers-reduced-motion: reduce) { .workbench-motion-toggle { display: none; } }
+.workbench-caption { flex: 1 1 12rem; max-inline-size: 38ch; color: var(--text2); font-size: var(--text-label); }
+.workbench-console {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  padding: var(--workbench-pad);
+  background: var(--surface);
+  color: var(--text);
+}
+.console-topline { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem; padding-block-end: 0.75rem; border-block-end: 1px solid var(--border); color: var(--text2); font-size: var(--text-small); }
+.console-prompt { margin-block: 0.875rem 0.5rem; color: var(--text2); font-size: var(--text-label); }
+.workbench-controls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.5rem; }
+.collection-button { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; min-block-size: 3.5rem; padding-block: 0.625rem; padding-inline: 0.75rem; border: 1px solid var(--border-control); border-radius: var(--radius); background: var(--surface); color: var(--text); text-align: start; white-space: nowrap; }
+.collection-button[aria-pressed='true'] { background: var(--brand); color: var(--on-brand); }
+.collection-name { display: grid; gap: 0.125rem; font-size: var(--text-label); font-weight: 600; }
+.collection-bn { font-size: var(--text-small); font-weight: 400; }
+.collection-count { font: var(--text-small)/1.6 var(--font-mono); font-variant-numeric: tabular-nums; }
+.collection-button:active { background: var(--accent-soft); }
+.collection-button[aria-pressed='true']:active { background: var(--brand-deep); }
+.workbench-readout { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0.4rem; padding-block: 0.75rem; color: var(--text2); font-size: var(--text-small); }
+.workbench-readout strong { font: 600 1.125rem/1.6 var(--font-mono); font-variant-numeric: tabular-nums; }
+.workbench-panels { display: grid; align-items: start; }
+.collection-panel { grid-area: 1 / 1; padding-block: 0.5rem; }
+.collection-panel[hidden] { display: block !important; visibility: hidden; pointer-events: none; }
+.collection-button:disabled { cursor: wait; }
+.panel-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem; margin-block-end: 0.5rem; }
+.panel-heading h3 { font-size: 1rem; font-weight: 600; }
+.panel-heading h3 .bn { margin-inline-start: 0.25rem; }
+.panel-heading > a { display: inline-flex; align-items: baseline; gap: 0.25rem; color: var(--accent); font-size: var(--text-label); }
+.collection-panel ul { padding: 0; margin: 0; list-style: none; }
+.collection-panel li { border-block-start: 1px solid var(--border); }
+.collection-panel li > a { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 0.2rem 0.75rem; padding-block: 0.625rem; color: var(--text); text-decoration: none; }
+.resource-name { overflow-wrap: anywhere; font-size: 1rem; font-weight: 500; }
+.resource-meta { grid-column: 1; color: var(--text2); font-size: var(--text-small); }
+.resource-arrow { grid-column: 2; grid-row: 1 / span 2; align-self: center; color: var(--accent); }
+.collection-empty { padding-block: 0.75rem; color: var(--text2); font-size: var(--text-label); }
+.console-footnote { margin-block-start: auto; padding-block-start: 0.75rem; border-block-start: 1px solid var(--border); color: var(--text2); font-size: var(--text-small); }
+@container (width < 14.5rem) {
+  .workbench-controls { grid-template-columns: minmax(0, 1fr); }
+}
+@media (hover: hover) and (pointer: fine) {
+  .catalog-workbench:hover .workbench-figure { animation-play-state: paused; }
+  .collection-button:not([aria-pressed='true']):hover { background: var(--accent-soft); border-color: var(--border-hover); }
+  .collection-panel li > a:hover .resource-name { text-decoration: underline; }
+}
+@property --workbench-tilt-x { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+@property --workbench-tilt-y { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+@keyframes workbench-float { 50% { translate: 0 -0.75rem; } }
+@media (prefers-reduced-motion: no-preference) {
+  .workbench-figure { animation: workbench-float 4s var(--ease-in-out) infinite; animation-play-state: paused; }
+  [data-animate='true'] .workbench-figure { animation-play-state: running; }
+  .catalog-workbench:has(:focus-visible) .workbench-figure { animation-play-state: paused; }
+  [data-pointer-motion='true'] .workbench-object { transition: transform var(--duration-press) var(--ease-out); }
+  [data-pointer-motion='true'] .workbench-object :is(.iso-top, .iso-front, .iso-side) { transition: fill var(--duration-press) var(--ease-out), stroke var(--duration-press) var(--ease-out); }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  [data-pointer-tilt='true'] .workbench-figure {
+    transform: perspective(48rem) rotateX(var(--workbench-tilt-y, 0deg)) rotateY(var(--workbench-tilt-x, 0deg));
+    transform-origin: center;
+  }
+  [data-pointer-motion='true'] .workbench-object.is-lit { transform: translateY(-0.5rem); }
+}

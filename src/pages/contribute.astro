@@ -11,14 +11,13 @@
  *     a pre-filled GitHub issue against the Submit a resource template.
  */
 import Base from '../layouts/Base.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Icon from '../components/Icon.astro';
 import { tasks, contributors, papers, models, datasets, leaderboards } from '../lib/data.ts';
 
 const REPO = 'https://github.com/eliteresearchlab/BanglaNLP-Hub';
 
-// Link each credited paper to its actual catalog link, by title.
 const paperLink = new Map(papers.map((p) => [p.title, p.link]));
-// Model and dataset contributions are keyed by the entry's `name`; keep the whole
-// record so the card can link to it and caption its details.
 const modelByName = new Map(models.map((m) => [m.name, m]));
 const datasetByName = new Map(datasets.map((d) => [d.name, d]));
 const emptyLeaderboardCount = Object.values(leaderboards)
@@ -57,93 +56,75 @@ const sample = `# data/datasets/sentiment.yaml
   desc: Sentiment on noisy user comments from news and social platforms.
   bibtex: |                        # optional — omit if none exists upstream
     @inproceedings{islam-etal-2021-sentnob, ... }`;
-
-const cardStyle =
-  'background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px';
-const labelStyle =
-  'display:flex;flex-direction:column;gap:5px;font-size:12.5px;font-weight:600;color:var(--text2)';
-const fieldStyle =
-  "padding:9px 12px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--text);font-size:14px;font-family:'IBM Plex Sans',sans-serif;outline:none";
-const preStyle =
-  "margin:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px 20px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.65;color:var(--text);overflow-x:auto";
 ---
 
 <Base title="Contribute — BanglaNLP Hub" active="contribute">
-  <main style="max-width:900px;margin:0 auto;padding:0 20px 64px">
-    <section style="padding:48px 0 8px">
-      <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">
-        Contribute <span class="bn" style="font-size:19px;color:var(--red);font-weight:600"
-          >অবদান রাখুন</span
-        >
-      </h1>
-      <p
-        style="color:var(--text2);font-size:15.5px;max-width:640px;line-height:1.6;margin:10px 0 0;text-wrap:pretty"
-      >
-        Every entry on this site lives as a YAML file in a public GitHub repository. The site
-        rebuilds automatically when a pull request is merged — no CMS, no accounts, just Git.
-      </p>
-    </section>
-
-    <section
-      style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;padding:28px 0"
+  <main class="page page-wide">
+    <PageHeader
+      title="Contribute"
+      bn="অবদান রাখুন"
+      description="Every entry on this site lives as a YAML file in a public GitHub repository. The site rebuilds automatically when a pull request is merged — no CMS, no accounts, just Git."
     >
-      {
-        steps.map((s) => (
-          <div style={cardStyle}>
-            <div style="font-family:'Spectral',serif;font-weight:700;font-size:22px;color:var(--red)">
-              {s.n}
-            </div>
-            <div style="font-weight:600;font-size:15px;margin-top:6px">{s.title}</div>
-            <p style="margin:6px 0 0;font-size:13px;color:var(--text2);line-height:1.55;text-wrap:pretty">
-              {s.body}
-            </p>
+      <div class="page-header-actions"><a class="button button-primary" href="#submit-form">Submit a resource<Icon name="chevron-down" /></a></div>
+    </PageHeader>
+
+    <div class="editorial-layout">
+      <section class="editorial-body">
+        <div class="section-heading">
+          <div>
+            <h2 class="section-title">From discovery to catalog</h2>
+            <p class="section-heading-bn bn" lang="bn">আবিষ্কার থেকে সংযোজন</p>
           </div>
-        ))
-      }
-    </section>
+        </div>
+        <ol class="flow-list" aria-label="Contribution steps">
+          {steps.map((s) => (
+            <li>
+              <h3>{s.title}</h3>
+              <p>{s.body}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
 
-    <section
-      style="background:var(--redSoft);border:1px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:28px"
-    >
-      <div style="font-weight:600;font-size:15px;color:var(--red)">
-        Never add what you cannot source
+      <aside class="editorial-aside">
+        <div class="section-heading">
+          <div>
+            <h2>Keep every entry sourced</h2>
+            <p class="section-heading-bn bn" lang="bn">প্রতিটি তথ্যের উৎস যাচাই করুন</p>
+          </div>
+        </div>
+        <p>
+          No invented scores, sizes, licenses, or BibTeX. Every leaderboard row must cite the paper
+          reporting that exact number on that exact benchmark — which is why {emptyLeaderboardCount}
+          leaderboards still render an empty state. A working link does not prove the metadata is
+          right. If you are unsure about a field, leave it out and say so in the pull request; missing
+          is fine, wrong is not.
+          Full rules in <a href={`${REPO}/blob/main/CONTRIBUTING.md`} target="_blank" rel="noopener"
+>CONTRIBUTING.md</a
+>.
+        </p>
+        <details class="entry-format">
+          <summary>View a dataset YAML example</summary>
+          <pre class="code-block">{sample}</pre>
+        </details>
+      </aside>
+    </div>
+
+    <section class="section">
+      <div class="section-heading">
+        <div>
+          <h2 class="section-title">Submit a resource</h2>
+          <p class="section-heading-bn bn" lang="bn">তথ্য যোগ করুন</p>
+        </div>
       </div>
-      <p style="margin:6px 0 0;font-size:13.5px;color:var(--text2);line-height:1.6;text-wrap:pretty">
-        No invented scores, sizes, licenses, or BibTeX. Every leaderboard row must cite the paper
-        reporting that exact number on that exact benchmark — which is why {emptyLeaderboardCount}
-        leaderboards still render an empty state. A working link does not prove the metadata is
-        right. If you are unsure about a field, leave it out and say so in the pull request; missing
-        is fine, wrong is not.
-        Full rules in <a href={`${REPO}/blob/main/CONTRIBUTING.md`} target="_blank" rel="noopener"
-          >CONTRIBUTING.md</a
-        >.
-      </p>
-    </section>
-
-    <section style="padding-bottom:28px">
-      <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:22px;margin:0 0 12px">
-        Entry format
-      </h2>
-      <pre style={preStyle}>{sample}</pre>
-    </section>
-
-    <section>
-      <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:22px;margin:0 0 6px">
-        Submit a resource
-      </h2>
-      <p
-        style="color:var(--text2);font-size:14px;margin:0 0 16px;max-width:600px;line-height:1.6;text-wrap:pretty"
-      >
+      <p class="section-description text-muted">
         Not comfortable with Git? Fill this in and we'll turn it into a pull request for you,
         credited to you.
       </p>
-      <form
-        id="submit-form"
-        style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:680px"
-      >
-        <label style={labelStyle}>
-          Resource type
-          <select name="type" style={`${fieldStyle};font-weight:400`}>
+      <form id="submit-form" class="contribute-form panel" tabindex="-1">
+        <label class="form-field">
+          <span>Resource type</span>
+          <select name="type">
             <option>Dataset</option>
             <option>Paper</option>
             <option>Model</option>
@@ -151,72 +132,58 @@ const preStyle =
             <option>Benchmark result</option>
           </select>
         </label>
-        <label style={labelStyle}>
-          Task
-          <select name="task" style={`${fieldStyle};font-weight:400`}>
+        <label class="form-field">
+          <span>Task</span>
+          <select name="task">
             {tasks.map((t) => <option value={t.id}>{t.name}</option>)}
           </select>
         </label>
-        <label style={`${labelStyle};grid-column:1/-1`}>
-          Name
-          <input name="name" required placeholder="e.g. SentNoB" style={fieldStyle} />
+        <label class="form-field form-field-wide">
+          <span>Name</span>
+          <input name="name" required placeholder="e.g. SentNoB" />
         </label>
-        <label style={`${labelStyle};grid-column:1/-1`}>
-          Link (dataset / paper / repo)
-          <input name="link" type="url" required placeholder="https://…" style={fieldStyle} />
+        <label class="form-field form-field-wide">
+          <span>Link (dataset / paper / repo)</span>
+          <input name="link" type="url" required placeholder="https://…" />
         </label>
-        <label style={`${labelStyle};grid-column:1/-1`}>
-          Why it belongs in the catalog
-          <textarea
-            name="why"
-            rows="3"
-            required
-            placeholder="One or two sentences…"
-            style={`${fieldStyle};resize:vertical`}></textarea>
+        <label class="form-field form-field-wide">
+          <span>Why it belongs in the catalog</span>
+          <textarea name="why" rows="3" required placeholder="One or two sentences…"></textarea>
         </label>
-        <div style="grid-column:1/-1;display:flex;align-items:center;gap:14px;flex-wrap:wrap">
-          <button
-            type="submit"
-            style="border:none;background:var(--green);color:#fff;border-radius:9px;padding:11px 22px;font-size:14px;font-weight:600;cursor:pointer;font-family:'IBM Plex Sans',sans-serif"
-            >Submit for review</button
-          >
-          <span style="font-size:12.5px;color:var(--text2)"
-            >Opens a pre-filled GitHub issue — maintainers review weekly.</span
-          >
+        <div class="form-actions form-field-wide">
+          <button class="button button-primary" type="submit">Submit for review</button>
+          <span class="text-muted">Opens a pre-filled GitHub issue; maintainers review weekly.</span>
         </div>
       </form>
-      <p style="font-size:12.5px;color:var(--text2);margin:14px 0 0">
+      <p class="text-muted direct-submit">
         Prefer to skip the form? Open the <a
           href={`${REPO}/issues/new?template=submit-resource.yml`}
           target="_blank"
           rel="noopener">Submit a resource</a
-        > issue directly.
+> issue directly.
       </p>
     </section>
 
     {
-      contributors.length > 0 && (
-        <section style="padding:44px 0 0">
-          <h2 style="font-family:'Spectral',serif;font-weight:600;font-size:22px;margin:0 0 6px">
-            Contributors{' '}
-            <span class="bn" style="font-size:15px;color:var(--red);font-weight:600">
-              অবদানকারী
-            </span>
-          </h2>
-          <p style="color:var(--text2);font-size:14px;margin:0 0 16px;max-width:620px;line-height:1.6;text-wrap:pretty">
+      contributors.length> 0 && (
+        <section class="section contributors-section">
+          <div class="section-heading">
+            <h2 class="section-title">Contributors <span class="bn" lang="bn">অবদানকারী</span></h2>
+          </div>
+          <p class="section-description text-muted">
             Resources suggested by the community. Each paper's full author list is shown as
             published.
           </p>
-          <div style="display:grid;gap:12px">
+          <div class="contributor-list">
             {contributors.map((c) => (
-              <div style={cardStyle}>
-                <div style="font-weight:600;font-size:15px">
+              <article class="panel contributor-card">
+                <h3 class="resource-title">
                   <a href={`https://github.com/${c.github}`} target="_blank" rel="noopener">
                     {c.name}
                   </a>
-                  <span style="color:var(--text2);font-weight:400"> · @{c.github}</span>
-                </div>
-                <ul style="margin:12px 0 0;padding:0;list-style:none;display:grid;gap:12px">
+                  <span class="text-muted contributor-handle">, @{c.github}</span>
+                </h3>
+                <ul class="contributor-entries">
                   {c.entries.map((e) => {
                     const model = e.kind === 'model' ? modelByName.get(e.title) : undefined;
                     const dataset = e.kind === 'dataset' ? datasetByName.get(e.title) : undefined;
@@ -228,30 +195,21 @@ const preStyle =
                     const caption =
                       e.authors ??
                       (model
-                        ? [model.arch, model.params].filter(Boolean).join(' · ')
+                        ? [model.arch, model.params].filter(Boolean).join(', ')
                         : dataset
-                          ? `${dataset.size} · ${dataset.license}`
+                          ? `${dataset.size}, ${dataset.license}`
                           : '');
                     return (
-                      <li>
-                        <a
-                          href={href}
-                          target="_blank"
-                          rel="noopener"
-                          style="font-size:13.5px;font-weight:600;line-height:1.45"
-                        >
+                      <li class="contributor-entry">
+                        <a class="resource-title" href={href} target="_blank" rel="noopener">
                           {e.title}
                         </a>
-                        {caption && (
-                          <div style="font-size:12.5px;color:var(--text2);margin-top:4px;line-height:1.5;text-wrap:pretty">
-                            {caption}
-                          </div>
-                        )}
+                        {caption && <p class="metadata text-muted">{caption}</p>}
                       </li>
                     );
                   })}
                 </ul>
-              </div>
+              </article>
             ))}
           </div>
         </section>
@@ -259,22 +217,6 @@ const preStyle =
     }
   </main>
 </Base>
-
-<style>
-  #submit-form input:focus,
-  #submit-form textarea:focus,
-  #submit-form select:focus {
-    border-color: var(--green);
-  }
-  #submit-form button:hover {
-    opacity: 0.9;
-  }
-  @media (max-width: 560px) {
-    #submit-form {
-      grid-template-columns: 1fr !important;
-    }
-  }
-</style>
 
 <script is:inline define:vars={{ REPO }}>
   document.getElementById('submit-form')?.addEventListener('submit', (e) => {

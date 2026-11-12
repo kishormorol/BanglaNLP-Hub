@@ -1,3 +1,5 @@
+const trailingHighSurrogate = /[\uD800-\uDBFF]$/;
+
 export function initCatalogFilters(
   controls: Record<string, HTMLInputElement | HTMLSelectElement>,
   items: HTMLElement[],
@@ -27,7 +29,7 @@ export function initCatalogFilters(
         control.value = [...control.options].some((option) => option.value === value) ? value : '';
       } else {
         // The native input limit counts UTF-16 units; do not split a surrogate pair.
-        control.value = value.slice(0, control.maxLength).replace(/[\uD800-\uDBFF]$/, '');
+        control.value = value.slice(0, control.maxLength).replace(trailingHighSurrogate, '');
       }
     }
     apply();

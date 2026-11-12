@@ -1,23 +1,25 @@
 ---
 /**
  * Shared document shell. Owns everything the prototype kept in <helmet>:
- * font loading, the no-flash theme script, and the design tokens (global.css).
+ * font loading, the no-flash theme script, and the shared BoardUI design tokens.
  */
 import '../styles/global.css';
 import SiteNav from '../components/SiteNav.astro';
 import Footer from '../components/Footer.astro';
+import readingFont from '../assets/fonts/sourcesans3-latin.woff2';
+import displayFont from '../assets/fonts/newsreader-latin.woff2';
+import bengaliFont from '../assets/fonts/noto-serif-bengali-bengali.woff2';
+import monoFont from '../assets/fonts/geist-mono-latin.woff2';
 
 interface Props {
   title: string;
   description?: string;
   active?: string;
-  footerShowData?: boolean;
 }
 const {
   title,
   description = 'Papers, datasets, models, tools, and benchmarks for Bengali natural language processing — community-maintained, link-verified, and open on GitHub.',
   active = '',
-  footerShowData = false,
 } = Astro.props;
 
 // Absolute URLs for social cards. Astro.site + BASE_URL keep these correct
@@ -31,9 +33,14 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+    <link rel="preload" href={readingFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={displayFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={bengaliFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={monoFont} as="font" type="font/woff2" crossorigin />
     <title>{title}</title>
     <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
     <link rel="canonical" href={canonical} />
     <!-- Open Graph / Twitter social card -->
     <meta property="og:type" content="website" />
@@ -49,29 +56,25 @@ const canonical = new URL(Astro.url.pathname, Astro.site).href;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImage} />
-    <!-- Explicit, base-aware favicons: without these the browser probes
-         /favicon.ico at the domain root, which 404s under a project Pages path. -->
-    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.svg`} />
-    <link rel="icon" sizes="any" href={`${import.meta.env.BASE_URL.replace(/\/$/, '')}/favicon.ico`} />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Bengali:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- No-flash theme restore + a `js` flag so JS-only enhancements (e.g. the
-         home page's scroll-reveal) never hide content when scripting is off.
-         Must stay inline and before first paint. -->
+    <link rel="icon" sizes="any" href={base + '/favicon.ico'} />
+    <link rel="icon" type="image/svg+xml" href={base + '/favicon.svg'} />
+    <!-- Restore the saved or system theme before first paint. -->
     <script is:inline>
-      document.documentElement.classList.add('js');
+      // Keep the fallback fade disabled after a native page transition finishes.
+      window.addEventListener('pagereveal', (event) => {
+        if (event.viewTransition) document.documentElement.classList.add('native-navigation');
+      });
       try {
-        if (localStorage.bnlpTheme === 'dark') document.documentElement.classList.add('dark');
+        const theme = localStorage.bnlpTheme;
+        const dark = theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', dark);
       } catch (e) {}
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <SiteNav active={active} />
-    <slot />
-    <Footer showData={footerShowData} />
+    <div id="main-content" tabindex="-1"><slot /></div>
+    <Footer />
   </body>
 </html>

@@ -1,107 +1,33 @@
 ---
-/**
- * Catalog search island — shared by the nav header and the Home hero.
- *
- * Both variants render the same markup contract (`[data-search]`) and are driven
- * by one bundled script, so the logic and the fetched index are shared no matter
- * how many instances a page mounts. Styling differs only via the `variant` prop,
- * matching SiteNav.dc.html (nav) and Home.dc.html (hero).
- */
+import Icon from './Icon.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-interface Props {
-  variant?: 'nav' | 'hero';
-  id: string;
-}
+interface Props { variant?: 'nav' | 'hero'; id: string; }
 const { variant = 'nav', id } = Astro.props;
-
-const V = {
-  nav: {
-    wrap: 'position:relative;flex:0 1 260px;min-width:110px',
-    input:
-      "width:100%;padding:7px 12px 7px 30px;border:1px solid var(--border);border-radius:8px;background:var(--surface);color:var(--text);font-size:13.5px;font-family:'IBM Plex Sans',sans-serif",
-    icon: 'position:absolute;left:10px;top:8px;color:var(--text2);font-size:13px',
-    panel:
-      'position:absolute;top:40px;left:0;right:0;max-width:360px;background:var(--surface);border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(10,30,20,0.12);overflow:hidden;max-height:340px;overflow-y:auto;z-index:20',
-    placeholder: 'Search…',
-  },
-  hero: {
-    wrap: 'position:relative;max-width:600px;margin:32px auto 0',
-    input:
-      "width:100%;padding:15px 20px 15px 46px;border:1.5px solid var(--border);border-radius:12px;background:var(--surface);color:var(--text);font-size:15.5px;font-family:'IBM Plex Sans',sans-serif;box-shadow:0 2px 10px rgba(14,60,40,0.05)",
-    icon: 'position:absolute;left:17px;top:15px;color:var(--text2);font-size:18px',
-    panel:
-      'position:absolute;top:58px;left:0;right:0;background:var(--surface);border:1px solid var(--border);border-radius:12px;box-shadow:0 12px 32px rgba(10,30,20,0.14);overflow:hidden;z-index:20;text-align:left;max-height:360px;overflow-y:auto',
-    placeholder: 'Search papers, datasets, models… e.g. “sentiment” or “BanglaBERT”',
-  },
-}[variant];
+const placeholder = variant === 'hero' ? 'Search the catalog…' : 'Search catalog...';
 ---
-
-<div
-  data-search
-  data-variant={variant}
-  data-index-url={`${base}/search-index.json`}
-  style={V.wrap}
->
-  <input
-    id={id}
-    type="search"
-    autocomplete="off"
-    placeholder={V.placeholder}
-    aria-label="Search the catalog"
-    role="combobox"
-    aria-autocomplete="list"
-    aria-expanded="false"
-    aria-controls={`${id}-results`}
-    data-search-input
-    style={V.input}
-  />
-  <span aria-hidden="true" style={V.icon}>⌕</span>
-  <div
-    data-search-panel
-    tabindex="-1"
-    hidden
-    style={V.panel}
-  >
-    <div role="status" aria-live="polite" data-search-status style="padding:10px 12px;font-size:12px;color:var(--text2)"></div>
-    <div id={`${id}-results`} role="listbox" aria-label="Search results" data-search-results></div>
+<div class="catalog-search" data-search data-variant={variant} data-index-url={base + '/search-index.json'}>
+  <span class="search-icon"><Icon name="search" /></span>
+  <input id={id} type="search" autocomplete="off" maxlength="1000" placeholder={placeholder} aria-label="Search the catalog" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls={id + '-results'} data-search-input />
+  <div class="search-panel" data-search-panel tabindex="-1" hidden>
+    <div class="search-status" role="status" aria-live="polite" data-search-status></div>
+    <div id={id + '-results'} role="listbox" aria-label="Search results" data-search-results></div>
   </div>
 </div>
-
-<style>
-  [data-search] input:focus {
-    border-color: var(--green);
-    outline: 2px solid var(--green);
-    outline-offset: 2px;
-  }
-  [data-search] :global([role='option']:hover),
-  [data-search] :global([aria-selected='true']) {
-    background: var(--surface2);
-    box-shadow: inset 3px 0 var(--green);
-  }
-  [data-search] :global([role='option']:focus-visible) {
-    outline: 2px solid var(--green);
-    outline-offset: -2px;
-  }
-  @media (max-width: 640px) {
-    [data-search][data-variant='nav'] [data-search-panel] {
-      position: fixed !important;
-      top: 60px !important;
-      left: 16px !important;
-      right: 16px !important;
-      max-width: none !important;
-    }
-  }
-</style>
-
 <script>
+  const htmlCharacters = /[&<>"']/g;
+  const bengaliBlock = /[ঀ-৿]/;
+  const whitespace = /\s+/;
   // One shared index fetch across every mounted instance.
-  let index: { type: string; name: string; meta: string; href: string; keywords?: string }[] | null = null;
+  type SearchRecord = {
+    type: string; name: string; meta: string; href: string; keywords?: string;
+  };
+  let index: SearchRecord[] | null = null;
   let pending: Promise<void> | null = null;
+  const pageSize = 40;
 
   const esc = (s: string) =>
     String(s).replace(
-      /[&<>"']/g,
+      htmlCharacters,
       (c) =>
         ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] as string,
     );
@@ -135,19 +61,75 @@ const V = {
     const status = root.querySelector<HTMLElement>('[data-search-status]');
     if (!input || !panel || !results || !status) return;
 
-    const hero = root.dataset.variant === 'hero';
     const indexUrl = root.dataset.indexUrl!;
     let active = -1;
     let options: HTMLAnchorElement[] = [];
+    let selectedOption: HTMLAnchorElement | null = null;
+    let hits: SearchRecord[] = [];
+    let rendered = 0;
+    let first = 0;
     let revision = 0;
 
     function select(next: number, scroll = true) {
       active = next;
-      options.forEach((option, i) => option.setAttribute('aria-selected', String(i === active)));
-      if (options[active]) {
-        input!.setAttribute('aria-activedescendant', options[active].id);
-        if (scroll) options[active].scrollIntoView({ block: 'nearest' });
+      const option = options[active] ?? null;
+      if (selectedOption !== option) {
+        selectedOption?.setAttribute('aria-selected', 'false');
+        option?.setAttribute('aria-selected', 'true');
+        selectedOption = option;
+      }
+      if (option) {
+        input!.setAttribute('aria-activedescendant', option.id);
+        if (scroll) option.scrollIntoView({ block: 'nearest' });
       } else input!.removeAttribute('aria-activedescendant');
+    }
+
+    function rangeMarkup(start: number, end: number) {
+      return hits.slice(start, end).map((r, offset) => {
+        const i = start + offset;
+        return '<a id="' + input!.id + '-option-' + i + '" role="option" aria-selected="false" tabindex="-1" href="' + esc(r.href) + '" class="search-option">' +
+          '<span class="badge">' + esc(r.type) + '</span>' +
+          '<span class="search-option-body"><span class="search-name' + (bengaliBlock.test(r.name) ? ' bn" lang="bn' : '') + '">' + esc(r.name) + '</span>' +
+          '<span class="search-meta' + (bengaliBlock.test(r.meta) ? ' bn" lang="bn' : '') + '">' + esc(r.meta) + '</span></span></a>';
+      }).join('');
+    }
+
+    function announce() {
+      status!.textContent = `${hits.length} ${hits.length === 1 ? 'result' : 'results'}. Showing ${first + 1} to ${rendered}. Press Enter to open.`;
+    }
+
+    function appendNextPage() {
+      if (rendered >= hits.length) return;
+      const end = Math.min(rendered + pageSize, hits.length);
+      const markup = rangeMarkup(rendered, end);
+      const previousCount = results!.children.length;
+      results!.insertAdjacentHTML('beforeend', markup);
+      options.push(...Array.from(results!.children).slice(previousCount) as HTMLAnchorElement[]);
+      rendered = end;
+      announce();
+    }
+
+    function showPage(start: number) {
+      if (results!.contains(document.activeElement)) panel!.focus({ preventScroll: true });
+      select(-1, false);
+      options = [];
+      results!.replaceChildren();
+      first = start;
+      rendered = start;
+      appendNextPage();
+    }
+
+    function prependPreviousPage() {
+      if (!first) return;
+      const start = Math.max(0, first - pageSize);
+      const count = first - start;
+      const height = panel!.scrollHeight;
+      results!.insertAdjacentHTML('afterbegin', rangeMarkup(start, first));
+      options.unshift(...Array.from(results!.children).slice(0, count) as HTMLAnchorElement[]);
+      if (active >= 0) active += count;
+      first = start;
+      panel!.scrollTop += panel!.scrollHeight - height;
+      announce();
     }
 
     function close() {
@@ -156,13 +138,6 @@ const V = {
       input!.setAttribute('aria-expanded', 'false');
       select(-1, false);
     }
-
-    // Row metrics differ between the nav and hero variants in the prototype.
-    const pad = hero ? '11px 16px' : '9px 12px';
-    const typeW = hero ? '56px' : '52px';
-    const nameSize = hero ? '14px' : '13px';
-    const metaSize = hero ? '12px' : '11.5px';
-    const gap = hero ? '12px' : '10px';
 
     async function render() {
       const current = ++revision;
@@ -173,6 +148,10 @@ const V = {
       }
       select(-1, false);
       options = [];
+      selectedOption = null;
+      hits = [];
+      rendered = 0;
+      first = 0;
       results!.replaceChildren();
       panel!.hidden = false;
       input!.setAttribute('aria-expanded', 'true');
@@ -185,34 +164,26 @@ const V = {
           return;
         }
       }
-      const terms = q.split(/\s+/);
+      const terms = q.split(whitespace);
       const rank = (name: string) => {
-        const text = name.toLowerCase();
-        return text === q ? 0 : text.startsWith(q) ? 1 : text.includes(q) ? 2 : 3;
+        return name === q ? 0 : name.startsWith(q) ? 1 : name.includes(q) ? 2 : 3;
       };
-      const hits = index
+      hits = index
         .filter((r) => {
-          const text = `${r.name} ${r.meta} ${r.keywords ?? ''}`.toLowerCase();
-          return terms.every((term) => text.includes(term));
+          const searchable = `${r.name} ${r.meta} ${r.keywords ?? ''}`.toLowerCase();
+          return terms.every((term) => searchable.includes(term));
         })
-        .sort((a, b) => rank(a.name) - rank(b.name));
+        .sort((a, b) => rank(a.name.toLowerCase()) - rank(b.name.toLowerCase()));
 
-      results!.innerHTML = hits
-            .map(
-              (r, i) =>
-                `<a id="${input!.id}-option-${i}" role="option" aria-selected="false" tabindex="-1" href="${esc(r.href)}" style="display:flex;gap:${gap};align-items:baseline;padding:${pad};border-bottom:1px solid var(--border);text-decoration:none">` +
-                `<span style="font-size:10.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--red);flex-shrink:0;width:${typeW}">${esc(r.type)}</span>` +
-                `<span style="min-width:0;overflow-wrap:anywhere"><span ${/[\u0980-\u09ff]/.test(r.name) ? 'class="bn"' : ''} style="display:block;font-size:${nameSize};color:var(--text)">${esc(r.name)}</span>` +
-                `<span ${/[\u0980-\u09ff]/.test(r.meta) ? 'class="bn"' : ''} style="display:block;font-size:${metaSize};color:var(--text2);margin-top:3px">${esc(r.meta)}</span></span>` +
-                `</a>`,
-            )
-            .join('');
-      options = [...results!.querySelectorAll<HTMLAnchorElement>('[role="option"]')];
       panel!.scrollTop = 0;
-      status!.textContent = hits.length
-        ? `${hits.length} ${hits.length === 1 ? 'result' : 'results'}. Use arrow keys to select and Enter to open.`
-        : 'No matches in the catalog. Try another name, author, or task.';
+      if (hits.length) appendNextPage();
+      else status!.textContent = 'No matches in the catalog. Try another name, author, or task.';
     }
+
+    panel.addEventListener('scroll', () => {
+      if (panel.scrollTop < 80 && first > 0) prependPreviousPage();
+      if (panel.scrollHeight - panel.scrollTop - panel.clientHeight < 80) appendNextPage();
+    }, { passive: true });
 
     input.addEventListener('focus', render);
     input.addEventListener('input', render);
@@ -245,9 +216,22 @@ const V = {
       } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
         e.preventDefault();
         if (panel.hidden) void render();
-        if (options.length) select(e.key === 'ArrowDown'
-          ? (active + 1) % options.length
-          : (active < 0 ? options.length - 1 : (active - 1 + options.length) % options.length));
+        if (options.length) {
+          if (e.key === 'ArrowDown' && active === options.length - 1) {
+            if (rendered < hits.length) appendNextPage();
+            else if (first > 0) showPage(0);
+          }
+          if (e.key === 'ArrowUp' && active <= 0) {
+            if (first > 0) prependPreviousPage();
+            else {
+              showPage(Math.max(0, hits.length - pageSize));
+              active = options.length;
+            }
+          }
+          select(e.key === 'ArrowDown'
+            ? (active + 1) % options.length
+            : (active < 0 ? options.length - 1 : (active - 1 + options.length) % options.length));
+        }
         if (document.activeElement !== input) options[active]?.focus({ preventScroll: true });
       } else if (e.key === 'Enter' && !panel.hidden && document.activeElement === input && options.length) {
         e.preventDefault();
