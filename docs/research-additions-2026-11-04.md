@@ -23,11 +23,8 @@ was removed after promotion to the canonical ACL record `2026.groundlm-1.56`.
 The inbox candidate `arxiv2607.21780` was removed after promotion to the same
 arXiv Khondo entry in the published catalog. All other queued candidates were
 preserved byte for byte.
-The paper catalog contains 821 entries after these additions.
 
 Discovery used Bangla/Bengali title and abstract queries and exact-title searches
 for publication identity, including `"Lipi-Ghor" site:aclanthology.org` and
-`"5-Dialects-BN" site:aclanthology.org`. Firecrawl's web quota was exhausted;
-paper-index discovery and direct arXiv/ACL records remained available. This is
-not an exhaustive literature search or a claim that every missing paper is now
-cataloged.
+`"5-Dialects-BN" site:aclanthology.org`. This is not an exhaustive literature search or a claim that every missing
+paper is now cataloged.
