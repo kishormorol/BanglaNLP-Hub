@@ -1,3 +1,10 @@
+- id: arxiv-2609-09964
+  title: "5-Dialects-BN: Unmasking the Impact of Transliteration on Bangla Dialectal LLMs"
+  authors: Jawad et al.
+  venue: arXiv
+  year: 2026
+  link: https://arxiv.org/abs/2609.09964
+  task: mt
 - id: ahmed-etal-2026-banglaregionaltextcorpus
   title: "BanglaRegionalTextCorpus: A curated dataset for four regional bangla dialects with standard Bangla and English translation"
   authors: Ahmed et al.

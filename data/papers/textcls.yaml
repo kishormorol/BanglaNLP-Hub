@@ -1,3 +1,17 @@
+- id: arxiv-2609-13869
+  title: "Bangla Sentence Function Classification: Corpus Development, Model Benchmarking, and Interpretability"
+  authors: Argha et al.
+  venue: arXiv
+  year: 2026
+  link: https://arxiv.org/abs/2609.13869
+  task: textcls
+- id: arxiv-2610-09464
+  title: "BanglaRhet: Benchmarking Classical and Transformer Models for Rhetorical and Persuasion Detection in Bangla Political Speech"
+  authors: Sen et al.
+  venue: arXiv
+  year: 2026
+  link: https://arxiv.org/abs/2610.09464
+  task: textcls
 - id: sultana-etal-2026-bangla-regional-textcls-bert-ensemble
   title: A hybrid approach for Bangla regional text classification using region-specific lexical oversampling and BERT ensemble learning
   authors: Sultana et al.
