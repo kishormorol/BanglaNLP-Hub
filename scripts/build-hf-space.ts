@@ -31,6 +31,20 @@ import { fileURLToPath } from 'node:url';
 import { parse } from 'yaml';
 import './validate.ts';
 
+const patterns = {
+  urlSuffix: /(?=[#?])/,
+  fileExtension: /\.[a-z0-9]+$/i,
+  indexHtml: /index\.html$/,
+  htmlExtension: /\.html$/,
+  rootAttribute: /(href|src)="(\/[^"]*)"/g,
+  canonicalMeta: /(<link rel="canonical" href=")[^"]*"/,
+  ogUrlMeta: /(<meta property="og:url" content=")[^"]*"/,
+  imageMeta: /(<meta (?:property="og:image"|name="twitter:image") content=")[^"]*"/g,
+  templateToken: /\{\{(\w+)\}\}/g,
+  fragmentOrQuery: /[#?]/,
+  leadingSlash: /^\//,
+};
+
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const outDir = resolve(root, 'dist-hf');
 const dataDir = resolve(root, 'data');
@@ -58,15 +72,15 @@ function walk(dir: string): string[] {
  * and so is the bare root, which the Space resolves to index.html itself.
  */
 function asFilePath(link: string): string {
-  const [path, ...rest] = link.split(/(?=[#?])/);
+  const [path, ...rest] = link.split(patterns.urlSuffix);
   const tail = rest.join('');
-  if (path === '/' || /\.[a-z0-9]+$/i.test(path)) return link;
+  if (path === '/' || patterns.fileExtension.test(path)) return link;
   return `${path}.html${tail}`;
 }
 
 /** The Pages URL a mirrored file corresponds to: tasks/ner.html -> /tasks/ner/ */
 function pagesUrl(file: string): string {
-  const route = file.replace(/index\.html$/, '').replace(/\.html$/, '/');
+  const route = file.replace(patterns.indexHtml, '').replace(patterns.htmlExtension, '/');
   return `${PAGES_ORIGIN}${PAGES_BASE}/${route}`;
 }
 
@@ -85,7 +99,7 @@ function rewriteHtml(files: string[]): number {
     const full = join(outDir, file);
     let html = readFileSync(full, 'utf8');
 
-    html = html.replace(/(href|src)="(\/[^"]*)"/g, (whole, attr: string, link: string) => {
+    html = html.replace(patterns.rootAttribute, (whole, attr: string, link: string) => {
       const fixed = asFilePath(link);
       if (fixed !== link) links++;
       return `${attr}="${fixed}"`;
@@ -96,10 +110,10 @@ function rewriteHtml(files: string[]): number {
     const canonical = pagesUrl(file);
     const before = html;
     html = html
-      .replace(/(<link rel="canonical" href=")[^"]*"/, `$1${canonical}"`)
-      .replace(/(<meta property="og:url" content=")[^"]*"/, `$1${canonical}"`)
+      .replace(patterns.canonicalMeta, `$1${canonical}"`)
+      .replace(patterns.ogUrlMeta, `$1${canonical}"`)
       .replace(
-        /(<meta (?:property="og:image"|name="twitter:image") content=")[^"]*"/g,
+        patterns.imageMeta,
         `$1${PAGES_ORIGIN}${PAGES_BASE}/og.png"`,
       );
     if (html !== before) heads++;
@@ -152,7 +166,7 @@ function counts(): Record<string, number> {
 function writeCard(): void {
   const template = readFileSync(resolve(root, 'scripts/hf-space-card.md'), 'utf8');
   const stats = counts();
-  const card = template.replace(/\{\{(\w+)\}\}/g, (whole, key: string) => {
+  const card = template.replace(patterns.templateToken, (whole, key: string) => {
     if (!(key in stats)) throw new Error(`hf-space-card.md asks for unknown count {{${key}}}`);
     return String(stats[key]);
   });
@@ -174,8 +188,8 @@ function verify(files: string[]): void {
 
   for (const file of files.filter((f) => f.endsWith('.html'))) {
     const html = readFileSync(join(outDir, file), 'utf8');
-    for (const [, , link] of html.matchAll(/(href|src)="(\/[^"]*)"/g)) {
-      const path = link.split(/[#?]/)[0].replace(/^\//, '');
+    for (const [, , link] of html.matchAll(patterns.rootAttribute)) {
+      const path = link.split(patterns.fragmentOrQuery)[0].replace(patterns.leadingSlash, '');
       note(path === '' ? 'index.html' : path, file);
     }
   }
@@ -184,7 +198,7 @@ function verify(files: string[]): void {
   }[];
   for (const entry of entries) {
     if (typeof entry.href === 'string' && entry.href.startsWith('/')) {
-      note(entry.href.split(/[#?]/)[0].replace(/^\//, ''), 'search-index.json');
+      note(entry.href.split(patterns.fragmentOrQuery)[0].replace(patterns.leadingSlash, ''), 'search-index.json');
     }
   }
 

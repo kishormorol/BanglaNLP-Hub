@@ -15,6 +15,11 @@ import { execFileSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
 import { parse } from 'yaml';
 
+const patterns = {
+  yamlLink: /link:\s*(\S+)/,
+  quotes: /^['"]|['"]$/g,
+};
+
 const root = resolve(process.cwd());
 const dataDir = resolve(root, 'data');
 
@@ -111,8 +116,8 @@ function changedUrls(ref: string): Set<string> {
     );
     for (const line of diff.split('\n')) {
       if (!line.startsWith('+') || line.startsWith('+++')) continue;
-      const m = line.match(/link:\s*(\S+)/);
-      if (m) urls.add(m[1].replace(/^['"]|['"]$/g, ''));
+      const m = line.match(patterns.yamlLink);
+      if (m) urls.add(m[1].replace(patterns.quotes, ''));
     }
   } catch (err) {
     console.error(`could not diff against ${ref}: ${(err as Error).message}`);

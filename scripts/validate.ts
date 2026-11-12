@@ -30,6 +30,12 @@ import {
   VERIFY_MAX_AGE_MONTHS,
 } from '../src/lib/schemas.ts';
 
+const patterns = {
+  www: /^www\./,
+  doiHost: /^dx\.doi\.org$/,
+  trailingSlashes: /\/+$/,
+};
+
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const dataDir = resolve(root, 'data');
 
@@ -42,10 +48,10 @@ const normalizeLink = (link: string) => {
   const parsed = new URL(link);
   const host = parsed.hostname
     .toLowerCase()
-    .replace(/^www\./, '')
-    .replace(/^dx\.doi\.org$/, 'doi.org');
+    .replace(patterns.www, '')
+    .replace(patterns.doiHost, 'doi.org');
   const port = parsed.port ? `:${parsed.port}` : '';
-  const path = parsed.pathname.replace(/\/+$/, '');
+  const path = parsed.pathname.replace(patterns.trailingSlashes, '');
   if (host === 'doi.org') return `${host}${path.toLowerCase()}`;
   return `${host}${port}${path}${parsed.search}${parsed.hash}`;
 };
@@ -304,7 +310,7 @@ for (const contributor of homeContributors) {
         `[${contributor.name}] match '${contributor.match}' does not occur in a catalog link`,
       );
     }
-  } else if (contributor.link.replace(/\/+$/, '') !== `https://github.com/${contributor.handle}`) {
+  } else if (contributor.link.replace(patterns.trailingSlashes, '') !== `https://github.com/${contributor.handle}`) {
     fail(
       'data/home-contributors.yaml',
       `[${contributor.name}] link does not match GitHub handle '${contributor.handle}'`,

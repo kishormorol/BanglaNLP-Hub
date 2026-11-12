@@ -20,6 +20,133 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { parse, stringify } from 'yaml';
 
+const patterns = {
+  whitespace: /\s+/g,
+  bracedAccent: /\{\\[`'"^~=.]\{?([A-Za-z])\}?\}/g,
+  accent: /\\[`'"^~=.]\{?([A-Za-z])\}?/g,
+  latexCommand: /\{\\([a-z])\s*([A-Za-z])\}/g,
+  latexResidue: /[{}\\]/g,
+  braces: /[{}]/g,
+  findings: /^Findings of the Association for Computational Linguistics:?\s*(ACL|EMNLP|NAACL|EACL|IJCNLP)?/i,
+  blp: /Workshop on Bangla Language Processing/i,
+  blpEdition: /\(BLP-(\d{4})\)/,
+  parentheses: /\([^)]+\)/g,
+  trailingYear: /[\s-]*\d{4}\s*$/,
+  acronym: /^[A-Za-z][A-Za-z-]{1,14}$/,
+  capitals: /[A-Z][A-Za-z-]*[A-Z]/,
+  venueKey: /^\d{4}\.([a-z]+)/i,
+  proceedings: /^Proceedings of (the )?/i,
+  trailingParentheses: /\s*\([^)]*\)\s*$/,
+  ordinal: /^\d+(st|nd|rd|th)\s+/i,
+  hostClause: /\s+within the .*$/i,
+  colonSubtitle: /:\s.*$/,
+  dashSubtitle: /\s*---\s.*$/,
+  venueSubtitle: /,\s*(Varieties and Dialects|Sentiment).*$/i,
+  figuresOfSpeech: /figures? of speech/,
+  genreClassification: /genre classification|content classification/,
+  speechEmotion: /speech emotion|emotional speech|emotion.*\b(from|in)\b.*(speech|audio|voice)|acoustic.*emotion|\bspeech\b.*\bser\b/,
+  speaker: /speaker (identif|recogni|verif|diariz)|diariz/,
+  translationWsd: /machine translation.*word sense disambiguation/,
+  opticalRecognition: /optical character recognition/g,
+  ocr: /\bocr\b/,
+  licensePlate: /licen[cs]e plate/,
+  characterUnits: /\b(characters?|digits?)\b/,
+  textUnits: /\b(words?|lines?|documents?|scenes?|texts?)\b/,
+  blp2023Task1: /blp-2023\s*task\s*1/,
+  blp2023Task2: /blp-2023\s*task\s*2/,
+  blp2025Task1: /blp-2025\s*task\s*1/,
+  blp2025Task2: /blp-2025\s*task\s*2/,
+  bibEntry: /\n@/,
+  bibKey: /^[a-z]+\{([^,]+),/i,
+  trailingSlashes: /\/+$/,
+  titleSeparators: /[^a-z0-9]+/g,
+  singleWhitespace: /\s/,
+  arxivId: /(\d{4}\.\d{4,5})/,
+  spaces: / /g,
+  idSeparators: /[^a-z0-9-_]/g,
+  anthologyId: /(\d{4}\.[a-z-]+\.\d+)/i,
+  dots: /\./g,
+};
+
+const venueRules: [RegExp, string][] = [
+  [/Annual Meeting of the Association for Computational Linguistics/i, 'ACL'],
+  [/Conference on Empirical Methods in Natural Language Processing/i, 'EMNLP'],
+  // NAACL renamed its 2025 edition "Nations of the Americas Chapter".
+  [/(North American|Nations of the Americas) Chapter of the Association for Computational Linguistics/i, 'NAACL'],
+  [/European Chapter of the Association for Computational Linguistics/i, 'EACL'],
+  [/LREC-COLING/i, 'LREC-COLING'],
+  [/International Conference on Computational Linguistics|^COLING|Coling/i, 'COLING'],
+  [/Language Resources and Evaluation Conference|International Conference on Language Resources and Evaluation/i, 'LREC'],
+  [/International Joint Conference on Natural Language Processing/i, 'IJCNLP'],
+  [/International Conference on Natural Language Processing|\bICON\b/i, 'ICON'],
+  [/Workshop on Semantic Evaluation|SemEval/i, 'SemEval'],
+  [/Joint Conference on Lexical and Computational Semantics|\*SEM/i, '*SEM'],
+  [/^Computational Linguistics$/i, 'Computational Linguistics'],
+  [/Transactions of the Association for Computational Linguistics/i, 'TACL'],
+  [/Machine Translation Summit|MT Summit/i, 'MT Summit'],
+  [/European Association for Machine Translation/i, 'EAMT'],
+  [/Conference on Machine Translation|Workshop on (Statistical )?Machine Translation|\bWMT\b/i, 'WMT'],
+  [/Workshop on Spoken Language Translation|\bIWSLT\b/i, 'IWSLT'],
+  [/Pacific Asia Conference|PACLIC/i, 'PACLIC'],
+  [/Recent Advances in Natural Language Processing|RANLP/i, 'RANLP'],
+  [/ROCLING/i, 'ROCLING'],
+  [/Conference on Language, Data and Knowledge/i, 'LDK'],
+  [/Language Models for Low-Resource Languages|LoResLM/i, 'LoResLM'],
+  [/Global Wordnet/i, 'GWC'],
+  [/Linguistic Annotation Workshop|\bLAW\b/i, 'LAW'],
+  [/Workshop on Noisy User-generated Text|\bW-NUT\b|WNUT/i, 'W-NUT'],
+  [/Workshop on Asian Translation/i, 'WAT'],
+  [/South and Southeast Asian Natural Language|WSSANLP/i, 'WSSANLP'],
+  [/Workshop on Asian Language Resou?rces|\bALR\b/i, 'ALR'],
+  [/Gender Bias in Natural Language Processing|GeBNLP/i, 'GeBNLP'],
+  [/Australasian Language Technology|\bALTA\b/i, 'ALTA'],
+  [/Conference on Language Modeling|\bCOLM\b/i, 'COLM'],
+];
+
+const specific: [RegExp, string][] = [
+  [/speech translation|speech-to-(speech|text) translation|spoken language translation/, 'st'],
+  [/visual question answer|\bvqa\b/, 'vqa'],
+  [/image caption|caption generation/, 'caption'],
+  [/dialogue|conversational system|chatbot/, 'dialogue'],
+  [/grammar error (detection|correction)|grammatical error (detection|correction|explanation)|spelling correction|spell checker/, 'gec'],
+  [/coreference resolution|anaphora resolution/, 'coref'],
+  [/natural language inference|\bnli\b/, 'nli'],
+  [/word sense disambiguation/, 'wsd'],
+  [/punctuation restoration|punctuation prediction/, 'punct'],
+  [/style transfer/, 'style'],
+  [/stance detection/, 'stance'],
+  [/readability|lexical complexity/, 'readab'],
+  [/\bocr\b(?!['’`]d)|optical character recognition|scene text recognition/, 'ocr'],
+  [/entity linking/, 'el'],
+];
+
+const rules: [RegExp, string][] = [
+  [/hate|offensive|abusive|toxic|violence.inciting|troll|cyberbull|aggress|profane|obscene|misogyn/, 'hate'],
+  // Bias / stereotype / fairness papers evaluate language models rather than
+  // classify sentiment, so they belong with the LLM benchmarks, not here.
+  [/\bbias\b|stereotyp|political inclination|honorific|fairness/, 'llm'],
+  [/sentiment|emotion|polarity|sarcas|irony|figurative|subjectivit|depression|mental health|suicid|well.being/, 'sentiment'],
+  // Plural and hyphenated forms matter here: "Named Entities", "Named-Entity".
+  [/named[- ]entit|\bner\b|entity recogni/, 'ner'],
+  [/summar|headline generation/, 'summ'],
+  [/question answer|\bqa\b|reading comprehension|causal|question classification/, 'qa'],
+  // "code-switching/code-mixing" only routes to MT when it is the task being
+  // studied (detection/identification/analysis), not when it merely describes
+  // the input text — otherwise e.g. "Depression Detection in Code-Mixed Text"
+  // lands here instead of with sentiment.
+  [/translat|parallel corpus|paraphrase|transliterat|(code.(switch|mix)\w*)\s+(detection|identification|analysis)|\bsmt\b|\bnmt\b|cognate|cross.lingual retrieval|\bclir\b/, 'mt'],
+  [/speech|\basr\b|\btts\b|phonem|audio|voice|spoken|acoustic|\bipa\b/, 'speech'],
+  [
+    /part.of.speech|\bpos\b|treebank|dependenc|morpholog|stemm|lemmat|parser|parsing|grammar|syntax|compound verb|complex predicate|noun phrase|anaphora|clause|reduplication|plurality|verb frame|verb inflection|polymorphemic|karta/,
+    'pos',
+  ],
+  [
+    /fake news|clickbait|manipulated|synthetic sentence|news classif|document classif|text classif|multi.label classification|content classification|meme.*classification|topic|genre|categoriz|spam|authorship|discourse mode/,
+    'textcls',
+  ],
+  [/\bllm\b|large language model|benchmark|instruction|gpt|llama|\bt5\b|reasoning|prompt|generative|chatbot|code generation|retrieval.augmented/, 'llm'],
+];
+
 const root = process.cwd();
 const args = process.argv.slice(2);
 const DRY = args.includes('--dry');
@@ -45,29 +172,38 @@ type Rec = {
   link: string;
 };
 
+const fieldPatterns = {
+  title: [/\n\s*title\s*=\s*"([\s\S]*?)"\s*,?\n/i, /\n\s*title\s*=\s*\{([\s\S]*?)\}\s*,?\n/i],
+  url: [/\n\s*url\s*=\s*"([\s\S]*?)"\s*,?\n/i, /\n\s*url\s*=\s*\{([\s\S]*?)\}\s*,?\n/i],
+  year: [/\n\s*year\s*=\s*"([\s\S]*?)"\s*,?\n/i, /\n\s*year\s*=\s*\{([\s\S]*?)\}\s*,?\n/i],
+  author: [/\n\s*author\s*=\s*"([\s\S]*?)"\s*,?\n/i, /\n\s*author\s*=\s*\{([\s\S]*?)\}\s*,?\n/i],
+  booktitle: [/\n\s*booktitle\s*=\s*"([\s\S]*?)"\s*,?\n/i, /\n\s*booktitle\s*=\s*\{([\s\S]*?)\}\s*,?\n/i],
+  journal: [/\n\s*journal\s*=\s*"([\s\S]*?)"\s*,?\n/i, /\n\s*journal\s*=\s*\{([\s\S]*?)\}\s*,?\n/i],
+};
+
 /**
  * BibTeX values are quote-delimited in most anthology records but brace-delimited
  * when they contain LaTeX escapes (`author = {Uzuner, {\"O}zlem}`). Missing the
  * brace form silently drops those records, so both are matched here.
  */
-const field = (src: string, name: string) => {
-  const quoted = src.match(new RegExp(`\\n\\s*${name}\\s*=\\s*"([\\s\\S]*?)"\\s*,?\\n`, 'i'));
-  if (quoted) return quoted[1].replace(/\s+/g, ' ').trim();
-  const braced = src.match(new RegExp(`\\n\\s*${name}\\s*=\\s*\\{([\\s\\S]*?)\\}\\s*,?\\n`, 'i'));
-  return braced ? braced[1].replace(/\s+/g, ' ').trim() : undefined;
+const field = (src: string, name: keyof typeof fieldPatterns) => {
+  const quoted = src.match(fieldPatterns[name][0]);
+  if (quoted) return quoted[1].replace(patterns.whitespace, ' ').trim();
+  const braced = src.match(fieldPatterns[name][1]);
+  return braced ? braced[1].replace(patterns.whitespace, ' ').trim() : undefined;
 };
 
 /** Strip the LaTeX accent forms the anthology uses: {\"O}zlem -> Ozlem. */
 const delatex = (s: string) =>
   s
-    .replace(/\{\\[`'"^~=.]\{?([A-Za-z])\}?\}/g, '$1')
-    .replace(/\\[`'"^~=.]\{?([A-Za-z])\}?/g, '$1')
-    .replace(/\{\\([a-z])\s*([A-Za-z])\}/g, '$2')
-    .replace(/[{}\\]/g, '')
+    .replace(patterns.bracedAccent, '$1')
+    .replace(patterns.accent, '$1')
+    .replace(patterns.latexCommand, '$2')
+    .replace(patterns.latexResidue, '')
     .trim();
 
 /** ACL brace-protects capitals: "{B}engali" -> "Bengali". */
-const debrace = (s: string) => s.replace(/[{}]/g, '');
+const debrace = (s: string) => s.replace(patterns.braces, '');
 
 /** "Sadhu, Jayanta and Khan, Ayan and ..." -> "Sadhu et al." */
 function authorLabel(raw: string | undefined): string | undefined {
@@ -87,11 +223,10 @@ function authorLabel(raw: string | undefined): string | undefined {
 function normalizeVenue(bookRaw: string | undefined, key: string): string | undefined {
   if (!bookRaw) return undefined;
   const b = debrace(bookRaw);
-  const findings = /^Findings of the Association for Computational Linguistics:?\s*(ACL|EMNLP|NAACL|EACL|IJCNLP)?/i.exec(b);
+  const findings = patterns.findings.exec(b);
   if (findings) {
     const host = findings[1]?.toUpperCase();
     if (host) return `Findings ${host}`;
-    if (/ACL/i.test(b)) return 'Findings ACL';
     return 'Findings ACL';
   }
   // BLP moves between host conferences — 2023 at EMNLP, 2025 at IJCNLP-AACL —
@@ -99,42 +234,12 @@ function normalizeVenue(bookRaw: string | undefined, key: string): string | unde
   // the wrong one is a metadata error no link check can catch, so only label a
   // host that has been verified against the volume; later editions fall back to
   // a bare `BLP` until someone checks.
-  if (/Workshop on Bangla Language Processing/i.test(b)) {
-    const host = { '2023': 'EMNLP', '2025': 'IJCNLP-AACL' }[/\(BLP-(\d{4})\)/.exec(b)?.[1] ?? ''];
+  if (patterns.blp.test(b)) {
+    const host = { '2023': 'EMNLP', '2025': 'IJCNLP-AACL' }[patterns.blpEdition.exec(b)?.[1] ?? ''];
     return host ? `BLP @ ${host}` : 'BLP';
   }
-  if (/Annual Meeting of the Association for Computational Linguistics/i.test(b)) return 'ACL';
-  if (/Conference on Empirical Methods in Natural Language Processing/i.test(b)) return 'EMNLP';
-  // NAACL renamed its 2025 edition "Nations of the Americas Chapter".
-  if (/(North American|Nations of the Americas) Chapter of the Association for Computational Linguistics/i.test(b)) return 'NAACL';
-  if (/European Chapter of the Association for Computational Linguistics/i.test(b)) return 'EACL';
-  if (/LREC-COLING/i.test(b)) return 'LREC-COLING';
-  if (/International Conference on Computational Linguistics|^COLING|Coling/i.test(b)) return 'COLING';
-  if (/Language Resources and Evaluation Conference|International Conference on Language Resources and Evaluation/i.test(b)) return 'LREC';
-  if (/International Joint Conference on Natural Language Processing/i.test(b)) return 'IJCNLP';
-  if (/International Conference on Natural Language Processing|\bICON\b/i.test(b)) return 'ICON';
-  if (/Workshop on Semantic Evaluation|SemEval/i.test(b)) return 'SemEval';
-  if (/Joint Conference on Lexical and Computational Semantics|\*SEM/i.test(b)) return '*SEM';
-  if (/^Computational Linguistics$/i.test(b)) return 'Computational Linguistics';
-  if (/Transactions of the Association for Computational Linguistics/i.test(b)) return 'TACL';
-  if (/Machine Translation Summit|MT Summit/i.test(b)) return 'MT Summit';
-  if (/European Association for Machine Translation/i.test(b)) return 'EAMT';
-  if (/Conference on Machine Translation|Workshop on (Statistical )?Machine Translation|\bWMT\b/i.test(b)) return 'WMT';
-  if (/Workshop on Spoken Language Translation|\bIWSLT\b/i.test(b)) return 'IWSLT';
-  if (/Pacific Asia Conference|PACLIC/i.test(b)) return 'PACLIC';
-  if (/Recent Advances in Natural Language Processing|RANLP/i.test(b)) return 'RANLP';
-  if (/ROCLING/i.test(b)) return 'ROCLING';
-  if (/Conference on Language, Data and Knowledge/i.test(b)) return 'LDK';
-  if (/Language Models for Low-Resource Languages|LoResLM/i.test(b)) return 'LoResLM';
-  if (/Global Wordnet/i.test(b)) return 'GWC';
-  if (/Linguistic Annotation Workshop|\bLAW\b/i.test(b)) return 'LAW';
-  if (/Workshop on Noisy User-generated Text|\bW-NUT\b|WNUT/i.test(b)) return 'W-NUT';
-  if (/Workshop on Asian Translation/i.test(b)) return 'WAT';
-  if (/South and Southeast Asian Natural Language|WSSANLP/i.test(b)) return 'WSSANLP';
-  if (/Workshop on Asian Language Resou?rces|\bALR\b/i.test(b)) return 'ALR';
-  if (/Gender Bias in Natural Language Processing|GeBNLP/i.test(b)) return 'GeBNLP';
-  if (/Australasian Language Technology|\bALTA\b/i.test(b)) return 'ALTA';
-  if (/Conference on Language Modeling|\bCOLM\b/i.test(b)) return 'COLM';
+  const venue = venueRules.find(([pattern]) => pattern.test(b))?.[1];
+  if (venue) return venue;
 
   /**
    * An acronym in parentheses, brace-protected or not, with an optional trailing
@@ -147,16 +252,16 @@ function normalizeVenue(bookRaw: string | undefined, key: string): string | unde
    * and `PSAL` — the latter a fragment of `{CH}i{PSAL}`. Requiring parentheses
    * and at least two capitals keeps real acronyms and rejects protected words.
    */
-  for (const group of bookRaw.match(/\([^)]+\)/g) ?? []) {
+  for (const group of bookRaw.match(patterns.parentheses) ?? []) {
     const inner = debrace(group.slice(1, -1))
-      .replace(/[\s-]*\d{4}\s*$/, '')
+      .replace(patterns.trailingYear, '')
       .trim();
-    if (/^[A-Za-z][A-Za-z-]{1,14}$/.test(inner) && /[A-Z][A-Za-z-]*[A-Z]/.test(inner)) return inner;
+    if (patterns.acronym.test(inner) && patterns.capitals.test(inner)) return inner;
   }
 
   // The anthology key's venue segment, when the key is the modern form
   // ("2023.blp-1.4" -> "BLP").
-  const seg = key.match(/^\d{4}\.([a-z]+)/i);
+  const seg = key.match(patterns.venueKey);
   if (seg && seg[1].length <= 10) return seg[1].toUpperCase();
 
   // Last resort: a cleaned full name. Never truncate at punctuation — that turns
@@ -164,18 +269,18 @@ function normalizeVenue(bookRaw: string | undefined, key: string): string | unde
   // Language". Strip only the ordinal/proceedings boilerplate and any trailing
   // parenthetical or LaTeX residue; keep the rest intact even if long.
   const short = delatex(b)
-    .replace(/^Proceedings of (the )?/i, '')
-    .replace(/\s*\([^)]*\)\s*$/, '')
-    .replace(/^\d+(st|nd|rd|th)\s+/i, '')
+    .replace(patterns.proceedings, '')
+    .replace(patterns.trailingParentheses, '')
+    .replace(patterns.ordinal, '')
     // Drop a "within the …" host-conference clause and any colon subtitle: the
     // part before them is the venue's own name.
-    .replace(/\s+within the .*$/i, '')
-    .replace(/:\s.*$/, '')
+    .replace(patterns.hostClause, '')
+    .replace(patterns.colonSubtitle, '')
     // The anthology uses a LaTeX em dash for a subtitle too: "Dialects in NLP
     // --- A Resource Perspective". Same treatment as the colon above.
-    .replace(/\s*---\s.*$/, '')
-    .replace(/,\s*(Varieties and Dialects|Sentiment).*$/i, '')
-    .replace(/\s+/g, ' ')
+    .replace(patterns.dashSubtitle, '')
+    .replace(patterns.venueSubtitle, '')
+    .replace(patterns.whitespace, ' ')
     .trim();
   return short.length > 2 ? short : undefined;
 }
@@ -195,75 +300,34 @@ function classify(title: string): string | undefined {
   //   "figures of speech"  is figurative language, not ASR/TTS
   //   "book summaries"     is source data for a classification task, not summ
   //   "genre classification" is text classification even next to "summaries"
-  if (/figures? of speech/.test(t)) return 'sentiment';
-  if (/genre classification|content classification/.test(t)) return 'textcls';
+  if (patterns.figuresOfSpeech.test(t)) return 'sentiment';
+  if (patterns.genreClassification.test(t)) return 'textcls';
 
   // Emotion *from the acoustic signal* is SER, not text sentiment — but the
   // 'emotion' keyword hits the sentiment rule first, so guard it here. Kept
   // tight: bare "emotion" still routes text papers to sentiment, and expressive
   // "emotion classification for text-to-speech" stays under speech.
-  if (/speech emotion|emotional speech|emotion.*\b(from|in)\b.*(speech|audio|voice)|acoustic.*emotion|\bspeech\b.*\bser\b/.test(t)) return 'ser';
+  if (patterns.speechEmotion.test(t)) return 'ser';
   //   Speaker identification / verification / diarization is its own task.
   //   "speaker adaptation" (an ASR technique) deliberately does not match.
-  if (/speaker (identif|recogni|verif|diariz)|diariz/.test(t)) return 'speaker';
-  if (/machine translation.*word sense disambiguation/.test(t)) return 'mt';
-  const ocrSubject = t.replace(/optical character recognition/g, 'ocr');
-  if (/\bocr\b/.test(ocrSubject) &&
-    (/licen[cs]e plate/.test(ocrSubject) || (/\b(characters?|digits?)\b/.test(ocrSubject) && !/\b(words?|lines?|documents?|scenes?|texts?)\b/.test(ocrSubject)))) return undefined;
+  if (patterns.speaker.test(t)) return 'speaker';
+  if (patterns.translationWsd.test(t)) return 'mt';
+  const ocrSubject = t.replace(patterns.opticalRecognition, 'ocr');
+  if (patterns.ocr.test(ocrSubject) &&
+    (patterns.licensePlate.test(ocrSubject) || (patterns.characterUnits.test(ocrSubject) && !patterns.textUnits.test(ocrSubject)))) return undefined;
 
   // Narrow task phrases must win over broad keyword rules below (e.g. grammar
   // error correction vs POS, and anaphora resolution vs honorific/LLM).
-  const specific: [RegExp, string][] = [
-    [/speech translation|speech-to-(speech|text) translation|spoken language translation/, 'st'],
-    [/visual question answer|\bvqa\b/, 'vqa'],
-    [/image caption|caption generation/, 'caption'],
-    [/dialogue|conversational system|chatbot/, 'dialogue'],
-    [/grammar error (detection|correction)|grammatical error (detection|correction|explanation)|spelling correction|spell checker/, 'gec'],
-    [/coreference resolution|anaphora resolution/, 'coref'],
-    [/natural language inference|\bnli\b/, 'nli'],
-    [/word sense disambiguation/, 'wsd'],
-    [/punctuation restoration|punctuation prediction/, 'punct'],
-    [/style transfer/, 'style'],
-    [/stance detection/, 'stance'],
-    [/readability|lexical complexity/, 'readab'],
-    [/\bocr\b(?!['’`]d)|optical character recognition|scene text recognition/, 'ocr'],
-    [/entity linking/, 'el'],
-  ];
+
   const specificTask = specific.find(([re]) => re.test(t))?.[1];
   if (specificTask) return specificTask;
 
   // Shared tasks, by their published subject.
-  if (/blp-2023\s*task\s*1/.test(t)) return 'hate';       // Violence Inciting Text Detection
-  if (/blp-2023\s*task\s*2/.test(t)) return 'sentiment';  // Sentiment Analysis
-  if (/blp-2025\s*task\s*1/.test(t)) return 'hate';       // Bangla Hate Speech Identification
-  if (/blp-2025\s*task\s*2/.test(t)) return 'llm';        // Code Generation in Bangla
+  if (patterns.blp2023Task1.test(t)) return 'hate';       // Violence Inciting Text Detection
+  if (patterns.blp2023Task2.test(t)) return 'sentiment';  // Sentiment Analysis
+  if (patterns.blp2025Task1.test(t)) return 'hate';       // Bangla Hate Speech Identification
+  if (patterns.blp2025Task2.test(t)) return 'llm';        // Code Generation in Bangla
 
-  const rules: [RegExp, string][] = [
-    [/hate|offensive|abusive|toxic|violence.inciting|troll|cyberbull|aggress|profane|obscene|misogyn/, 'hate'],
-    // Bias / stereotype / fairness papers evaluate language models rather than
-    // classify sentiment, so they belong with the LLM benchmarks, not here.
-    [/\bbias\b|stereotyp|political inclination|honorific|fairness/, 'llm'],
-    [/sentiment|emotion|polarity|sarcas|irony|figurative|subjectivit|depression|mental health|suicid|well.being/, 'sentiment'],
-    // Plural and hyphenated forms matter here: "Named Entities", "Named-Entity".
-    [/named[- ]entit|\bner\b|entity recogni/, 'ner'],
-    [/summar|headline generation/, 'summ'],
-    [/question answer|\bqa\b|reading comprehension|causal|question classification/, 'qa'],
-    // "code-switching/code-mixing" only routes to MT when it is the task being
-    // studied (detection/identification/analysis), not when it merely describes
-    // the input text — otherwise e.g. "Depression Detection in Code-Mixed Text"
-    // lands here instead of with sentiment.
-    [/translat|parallel corpus|paraphrase|transliterat|(code.(switch|mix)\w*)\s+(detection|identification|analysis)|\bsmt\b|\bnmt\b|cognate|cross.lingual retrieval|\bclir\b/, 'mt'],
-    [/speech|\basr\b|\btts\b|phonem|audio|voice|spoken|acoustic|\bipa\b/, 'speech'],
-    [
-      /part.of.speech|\bpos\b|treebank|dependenc|morpholog|stemm|lemmat|parser|parsing|grammar|syntax|compound verb|complex predicate|noun phrase|anaphora|clause|reduplication|plurality|verb frame|verb inflection|polymorphemic|karta/,
-      'pos',
-    ],
-    [
-      /fake news|clickbait|manipulated|synthetic sentence|news classif|document classif|text classif|multi.label classification|content classification|meme.*classification|topic|genre|categoriz|spam|authorship|discourse mode/,
-      'textcls',
-    ],
-    [/\bllm\b|large language model|benchmark|instruction|gpt|llama|\bt5\b|reasoning|prompt|generative|chatbot|code generation|retrieval.augmented/, 'llm'],
-  ];
   return rules.find(([re]) => re.test(t))?.[1];
 }
 
@@ -271,15 +335,15 @@ function classify(title: string): string | undefined {
 console.log(`Reading ${BIB} …`);
 const bib = readFileSync(BIB, 'utf8');
 const byUrl = new Map<string, Rec>();
-for (const raw of bib.split(/\n@/)) {
+for (const raw of bib.split(patterns.bibEntry)) {
   const url = field(raw, 'url');
   if (!url) continue;
   const titleRaw = field(raw, 'title');
   if (!titleRaw) continue;
-  const key = raw.match(/^[a-z]+\{([^,]+),/i)?.[1] ?? '';
+  const key = raw.match(patterns.bibKey)?.[1] ?? '';
   const year = Number(field(raw, 'year'));
   if (!year) continue;
-  byUrl.set(url.replace(/\/+$/, ''), {
+  byUrl.set(url.replace(patterns.trailingSlashes, ''), {
     key,
     title: debrace(titleRaw),
     authors: authorLabel(field(raw, 'author')) ?? '',
@@ -311,7 +375,7 @@ const knownIds = new Set<string>();
 const knownLinks = new Set<string>();
 const knownTitles = new Set<string>();
 const knownNames = new Set<string>();
-const normTitle = (s: string) => String(s ?? '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+const normTitle = (s: string) => String(s ?? '').toLowerCase().replace(patterns.titleSeparators, ' ').trim();
 
 /**
  * A distinctive system name from a "BEnQA: …" style title: the single token
@@ -323,7 +387,7 @@ const normTitle = (s: string) => String(s ?? '').toLowerCase().replace(/[^a-z0-9
  */
 const systemName = (title: string): string | undefined => {
   const head = String(title ?? '').split(':')[0].trim();
-  if (!head || /\s/.test(head) || head.length < 3) return undefined;
+  if (!head || patterns.singleWhitespace.test(head) || head.length < 3) return undefined;
   return head.toLowerCase();
 };
 
@@ -333,7 +397,7 @@ for (const task of tasks) {
   existing.set(task, list);
   for (const p of list) {
     knownIds.add(p.id);
-    knownLinks.add(String(p.link).replace(/\/+$/, ''));
+    knownLinks.add(String(p.link).replace(patterns.trailingSlashes, ''));
     knownTitles.add(normTitle(p.title));
     const n = systemName(p.title);
     if (n) knownNames.add(n);
@@ -355,13 +419,13 @@ for (const c of candidates) {
   // (title/authors/year), venue is honestly "arXiv". Title-dedup against the
   // catalog so a preprint whose published version we already hold is skipped. ---
   if (c.kind === 'paper' && c.source === 'arxiv') {
-    const title = debrace(String(c.title ?? '')).replace(/\s+/g, ' ').trim();
+    const title = debrace(String(c.title ?? '')).replace(patterns.whitespace, ' ').trim();
     if (!title || !BANGLA_TITLE.test(title)) {
       leftover.push(c);
       note('arxiv: title not about Bangla — likely tangential multilingual');
       continue;
     }
-    const link = String(c.link ?? '').replace(/\/+$/, '');
+    const link = String(c.link ?? '').replace(patterns.trailingSlashes, '');
     const name = systemName(title);
     if (knownLinks.has(link) || knownTitles.has(normTitle(title)) || (name && knownNames.has(name))) {
       note('arxiv: already catalogued (link, title, or system name)');
@@ -379,8 +443,8 @@ for (const c of candidates) {
       continue;
     }
     // arXiv ids contain a dot (2308.13545); the id schema allows only [a-z0-9-_].
-    const arxivId = link.match(/(\d{4}\.\d{4,5})/)?.[1]?.replace('.', '-');
-    let id = arxivId ? `arxiv-${arxivId}` : `arxiv-${normTitle(title).replace(/ /g, '-').slice(0, 40)}`;
+    const arxivId = link.match(patterns.arxivId)?.[1]?.replace('.', '-');
+    let id = arxivId ? `arxiv-${arxivId}` : `arxiv-${normTitle(title).replace(patterns.spaces, '-').slice(0, 40)}`;
     if (knownIds.has(id)) {
       leftover.push(c);
       note('id collision');
@@ -408,13 +472,13 @@ for (const c of candidates) {
     note('not an ACL or arXiv paper');
     continue;
   }
-  const rec = byUrl.get(String(c.link).replace(/\/+$/, ''));
+  const rec = byUrl.get(String(c.link).replace(patterns.trailingSlashes, ''));
   if (!rec) {
     leftover.push(c);
     note('no anthology record for its link');
     continue;
   }
-  if (knownLinks.has(rec.link.replace(/\/+$/, '')) || knownTitles.has(normTitle(rec.title))) {
+  if (knownLinks.has(rec.link.replace(patterns.trailingSlashes, '')) || knownTitles.has(normTitle(rec.title))) {
     note('already catalogued');
     continue;
   }
@@ -431,9 +495,9 @@ for (const c of candidates) {
   }
 
   // Anthology bibkeys are unique, lowercase, and hyphenated — a natural id.
-  let id = rec.key.toLowerCase().replace(/[^a-z0-9-_]/g, '-');
+  let id = rec.key.toLowerCase().replace(patterns.idSeparators, '-');
   if (!id || knownIds.has(id)) {
-    const suffix = rec.link.match(/(\d{4}\.[a-z-]+\.\d+)/i)?.[1]?.replace(/\./g, '-');
+    const suffix = rec.link.match(patterns.anthologyId)?.[1]?.replace(patterns.dots, '-');
     id = suffix ? `${id}-${suffix}` : `${id}-${rec.year}`;
   }
   if (knownIds.has(id)) {
@@ -442,7 +506,7 @@ for (const c of candidates) {
     continue;
   }
   knownIds.add(id);
-  knownLinks.add(rec.link.replace(/\/+$/, ''));
+  knownLinks.add(rec.link.replace(patterns.trailingSlashes, ''));
   knownTitles.add(normTitle(rec.title));
   const aclName = systemName(rec.title);
   if (aclName) knownNames.add(aclName);
