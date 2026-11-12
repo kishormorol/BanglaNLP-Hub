@@ -1,3 +1,10 @@
+- id: hasan-etal-2026-lipi
+  title: "Lipi-Ghor: A Large-Scale, Diarized, Multi-Domain Bengali Speech Corpus and a Scalable Pipeline for Building It"
+  authors: Hasan et al.
+  venue: SALMA
+  year: 2026
+  link: https://aclanthology.org/2026.salma-1.13/
+  task: speech
 - id: bharati-etal-2026-deep-neural-network-automatic-mispronunciation
   title: A deep neural network-based automatic mispronunciation detection in Bengali accented English speech
   authors: Bharati et al.

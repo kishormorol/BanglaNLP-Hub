@@ -1,3 +1,17 @@
+- id: arxiv-2607-21780
+  title: "Khondo: A Multimodal Benchmark for Document Packet Splitting of Bangla Forms"
+  authors: Azad et al.
+  venue: arXiv
+  year: 2026
+  link: https://arxiv.org/abs/2607.21780
+  task: llm
+- id: shuvo-etal-2026-polite
+  title: "Polite on the Surface, Broken in Practice: A Curated Dataset for Fixing Generation and Register Failures in Low-Resource Bangla Text Generation"
+  authors: Shuvo et al.
+  venue: GroundLM
+  year: 2026
+  link: https://aclanthology.org/2026.groundlm-1.56/
+  task: llm
 - id: arxiv-2607-05614
   title: "BaFCo: A Document Understanding Benchmark for Complex Bangla Form Comprehension"
   authors: Azad et al.

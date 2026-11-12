@@ -18176,14 +18176,6 @@
   suggestedTask: mt
 - source: arxiv
   kind: paper
-  title: "Polite on the Surface, Broken in Practice: A Curated Dataset for Fixing Generation and Register Failures in Low-Resource Bangla Text Generation"
-  link: http://arxiv.org/abs/2605.22487
-  year: 2026
-  authors: Shuvo et al.
-  venue: arXiv
-  suggestedTask: llm
-- source: arxiv
-  kind: paper
   title: Reliability Gated Multi-Teacher Distillation for Low Resource Abstractive Summarization
   link: http://arxiv.org/abs/2604.03192
   year: 2026
@@ -18921,10 +18913,3 @@
   authors: Shiper et al.
   venue: arXiv
   suggestedTask: llm
-- source: arxiv
-  kind: paper
-  title: "Khondo: A Multimodal Benchmark for Document Packet Splitting of Bangla Forms"
-  link: http://arxiv.org/abs/2607.21780
-  year: 2026
-  authors: Azad et al.
-  venue: arXiv

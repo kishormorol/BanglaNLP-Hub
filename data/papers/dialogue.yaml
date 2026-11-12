@@ -1,3 +1,10 @@
+- id: arxiv-2610-18060
+  title: A Benchmark for Bangla Task-Oriented Dialogue Understanding
+  authors: Lamia et al.
+  venue: arXiv
+  year: 2026
+  link: https://arxiv.org/abs/2610.18060
+  task: dialogue
 - id: arxiv-2503-22283
   title: "BanglAssist: A Bengali-English Generative AI Chatbot for Code-Switching and Dialect-Handling in Customer Service"
   authors: Kruk et al.
