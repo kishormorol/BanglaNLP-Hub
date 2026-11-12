@@ -12,10 +12,11 @@ const isoDate = z
   }, 'is not a real calendar date');
 
 /** http(s) only — no mailto:, no relative paths, no javascript:. */
+const httpProtocol = /^https?:\/\//;
 const url = z
   .string()
   .url('is not a valid URL')
-  .refine((u) => /^https?:\/\//.test(u), 'must use http(s)');
+  .refine((u) => httpProtocol.test(u), 'must use http(s)');
 
 const id = z
   .string()

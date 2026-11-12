@@ -21,6 +21,60 @@ import { resolve, join } from 'node:path';
 import { gunzipSync } from 'node:zlib';
 import { parse, stringify } from 'yaml';
 
+const patterns = {
+  braces: /[{}]/g,
+  titleSeparators: /[^a-z0-9]+/g,
+  protocol: /^https?:\/\/(www\.)?/,
+  trailingSlashes: /\/+$/,
+  www: /^www\./,
+  doiHost: /^dx\.doi\.org$/,
+  speechEmotion: /speech emotion|emotional speech|emotion.*\b(from|in)\b.*(speech|audio|voice)|acoustic.*emotion|\bspeech\b.*\bser\b/,
+  speaker: /speaker (identif|recogni|verif|diariz)|diariz/,
+  translationWsd: /machine translation.*word sense disambiguation/,
+  opticalRecognition: /optical character recognition/g,
+  ocr: /\bocr\b/,
+  licensePlate: /licen[cs]e plate/,
+  characterUnits: /\b(characters?|digits?)\b/,
+  textUnits: /\b(words?|lines?|documents?|scenes?|texts?)\b/,
+  bibEntry: /\n@/,
+  whitespace: /\s+/g,
+  authorName: /<name>([^<]+)<\/name>/g,
+  arxivVersion: /v\d+$/,
+};
+
+const specific: [RegExp, string][] = [
+  [/speech translation|speech-to-(speech|text) translation|spoken language translation/, 'st'],
+  [/visual question answer|\bvqa\b/, 'vqa'],
+  [/image caption|caption generation/, 'caption'],
+  [/dialogue|conversational system|chatbot/, 'dialogue'],
+  [/grammar error (detection|correction)|grammatical error (detection|correction|explanation)|spelling correction|spell checker/, 'gec'],
+  [/coreference resolution|anaphora resolution/, 'coref'],
+  [/natural language inference|\bnli\b/, 'nli'],
+  [/word sense disambiguation/, 'wsd'],
+  [/punctuation restoration|punctuation prediction/, 'punct'],
+  [/style transfer/, 'style'],
+  [/stance detection/, 'stance'],
+  [/readability|lexical complexity/, 'readab'],
+  [/\bocr\b(?!['’`]d)|optical character recognition|scene text recognition/, 'ocr'],
+  [/entity linking/, 'el'],
+];
+
+const rules: [RegExp, string][] = [
+  [/sentiment|emotion|polarity/, 'sentiment'],
+  [/named entity|\bner\b/, 'ner'],
+  [/translat|parallel corpus|\bmt\b|paraphrase/, 'mt'],
+  [/question answer|\bqa\b|reading comprehension/, 'qa'],
+  [/summari/, 'summ'],
+  [/hate|offensive|abusive|toxic/, 'hate'],
+  [/speech|asr|tts|phonem|audio|voice/, 'speech'],
+  [/fake news|news classif|document classif|text classif|topic/, 'textcls'],
+  [/part.of.speech|\bpos tag|treebank|dependenc|morpholog/, 'pos'],
+  // Keep this tight: a bare "benchmark" matches any dataset paper and
+  // "instruction" matches education/pedagogy papers ("instructional design"),
+  // both of which flooded the llm bucket with non-LLM work.
+  [/\bllm\b|large language model|\bgpt\b|instruction.?tun|in.context|chain.of.thought|reasoning benchmark/, 'llm'],
+];
+
 const root = process.cwd();
 const dataDir = resolve(root, 'data');
 const inboxDir = resolve(dataDir, 'inbox');
@@ -39,6 +93,20 @@ const LIMIT = Number(argOf('--limit') ?? 60);
 const UA = 'BanglaNLP-Hub-discover/1.0 (+https://github.com/eliteresearchlab/BanglaNLP-Hub)';
 
 const TERMS = /\b(bangla|bengali|banglish|bn-|bangladesh)/i;
+const fieldPatterns = {
+  title: /\n\s*title\s*=\s*"([\s\S]*?)"\s*,?\n/i,
+  url: /\n\s*url\s*=\s*"([\s\S]*?)"\s*,?\n/i,
+  year: /\n\s*year\s*=\s*"([\s\S]*?)"\s*,?\n/i,
+  author: /\n\s*author\s*=\s*"([\s\S]*?)"\s*,?\n/i,
+  booktitle: /\n\s*booktitle\s*=\s*"([\s\S]*?)"\s*,?\n/i,
+  journal: /\n\s*journal\s*=\s*"([\s\S]*?)"\s*,?\n/i,
+};
+const entryPatterns = {
+  title: /<title>([\s\S]*?)<\/title>/,
+  id: /<id>([\s\S]*?)<\/id>/,
+  published: /<published>([\s\S]*?)<\/published>/,
+  summary: /<summary>([\s\S]*?)<\/summary>/,
+};
 
 type Candidate = {
   source: 'acl' | 'arxiv' | 'huggingface' | 'openalex';
@@ -54,21 +122,21 @@ type Candidate = {
 
 // ---------------------------------------------------------------- existing set
 const norm = (s: string) =>
-  String(s ?? '').toLowerCase().replace(/[{}]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+  String(s ?? '').toLowerCase().replace(patterns.braces, '').replace(patterns.titleSeparators, ' ').trim();
 const normUrl = (link: string) => {
   let parsed: URL;
   try {
     parsed = new URL(link);
   } catch {
     // A malformed link from an upstream API must not abort the whole sweep.
-    return String(link ?? '').toLowerCase().replace(/^https?:\/\/(www\.)?/, '').replace(/\/+$/, '');
+    return String(link ?? '').toLowerCase().replace(patterns.protocol, '').replace(patterns.trailingSlashes, '');
   }
   const host = parsed.hostname
     .toLowerCase()
-    .replace(/^www\./, '')
-    .replace(/^dx\.doi\.org$/, 'doi.org');
+    .replace(patterns.www, '')
+    .replace(patterns.doiHost, 'doi.org');
   const port = parsed.port ? `:${parsed.port}` : '';
-  const path = parsed.pathname.replace(/\/+$/, '');
+  const path = parsed.pathname.replace(patterns.trailingSlashes, '');
   if (host === 'doi.org') return `${host}${path.toLowerCase()}`;
   return `${host}${port}${path}${parsed.search}${parsed.hash}`;
 };
@@ -109,53 +177,40 @@ console.log(`Catalogued already: ${knownLinkCount} links, ${knownTitleCount} tit
 
 const isNew = (c: Candidate) =>
   !known[c.kind].links.has(normUrl(c.link)) && !known[c.kind].titles.has(norm(c.title));
-const isSameResource = (a: Candidate, b: Candidate) =>
-  a.kind === b.kind && (normUrl(a.link) === normUrl(b.link) || norm(a.title) === norm(b.title));
+function candidateIndex(existing: Candidate[] = []) {
+  const links = new Set<string>();
+  const titles = new Set<string>();
+  const add = (candidate: Candidate) => {
+    const link = `${candidate.kind}:${normUrl(candidate.link)}`;
+    const title = `${candidate.kind}:${norm(candidate.title)}`;
+    if (links.has(link) || titles.has(title)) return false;
+    links.add(link);
+    titles.add(title);
+    return true;
+  };
+  // Existing duplicates stay queued, and both keys must still exclude new hits.
+  for (const candidate of existing) {
+    links.add(`${candidate.kind}:${normUrl(candidate.link)}`);
+    titles.add(`${candidate.kind}:${norm(candidate.title)}`);
+  }
+  return add;
+}
 
 /** Cheap keyword → task guess. Always a suggestion for a human to confirm. */
 function guessTask(text: string): string | undefined {
   const t = text.toLowerCase();
   // Emotion from the acoustic signal is SER, and speaker ID/diarization is its
   // own task — both must win over the 'emotion'/'speech' keyword rules below.
-  if (/speech emotion|emotional speech|emotion.*\b(from|in)\b.*(speech|audio|voice)|acoustic.*emotion|\bspeech\b.*\bser\b/.test(t)) return 'ser';
-  if (/speaker (identif|recogni|verif|diariz)|diariz/.test(t)) return 'speaker';
-  if (/machine translation.*word sense disambiguation/.test(t)) return 'mt';
-  const ocrSubject = t.replace(/optical character recognition/g, 'ocr');
-  if (/\bocr\b/.test(ocrSubject) &&
-    (/licen[cs]e plate/.test(ocrSubject) || (/\b(characters?|digits?)\b/.test(ocrSubject) && !/\b(words?|lines?|documents?|scenes?|texts?)\b/.test(ocrSubject)))) return undefined;
-  const specific: [RegExp, string][] = [
-    [/speech translation|speech-to-(speech|text) translation|spoken language translation/, 'st'],
-    [/visual question answer|\bvqa\b/, 'vqa'],
-    [/image caption|caption generation/, 'caption'],
-    [/dialogue|conversational system|chatbot/, 'dialogue'],
-    [/grammar error (detection|correction)|grammatical error (detection|correction|explanation)|spelling correction|spell checker/, 'gec'],
-    [/coreference resolution|anaphora resolution/, 'coref'],
-    [/natural language inference|\bnli\b/, 'nli'],
-    [/word sense disambiguation/, 'wsd'],
-    [/punctuation restoration|punctuation prediction/, 'punct'],
-    [/style transfer/, 'style'],
-    [/stance detection/, 'stance'],
-    [/readability|lexical complexity/, 'readab'],
-    [/\bocr\b(?!['’`]d)|optical character recognition|scene text recognition/, 'ocr'],
-    [/entity linking/, 'el'],
-  ];
+  if (patterns.speechEmotion.test(t)) return 'ser';
+  if (patterns.speaker.test(t)) return 'speaker';
+  if (patterns.translationWsd.test(t)) return 'mt';
+  const ocrSubject = t.replace(patterns.opticalRecognition, 'ocr');
+  if (patterns.ocr.test(ocrSubject) &&
+    (patterns.licensePlate.test(ocrSubject) || (patterns.characterUnits.test(ocrSubject) && !patterns.textUnits.test(ocrSubject)))) return undefined;
+
   const specificTask = specific.find(([re]) => re.test(t))?.[1];
   if (specificTask) return specificTask;
-  const rules: [RegExp, string][] = [
-    [/sentiment|emotion|polarity/, 'sentiment'],
-    [/named entity|\bner\b/, 'ner'],
-    [/translat|parallel corpus|\bmt\b|paraphrase/, 'mt'],
-    [/question answer|\bqa\b|reading comprehension/, 'qa'],
-    [/summari/, 'summ'],
-    [/hate|offensive|abusive|toxic/, 'hate'],
-    [/speech|asr|tts|phonem|audio|voice/, 'speech'],
-    [/fake news|news classif|document classif|text classif|topic/, 'textcls'],
-    [/part.of.speech|\bpos tag|treebank|dependenc|morpholog/, 'pos'],
-    // Keep this tight: a bare "benchmark" matches any dataset paper and
-    // "instruction" matches education/pedagogy papers ("instructional design"),
-    // both of which flooded the llm bucket with non-LLM work.
-    [/\bllm\b|large language model|\bgpt\b|instruction.?tun|in.context|chain.of.thought|reasoning benchmark/, 'llm'],
-  ];
+
   return rules.find(([re]) => re.test(t))?.[1];
 }
 
@@ -168,12 +223,12 @@ async function fromAcl(): Promise<Candidate[]> {
     return [];
   }
   const bib = gunzipSync(Buffer.from(await res.arrayBuffer())).toString('utf8');
-  const entries = bib.split(/\n@/).slice(1);
+  const entries = bib.split(patterns.bibEntry).slice(1);
   console.log(`  parsed ${entries.length} anthology entries`);
 
-  const field = (src: string, name: string) => {
-    const m = src.match(new RegExp(`\\n\\s*${name}\\s*=\\s*"([\\s\\S]*?)"\\s*,?\\n`, 'i'));
-    return m ? m[1].replace(/\s+/g, ' ').trim() : undefined;
+  const field = (src: string, name: keyof typeof fieldPatterns) => {
+    const m = src.match(fieldPatterns[name]);
+    return m ? m[1].replace(patterns.whitespace, ' ').trim() : undefined;
   };
 
   const out: Candidate[] = [];
@@ -182,7 +237,7 @@ async function fromAcl(): Promise<Candidate[]> {
     if (!rawTitle) continue;
     // ACL brace-protects capitals ("{B}engali"), so braces must be stripped
     // BEFORE keyword matching or nothing ever matches.
-    const title = rawTitle.replace(/[{}]/g, '');
+    const title = rawTitle.replace(patterns.braces, '');
     if (!TERMS.test(title)) continue;
     const url = field(raw, 'url');
     if (!url) continue;
@@ -221,39 +276,43 @@ async function fromArxiv(): Promise<Candidate[]> {
     const entries = xml.split('<entry>').slice(1);
     if (!entries.length) break;
     for (const e of entries) {
-      const pick = (t: string) => e.match(new RegExp(`<${t}>([\\s\\S]*?)</${t}>`))?.[1]?.replace(/\s+/g, ' ').trim();
+      const pick = (tag: keyof typeof entryPatterns) => e.match(entryPatterns[tag])?.[1]?.replace(patterns.whitespace, ' ').trim();
       const title = pick('title');
       const id = pick('id');
       if (!title || !id) continue;
-      const authors = [...e.matchAll(/<name>([^<]+)<\/name>/g)].map((m) => m[1]);
+      const authors = [...e.matchAll(patterns.authorName)].map((m) => m[1]);
       out.push({
         source: 'arxiv',
         kind: 'paper',
         title,
-        link: id.replace(/v\d+$/, ''),
+        link: id.replace(patterns.arxivVersion, ''),
         year: Number(pick('published')?.slice(0, 4)) || undefined,
         authors: authors.length ? `${authors[0].split(' ').pop()} et al.` : undefined,
         venue: 'arXiv',
         suggestedTask: guessTask(`${title} ${pick('summary') ?? ''}`),
       });
     }
-    await new Promise((r) => setTimeout(r, 3500));
+    if (start + 100 < LIMIT) await new Promise((r) => setTimeout(r, 3500));
   }
   return out;
 }
 
 // --------------------------------------------------------------- Hugging Face
 async function fromHuggingFace(): Promise<Candidate[]> {
-  const out: Candidate[] = [];
-  for (const kind of ['datasets', 'models'] as const) {
+  const kinds = ['datasets', 'models'] as const;
+  const responses = await Promise.all(kinds.map(async (kind) => {
     const url =
       `https://huggingface.co/api/${kind}?filter=language:bn&sort=downloads&direction=-1&limit=${LIMIT}&full=false`;
     const res = await fetch(url, { headers: { 'User-Agent': UA } });
     if (!res.ok) {
       console.error(`  HF ${kind} fetch failed: ${res.status}`);
-      continue;
+      return [];
     }
-    const rows = (await res.json()) as { id: string; downloads?: number; pipeline_tag?: string }[];
+    return (await res.json()) as { id: string; downloads?: number; pipeline_tag?: string }[];
+  }));
+  const out: Candidate[] = [];
+  for (const [index, kind] of kinds.entries()) {
+    const rows = responses[index];
     for (const r of rows) {
       out.push({
         source: 'huggingface',
@@ -325,7 +384,7 @@ async function fromOpenAlex(): Promise<Candidate[]> {
       });
     }
     cursor = body.meta?.next_cursor ?? '';
-    await new Promise((r) => setTimeout(r, 300));
+    if (out.length < LIMIT && cursor) await new Promise((r) => setTimeout(r, 300));
   }
   return out;
 }
@@ -339,14 +398,19 @@ const sources: Record<string, () => Promise<Candidate[]>> = {
 };
 
 const found: Candidate[] = [];
-for (const [name, fn] of Object.entries(sources)) {
-  if (onlySource && onlySource !== name) continue;
+const addFound = candidateIndex();
+const selected = Object.entries(sources).filter(([name]) => !onlySource || onlySource === name);
+const results = await Promise.allSettled(selected.map(([, fn]) => fn()));
+// Completion order must not change which source wins a duplicate.
+for (const [index, [name]] of selected.entries()) {
+  const result = results[index];
   try {
-    const rows = await fn();
+    if (result.status === 'rejected') throw result.reason;
+    const rows = result.value;
     const fresh = rows.filter(isNew);
     // De-duplicate within this run too.
     for (const c of fresh) {
-      if (!found.some((f) => isSameResource(f, c))) found.push(c);
+      if (addFound(c)) found.push(c);
     }
     console.log(`${name}: ${rows.length} matched, ${fresh.length} not already catalogued`);
   } catch (err) {
@@ -373,8 +437,9 @@ const existing: Candidate[] = existsSync(OUT)
 const queued = existing.filter(isNew);
 const prunedCount = existing.length - queued.length;
 const merged = [...queued];
+const addQueued = candidateIndex(queued);
 for (const c of found) {
-  if (!merged.some((m) => isSameResource(m, c))) merged.push(c);
+  if (addQueued(c)) merged.push(c);
 }
 const addedCount = merged.length - queued.length;
 
