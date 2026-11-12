@@ -6,141 +6,86 @@
  * change, so the full list is present without JS.
  */
 import Base from '../layouts/Base.astro';
-import { papers, tasks, venueTone } from '../lib/data.ts';
+import Icon from '../components/Icon.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CatalogInitialState from '../components/CatalogInitialState.astro';
+import { papers, tasks, taskName } from '../lib/data.ts';
+import { hasBangla } from '../lib/text-patterns.ts';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const taskName = (id: string) => tasks.find((t) => t.id === id)?.name ?? id;
 
 const list = [...papers].sort((a, b) => b.year - a.year);
 const yearOpts = [...new Set(list.map((p) => p.year))].sort((a, b) => b - a);
 const venueOpts = [...new Set(list.map((p) => p.venue))].sort();
-
-const selectStyle =
-  "padding:9px 12px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:13.5px;font-family:'IBM Plex Sans',sans-serif";
 ---
 
 <Base title="Papers — BanglaNLP Hub" active="papers">
-  <main style="max-width:900px;margin:0 auto;padding:0 20px 64px">
-    <section style="padding:48px 0 24px">
-      <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">
-        Papers <span class="bn" style="font-size:19px;color:var(--red);font-weight:600"
-          >গবেষণাপত্র</span
-        >
-      </h1>
-      <p
-        style="color:var(--text2);font-size:15.5px;max-width:620px;line-height:1.6;margin:10px 0 0;text-wrap:pretty"
-      >
-        {list.length} indexed publications on Bangla NLP, newest first.
-      </p>
-    </section>
+  <main class="page">
+    <PageHeader
+      title="Papers"
+      bn="গবেষণাপত্র"
+      description={`${list.length} indexed publications on Bangla NLP, newest first.`}
+    />
 
-    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px">
+    <div class="filterbar" role="search" aria-label="Filter papers">
       <input
+        class="field filter-search"
         id="f-q"
         type="search"
         maxlength="1000"
         placeholder="Filter by title or author…"
         aria-label="Filter papers"
-        style="flex:1;min-width:200px;padding:9px 14px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:14px;font-family:'IBM Plex Sans',sans-serif;outline:none"
       />
-      <select id="f-year" aria-label="Filter by year" style={selectStyle}>
+      <select class="field" id="f-year" aria-label="Filter by year">
         <option value="">Any year</option>
         {yearOpts.map((y) => <option value={String(y)}>{y}</option>)}
       </select>
-      <select id="f-venue" aria-label="Filter by venue" style={selectStyle}>
+      <select class="field" id="f-venue" aria-label="Filter by venue">
         <option value="">Any venue</option>
         {venueOpts.map((v) => <option value={v}>{v}</option>)}
       </select>
-      <select id="f-task" aria-label="Filter by task" style={selectStyle}>
+      <select class="field" id="f-task" aria-label="Filter by task">
         <option value="">All tasks</option>
         {tasks.map((t) => <option value={t.id}>{t.name}</option>)}
       </select>
-      <button id="f-clear" type="button" hidden style={`${selectStyle};cursor:pointer`}>Clear filters</button>
-      <span id="f-count" aria-live="polite" style="font-size:12.5px;color:var(--text2)"
-        >{list.length} shown</span
-      >
+      <button class="button button-sm" id="f-clear" type="button" hidden>Clear filters</button>
+      <span class="text-muted" id="f-count" aria-live="polite">{list.length} shown</span>
     </div>
 
-    <div style="display:flex;flex-direction:column;gap:10px">
+    <CatalogInitialState stage="start" />
+
+    <div class="resource-list catalog-results">
       {
-        list.map((p) => {
-          const tone = venueTone(p.venue);
-          return (
-            <a
-              class="papercard"
-              id={p.id}
-              href={p.link}
-              target="_blank"
-              rel="noopener"
-              data-year={p.year}
-              data-venue={p.venue}
-              data-task={p.task}
-              data-text={`${p.title} ${p.authors}`.toLowerCase()}
-              style="text-decoration:none;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start"
-            >
-              <span style="font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--text2);flex-shrink:0;padding-top:2px">
-                {p.year}
+        list.map((p) => (
+          <article
+            class="resource-row papercard"
+            id={p.id}
+            tabindex="-1"
+            data-year={p.year}
+            data-venue={p.venue}
+            data-task={p.task}
+            data-text={`${p.title} ${p.authors}`.toLowerCase()}
+          >
+            <span class="mono metadata">{p.year}</span>
+            <div class="row-main">
+              <h2 class:list={['resource-title', hasBangla(p.title) && 'bn']} lang={hasBangla(p.title) ? 'bn' : undefined}><a class="card-link" href={p.link} target="_blank" rel="noopener">{p.title}</a></h2>
+              <span class="row-meta">
+                <span class={hasBangla(p.authors) ? 'bn' : undefined} lang={hasBangla(p.authors) ? 'bn' : undefined}>{p.authors}</span>, {taskName(p.task)}
+                {p.note && <span>, {p.note}</span>}
               </span>
-              <span style="flex:1 1 16rem;min-width:0">
-                <span style="display:block;font-weight:600;font-size:14.5px;color:var(--text);line-height:1.45;text-wrap:pretty">
-                  {p.title}
-                </span>
-                <span style="display:block;font-size:12.5px;color:var(--text2);margin-top:4px">
-                  {p.authors} · {taskName(p.task)}
-                  {p.note && <span> · {p.note}</span>}
-                </span>
-              </span>
-              <span
-                style={`font-size:11px;font-weight:600;letter-spacing:0.04em;color:${tone.fg};background:${tone.bg};padding:3px 9px;border-radius:99px;min-width:0;max-width:100%`}
-              >
-                {p.venue}
-              </span>
-            </a>
-          );
-        })
+            </div>
+            <span class="badge badge-accent">{p.venue}</span>
+            <Icon name="arrow-up-right" size={16} />
+          </article>
+        ))
       }
-      <div
-        id="f-empty"
-        hidden
-        style="padding:24px;font-size:14px;color:var(--text2);background:var(--surface);border:1px solid var(--border);border-radius:12px"
-      >
+      <div class="panel empty-state" id="f-empty" hidden>
         Nothing matches those filters. <a href={`${base}/contribute`}>Add a missing paper via PR</a>.
       </div>
     </div>
+    <CatalogInitialState />
   </main>
 </Base>
-
-<style>
-  select {
-    min-width: 0;
-    max-width: 100%;
-  }
-  .papercard {
-    scroll-margin-top: 80px;
-    /* Keep text readable and move the venue below when the row is too narrow. */
-    flex-wrap: wrap;
-    overflow-wrap: anywhere;
-  }
-  .papercard:target,
-  .papercard:focus-visible {
-    outline: 2px solid var(--green);
-    outline-offset: 3px;
-  }
-  .papercard:hover {
-    border-color: var(--green);
-  }
-  /* The card carries an inline display:flex, which outranks the UA [hidden]
-     rule — so filtering (which sets .hidden) needs !important to actually hide. */
-  .papercard[hidden] {
-    display: none !important;
-  }
-  #f-q:focus,
-  #f-year:focus,
-  #f-venue:focus,
-  #f-task:focus {
-    border-color: var(--green);
-  }
-</style>
 
 <script>
   import { initCatalogFilters } from '../lib/catalog-filters';

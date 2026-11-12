@@ -5,88 +5,77 @@
  * One deliberate departure: the prototype's genBibtex() SYNTHESISED an @misc
  * entry whenever a dataset had no real bibtex field. That contradicts the rule
  * published in CONTRIBUTING.md ("no invented BibTeX") and TaskDetail's
- * behaviour. Many datasets currently lack one, so it would manufacture
- * citations for much of the table. Rows without BibTeX say so and link to the
- * contribution guide instead.
+ * behaviour. Rows without BibTeX say so and link to the contribution guide instead.
  */
 import Base from '../layouts/Base.astro';
-import { datasets, tasks } from '../lib/data.ts';
+import Icon from '../components/Icon.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CatalogInitialState from '../components/CatalogInitialState.astro';
+import DatasetName from '../components/DatasetName.astro';
+import { datasets, tasks, taskName } from '../lib/data.ts';
+import { hasBangla } from '../lib/text-patterns.ts';
 
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-const taskName = (id: string) => tasks.find((t) => t.id === id)?.name ?? id;
 
 // Classify catalog text, not the underlying dataset's verified licensing status.
+const noncommercialLicense = /NC|Non-comm/i;
+const researchLicense = /research/i;
 const licenseGroup = (l: string) =>
-  /NC|Non-comm/i.test(l) ? 'nc' : /research/i.test(l) ? 'research' :
+  noncommercialLicense.test(l) ? 'nc' : researchLicense.test(l) ? 'research' :
     ['MIT', 'Apache 2.0', 'CC0', 'ODC-BY', 'CC BY 4.0', 'CC BY-SA 4.0'].includes(l) ? 'open' : 'other';
 
 const rows = [...datasets].sort((a, b) => b.year - a.year || a.name.localeCompare(b.name));
 const yearOpts = [...new Set(rows.map((d) => d.year))].sort((a, b) => b - a);
-
-const th =
-  'text-align:left;padding:10px 16px;font-size:11px;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--text2);border-bottom:1px solid var(--border)';
-const td = 'padding:12px 16px;border-bottom:1px solid var(--border)';
-const selectStyle =
-  "padding:9px 12px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:13.5px;font-family:'IBM Plex Sans',sans-serif";
 ---
 
 <Base title="Datasets — BanglaNLP Hub" active="datasets">
-  <main style="max-width:1200px;margin:0 auto;padding:0 20px 64px">
-    <section style="padding:48px 0 24px">
-      <h1 style="font-family:'Spectral',serif;font-weight:600;font-size:34px;margin:0">
-        Datasets <span class="bn" style="font-size:19px;color:var(--red);font-weight:600"
-          >ডেটাসেট</span
-        >
-      </h1>
-      <p
-        style="color:var(--text2);font-size:15.5px;max-width:620px;line-height:1.6;margin:10px 0 0;text-wrap:pretty"
-      >
-        {rows.length} Bangla datasets across {tasks.length} tasks. Select a dataset name for details and a citation.
-      </p>
-    </section>
+  <main class="page">
+    <PageHeader
+      title="Datasets"
+      bn="ডেটাসেট"
+      description={`${rows.length} Bangla datasets across ${tasks.length} tasks. Select a dataset name for details and a citation.`}
+    />
 
-    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px">
+    <div class="filterbar" role="search" aria-label="Filter datasets">
       <input
+        class="field filter-search"
         id="f-q"
         type="search"
         maxlength="1000"
         placeholder="Filter by name or description…"
         aria-label="Filter datasets"
-        style="flex:1;min-width:200px;padding:9px 14px;border:1px solid var(--border);border-radius:9px;background:var(--surface);color:var(--text);font-size:14px;font-family:'IBM Plex Sans',sans-serif;outline:none"
       />
-      <select id="f-task" aria-label="Filter by task" style={selectStyle}>
+      <select class="field" id="f-task" aria-label="Filter by task">
         <option value="">All tasks</option>
         {tasks.map((t) => <option value={t.id}>{t.name}</option>)}
       </select>
-      <select id="f-license" aria-label="Filter by license" style={selectStyle}>
+      <select class="field" id="f-license" aria-label="Filter by license">
         <option value="">Any license</option>
         <option value="open">Open / permissive</option>
         <option value="nc">Non-commercial</option>
         <option value="research">Research only</option>
         <option value="other">Other / restricted</option>
       </select>
-      <select id="f-year" aria-label="Filter by year" style={selectStyle}>
+      <select class="field" id="f-year" aria-label="Filter by year">
         <option value="">Any year</option>
         {yearOpts.map((y) => <option value={String(y)}>{y}</option>)}
       </select>
-      <button id="f-clear" type="button" hidden style={`${selectStyle};cursor:pointer`}>Clear filters</button>
-      <span id="f-count" aria-live="polite" style="font-size:12.5px;color:var(--text2)"
-        >{rows.length} shown</span
-      >
+      <button class="button button-sm" id="f-clear" type="button" hidden>Clear filters</button>
+      <span class="text-muted" id="f-count" aria-live="polite">{rows.length} shown</span>
     </div>
 
-    <div
-      style="overflow-x:auto;border:1px solid var(--border);border-radius:12px;background:var(--surface)"
-    >
-      <table style="width:100%;border-collapse:collapse;font-size:13.5px;min-width:760px">
+    <CatalogInitialState stage="start" />
+
+    <div class="panel table-wrap catalog-results">
+      <table class="data-table">
         <thead>
           <tr>
-            <th scope="col" class="stickycol" style={th}>Dataset</th>
-            <th scope="col" style={th}>Task</th>
-            <th scope="col" style={th}>Size</th>
-            <th scope="col" style={th}>License</th>
-            <th scope="col" style={th}>Year</th>
-            <th scope="col" style={th}>Link</th>
+            <th scope="col" class="stickycol">Dataset</th>
+            <th scope="col">Task</th>
+            <th scope="col" class="size-cell">Size</th>
+            <th scope="col">License</th>
+            <th scope="col" class="year-cell">Year</th>
+            <th scope="col" class="source-cell">Source</th>
           </tr>
         </thead>
         <tbody>
@@ -101,70 +90,49 @@ const selectStyle =
                   data-year={d.year}
                   data-license={licenseGroup(d.license)}
                   data-text={`${d.name} ${d.desc} ${d.source}`.toLowerCase()}
-                  style="cursor:pointer"
                 >
-                  <td class="stickycol" style={td}>
+                  <td class="stickycol">
                     <button type="button" class="ds-toggle" aria-expanded="false" aria-controls={`detail-${d.id}`}>
-                      <span data-caret aria-hidden="true" style="color:var(--text2);font-size:11px;margin-right:8px">
-                        ▸
-                      </span>
-                      <span style="font-weight:600;color:var(--text)">{d.name}</span>
+                      <Icon name="chevron-down" size={16} />
+                      <span class:list={['resource-title', hasBangla(d.name) && 'bn']} lang={hasBangla(d.name) ? 'bn' : undefined}><DatasetName name={d.name} /></span>
                     </button>
                   </td>
-                  <td style={`${td};white-space:nowrap`}>
-                    <span style="font-size:11.5px;font-weight:500;color:var(--green);background:var(--greenSoft);padding:3px 9px;border-radius:99px">
-                      {taskName(d.task)}
-                    </span>
-                  </td>
-                  <td style={`${td};white-space:nowrap;font-family:'IBM Plex Mono',monospace;font-size:12.5px`}>
-                    {d.size}
-                  </td>
-                  <td style={`${td};white-space:nowrap`}>
-                    <span style="font-size:11.5px;color:var(--text2);background:var(--surface2);border:1px solid var(--border);padding:2px 8px;border-radius:99px">
-                      {d.license}
-                    </span>
-                  </td>
-                  <td style={`${td};font-family:'IBM Plex Mono',monospace;font-size:12.5px;color:var(--text2)`}>
-                    {d.year}
-                  </td>
-                  <td style={`${td};white-space:nowrap`}>
-                    <a
-                      href={d.link}
-                      target="_blank"
-                      rel="noopener"
-                      data-stop
-                      aria-label={`Open ${d.name}`}
-                      style="font-size:13px;font-weight:500"
-                    >
-                      ↗
+                  <td><span class="badge badge-accent">{taskName(d.task)}</span></td>
+                  <td class="mono metadata size-cell">{d.size}</td>
+                  <td><span class="badge">{d.license}</span></td>
+                  <td class="mono metadata year-cell">{d.year}</td>
+                  <td class="source-cell">
+                    <a class="source-link" href={d.link} target="_blank" rel="noopener" data-stop aria-label={`Open source for ${d.name}`}>
+                      Open source <Icon name="arrow-up-right" size={16} />
                     </a>
-                    <span style="font-size:10.5px;color:var(--text2);margin-left:6px">
-                      ✓ {d.verified}
-                    </span>
+                    <span class="text-muted metadata verification">Verified <time datetime={d.verified}>{d.verified}</time></span>
                   </td>
                 </tr>
                 <tr class="dsdetail" id={`detail-${d.id}`} data-for={d.id} hidden>
-                  <td colspan="6" style="padding:0;border-bottom:1px solid var(--border);background:var(--surface2)">
-                    <div style="padding:18px 20px;display:grid;grid-template-columns:1fr;gap:14px;max-width:860px">
-                      <div style="font-size:13.5px;color:var(--text);line-height:1.6;text-wrap:pretty">
-                        {d.desc} <span style="color:var(--text2)">Source: {d.source}.</span>
+                  <td colspan="6">
+                    <div class="dataset-detail">
+                      <div class:list={['resource-description', hasBangla(d.desc) && 'bn']} lang={hasBangla(d.desc) ? 'bn' : undefined}>
+                        {d.desc}{' '}
+                        <span class="text-muted">
+                          Source: <span class={hasBangla(d.source) ? 'bn' : undefined} lang={hasBangla(d.source) ? 'bn' : undefined}>{d.source}</span>.
+                        </span>
                       </div>
                       {d.bibtex ? (
-                        <div style="position:relative">
-                          <pre style="margin:0;background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:14px 16px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;line-height:1.55;color:var(--text);overflow-x:auto;white-space:pre-wrap">{d.bibtex}</pre>
+                        <div class="bibtex-panel">
+                          <pre class="code-block">{d.bibtex}</pre>
                           <button
-                            class="bibbtn"
+                            class="button button-sm bibbtn"
                             type="button"
                             data-bibtex={d.bibtex}
-                            style="position:absolute;top:8px;right:8px;border:1px solid var(--border);background:var(--surface);color:var(--text2);border-radius:7px;padding:4px 10px;font-size:11.5px;font-weight:600;cursor:pointer;font-family:'IBM Plex Sans',sans-serif"
                           >
                             Copy BibTeX
                           </button>
+                          <span class="copy-status" aria-live="polite" />
                         </div>
                       ) : (
-                        <div style="font-size:12.5px;color:var(--text2);background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:12px 16px">
+                        <div class="empty-state">
                           No BibTeX on file for this dataset. Rather than generate one, we leave it
-                          out — <a href={`${base}/contribute`}>add the published entry via PR</a>.
+                          out. <a href={`${base}/contribute`}>Add the published entry via PR</a>.
                         </div>
                       )}
                     </div>
@@ -175,47 +143,13 @@ const selectStyle =
           }
         </tbody>
       </table>
-      <div id="f-empty" hidden style="padding:24px;font-size:14px;color:var(--text2)">
-        Nothing matches those filters. <a href={`${base}/contribute`}>Add a missing dataset via PR</a
-        >.
+      <div class="empty-state" id="f-empty" hidden>
+        Nothing matches those filters. <a href={`${base}/contribute`}>Add a missing dataset via PR</a>.
       </div>
     </div>
+    <CatalogInitialState />
   </main>
 </Base>
-
-<style>
-  .dsrow {
-    scroll-margin-top: 80px;
-  }
-  .ds-toggle {
-    border: 0;
-    padding: 4px 0;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    text-align: left;
-    cursor: pointer;
-  }
-  .ds-toggle:focus-visible {
-    outline: 2px solid var(--green);
-    outline-offset: 3px;
-  }
-  .dsrow:hover {
-    background: var(--surface2);
-  }
-  .dsrow[data-open] {
-    background: var(--surface2);
-  }
-  .bibbtn:hover {
-    border-color: var(--green);
-  }
-  #f-q:focus,
-  #f-task:focus,
-  #f-license:focus,
-  #f-year:focus {
-    border-color: var(--green);
-  }
-</style>
 
 <script>
   import { initCatalogFilters } from '../lib/catalog-filters';
@@ -238,8 +172,6 @@ const selectStyle =
     if (open) row.setAttribute('data-open', '');
     else row.removeAttribute('data-open');
     row.querySelector('.ds-toggle')?.setAttribute('aria-expanded', String(open));
-    const caret = row.querySelector('[data-caret]');
-    if (caret) caret.textContent = open ? '▾' : '▸';
   }
 
   function apply() {
@@ -253,7 +185,6 @@ const selectStyle =
         (!year.value || r.dataset.year === year.value);
       r.hidden = !hit;
       const det = detailFor(r.dataset.id!);
-      // Keep a hidden row's detail hidden too, without losing its open state.
       if (det) det.hidden = !hit || !r.hasAttribute('data-open');
       if (hit) shown++;
     }
@@ -263,7 +194,7 @@ const selectStyle =
 
   rows.forEach((r) => {
     r.addEventListener('click', (e) => {
-      if ((e.target as HTMLElement).closest('[data-stop]')) return; // let the link work
+      if ((e.target as HTMLElement).closest('[data-stop]')) return;
       const id = r.dataset.id!;
       setOpen(id, !r.hasAttribute('data-open'));
     });
@@ -275,28 +206,36 @@ const selectStyle =
       const text = btn.dataset.bibtex ?? '';
       try {
         await navigator.clipboard.writeText(text);
+        showCopyResult(btn, true);
       } catch {
         const ta = document.createElement('textarea');
         ta.value = text;
-        ta.style.position = 'fixed';
-        ta.style.opacity = '0';
+        ta.className = 'clipboard-fallback';
+        ta.setAttribute('aria-hidden', 'true');
+        ta.tabIndex = -1;
         document.body.appendChild(ta);
         ta.select();
+        let copied = false;
         try {
-          document.execCommand('copy');
+          copied = document.execCommand('copy');
         } catch {}
         document.body.removeChild(ta);
+        btn?.focus({ preventScroll: true });
+        showCopyResult(btn, copied);
       }
-      btn.textContent = 'Copied ✓';
-      btn.style.color = 'var(--green)';
-      setTimeout(() => {
-        btn.textContent = 'Copy BibTeX';
-        btn.style.color = 'var(--text2)';
-      }, 1600);
     });
   });
 
-  // Deep link: /datasets#sentnob expands that row.
+  function showCopyResult(btn: HTMLButtonElement, copied: boolean) {
+    const status = btn.parentElement?.querySelector<HTMLElement>('.copy-status');
+    if (status) status.textContent = copied ? 'Copied' : 'Copy failed';
+    if (copied) btn.setAttribute('data-copied', '');
+    setTimeout(() => {
+      if (status) status.textContent = '';
+      btn.removeAttribute('data-copied');
+    }, 1600);
+  }
+
   initCatalogFilters({ q, task, license: lic, year }, rows, apply, (row) => {
     setOpen(row.id, true);
     row.querySelector<HTMLButtonElement>('.ds-toggle')?.focus({ preventScroll: true });

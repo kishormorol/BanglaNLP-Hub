@@ -1,204 +1,74 @@
 ---
-/**
- * Shared sticky header. Ported from design-reference/SiteNav.dc.html.
- * Search lives in Search.astro so the Home hero can mount the same island.
- */
 import Search from './Search.astro';
-
+import Icon from './Icon.astro';
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
-
-interface Props {
-  active?: string;
-}
+interface Props { active?: string; }
 const { active = '' } = Astro.props;
-
 const links = [
-  ['tasks', 'Tasks', `${base}/tasks`],
-  ['datasets', 'Datasets', `${base}/datasets`],
-  ['papers', 'Papers', `${base}/papers`],
-  ['tools', 'Tools', `${base}/tools`],
-  ['contribute', 'Contribute', `${base}/contribute`],
-  ['about', 'About', `${base}/about`],
-] as const;
+  ['tasks', 'Tasks', 'কাজসমূহ'],
+  ['datasets', 'Datasets', 'ডেটাসেট'],
+  ['papers', 'Papers', 'প্রবন্ধ'],
+  ['tools', 'Tools', 'সরঞ্জাম'],
+];
 ---
-
-<header
-  style="position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--border);backdrop-filter:blur(8px)"
->
-  <div
-    class="navbar"
-    style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:20px;height:60px"
-  >
-    <a
-      href={`${base}/`}
-      style="display:flex;align-items:baseline;gap:8px;text-decoration:none;white-space:nowrap"
-    >
-      <span class="bn" style="font-weight:700;font-size:20px;color:var(--green)">বাংলা</span>
-      <span style="font-family:'Spectral',serif;font-weight:600;font-size:19px;color:var(--text)"
-        >NLP Hub</span
-      >
+<header class="site-header">
+  <div class="navbar">
+    <a class="brand" href={base + '/'} aria-label="BanglaNLP Hub home">
+      <span class="brand-mark bn" lang="bn">ব</span>
+      <span><span class="brand-bn bn" lang="bn">বাংলা</span> NLP <span class="text-muted">Hub</span></span>
     </a>
-    <nav
-      id="primary-nav"
-      class="navrow"
-      style="display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;flex:1 1 auto;min-width:0"
-      aria-label="Primary"
-    >
-      {
-        links.map(([id, label, href]) => (
-          <a
-            href={href}
-            class="navlink"
-            aria-current={id === active ? 'page' : undefined}
-            style={`text-decoration:none;padding:6px 8px;border-radius:6px;font-size:13.5px;font-weight:500;white-space:nowrap;color:${
-              id === active ? 'var(--green)' : 'var(--text2)'
-            };background:${id === active ? 'var(--greenSoft)' : 'transparent'}`}
-          >
-            {label}
-          </a>
-        ))
-      }
+    <nav id="primary-nav" class="navrow" aria-label="Primary">
+      {links.map(([id, label, bn]) => <a class="navlink" href={base + '/' + id} aria-current={id === active ? 'page' : undefined}><span class="nav-label">{label}</span><span class="nav-bn bn" lang="bn">{bn}</span></a>)}
+      <a class="navlink nav-contribute" href={base + '/contribute'} aria-current={active === 'contribute' ? 'page' : undefined}><span class="nav-label">Contribute</span><span class="nav-bn bn" lang="bn">অবদান</span></a>
+      <a class="navlink nav-secondary" href={base + '/about'} aria-current={active === 'about' ? 'page' : undefined}><span class="nav-label">About</span><span class="nav-bn bn" lang="bn">পরিচিতি</span></a>
     </nav>
     <Search variant="nav" id="nav-search" />
-    <button
-      id="theme-toggle"
-      type="button"
-      aria-label="Toggle dark mode"
-      title="Toggle dark mode"
-      style="border:1px solid var(--border);background:var(--surface);color:var(--text2);border-radius:8px;width:34px;height:34px;cursor:pointer;font-size:15px;line-height:1;flex-shrink:0"
-    ></button>
-    <button
-      id="nav-menu-toggle"
-      class="navtoggle"
-      type="button"
-      aria-label="Open menu"
-      aria-controls="primary-nav"
-      aria-expanded="false"
-    >☰</button>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="button button-icon" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <span class="theme-moon"><Icon name="moon" /></span><span class="theme-sun"><Icon name="sun" /></span>
+      </button>
+      <a class="button contribute-link" href={base + '/contribute'}><span class="nav-label">Contribute</span><span class="nav-bn bn" lang="bn">অবদান</span><Icon name="arrow-up-right" /></a>
+      <button id="nav-menu-toggle" class="button button-icon navtoggle" type="button" aria-label="Open menu" aria-controls="primary-nav" aria-expanded="false">
+        <span class="menu-open"><Icon name="menu" /></span><span class="menu-close"><Icon name="close" /></span>
+      </button>
+    </div>
   </div>
 </header>
 
-<style>
-  .navlink:hover {
-    color: var(--green) !important;
-    background: var(--surface2) !important;
-  }
-  #theme-toggle:hover {
-    color: var(--green);
-    border-color: var(--green);
-  }
+<script>
+  const themeButton = document.getElementById('theme-toggle');
+  const syncTheme = () => {
+    const dark = document.documentElement.classList.contains('dark');
+    document.querySelectorAll<HTMLSourceElement>('[data-theme-art]').forEach(source => { source.media = dark ? 'all' : 'not all'; });
+    themeButton?.setAttribute('aria-pressed', String(dark));
+    themeButton?.setAttribute('aria-label', dark ? 'Switch to light theme' : 'Switch to dark theme');
+  };
+  syncTheme();
+  themeButton?.addEventListener('click', () => {
+    const dark = document.documentElement.classList.toggle('dark');
+    try { localStorage.bnlpTheme = dark ? 'dark' : 'light'; } catch {}
+    syncTheme();
+  });
 
-  /* The hamburger button is desktop-hidden; the nav shows inline as usual. */
-  .navtoggle {
-    display: none;
-  }
-
-  /* Mobile: the single 60px row can't fit the logo, search, toggle AND six
-     links, so they were clipped into a horizontal scroll. Collapse the links
-     into a hamburger dropdown instead. */
-  @media (max-width: 640px) {
-    .navbar {
-      position: relative;
-      gap: 10px !important;
-      padding: 0 16px !important;
+  const menuButton = document.getElementById('nav-menu-toggle');
+  const nav = document.getElementById('primary-nav');
+  const setOpen = (open: boolean, motion = false) => {
+    if (nav) nav.dataset.motion = String(motion);
+    nav?.classList.toggle('open', open);
+    menuButton?.setAttribute('aria-expanded', String(open));
+    menuButton?.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+  };
+  menuButton?.addEventListener('click', (event) => setOpen(menuButton.getAttribute('aria-expanded') !== 'true', event.detail > 0));
+  nav?.addEventListener('click', (event) => {
+    if (event.target instanceof Element && event.target.closest('a')) setOpen(false);
+  });
+  document.addEventListener('click', (event) => {
+    if (event.target instanceof Node && !nav?.contains(event.target) && !menuButton?.contains(event.target)) setOpen(false);
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuButton?.getAttribute('aria-expanded') === 'true') {
+      setOpen(false);
+      menuButton.focus();
     }
-    .navtoggle {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      width: 34px;
-      height: 34px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--text2);
-      border-radius: 8px;
-      font-size: 16px;
-      line-height: 1;
-      cursor: pointer;
-    }
-    .navtoggle:hover {
-      color: var(--green);
-      border-color: var(--green);
-    }
-    /* shrink the nav search so logo + search + toggle + menu button all fit */
-    :global([data-search][data-variant='nav']) {
-      flex: 1 1 90px !important;
-      min-width: 0 !important;
-    }
-    /* With JS the nav collapses into a toggleable dropdown panel. */
-    :global(html.js) .navrow {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 2px !important;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      box-shadow: 0 10px 26px rgba(10, 30, 20, 0.12);
-      padding: 8px 16px 12px !important;
-      overflow: visible !important;
-      display: none !important;
-    }
-    :global(html.js) .navrow.open {
-      display: flex !important;
-    }
-    /* No-JS fallback: the button can't open, so keep links visible as a
-       wrapping row rather than stranding them behind it. */
-    :global(html:not(.js)) .navrow {
-      flex-wrap: wrap !important;
-      overflow-x: visible !important;
-    }
-    .navrow .navlink {
-      padding: 11px 10px !important;
-      font-size: 15px !important;
-    }
-  }
-</style>
-
-<script is:inline>
-  (() => {
-    const btn = document.getElementById('theme-toggle');
-    if (!btn) return;
-    const icon = () => (document.documentElement.classList.contains('dark') ? '☀' : '☾');
-    btn.textContent = icon();
-    btn.addEventListener('click', () => {
-      const dark = !document.documentElement.classList.contains('dark');
-      document.documentElement.classList.toggle('dark', dark);
-      try {
-        localStorage.bnlpTheme = dark ? 'dark' : 'light';
-      } catch (e) {}
-      btn.textContent = icon();
-    });
-  })();
-
-  // Mobile nav dropdown toggle.
-  (() => {
-    const btn = document.getElementById('nav-menu-toggle');
-    const nav = document.getElementById('primary-nav');
-    if (!btn || !nav) return;
-    const setOpen = (open) => {
-      nav.classList.toggle('open', open);
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      btn.textContent = open ? '✕' : '☰';
-    };
-    btn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      setOpen(!nav.classList.contains('open'));
-    });
-    // Close after following a link, or on outside click / Escape.
-    nav.addEventListener('click', (e) => {
-      if (e.target.closest('a')) setOpen(false);
-    });
-    document.addEventListener('click', (e) => {
-      if (nav.classList.contains('open') && !nav.contains(e.target) && e.target !== btn)
-        setOpen(false);
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') setOpen(false);
-    });
-  })();
+  });
 </script>

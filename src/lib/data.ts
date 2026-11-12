@@ -32,6 +32,7 @@ import {
 } from './schemas.ts';
 
 const dataDir = resolve(process.cwd(), 'data');
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 const readYaml = (path: string) => parse(readFileSync(path, 'utf8'));
 
@@ -55,6 +56,8 @@ function loadTaskDir<T>(sub: string, schema: { parse: (v: unknown) => T }): T[] 
 }
 
 export const tasks: Task[] = loadList('tasks.yaml', TaskSchema);
+const taskNames = new Map(tasks.map((task) => [task.id, task.name]));
+export const taskName = (id: string) => taskNames.get(id) ?? id;
 export const datasets: Dataset[] = loadTaskDir('datasets', DatasetSchema);
 export const papers: Paper[] = loadTaskDir('papers', PaperSchema);
 export const models: Model[] = loadList('models.yaml', ModelSchema);
@@ -133,8 +136,6 @@ export type RecentEntry = {
   href: string;
 };
 
-const taskName = (id: string) => tasks.find((t) => t.id === id)?.name ?? id;
-
 /**
  * "Recently added" is DERIVED from the catalog, not curated: the most recently
  * link-verified datasets, models, and tools.
@@ -144,7 +145,6 @@ const taskName = (id: string) => tasks.find((t) => t.id === id)?.name ?? id;
  * a precision the data does not have.
  */
 export function recentlyAdded(limit = 6): RecentEntry[] {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const entries: RecentEntry[] = [
     ...datasets.map((d) => ({
       type: 'Dataset' as const,
@@ -180,27 +180,26 @@ export type SearchEntry = { type: string; name: string; meta: string; href: stri
  * src/pages/search-index.json.ts. Mirrors the prototype's searchIndex().
  */
 export function searchIndex(): SearchEntry[] {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   return [
     ...tasks.map((t) => ({ type: 'Task', name: t.name, meta: t.bn, href: `${base}/tasks/${t.id}` })),
     ...datasets.map((d) => ({
       type: 'Dataset',
       name: d.name,
-      meta: [taskName(d.task), d.size].filter(Boolean).join(' · '),
+      meta: [taskName(d.task), d.size].filter(Boolean).join(', '),
       href: `${base}/datasets#${d.id}`,
       keywords: `${d.task} ${d.desc} ${d.source}`,
     })),
     ...papers.map((p) => ({
       type: 'Paper',
       name: p.title,
-      meta: `${p.authors} · ${taskName(p.task)} · ${p.venue} ${p.year}`,
+      meta: `${p.authors}, ${taskName(p.task)}, ${p.venue} ${p.year}`,
       href: `${base}/papers#${p.id}`,
       keywords: p.task,
     })),
     ...models.map((m) => ({
       type: 'Model',
       name: m.name,
-      meta: [m.arch, m.params].filter(Boolean).join(' · '),
+      meta: [m.arch, m.params].filter(Boolean).join(', '),
       href: m.link,
       keywords: m.tasks.flatMap((task) => [task, taskName(task)]).join(' '),
     })),

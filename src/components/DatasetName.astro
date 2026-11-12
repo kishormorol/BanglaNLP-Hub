@@ -1,0 +1,6 @@
+---
+interface Props { name: string; }
+const { name } = Astro.props;
+const parts = name.split(/(?<=[a-z])(?=[A-Z])/);
+---
+{parts.map((part, index) => <>{index > 0 && <wbr />}{part}</>)}

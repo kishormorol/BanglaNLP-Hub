@@ -1,0 +1,69 @@
+---
+interface Props { stage?: 'start' | 'finish'; }
+const { stage = 'finish' } = Astro.props;
+---
+<!-- Filter rows as they parse, before deferred modules can paint an unfiltered list. -->
+{stage === 'start' ? <script is:inline>
+  (() => {
+    const root = document.currentScript.parentElement;
+    if (!location.search && !(location.hash && root.querySelector('#f-license'))) return;
+    const params = new URLSearchParams(location.search);
+    const trailingHighSurrogate = /[\uD800-\uDBFF]$/;
+    const controls = [...root.querySelectorAll('.filterbar input, .filterbar select')];
+    for (const control of controls) {
+      const value = params.get(control.id.slice(2)) ?? '';
+      control.value = control instanceof HTMLSelectElement
+        ? [...control.options].some(option => option.value === value) ? value : ''
+        : value.slice(0, control.maxLength).replace(trailingHighSurrogate, '');
+    }
+    const conditions = controls.filter(control => control.id === 'f-q' ? control.value.trim() : control.value).map(control => {
+      const key = control.id.slice(2);
+      const value = key === 'q' ? control.value.trim().toLowerCase() : control.value;
+      return `[data-${key === 'q' ? 'text' : key}${key === 'q' ? '*' : ''}="${CSS.escape(value)}"]`;
+    });
+    const rules = conditions.map(condition => `.catalog-results :is(.papercard, .dsrow):not(${condition}) { display: none !important; }`);
+    if (location.hash && root.querySelector('#f-license')) {
+      try {
+        const row = `.catalog-results .dsrow#${CSS.escape(decodeURIComponent(location.hash.slice(1)))}${conditions.join('')}`;
+        rules.push(`${row} + .dsdetail { display: table-row !important; }`, `${row} .ds-toggle .icon { rotate: 180deg; }`);
+      } catch { /* A malformed URI cannot name a catalog row. */ }
+    }
+    if (rules.length) {
+      const style = document.createElement('style');
+      style.id = 'catalog-initial-filter';
+      style.textContent = rules.join('\n');
+      root.append(style);
+    }
+    root.classList.add('catalog-initializing');
+  })();
+</script> : <script is:inline>
+  (() => {
+    const root = document.currentScript.parentElement;
+    if (!root.classList.contains('catalog-initializing')) return;
+    try {
+      const controls = [...root.querySelectorAll('.filterbar input, .filterbar select')];
+      let shown = 0;
+      for (const row of root.querySelectorAll('.papercard, .dsrow')) {
+        const hit = controls.every(control => {
+          const key = control.id.slice(2);
+          const value = control.value.trim().toLowerCase();
+          return !value || (key === 'q' ? (row.dataset.text ?? '').includes(value) : row.dataset[key] === control.value);
+        });
+        row.hidden = !hit;
+        if (hit) shown++;
+      }
+      root.querySelector('#f-count').textContent = `${shown} shown`;
+      root.querySelector('#f-empty').hidden = shown > 0;
+      const target = [...root.querySelectorAll('.dsrow')].find(row => encodeURIComponent(row.id) === location.hash.slice(1));
+      const detail = target?.nextElementSibling;
+      if (target && !target.hidden && detail?.classList.contains('dsdetail')) {
+        target.setAttribute('data-open', '');
+        target.querySelector('.ds-toggle')?.setAttribute('aria-expanded', 'true');
+        detail.hidden = false;
+      }
+    } finally {
+      root.querySelector('#catalog-initial-filter')?.remove();
+      root.classList.remove('catalog-initializing');
+    }
+  })();
+</script>}
